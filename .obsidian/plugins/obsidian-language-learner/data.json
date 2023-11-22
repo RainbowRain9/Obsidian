@@ -5,39 +5,39 @@
   "self_port": 3002,
   "native": "zh",
   "foreign": "en",
-  "popup_search": true,
+  "popup_search": false,
   "auto_pron": false,
   "function_key": "altKey",
   "dictionaries": {
     "youdao": {
       "enable": true,
-      "priority": 1
+      "priority": 2
     },
     "cambridge": {
       "enable": false,
-      "priority": 2
+      "priority": 4
     },
     "jukuu": {
       "enable": false,
       "priority": 3
     },
     "hjdict": {
-      "enable": false,
-      "priority": 4
+      "enable": true,
+      "priority": 1
     },
     "deepl": {
       "enable": false,
       "priority": 5
     }
   },
-  "dict_height": "250px",
+  "dict_height": "800px",
   "db_name": "WordDB",
   "word_database": "学习区/02-大学英语/单词库/word.md",
   "review_database": "学习区/02-大学英语/单词库/review.md",
   "col_delimiter": "\t",
   "auto_refresh_db": true,
   "default_paragraphs": "8",
-  "font_size": "15px",
+  "font_size": "18px",
   "font_family": "\"Times New Roman\"",
   "line_height": "1.8em",
   "use_machine_trans": true,

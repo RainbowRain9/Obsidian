@@ -32,12 +32,9 @@
   "obsidian-regex-pipeline",
   "templater-obsidian",
   "obsidian-latex-suite",
-  "obsidian-opener",
   "easy-typing-obsidian",
-  "fuzzy-chinese-pinyin",
   "floating-toc",
   "obsidian-spaced-repetition-recall",
-  "various-complements",
   "cmdr",
   "cloze",
   "workspaces-plus",
@@ -45,5 +42,6 @@
   "obsidian-importer",
   "obsidian-omnivore",
   "editing-toolbar",
-  "obsidian-quickshare"
+  "obsidian-quickshare",
+  "various-complements"
 ]

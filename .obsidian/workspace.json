@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3116141379f61822",
+            "id": "78559f3011a570c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习区/01-高等数学/问题库/2.1 导数的概念-QA.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c2b0c1d318c73878",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "学习区/02-大学英语/单词库/review.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f27d2452972ce23f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md",
+                "file": "个人区/1-生活/日记/2023-11-22_星期三.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -56,7 +31,6 @@
       {
         "id": "0aeb886c48fcaa26",
         "type": "tabs",
-        "dimension": 59.5,
         "children": [
           {
             "id": "3a6ee1ee9eaa7a9d",
@@ -84,25 +58,32 @@
             }
           },
           {
-            "id": "5c84675ecc134f4f",
+            "id": "1ce830c13bbcb28b",
             "type": "leaf",
             "state": {
-              "type": "starred",
+              "type": "langr-search-panel",
               "state": {}
             }
           }
         ]
       },
       {
-        "id": "9a00c3d4e0d31b06",
+        "id": "9922ff6704622350",
         "type": "tabs",
-        "dimension": 40.5,
         "children": [
           {
             "id": "e042589813d6689a",
             "type": "leaf",
             "state": {
               "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "5c84675ecc134f4f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
               "state": {}
             }
           },
@@ -114,12 +95,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 216.5
+    "width": 224.5
   },
   "right": {
     "id": "34fb4efa27cf970d",
@@ -128,7 +108,6 @@
       {
         "id": "72a4b91604aed60d",
         "type": "tabs",
-        "dimension": 61,
         "children": [
           {
             "id": "6f4659d6168a56bc",
@@ -147,46 +126,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md"
+                "file": "个人区/1-生活/日记/2023-11-22_星期三.md"
               }
             }
           },
-          {
-            "id": "3bc5c65339e6d6c2",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md",
-                "linksCollapsed": true,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "55dd22a129636758",
-            "type": "leaf",
-            "state": {
-              "type": "timeline",
-              "state": {}
-            }
-          },
-          {
-            "id": "98c3fba07f7febc6",
-            "type": "leaf",
-            "state": {
-              "type": "QUICKSHARE_SIDE_VIEW",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "688914b420034905",
-        "type": "tabs",
-        "dimension": 39,
-        "children": [
           {
             "id": "7248bb0e86973edd",
             "type": "leaf",
@@ -196,12 +139,35 @@
             }
           },
           {
+            "id": "efb588280c1fc08d",
+            "type": "leaf",
+            "state": {
+              "type": "langr-learn-panel",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "9c0c74bfc58a684f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55dd22a129636758",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
+          },
+          {
             "id": "d8b462f2068c19b8",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md",
+                "file": "个人区/1-生活/日记/2023-11-22_星期三.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,20 +179,38 @@
             }
           },
           {
+            "id": "3bc5c65339e6d6c2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "个人区/1-生活/日记/2023-11-22_星期三.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
             "id": "40cc0fb830140984",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "98c3fba07f7febc6",
+            "type": "leaf",
+            "state": {
+              "type": "QUICKSHARE_SIDE_VIEW",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 252.5,
-    "collapsed": true
+    "width": 252.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -262,16 +246,19 @@
   },
   "active": "3a6ee1ee9eaa7a9d",
   "lastOpenFiles": [
-    "学习区/_附件/1.8-cousin-marriage-001-fallback-db7381a3c91a3b67d69d784af51b282a-1200k.mp3",
     "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md",
+    "学习区/02-大学英语/单词库/word.md",
+    "个人区/6-SimpRead/用 Ob 构建专属于你的数字花园 - Obsidian 发布分享 - 渐进创作 - 哔哩哔哩.md",
     "学习区/02-大学英语/单词库/review.md",
+    "个人区/1-生活/日记/2023-11-22_星期三.md",
+    "学习区/01-高等数学/问题库/1.2 数列的极限-QA.md",
+    "学习区/_附件/1.8-cousin-marriage-001-fallback-db7381a3c91a3b67d69d784af51b282a-1200k.mp3",
     "学习区/01-高等数学/问题库/2.1 导数的概念-QA.md",
     "学习区/_附件",
     "学习区/02-大学英语/单词库",
     "个人区/4-领域夹/Area-Obsidian.md",
     "学习区/_Templates/tp/LingQ模板.md",
     "个人区/3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Quiet Outline 强化大纲展示管理.md",
-    "学习区/02-大学英语/单词库/word.md",
     "学习区/02-大学英语/听力库",
     "个人区/3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md",
     "个人区/3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/外语书阅读工作流.md",
@@ -289,8 +276,6 @@
     "个人区/6-SimpRead/稳定89MB-s不限速，官方版本可以卸载了....md",
     "个人区/6-SimpRead/全平台免费稍后读利器Omnivore更新了，支持一键同步内容到Obsidian.md",
     "个人区/6-SimpRead/(我使用的同步方案)最佳实践：obsidian同步方案(三)第三方同步之网盘OneDrive.md",
-    "学习区/01-高等数学/!书名库/第二章导数与微分.md",
-    "学习区/01-高等数学/笔记库/2.1 导数的概念-Xmind.md",
     "Pasted image 20231121160356.png",
     "Pasted image 20231121123554.png",
     "学习区/03-中国近代史纲要/概念库",

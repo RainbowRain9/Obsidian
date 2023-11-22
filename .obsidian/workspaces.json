@@ -1,4 +1,467 @@
 {
-  "workspaces": {},
+  "workspaces": {
+    "English-learning": {
+      "main": {
+        "id": "79cd4fa874558d1c",
+        "type": "split",
+        "children": [
+          {
+            "id": "cbe6b4dc158be4c5",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f27d2452972ce23f",
+                "type": "leaf",
+                "state": {
+                  "type": "langr-reading",
+                  "state": {
+                    "file": "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "85f50e3e31872042",
+        "type": "split",
+        "children": [
+          {
+            "id": "0aeb886c48fcaa26",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1ce830c13bbcb28b",
+                "type": "leaf",
+                "state": {
+                  "type": "langr-search-panel",
+                  "state": {}
+                }
+              },
+              {
+                "id": "3a6ee1ee9eaa7a9d",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "a86ce6b692d1f694",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "e042589813d6689a",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 224.5
+      },
+      "right": {
+        "id": "34fb4efa27cf970d",
+        "type": "split",
+        "children": [
+          {
+            "id": "72a4b91604aed60d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "efb588280c1fc08d",
+                "type": "leaf",
+                "state": {
+                  "type": "langr-learn-panel",
+                  "state": {}
+                }
+              },
+              {
+                "id": "6f4659d6168a56bc",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "alphabetical",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "ad2c152b86e66dd6",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md"
+                  }
+                }
+              },
+              {
+                "id": "40cc0fb830140984",
+                "type": "leaf",
+                "state": {
+                  "type": "review-queue-list-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "98c3fba07f7febc6",
+                "type": "leaf",
+                "state": {
+                  "type": "QUICKSHARE_SIDE_VIEW",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 252.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "canvas:新建白板": false,
+          "markdown-importer:打开 Markdown 格式转换器": true,
+          "audio-recorder:开始/结束录音": true,
+          "workspaces:管理工作区布局": true,
+          "switcher:打开快速切换": true,
+          "graph:查看关系图谱": false,
+          "templater-obsidian:Templater": false,
+          "daily-notes:打开/创建今天的日记": true,
+          "templates:插入模板": true,
+          "command-palette:打开命令面板": true,
+          "cmdr:显示当前文件": false,
+          "oz-clear-unused-images:Clear Unused Images": false,
+          "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": true,
+          "obsidian-day-planner:Timeline": false,
+          "obsidian-language-learner:打开查词面板": false,
+          "obsidian-language-learner:打开新词面板": false,
+          "obsidian-language-learner:打开统计": false,
+          "obsidian-language-learner:单词列表": false,
+          "obsidian42-brat:BRAT": true,
+          "obsidian-spaced-repetition-recall:复习卡片": false,
+          "cloze:显/隐所有填空": false,
+          "obsidian-regex-pipeline:Regex Rulesets": false,
+          "fuzzy-chinese-pinyin:FuzzySearch": true,
+          "flashcards-obsidian:Generate flashcards": false,
+          "remotely-save:Remotely Save": false,
+          "obsidian-weread-plugin:Weread": false,
+          "obsidian-importer:Open Importer": false,
+          "obsidian-omnivore:Omnivore": false
+        }
+      },
+      "active": "f27d2452972ce23f",
+      "workspaces-plus:settings-v1": {
+        "explorerFoldState": [
+          "学习区",
+          "学习区/_附件",
+          "学习区/01-高等数学/问题库",
+          "学习区/02-大学英语",
+          "学习区/02-大学英语/听力库"
+        ]
+      }
+    },
+    "Home": {
+      "main": {
+        "id": "79cd4fa874558d1c",
+        "type": "split",
+        "children": [
+          {
+            "id": "cbe6b4dc158be4c5",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f27d2452972ce23f",
+                "type": "leaf",
+                "state": {
+                  "type": "langr-reading",
+                  "state": {
+                    "file": "学习区/02-大学英语/听力库/Is it really that bad to marry my cousin.md"
+                  }
+                }
+              },
+              {
+                "id": "f82faad2b4f3af41",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "学习区/01-高等数学/问题库/1.2 数列的极限-QA.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "78559f3011a570c7",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "个人区/1-生活/日记/2023-11-22_星期三.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "85f50e3e31872042",
+        "type": "split",
+        "children": [
+          {
+            "id": "0aeb886c48fcaa26",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3a6ee1ee9eaa7a9d",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "a86ce6b692d1f694",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "1ce830c13bbcb28b",
+                "type": "leaf",
+                "state": {
+                  "type": "langr-search-panel",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "9922ff6704622350",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "e042589813d6689a",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "5c84675ecc134f4f",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              },
+              {
+                "id": "597877d9b5f98eb1",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 224.5
+      },
+      "right": {
+        "id": "34fb4efa27cf970d",
+        "type": "split",
+        "children": [
+          {
+            "id": "72a4b91604aed60d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6f4659d6168a56bc",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "alphabetical",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "ad2c152b86e66dd6",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "个人区/1-生活/日记/2023-11-22_星期三.md"
+                  }
+                }
+              },
+              {
+                "id": "7248bb0e86973edd",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "efb588280c1fc08d",
+                "type": "leaf",
+                "state": {
+                  "type": "langr-learn-panel",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "9c0c74bfc58a684f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "55dd22a129636758",
+                "type": "leaf",
+                "state": {
+                  "type": "timeline",
+                  "state": {}
+                }
+              },
+              {
+                "id": "d8b462f2068c19b8",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "个人区/1-生活/日记/2023-11-22_星期三.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "3bc5c65339e6d6c2",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "个人区/1-生活/日记/2023-11-22_星期三.md",
+                    "linksCollapsed": true,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "40cc0fb830140984",
+                "type": "leaf",
+                "state": {
+                  "type": "review-queue-list-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "98c3fba07f7febc6",
+                "type": "leaf",
+                "state": {
+                  "type": "QUICKSHARE_SIDE_VIEW",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 252.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "canvas:新建白板": false,
+          "markdown-importer:打开 Markdown 格式转换器": true,
+          "audio-recorder:开始/结束录音": true,
+          "workspaces:管理工作区布局": true,
+          "switcher:打开快速切换": true,
+          "graph:查看关系图谱": false,
+          "templater-obsidian:Templater": false,
+          "daily-notes:打开/创建今天的日记": true,
+          "templates:插入模板": true,
+          "command-palette:打开命令面板": true,
+          "cmdr:显示当前文件": false,
+          "oz-clear-unused-images:Clear Unused Images": false,
+          "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": true,
+          "obsidian-day-planner:Timeline": false,
+          "obsidian-language-learner:打开查词面板": false,
+          "obsidian-language-learner:打开新词面板": false,
+          "obsidian-language-learner:打开统计": false,
+          "obsidian-language-learner:单词列表": false,
+          "obsidian42-brat:BRAT": true,
+          "obsidian-spaced-repetition-recall:复习卡片": false,
+          "cloze:显/隐所有填空": false,
+          "obsidian-regex-pipeline:Regex Rulesets": false,
+          "fuzzy-chinese-pinyin:FuzzySearch": true,
+          "flashcards-obsidian:Generate flashcards": false,
+          "remotely-save:Remotely Save": false,
+          "obsidian-weread-plugin:Weread": false,
+          "obsidian-importer:Open Importer": false,
+          "obsidian-omnivore:Omnivore": false
+        }
+      },
+      "active": "3a6ee1ee9eaa7a9d",
+      "workspaces-plus:settings-v1": {
+        "explorerFoldState": [
+          "个人区",
+          "个人区/1-生活",
+          "个人区/1-生活/日记",
+          "学习区/01-高等数学/问题库",
+          "学习区/02-大学英语",
+          "学习区/02-大学英语/听力库"
+        ]
+      }
+    }
+  },
   "active": "Home"
 }

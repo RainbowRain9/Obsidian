@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "home",
+      "path": "_Templates/home.md"
+    },
+    {
+      "basename": "word",
+      "path": "02-大学英语/单词库/word.md"
+    },
+    {
       "basename": "第一章 绪论",
       "path": "04-环境科学导论/问题库/第一章 绪论.md"
     },
@@ -27,10 +35,6 @@
     {
       "basename": "碳排放",
       "path": "05-双碳战略概论/概念库/碳排放.md"
-    },
-    {
-      "basename": "home",
-      "path": "_Templates/home.md"
     },
     {
       "basename": "现场测量",
