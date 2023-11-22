@@ -1,0 +1,29 @@
+{
+  "baseFontSize": 17,
+  "theme": "moonstone",
+  "cssTheme": "Blue Topaz",
+  "enabledCssSnippets": [
+    "B - Heatmap",
+    "【自定义】表格样式ableStyles",
+    "absolve",
+    "simple-task-prickly-tomato",
+    "【link-card】",
+    "test",
+    "【Memos】Heatmap",
+    "【卡片横版视图】cards2",
+    "【格式】标题行距",
+    "【图标】checkbox from minimal Theme Modified",
+    "custom-admonitions.c9c6cb",
+    "【自定义】myhome 样式",
+    "【Linkcard】",
+    "【卡片视图】cards"
+  ],
+  "translucency": false,
+  "baseFontSizeAction": true,
+  "textFontFamily": "",
+  "monospaceFontFamily": "",
+  "interfaceFontFamily": "",
+  "accentColor": "",
+  "showViewHeader": true,
+  "nativeMenus": false
+}

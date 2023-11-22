@@ -1,0 +1,16 @@
+{
+  "todoPageName": "",
+  "showChecked": false,
+  "groupBy": "page",
+  "sortDirection": "new->old",
+  "ignoreFiles": "",
+  "includeFiles": "journals",
+  "lookAndFeel": "compact",
+  "_collapsedSections": [],
+  "autoRefresh": true,
+  "subGroups": false,
+  "sortDirectionItems": "new->old",
+  "sortDirectionGroups": "new->old",
+  "sortDirectionSubGroups": "new->old",
+  "_hiddenTags": []
+}

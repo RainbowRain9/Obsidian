@@ -1,0 +1,18 @@
+---
+banner: "https://img0.baidu.com/it/u=1500452460,2031157870&fm=253&fmt=auto&app=138&f=JPEG?w=1111&h=500"
+obsidianUIMode: "preview"
+updated: "2022-03-10 23:59"
+---
+*所有播客(podcast)，按观看日期(readtime)从近到远排序*
+
+
+```dataview
+table WITHOUT ID file.link AS "标题",  author as Author,readtime as 观看日期
+from "" 
+where !contains(file.folder, "_Templates") and !contains(file.folder, "2-weread")
+where contains(dtype,"podcast")
+sort readtime desc
+```
+
+
+

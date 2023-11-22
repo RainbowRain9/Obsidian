@@ -1,0 +1,15 @@
+GridMnem#Yang
+GridMnem#Yin
+XMind2OB#MD3
+Logseq2OB#Anki
+AnkiID#Del
+Callout#Del
+Quote&Tag#Del
+Roam2OB
+OB2Logseq#PageURL
+WF2OB#MD3
+Logseq2OB#MD2
+Logseq2OB#MD3
+Logseq2OB#MD4
+TaskDone
+1

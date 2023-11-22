@@ -1,0 +1,6 @@
+{
+  "StartDate": "monday",
+  "InsertAfter": "## ✏随笔感悟",
+  "ProcessEntriesBelow": "## ✏随笔感悟",
+  "DefaultEventComposition": "{TIME} {CONTENT}"
+}

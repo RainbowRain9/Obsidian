@@ -1,0 +1,10 @@
+{
+  "welcomeComplete": true,
+  "theme": {
+    "layout": "compact",
+    "dark": false
+  },
+  "drawing": {
+    "sketch": false
+  }
+}

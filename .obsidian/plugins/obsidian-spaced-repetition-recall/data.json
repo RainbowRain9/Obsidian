@@ -1,0 +1,86 @@
+{
+  "settings": {
+    "responseOptionBtnsText": {
+      "Default": [
+        "重来",
+        "较难",
+        "记得",
+        "简单"
+      ],
+      "Fsrs": [
+        "重来",
+        "较难",
+        "记得",
+        "简单"
+      ],
+      "Anki": [
+        "重来",
+        "较难",
+        "记得",
+        "简单"
+      ],
+      "SM2": [
+        "Blackout",
+        "Incorrect",
+        "Incorrect (Easy)",
+        "较难",
+        "记得",
+        "简单"
+      ]
+    },
+    "flashcardEasyText": "简单",
+    "flashcardGoodText": "记得",
+    "flashcardHardText": "较难",
+    "flashcardTags": [
+      "#flashcards",
+      "#card",
+      "#math-anki",
+      "#environment-anki"
+    ],
+    "convertFoldersToDecks": false,
+    "cardCommentOnSameLine": false,
+    "burySiblingCards": false,
+    "showContextInCards": true,
+    "flashcardHeightPercentage": 80,
+    "flashcardWidthPercentage": 40,
+    "randomizeCardOrder": true,
+    "convertHighlightsToClozes": true,
+    "convertBoldTextToClozes": false,
+    "convertCurlyBracketsToClozes": false,
+    "singleLineCardSeparator": "::",
+    "singleLineReversedCardSeparator": ":::",
+    "multilineCardSeparator": "?",
+    "multilineReversedCardSeparator": "??",
+    "editLaterTag": "#edit-later",
+    "intervalShowHide": true,
+    "enableNoteReviewPaneOnStartup": true,
+    "tagsToReview": [
+      "#review"
+    ],
+    "noteFoldersToIgnore": [],
+    "openRandomNote": false,
+    "autoNextNote": false,
+    "reviewResponseFloatBar": true,
+    "reviewingNoteDirectly": false,
+    "disableFileMenuReviewOptions": false,
+    "maxNDaysNotesReviewQueue": 365,
+    "initiallyExpandAllSubdecksInTree": true,
+    "baseEase": 250,
+    "lapsesIntervalChange": 0.5,
+    "easyBonus": 1.3,
+    "maximumInterval": 36525,
+    "maxLinkFactor": 1,
+    "showDebugMessages": false,
+    "dataLocation": "In Plugin Folder",
+    "customFolder": ".obsidian/plugins/obsidian-spaced-repetition-recall/tracked_files.json",
+    "maxNewPerDay": -1,
+    "repeatItems": false,
+    "trackedNoteToDecks": false,
+    "algorithm": "Fsrs",
+    "algorithmSettings": {},
+    "previousRelease": "1.10.1.11"
+  },
+  "buryDate": "2023-11-14",
+  "buryList": [],
+  "historyDeck": "environment-anki"
+}

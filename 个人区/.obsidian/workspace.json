@@ -1,0 +1,372 @@
+{
+  "main": {
+    "id": "e8b4ea94b39a8520",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3edc8421eb3cc87",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6dbb758e9b2cad60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4-领域夹/Area-Obsidian.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f052e532791efed6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian-Anki的用法.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8b1683d55e1ed13e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2bb8e73ed1b33267",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/外语书阅读工作流.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e7ade6315e520387",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Templates/home.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "687357708cbc920f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4bc1edcafd063cfb",
+        "type": "tabs",
+        "dimension": 68.13048933500627,
+        "children": [
+          {
+            "id": "37c8f55a8ef7a09c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b3290ae399933a0b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:400兴趣类/笔记软件/Obsidian",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "17868a6abe8e8663",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-tab-tree",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "d877e8285f98a38a",
+        "type": "tabs",
+        "dimension": 31.869510664993726,
+        "children": [
+          {
+            "id": "b37bc3d287f74512",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "f64c305e8abcac58",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 215.5
+  },
+  "right": {
+    "id": "4e390742ffc29613",
+    "type": "split",
+    "children": [
+      {
+        "id": "d4c25b22f0c7d5f0",
+        "type": "tabs",
+        "dimension": 50.38659793814432,
+        "children": [
+          {
+            "id": "ca4e910af4602420",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "4f457051e10f1a14",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "b2ae90cb6049dbe9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0f7a07573080b137",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {}
+            }
+          },
+          {
+            "id": "1fce6eb67ea669b4",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
+          },
+          {
+            "id": "d464975939e4fbfa",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      },
+      {
+        "id": "0b3485207df574dd",
+        "type": "tabs",
+        "dimension": 49.61340206185568,
+        "children": [
+          {
+            "id": "041c78328387b373",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_Templates/home.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "byModifiedTime",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dc4a81bfd6624166",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_Templates/home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8851ccb0aa4e524a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4-领域夹/Area-Obsidian.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "340969ccd24905e8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_Templates/home.md"
+              }
+            }
+          },
+          {
+            "id": "f6db6de298ff3692",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 337.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": true,
+      "workspaces:管理工作区布局": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "canvas:新建白板": false,
+      "switcher:打开快速切换": true,
+      "graph:查看关系图谱": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": true,
+      "random-note:开始漫游笔记": false,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-weread-plugin:Weread": false,
+      "omnisearch:Omnisearch": false,
+      "flashcards-obsidian:Generate flashcards": false,
+      "homepage:Open homepage": false,
+      "obsidian-day-planner:Timeline": false,
+      "obsidian-language-learner:打开查词面板": true,
+      "obsidian-language-learner:打开新词面板": true,
+      "obsidian-language-learner:打开统计": true,
+      "obsidian-language-learner:单词列表": true,
+      "obsidian42-brat:BRAT": false,
+      "extract-highlights-plugin:Extract Highlights": false,
+      "obsidian-projects:Open projects": false,
+      "obsidian-regex-pipeline:Regex Rulesets": false,
+      "fuzzy-chinese-pinyin:FuzzySearch": false,
+      "pkmer:Open Pkmer Market": false,
+      "surfing:surfing-bookmark-manager": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-spaced-repetition-recall:复习卡片": false,
+      "obsidian-memos:Memos": false
+    }
+  },
+  "active": "37c8f55a8ef7a09c",
+  "lastOpenFiles": [
+    "4-领域夹/Area-Obsidian.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian-Anki的用法.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Obsidian to Anki.md",
+    "_Templates/home.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：surfing -- 让 Obsidian 成为网络浏览器.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Recent Files 添加最近浏览过的文件列表.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Optimize Canvas Connections 优化 Canvas 中的连接线.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/外语书阅读工作流.md",
+    "tracked_files.json",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Custom Frames 集成更多网页应用到笔记中.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Convert url to preview (iframe) 将 URL 转化为嵌入的页面.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Close Similar Tabs 防止打开重复的笔记.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Number Headings 给笔记中的标题自动编号，以及动态目录.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Completr 自动联想补全插件.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Opener 插件默认在新标签页打开笔记.md",
+    "1-生活/日记/2023-11-13_星期一.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Easy Tpying 自动格式化你的中英文标点输入格式.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Code Tab 不止于混合代码块.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Editing Toolbar 必装的可视化编辑工具.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：smart-connections 用 AI 查询本地库.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Better Command Palette 更好更易用的命令面板.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Easy toggle sidebars 便捷的控制侧边栏.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Obsidian markmind 绘制思维导图、大纲和 PDF 文件标注工具.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Workspaces Plus 快速管理不同工作区不同布局对应不同工作流.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Metaedit 不可多得的 YAML 管理器.md",
+    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Templater 可以替代核心模板插件的效率神器.md",
+    "_附件/simpread/backup/simpread_config@20231113183826.json",
+    "_附件/simpread/backup/simpread_config@20231113163938.json",
+    "Projects - Demo Project",
+    "Pkmer-Docs/10-obsidian/obsidian社区插件/thino",
+    "Pkmer-Docs/10-obsidian/obsidian社区插件",
+    "Pkmer-Docs/10-obsidian",
+    "Pkmer-Docs",
+    "_附件/simpread/backup/simpread_config@20231112175748.json",
+    "media/v2-713a7e7ff25c43034596ec4ad491b782_b.png",
+    "media/New%20LOGO-150.png",
+    "media/picgo-2.0.gif",
+    "media/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif",
+    "media/34188201-212cda84-e570-11e7-9b7a-abb298699d85.jpg",
+    "media/34188165-e7cdf372-e56f-11e7-8732-1338c88b9bb7.jpg",
+    "media/输入笔记.gif",
+    "media/添加豆瓣电影.gif",
+    "media/image.png",
+    "media/image-4.png",
+    "media",
+    "6-SimpRead/未命名.canvas",
+    "管理数量方法-计算题.canvas"
+  ]
+}

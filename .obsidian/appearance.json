@@ -1,0 +1,15 @@
+{
+  "accentColor": "#7abdff",
+  "cssTheme": "Blue Topaz",
+  "textFontFamily": "仓耳今楷05,仓耳兰楷",
+  "interfaceFontFamily": "仓耳兰楷",
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "custom-admonitions.c9c6cb",
+    "【日记】Time",
+    "【图标】iconfont",
+    "【日记】timeline"
+  ],
+  "baseFontSize": 20,
+  "translucency": true
+}

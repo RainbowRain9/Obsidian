@@ -1,0 +1,122 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": false,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [
+    {
+      "id": "workspace:edit-file-title",
+      "icon": "lucide-edit-3",
+      "name": "编辑文件名",
+      "mode": "any"
+    }
+  ],
+  "leftRibbon": [
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "lucide-navigation",
+      "name": "显示当前文件",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "random-note",
+      "icon": "dice-glyph",
+      "name": "漫游笔记: 开始漫游笔记",
+      "mode": "any",
+      "color": "#7f7f7f"
+    },
+    {
+      "id": "obsidian-spaced-repetition:srs-cram-flashcards-in-note",
+      "icon": "alarm-check",
+      "name": "Spaced Repetition: 集中复习此笔记中的卡片",
+      "mode": "any",
+      "color": "#7f7f7f"
+    },
+    {
+      "id": "extract-highlights-plugin:shortcut-extract-highlights",
+      "icon": "anchor",
+      "name": "Extract Highlights: Shortcut for extracting highlights",
+      "mode": "any",
+      "color": "#7f7f7f"
+    },
+    {
+      "id": "obsidian-weread-plugin:sync-weread-notes-command",
+      "icon": "book",
+      "name": "Weread Plugin: Sync Weread Notes",
+      "mode": "any",
+      "color": "#7f7f7f"
+    },
+    {
+      "id": "workspace:undo-close-pane",
+      "icon": "lucide-undo-2",
+      "name": "Undo close tab",
+      "mode": "any",
+      "color": "#7f7f7f"
+    }
+  ],
+  "macros": [
+    {
+      "macro": [
+        {
+          "action": 1,
+          "delay": "10000"
+        },
+        {
+          "action": 1,
+          "delay": "10000"
+        },
+        {
+          "action": 0,
+          "commandId": "remotely-save:start-sync"
+        },
+        {
+          "action": 1,
+          "delay": "1500"
+        },
+        {
+          "action": 0,
+          "commandId": "obsidian-weread-plugin:sync-weread-notes-command"
+        }
+      ],
+      "name": "开机同步",
+      "icon": "star",
+      "startup": true
+    }
+  ],
+  "explorer": [],
+  "hide": {
+    "statusbar": [
+      "enhanced-editing",
+      "enhanced-editing",
+      "cmenu-plugin",
+      "extract-highlights-plugin"
+    ],
+    "leftRibbon": [
+      "Big Calendar",
+      "Omnisearch",
+      "单词列表",
+      "打开统计",
+      "打开新词面板",
+      "打开查词面板",
+      "Extract Highlights",
+      "Weread",
+      "开始漫游笔记"
+    ]
+  },
+  "spacing": "6",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

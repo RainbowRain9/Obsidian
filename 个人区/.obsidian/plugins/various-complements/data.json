@@ -1,0 +1,145 @@
+{
+  "strategy": "chinese",
+  "cedictPath": ".obsidian/cedict_ts.u8",
+  "matchStrategy": "prefix",
+  "maxNumberOfSuggestions": 5,
+  "maxNumberOfWordsAsPhrase": 3,
+  "minNumberOfCharactersTriggered": 2,
+  "minNumberOfWordsTriggeredPhrase": 1,
+  "complementAutomatically": true,
+  "delayMilliSeconds": 100,
+  "disableSuggestionsDuringImeOn": true,
+  "insertAfterCompletion": false,
+  "firstCharactersDisableSuggestions": "-#:/^@",
+  "useCommonPrefixCompletionOfSuggestion": false,
+  "patternsToSuppressTrigger": [
+    "^~~~.*",
+    "^```.*"
+  ],
+  "showMatchStrategy": false,
+  "showComplementAutomatically": false,
+  "showIndexingStatus": false,
+  "descriptionOnSuggestion": "Short",
+  "selectSuggestionKeys": "Tab",
+  "additionalCycleThroughSuggestionsKeys": "None",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
+  "openSourceFileKey": "Shift+Enter",
+  "propagateEsc": true,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 0,
+  "onlyComplementEnglishOnCurrentFileComplement": false,
+  "enableCurrentVaultComplement": true,
+  "currentVaultMinNumberOfCharacters": 0,
+  "includeCurrentVaultPathPrefixPatterns": "",
+  "excludeCurrentVaultPathPrefixPatterns": "Template",
+  "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
+  "enableCustomDictionaryComplement": false,
+  "customDictionaryPaths": "https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english-no-swears.txt",
+  "columnDelimiter": "Tab",
+  "customDictionaryWordRegexPattern": "",
+  "delimiterToHideSuggestion": "",
+  "delimiterToDivideSuggestionsForDisplayFromInsertion": "",
+  "caretLocationSymbolAfterComplement": "",
+  "displayedTextSuffix": " => ...",
+  "enableInternalLinkComplement": true,
+  "suggestInternalLinkWithAlias": true,
+  "excludeInternalLinkPathPrefixPatterns": "",
+  "enableFrontMatterComplement": true,
+  "frontMatterComplementMatchStrategy": "inherit",
+  "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
+  "showLogAboutPerformanceInConsole": false,
+  "selectionHistoryTree": {
+    "dashboard": {
+      "dashboard": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1699414301082
+        }
+      }
+    },
+    "basic": {
+      "basic": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1699415138691
+        }
+      }
+    },
+    "任务": {
+      "任务": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1699416662571
+        }
+      }
+    },
+    "金句卡": {
+      "金句卡": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1699438985306
+        }
+      }
+    },
+    "如何学习": {
+      "如何学习": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1699451956617
+        }
+      }
+    },
+    "200学习类": {
+      "200学习类": {
+        "frontMatter": {
+          "count": 4,
+          "lastUpdated": 1699586912808
+        }
+      }
+    },
+    "Obsidian": {
+      "Obsidian": {
+        "frontMatter": {
+          "count": 2,
+          "lastUpdated": 1699551725065
+        }
+      }
+    },
+    "海洋": {
+      "海洋": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1699575699957
+        }
+      }
+    },
+    "400兴趣类/国学": {
+      "400兴趣类/国学": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1699576786268
+        }
+      }
+    },
+    "高等数学::知识点": {
+      "高等数学::知识点": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1699591467458
+        }
+      }
+    },
+    "200学习类/01高等数学": {
+      "200学习类/01高等数学": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1699591725635
+        }
+      }
+    }
+  }
+}

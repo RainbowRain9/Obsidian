@@ -1,0 +1,1 @@
+"(.+)"->"[$1](logseq://graph/Obsidian_data?page=$1)"

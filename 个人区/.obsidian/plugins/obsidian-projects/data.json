@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [
+        "_Templates/tp/项目卡.md"
+      ],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "tag",
+        "config": {
+          "tag": "#400兴趣类",
+          "hierarchy": true
+        }
+      },
+      "newNotesFolder": "5-项目夹",
+      "views": [
+        {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "66b5af63-1d9a-40f9-a449-0ddb532b18a9",
+          "name": "表格",
+          "type": "table"
+        },
+        {
+          "config": {
+            "groupByField": "status",
+            "includeFields": []
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "e879e071-fe9c-4759-9505-5cd6f8ce03df",
+          "name": "看板",
+          "type": "board"
+        },
+        {
+          "config": {
+            "interval": "month"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "25f516d8-27b5-4bc9-b9a2-dcc699570cd2",
+          "name": "日历",
+          "type": "calendar"
+        },
+        {
+          "config": {
+            "coverField": "banner"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "499e5a1a-ad9d-44ce-977e-da074d4fc94b",
+          "name": "画册",
+          "type": "gallery"
+        }
+      ],
+      "id": "fd6524ee-ba38-4a03-8964-9e00010002c1",
+      "name": "400兴趣类"
+    }
+  ],
+  "archives": [],
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "PLAIN"
+    },
+    "commands": [],
+    "linkBehavior": "open-editor"
+  }
+}

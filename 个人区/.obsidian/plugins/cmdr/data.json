@@ -1,0 +1,104 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "workspace:split-vertical",
+      "icon": "vertical-split",
+      "name": "左右拆分",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:split-horizontal",
+      "icon": "horizontal-split",
+      "name": "上下拆分",
+      "mode": "any"
+    },
+    {
+      "id": "markdown-table-editor:markdown-table-editor-open-in-popover",
+      "icon": "table",
+      "name": "Table Editor",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [
+    {
+      "id": "obsidian-memos:open-memos",
+      "icon": "award",
+      "name": "Obsidian Memos: Open Memos",
+      "mode": "any"
+    }
+  ],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [
+    {
+      "id": "workspace:split-vertical",
+      "icon": "vertical-split",
+      "name": "左右拆分",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:undo-close-pane",
+      "icon": "undo-glyph",
+      "name": "重新打开上一个关闭的面板",
+      "mode": "desktop"
+    },
+    {
+      "id": "obsidian-version-history-diff:open-recovery-diff-view",
+      "icon": "timer-reset",
+      "name": "Version history diff: Show File Recovery diff view for active file",
+      "mode": "desktop"
+    },
+    {
+      "id": "omnisearch:show-modal",
+      "icon": "lucide-search",
+      "name": "Omnisearch: Vault search",
+      "mode": "any"
+    }
+  ],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "workspace:split-vertical",
+      "icon": "lucide-separator-vertical",
+      "name": "左右分屏",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-image-auto-upload-plugin:Upload all images",
+      "icon": "arrow-up-circle",
+      "name": "Image auto upload Plugin: Upload all images",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [
+      "various-complements"
+    ],
+    "leftRibbon": [
+      "Memos",
+      "Open Markdown Table Editor",
+      "Open today's daily note",
+      "打开 Markdown 格式转换器",
+      "打开快速切换",
+      "Omnisearch",
+      "Open homepage",
+      "插入模板"
+    ]
+  },
+  "spacing": "8",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

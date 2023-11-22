@@ -1,0 +1,322 @@
+{
+  "userAdmonitions": {
+    "book": {
+      "type": "book",
+      "color": "1, 244, 183",
+      "icon": {
+        "name": "book-open",
+        "type": "font-awesome"
+      },
+      "command": false
+    },
+    "Repeat": {
+      "type": "Repeat",
+      "color": "249, 133, 1",
+      "icon": {
+        "name": "bookmark",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "总结式摘抄"
+    },
+    "Idea": {
+      "type": "Idea",
+      "color": "249, 113, 186",
+      "icon": {
+        "name": "lightbulb",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "灵感"
+    },
+    "Note": {
+      "type": "Note",
+      "color": "94, 201, 155",
+      "icon": {
+        "name": "acorn",
+        "type": "rpg"
+      },
+      "command": false,
+      "title": "理解&笔记"
+    },
+    "Think": {
+      "type": "Think",
+      "color": "0, 154, 250",
+      "icon": {
+        "name": "mountain",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "思考"
+    },
+    "day": {
+      "type": "day",
+      "color": "244, 211, 1",
+      "icon": {
+        "name": "sun",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "日信条"
+    },
+    "List": {
+      "type": "List",
+      "color": "117, 214, 255",
+      "icon": {
+        "name": "list",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "列表"
+    },
+    "Amazing": {
+      "type": "Amazing",
+      "color": "165, 111, 246",
+      "icon": {
+        "name": "atom",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "Amazing"
+    },
+    "talk": {
+      "type": "talk",
+      "color": "153, 89, 15",
+      "icon": {
+        "name": "asterisk",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "talk",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "blank": {
+      "type": "blank",
+      "color": "255, 255, 255",
+      "icon": {
+        "name": "border-style",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": " "
+    },
+    "thm": {
+      "type": "thm",
+      "color": "41, 187, 22",
+      "icon": {
+        "name": "hand-point-right",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "定理"
+    },
+    "def": {
+      "type": "def",
+      "color": "13, 127, 227",
+      "icon": {
+        "name": "hand-point-right",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "引理"
+    },
+    "lem": {
+      "type": "lem",
+      "color": "68, 201, 219",
+      "icon": {
+        "name": "hand-point-right",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "推论"
+    },
+    "cor": {
+      "type": "cor",
+      "color": "23, 86, 232",
+      "icon": {
+        "name": "hand-point-right",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "引文"
+    },
+    "kanban": {
+      "type": "kanban",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true
+    },
+    "col2": {
+      "type": "col2",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "address-book",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true
+    },
+    "col3": {
+      "type": "col3",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true
+    },
+    "col4": {
+      "type": "col4",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "address-book",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true
+    },
+    "hibox": {
+      "type": "hibox",
+      "color": "68, 161, 243",
+      "icon": {
+        "name": "adjust",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true,
+      "copy": false
+    },
+    "col": {
+      "type": "col",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true
+    },
+    "table": {
+      "type": "table",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "table",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true,
+      "copy": false
+    },
+    "flex": {
+      "type": "flex",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true,
+      "copy": false
+    },
+    "music": {
+      "type": "music",
+      "color": "58, 223, 212",
+      "icon": {
+        "name": "music",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true
+    },
+    "icon": {
+      "type": "icon",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": true
+    },
+    "infobox": {
+      "type": "infobox",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
+    },
+    "grid": {
+      "type": "grid",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
+    },
+    "masonry": {
+      "type": "masonry",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
+    }
+  },
+  "syntaxHighlight": false,
+  "copyButton": false,
+  "version": "9.0.5",
+  "autoCollapse": false,
+  "defaultCollapseType": "open",
+  "injectColor": true,
+  "parseTitles": true,
+  "dropShadow": true,
+  "hideEmpty": false,
+  "open": {
+    "admonitions": true,
+    "icons": true,
+    "other": true,
+    "advanced": true
+  },
+  "icons": [
+    "octicons",
+    "rpg"
+  ],
+  "useFontAwesome": true,
+  "rpgDownloadedOnce": true,
+  "msDocConverted": false,
+  "useSnippet": true,
+  "snippetPath": "custom-admonitions.c9c6cb",
+  "syncLinks": false,
+  "allowMSSyntax": true,
+  "msSyntaxIndented": true,
+  "livePreviewMS": true,
+  "warnedAboutNC": true,
+  "enableMarkdownProcessor": false
+}
