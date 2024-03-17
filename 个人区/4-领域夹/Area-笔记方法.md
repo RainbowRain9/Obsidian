@@ -19,7 +19,7 @@ readtime:
 ## 项目列表
 
 ```dataview
-table type,status,UID
+table without id file.link as 项目名,type as 类别,status as 状态,time as 时间
 from ""  
 where contains(dtype, "Project") and contains(area, "Area-笔记方法")
 ```
@@ -27,7 +27,7 @@ where contains(dtype, "Project") and contains(area, "Area-笔记方法")
 ## 资料收集
 
 ```dataview
-table source,date
+table without id file.link as 项目名,type as 类别,status as 状态,time as 时间
 from ""
 where contains(tags, "读书方法")
 sort file.ctime

@@ -1,6 +1,6 @@
 {
   "canvasSize": 120000,
-  "headLevel": 2,
+  "headLevel": 3,
   "fontSize": 16,
   "background": "transparent",
   "layout": "mindmap",
@@ -12,7 +12,7 @@
   "parseMindMap": true,
   "annotateTop": 0,
   "annotateBottom": 0,
-  "useCustomShortcut": false,
+  "useCustomShortcut": true,
   "highlightFormat": "\nPage:{{page}}\n<span style=\"color:rgb({{color}})\">■</span>:{{highlightText}}\nComment:{{comment}}\n[📌]({{link}})\n^{{id}}\n",
   "setup": 1699619543704,
   "uid": "00p01001301301000p01301001001001001300t",

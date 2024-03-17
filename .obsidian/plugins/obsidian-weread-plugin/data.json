@@ -1,18 +1,66 @@
 {
-  "cookies": [],
+  "cookies": [
+    {
+      "name": "wr_gid",
+      "value": "279778515"
+    },
+    {
+      "name": "wr_fp",
+      "value": "933284080"
+    },
+    {
+      "name": "wr_theme",
+      "value": "dark"
+    },
+    {
+      "name": "wr_vid",
+      "value": "434766285"
+    },
+    {
+      "name": "wr_skey",
+      "value": "0JL8nQKz"
+    },
+    {
+      "name": "wr_pf",
+      "value": "0"
+    },
+    {
+      "name": "wr_rt",
+      "value": "web@7CHdZmeaE_kaqLHX0uw_AL"
+    },
+    {
+      "name": "wr_localvid",
+      "value": "80032840819ea01cd80095f"
+    },
+    {
+      "name": "wr_name",
+      "value": "彩虹雨"
+    },
+    {
+      "name": "wr_avatar",
+      "value": "https://thirdwx.qlogo.cn/mmopen/vi_32/dA61CmugPiaLvdh3XQOWn1xcbiceiatue5RAvkCa7jhRN9CpOwOicF9xjVYe2aicXWSib03mibV0r38d5Z53BIib870IQQ/132"
+    },
+    {
+      "name": "wr_gender",
+      "value": "0"
+    }
+  ],
   "noteLocation": "个人区/2-weread",
   "dailyNotesLocation": "/",
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1700652421664,
-  "isCookieValid": false,
-  "user": "",
-  "userVid": "",
-  "template": "---\nname: {{metaData.title}}\ncover: '{{metaData.cover}}'\ntags: weread\nauthor: {{metaData.author}}\nisbn: {{metaData.isbn}}\nrating: \nbanner: \"![[true.jpg]]\"\npublish: {{metaData.publisher}}\npublishyear: \"{{metaData.publishTime|truncate(11,False,'')}}\"\ncategory: {{metaData.category}}\nnoteCount: {{metaData.noteCount}}\nreviewCount: {{metaData.reviewCount}}\ngrade:\nstatus: {{metaData.finish}}\nreadtime:\npagecount: \npageprogress: \n---\n\n## {{metaData.title}}\n\n> [!bookinfo]+ **《{{metaData.title}}》**\n> ![bookcover|200]({{metaData.cover}})\n>\n| 属性   | 内容                                       |\n|- | - | - |\n| ISBN   | {{metaData.isbn if metaData.isbn else 'null'}}  |\n| 作者   | {{metaData.author}}                         |\n| 出版年 | {{metaData.publishTime|truncate(11,False,'')}}   | \n| 出版社 | {{metaData.publisher}}                       |\n| 来源   | [{{metaData.title}}](https://weread.qq.com/web/) |\n| 分类   | {{metaData.category}}                        |\n\n> [!abstract]- **内容简介**\n> \n> 《{{metaData.title}}》\n> {{metaData.intro|striptags(true)|trim}}\n\n# 高亮划线\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{% if highlight.reviewContent %}{% else %}\n> [!quote|notitle] \n>{{ highlight.markText |trim }} ^{{highlight.chapterUid}}-{{highlight.range}}\n- ⏱{{highlight.createTime.slice(0, 16)}}{% endif %} {% endfor %}{% endfor %}\n# 读书笔记\n{% for chapter in bookReview.chapterReviews %}{% if chapter.reviews or chapter.chapterReview %}\n## {{chapter.chapterTitle}}\n{% if  chapter.chapterReviews %}{% for chapterReview in chapter.chapterReviews %}\n### 章节评论 No.{{loop.index}}\n- {{chapterReview.content}} ^{{chapterReview.reviewId}}\n    - ⏱ {{chapterReview.createTime}} {% endfor%}{%endif %}{% if chapter.reviews %}{%for review in chapter.reviews %}\n### 划线评论\n> [!quote|notitle] \n>{{review.abstract |trim }}  ^{{review.reviewId}}\n\n{{review.content}}\n- {{review.createTime.slice(0, 16)}}\n{% endfor %} {%endif %} {% endif %} {% endfor %}\n# 本书评论\n{% if bookReview.bookReviews %}{% for bookReview in bookReview.bookReviews %}\n## 书评 No.{{loop.index}} {{bookReview.mdContent}} ^{{bookReview.reviewId}}\n⏱ {{bookReview.createTime.slice(0, 10)}}\n{% endfor%}{% endif %}\n",
+  "lastCookieTime": 1710678078487,
+  "isCookieValid": true,
+  "user": "彩虹雨",
+  "userVid": "434766285",
+  "template": "---\nname: {{metaData.title}}\ncover: '{{metaData.cover}}'\ntags: weread\nauthor: {{metaData.author}}\nisbn: {{metaData.isbn}}\nrating: \nbanner: \"![[true.jpg]]\"\npublish: {{metaData.publisher}}\npublishyear: \"{{metaData.publishTime|truncate(11,False,'')}}\"\ncategory: {{metaData.category}}\nnoteCount: {{metaData.noteCount}}\nreviewCount: {{metaData.reviewCount}}\ngrade:\nstatus: {{metaData.finish}}\nreadtime:\npagecount: \npageprogress: \n---\n\n## {{metaData.title}}\n\n> [!bookinfo]+ **《{{metaData.title}}》**\n> ![bookcover|200]({{metaData.cover}})\n>\n| 属性   | 内容                                       |\n|- | - | - |\n| ISBN   | {{metaData.isbn if metaData.isbn else 'null'}}  |\n| 作者   | {{metaData.author}}                         |\n| 出版年 | {{metaData.publishTime|truncate(11,False,'')}}   | \n| 出版社 | {{metaData.publisher}}                       |\n| 来源   | [{{metaData.title}}](https://weread.qq.com/web/) |\n| 分类   | {{metaData.category}}                        |\n\n> [!abstract]- **内容简介**\n> \n> 《{{metaData.title}}》\n> {{metaData.intro|striptags(true)|trim}}\n\n# 高亮划线\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{% if highlight.reviewContent %}{% else %}\n> [!quote|notitle] \n>{{ highlight.markText |trim }} ^{{highlight.chapterUid}}-{{highlight.range}}\n- ⏱{{highlight.createTime.slice(0, 16)}}{% endif %} {% endfor %}{% endfor %}\n\n\n# 读书笔记\n{% for chapter in bookReview.chapterReviews %}{% if chapter.reviews or chapter.chapterReview %}\n## {{chapter.chapterTitle}}\n{% if  chapter.chapterReviews %}{% for chapterReview in chapter.chapterReviews %}\n### 章节评论 No.{{loop.index}}\n> [!quote|notitle] \n> {{chapterReview.content}} ^{{chapterReview.reviewId}}\n- ⏱ {{chapterReview.createTime.slice(0, 16)}} {% endfor%}{%endif %}{% if chapter.reviews %}{%for review in chapter.reviews %}\n### 划线评论\n> [!quote|notitle] \n>{{review.abstract |trim }}  ^{{review.reviewId}}\n\n{{review.content}}\n- ⏱{{review.createTime.slice(0, 16)}}\n{% endfor %} {%endif %} {% endif %} {% endfor %}\n# 本书评论\n{% if bookReview.bookReviews %}{% for bookReview in bookReview.bookReviews %}\n## 书评 No.{{loop.index}} {{bookReview.mdContent}} ^{{bookReview.reviewId}}\n⏱ {{bookReview.createTime.slice(0, 10)}}\n{% endfor%}{% endif %}\n",
   "noteCountLimit": 3,
-  "subFolderType": "category",
+  "subFolderType": "-1",
   "fileNameType": "BOOK_NAME-AUTHOR",
   "dailyNotesToggle": false,
-  "notesBlacklist": ""
+  "notesBlacklist": "",
+  "showEmptyChapterTitleToggle": false,
+  "convertTags": false,
+  "saveArticleToggle": true
 }

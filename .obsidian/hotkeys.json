@@ -196,15 +196,6 @@
       "key": "D"
     }
   ],
-  "theme:use-light": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "L"
-    }
-  ],
   "Enhanced-editing:add-Line0": [],
   "editor:open-link-in-new-window": [
     {
@@ -214,12 +205,6 @@
         "Shift"
       ],
       "key": "Enter"
-    },
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "O"
     }
   ],
   "editor:open-link-in-new-split": [
@@ -240,24 +225,14 @@
   ],
   "Enhanced-editing:cuti-text": [],
   "Enhanced-editing:gaoliang-text": [],
-  "Enhanced-editing:del-lines": [],
-  "Enhanced-editing:add-lines": [],
   "Enhanced-editing:mouse-up": [],
   "Enhanced-editing:mouse-down": [],
-  "Enhanced-editing:mouse-end": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "ArrowRight"
-    }
-  ],
   "Enhanced-editing:mouse-start": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "ArrowLeft"
+      "key": "ArrowUp"
     }
   ],
   "Enhanced-editing:mouse-right": [],
@@ -308,14 +283,6 @@
       "key": "B"
     }
   ],
-  "Enhanced-editing:add-tiankong": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "K"
-    }
-  ],
   "obsidian-enhancing-mindmap:Toggle to markdown or mindmap": [
     {
       "modifiers": [
@@ -334,14 +301,6 @@
   ],
   "templater-obsidian:replace-in-file-templater": [],
   "Enhanced-editing:internal-link2": [],
-  "quickadd:choice:2ceff9f5-dc42-47a4-b48e-e573f8034f94": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "Q"
-    }
-  ],
   "quickadd:choice:d3cd2aee-5994-469a-9dd5-ccf72268794f": [
     {
       "modifiers": [
@@ -381,14 +340,6 @@
     }
   ],
   "editor:toggle-comments": [],
-  "quickadd:choice:a0d94d6b-2d1a-4f65-a0db-8020bb20b6d6": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "/"
-    }
-  ],
   "insert-template": [
     {
       "modifiers": [
@@ -415,7 +366,6 @@
   ],
   "editor:save-file": [],
   "Enhanced-editing:shanchu-text": [],
-  "switcher:open": [],
   "fuzzy-chinese-pinyin:open-search": [
     {
       "modifiers": [
@@ -427,9 +377,9 @@
   "markdown:toggle-preview": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
-      "key": "E"
+      "key": "/"
     }
   ],
   "quickadd:choice:5eff06bf-898f-44d8-8491-943bef5b63b3": [
@@ -468,12 +418,101 @@
       "key": "S"
     }
   ],
-  "workspaces:open-modal": [
+  "quickadd:choice:7ec8e713-423a-464d-a839-aecddd1ba7a5": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "A"
+      "key": "`"
+    }
+  ],
+  "Enhanced-editing:biaoti0-text": [],
+  "quickadd:choice:20fce1af-63a3-41fe-8144-f902da559b46": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "K"
+    }
+  ],
+  "obsidian-outliner:fold": [],
+  "obsidian-outliner:unfold": [],
+  "Enhanced-editing:mouse-end": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "quickadd:choice:a0d94d6b-2d1a-4f65-a0db-8020bb20b6d6": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "'"
+    }
+  ],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "/"
+    }
+  ],
+  "Enhanced-editing:edit-duanhang": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "D"
+    }
+  ],
+  "editor:delete-paragraph": [],
+  "switcher:open": [],
+  "image2latex:generate-latex-from-last-image-inline": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
+    }
+  ],
+  "image2latex:generate-latex-from-last-image-multiline": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "X"
+    }
+  ],
+  "Enhanced-editing:add-lines": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "J"
+    }
+  ],
+  "obsidian-memos:show-thino-editor": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
+    }
+  ],
+  "dida-sync:sync-current-file": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "T"
     }
   ]
 }

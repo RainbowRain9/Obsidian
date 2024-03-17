@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d3edc8421eb3cc87",
+        "id": "62e2049b409773ec",
         "type": "tabs",
         "children": [
           {
-            "id": "6dbb758e9b2cad60",
+            "id": "dfdafd3ee7c04d12",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-领域夹/Area-Obsidian.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f052e532791efed6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian-Anki的用法.md",
+                "file": "6-SimpRead/A 兴趣/A1 Obsidian-Use/(我使用的同步方案)最佳实践：obsidian同步方案(三)第三方同步之网盘OneDrive.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -34,12 +21,12 @@
             }
           },
           {
-            "id": "8b1683d55e1ed13e",
+            "id": "a2a06bcd38932aa9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md",
+                "file": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Obsidian极简日记配置教程.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -47,12 +34,20 @@
             }
           },
           {
-            "id": "2bb8e73ed1b33267",
+            "id": "5378588ee1f4d5a1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "828acc3ee5bcbba1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/外语书阅读工作流.md",
+                "file": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian _ Ob 双链伴侣，挖出潜藏的笔记双链.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -60,20 +55,33 @@
             }
           },
           {
-            "id": "e7ade6315e520387",
+            "id": "f383a1a68636bea2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Readme.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95a22ee1e86bb8d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "_Templates/home.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -320,41 +328,41 @@
   },
   "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
-    "4-领域夹/Area-Obsidian.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian-Anki的用法.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Obsidian to Anki.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/(我使用的同步方案)最佳实践：obsidian同步方案(三)第三方同步之网盘OneDrive.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian _ Ob 双链伴侣，挖出潜藏的笔记双链.md",
+    "_附件/simpread/backup/simpread_config@20231126145135.json",
+    "7-Omnivore/2023-11-15/Organize your Omnivore library with labels.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/Obsidian极简日记配置教程.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/全平台免费稍后读利器Omnivore更新了，支持一键同步内容到Obsidian.md",
+    "6-SimpRead/D 教育/D4 自学、读书方法、考试/大一已经确定要考研的人，大学四年该怎样过？ - 知乎.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/数学系大学生的 obsidian 配置——记录一年来的弯路与心得.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/用 Ob 构建专属于你的数字花园 - Obsidian 发布分享 - 渐进创作 - 哔哩哔哩.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/最近一直被问的 Obsidian 主题，我分享出来了！还有______.md",
+    "6-SimpRead/T 技术/TP393 网址工具/教你免费白嫖一个 Alist 网盘 + 自己域名，小白一键搭建网盘教程.md",
+    "6-SimpRead/D 教育/D4 自学、读书方法、考试/我用 4 个 All-in-One 工具，管理好了自己的工作和生活.md",
+    "6-SimpRead/T 技术/TP384 软件/稳定89MB-s不限速，官方版本可以卸载了....md",
+    "6-SimpRead/T 技术/TP384 软件",
+    "3-知识宝箱/T 技术/TP393 网址工具/PicGo.md",
+    "6-SimpRead/T 技术/TP393 网址工具",
+    "6-SimpRead/T 技术/TP317 计算机",
+    "6-SimpRead/T 技术/TP393 网址工具/NextCloud - 打造属于你的云端存储世界.md",
+    "6-SimpRead/T 技术",
+    "6-SimpRead/D 教育/D4 自学、读书方法、考试/88个免费的学习网站🔥学起来偷偷逆袭.md",
+    "6-SimpRead/D 教育/D4 自学、读书方法、考试/【视频笔记】打造第二大脑：如何记得所有看过的东西 _ 对 obsidian 知识库的改造灵感：：夜猫日记.md",
+    "6-SimpRead/D 教育/D4 自学、读书方法、考试",
+    "6-SimpRead/D 教育",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian-Anki的用法.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md",
     "_Templates/home.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：surfing -- 让 Obsidian 成为网络浏览器.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Recent Files 添加最近浏览过的文件列表.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Optimize Canvas Connections 优化 Canvas 中的连接线.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/外语书阅读工作流.md",
+    "4-领域夹/Area-Obsidian.md",
+    "00-MOC/Book-阅读动态.md",
+    "00-MOC/Podcast-播客笔记-表格.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Obsidian to Anki.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：surfing -- 让 Obsidian 成为网络浏览器.md",
+    "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Recent Files 添加最近浏览过的文件列表.md",
     "tracked_files.json",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Custom Frames 集成更多网页应用到笔记中.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Convert url to preview (iframe) 将 URL 转化为嵌入的页面.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Close Similar Tabs 防止打开重复的笔记.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Number Headings 给笔记中的标题自动编号，以及动态目录.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Completr 自动联想补全插件.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Opener 插件默认在新标签页打开笔记.md",
-    "1-生活/日记/2023-11-13_星期一.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Easy Tpying 自动格式化你的中英文标点输入格式.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Code Tab 不止于混合代码块.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Editing Toolbar 必装的可视化编辑工具.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：smart-connections 用 AI 查询本地库.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Better Command Palette 更好更易用的命令面板.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Easy toggle sidebars 便捷的控制侧边栏.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Obsidian markmind 绘制思维导图、大纲和 PDF 文件标注工具.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Workspaces Plus 快速管理不同工作区不同布局对应不同工作流.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Metaedit 不可多得的 YAML 管理器.md",
-    "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Templater 可以替代核心模板插件的效率神器.md",
     "_附件/simpread/backup/simpread_config@20231113183826.json",
     "_附件/simpread/backup/simpread_config@20231113163938.json",
-    "Projects - Demo Project",
-    "Pkmer-Docs/10-obsidian/obsidian社区插件/thino",
-    "Pkmer-Docs/10-obsidian/obsidian社区插件",
-    "Pkmer-Docs/10-obsidian",
-    "Pkmer-Docs",
-    "_附件/simpread/backup/simpread_config@20231112175748.json",
     "media/v2-713a7e7ff25c43034596ec4ad491b782_b.png",
     "media/New%20LOGO-150.png",
     "media/picgo-2.0.gif",
@@ -365,7 +373,6 @@
     "media/添加豆瓣电影.gif",
     "media/image.png",
     "media/image-4.png",
-    "media",
     "6-SimpRead/未命名.canvas",
     "管理数量方法-计算题.canvas"
   ]

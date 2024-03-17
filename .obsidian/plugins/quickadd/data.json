@@ -81,8 +81,10 @@
           },
           "folder": {
             "enabled": true,
-            "folders": [],
-            "chooseWhenCreatingNote": true,
+            "folders": [
+              "学习区/01-高等数学/问题库"
+            ],
+            "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
             "chooseFromSubfolders": false
           },
@@ -109,12 +111,15 @@
           },
           "folder": {
             "enabled": true,
-            "folders": [],
-            "chooseWhenCreatingNote": true,
+            "folders": [
+              "学习区/01-高等数学/笔记库",
+              "学习区/03-大学物理/知识库"
+            ],
+            "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
             "chooseFromSubfolders": false
           },
-          "appendLink": true,
+          "appendLink": false,
           "openFileInNewTab": {
             "enabled": false,
             "direction": "horizontal",
@@ -138,10 +143,12 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "3-知识宝箱"
+              "学习区/01-高等数学/概念库",
+              "学习区/03-大学物理/概念库"
             ],
-            "chooseWhenCreatingNote": true,
-            "createInSameFolderAsActiveFile": false
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
           },
           "appendLink": false,
           "incrementFileName": false,
@@ -155,6 +162,36 @@
           "fileExistsMode": "Nothing"
         },
         {
+          "id": "957743b9-a4be-40e4-8561-c79ea1f2b4f8",
+          "name": "📚书名页",
+          "type": "Template",
+          "command": false,
+          "templatePath": "学习区/_Templates/tp/书名页.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:主题}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "学习区/01-高等数学/!书名库"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
           "id": "003b3a1d-e722-49ad-acac-3b544cf91b87",
           "name": "🗂️例题卡",
           "type": "Template",
@@ -166,8 +203,40 @@
           },
           "folder": {
             "enabled": true,
-            "folders": [],
-            "chooseWhenCreatingNote": true,
+            "folders": [
+              "学习区/01-高等数学/例题库"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": true,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "f1de4999-a011-4365-b26d-51a03c077b6c",
+          "name": "😎人名卡",
+          "type": "Template",
+          "command": false,
+          "templatePath": "学习区/_Templates/tp/人名卡.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:标题}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "学习区/03-中国近代史纲要/人物库"
+            ],
+            "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
             "chooseFromSubfolders": false
           },
@@ -195,7 +264,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "4-领域夹"
+              "个人区/4-领域夹"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false
@@ -224,7 +293,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "5-项目夹"
+              "个人区/5-项目夹"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false
@@ -590,7 +659,7 @@
           "openFileInMode": "default"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "a771c676-a100-4457-8772-f22f32a0ad0a",
@@ -735,7 +804,7 @@
           "openFileInMode": "default"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "658788e0-1106-40ba-be00-302dfbdfe70e",
@@ -765,6 +834,13 @@
           "macroId": "abfa4c3e-cf3a-45f7-847e-56a3c82fdc72"
         },
         {
+          "id": "7ec8e713-423a-464d-a839-aecddd1ba7a5",
+          "name": "注释",
+          "type": "Macro",
+          "command": true,
+          "macroId": "e891a421-e9d1-4ac1-87f8-8aaab3a0fb03"
+        },
+        {
           "id": "58280f89-34fa-430f-aed7-fada3d6bdf2f",
           "name": "强下划线",
           "type": "Macro",
@@ -780,45 +856,43 @@
       "type": "Macro",
       "command": true,
       "macroId": "0e4a5a36-3d1c-4430-82c7-e7ff6682b088"
+    },
+    {
+      "id": "20fce1af-63a3-41fe-8144-f902da559b46",
+      "name": "Anki",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "",
+      "captureToActiveFile": true,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": true,
+        "format": " #anki "
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
     }
   ],
   "macros": [
-    {
-      "name": "Home工作区",
-      "id": "8375d67f-9460-4b6f-90f8-5355af1c6668",
-      "commands": [
-        {
-          "name": "Wait",
-          "type": "Wait",
-          "id": "fc377b74-ed4a-4289-b365-298855ece976",
-          "time": 500
-        },
-        {
-          "name": "fetchhomepage",
-          "type": "UserScript",
-          "id": "e0945b1a-0def-4561-ae45-fdefc1ade009",
-          "path": "_Templates/script/fetchhomepage.js",
-          "settings": {
-            "": "",
-            "Enter the city name": "武汉",
-            "City name": ""
-          }
-        },
-        {
-          "name": "Wait",
-          "type": "Wait",
-          "id": "0a4e2484-6dbf-4bbd-af82-2040ecd7acee",
-          "time": 300
-        },
-        {
-          "name": "Homepage: Open homepage",
-          "type": "Obsidian",
-          "id": "e1e66c39-8248-431e-b3dc-83430e1f6283",
-          "commandId": "homepage:open-homepage"
-        }
-      ],
-      "runOnStartup": true
-    },
     {
       "name": "open music",
       "id": "0e4a5a36-3d1c-4430-82c7-e7ff6682b088",
@@ -958,18 +1032,25 @@
           "type": "Obsidian",
           "id": "b18cba25-aa19-4ee2-8798-8101bfc95392",
           "commandId": "Enhanced-editing:xiahua-text"
-        },
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "注释",
+      "id": "e891a421-e9d1-4ac1-87f8-8aaab3a0fb03",
+      "commands": [
         {
-          "name": "Wait",
-          "type": "Wait",
-          "id": "a6cfd5db-8e3a-465d-99f6-23171bf91edc",
-          "time": 50
-        },
-        {
-          "name": "增强编辑: 转换彩色文字1",
+          "name": "增强编辑: （选文）",
           "type": "Obsidian",
-          "id": "71d33c9f-8d48-40ca-85a6-f9b2bf27cd20",
-          "commandId": "Enhanced-editing:text-Color1"
+          "id": "8f329769-713e-4c7a-bc9d-d1812656dc24",
+          "commandId": "Enhanced-editing:add-kh2"
+        },
+        {
+          "name": "增强编辑: 「选文」",
+          "type": "Obsidian",
+          "id": "dd426a3e-51d2-46b4-a1ec-58a5c21135ff",
+          "commandId": "Enhanced-editing:add-kh3"
         }
       ],
       "runOnStartup": false
@@ -977,22 +1058,59 @@
   ],
   "inputPrompt": "multi-line",
   "devMode": false,
-  "templateFolderPath": "",
+  "templateFolderPath": "学习区/_Templates",
   "announceUpdates": true,
-  "version": "1.6.0",
+  "version": "1.8.1",
   "disableOnlineFeatures": true,
   "ai": {
-    "OpenAIApiKey": "",
     "defaultModel": "Ask me",
     "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
     "promptTemplatesFolderPath": "",
-    "showAssistant": true
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          }
+        ]
+      }
+    ]
   },
   "migrations": {
     "migrateToMacroIDFromEmbeddedMacro": true,
     "useQuickAddTemplateFolder": true,
     "incrementFileNameSettingMoveToDefaultBehavior": true,
     "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
-    "setVersionAfterUpdateModalRelease": true
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
   }
 }

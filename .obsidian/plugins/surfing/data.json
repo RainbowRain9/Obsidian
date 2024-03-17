@@ -1,13 +1,14 @@
 {
-  "defaultSearchEngine": "bing",
+  "defaultSearchEngine": "baidu",
   "customSearchEngine": [],
+  "hoverPopover": true,
   "ignoreList": [
     "notion",
     "craft"
   ],
   "alwaysShowCustomSearch": false,
   "showOtherSearchEngines": true,
-  "showSearchBarInPage": false,
+  "showSearchBarInPage": true,
   "markdownPath": "/",
   "customHighlightFormat": false,
   "highlightFormat": "[{CONTENT}]({URL})",
@@ -19,6 +20,8 @@
   "useWebview": false,
   "useIconList": true,
   "darkMode": false,
+  "randomBackground": false,
+  "lastOpenedFiles": false,
   "bookmarkManager": {
     "openBookMark": true,
     "saveBookMark": true,
@@ -34,7 +37,20 @@
       "modified",
       "action"
     ],
-    "defaultFilterType": "tree"
+    "defaultFilterType": "menu"
   },
-  "treeData": []
+  "treeData": [
+    {
+      "id": "cb429ff41ca5b2ac",
+      "parent": 0,
+      "droppable": true,
+      "text": "Hosting alternatives",
+      "data": {
+        "fileType": "site",
+        "fileSize": "",
+        "icon": {}
+      }
+    }
+  ],
+  "enableHtmlPreview": true
 }

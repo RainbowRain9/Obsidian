@@ -6,7 +6,8 @@
     "view_url": "https://noteshare.space/note/clp816pko394101mwxyosfdrj#nxOoH1NYBafmOtPCnAydAjYCg3OXw+lYpu4qjzKY9Hg",
     "secret_token": "4Pl4RIY9Fy5LbpxzXUoPjaMjjPff/NGrkH9CqOR4LDc=",
     "note_id": "clp816pko394101mwxyosfdrj",
-    "basename": "3.3 泰勒公式-Xmind"
+    "basename": "3.3 泰勒公式-Xmind",
+    "deleted_from_server": true
   },
   "学习区/01-高等数学/例题库/3.2 洛必达法则-例题.md": {
     "shared_datetime": "2023-11-22T03:14:06.720Z",
@@ -15,6 +16,85 @@
     "view_url": "https://noteshare.space/note/clp96xmrr627701mwuxd3em5u#DjovO78wzNYkFJmqTGMxAvQunHPVRvSDICXrv4A3sKo",
     "secret_token": "o3MAtriRe17sYj1ORCGsPBbEry3NQ4RY6rrUviayuNM=",
     "note_id": "clp96xmrr627701mwuxd3em5u",
-    "basename": "3.2 洛必达法则-例题"
+    "basename": "3.2 洛必达法则-例题",
+    "deleted_from_server": true
+  },
+  "个人区/5-项目夹/转专业.md": {
+    "shared_datetime": "2023-11-27T15:30:27.779Z",
+    "updated_datetime": null,
+    "expire_datetime": "2023-12-27T15:30:27.896Z",
+    "view_url": "https://noteshare.space/note/clph2fuez2610801mwejhwkrtr#uONV24zqwaChjwbEGGUXmbO4xDRTgzoLE0jDBLA+4n8",
+    "secret_token": "5K4F8xBWbr8MoOTZ9rNAuDEb5pzYC2db6hhZvF10ufA=",
+    "note_id": "clph2fuez2610801mwejhwkrtr",
+    "basename": "转专业",
+    "deleted_from_server": true
+  },
+  "个人区/3-知识宝箱/T 技术/TP317 计算机/智能科学与技术.md": {
+    "shared_datetime": "2023-11-27T15:30:32.367Z",
+    "updated_datetime": null,
+    "expire_datetime": "2023-12-27T15:30:32.501Z",
+    "view_url": "https://noteshare.space/note/clph2fxyu2611501mwg80wjlsq#stbKaQr1yqli3b4GaGDvEokMH0aEXr9Z+Zak0JS5CF4",
+    "secret_token": "0cE4wq16YvB/9G+9/miL4iFZlqZzAJ+54UDUVhXQqH0=",
+    "note_id": "clph2fxyu2611501mwg80wjlsq",
+    "basename": "智能科学与技术",
+    "deleted_from_server": true
+  },
+  "个人区/3-知识宝箱/T 技术/TP317 计算机/计算机科学与技术.md": {
+    "shared_datetime": "2023-11-27T15:30:38.547Z",
+    "updated_datetime": null,
+    "expire_datetime": "2023-12-27T15:30:38.675Z",
+    "view_url": "https://noteshare.space/note/clph2g2qd2612201mwx2k9b47o#2EeVe0edHGKDxrGHOrSvk80DQchwN3ETkS1FdEFlTTE",
+    "secret_token": "ofzsNvw8xthHsDlnPtfwEc9wlWrxL1mZ3YwF0EsBYiQ=",
+    "note_id": "clph2g2qd2612201mwx2k9b47o",
+    "basename": "计算机科学与技术",
+    "deleted_from_server": true
+  },
+  "个人区/3-知识宝箱/T 技术/TP317 计算机/软件工程.md": {
+    "shared_datetime": "2023-11-27T15:30:43.825Z",
+    "updated_datetime": null,
+    "expire_datetime": "2023-12-27T15:30:43.955Z",
+    "view_url": "https://noteshare.space/note/clph2g6t02612901mwjdmvwqhn#WgfkoMADQYZhzmfpUGXL0Z/joomjCmeLEVJR2svfbV0",
+    "secret_token": "XYNenxHp7QRbbIMfa429qsMRe+WdUy72yMuT2eAy2zU=",
+    "note_id": "clph2g6t02612901mwjdmvwqhn",
+    "basename": "软件工程",
+    "deleted_from_server": true
+  },
+  "个人区/1-生活/日记/2024-03-17_星期日.md": {
+    "shared_datetime": "2024-03-17T13:25:41.798Z",
+    "updated_datetime": null,
+    "expire_datetime": "2024-04-16T13:25:43.699Z",
+    "view_url": "https://noteshare.space/note/cltvjuzkl2065401mw6veelecq#o9rArMPO7QZGF0+9RDu7a+5YINdWTaRHDQnNywfuRZM",
+    "secret_token": "zunvejTf/rAcFTJZa9fOv7EYxHfMFkE4CwXK60WBpEg=",
+    "note_id": "cltvjuzkl2065401mw6veelecq",
+    "basename": "2024-03-17_星期日",
+    "deleted_from_server": true
+  },
+  "学习区/01-高等数学/!书名库/第二章导数与微分.md": {
+    "shared_datetime": "2024-03-17T13:46:57.246Z",
+    "updated_datetime": null,
+    "expire_datetime": "2024-04-16T13:46:59.405Z",
+    "view_url": "https://noteshare.space/note/cltvkmbwv2077601mwy625pean#w9DfxF1jxL5Aans8w3+/g92FhX4/NZC4b1gxm8FYllg",
+    "secret_token": "qLm1ZY2STmUsYCOLyq8Nrtixq2+sL8Hayh8aFXKWz8w=",
+    "note_id": "cltvkmbwv2077601mwy625pean",
+    "basename": "第二章导数与微分",
+    "deleted_from_server": true
+  },
+  "学习区/03-大学物理/知识库/01-质点运动学-Xmind.md": {
+    "shared_datetime": "2024-03-17T13:46:10.323Z",
+    "updated_datetime": null,
+    "expire_datetime": "2024-04-16T13:46:12.458Z",
+    "view_url": "https://noteshare.space/note/cltvklbos2076601mwncmbb9qx#XR7ns6m40nImjYcmBP6xQovZEwi4NmEcRelrdHcEowo",
+    "secret_token": "jxqU70EEq8SdFiaTSFW2s5RVakARGcX90Gh0Euf6CIE=",
+    "note_id": "cltvklbos2076601mwncmbb9qx",
+    "basename": "01-质点运动学-Xmind"
+  },
+  "学习区/03-大学物理/知识库/00-矢量运算-Xmind.md": {
+    "shared_datetime": "2024-03-17T13:47:09.183Z",
+    "updated_datetime": null,
+    "expire_datetime": "2024-04-16T13:47:11.260Z",
+    "view_url": "https://noteshare.space/note/cltvkml262079401mwjs4d9n0c#JLg3bdyECR7tpnLmGtPU2famQsjvuyaNU5Aqbg9oI08",
+    "secret_token": "/O8NuKU+NSlkazVq50OnA7aZvzhDTdrfBJSG6Y2pF80=",
+    "note_id": "cltvkml262079401mwjs4d9n0c",
+    "basename": "00-矢量运算-Xmind"
   }
 }

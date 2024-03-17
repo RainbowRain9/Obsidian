@@ -2,5 +2,6 @@
   "promptDelete": false,
   "newFileLocation": "current",
   "showInlineTitle": true,
-  "attachmentFolderPath": "学习区/_附件"
+  "attachmentFolderPath": "学习区/_附件",
+  "alwaysUpdateLinks": true
 }

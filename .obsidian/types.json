@@ -5,6 +5,16 @@
     "tags": "tags",
     "time": "datetime",
     "出生年月": "text",
-    "性别": "text"
+    "性别": "text",
+    "state": "checkbox",
+    "source": "text",
+    "banner": "multitext",
+    "dtype": "text",
+    "status": "text",
+    "UID": "datetime",
+    "subject": "text",
+    "dg-publish": "checkbox",
+    "dg-home": "checkbox",
+    "date": "datetime"
   }
 }

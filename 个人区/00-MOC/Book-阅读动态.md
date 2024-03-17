@@ -17,8 +17,8 @@ sort readtime desc
 
 ```dataview
 table without id ("![](" + banner + ")") as Cover,  "<progress value=" + pageprogress + " max="+pagecount+"  class='yellow'>" as progress,file.link as Name, author as Author,rating as Rating,readtime
-from "3-知识宝箱"
-where !contains(file.folder, "_Templates") and !contains(file.folder, "2-weread")
+from ""
+where !contains(file.folder, "个人区/_Templates") where contains(file.folder, "个人区/2-weread")
 where contains(dtype, "book")
 where contains(status, "进行中")
 sort readtime desc,file.ctime desc

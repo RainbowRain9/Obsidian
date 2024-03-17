@@ -1,5 +1,5 @@
 ---
-UID: 
+time: {{DATE:YYYY-MM-DD HH:mm:ss}}
 dtype: Area
 status: 进行中
 cover: 

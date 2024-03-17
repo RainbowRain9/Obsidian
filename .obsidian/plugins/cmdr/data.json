@@ -1,6 +1,6 @@
 {
-  "confirmDeletion": true,
-  "showAddCommand": false,
+  "confirmDeletion": false,
+  "showAddCommand": true,
   "debug": false,
   "editorMenu": [],
   "fileMenu": [
@@ -8,6 +8,12 @@
       "id": "workspace:edit-file-title",
       "icon": "lucide-edit-3",
       "name": "编辑文件名",
+      "mode": "any"
+    },
+    {
+      "id": "Enhanced-editing:edit-duanhang",
+      "icon": "alert-triangle",
+      "name": "增强编辑: 修复意外断行",
       "mode": "any"
     }
   ],
@@ -21,69 +27,72 @@
   ],
   "rightRibbon": [],
   "titleBar": [],
-  "statusBar": [],
+  "statusBar": [
+    {
+      "id": "workspace:toggle-pin",
+      "icon": "lucide-pin",
+      "name": "解锁/锁定",
+      "mode": "any"
+    }
+  ],
   "pageHeader": [
     {
       "id": "random-note",
       "icon": "dice-glyph",
       "name": "漫游笔记: 开始漫游笔记",
-      "mode": "any",
-      "color": "#7f7f7f"
-    },
-    {
-      "id": "obsidian-spaced-repetition:srs-cram-flashcards-in-note",
-      "icon": "alarm-check",
-      "name": "Spaced Repetition: 集中复习此笔记中的卡片",
-      "mode": "any",
-      "color": "#7f7f7f"
+      "mode": "7712896608861b4d",
+      "color": "#000000"
     },
     {
       "id": "extract-highlights-plugin:shortcut-extract-highlights",
       "icon": "anchor",
       "name": "Extract Highlights: Shortcut for extracting highlights",
-      "mode": "any",
-      "color": "#7f7f7f"
+      "mode": "7712896608861b4d",
+      "color": "#000000"
     },
     {
-      "id": "obsidian-weread-plugin:sync-weread-notes-command",
-      "icon": "book",
-      "name": "Weread Plugin: Sync Weread Notes",
-      "mode": "any",
-      "color": "#7f7f7f"
+      "id": "obsidian-markmind:Toggle to markdown or mindmap",
+      "icon": "box",
+      "name": "obsidian markmind: 切换为Markdown或思维导图模式",
+      "mode": "7712896608861b4d"
     },
     {
       "id": "workspace:undo-close-pane",
       "icon": "lucide-undo-2",
       "name": "Undo close tab",
-      "mode": "any",
-      "color": "#7f7f7f"
+      "mode": "7712896608861b4d",
+      "color": "#000000"
+    },
+    {
+      "id": "obsidian-markmind:Change basic to table mode",
+      "icon": "align-justify",
+      "name": "obsidian markmind: 打开 Basic 模式的思维导图为表格",
+      "mode": "mobile"
+    },
+    {
+      "id": "digitalgarden:publish-note",
+      "icon": "activity",
+      "name": "Digital Garden: Publish Single Note",
+      "mode": "7712896608861b4d"
     }
   ],
   "macros": [
     {
       "macro": [
         {
-          "action": 1,
-          "delay": "10000"
-        },
-        {
-          "action": 1,
-          "delay": "10000"
-        },
-        {
           "action": 0,
           "commandId": "remotely-save:start-sync"
         },
         {
-          "action": 1,
-          "delay": "1500"
+          "action": 0,
+          "commandId": "obsidian-omnivore:sync"
         },
         {
           "action": 0,
           "commandId": "obsidian-weread-plugin:sync-weread-notes-command"
         }
       ],
-      "name": "开机同步",
+      "name": "开机自启动",
       "icon": "star",
       "startup": true
     }
@@ -91,21 +100,26 @@
   "explorer": [],
   "hide": {
     "statusbar": [
-      "enhanced-editing",
-      "enhanced-editing",
-      "cmenu-plugin",
-      "extract-highlights-plugin"
+      "cmenu-plugin"
     ],
     "leftRibbon": [
-      "Big Calendar",
-      "Omnisearch",
-      "单词列表",
-      "打开统计",
+      "开始漫游笔记",
+      "新建白板",
+      "打开 Markdown 格式转换器",
+      "开始/结束录音",
+      "管理工作区布局",
+      "打开快速切换",
+      "Templater",
+      "插入模板",
+      "打开命令面板",
+      "Timeline",
+      "BRAT",
       "打开新词面板",
       "打开查词面板",
-      "Extract Highlights",
-      "Weread",
-      "开始漫游笔记"
+      "Omnisearch",
+      "surfing-bookmark-manager",
+      "Big Calendar",
+      "Extract Highlights"
     ]
   },
   "spacing": "6",

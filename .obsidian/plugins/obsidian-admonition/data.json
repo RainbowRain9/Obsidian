@@ -185,11 +185,125 @@
       "title": "翻译",
       "injectColor": true,
       "noTitle": false
+    },
+    "book": {
+      "type": "book",
+      "color": "1, 244, 183",
+      "icon": {
+        "name": "book-open",
+        "type": "font-awesome"
+      },
+      "command": false
+    },
+    "Repeat": {
+      "type": "Repeat",
+      "color": "249, 133, 1",
+      "icon": {
+        "name": "bookmark",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "总结式摘抄"
+    },
+    "Idea": {
+      "type": "Idea",
+      "color": "249, 113, 186",
+      "icon": {
+        "name": "lightbulb",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "灵感"
+    },
+    "Note": {
+      "type": "Note",
+      "color": "94, 201, 155",
+      "icon": {
+        "name": "acorn",
+        "type": "rpg"
+      },
+      "command": false,
+      "title": "理解&笔记"
+    },
+    "Think": {
+      "type": "Think",
+      "color": "0, 154, 250",
+      "icon": {
+        "name": "mountain",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "思考"
+    },
+    "day": {
+      "type": "day",
+      "color": "244, 211, 1",
+      "icon": {
+        "name": "sun",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "日信条"
+    },
+    "List": {
+      "type": "List",
+      "color": "117, 214, 255",
+      "icon": {
+        "name": "list",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "列表"
+    },
+    "Amazing": {
+      "type": "Amazing",
+      "color": "165, 111, 246",
+      "icon": {
+        "name": "atom",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "Amazing"
+    },
+    "talk": {
+      "type": "talk",
+      "color": "153, 89, 15",
+      "icon": {
+        "name": "asterisk",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "talk",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "grid": {
+      "type": "grid",
+      "color": "89, 104, 6",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
+    },
+    "masonry": {
+      "type": "masonry",
+      "color": "215, 138, 130",
+      "icon": {
+        "name": "ad",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
     }
   },
   "syntaxHighlight": false,
   "copyButton": false,
-  "version": "10.1.1",
+  "version": "10.2.0",
   "autoCollapse": false,
   "defaultCollapseType": "open",
   "injectColor": true,
@@ -203,11 +317,12 @@
     "advanced": true
   },
   "icons": [
-    "octicons"
+    "octicons",
+    "rpg"
   ],
   "useFontAwesome": true,
-  "rpgDownloadedOnce": false,
-  "msDocConverted": false,
+  "rpgDownloadedOnce": true,
+  "msDocConverted": true,
   "useSnippet": true,
   "snippetPath": "custom-admonitions.c9c6cb",
   "syncLinks": false,

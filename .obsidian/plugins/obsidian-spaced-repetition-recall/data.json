@@ -32,10 +32,9 @@
     "flashcardGoodText": "记得",
     "flashcardHardText": "较难",
     "flashcardTags": [
-      "#flashcards",
-      "#card",
       "#math-anki",
-      "#environment-anki"
+      "#environment-anki",
+      "#word"
     ],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": false,
@@ -45,7 +44,7 @@
     "flashcardWidthPercentage": 40,
     "randomizeCardOrder": true,
     "convertHighlightsToClozes": true,
-    "convertBoldTextToClozes": false,
+    "convertBoldTextToClozes": true,
     "convertCurlyBracketsToClozes": false,
     "singleLineCardSeparator": "::",
     "singleLineReversedCardSeparator": ":::",
@@ -74,13 +73,38 @@
     "dataLocation": "In Plugin Folder",
     "customFolder": ".obsidian/plugins/obsidian-spaced-repetition-recall/tracked_files.json",
     "maxNewPerDay": -1,
-    "repeatItems": false,
+    "repeatItems": true,
     "trackedNoteToDecks": false,
     "algorithm": "Fsrs",
-    "algorithmSettings": {},
+    "algorithmSettings": {
+      "Fsrs": {
+        "revlog_tags": [],
+        "request_retention": 0.94,
+        "maximum_interval": 36500,
+        "w": [
+          0.4,
+          0.6,
+          2.4,
+          5.8,
+          4.93,
+          0.94,
+          0.86,
+          0.01,
+          1.49,
+          0.14,
+          0.94,
+          2.18,
+          0.05,
+          0.34,
+          1.26,
+          0.29,
+          2.61
+        ]
+      }
+    },
     "previousRelease": "1.10.1.11"
   },
-  "buryDate": "2023-11-14",
+  "buryDate": "2023-11-28",
   "buryList": [],
-  "historyDeck": "environment-anki"
+  "historyDeck": "word"
 }

@@ -5,32 +5,104 @@
       "path": "_Templates/home.md"
     },
     {
+      "basename": "(我使用的同步方案)最佳实践：obsidian同步方案(三)第三方同步之网盘OneDrive",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/(我使用的同步方案)最佳实践：obsidian同步方案(三)第三方同步之网盘OneDrive.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
+      "basename": "Obsidian _ Ob 双链伴侣，挖出潜藏的笔记双链",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian _ Ob 双链伴侣，挖出潜藏的笔记双链.md"
+    },
+    {
+      "basename": "Organize your Omnivore library with labels",
+      "path": "7-Omnivore/2023-11-15/Organize your Omnivore library with labels.md"
+    },
+    {
+      "basename": "Obsidian极简日记配置教程",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Obsidian极简日记配置教程.md"
+    },
+    {
+      "basename": "全平台免费稍后读利器Omnivore更新了，支持一键同步内容到Obsidian",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/全平台免费稍后读利器Omnivore更新了，支持一键同步内容到Obsidian.md"
+    },
+    {
+      "basename": "大一已经确定要考研的人，大学四年该怎样过？ - 知乎",
+      "path": "6-SimpRead/D 教育/D4 自学、读书方法、考试/大一已经确定要考研的人，大学四年该怎样过？ - 知乎.md"
+    },
+    {
+      "basename": "数学系大学生的 obsidian 配置——记录一年来的弯路与心得",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/数学系大学生的 obsidian 配置——记录一年来的弯路与心得.md"
+    },
+    {
+      "basename": "用 Ob 构建专属于你的数字花园 - Obsidian 发布分享 - 渐进创作 - 哔哩哔哩",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/用 Ob 构建专属于你的数字花园 - Obsidian 发布分享 - 渐进创作 - 哔哩哔哩.md"
+    },
+    {
+      "basename": "最近一直被问的 Obsidian 主题，我分享出来了！还有______",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/最近一直被问的 Obsidian 主题，我分享出来了！还有______.md"
+    },
+    {
+      "basename": "教你免费白嫖一个 Alist 网盘 + 自己域名，小白一键搭建网盘教程",
+      "path": "6-SimpRead/T 技术/TP393 网址工具/教你免费白嫖一个 Alist 网盘 + 自己域名，小白一键搭建网盘教程.md"
+    },
+    {
+      "basename": "我用 4 个 All-in-One 工具，管理好了自己的工作和生活",
+      "path": "6-SimpRead/D 教育/D4 自学、读书方法、考试/我用 4 个 All-in-One 工具，管理好了自己的工作和生活.md"
+    },
+    {
+      "basename": "稳定89MB-s不限速，官方版本可以卸载了...",
+      "path": "6-SimpRead/T 技术/TP384 软件/稳定89MB-s不限速，官方版本可以卸载了....md"
+    },
+    {
+      "basename": "PicGo",
+      "path": "3-知识宝箱/T 技术/TP393 网址工具/PicGo.md"
+    },
+    {
+      "basename": "NextCloud - 打造属于你的云端存储世界",
+      "path": "6-SimpRead/T 技术/TP393 网址工具/NextCloud - 打造属于你的云端存储世界.md"
+    },
+    {
+      "basename": "88个免费的学习网站🔥学起来偷偷逆袭",
+      "path": "6-SimpRead/D 教育/D4 自学、读书方法、考试/88个免费的学习网站🔥学起来偷偷逆袭.md"
+    },
+    {
+      "basename": "【视频笔记】打造第二大脑：如何记得所有看过的东西 _ 对 obsidian 知识库的改造灵感：：夜猫日记",
+      "path": "6-SimpRead/D 教育/D4 自学、读书方法、考试/【视频笔记】打造第二大脑：如何记得所有看过的东西 _ 对 obsidian 知识库的改造灵感：：夜猫日记.md"
+    },
+    {
+      "basename": "Obsidian-Anki的用法",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian-Anki的用法.md"
+    },
+    {
+      "basename": "Obsidian 插件：Language Learner 事半功倍学习英文单词",
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md"
+    },
+    {
       "basename": "Area-Obsidian",
       "path": "4-领域夹/Area-Obsidian.md"
     },
     {
-      "basename": "Obsidian-Anki的用法",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian-Anki的用法.md"
+      "basename": "Book-阅读动态",
+      "path": "00-MOC/Book-阅读动态.md"
     },
     {
       "basename": "Obsidian 插件：Obsidian to Anki",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Obsidian to Anki.md"
-    },
-    {
-      "basename": "Obsidian 插件：Language Learner 事半功倍学习英文单词",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Language Learner 事半功倍学习英文单词.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Obsidian to Anki.md"
     },
     {
       "basename": "外语书阅读工作流",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/外语书阅读工作流.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/外语书阅读工作流.md"
     },
     {
       "basename": "Obsidian 插件：Custom Frames 集成更多网页应用到笔记中",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Custom Frames 集成更多网页应用到笔记中.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Custom Frames 集成更多网页应用到笔记中.md"
     },
     {
       "basename": "Obsidian 插件：Completr 自动联想补全插件",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Completr 自动联想补全插件.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Completr 自动联想补全插件.md"
     },
     {
       "basename": "2023-11-13_星期一",
@@ -38,23 +110,23 @@
     },
     {
       "basename": "Obsidian 插件：surfing -- 让 Obsidian 成为网络浏览器",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：surfing -- 让 Obsidian 成为网络浏览器.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：surfing -- 让 Obsidian 成为网络浏览器.md"
     },
     {
       "basename": "Obsidian 插件：Close Similar Tabs 防止打开重复的笔记",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Close Similar Tabs 防止打开重复的笔记.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Close Similar Tabs 防止打开重复的笔记.md"
     },
     {
       "basename": "Obsidian 插件：Latex suite 通过片段、文本扩展和编辑器增强功能",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Latex suite 通过片段、文本扩展和编辑器增强功能.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Latex suite 通过片段、文本扩展和编辑器增强功能.md"
     },
     {
       "basename": "Obsidian 插件：Fuzzy Chinese Pinyin 基于汉语拼音进行模糊搜索",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Fuzzy Chinese Pinyin 基于汉语拼音进行模糊搜索.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Fuzzy Chinese Pinyin 基于汉语拼音进行模糊搜索.md"
     },
     {
       "basename": "Obsidian 插件：Various Complements 强大自动补全快捷输入工具",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Various Complements 强大自动补全快捷输入工具.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Various Complements 强大自动补全快捷输入工具.md"
     },
     {
       "basename": "ColorfulClock",
@@ -62,15 +134,15 @@
     },
     {
       "basename": "Obsidian 插件：Easy toggle sidebars 便捷的控制侧边栏",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Easy toggle sidebars 便捷的控制侧边栏.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Easy toggle sidebars 便捷的控制侧边栏.md"
     },
     {
       "basename": "Obsidian 插件：Day Planner",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Day Planner.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Day Planner.md"
     },
     {
       "basename": "Obsidian 插件：Easy Tpying 自动格式化你的中英文标点输入格式",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Easy Tpying 自动格式化你的中英文标点输入格式.md"
+      "path": "6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Easy Tpying 自动格式化你的中英文标点输入格式.md"
     },
     {
       "basename": "Movie-电影主页",
@@ -83,10 +155,6 @@
     {
       "basename": "Book已读-卡片视图",
       "path": "00-MOC/Book已读-卡片视图.md"
-    },
-    {
-      "basename": "Book-阅读动态",
-      "path": "00-MOC/Book-阅读动态.md"
     },
     {
       "basename": "我的歌单",
@@ -107,10 +175,6 @@
     {
       "basename": "近期项目",
       "path": "00-MOC/近期项目.md"
-    },
-    {
-      "basename": "Readme",
-      "path": "Readme.md"
     },
     {
       "basename": "使用 Obsidian 学习英语",
@@ -135,70 +199,6 @@
     {
       "basename": "Obsidian 巧妙应用：开启英语学习新思路",
       "path": "6-SimpRead/Obsidian 巧妙应用：开启英语学习新思路.md"
-    },
-    {
-      "basename": "Obsidian 社区插件",
-      "path": "6-SimpRead/Obsidian 社区插件.md"
-    },
-    {
-      "basename": "Para 践行 (时间管理和知识管理）",
-      "path": "6-SimpRead/Para 践行 (时间管理和知识管理）.md"
-    },
-    {
-      "basename": "日记模板",
-      "path": "_Templates/tp/日记模板.md"
-    },
-    {
-      "basename": "闪念笔记",
-      "path": "_Templates/tp/闪念笔记.md"
-    },
-    {
-      "basename": "dataview",
-      "path": "5-项目夹/dataview.md"
-    },
-    {
-      "basename": "code tab",
-      "path": "5-项目夹/code tab.md"
-    },
-    {
-      "basename": "Any Block",
-      "path": "5-项目夹/Any Block.md"
-    },
-    {
-      "basename": "Flashcards",
-      "path": "5-项目夹/Flashcards.md"
-    },
-    {
-      "basename": "项目卡",
-      "path": "_Templates/tp/项目卡.md"
-    },
-    {
-      "basename": "Obsidian 插件：Code Tab 不止于混合代码块",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Code Tab 不止于混合代码块.md"
-    },
-    {
-      "basename": "认知觉醒：开启自我改变的原动力-周岭",
-      "path": "2-weread/心理/认知觉醒：开启自我改变的原动力-周岭.md"
-    },
-    {
-      "basename": "Obsidian 插件：Spaced Repetition 利用遗忘曲线间隔重复复习笔记中的内容",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Spaced Repetition 利用遗忘曲线间隔重复复习笔记中的内容.md"
-    },
-    {
-      "basename": "Obsidian 插件：Zoom 通过快捷键，快速聚焦到大纲",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Zoom 通过快捷键，快速聚焦到大纲.md"
-    },
-    {
-      "basename": "【视频笔记】打造第二大脑：如何记得所有看过的东西 _ 对 obsidian 知识库的改造灵感：：夜猫日记",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/【视频笔记】打造第二大脑：如何记得所有看过的东西 _ 对 obsidian 知识库的改造灵感：：夜猫日记.md"
-    },
-    {
-      "basename": "主题卡",
-      "path": "_Templates/tp/主题卡.md"
-    },
-    {
-      "basename": "Obsidian 插件：Metaedit 不可多得的 YAML 管理器",
-      "path": "3-知识宝箱/A 兴趣/Obsidian-Use/Plugin/Obsidian 插件：Metaedit 不可多得的 YAML 管理器.md"
     }
   ],
   "omittedPaths": [],

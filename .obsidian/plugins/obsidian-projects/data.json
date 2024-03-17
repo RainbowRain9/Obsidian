@@ -2,114 +2,10 @@
   "version": 2,
   "projects": [
     {
-      "fieldConfig": {},
-      "defaultName": "",
-      "templates": [],
-      "excludedNotes": [],
-      "isDefault": false,
-      "dataSource": {
-        "kind": "tag",
-        "config": {
-          "tag": "#金句卡"
-        }
+      "fieldConfig": {
+        "dtype": {},
+        "source": {}
       },
-      "newNotesFolder": "",
-      "views": [
-        {
-          "config": {
-            "fieldConfig": {
-              "name": {
-                "width": 107
-              },
-              "path": {
-                "hide": false
-              }
-            }
-          },
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "sort": {
-            "criteria": []
-          },
-          "name": "Table",
-          "id": "f047c96c-cdcb-45fd-8eb9-e955f01c768c",
-          "type": "table"
-        },
-        {
-          "config": {
-            "groupByField": "status",
-            "priorityField": "weight",
-            "columns": {
-              "Doing": {
-                "weight": 0
-              },
-              "Backlog": {
-                "weight": 1
-              },
-              "Done": {
-                "weight": 2
-              }
-            }
-          },
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "sort": {
-            "criteria": []
-          },
-          "name": "Board",
-          "id": "04829abd-7d5d-4a22-a6de-d9817d3d1563",
-          "type": "board"
-        },
-        {
-          "config": {
-            "interval": "month",
-            "dateField": "due",
-            "checkField": "published"
-          },
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "sort": {
-            "criteria": []
-          },
-          "name": "Calendar",
-          "id": "bd072364-bbed-4ccf-b838-4492bf567cf5",
-          "type": "calendar"
-        },
-        {
-          "config": {
-            "coverField": "image"
-          },
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "sort": {
-            "criteria": []
-          },
-          "name": "Gallery",
-          "id": "347474de-72a2-45f7-b300-6f345f35a98c",
-          "type": "gallery"
-        }
-      ],
-      "name": "金句卡",
-      "id": "b8ff5848-5917-4771-aaeb-812a8eedd8f7"
-    },
-    {
-      "fieldConfig": {},
       "defaultName": "",
       "templates": [],
       "excludedNotes": [],
@@ -117,14 +13,79 @@
       "dataSource": {
         "kind": "folder",
         "config": {
-          "path": "cubox",
+          "path": "个人区/6-SimpRead",
           "recursive": true
         }
       },
       "newNotesFolder": "",
       "views": [
         {
-          "config": {},
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              },
+              "banner_icon": {
+                "hide": true
+              },
+              "created-date": {
+                "hide": true
+              },
+              "id": {
+                "hide": true
+              },
+              "idx": {
+                "hide": true
+              },
+              "omnivore_error": {
+                "hide": true
+              },
+              "tag": {
+                "hide": true
+              },
+              "title": {
+                "hide": true
+              },
+              "banner": {
+                "hide": true
+              },
+              "alias": {
+                "hide": true
+              },
+              "name": {
+                "width": 372
+              },
+              "dtype": {
+                "hide": false
+              },
+              "date_published": {
+                "hide": true
+              },
+              "url": {
+                "hide": true
+              },
+              "type": {
+                "hide": true
+              },
+              "date_saved": {
+                "hide": true
+              }
+            },
+            "orderFields": [
+              "name",
+              "state",
+              "dtype",
+              "source",
+              "tags",
+              "host",
+              "date",
+              "url",
+              "author",
+              "date_published",
+              "date_saved",
+              "type"
+            ]
+          },
           "filter": {
             "conditions": []
           },
@@ -132,7 +93,13 @@
             "conditions": []
           },
           "sort": {
-            "criteria": []
+            "criteria": [
+              {
+                "field": "date",
+                "order": "desc",
+                "enabled": true
+              }
+            ]
           },
           "id": "80e75f01-b393-4e62-8815-3fcef9151f0d",
           "name": "Table",
@@ -140,7 +107,7 @@
         },
         {
           "config": {
-            "coverField": "cover",
+            "coverField": "banner",
             "fitStyle": "contain"
           },
           "filter": {
@@ -155,10 +122,419 @@
           "id": "7bfdcfb8-d74a-473c-9338-48c6ee9810db",
           "name": "Gallery",
           "type": "gallery"
+        },
+        {
+          "config": {
+            "includeFields": []
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "5f8653e7-c8e8-4c67-b0d5-92d8b5f3945c",
+          "name": "看板",
+          "type": "board"
         }
       ],
       "id": "d92f08b3-3de0-4372-bd8e-54e866979a47",
       "name": "cubox"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [
+        "学习区/_附件/How long does it take to get over a breakup.mp3",
+        "学习区/_附件/1.8-cousin-marriage-001-fallback-db7381a3c91a3b67d69d784af51b282a-1200k.mp3",
+        "学习区/_Templates/tp/项目卡.md",
+        "学习区/_Templates/tp/闪念笔记.md",
+        "学习区/_Templates/tp/输入笔记模板.md",
+        "学习区/_Templates/tp/资料卡.md",
+        "学习区/_Templates/tp/概念卡.md",
+        "学习区/_Templates/tp/知识卡.md",
+        "学习区/_Templates/tp/日记模板.md",
+        "学习区/_Templates/tp/思维记录表-模板.md",
+        "学习区/_Templates/tp/思维导图模板.md",
+        "学习区/_Templates/tp/例题卡.md",
+        "学习区/_Templates/tp/人名卡.md",
+        "学习区/_Templates/tp/书名页.md",
+        "学习区/_Templates/tp/主题卡.md",
+        "学习区/_Templates/tp/UID模板.md",
+        "学习区/_Templates/tp/tp_foldermoc-Include-subfolders.md",
+        "学习区/_Templates/tp/tp-笔记收集箱.md",
+        "学习区/_Templates/tp/tp-流水账模板.md",
+        "学习区/_Templates/tp/tp-人物模板.md",
+        "学习区/_Templates/tp/tp-movie.md",
+        "学习区/_Templates/tp/tp-movie-douban.md",
+        "学习区/_Templates/tp/tp-movie-douban.md",
+        "学习区/_Templates/tp/QA笔记.md",
+        "学习区/_Templates/startup/插件ID.md",
+        "学习区/_Templates/tp/LingQ模板.md",
+        "学习区/_Templates/startup/FastStart-Plugins-LongDelay.md",
+        "学习区/_Templates/script/template/template.md",
+        "学习区/_Templates/startup/FastStart-GenerateListOfInstalledPlugins.md",
+        "学习区/_Templates/startup/FastStart-Plugins-LongDelay.md",
+        "学习区/_Templates/startup/FastStart-Plugins-mobile.md",
+        "学习区/_Templates/startup/FastStart-Plugins-ShortDelay.md",
+        "学习区/_Templates/tp/tp-book-callout.md",
+        "学习区/_Templates/tp/PARA领域模板.md",
+        "学习区/_Templates/startup/FastStart-StartupScript.md",
+        "学习区/_Templates/ReactJS/返回当前活动笔记的所有反向链接.md",
+        "学习区/_Templates/ReactJS/react_music.md",
+        "学习区/_Templates/ReactJS/react_weather.md",
+        "学习区/_Templates/ReactJS/slidegallery.md",
+        "学习区/_Templates/ReactJS/react_cat.md",
+        "学习区/_Templates/ReactJS/ReactJS.md",
+        "学习区/_Templates/ReactJS/react_buttons.md",
+        "学习区/_Templates/ReactJS/moc.md",
+        "学习区/_Templates/ReactJS/ColorfulClock.md",
+        "学习区/00-MOC/home.md",
+        "学习区/_Templates/button.md",
+        "学习区/_Templates/home.md",
+        "学习区/00-MOC/视频笔记.md",
+        "学习区/00-MOC/近期项目.md",
+        "学习区/00-MOC/近期任务.md",
+        "学习区/00-MOC/文件动态.md"
+      ],
+      "isDefault": true,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "学习区",
+          "recursive": true
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "出生年月": {
+                "hide": true
+              },
+              "故乡": {
+                "hide": true
+              },
+              "性别": {
+                "hide": true
+              },
+              "author": {
+                "hide": true
+              },
+              "banner": {
+                "hide": true
+              },
+              "banner_icon": {
+                "hide": true
+              },
+              "cards-deck": {
+                "hide": true
+              },
+              "cover": {
+                "hide": true
+              },
+              "cssclass": {
+                "hide": true
+              },
+              "defines-react-components": {
+                "hide": true
+              },
+              "desc": {
+                "hide": true
+              },
+              "grade": {
+                "hide": true
+              },
+              "langr": {
+                "hide": true
+              },
+              "langr-audio": {
+                "hide": true
+              },
+              "langr-origin": {
+                "hide": true
+              },
+              "langr-pos": {
+                "hide": true
+              },
+              "mindmap-plugin": {
+                "hide": true
+              },
+              "obsidianUIMode": {
+                "hide": true
+              },
+              "quickshare-date": {
+                "hide": true
+              },
+              "quickshare-url": {
+                "hide": true
+              },
+              "rating": {
+                "hide": true
+              },
+              "readtime": {
+                "hide": true
+              },
+              "source": {
+                "hide": true
+              },
+              "sr-due": {
+                "hide": true
+              },
+              "sr-ease": {
+                "hide": true
+              },
+              "sr-interval": {
+                "hide": true
+              },
+              "status": {
+                "hide": true
+              },
+              "tag": {
+                "hide": true
+              },
+              "UID": {
+                "hide": true
+              }
+            },
+            "orderFields": [
+              "name",
+              "path",
+              "dg-publish",
+              "Dg-publish",
+              "time",
+              "dtype",
+              "subject",
+              "tags"
+            ]
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "time",
+                "order": "desc",
+                "enabled": true
+              }
+            ]
+          },
+          "id": "001add5d-5b6f-4d7f-adcb-90d675a53523",
+          "name": "表格",
+          "type": "table"
+        },
+        {
+          "config": {
+            "columns": {
+              "未设置状态": {
+                "weight": 0
+              },
+              "QA": {
+                "weight": 1
+              },
+              "例题": {
+                "weight": 2
+              },
+              "思维导图": {
+                "weight": 3
+              },
+              "概念": {
+                "weight": 4
+              },
+              "书名页": {
+                "weight": 5
+              },
+              "人名": {
+                "weight": 6
+              },
+              "英语": {
+                "weight": 7
+              }
+            },
+            "groupByField": "dtype"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": [
+              {
+                "color": "#a882ff",
+                "condition": {
+                  "field": "subject",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "高等数学"
+                }
+              },
+              {
+                "color": "#ffe380",
+                "condition": {
+                  "field": "subject",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "中国近代史纲要"
+                }
+              },
+              {
+                "color": "#ff80a6",
+                "condition": {
+                  "field": "subject",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "大学英语"
+                }
+              },
+              {
+                "color": "#80fffd",
+                "condition": {
+                  "field": "subject",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "大学物理"
+                }
+              }
+            ]
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "time",
+                "order": "desc",
+                "enabled": true
+              }
+            ]
+          },
+          "id": "72873c37-33db-4c80-a801-d6f4e718551b",
+          "name": "种类",
+          "type": "board"
+        },
+        {
+          "config": {
+            "includeFields": [],
+            "groupByField": "subject",
+            "columns": {
+              "高等数学": {
+                "weight": 0
+              },
+              "环境科学导论": {
+                "weight": 1
+              },
+              "中国近代史纲要": {
+                "weight": 2
+              },
+              "双碳战略概论": {
+                "weight": 3
+              },
+              "大学英语": {
+                "weight": 4
+              }
+            }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": [
+              {
+                "color": "#a882ff",
+                "condition": {
+                  "field": "dtype",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "概念"
+                }
+              },
+              {
+                "color": "#80f6ff",
+                "condition": {
+                  "field": "dtype",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "思维导图"
+                }
+              },
+              {
+                "color": "#ffe380",
+                "condition": {
+                  "field": "dtype",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "QA"
+                }
+              },
+              {
+                "color": "#80ffac",
+                "condition": {
+                  "field": "dtype",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "人名"
+                }
+              },
+              {
+                "color": "#ff3d9b",
+                "condition": {
+                  "field": "dtype",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "书名页"
+                }
+              },
+              {
+                "color": "#2e89ff",
+                "condition": {
+                  "field": "dtype",
+                  "operator": "is",
+                  "enabled": true,
+                  "value": "例题"
+                }
+              }
+            ]
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "time",
+                "order": "desc",
+                "enabled": true
+              }
+            ]
+          },
+          "id": "e5fc9af3-cfe4-435d-a1bc-7055bfeca2fc",
+          "name": "科目",
+          "type": "board"
+        },
+        {
+          "config": {
+            "interval": "month",
+            "checkField": ""
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "3f6aac90-84e1-4497-9483-e0f93663c149",
+          "name": "日历",
+          "type": "calendar"
+        }
+      ],
+      "id": "f008944f-9f64-477a-971b-f155145d517f",
+      "name": "课程"
     }
   ],
   "archives": [],

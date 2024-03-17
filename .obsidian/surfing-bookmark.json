@@ -1,0 +1,70 @@
+{
+  "bookmarks": [
+    {
+      "id": "1328542194",
+      "name": "flomo",
+      "url": "https://v.flomoapp.com/mine",
+      "description": "",
+      "category": [
+        "ROOT"
+      ],
+      "tags": "",
+      "created": 1701609840000,
+      "modified": 1701609840000
+    },
+    {
+      "id": "1045371804",
+      "name": "Pinbox",
+      "url": "https://withpinbox.com/collection/915884?category=all&name=TODO",
+      "description": "",
+      "category": [
+        "ROOT"
+      ],
+      "tags": "",
+      "created": 1700983440000,
+      "modified": 1700983440000
+    },
+    {
+      "id": "748149424",
+      "name": "Audio",
+      "url": "https://audiomass.co/",
+      "description": "",
+      "category": [
+        "常用工具"
+      ],
+      "tags": "",
+      "created": 1700902920000,
+      "modified": 1700974680000
+    },
+    {
+      "id": "1846736820",
+      "name": "Obsidian",
+      "url": "https://obsidian.md/",
+      "description": "A awesome note-taking tool",
+      "category": [
+        "Obsidian"
+      ],
+      "tags": "",
+      "created": 1672840860000,
+      "modified": 1700974740000
+    }
+  ],
+  "categories": [
+    {
+      "value": "ROOT",
+      "text": "ROOT",
+      "label": "ROOT",
+      "children": []
+    },
+    {
+      "value": "Obsidian",
+      "text": "Obsidian",
+      "label": "Obsidian"
+    },
+    {
+      "value": "常用工具",
+      "text": "常用工具",
+      "label": "常用工具"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "tag": "book",
+  "libratys": [
+    "D:\\OneDrive - MSFT\\Documents\\Others\\Books"
+  ],
+  "savePath": "个人区/7-Book",
+  "assetsPath": "{{savePath}}/{{bookName}}/images",
+  "serialNumber": false,
+  "propertysTemplate": "title: {{bookName}}\nauthor: {{author}}\npublisher: {{publisher}}\nstatus: false",
+  "granularity": 4,
+  "autoOpenRightPanel": true,
+  "allbooks": false
+}

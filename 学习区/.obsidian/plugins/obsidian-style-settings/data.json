@@ -1,6 +1,6 @@
 {
   "memo-heatmap@@heatmap-light": "ice-light",
-  "blue-topaz-theme@@background-settings-workplace-background-image": true,
+  "blue-topaz-theme@@background-settings-workplace-background-image": false,
   "blue-topaz-theme@@rainbow-ordered-list": true,
   "blue-topaz-theme@@list-style-change-options": "list-bracket-left",
   "blue-topaz-theme@@text-indentation-two-em": false,
@@ -60,7 +60,7 @@
   "blue-topaz-theme@@background-image-settings-command-palette-same-as-workplace": false,
   "Components@@tab-autohide": true,
   "Components@@status-bar-autohide": false,
-  "Components@@Ribbon-autohide": false,
+  "Components@@Ribbon-autohide": true,
   "Components@@nav-header-autohide": true,
   "Components@@tab-title-bar-autohide": false,
   "Components@@CTA-BTN-enable": false,
@@ -80,7 +80,7 @@
   "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-CSS-light",
   "Appearance-light@@mod-right-split-background-select-light": "mod-right-split-background-CSS-light",
   "Appearance-light@@mod-root-split-background-select-light": "mod-root-split-background-CSS-light",
-  "Appearance-light@@background-underlying-select-light": "background-underlying-Color-light",
+  "Appearance-light@@background-underlying-select-light": "background-underlying-CSS-light",
   "Appearance-light@@accent-light": "#A497F0",
   "Appearance-light@@color-to-tab-icon-light": false,
   "Appearance-light@@Active-states-file-explorer-select-light": "activated-file-default-light",
@@ -165,5 +165,6 @@
   "blue-topaz-theme@@toggle-nonoverlapping-bg": false,
   "blue-topaz-theme@@colorful-link-animation": true,
   "floating-toc-styles@@enable-bar-icon": true,
-  "floating-toc-styles@@enable-heading-nowrap": true
+  "floating-toc-styles@@enable-heading-nowrap": true,
+  "Components@@extra-anim-remove": true
 }

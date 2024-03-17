@@ -81,8 +81,11 @@
           },
           "folder": {
             "enabled": true,
-            "folders": [],
-            "chooseWhenCreatingNote": true,
+            "folders": [
+              "01-高等数学/问题库",
+              "04-环境科学导论/问题库"
+            ],
+            "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
             "chooseFromSubfolders": false
           },
@@ -109,8 +112,13 @@
           },
           "folder": {
             "enabled": true,
-            "folders": [],
-            "chooseWhenCreatingNote": true,
+            "folders": [
+              "01-高等数学/笔记库",
+              "03-中国近代史纲要/笔记库",
+              "04-环境科学导论/笔记库",
+              "05-双碳战略概论/笔记库"
+            ],
+            "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
             "chooseFromSubfolders": false
           },
@@ -138,10 +146,14 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "3-知识宝箱"
+              "01-高等数学/概念库",
+              "03-中国近代史纲要/概念库",
+              "05-双碳战略概论/概念库",
+              "04-环境科学导论/概念库"
             ],
-            "chooseWhenCreatingNote": true,
-            "createInSameFolderAsActiveFile": false
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
           },
           "appendLink": false,
           "incrementFileName": false,
@@ -152,7 +164,8 @@
           },
           "openFile": true,
           "openFileInMode": "default",
-          "fileExistsMode": "Nothing"
+          "fileExistsMode": "Nothing",
+          "setFileExistsBehavior": false
         },
         {
           "id": "5dbce0e3-0932-4df0-a5a7-4cfd6dc92c1c",
@@ -226,7 +239,7 @@
           "macroId": "aefa1c1c-3436-4462-bfea-3411d8308d2c"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "5eff06bf-898f-44d8-8491-943bef5b63b3",
@@ -720,7 +733,7 @@
           "openFileInMode": "default"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "658788e0-1106-40ba-be00-302dfbdfe70e",
@@ -728,6 +741,13 @@
       "type": "Multi",
       "command": true,
       "choices": [
+        {
+          "id": "fa1b8d09-981e-496e-b9aa-eb3baf097208",
+          "name": "强下滑线",
+          "type": "Macro",
+          "command": true,
+          "macroId": "a1a6dfe9-ec19-49f9-8372-e953c8f72d18"
+        },
         {
           "id": "a0d94d6b-2d1a-4f65-a0db-8020bb20b6d6",
           "name": "收侧边栏",
@@ -750,7 +770,7 @@
           "macroId": "abfa4c3e-cf3a-45f7-847e-56a3c82fdc72"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "cd0405e7-6489-4e6a-beb1-07dac8f9a188",
@@ -758,6 +778,41 @@
       "type": "Macro",
       "command": true,
       "macroId": "0e4a5a36-3d1c-4430-82c7-e7ff6682b088"
+    },
+    {
+      "id": "87188b2f-883e-4bf5-8e8e-08c30e0cd37d",
+      "name": "Anki",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "",
+      "captureToActiveFile": true,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": true,
+        "format": " #anki "
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
     }
   ],
   "macros": [
@@ -1024,6 +1079,31 @@
         }
       ],
       "runOnStartup": false
+    },
+    {
+      "name": "强下滑线",
+      "id": "a1a6dfe9-ec19-49f9-8372-e953c8f72d18",
+      "commands": [
+        {
+          "name": "增强编辑: _下划线_",
+          "type": "Obsidian",
+          "id": "87a8d650-762c-4920-91b5-e4e193691f2d",
+          "commandId": "Enhanced-editing:xiahua-text"
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "8fa5cca9-abe4-4543-b040-5165b6b500a0",
+          "time": 100
+        },
+        {
+          "name": "增强编辑: 转换彩色文字1",
+          "type": "Obsidian",
+          "id": "ea169e0a-5add-4906-a5e2-186644376485",
+          "commandId": "Enhanced-editing:text-Color1"
+        }
+      ],
+      "runOnStartup": true
     }
   ],
   "inputPrompt": "multi-line",

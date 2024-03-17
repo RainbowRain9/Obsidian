@@ -14,11 +14,11 @@
       "priority": 2
     },
     "cambridge": {
-      "enable": false,
+      "enable": true,
       "priority": 4
     },
     "jukuu": {
-      "enable": false,
+      "enable": true,
       "priority": 3
     },
     "hjdict": {

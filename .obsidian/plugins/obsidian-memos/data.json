@@ -1,12 +1,12 @@
 {
   "StartDate": "Sunday",
-  "InsertAfter": "## ✏随笔感悟",
+  "InsertAfter": "## ✏闪念",
   "UserName": "🌈RainbowRain",
-  "ProcessEntriesBelow": "## ✏随笔感悟",
-  "Language": "zh",
+  "ProcessEntriesBelow": "## ✏闪念",
+  "Language": "en",
   "SaveMemoButtonLabel": "",
   "SaveMemoButtonIcon": "✍️",
-  "ShareFooterStart": "{MemosNum} Memos {UsedDay} Day",
+  "ShareFooterStart": "{ThinoNum} Memos {UsedDay} Day",
   "ShareFooterEnd": "✍️ by {UserName}",
   "DefaultPrefix": "List",
   "UseDailyOrPeriodic": "Daily",
@@ -16,22 +16,69 @@
   "FocusOnEditor": true,
   "OpenDailyMemosWithMemos": true,
   "HideDoneTasks": false,
-  "ShowTaskLabel": false,
+  "ShowTaskLabel": true,
+  "MobileAndDesktop": "All",
   "OpenMemosAutomatically": true,
   "ShowTime": true,
   "ShowDate": true,
-  "AddBlankLineWhenDate": false,
+  "AddBlankLineWhenDate": true,
   "AutoSaveWhenOnMobile": false,
   "DeleteFileName": "delete",
   "QueryFileName": "query",
   "UseVaultTags": true,
+  "SetCustomBackgroundImage": false,
+  "SetCustomMemoFooter": false,
   "DefaultLightBackgroundImage": "",
   "DefaultDarkBackgroundImage": "",
   "DefaultMemoComposition": "{TIME} {CONTENT}",
   "CommentOnMemos": true,
   "CommentsInOriginalNotes": true,
   "FetchMemosMark": "#memo",
-  "FetchMemosFromNote": false,
-  "ShowCommentOnMemos": false,
-  "ShowLeftSideBar": false
+  "FetchMemosFromNote": true,
+  "ShowCommentOnMemos": true,
+  "ShowLeftSideBar": false,
+  "MemoListView": "list",
+  "MemoSaveLocation": "DAILY",
+  "MemoOtherSaveLocation": {
+    "MemoDefaultCanvasPath": "basic.thino.canvas",
+    "MemoDefaultMultiFilePath": "Thino",
+    "MemoDefaultSingleFilePath": "basic.thino.md"
+  },
+  "MemoDailyTarget": 5,
+  "HeatmapColorScheme": "default",
+  "EnabledHttpApi": false,
+  "HttpApiIpType": "localhost",
+  "HttpApiPort": "43999",
+  "AutoDownloadImage": false,
+  "EditorType": "obsidian",
+  "EnabledLocationList": [
+    {
+      "value": "DAILY",
+      "target": "ProcessEntriesBelow",
+      "insert": "InsertAfter"
+    },
+    {
+      "value": "CANVAS",
+      "target": "MemoDefaultCanvasPath"
+    },
+    {
+      "value": "MULTI",
+      "target": "MemoDefaultMultiFilePath"
+    },
+    {
+      "value": "FILE",
+      "target": "MemoDefaultSingleFilePath"
+    }
+  ],
+  "DeleteThinoDirectly": false,
+  "CaptureKey": {
+    "EnableCaptureKey": false,
+    "OpenThinoGlobally": "CommandOrControl+Shift+T",
+    "ShowNearMouse": false
+  },
+  "startSync": false,
+  "tokenForVerify": {},
+  "saveThinoType": "FILE",
+  "showDayMark": false,
+  "navigation": true
 }

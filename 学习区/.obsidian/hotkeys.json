@@ -97,7 +97,6 @@
       "key": "H"
     }
   ],
-  "Enhanced-editing:xiahua-text": [],
   "workspaces:load": [
     {
       "modifiers": [
@@ -432,14 +431,6 @@
       "key": "E"
     }
   ],
-  "quickadd:choice:5eff06bf-898f-44d8-8491-943bef5b63b3": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "A"
-    }
-  ],
   "convert-url-to-iframe:url-to-iframe": [],
   "easy-typing-obsidian:easy-typing-insert-codeblock": [],
   "editing-toolbar:header0-text": [],
@@ -449,6 +440,22 @@
         "Alt"
       ],
       "key": "S"
+    }
+  ],
+  "Enhanced-editing:xiahua-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "U"
+    }
+  ],
+  "quickadd:choice:87188b2f-883e-4bf5-8e8e-08c30e0cd37d": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
     }
   ]
 }

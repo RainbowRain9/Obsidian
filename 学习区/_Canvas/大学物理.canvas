@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"8d586351ce36e9bd","type":"file","file":"学习区/03-大学物理/知识库/01-质点运动学-Xmind.md","x":-540,"y":680,"width":400,"height":400},
+		{"id":"9c5d455e43402628","type":"file","file":"学习区/03-大学物理/概念库/位置矢量.md","x":200,"y":280,"width":427,"height":262},
+		{"id":"4fc6615b05d31ce5","type":"file","file":"学习区/03-大学物理/知识库/00-矢量运算-Xmind.md","x":-740,"y":-120,"width":400,"height":400},
+		{"id":"6206203adc702f85","type":"file","file":"学习区/03-大学物理/概念库/位移.md","x":200,"y":542,"width":427,"height":280},
+		{"id":"e3e8c7078644323b","x":200,"y":822,"width":427,"height":258,"type":"file","file":"学习区/03-大学物理/概念库/速度.md"}
+	],
+	"edges":[
+		{"id":"8f660645dc5d350d","fromNode":"8d586351ce36e9bd","fromSide":"right","toNode":"9c5d455e43402628","toSide":"left"},
+		{"id":"a5e33fbfd2e7458c","fromNode":"8d586351ce36e9bd","fromSide":"right","toNode":"6206203adc702f85","toSide":"left"},
+		{"id":"24870a1ace367e2d","fromNode":"8d586351ce36e9bd","fromSide":"right","toNode":"e3e8c7078644323b","toSide":"left"}
+	]
+}

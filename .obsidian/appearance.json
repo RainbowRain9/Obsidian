@@ -1,15 +1,22 @@
 {
   "accentColor": "#7abdff",
-  "cssTheme": "Blue Topaz",
-  "textFontFamily": "仓耳今楷05,仓耳兰楷",
+  "cssTheme": "Border",
+  "textFontFamily": "仓耳今楷05,仓耳兰楷,Maple Mono NF",
   "interfaceFontFamily": "仓耳兰楷",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "enabledCssSnippets": [
-    "custom-admonitions.c9c6cb",
+    "【自定义】mytools 样式",
+    "【自定义】数字时钟",
+    "【自定义】表格样式TableStyles",
+    "【图标】checkbox",
+    "【天气】weather",
+    "【特效】fireworks",
     "【日记】Time",
-    "【图标】iconfont",
-    "【日记】timeline"
+    "【日记】timeline",
+    "【自定义】多彩进度条",
+    "【Linkcard】",
+    "【日记】periodic日历"
   ],
   "baseFontSize": 20,
-  "translucency": true
+  "translucency": false
 }

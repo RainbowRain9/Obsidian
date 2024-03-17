@@ -11,11 +11,11 @@ cover:
 - [x] 设置主题
 ### 配置路径
 - **核心插件**
-	- [ ] 日记
-	- [ ] 模板
+	- [x] 日记
+	- [x] 模板
 	- [ ] 白板
 - **社区插件**
-	- [ ] Calendar
+	- [x] Calendar
 	- [ ] Dynamic Highlights
 	- [ ] Excalidraw
 	- [ ] Fuzzy Chinese Pinyin
@@ -24,10 +24,17 @@ cover:
 ### 可行性调查
 可行
 
-## 项目列表
+## 问题解决
+```dataview
+table without id file.link as 项目名,type as 类别,status as 状态,time as 时间
+from ""
+where contains(dtype, "Project") and contains(type, "教程")
+```
+
+## 插件学习
 
 ```dataview
-table type,status,UID
+table without id file.link as 项目名,type as 类别,status as 状态,time as 时间
 from ""   
 where contains(dtype, "Project") and contains(tags, "Obsidian")
 ```
@@ -35,7 +42,7 @@ where contains(dtype, "Project") and contains(tags, "Obsidian")
 ---
 
 ## 笔记
-### 电脑安装插件 #todo
+### 电脑安装插件 
 #### 编辑增强
 - [x] [[Obsidian 插件：Latex suite 通过片段、文本扩展和编辑器增强功能]]
 - [x] [[Obsidian 插件：Hover Editor 通过将悬停弹窗变成一个功能齐全的编辑器]]
