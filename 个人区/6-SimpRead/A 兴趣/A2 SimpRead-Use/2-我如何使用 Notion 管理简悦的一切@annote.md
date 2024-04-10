@@ -5,11 +5,10 @@ alias:
 created-date: 2022-09-24T16:34:27+0800
 banner: "https://cdn.sspai.com/2021/12/01/316ccb44c2542cfdc492b84faf0e3085.png "
 banner_icon: 🔖
-tag: 
+tag:
 idx: 2
 dtype: Simpread
-state: false
-time: ""
+state: true
 ---
 
 # 我如何使用 Notion 管理简悦的一切

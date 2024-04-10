@@ -3,9 +3,10 @@ id: 91545ff0-ddf9-4628-a32d-3aa4e9d00b78
 url: https://mp.weixin.qq.com/s/qqsKvLmfK7CCnoUc6_MyqA
 title: |
   27 个实用的 Visual Studio Code 扩展插件，让我们的工作效率翻倍
-source:
-dtype:
+source: 微信公众号
+dtype: 插件
 tags:
+  - 400兴趣类/VSCode
 state: true
 date: 2024-03-16 15:13:37
 ---

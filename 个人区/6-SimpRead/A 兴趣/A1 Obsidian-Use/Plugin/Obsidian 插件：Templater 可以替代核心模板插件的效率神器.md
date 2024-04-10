@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：Templater 可以替代核心模板插件的效率神器
 date: 2023-11-12 23:54:12
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/Templater
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin/Templater
 source: Pkmer
-banner: 
+banner:
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 ## 概述

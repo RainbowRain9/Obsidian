@@ -4,9 +4,10 @@ url: https://www.zhihu.com/question/266836039/answer/3163182909
 title: |
   (5 封私信 / 35 条消息) 有什么本地笔记管理软件推荐？ - 知乎
 dtype: 软件
-state: false
+state: true
 date: 2023-11-30 13:07:58
-time: ""
+tags:
+  - 400兴趣类/电脑软件
 ---
 
 

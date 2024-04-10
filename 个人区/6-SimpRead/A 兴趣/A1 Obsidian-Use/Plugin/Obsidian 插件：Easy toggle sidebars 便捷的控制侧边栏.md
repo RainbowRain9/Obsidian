@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：Easy toggle sidebars 便捷的控制侧边栏
 date: 2023-11-12 23:41:20
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner: 
+banner:
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 obsidian 社区插件
 

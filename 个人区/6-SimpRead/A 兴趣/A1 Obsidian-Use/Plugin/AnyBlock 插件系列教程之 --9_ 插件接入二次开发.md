@@ -4,13 +4,11 @@ state: false
 title: AnyBlock 插件系列教程之 --9_ 插件接入二次开发
 date: 2023-11-12 21:43:20
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/编辑/AnyBlock
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin/编辑/AnyBlock
 source: Pkmer
 type: 插件
 banner: /img/pkmer-avatar.png
 banner_icon: 🔖
-time: ""
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

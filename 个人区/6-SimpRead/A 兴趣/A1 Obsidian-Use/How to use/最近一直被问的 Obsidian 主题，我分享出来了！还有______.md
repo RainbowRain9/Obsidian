@@ -3,13 +3,12 @@ url: https://mp.weixin.qq.com/s?__biz=Mzg5Njk3MDUyMQ==&mid=2247488573&idx=1&sn=f
 title: 最近一直被问的 Obsidian 主题，我分享出来了！还有______
 date: 2023-11-12 00:14:16
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/美化
+  - 400兴趣类/Obsidian/教程/美化
 banner:
   - https://mmbiz.qpic.cn/sz_mmbiz_jpg/h0UtZibCfO5mkk61fYT90iaeSMwNuJu9X5IxiaopdA9XE6lfdSgibQXCr83Lsh57SSY6BPSEhTnytianOeAfV1GH5yA/0?wx_fmt=jpeg
 banner_icon: 🔖
-state: false
+state: true
 dtype: 教程
-time: ""
 ---
 欢迎点击上方**蓝字⌈维客笔记⌋**关注并星标⭐，及时接收每一篇推送😋！
 

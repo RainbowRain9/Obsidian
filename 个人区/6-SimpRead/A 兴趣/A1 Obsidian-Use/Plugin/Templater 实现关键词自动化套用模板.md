@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E4%BD%BF%E7%94%A8%E6%8A%80
 title: Templater 实现关键词自动化套用模板
 date: 2023-11-13 00:00:23
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/Templater
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin/Templater
 source: Pkmer
 banner: /img/pkmer-avatar.png
 banner_icon: 🔖
 dtype: 插件
 state: false
-time: ""
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

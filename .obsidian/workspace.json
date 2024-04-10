@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "02218b4749029dae",
+            "id": "6558168c9ecaf7fd",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -16,6 +16,7 @@
               "state": {
                 "file": "🏡Home.md",
                 "mode": "preview",
+                "backlinks": false,
                 "source": false
               },
               "pinned": true
@@ -42,41 +43,32 @@
             }
           },
           {
-            "id": "704431b3e1e90d5c",
+            "id": "7cafc8002a2cb85a",
             "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/How to use/用 Ob 构建专属于你的数字花园 - Obsidian 发布分享 - 渐进创作 - 哔哩哔哩.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cb429ff41ca5b2ac",
-            "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "surfing-view",
               "state": {
-                "url": "https://dg-docs.ole.dev/advanced/hosting-alternatives/"
-              }
+                "url": "https://www.ticktick.com/webapp#focus"
+              },
+              "pinned": true
             }
           },
           {
-            "id": "e1527a3089315f5c",
+            "id": "93766e614b742e5f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习区/03-大学物理/知识库/00-矢量运算-Xmind.md",
+                "file": "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/20款VS Code实用插件推荐.md",
                 "mode": "source",
+                "backlinks": false,
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -88,7 +80,6 @@
       {
         "id": "0aeb886c48fcaa26",
         "type": "tabs",
-        "dimension": 59.096774193548384,
         "children": [
           {
             "id": "3a6ee1ee9eaa7a9d",
@@ -101,12 +92,20 @@
             }
           },
           {
+            "id": "e042589813d6689a",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
             "id": "a86ce6b692d1f694",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#网络资源话题可以点击搜索啦",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -116,45 +115,26 @@
             }
           },
           {
-            "id": "1ce830c13bbcb28b",
+            "id": "2c10a3b5e1baab1f",
             "type": "leaf",
             "state": {
-              "type": "langr-search-panel",
-              "state": {}
-            }
-          }
-        ]
-      },
-      {
-        "id": "9922ff6704622350",
-        "type": "tabs",
-        "dimension": 40.903225806451616,
-        "children": [
-          {
-            "id": "e042589813d6689a",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
+              "type": "QUICKSHARE_SIDE_VIEW",
               "state": {}
             }
           },
           {
-            "id": "5c84675ecc134f4f",
+            "id": "7248bb0e86973edd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🏡Home.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "calendar",
+              "state": {}
             }
           },
           {
-            "id": "597877d9b5f98eb1",
+            "id": "243e93891d090a71",
             "type": "leaf",
             "state": {
-              "type": "bookmarks",
+              "type": "surfing-tab-tree",
               "state": {}
             }
           }
@@ -162,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 223.5
   },
   "right": {
     "id": "34fb4efa27cf970d",
@@ -171,7 +151,6 @@
       {
         "id": "72a4b91604aed60d",
         "type": "tabs",
-        "dimension": 54.83870967741936,
         "children": [
           {
             "id": "6f4659d6168a56bc",
@@ -179,19 +158,17 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "frequency",
                 "useHierarchy": true
               }
             }
           },
           {
-            "id": "ad2c152b86e66dd6",
+            "id": "b7f62067e71f949d",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "学习区/03-大学物理/知识库/00-矢量运算-Xmind.md"
-              }
+              "type": "quiet-outline",
+              "state": {}
             }
           },
           {
@@ -207,80 +184,29 @@
             }
           },
           {
-            "id": "d80b73eff69edb7b",
+            "id": "a6687704af4f2030",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/20款VS Code实用插件推荐.md"
+              }
+            }
+          },
+          {
+            "id": "b27fc8bb8f8f7594",
             "type": "leaf",
             "state": {
               "type": "timeline",
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "9c0c74bfc58a684f",
-        "type": "tabs",
-        "dimension": 45.16129032258064,
-        "children": [
-          {
-            "id": "7248bb0e86973edd",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "d8b462f2068c19b8",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "学习区/03-大学物理/知识库/00-矢量运算-Xmind.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "3bc5c65339e6d6c2",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "学习区/03-大学物理/知识库/00-矢量运算-Xmind.md",
-                "linksCollapsed": true,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "2c10a3b5e1baab1f",
-            "type": "leaf",
-            "state": {
-              "type": "QUICKSHARE_SIDE_VIEW",
-              "state": {}
-            }
-          },
-          {
-            "id": "bbafbe3ecd61c96b",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 237.5
+    "width": 233.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -294,13 +220,12 @@
       "templater-obsidian:Templater": true,
       "daily-notes:打开/创建今天的日记": true,
       "templates:插入模板": true,
+      "obsidian-language-learner:打开统计": false,
       "command-palette:打开命令面板": true,
       "cmdr:显示当前文件": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-language-learner:打开查词面板": false,
       "obsidian-language-learner:打开新词面板": false,
-      "digitalgarden:Digital Garden Publication Center": false,
-      "obsidian-language-learner:打开统计": false,
       "obsidian-language-learner:单词列表": false,
       "obsidian-spaced-repetition-recall:复习卡片": false,
       "obsidian-regex-pipeline:Regex Rulesets": false,
@@ -315,63 +240,63 @@
       "cloze:显/隐所有填空": false,
       "extract-highlights-plugin:Extract Highlights": false,
       "big-calendar:Big Calendar": false,
-      "media-extended:Open media": true,
+      "media-extended:Open media": false,
       "obsidian-projects:Open projects": false,
-      "surfing:surfing-bookmark-manager": true,
+      "surfing:surfing-bookmark-manager": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e1527a3089315f5c",
+  "active": "93766e614b742e5f",
   "lastOpenFiles": [
-    "学习区/03-大学物理/知识库/01-质点运动学-Xmind.md",
-    "学习区/03-大学物理/知识库/02-质点动力学-Xmind.md",
-    "学习区/01-高等数学/!书名库/第二章导数与微分.md",
+    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/27 个实用的 Visual Studio Code 扩展插件，让我们的工作效率翻倍.md",
+    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/60 个神级 VS Code 插件，助你打造最强编辑器 1.md",
+    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/VSCode中使用程序员专用字体 Fira Code.md",
     "🏡Home.md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/How to use/用 Ob 构建专属于你的数字花园 - Obsidian 发布分享 - 渐进创作 - 哔哩哔哩.md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/一键发布 Obsidian 本地笔记到 web！太赞了！.md",
-    "个人区/1-生活/日记/2024-03-17_星期日.md",
-    "学习区/_Templates/tp/思维导图模板.md",
-    "个人区/1-生活/日记/2024-03-16_星期六.md",
-    "学习区/01-高等数学/!书名库/第五章定积分.md",
-    "学习区/_Templates/tp/书名页.md",
-    "学习区/01-高等数学/!书名库/第四章不定积分.md",
-    "个人区/1-生活/TickTick/TickTick.md",
-    "学习区/_附件/657a61f238d408a985f7718f.jpg",
-    "学习区/_附件/656dfb5f09f218c9285b92cf.jpg",
-    "学习区/_附件/657d22ef065280b78d2c2aa9.jpg",
-    "学习区/_附件/657a624538d408a985f771e9.jpg",
-    "学习区/03-大学物理/概念库/未命名.md",
-    "学习区/03-大学物理/概念库/速度.md",
-    "个人区/1-生活/TickTick",
-    "未命名",
-    "学习区/_Canvas/大学物理.canvas",
-    "学习区/02-大学英语/听力库/02 How long does it take to get over a breakup.md",
-    "学习区/03-大学物理/知识库/00-矢量运算-Xmind.md",
+    "个人区/6-SimpRead/T 技术/TP350 AI/给ChatGPT施咒，让它为你制作Anki卡片——Prompt工程案例 - 知乎.md",
+    "个人区/6-SimpRead/370.分享我的obsidian知识管理库1.5+高效能人士.md",
+    "个人区/6-SimpRead/12个免费效率工具！让你事半功倍，赶快试试！.md",
+    "个人区/1-生活/日记/2024-04-09_星期二.md",
+    "学习区/01-高等数学/问题库/7.5 二阶线性微分方程-QA.md",
+    "学习区/03-大学物理/概念库/角动量定理.md",
+    "学习区/03-大学物理/概念库/力矩.md",
+    "学习区/03-大学物理/知识库/02-质点动力学-Xmind.md",
+    "学习区/03-大学物理/概念库/角动量.md",
+    "学习区/03-大学物理/问答题/02-质点动力学-QA.md",
+    "未命名.md",
+    "个人区/1-生活/日记/2024-04-08_星期一.md",
+    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Spaced Repetition 利用遗忘曲线间隔重复复习笔记中的内容.md",
+    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian-Anki的用法.md",
+    "学习区/03-大学物理/知识库/5.1-5.2 电荷 库仑定律 电场 电场强度-Xmind.md",
+    "个人区/3-知识宝箱/D 教育/D4 自学、读书方法、考试/一元化笔记.md",
+    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/VS Code这几个天花板般的技巧杀疯了，效率真顶，居然比Goland还强.md",
+    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/obsidian文件列表排序困难-这俩款插件可以帮你解决烦恼..md",
+    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Media Extended——在Obsidian里对视频做笔记.md",
+    "个人区/6-SimpRead/T 技术/TP385 应用/自动生成PPT模板，AI强大到让我语塞！.md",
+    "个人区/6-SimpRead/T 技术/TP393 网址工具/中国版“谷歌学术”，来了.md",
+    "个人区/3-知识宝箱/T 技术/TP393 网址工具/PicGo.md",
     "学习区/_Canvas/高等数学.canvas",
+    "学习区/_Canvas/大学物理.canvas",
+    "学习区/_Banners/1.jpg",
+    "学习区/06-离散数学",
+    "未命名",
+    "Aizhipu",
+    "学习区/04-C++/Untitled.js",
+    "学习区/_Templates/script/gentrandomImage.js",
+    "学习区/_附件/1541384366413.png",
+    "学习区/_Banners/搜图神器_1697195513602.png",
+    "学习区/_Banners/搜图神器_1697195129836.png",
+    "学习区/_Banners/青い瞳の猫.jpeg",
+    "学习区/_Banners/wallhaven-85dwdk.jpg",
+    "学习区/_Banners/p9km8echy.jpg",
+    "学习区/_Banners/p9km8e.jpg",
+    "学习区/_Banners/muyu3.jpeg",
+    "学习区/_Banners/muyu2.jpeg",
+    "学习区/_Banners",
+    "assets",
+    "学习区/_附件/How long does it take to get over a breakup.mp3",
+    "学习区/03-大学物理/问答题",
+    "个人区/1-生活/TickTick",
     "学习区/_Canvas/环境科学导论.canvas",
-    "个人区/附录.md",
-    "个人区/00-MOC/近期任务.md",
-    "个人区/00-MOC/Book-阅读动态.md",
-    "个人区/00-MOC/我的歌单.md",
-    "个人区/00-MOC/文件动态.md",
-    "个人区/00-MOC/近期项目.md",
-    "个人区/00-MOC/视频笔记.md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 最强插件：quickadd 教程.md",
-    "个人区/3-知识宝箱/A 兴趣/Obsidian插件/QuickAdd.md",
-    "学习区/03-大学物理/概念库",
-    "学习区/03-大学物理/知识库",
-    "个人区/6-SimpRead/T 技术/TP350 AI",
-    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use",
-    "学习区/_附件/clip_image002.png",
-    "学习区/_附件/1541905559138.png",
-    "学习区/_附件/三只小猪.jpg",
-    "学习区/_附件/猜数字.jpg",
-    "学习区/_附件/timg.gif",
-    "学习区/C++基础入门讲义",
-    "学习区/assets/0006018857256120_b.jpg",
-    "学习区/assets",
-    "学习区/03-大学物理",
-    "学习区/04-C++",
     "未命名 1.canvas",
     "未命名.canvas"
   ]

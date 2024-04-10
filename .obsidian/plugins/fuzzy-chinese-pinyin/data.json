@@ -2,7 +2,7 @@
   "global": {
     "traditionalChineseSupport": false,
     "doublePinyin": "全拼",
-    "closeWithBackspace": false
+    "closeWithBackspace": true
   },
   "file": {
     "showAttachments": false,
@@ -30,14 +30,22 @@
       "mkv",
       "pdf"
     ],
-    "usePathToSearch": false,
-    "useFileEditorSuggest": false,
+    "usePathToSearch": true,
+    "useFileEditorSuggest": true,
     "showPath": true,
     "showTags": false,
-    "historyDisplay": "使用完整路径"
+    "historyDisplay": "使用完整路径",
+    "searchWithTag": true
+  },
+  "heading": {
+    "showFirstLevelHeading": true,
+    "headingIndent": true
+  },
+  "command": {
+    "pinnedCommands": []
   },
   "other": {
-    "useTagEditorSuggest": false,
+    "useTagEditorSuggest": true,
     "devMode": false
   }
 }

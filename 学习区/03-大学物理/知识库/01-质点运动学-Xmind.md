@@ -1,6 +1,6 @@
 ---
-quickshare-date: 2024-03-17 21:46:10
-quickshare-url: "https://noteshare.space/note/cltvklbos2076601mwncmbb9qx#XR7ns6m40nImjYcmBP6xQovZEwi4NmEcRelrdHcEowo"
+quickshare-date: 2024-03-18 15:11:29
+quickshare-url: "https://noteshare.space/note/cltwlxkzb2277801mwxb7q9wwb#U8M/5ZL32R2TPXpw1Rvs3KtGX0IyNtcSqvsvJ+36EyM"
 time: 2024-03-17 17:23:44
 tags:
   - 300教育类/03-大学物理
@@ -27,15 +27,15 @@ dg-publish: true
     - 运动具有绝对性，但描述运动具有相对性
 
 ### 描述质点运动的物理量
-- **位置矢量 $\vec{r}$**
+- **[[位置矢量]] $\vec{r}$**
     - 在直角坐标系中，从坐标原点 O 指向质点位置 P 的有向线段
-- **位移 $\Delta \vec{r}$**
+- **[[位移]] $\Delta \vec{r}$**
     - 从初位置指向末位置的有向线段
-- **速度 $\vec{v}$**
+- **[[线速度]] $\vec{v}$**
     - 描述质点位置随时间变化的快慢和方向的物理量
     - $\vec{v} = \frac{d\vec{r}}{dt}$
-- **加速度 $\vec{a}$**
-    - 反映质点速度随时间变化的物理量
+- **[[加速度]] $\vec{a}$**
+    - 反映质点[[线速度]]随时间变化的物理量
     - $\vec{a} = \frac{d\vec{v}}{dt}$
 
 ### 自然坐标系
@@ -45,16 +45,16 @@ dg-publish: true
 ### 圆周运动及其角量描述
 - **角量描述**
     - $\theta(t)$：t 时刻质点与参考点之间的夹角
-    - $\omega = \frac{d\theta}{dt}$：角速度
-    - $\alpha = \frac{d\omega}{dt}$：角加速度
+    - $\omega = \frac{d\theta}{dt}$：[[角速度]]
+    - $\alpha = \frac{d\omega}{dt}$：[[角加速度]]
 - **角量与线量的关系**
     - $\omega = \frac{ds}{d\theta}$
-    - $a_t = v\omega$：切向加速度
-    - $a_n = \frac{v^2}{R}$：法向加速度
+    - $a_t = v\omega= \frac{v^2}{R}=R\omega^2$：[[切向加速度]]
+    - $a_n =r\alpha$：[[法向加速度]]
 
 ### 圆周运动的加速度
-- **切向加速度**：反映速度大小的变化
-- **法向加速度**：反映速度方向的变化
+- **[[切向加速度]]**：反映速度大小的变化
+- **[[法向加速度]]**：反映速度方向的变化
 - $\vec{a} = \vec{a}_t + \vec{a}_n$：加速度的分解
 - **加速度与速度的夹角**
     - $\tan\varphi = \frac{a_n}{a_t}$

@@ -6,11 +6,10 @@ title: |
 author: 维客笔记
 source: 微信公众号
 dtype: 教程
-state: false
+state: true
 date: 2023-12-05 21:59:14
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/属性
-time: ""
+  - 400兴趣类/Obsidian/教程/属性
 ---
 
 

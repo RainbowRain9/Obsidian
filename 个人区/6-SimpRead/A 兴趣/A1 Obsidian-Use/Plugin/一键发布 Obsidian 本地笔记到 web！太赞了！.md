@@ -3,12 +3,11 @@ url: https://mp.weixin.qq.com/s?__biz=Mzg5Njk3MDUyMQ==&mid=2247487391&idx=1&sn=3
 title: 一键发布 Obsidian 本地笔记到 web！太赞了！
 date: 2023-11-12 01:18:19
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/同步
+  - 400兴趣类/Obsidian/Plugin/同步
 banner:
   - http://mmbiz.qpic.cn/mmbiz_jpg/PR2BLDgtAWS1pIA3xrxNVwn7FpcbAAUA0ZFPZb2jgy2Fd278RibLuuC5sJbVZB5pKccarsRSN1yic86ACFOmUzww/0?wx_fmt=jpeg
 banner_icon: 🔖
 state: true
-time: ""
 ---
 大家好！我是 BCS~
 

@@ -1,8 +1,9 @@
 ---
 quickshare-date: 2024-03-17 21:47:09
-quickshare-url: "https://noteshare.space/note/cltvkml262079401mwjs4d9n0c#JLg3bdyECR7tpnLmGtPU2famQsjvuyaNU5Aqbg9oI08"
+quickshare-url: https://noteshare.space/note/cltvkml262079401mwjs4d9n0c#JLg3bdyECR7tpnLmGtPU2famQsjvuyaNU5Aqbg9oI08
 time: 2024-03-17 02:45:28
 tags:
+  - 300教育类/03-大学物理
 subject: 大学物理
 mindmap-plugin: basic
 dtype: 思维导图

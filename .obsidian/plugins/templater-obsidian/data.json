@@ -11,7 +11,7 @@
   "auto_jump_to_cursor": true,
   "enable_system_commands": false,
   "shell_path": "",
-  "user_scripts_folder": "",
+  "user_scripts_folder": "学习区/_Templates/script/template",
   "enable_folder_templates": false,
   "folder_templates": [
     {
@@ -25,7 +25,8 @@
     ""
   ],
   "startup_templates": [
-    "学习区/_Templates/startup/FastStart-StartupScript.md"
+    "学习区/_Templates/startup/FastStart-StartupScript.md",
+    ""
   ],
   "enable_ribbon_icon": true
 }

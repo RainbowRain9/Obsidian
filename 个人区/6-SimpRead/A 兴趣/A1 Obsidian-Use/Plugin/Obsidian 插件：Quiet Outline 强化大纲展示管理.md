@@ -3,32 +3,17 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：Quiet Outline 强化大纲展示管理
 date: 2023-11-12 21:25:56
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner: 
+banner:
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 
-obsidian 社区插件
-
-[OS](https://pkmer.cn/authors/os)
-
-于  2023-06-21 18:40  发布
-
- 
-
-1000
-
-分享
-
 * * *
 
-sr-annote { all: unset; }
 
 Quiet Outline，是增强大纲插件，按需自动展开大纲，可设定展开层级，功能丰富。
 

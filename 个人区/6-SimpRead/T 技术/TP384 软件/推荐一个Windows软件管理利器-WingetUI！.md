@@ -5,10 +5,9 @@ title: |
   推荐一个Windows软件管理利器-WingetUI！
 author: |
   鉴紫
-dtype: 
+dtype:
 state: true
 date: 2023-12-04 09:53:59
-time: ""
 ---
 
 

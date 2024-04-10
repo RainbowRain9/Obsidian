@@ -1,0 +1,1449 @@
+{
+  "widgets": [
+    {
+      "id": "8abedadd-59be-489f-a2bc-7a405090612a",
+      "name": "",
+      "widget": {
+        "id": "1f492517-823d-423d-9364-6f23e4735f7a",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "05a183eb-8c34-4159-906f-b76cda102388",
+            "type": "countdown",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "repeatType": "none",
+            "showEndDateTime": true,
+            "endHour": 9,
+            "endMinute": 0,
+            "endSecond": 0,
+            "endYear": 2024,
+            "endMonth": 5,
+            "endDayOfMonth": 15,
+            "title": "四六级考试还有",
+            "timeTextPattern": "Md",
+            "backgroundColor": "#DDEDEA",
+            "fontColor": "#0F7B6C"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-26T09:13:34.689Z",
+      "updateAt": "2024-03-26T09:14:48.058Z"
+    },
+    {
+      "id": "b67fe3b5-2386-4d53-ac6c-0e3ec77b976b",
+      "name": "",
+      "widget": {
+        "id": "e7a99021-b0f9-41db-bc33-e2366ea0553c",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-26T10:57:12.539Z",
+      "updateAt": "2024-03-26T10:59:37.223Z"
+    },
+    {
+      "id": "62a381ce-16a3-4129-b5bb-d69810d23d63",
+      "name": "",
+      "widget": {
+        "id": "281dd41b-3e12-41c1-818c-5c57f80bc211",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "c1cca939-282a-42fa-a620-1f62e576cc3e",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "gallary",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "",
+                    "operator": "contains",
+                    "property": "${file.tags}",
+                    "id": "7a463670-23cf-46a8-ae00-9c5ba00612d4"
+                  }
+                ]
+              },
+              "dataLimit": 50,
+              "storage": {
+                "location": ""
+              },
+              "sort": {
+                "orders": []
+              }
+            },
+            "properties": [],
+            "templates": [],
+            "viewOptions": {
+              "openPageIn": "split",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "pageFirstImage",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-26T11:20:32.769Z",
+      "updateAt": "2024-03-26T11:21:41.843Z"
+    },
+    {
+      "id": "dfe31982-cf2a-4916-a487-0b904a112f27",
+      "name": "",
+      "widget": {
+        "id": "cf7535d6-eb6c-40f5-abf9-98c335bf1699",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "6e554f94-a2c6-4a17-a36d-a95c683129c6",
+            "type": "clock",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "maxHeight": 300,
+            "backgroundStyle": "none",
+            "clockOptions": {
+              "showTimeLabel": false,
+              "dialType": "square"
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-26T11:48:50.207Z",
+      "updateAt": "2024-03-26T11:49:48.729Z"
+    },
+    {
+      "id": "6dee92f1-18b1-4d8d-bb20-7da348cf28a1",
+      "name": "",
+      "widget": {
+        "id": "abe6986a-78a4-4c0a-afa2-740ff6f3a026",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "658232f1-a239-4528-99e2-c2c56116cac0",
+            "type": "customCard",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": 27,
+            "backgroundStyle": "card",
+            "title": "康德说",
+            "description": "“自由是我不要做什么就能够不做什么”",
+            "pictureShape": "round",
+            "picturePos": "top",
+            "showButton": false,
+            "button": {
+              "text": "",
+              "action": {
+                "type": "url",
+                "url": ""
+              }
+            },
+            "backgroundColor": "#DDEDEA",
+            "fontColor": "#0F7B6C"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-26T12:01:15.919Z",
+      "updateAt": "2024-03-26T12:03:29.970Z"
+    },
+    {
+      "id": "2c78092e-deed-4b22-91d9-1eef97d34c57",
+      "name": "",
+      "widget": {
+        "id": "5c5302b5-87b8-4f79-b93a-a8187198e9b6",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "c0d0c8dd-d560-4c62-a6eb-6fe5bdb0b8c7",
+            "type": "dateProgress",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "showDateIndicator": false,
+            "showProgressIndicator": true,
+            "startDateTimeType": "$startOfYear",
+            "endDateTimeType": "$endOfYear",
+            "uiType": "bar",
+            "title": "今年已经经历了",
+            "picture": ""
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-27T05:59:25.347Z",
+      "updateAt": "2024-03-27T06:01:25.003Z"
+    },
+    {
+      "id": "1d3bdbda-06f0-41bf-8349-ea4664ad4a2e",
+      "name": "",
+      "widget": {
+        "id": "1336ae89-c7e8-4986-9f13-ae0cd2ed0959",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-27T06:57:44.648Z",
+      "updateAt": "2024-03-27T06:57:44.650Z"
+    },
+    {
+      "id": "9faaf3c7-dd9a-4d60-beae-36e6aa703245",
+      "name": "",
+      "widget": {
+        "id": "cf75148f-935c-4226-b1c6-87302708bcb2",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "eda14d3b-7bca-4e2d-9429-8f6c22f83339",
+            "type": "customCard",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "title": "我的QQ",
+            "description": "2868261512",
+            "pictureShape": "round",
+            "picturePos": "top",
+            "showButton": false,
+            "button": {
+              "text": "",
+              "action": {
+                "type": "url",
+                "url": ""
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-27T06:57:52.822Z",
+      "updateAt": "2024-03-27T06:58:54.423Z"
+    },
+    {
+      "id": "28a27120-5f94-47a1-9be4-37819d28bdcf",
+      "name": "",
+      "widget": {
+        "id": "22a46753-8356-4e9e-bdbc-f1dee3a9ed18",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-27T08:28:09.291Z",
+      "updateAt": "2024-03-27T08:28:20.379Z"
+    },
+    {
+      "id": "4d64b94d-b8bb-46c8-a9c9-2fdf66de56ff",
+      "name": "",
+      "widget": {
+        "id": "88b1d7ac-1f00-430b-8529-c5c6e87a3eec",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "35c59260-f19f-4378-9a03-f492d530b076",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "gallary",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "1.索引及方法论/1.单词树/2.词根索引/c开头词根",
+                    "operator": "contains",
+                    "property": "${file.path}",
+                    "id": "ab38ad70-de22-4e92-bc42-4d0df2423730"
+                  }
+                ]
+              },
+              "dataLimit": 50,
+              "storage": {
+                "location": "b开头"
+              },
+              "sort": {
+                "orders": [
+                  {
+                    "id": "74852a3a-cb47-4bcc-8985-7a28049c20bf",
+                    "property": "${file.basename}",
+                    "direction": "asc"
+                  }
+                ]
+              }
+            },
+            "properties": [],
+            "templates": [],
+            "viewOptions": {
+              "openPageIn": "tab",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "none",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-29T04:46:34.690Z",
+      "updateAt": "2024-04-03T06:32:25.972Z"
+    },
+    {
+      "id": "0fa57f21-a350-455e-9ab5-d47c2ec94b04",
+      "name": "",
+      "widget": {
+        "id": "2c4f28a6-731c-429c-83e2-a0dfaa24bf1c",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "a9cf6659-070c-44ca-8399-f77317a93a37",
+            "type": "dateProgress",
+            "titleAlign": "center",
+            "tabTitle": "四六级倒计时",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "showDateIndicator": true,
+            "showProgressIndicator": true,
+            "startDateTimeType": "$specifiedDateTime",
+            "endDateTimeType": "$specifiedDateTime",
+            "uiType": "bar",
+            "title": "四六级备考时长",
+            "startDateTime": "2024-03-08 09:00:00",
+            "endDateTime": "2024-06-15 09:00:50"
+          },
+          {
+            "id": "c2bb0973-4899-4464-b502-ef068f04a3d7",
+            "type": "countdown",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "repeatType": "none",
+            "showEndDateTime": true,
+            "endHour": 14,
+            "endMinute": 0,
+            "endSecond": 0,
+            "title": "距离考研还有",
+            "endYear": 2024,
+            "endMonth": 11,
+            "endDayOfMonth": 23
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-29T08:13:27.106Z",
+      "updateAt": "2024-04-09T14:33:12.126Z"
+    },
+    {
+      "id": "8cc4aa15-a3f0-4c2f-9b15-9560e6b568bc",
+      "name": "",
+      "widget": {
+        "id": "ce6aa7b6-4289-4b8b-8bed-e9b258f50f98",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "aec0d342-185f-433c-9020-e3351d3ef707",
+            "type": "dateProgress",
+            "titleAlign": "center",
+            "tabTitle": "本周",
+            "maxWidthRatio": 100,
+            "backgroundStyle": "card",
+            "showDateIndicator": true,
+            "showProgressIndicator": true,
+            "startDateTimeType": "$startOfWeek",
+            "endDateTimeType": "$endOfWeek",
+            "uiType": "ring",
+            "title": "这一周",
+            "backgroundColor": "#FBE4E4",
+            "fontColor": "#E03E3E"
+          },
+          {
+            "id": "4d87b77a-5b62-4ef9-9911-0642489e55bc",
+            "type": "countdown",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": 100,
+            "backgroundStyle": "card",
+            "repeatType": "daily",
+            "showEndDateTime": false,
+            "endHour": 23,
+            "endMinute": 59,
+            "endSecond": 59,
+            "title": "今天还剩",
+            "timeTextPattern": "Hms",
+            "backgroundColor": "#E9E5E3",
+            "fontColor": "#64473A"
+          },
+          {
+            "id": "df6d88c2-3102-4028-bacf-9c35b093132e",
+            "type": "dataview",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "query": "task \nfrom \"1.小木屋/学习打卡\"\nwhere !completed\nsort file.ctime desc",
+            "queryType": "dataview",
+            "backgroundStyle": "card",
+            "maxHeight": 300,
+            "dynamicParamComponents": [],
+            "title": "待办事项",
+            "backgroundColor": "#DDEDEA",
+            "fontColor": "#0F7B6C"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-29T08:17:33.952Z",
+      "updateAt": "2024-04-09T14:33:27.589Z"
+    },
+    {
+      "id": "d010fc72-9038-4abf-a875-e59bb796b9d6",
+      "name": "",
+      "widget": {
+        "id": "4abb7e1e-ae5a-4d45-87a6-2510d806d4f8",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "7ba7e120-265b-478b-893f-6da79a620e07",
+            "type": "multi",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "widgets": [
+              {
+                "id": "2b6e7cdd-64a7-42a3-8548-21dcd4e24cc0",
+                "type": "checkIn",
+                "titleAlign": "center",
+                "tabTitle": "",
+                "maxWidthRatio": -1,
+                "cellShape": "round",
+                "backgroundStyle": "card",
+                "tasks": [],
+                "title": "单词打卡"
+              },
+              {
+                "id": "3d9385ea-b856-4055-a734-f8bfb06d4dcd",
+                "type": "dataview",
+                "titleAlign": "center",
+                "tabTitle": "",
+                "maxWidthRatio": -1,
+                "query": "",
+                "queryType": "dataview",
+                "backgroundStyle": "card",
+                "maxHeight": 300,
+                "dynamicParamComponents": [],
+                "title": "今日目标"
+              }
+            ],
+            "layoutType": "column"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-29T08:21:13.904Z",
+      "updateAt": "2024-03-29T08:48:58.098Z"
+    },
+    {
+      "id": "2ecb9154-cecb-4cc1-80ef-1312cce115fc",
+      "name": "",
+      "widget": {
+        "id": "165aafb0-8959-4eac-8168-f4a86045fbe0",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "1bbeea68-7079-43d4-b354-e0a317856104",
+            "type": "checkIn",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": 69.26581408974282,
+            "cellShape": "circle",
+            "backgroundStyle": "card",
+            "tasks": [
+              {
+                "id": "909072dc-40d3-4398-a05d-3f7ead8661b9",
+                "checkInRecordType": "task",
+                "tag": "#今天学习了",
+                "name": ""
+              }
+            ],
+            "title": "学习打卡",
+            "backgroundColor": "hsl(var(--interactive-accent-hsl), 0.1)",
+            "fontColor": "hsl(var(--interactive-accent-hsl), 1)"
+          },
+          {
+            "id": "7076a0f6-ad4e-46bf-b9cf-c2e969d4e506",
+            "type": "count",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": 30.73418591025718,
+            "backgroundStyle": "card",
+            "query": {
+              "type": "page",
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "#今天学习了",
+                    "operator": "contains",
+                    "property": "${file.tags}",
+                    "id": "866e0036-1a4d-42d3-8236-7676b0c64dbc"
+                  }
+                ]
+              }
+            },
+            "title": "打卡统计"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-29T08:49:05.800Z",
+      "updateAt": "2024-04-09T14:33:32.853Z"
+    },
+    {
+      "id": "6498c57c-db68-4469-a4a3-6ab10c725269",
+      "name": "",
+      "widget": {
+        "id": "80fefdf0-0f3b-4387-be36-6ab6c02193c8",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "6428bce5-3dca-437a-9a58-b716c7e989c3",
+            "type": "multi",
+            "titleAlign": "center",
+            "tabTitle": "单词",
+            "maxWidthRatio": 100,
+            "backgroundStyle": "none",
+            "widgets": [
+              {
+                "id": "cbe0f15a-6c55-4b94-a2db-4695aa6469e0",
+                "type": "customCard",
+                "titleAlign": "center",
+                "tabTitle": "词根索引",
+                "maxWidthRatio": -1,
+                "backgroundStyle": "card",
+                "title": "",
+                "description": "",
+                "pictureShape": "round",
+                "picturePos": "top",
+                "showButton": true,
+                "button": {
+                  "text": "词根索引",
+                  "action": {
+                    "type": "url",
+                    "url": "obsidian://open?vault=%E5%B0%8F%E6%A0%91%E6%9E%97&file=1.%E7%B4%A2%E5%BC%95%E5%8F%8A%E6%96%B9%E6%B3%95%E8%AE%BA%2F1.%E5%8D%95%E8%AF%8D%E6%A0%91%2F2.%E8%AF%8D%E6%A0%B9%E7%B4%A2%E5%BC%95%2F%E8%AF%8D%E6%A0%B9%E7%B4%A2%E5%BC%95"
+                  }
+                },
+                "backgroundColor": "#FAEBDD",
+                "fontColor": "#D9730D"
+              },
+              {
+                "id": "df5f7e67-9e04-4c03-a899-130ddebaa50a",
+                "type": "customCard",
+                "titleAlign": "center",
+                "tabTitle": "首字母索引",
+                "maxWidthRatio": -1,
+                "backgroundStyle": "card",
+                "title": "",
+                "description": "",
+                "pictureShape": "round",
+                "picturePos": "top",
+                "showButton": true,
+                "button": {
+                  "text": "首字母索引",
+                  "action": {
+                    "type": "url",
+                    "url": "obsidian://open?vault=%E5%B0%8F%E6%A0%91%E6%9E%97&file=1.%E7%B4%A2%E5%BC%95%E5%8F%8A%E6%96%B9%E6%B3%95%E8%AE%BA%2F1.%E5%8D%95%E8%AF%8D%E6%A0%91%2F3.%E9%A6%96%E5%AD%97%E6%AF%8D%E7%B4%A2%E5%BC%95%2F%E9%A6%96%E5%AD%97%E6%AF%8D%E7%B4%A2%E5%BC%95"
+                  }
+                }
+              }
+            ],
+            "layoutType": "column"
+          },
+          {
+            "id": "218a03fe-d493-4db7-87b6-aae24e03930d",
+            "type": "multi",
+            "titleAlign": "center",
+            "tabTitle": "语法",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "widgets": [
+              {
+                "id": "a51c6d8b-ac47-4178-a057-21b88cd3b1ef",
+                "type": "customCard",
+                "titleAlign": "center",
+                "tabTitle": "语法大类",
+                "maxWidthRatio": -1,
+                "backgroundStyle": "card",
+                "title": "",
+                "description": "",
+                "pictureShape": "round",
+                "picturePos": "top",
+                "showButton": true,
+                "button": {
+                  "text": "语法大类",
+                  "action": {
+                    "type": "url",
+                    "url": "obsidian://open?vault=%E5%B0%8F%E6%A0%91%E6%9E%97&file=1.%E7%B4%A2%E5%BC%95%E5%8F%8A%E6%96%B9%E6%B3%95%E8%AE%BA%2F2.%E8%AF%AD%E6%B3%95%E6%A0%91%2F%E5%A4%A7%E7%B1%BB%E7%B4%A2%E5%BC%95%2F%E5%A4%A7%E7%B1%BB%E7%B4%A2%E5%BC%95"
+                  }
+                }
+              }
+            ],
+            "layoutType": "column"
+          },
+          {
+            "id": "bff51e1c-15d4-4d32-acb0-19bca202fed5",
+            "type": "multi",
+            "titleAlign": "center",
+            "tabTitle": "真题",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "widgets": [
+              {
+                "id": "b908a4a8-a76d-4e4e-89c9-72a08a125d75",
+                "type": "customCard",
+                "titleAlign": "center",
+                "tabTitle": "真题生词",
+                "maxWidthRatio": -1,
+                "backgroundStyle": "card",
+                "title": "",
+                "description": "",
+                "pictureShape": "round",
+                "picturePos": "top",
+                "showButton": true,
+                "button": {
+                  "text": "真题生词",
+                  "action": {
+                    "type": "url",
+                    "url": "obsidian://open?vault=%E5%B0%8F%E6%A0%91%E6%9E%97&file=4.%E7%9C%9F%E9%A2%98%E6%A0%91%2F%E7%9C%9F%E9%A2%98%E7%94%9F%E8%AF%8D%2F%E7%9C%9F%E9%A2%98%E7%94%9F%E8%AF%8D"
+                  }
+                }
+              }
+            ],
+            "layoutType": "column"
+          }
+        ],
+        "layoutType": "tab"
+      },
+      "createAt": "2024-03-29T11:47:53.658Z",
+      "updateAt": "2024-04-09T14:33:49.937Z"
+    },
+    {
+      "id": "89ffbf8f-ccc4-49b4-8127-6b37f9cc6aa1",
+      "name": "",
+      "widget": {
+        "id": "ae3bcec8-6589-410b-bffb-85f51ad817d3",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "c399c1d4-9f05-44d1-bd6c-2c2a7ed61275",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "gallary",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "day1",
+                    "operator": "equals",
+                    "property": "aliases",
+                    "id": "e4a85038-8dc7-47c9-a816-e9cf4d52a7b6"
+                  },
+                  {
+                    "value": "1.小木屋/单词树/词根索引",
+                    "operator": "equals",
+                    "property": "${file.path}",
+                    "id": "999a5331-dabe-45e0-9eb8-7384001e2e65"
+                  }
+                ]
+              },
+              "dataLimit": 50,
+              "storage": {
+                "location": ""
+              },
+              "sort": {
+                "orders": []
+              }
+            },
+            "properties": [],
+            "templates": [],
+            "viewOptions": {
+              "openPageIn": "tab",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "none",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-30T11:50:11.881Z",
+      "updateAt": "2024-03-30T11:51:16.715Z"
+    },
+    {
+      "id": "386b9c03-7c4d-41f7-adf2-507067318fd1",
+      "name": "",
+      "widget": {
+        "id": "016f4d51-6276-49e6-8938-f45dabf8e0b7",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "108efbe4-d01a-4e08-bfa3-a3f5363cb3da",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "gallary",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "day2",
+                    "operator": "equals",
+                    "property": "aliases",
+                    "id": "0d470091-258c-437c-a804-cf369a8487ea"
+                  },
+                  {
+                    "value": "1.小木屋/单词树/词根索引",
+                    "operator": "equals",
+                    "property": "${file.path}",
+                    "id": "a3b32084-1b67-4d03-8e3d-557b7e4baceb"
+                  }
+                ]
+              },
+              "dataLimit": 50,
+              "storage": {
+                "location": ""
+              },
+              "sort": {
+                "orders": []
+              }
+            },
+            "properties": [],
+            "templates": [],
+            "viewOptions": {
+              "openPageIn": "tab",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "none",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-30T11:51:49.667Z",
+      "updateAt": "2024-03-30T11:52:25.141Z"
+    },
+    {
+      "id": "16f29a4f-7b3b-4654-91b0-9da545607aae",
+      "name": "",
+      "widget": {
+        "id": "62bdf490-9cb3-4174-9164-573550961309",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "8c5f9eb8-2ad5-428e-a155-204f56aba170",
+            "type": "count",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "query": {
+              "type": "page",
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "#今天记单词了",
+                    "operator": "contains",
+                    "property": "${file.tags}",
+                    "id": "7b96ac8b-df07-4422-a0ad-59918989241a"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-30T11:53:12.400Z",
+      "updateAt": "2024-03-30T11:58:50.785Z"
+    },
+    {
+      "id": "0ee39e1e-ad93-4c23-b660-234a46d2d2b8",
+      "name": "",
+      "widget": {
+        "id": "eec652aa-7889-4ce0-89a2-aae562ee30d6",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-30T12:00:33.705Z",
+      "updateAt": "2024-03-30T12:02:02.292Z"
+    },
+    {
+      "id": "616cab76-3f42-4017-92b4-15058becf184",
+      "name": "",
+      "widget": {
+        "id": "5927e21c-5814-44f4-9ee6-5e264e8c4b72",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [],
+        "layoutType": "column"
+      },
+      "createAt": "2024-03-30T12:03:55.456Z",
+      "updateAt": "2024-03-30T12:04:01.306Z"
+    },
+    {
+      "id": "e61a2fda-bbfd-4b42-8bee-b84289c5b39e",
+      "name": "",
+      "widget": {
+        "id": "219530e2-9e21-45be-8c4c-8a0c89d29681",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "fb92e0ae-0c58-4fab-816b-7b2b858ab05c",
+            "type": "customCard",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "title": "",
+            "description": "",
+            "pictureShape": "round",
+            "picturePos": "top",
+            "showButton": true,
+            "button": {
+              "text": "",
+              "action": {
+                "type": "command",
+                "url": "https://zhenti.burningvocabulary.cn/?source=pwa"
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-04-03T02:01:31.470Z",
+      "updateAt": "2024-04-03T02:04:09.139Z"
+    },
+    {
+      "id": "690d8208-50c2-4693-927e-423765622ee3",
+      "name": "",
+      "widget": {
+        "id": "1ef43315-ee1f-41b4-9027-931628844219",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "95c7c732-785c-4586-a85c-fc600c1d0dd3",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "gallary",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "4.真题树/真题生词",
+                    "operator": "contains",
+                    "property": "${file.path}",
+                    "id": "06b32524-b35a-4418-b8ea-991f93316854"
+                  }
+                ]
+              },
+              "dataLimit": 50,
+              "storage": {
+                "location": ""
+              },
+              "sort": {
+                "orders": []
+              }
+            },
+            "properties": [],
+            "templates": [],
+            "viewOptions": {
+              "openPageIn": "split",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "pageFirstImage",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-04-03T02:15:24.863Z",
+      "updateAt": "2024-04-03T02:16:02.042Z"
+    },
+    {
+      "id": "032324d4-275e-4c8f-b553-b793554a83ab",
+      "name": "",
+      "widget": {
+        "id": "25908fd1-9709-4069-a66c-81dac7c5dbe2",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [],
+        "layoutType": "column"
+      },
+      "createAt": "2024-04-03T06:24:02.835Z",
+      "updateAt": "2024-04-03T06:24:15.223Z"
+    },
+    {
+      "id": "4068a975-ca4b-4567-ba6c-689e982eb8b8",
+      "name": "",
+      "widget": {
+        "id": "c6c7cc99-6bec-44fa-a697-993338bf1613",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "554e8f38-dd69-4069-a5f2-9a6554fd3cac",
+            "type": "quote",
+            "titleAlign": "center",
+            "tabTitle": "微信读书",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "contentType": "block",
+            "coverType": "none",
+            "filter": {
+              "conditions": [
+                {
+                  "value": "#金句卡",
+                  "operator": "contains",
+                  "property": "${file.tags}",
+                  "id": "1c7d099b-a0c9-444d-975b-d623dd04f79c"
+                },
+                {
+                  "value": "#weread",
+                  "operator": "contains",
+                  "property": "${file.tags}",
+                  "id": "efd94630-f3b2-4cd1-8a79-c98c5e45cd0a"
+                }
+              ]
+            },
+            "maxHeight": 300
+          },
+          {
+            "id": "67bb9a92-1f11-4381-b173-ff40193403ce",
+            "type": "quote",
+            "titleAlign": "center",
+            "tabTitle": "日常收集",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "contentType": "block",
+            "coverType": "none",
+            "filter": {
+              "conditions": [
+                {
+                  "value": "#金句卡",
+                  "operator": "contains",
+                  "property": "${file.tags}",
+                  "id": "1c7d099b-a0c9-444d-975b-d623dd04f79c"
+                },
+                {
+                  "value": "#weread",
+                  "operator": "not_contains",
+                  "property": "${file.tags}",
+                  "id": "012e2661-0eff-4f03-a85b-79078fbfd5c2"
+                }
+              ]
+            },
+            "maxHeight": 300
+          },
+          {
+            "id": "1735d341-2565-461e-a93e-5e0605fd0293",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "学习笔记",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "gallary",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": [
+                      "#300教育类/01-高等数学",
+                      "#300教育类/03-大学物理",
+                      "#300教育类/05-中国近代史纲要"
+                    ],
+                    "operator": "contains_any",
+                    "property": "${file.tags}",
+                    "id": "6777b8bd-b14b-4971-b770-57b72bf07182"
+                  }
+                ]
+              },
+              "dataLimit": 9,
+              "storage": {
+                "location": "学习区/00-临时文件"
+              },
+              "sort": {
+                "orders": [
+                  {
+                    "id": "4daee683-2b8b-4206-ad6b-f418d5c50b61",
+                    "property": "${file.mtime}",
+                    "direction": "desc"
+                  }
+                ]
+              }
+            },
+            "properties": [
+              {
+                "id": "e6f77d3d-5e50-4482-98d0-84c9484a227e",
+                "name": "subject",
+                "isShow": true,
+                "defaultValue": "",
+                "type": "text"
+              }
+            ],
+            "templates": [
+              {
+                "id": "8e147ab6-8f32-4521-8887-4c30757ed9f3",
+                "path": "学习区/_Templates/tp/概念卡.md",
+                "type": "default"
+              },
+              {
+                "id": "61ac87a3-42c3-4538-8d3d-ec6949c2bb6e",
+                "path": "学习区/_Templates/tp/思维导图模板.md",
+                "type": "default"
+              },
+              {
+                "id": "d684dd9a-80d6-4764-9e65-dd95b1ce3461",
+                "path": "学习区/_Templates/tp/QA笔记.md",
+                "type": "default"
+              },
+              {
+                "id": "82a2d6f8-a599-4eca-9fdf-cb339d11ab69",
+                "path": "学习区/_Templates/tp/例题卡.md",
+                "type": "default"
+              }
+            ],
+            "viewOptions": {
+              "openPageIn": "tab",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "none",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          },
+          {
+            "id": "bc2b65cc-ef2f-45b5-aabc-b76c71667b71",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "文章剪藏",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "table",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "#Omnivore",
+                    "operator": "contains",
+                    "property": "${file.tags}",
+                    "id": "9bf939da-4fd6-4812-9c83-63d07416afab"
+                  }
+                ]
+              },
+              "dataLimit": 10,
+              "storage": {
+                "location": ""
+              },
+              "sort": {
+                "orders": [
+                  {
+                    "id": "6e1ff272-baf5-423c-b904-835cd68f03c0",
+                    "property": "${file.ctime}",
+                    "direction": "desc"
+                  }
+                ]
+              }
+            },
+            "properties": [
+              {
+                "id": "267e5c69-9e9b-4c3b-a77c-bd2eec4e12ec",
+                "name": "tags",
+                "isShow": true,
+                "defaultValue": [],
+                "type": "multiSelect",
+                "options": {
+                  "width": "174"
+                }
+              },
+              {
+                "id": "59498a86-c78b-429b-b458-5ea32ef13b15",
+                "name": "state",
+                "isShow": true,
+                "defaultValue": false,
+                "type": "checkbox",
+                "options": {
+                  "width": "73"
+                }
+              },
+              {
+                "id": "4a019f0f-ae62-428e-b027-7f19df25c5fe",
+                "name": "${file.ctime}",
+                "isShow": true,
+                "defaultValue": "",
+                "type": "datetime",
+                "options": {
+                  "width": "210"
+                }
+              }
+            ],
+            "templates": [],
+            "viewOptions": {
+              "openPageIn": "tab",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "none",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          },
+          {
+            "id": "d89c7c7e-dfaa-439c-bcbd-082d83cf885a",
+            "type": "dynamicDataView",
+            "titleAlign": "center",
+            "tabTitle": "任务待办",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "none",
+            "viewType": "gallary",
+            "datasource": {
+              "filter": {
+                "conditions": [
+                  {
+                    "value": "#todo",
+                    "operator": "contains",
+                    "property": "${file.tags}",
+                    "id": "f78bdfcc-3aa1-41e4-9397-0910c5c610fc"
+                  }
+                ]
+              },
+              "dataLimit": 50,
+              "storage": {
+                "location": ""
+              },
+              "sort": {
+                "orders": [
+                  {
+                    "id": "356a7841-e69e-4901-851d-d7e11c2d62cc",
+                    "property": "${file.mtime}",
+                    "direction": "desc"
+                  }
+                ]
+              }
+            },
+            "properties": [
+              {
+                "id": "4e1325a8-8714-4db3-b7fe-e4c935b23439",
+                "name": "tags",
+                "isShow": true,
+                "defaultValue": [],
+                "type": "multiSelect"
+              }
+            ],
+            "templates": [],
+            "viewOptions": {
+              "openPageIn": "tab",
+              "itemSize": "gallary-small",
+              "cover": {
+                "type": "none",
+                "value": "",
+                "fit": "contains"
+              }
+            }
+          }
+        ],
+        "layoutType": "tab"
+      },
+      "createAt": "2024-04-09T14:48:57.175Z",
+      "updateAt": "2024-04-10T03:36:23.337Z"
+    },
+    {
+      "id": "6b2d0abf-dc71-4b0b-9f36-7882b4c60a1c",
+      "name": "",
+      "widget": {
+        "id": "8cc34961-c5d6-447b-a26b-2456072289c4",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "ce44314b-995f-40a8-af01-5f9f520d7e54",
+            "type": "countdown",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "repeatType": "daily",
+            "showEndDateTime": false,
+            "endHour": 23,
+            "endMinute": 59,
+            "endSecond": 59,
+            "endYear": 2024,
+            "endMonth": 3,
+            "endDayOfMonth": 9,
+            "timeTextPattern": "Hms",
+            "title": "今天要结束咯！",
+            "backgroundColor": "#00402930",
+            "fontColor": "#aaf9c8ff"
+          },
+          {
+            "id": "a888f868-f95c-49d2-9ed2-423327e31d55",
+            "type": "countdown",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "repeatType": "none",
+            "showEndDateTime": true,
+            "endHour": 0,
+            "endMinute": 0,
+            "endSecond": 0,
+            "timeTextPattern": "dHms",
+            "title": "四六级考试",
+            "endYear": 2024,
+            "endMonth": 5,
+            "endDayOfMonth": 15,
+            "picture": "",
+            "backgroundColor": "#3e0e0e43",
+            "fontColor": "#ff7777ff"
+          },
+          {
+            "id": "b04e8eb8-9efb-4430-a1b6-775e9057b1fe",
+            "type": "countdown",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "repeatType": "weekly",
+            "showEndDateTime": false,
+            "endHour": 0,
+            "endMinute": 0,
+            "endSecond": 0,
+            "endYear": 2024,
+            "endMonth": 3,
+            "endDayOfMonth": 15,
+            "timeTextPattern": "dHm",
+            "endDayOfWeek": 0,
+            "backgroundColor": "#5555a42b",
+            "fontColor": "#aebdffff",
+            "title": "这周要结束咯！"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-04-09T15:10:09.570Z",
+      "updateAt": "2024-04-09T15:25:35.136Z"
+    },
+    {
+      "id": "65363fc0-3b78-497e-9566-ecef98957d6d",
+      "name": "",
+      "widget": {
+        "id": "441657fe-5a5b-402a-ac11-e48b8a91fcc2",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "b7daf29e-2539-4f85-9793-3450ee21daca",
+            "type": "dateProgress",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "showDateIndicator": false,
+            "showProgressIndicator": true,
+            "startDateTimeType": "$startOfToday",
+            "endDateTimeType": "$endOfToday",
+            "uiType": "bar",
+            "title": "今天",
+            "backgroundColor": "hsl(var(--interactive-accent-hsl), 0.1)",
+            "fontColor": "hsl(var(--interactive-accent-hsl), 1)"
+          },
+          {
+            "id": "dc312e6c-5a42-41c8-bdfe-f8ce419c39fb",
+            "type": "dateProgress",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "backgroundStyle": "card",
+            "showDateIndicator": true,
+            "showProgressIndicator": true,
+            "startDateTimeType": "$specifiedDateTime",
+            "endDateTimeType": "$specifiedDateTime",
+            "uiType": "bar",
+            "startDateTime": "2024-02-25 00:00:00",
+            "endDateTime": "2024-06-15 00:00:00",
+            "backgroundColor": "#67674573",
+            "fontColor": "#f4f39aff",
+            "title": "四六级考试"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-04-09T15:19:47.763Z",
+      "updateAt": "2024-04-10T06:35:33.410Z"
+    },
+    {
+      "id": "5a6efec6-f1ad-4cbd-9046-f5c761bbb37f",
+      "name": "",
+      "widget": {
+        "id": "7651a7d8-96ea-45c8-b8e6-1b3246bffc82",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [
+          {
+            "id": "5a0b4dd2-4efa-4c9a-a61b-d8d607975073",
+            "type": "chart",
+            "titleAlign": "center",
+            "tabTitle": "",
+            "maxWidthRatio": -1,
+            "chartType": "bar",
+            "backgroundStyle": "card",
+            "maxHeight": 300,
+            "labelProperty": "",
+            "labelFormat": "$none",
+            "valueProperty": "$file_count",
+            "filter": {
+              "conditions": []
+            },
+            "chartColorSet": [],
+            "chartLabelPosition": "top"
+          }
+        ],
+        "layoutType": "column"
+      },
+      "createAt": "2024-04-10T06:35:44.025Z",
+      "updateAt": "2024-04-10T06:38:22.417Z"
+    }
+  ]
+}

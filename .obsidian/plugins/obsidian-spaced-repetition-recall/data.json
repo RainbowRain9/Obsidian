@@ -52,16 +52,16 @@
     "multilineReversedCardSeparator": "??",
     "editLaterTag": "#edit-later",
     "intervalShowHide": true,
-    "enableNoteReviewPaneOnStartup": true,
+    "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
       "#review"
     ],
     "noteFoldersToIgnore": [],
     "openRandomNote": false,
-    "autoNextNote": false,
+    "autoNextNote": true,
     "reviewResponseFloatBar": true,
     "reviewingNoteDirectly": false,
-    "disableFileMenuReviewOptions": false,
+    "disableFileMenuReviewOptions": true,
     "maxNDaysNotesReviewQueue": 365,
     "initiallyExpandAllSubdecksInTree": true,
     "baseEase": 250,
@@ -104,7 +104,7 @@
     },
     "previousRelease": "1.10.1.11"
   },
-  "buryDate": "2023-11-28",
+  "buryDate": "2024-04-08",
   "buryList": [],
   "historyDeck": "word"
 }

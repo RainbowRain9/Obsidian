@@ -5,9 +5,10 @@ title: 找回知识图谱的力量：Lattics——易用有效的笔记软件
 author: |
   Spike112
 dtype: 软件
-state: false
+state: true
 date: 2023-11-30 12:00:51
-time: ""
+tags:
+  - 400兴趣类/电脑软件
 ---
 
 

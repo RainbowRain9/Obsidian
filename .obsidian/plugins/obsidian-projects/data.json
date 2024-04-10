@@ -53,7 +53,7 @@
                 "hide": true
               },
               "name": {
-                "width": 372
+                "width": 309
               },
               "dtype": {
                 "hide": false
@@ -73,17 +73,52 @@
             },
             "orderFields": [
               "name",
+              "tags",
               "state",
               "dtype",
               "source",
-              "tags",
               "host",
               "date",
-              "url",
               "author",
-              "date_published",
-              "date_saved",
-              "type"
+              "status",
+              "time"
+            ]
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "state",
+                "order": "asc",
+                "enabled": false
+              },
+              {
+                "field": "dtype",
+                "order": "asc",
+                "enabled": true
+              },
+              {
+                "field": "date",
+                "order": "desc",
+                "enabled": true
+              }
+            ]
+          },
+          "id": "80e75f01-b393-4e62-8815-3fcef9151f0d",
+          "name": "Table",
+          "type": "table"
+        },
+        {
+          "config": {
+            "coverField": "",
+            "fitStyle": "contain",
+            "includeFields": [
+              "tags"
             ]
           },
           "filter": {
@@ -101,31 +136,14 @@
               }
             ]
           },
-          "id": "80e75f01-b393-4e62-8815-3fcef9151f0d",
-          "name": "Table",
-          "type": "table"
-        },
-        {
-          "config": {
-            "coverField": "banner",
-            "fitStyle": "contain"
-          },
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "sort": {
-            "criteria": []
-          },
           "id": "7bfdcfb8-d74a-473c-9338-48c6ee9810db",
           "name": "Gallery",
           "type": "gallery"
         },
         {
           "config": {
-            "includeFields": []
+            "includeFields": [],
+            "groupByField": "source"
           },
           "filter": {
             "conditions": []
@@ -134,7 +152,13 @@
             "conditions": []
           },
           "sort": {
-            "criteria": []
+            "criteria": [
+              {
+                "field": "date",
+                "order": "desc",
+                "enabled": true
+              }
+            ]
           },
           "id": "5f8653e7-c8e8-4c67-b0d5-92d8b5f3945c",
           "name": "看板",

@@ -9,7 +9,7 @@ state: false
 time: 2023-12-01 12:38:44
 tags:
   - 300教育类/00-读书方法
-  - 400兴趣类/电脑软件/Obsidian
+  - 400兴趣类/Obsidian
 ---
 
 

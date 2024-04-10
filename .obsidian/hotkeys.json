@@ -418,14 +418,6 @@
       "key": "S"
     }
   ],
-  "quickadd:choice:7ec8e713-423a-464d-a839-aecddd1ba7a5": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "`"
-    }
-  ],
   "Enhanced-editing:biaoti0-text": [],
   "quickadd:choice:20fce1af-63a3-41fe-8144-f902da559b46": [
     {
@@ -498,14 +490,6 @@
       "key": "J"
     }
   ],
-  "obsidian-memos:show-thino-editor": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "Q"
-    }
-  ],
   "dida-sync:sync-current-file": [
     {
       "modifiers": [
@@ -513,6 +497,39 @@
         "Mod"
       ],
       "key": "T"
+    }
+  ],
+  "quickadd:choice:2ceff9f5-dc42-47a4-b48e-e573f8034f94": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
+    }
+  ],
+  "quickadd:choice:4cb9b723-fced-4c04-9ae2-487bfd311b97": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "J"
+    }
+  ],
+  "obsidian-spaced-repetition-recall:srs-note-review-easy": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "`"
+    }
+  ],
+  "obsidian-spaced-repetition-recall:review-view": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "N"
     }
   ]
 }

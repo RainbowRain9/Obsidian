@@ -3,14 +3,13 @@ time: 2023-11-12T23:56:00
 dtype: Project
 area: Area-Obsidian
 status: 进行中
-banner:
-  - https://source.unsplash.com/900x1600/?nature
+banner: https://source.unsplash.com/900x1600/?nature
 mindmap-plugin: basic
 type: 插件
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
+  - 400兴趣类/Obsidian/Plugin
 totalcount: 
-progress: 
+progress: 26%
 due: 
 aliases:
 ---

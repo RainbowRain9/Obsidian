@@ -5,14 +5,12 @@ dtype: 插件
 title: AnyBlock 插件系列教程之 --4_ 更多处理器（装饰处理器）
 date: 2023-11-12 21:41:24
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin
 source: Pkmer
 type: 插件
 banner:
   - /img/pkmer-avatar.png
 banner_icon: 🔖
-time: ""
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

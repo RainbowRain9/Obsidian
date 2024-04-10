@@ -8,8 +8,8 @@ author: |
 source: 微信公众号
 dtype: 教程
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/属性
-state: false
+  - 400兴趣类/Obsidian/教程/属性
+state: true
 date: 2023-12-07 13:00:21
 ---
 

@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：Latex suite 通过片段、文本扩展和编辑器增强功能
 date: 2023-11-12 20:43:39
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner: 
+banner:
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

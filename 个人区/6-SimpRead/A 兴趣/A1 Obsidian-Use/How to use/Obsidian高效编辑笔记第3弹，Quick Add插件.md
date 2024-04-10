@@ -5,9 +5,10 @@ title: |
   Obsidian高效编辑笔记第3弹，Quick Add插件
 author: |
   拉登Dony
-source: 
-dtype: 
-tags: 
+source: 微信公众号
+dtype: 教程
+tags:
+  - 400兴趣类/Obsidian/Plugin/QuickAdd
 state: false
 date: 2023-12-20 14:39:22
 ---

@@ -35,6 +35,40 @@
       "openFileInMode": "default"
     },
     {
+      "id": "4cb9b723-fced-4c04-9ae2-487bfd311b97",
+      "name": "🏳️‍🌈金句",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "个人区/1-生活/日记/{{DATE:YYYY-MM-DD_dddd}}.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "个人区/_Templates/tp/日记模板.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "\n> [!quote|notitle] \n> {{VALUE:你的感触}} #金句卡 ^{{DATE:YYYYMMDDHHmmss}}\n\n<font color='#6e6e6e' size=2> {{DATE:YYYY-MM-DD HH:mm:ss}} </font>\n\n---"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "## 🏳️‍🌈金句",
+        "insertAtEnd": true,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
       "id": "d3cd2aee-5994-469a-9dd5-ccf72268794f",
       "name": "📔 快加文件",
       "type": "Multi",
@@ -82,7 +116,8 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "学习区/01-高等数学/问题库"
+              "学习区/01-高等数学/问题库",
+              "学习区/03-大学物理/问答题"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -310,7 +345,7 @@
           "fileExistsMode": "Nothing"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "5eff06bf-898f-44d8-8491-943bef5b63b3",
@@ -659,7 +694,7 @@
           "openFileInMode": "default"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "a771c676-a100-4457-8772-f22f32a0ad0a",
@@ -804,7 +839,7 @@
           "openFileInMode": "default"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "658788e0-1106-40ba-be00-302dfbdfe70e",
@@ -848,7 +883,7 @@
           "macroId": "11957120-d6e0-4e3c-8fb5-4d6c856a7931"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "cd0405e7-6489-4e6a-beb1-07dac8f9a188",

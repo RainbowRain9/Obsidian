@@ -17,7 +17,7 @@
                   "type": "markdown",
                   "state": {
                     "file": "🏡Home.md",
-                    "mode": "source",
+                    "mode": "preview",
                     "source": false
                   },
                   "pinned": true
@@ -34,19 +34,28 @@
                 }
               },
               {
-                "id": "e59f5be4576a3351",
+                "id": "46d4c366184202c2",
                 "type": "leaf",
+                "pinned": true,
                 "state": {
-                  "type": "markdown",
+                  "type": "obsidian-projects",
+                  "state": {},
+                  "pinned": true
+                }
+              },
+              {
+                "id": "7cafc8002a2cb85a",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "surfing-view",
                   "state": {
-                    "file": "个人区/1-生活/日记/2024-03-17_星期日.md",
-                    "mode": "source",
-                    "source": false
-                  }
+                    "url": "https://www.ticktick.com/webapp/#q/all/tasks/660eb0149b520e73ffefa368"
+                  },
+                  "pinned": true
                 }
               }
-            ],
-            "currentTab": 2
+            ]
           }
         ],
         "direction": "vertical"
@@ -58,7 +67,6 @@
           {
             "id": "0aeb886c48fcaa26",
             "type": "tabs",
-            "dimension": 59.096774193548384,
             "children": [
               {
                 "id": "3a6ee1ee9eaa7a9d",
@@ -71,12 +79,20 @@
                 }
               },
               {
+                "id": "e042589813d6689a",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
                 "id": "a86ce6b692d1f694",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#教育类/01-高等数学",
+                    "query": "[\"status\"]",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -86,45 +102,10 @@
                 }
               },
               {
-                "id": "1ce830c13bbcb28b",
+                "id": "7248bb0e86973edd",
                 "type": "leaf",
                 "state": {
-                  "type": "langr-search-panel",
-                  "state": {}
-                }
-              }
-            ]
-          },
-          {
-            "id": "9922ff6704622350",
-            "type": "tabs",
-            "dimension": 40.903225806451616,
-            "children": [
-              {
-                "id": "e042589813d6689a",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              },
-              {
-                "id": "5c84675ecc134f4f",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "🏡Home.md",
-                    "mode": "preview",
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "597877d9b5f98eb1",
-                "type": "leaf",
-                "state": {
-                  "type": "bookmarks",
+                  "type": "calendar",
                   "state": {}
                 }
               }
@@ -132,7 +113,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 225.5
+        "width": 201.5
       },
       "right": {
         "id": "34fb4efa27cf970d",
@@ -141,7 +122,7 @@
           {
             "id": "72a4b91604aed60d",
             "type": "tabs",
-            "dimension": 54.83870967741936,
+            "dimension": 69.40104166666666,
             "children": [
               {
                 "id": "6f4659d6168a56bc",
@@ -149,19 +130,17 @@
                 "state": {
                   "type": "tag",
                   "state": {
-                    "sortOrder": "alphabetical",
+                    "sortOrder": "frequency",
                     "useHierarchy": true
                   }
                 }
               },
               {
-                "id": "ad2c152b86e66dd6",
+                "id": "b7f62067e71f949d",
                 "type": "leaf",
                 "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "个人区/1-生活/日记/2024-03-17_星期日.md"
-                  }
+                  "type": "quiet-outline",
+                  "state": {}
                 }
               },
               {
@@ -177,7 +156,17 @@
                 }
               },
               {
-                "id": "0aad721c29c567b0",
+                "id": "a6687704af4f2030",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "🏡Home.md"
+                  }
+                }
+              },
+              {
+                "id": "b27fc8bb8f8f7594",
                 "type": "leaf",
                 "state": {
                   "type": "timeline",
@@ -185,47 +174,45 @@
                 }
               }
             ],
-            "currentTab": 3
+            "currentTab": 1
           },
           {
-            "id": "9c0c74bfc58a684f",
+            "id": "eb2c99a0e4c1d0e3",
             "type": "tabs",
-            "dimension": 45.16129032258064,
+            "dimension": 30.598958333333332,
             "children": [
               {
-                "id": "7248bb0e86973edd",
+                "id": "d5875a4ebf9ee3f8",
                 "type": "leaf",
                 "state": {
-                  "type": "calendar",
-                  "state": {}
-                }
-              },
-              {
-                "id": "d8b462f2068c19b8",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
+                  "type": "localgraph",
                   "state": {
-                    "file": "个人区/1-生活/日记/2024-03-17_星期日.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "3bc5c65339e6d6c2",
-                "type": "leaf",
-                "state": {
-                  "type": "outgoing-link",
-                  "state": {
-                    "file": "个人区/1-生活/日记/2024-03-17_星期日.md",
-                    "linksCollapsed": true,
-                    "unlinkedCollapsed": true
+                    "file": "🏡Home.md",
+                    "options": {
+                      "collapse-filter": false,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": true,
+                      "showTags": true,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": false,
+                      "colorGroups": [],
+                      "collapse-display": false,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": false,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.5087618855792589,
+                      "close": true
+                    }
                   }
                 }
               },
@@ -234,14 +221,6 @@
                 "type": "leaf",
                 "state": {
                   "type": "QUICKSHARE_SIDE_VIEW",
-                  "state": {}
-                }
-              },
-              {
-                "id": "bbafbe3ecd61c96b",
-                "type": "leaf",
-                "state": {
-                  "type": "review-queue-list-view",
                   "state": {}
                 }
               }
@@ -255,12 +234,12 @@
         "hiddenItems": {
           "random-note:开始漫游笔记": false,
           "canvas:新建白板": false,
+          "graph:查看关系图谱": false,
           "markdown-importer:打开 Markdown 格式转换器": true,
           "audio-recorder:开始/结束录音": true,
           "workspaces:管理工作区布局": true,
           "switcher:打开快速切换": true,
-          "graph:查看关系图谱": false,
-          "templater-obsidian:Templater": false,
+          "templater-obsidian:Templater": true,
           "daily-notes:打开/创建今天的日记": true,
           "templates:插入模板": true,
           "command-palette:打开命令面板": true,
@@ -268,19 +247,19 @@
           "oz-clear-unused-images:Clear Unused Images": false,
           "obsidian-language-learner:打开查词面板": false,
           "obsidian-language-learner:打开新词面板": false,
+          "digitalgarden:Digital Garden Publication Center": false,
           "obsidian-language-learner:打开统计": false,
           "obsidian-language-learner:单词列表": false,
           "obsidian-spaced-repetition-recall:复习卡片": false,
           "obsidian-regex-pipeline:Regex Rulesets": false,
           "flashcards-obsidian:Generate flashcards": false,
           "obsidian-day-planner:Timeline": false,
-          "obsidian42-brat:BRAT": false,
+          "obsidian42-brat:BRAT": true,
           "remotely-save:Remotely Save": false,
           "obsidian-memos:Thino": false,
-          "digitalgarden:Digital Garden Publication Center": false,
           "obsidian-weread-plugin:同步微信读书笔记": false,
           "obsidian-omnivore:Omnivore": false,
-          "fuzzy-chinese-pinyin:FuzzySearch": false,
+          "fuzzy-chinese-pinyin:FuzzySearch": true,
           "cloze:显/隐所有填空": false,
           "extract-highlights-plugin:Extract Highlights": false,
           "big-calendar:Big Calendar": false,
@@ -290,13 +269,12 @@
           "omnisearch:Omnisearch": false
         }
       },
-      "active": "3a6ee1ee9eaa7a9d",
+      "active": "b7f62067e71f949d",
+      "mtime": "2024-04-08T21:01:24+08:00",
       "workspaces-plus:settings-v1": {
         "explorerFoldState": [
           "个人区",
-          "学习区",
-          "学习区/03-大学物理",
-          "学习区/03-大学物理/知识库"
+          "学习区"
         ]
       }
     },

@@ -9,9 +9,9 @@ dtype: 教程
 state: false
 date: 2023-12-04 14:13:54
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/实践
+  - 400兴趣类/Obsidian/教程/实践
   - 300教育类/00-读书方法
-time: ""
+  - todo
 ---
 
 

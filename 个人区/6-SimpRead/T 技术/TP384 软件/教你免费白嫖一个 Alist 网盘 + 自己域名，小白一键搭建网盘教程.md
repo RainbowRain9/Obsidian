@@ -2,12 +2,13 @@
 url: https://www.coolapk.com/feed/44723268?shareKey=MGE0ZjAzNjdiZjRjNjUzMmFiOGU~&shareUid=15345671&shareFrom=com.coolapk.market_13.3.5
 title: 教你免费白嫖一个 Alist 网盘 + 自己域名，小白一键搭建网盘教程 来自 进恩影音工作室 - 酷安
 date: 2023-11-11 19:32:00
-tag: 
-banner: "https://images.unsplash.com/photo-1698434156088-a80e7bcdd198?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc1ODd8MHwxfHJhbmRvbXx8fHx8fHwxfHwxNjk5NzAyMzE4fA&ixlib=rb-4.0.3&q=85&fit=crop&w=586&max-h=540"
+tags:
+  - 400兴趣类/网址工具
+banner:
+  - https://images.unsplash.com/photo-1698434156088-a80e7bcdd198?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc1ODd8MHwxfHJhbmRvbXx8fHx8fHwxfHwxNjk5NzAyMzE4fA&ixlib=rb-4.0.3&q=85&fit=crop&w=586&max-h=540
 banner_icon: 🔖
 dtype: 教程
-state: false
-time: ""
+state: true
 ---
 ![](https://raw.githubusercontent.com/RainbowRain9/PicGo/master/202311120240975.jpg)
 

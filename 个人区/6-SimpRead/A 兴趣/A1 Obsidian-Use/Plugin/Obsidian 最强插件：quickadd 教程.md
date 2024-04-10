@@ -3,13 +3,12 @@ url: https://mp.weixin.qq.com/s?__biz=MzI4NjIwOTg3Nw==&mid=2650157279&idx=1&sn=b
 title: Obsidian 最强插件：quickadd 教程
 date: 2023-11-11 01:34:39
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/QuickAdd
-  - 400兴趣类/电脑软件/Obsidian/Plugin/编辑/dataview
+  - 400兴趣类/Obsidian/Plugin/QuickAdd
+  - 400兴趣类/Obsidian/Plugin/编辑/dataview
 banner:
   - http://mmbiz.qpic.cn/mmbiz_jpg/TDibWgTpJibRXPuvfOJqVYK2DSwSQIqcQ2TK6nQy2paNF5hGQuVMLua9bUX2YzlicPM1DWS5bc9cFrNmeDW6dscNA/0?wx_fmt=jpeg
 banner_icon: 🔖
 state: false
-time: ""
 ---
 嗨大家！
 

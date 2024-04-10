@@ -3,11 +3,11 @@ id: bcf986e3-2bdc-4909-b20f-f81e13a2ce0f
 url: https://forum-zh.obsidian.md/t/topic/26298
 title: |
   单插件+CSS 管理连续空格，2 空格、4 空格及以上 - 经验分享 - Obsidian 中文论坛
-source: 
+source:
 dtype: 教程
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程
-state: false
+  - 400兴趣类/Obsidian/教程
+state: true
 date: 2024-03-16 14:18:12
 ---
 

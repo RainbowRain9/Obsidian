@@ -8,8 +8,7 @@ dtype: 插件
 state: true
 date: 2023-11-30 23:04:44
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/同步
-time: ""
+  - 400兴趣类/Obsidian/Plugin/同步
 ---
 
 

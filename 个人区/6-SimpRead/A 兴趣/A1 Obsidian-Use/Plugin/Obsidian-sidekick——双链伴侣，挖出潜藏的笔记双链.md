@@ -3,16 +3,14 @@ url: https://mp.weixin.qq.com/s?__biz=Mzg5Njk3MDUyMQ==&mid=2247487399&idx=1&sn=a
 title: Obsidian _ Ob 双链伴侣，挖出潜藏的笔记双链
 date: 2023-11-26 14:51:02
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: mp.weixin.qq.com
+  - 400兴趣类/Obsidian/Plugin
 source: 微信公众号
 banner:
   - http://mmbiz.qpic.cn/mmbiz_jpg/PR2BLDgtAWRQAkHsVnrQojUhtibuBa7CJXxkeicic9K667sRIL1L0kNuI8wgMKmeTzMKHBCb0Lr5sKRsriaXfibfic9w/0?wx_fmt=jpeg
 banner_icon: 🔖
 dtype:
   - 插件
-state: false
-time: ""
+state: true
 ---
 大家好！我是 BCS~
 

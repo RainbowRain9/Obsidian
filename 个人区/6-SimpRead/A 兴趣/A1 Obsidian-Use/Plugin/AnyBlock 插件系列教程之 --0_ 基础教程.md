@@ -5,13 +5,11 @@ dtype: 插件
 title: AnyBlock 插件系列教程之 --0_ 基础教程
 date: 2023-11-12 21:39:36
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/编辑/AnyBlock
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin/编辑/AnyBlock
 source: Pkmer
 type: 插件
-banner: 
-banner_icon: 
-time: ""
+banner:
+banner_icon:
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：code tab 还能这么 “玩”
 date: 2023-11-12 21:01:20
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/编辑/codetab
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin/编辑/codetab
 source: Pkmer
 banner: /img/pkmer-avatar.png
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

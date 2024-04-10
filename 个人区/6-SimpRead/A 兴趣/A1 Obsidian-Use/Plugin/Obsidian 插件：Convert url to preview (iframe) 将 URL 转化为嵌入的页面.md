@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：Convert url to preview (iframe) 将 URL 转化为嵌入的页面
 date: 2023-11-13 00:46:48
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner: 
+banner:
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 obsidian 社区插件
 

@@ -5,11 +5,10 @@ alias:
 created-date: 2022-09-21T18:43:54+0800
 banner: "https://cdn.sspai.com/2021/11/17/365ff29b5ab274691d99b1417912aade.png "
 banner_icon: 🔖
-tag: 
+tag:
 idx: 1
 dtype: Simpread
-state: false
-time: ""
+state: true
 ---
 
 # 本地存储 + 线上获取：我的个人数据库建构路径

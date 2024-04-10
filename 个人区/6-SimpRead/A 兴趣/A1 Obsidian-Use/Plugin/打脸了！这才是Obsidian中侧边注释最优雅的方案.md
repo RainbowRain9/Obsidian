@@ -5,10 +5,11 @@ title: |
   打脸了！这才是Obsidian中侧边注释最优雅的方案
 author: |
   Huajin
-source: 
-dtype: 
-tags: 
-state: false
+source: 微信公众号
+dtype: 插件
+tags:
+  - 400兴趣类/Obsidian/Plugin/编辑
+state: true
 date: 2024-01-30 03:16:49
 ---
 

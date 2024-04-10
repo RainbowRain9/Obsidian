@@ -3,10 +3,9 @@ id: 5841670b-0ede-416b-840f-d58b9b2eb918
 url: https://www.zhihu.com/question/356732842/answer/2995919432
 title: |
   为什么b站上有那么多学习视频，大家还要购买考研网课呢？ - 知乎
-dtype: 
-state: false
+dtype: 方法
+state: true
 date: 2023-11-29 15:04:34
-time: ""
 ---
 
 

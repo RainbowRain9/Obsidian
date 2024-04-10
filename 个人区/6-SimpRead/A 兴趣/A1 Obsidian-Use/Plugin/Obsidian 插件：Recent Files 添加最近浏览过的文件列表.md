@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：Recent Files 添加最近浏览过的文件列表
 date: 2023-11-13 00:28:52
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner: 
+banner:
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 
@@ -73,5 +71,3 @@ sr-annote { all: unset; }
 
 1.  最近文件列表，只有在该插件启用后，浏览过的文档才会被记录
 2.  该插件不支持记录，白板（canvas）功能生成的文件
-
-chronologyfile-tree-alternativehidden-folder-obsidiannovel-word-countobsidian-collapse-all-pluginobsidian-galleryobsidian-show-file-pathobsidian-tagfolderobsidian-trash-explorerObsidian 社区插件 pane-reliefquick-explorerrecent-files-obsidian

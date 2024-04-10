@@ -1,10 +1,9 @@
 ---
 id: 113a86a5-2b9f-41a4-9c8c-a88913f57886
-state: false
+state: true
 dtype: 教程
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/实践
-time: ""
+  - 400兴趣类/Obsidian/教程/实践
 ---
 
 # Obsidian极简日记配置教程

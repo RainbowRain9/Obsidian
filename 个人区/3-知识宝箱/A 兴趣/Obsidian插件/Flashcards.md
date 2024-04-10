@@ -8,7 +8,7 @@ banner:
 mindmap-plugin: basic
 type: 插件
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
+  - 400兴趣类/Obsidian/Plugin
 totalcount: 
 progress: 
 due: 

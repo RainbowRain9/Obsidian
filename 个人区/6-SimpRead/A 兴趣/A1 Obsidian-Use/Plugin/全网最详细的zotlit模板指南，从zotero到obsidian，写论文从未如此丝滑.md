@@ -8,8 +8,8 @@ author: |
 source: 微信公众号
 dtype: 教程
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-state: false
+  - 400兴趣类/Obsidian/Plugin
+state: true
 date: 2023-12-13 08:37:28
 ---
 

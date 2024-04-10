@@ -1,11 +1,10 @@
 ---
 id: 6d4af581-4b47-4bae-bbe6-73b8b4465e7a
 omnivore_error: There was an error parsing the front matter template. See console for details.
-state: false
+state: true
 dtype: 教程
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/同步
-time: ""
+  - 400兴趣类/Obsidian/教程/同步
 ---
 
 # (我使用的同步方案)最佳实践：obsidian同步方案(三)第三方同步之网盘OneDrive

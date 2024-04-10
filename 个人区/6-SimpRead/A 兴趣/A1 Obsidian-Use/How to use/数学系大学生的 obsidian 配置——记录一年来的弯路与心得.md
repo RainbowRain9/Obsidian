@@ -3,13 +3,12 @@ url: https://zhuanlan.zhihu.com/p/657343154?utm_campaign=&utm_medium=social&utm_
 title: 数学系大学生的 obsidian 配置——记录一年来的弯路与心得
 date: 2023-11-10 09:34:53
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/实践
+  - 400兴趣类/Obsidian/教程/实践
 banner:
   - https://picx.zhimg.com/v2-5f9e74c67807fd71977204a8822d572c_720w.jpg?source=172ae18b
 banner_icon: 🔖
-state: false
+state: true
 dtype: 教程
-time: ""
 ---
 
 ## obsidian 介绍

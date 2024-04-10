@@ -33,6 +33,12 @@
       "icon": "lucide-pin",
       "name": "解锁/锁定",
       "mode": "any"
+    },
+    {
+      "id": "workspace:export-pdf",
+      "icon": "arrow-up-circle",
+      "name": "导出为 PDF",
+      "mode": "any"
     }
   ],
   "pageHeader": [
@@ -40,13 +46,6 @@
       "id": "random-note",
       "icon": "dice-glyph",
       "name": "漫游笔记: 开始漫游笔记",
-      "mode": "7712896608861b4d",
-      "color": "#000000"
-    },
-    {
-      "id": "extract-highlights-plugin:shortcut-extract-highlights",
-      "icon": "anchor",
-      "name": "Extract Highlights: Shortcut for extracting highlights",
       "mode": "7712896608861b4d",
       "color": "#000000"
     },
@@ -100,7 +99,10 @@
   "explorer": [],
   "hide": {
     "statusbar": [
-      "cmenu-plugin"
+      "cmenu-plugin",
+      "flashcards-obsidian",
+      "obsidian-day-planner",
+      "obsidian-spaced-repetition-recall"
     ],
     "leftRibbon": [
       "开始漫游笔记",

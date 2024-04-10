@@ -3,14 +3,12 @@ url: https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92
 title: Obsidian 插件：Any Block 一个简易而又强大的块编辑器
 date: 2023-11-12 21:35:17
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/编辑/AnyBlock
-host: pkmer.cn
+  - 400兴趣类/Obsidian/Plugin/编辑/AnyBlock
 source: Pkmer
-banner: 
+banner:
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

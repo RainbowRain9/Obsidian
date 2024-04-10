@@ -4,11 +4,10 @@ title: obsidian 插件之 dataview 入门
 date: 2023-11-11 22:11:22
 source: 微信公众号
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/编辑/dataview
+  - 400兴趣类/Obsidian/Plugin/编辑/dataview
 banner: http://mmbiz.qpic.cn/mmbiz_jpg/TDibWgTpJibRXWeXmAA8gicMOo32IPdT2zb8TTjTibNxFsFQdNST0KicQanTTRia5CHZln5jsjreZ70dl7qjyshD8JFg/0?wx_fmt=jpeg
 banner_icon: 🔖
 state: false
-time: ""
 ---
 ## **_写在前面_**
 

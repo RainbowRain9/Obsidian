@@ -3,12 +3,11 @@ url: https://github.com/reuseman/flashcards-obsidian/wiki
 title: "[[Obsidian-Anki的用法]]"
 date: 2023-11-10 12:54:28
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/同步/Anki
+  - 400兴趣类/Obsidian/Plugin/同步/Anki
 banner:
   - https://opengraph.githubassets.com/a1fe4171eb88711478981cb73a84cdc0cb4409a7186eaf24d7e64f743defd854/reuseman/flashcards-obsidian
 banner_icon: 🔖
 state: true
-time: ""
 ---
 
 - ## [目录](#table-of-contents)

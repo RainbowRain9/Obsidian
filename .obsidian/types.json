@@ -8,7 +8,7 @@
     "性别": "text",
     "state": "checkbox",
     "source": "text",
-    "banner": "multitext",
+    "banner": "text",
     "dtype": "text",
     "status": "text",
     "UID": "datetime",

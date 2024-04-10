@@ -2,7 +2,6 @@
 id: b402866b-2b35-4f16-be30-2cf2039bfa09
 omnivore_error: There was an error parsing the front matter template. See console for details.
 state: false
-time: ""
 ---
 
 # 我用 4 个 All-in-One 工具，管理好了自己的工作和生活

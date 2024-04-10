@@ -6,11 +6,10 @@ title: |
 author: |
   余月鱼鸽
 dtype: 教程
-state: false
+state: true
 date: 2023-12-02 17:45:59
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/实践
-time: ""
+  - 400兴趣类/Obsidian/教程/实践
 ---
 
 

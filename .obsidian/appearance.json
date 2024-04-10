@@ -1,6 +1,6 @@
 {
   "accentColor": "#7abdff",
-  "cssTheme": "Border",
+  "cssTheme": "AnuPpuccin",
   "textFontFamily": "仓耳今楷05,仓耳兰楷,Maple Mono NF",
   "interfaceFontFamily": "仓耳兰楷",
   "theme": "obsidian",
@@ -15,8 +15,10 @@
     "【日记】timeline",
     "【自定义】多彩进度条",
     "【Linkcard】",
-    "【日记】periodic日历"
+    "【日记】periodic日历",
+    "custom-admonitions.c9c6cb"
   ],
   "baseFontSize": 20,
-  "translucency": false
+  "translucency": false,
+  "monospaceFontFamily": "Maple Mono NF"
 }

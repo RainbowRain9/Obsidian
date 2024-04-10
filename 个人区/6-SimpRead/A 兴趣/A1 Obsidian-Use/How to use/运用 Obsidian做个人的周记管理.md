@@ -6,12 +6,11 @@ title: |
 author: |
   馥萌
 dtype: 教程
-state: false
+state: true
 date: 2023-11-29 17:36:50
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/实践
+  - 400兴趣类/Obsidian/教程/实践
   - 300教育类/00-读书方法
-time: ""
 ---
 
 

@@ -5,10 +5,12 @@ title: |
   强烈推荐！一款windows管理手机的工具
 author: |
   大侠之运维
-dtype: 
-state: false
+dtype: 软件
+state: true
 date: 2023-12-03 13:45:38
-time: ""
+tags:
+  - 400兴趣类/手机应用
+  - 400兴趣类/电脑软件
 ---
 
 

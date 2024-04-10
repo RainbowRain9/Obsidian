@@ -8,6 +8,8 @@ author: |
 source: 微信公众号
 dtype: 插件
 tags:
+  - 400兴趣类/Obsidian/教程/美化
+  - 400兴趣类/Obsidian/Plugin
 state: true
 date: 2024-03-16 14:46:28
 ---

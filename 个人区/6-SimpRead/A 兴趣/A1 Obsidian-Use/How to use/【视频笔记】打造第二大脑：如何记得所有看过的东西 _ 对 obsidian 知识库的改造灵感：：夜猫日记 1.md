@@ -3,13 +3,13 @@ url: https://lillianwho.com/posts/video-share-building-a-second-brain/
 title: 【[[视频笔记]]】打造第二大脑：如何记得所有看过的东西 _ 对 [[obsidian]] 知识库的改造灵感：：夜猫日记
 date: 2023-11-12 01:12:44
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/实践
+  - 400兴趣类/Obsidian/教程/实践
   - 300教育类/00-读书方法
 banner:
   - https://images.unsplash.com/photo-1695456165154-5dcf32bd8c0b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc1ODd8MHwxfHJhbmRvbXx8fHx8fHwxfHwxNjk5NzIyNzYyfA&ixlib=rb-4.0.3&q=85&fit=crop&w=586&max-h=540
 banner_icon: 🔖
 dtype: 教程
-time: ""
+state: true
 ---
 这是一个视频笔记，视频来自台湾的 Youtuber 姜饼资。
 

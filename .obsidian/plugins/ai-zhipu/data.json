@@ -1,0 +1,7 @@
+{
+  "promptFileName": "提示词模板",
+  "apiKey": "7756486edaf14805c866415127746453.ZNkxXAPb90NMQO9X",
+  "baseURL": "https://open.bigmodel.cn/api/paas/v4/",
+  "tokenExpireInMinutes": 60,
+  "rootFolder": "Aizhipu"
+}

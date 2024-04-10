@@ -6,11 +6,10 @@ title: |
 author: |
   ProudBenzene
 dtype: 教程
-state: false
+state: true
 date: 2023-12-04 14:05:44
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/同步
-time: ""
+  - 400兴趣类/Obsidian/教程/同步
 ---
 
 

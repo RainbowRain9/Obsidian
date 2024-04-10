@@ -7,8 +7,9 @@ author: 大侠之运维
 date_saved: 2023-11-26 17:03:35
 date: 2023-11-14 07:00:00
 dtype: 软件
-state: false
-time: ""
+state: true
+tags:
+  - 400兴趣类/电脑软件
 ---
 
 # 推荐一款好用的工具，强大！

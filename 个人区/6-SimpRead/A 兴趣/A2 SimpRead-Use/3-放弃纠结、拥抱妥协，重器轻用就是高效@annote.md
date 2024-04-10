@@ -5,11 +5,10 @@ alias:
 created-date: 2022-09-24T16:36:20+0800
 banner: "https://cdn.sspai.com/2022/02/21/88f0c0c3d31e13ff8e8c004893de5394.png "
 banner_icon: 🔖
-tag: 
+tag:
 idx: 3
 dtype: Simpread
-state: false
-time: ""
+state: true
 ---
 
 # 放弃纠结、拥抱妥协，重器轻用就是高效

@@ -38,8 +38,6 @@
   "obsidian-omnivore",
   "obsidian-quickshare",
   "various-complements",
-  "optimize-canvas-connections",
-  "digitalgarden",
   "obsidian-memos",
   "editing-toolbar",
   "epub-importer",
@@ -47,5 +45,12 @@
   "fuzzy-chinese-pinyin",
   "contribution-graph",
   "image2latex",
-  "dida-sync"
+  "dida-sync",
+  "quick-explorer",
+  "obsidian-pandoc",
+  "optimize-canvas-connections",
+  "canvas-presentation",
+  "canvas-mindmap",
+  "mysnippets-plugin",
+  "contribution-widget"
 ]

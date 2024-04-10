@@ -6,11 +6,10 @@ title: |
 author: |
   维客笔记
 dtype: 插件
-state: false
+state: true
 date: 2023-12-03 13:14:22
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/同步
-time: ""
+  - 400兴趣类/Obsidian/Plugin/同步
 ---
 
 

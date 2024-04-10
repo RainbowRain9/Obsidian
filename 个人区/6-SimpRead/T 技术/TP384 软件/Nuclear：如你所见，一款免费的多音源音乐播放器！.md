@@ -6,9 +6,10 @@ title: |
 author: |
   诺多
 dtype: 软件
-state: false
+state: true
 date: 2023-11-30 23:03:23
-time: ""
+tags:
+  - 400兴趣类/电脑软件
 ---
 # Nuclear：如你所见，一款免费的多音源音乐播放器！
 #Omnivore

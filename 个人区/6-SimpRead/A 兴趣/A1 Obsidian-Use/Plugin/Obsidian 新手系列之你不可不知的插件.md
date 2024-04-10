@@ -3,14 +3,12 @@ url: https://mp.weixin.qq.com/s?__biz=MzI4NjIwOTg3Nw==&mid=2650157119&idx=1&sn=9
 title: Obsidian 新手系列之你不可不知的插件
 date: 2023-11-12 15:10:55
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-host: mp.weixin.qq.com
+  - 400兴趣类/Obsidian/Plugin
 source: 微信公众号
 banner: http://mmbiz.qpic.cn/mmbiz_png/TDibWgTpJibRUqiac9RoNZZ1kUpMx2y7gveibWtXTfneXRFmesBr7eyXD1zhdpCJNnVuFEibrOUibicdQsLo0F2kXOzVw/0?wx_fmt=png
 banner_icon: 🔖
 dtype: 插件
-state: false
-time: ""
+state: true
 ---
   
 

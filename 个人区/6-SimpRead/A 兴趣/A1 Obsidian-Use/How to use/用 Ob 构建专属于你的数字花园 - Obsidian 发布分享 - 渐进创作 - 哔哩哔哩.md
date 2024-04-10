@@ -6,11 +6,10 @@ title: |
 author: |
   风月メ
 dtype: 教程
-state: false
+state: true
 date: 2023-11-22 19:26:25
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/同步
-time: ""
+  - 400兴趣类/Obsidian/教程/同步
 ---
 
 

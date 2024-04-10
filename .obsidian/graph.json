@@ -1,7 +1,7 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": true,
@@ -18,7 +18,7 @@
       "query": "tag:#review  ",
       "color": {
         "a": 1,
-        "rgb": 11392604
+        "rgb": 6063574
       }
     },
     {

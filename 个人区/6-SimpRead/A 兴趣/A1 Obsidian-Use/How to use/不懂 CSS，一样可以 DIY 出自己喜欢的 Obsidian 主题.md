@@ -3,13 +3,12 @@ url: https://mp.weixin.qq.com/s?__biz=Mzg5Njk3MDUyMQ==&mid=2247487451&idx=1&sn=9
 title: 不懂 CSS，一样可以 DIY 出自己喜欢的 Obsidian 主题
 date: 2023-11-12 00:18:22
 tags:
-  - 400兴趣类/电脑软件/Obsidian/教程/美化
+  - 400兴趣类/Obsidian/教程/美化
 banner:
   - https://mmbiz.qpic.cn/mmbiz_jpg/PR2BLDgtAWRyiaZyv3LTGJ1y16FJ3E7Z5106SiaxmvqibhFSmPfrXrAVJ4faaYLGyycp0KvDwc4f67sf66kJm2nWg/0?wx_fmt=jpeg
 banner_icon: 🔖
-state: false
+state: true
 dtype: 教程
-time: ""
 ---
 大家好，我是来自 1037 号森林的 BCS！
 

@@ -8,9 +8,9 @@ author: |
 source: 微信公众号
 dtype: 插件
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin
-  - 400兴趣类/电脑软件/Obsidian/教程
-state: false
+  - 400兴趣类/Obsidian/Plugin
+  - 400兴趣类/Obsidian/教程
+state: true
 date: 2023-12-11 02:55:37
 ---
 

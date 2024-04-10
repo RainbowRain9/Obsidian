@@ -6,11 +6,10 @@ title: |
 author: |
   蹦跶的咖啡豆
 dtype: 插件
-state: false
+state: true
 date: 2023-12-05 12:02:18
 tags:
-  - 400兴趣类/电脑软件/Obsidian/Plugin/编辑
-time: ""
+  - 400兴趣类/Obsidian/Plugin/编辑
 ---
 
 
