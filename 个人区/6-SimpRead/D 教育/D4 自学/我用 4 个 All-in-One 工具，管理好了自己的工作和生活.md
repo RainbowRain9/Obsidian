@@ -1,6 +1,5 @@
 ---
 id: b402866b-2b35-4f16-be30-2cf2039bfa09
-omnivore_error: There was an error parsing the front matter template. See console for details.
 state: false
 ---
 

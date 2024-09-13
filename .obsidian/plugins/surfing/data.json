@@ -39,18 +39,6 @@
     ],
     "defaultFilterType": "menu"
   },
-  "treeData": [
-    {
-      "id": "7cafc8002a2cb85a",
-      "parent": 0,
-      "droppable": true,
-      "text": "所有 - TickTick",
-      "data": {
-        "fileType": "site",
-        "fileSize": "",
-        "icon": {}
-      }
-    }
-  ],
+  "treeData": [],
   "enableHtmlPreview": true
 }

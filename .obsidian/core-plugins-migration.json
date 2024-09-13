@@ -3,8 +3,8 @@
   "global-search": true,
   "switcher": true,
   "graph": true,
-  "backlink": false,
-  "outgoing-link": false,
+  "backlink": true,
+  "outgoing-link": true,
   "tag-pane": true,
   "page-preview": true,
   "daily-notes": true,
@@ -27,5 +27,5 @@
   "sync": false,
   "canvas": true,
   "properties": true,
-  "bookmarks": false
+  "bookmarks": true
 }

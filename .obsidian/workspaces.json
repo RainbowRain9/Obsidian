@@ -18,28 +18,26 @@
                   "state": {
                     "file": "🏡Home.md",
                     "mode": "preview",
+                    "backlinks": false,
                     "source": false
                   },
                   "pinned": true
                 }
               },
               {
-                "id": "9eaabc60dad4a7c9",
+                "id": "bd7ddb35fbd989f9",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
-                  "type": "thino_view",
-                  "state": {},
-                  "pinned": true
-                }
-              },
-              {
-                "id": "46d4c366184202c2",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "obsidian-projects",
-                  "state": {},
+                  "type": "search",
+                  "state": {
+                    "query": "上传图片",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": true,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
                   "pinned": true
                 }
               },
@@ -50,7 +48,7 @@
                 "state": {
                   "type": "surfing-view",
                   "state": {
-                    "url": "https://www.ticktick.com/webapp/#q/all/tasks/660eb0149b520e73ffefa368"
+                    "url": "https://www.ticktick.com/webapp/#q/all/kanban"
                   },
                   "pinned": true
                 }
@@ -87,25 +85,18 @@
                 }
               },
               {
-                "id": "a86ce6b692d1f694",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "[\"status\"]",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
                 "id": "7248bb0e86973edd",
                 "type": "leaf",
                 "state": {
                   "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "142f1bcac20f7ffb",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
                   "state": {}
                 }
               }
@@ -113,73 +104,16 @@
           }
         ],
         "direction": "horizontal",
-        "width": 201.5
+        "width": 200
       },
       "right": {
         "id": "34fb4efa27cf970d",
         "type": "split",
         "children": [
           {
-            "id": "72a4b91604aed60d",
+            "id": "d4a138574bae43c9",
             "type": "tabs",
-            "dimension": 69.40104166666666,
-            "children": [
-              {
-                "id": "6f4659d6168a56bc",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "b7f62067e71f949d",
-                "type": "leaf",
-                "state": {
-                  "type": "quiet-outline",
-                  "state": {}
-                }
-              },
-              {
-                "id": "c8f493acf1e3c447",
-                "type": "leaf",
-                "state": {
-                  "type": "all-properties",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "showSearch": false,
-                    "searchQuery": ""
-                  }
-                }
-              },
-              {
-                "id": "a6687704af4f2030",
-                "type": "leaf",
-                "state": {
-                  "type": "file-properties",
-                  "state": {
-                    "file": "🏡Home.md"
-                  }
-                }
-              },
-              {
-                "id": "b27fc8bb8f8f7594",
-                "type": "leaf",
-                "state": {
-                  "type": "timeline",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 1
-          },
-          {
-            "id": "eb2c99a0e4c1d0e3",
-            "type": "tabs",
-            "dimension": 30.598958333333332,
+            "dimension": 32.8125,
             "children": [
               {
                 "id": "d5875a4ebf9ee3f8",
@@ -210,7 +144,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.5087618855792589,
+                      "scale": 1.0000000000000022,
                       "close": true
                     }
                   }
@@ -223,6 +157,92 @@
                   "type": "QUICKSHARE_SIDE_VIEW",
                   "state": {}
                 }
+              },
+              {
+                "id": "9bd71ae87dadd5d5",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "🏡Home.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": false
+                  }
+                }
+              },
+              {
+                "id": "8a016bce3f412052",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "🏡Home.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": false
+                  }
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "72a4b91604aed60d",
+            "type": "tabs",
+            "dimension": 67.1875,
+            "children": [
+              {
+                "id": "b7f62067e71f949d",
+                "type": "leaf",
+                "state": {
+                  "type": "quiet-outline",
+                  "state": {}
+                }
+              },
+              {
+                "id": "6f4659d6168a56bc",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "c8f493acf1e3c447",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  }
+                }
+              },
+              {
+                "id": "a6687704af4f2030",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "🏡Home.md"
+                  }
+                }
+              },
+              {
+                "id": "84ab4fa7d9253665",
+                "type": "leaf",
+                "state": {
+                  "type": "timeline",
+                  "state": {}
+                }
               }
             ]
           }
@@ -232,13 +252,15 @@
       },
       "left-ribbon": {
         "hiddenItems": {
+          "obsidian-daily-notes-viewer:打开 Viewer": false,
+          "improved-random-note:Open improved random note": false,
+          "float-search:Search Obsidian In Modal": false,
           "random-note:开始漫游笔记": false,
           "canvas:新建白板": false,
           "graph:查看关系图谱": false,
           "markdown-importer:打开 Markdown 格式转换器": true,
           "audio-recorder:开始/结束录音": true,
           "workspaces:管理工作区布局": true,
-          "switcher:打开快速切换": true,
           "templater-obsidian:Templater": true,
           "daily-notes:打开/创建今天的日记": true,
           "templates:插入模板": true,
@@ -247,7 +269,6 @@
           "oz-clear-unused-images:Clear Unused Images": false,
           "obsidian-language-learner:打开查词面板": false,
           "obsidian-language-learner:打开新词面板": false,
-          "digitalgarden:Digital Garden Publication Center": false,
           "obsidian-language-learner:打开统计": false,
           "obsidian-language-learner:单词列表": false,
           "obsidian-spaced-repetition-recall:复习卡片": false,
@@ -266,15 +287,20 @@
           "media-extended:Open media": false,
           "obsidian-projects:Open projects": false,
           "surfing:surfing-bookmark-manager": false,
-          "omnisearch:Omnisearch": false
+          "omnisearch:Omnisearch": false,
+          "switcher:打开快速切换": false
         }
       },
-      "active": "b7f62067e71f949d",
-      "mtime": "2024-04-08T21:01:24+08:00",
+      "active": "02218b4749029dae",
+      "mtime": "2024-04-16T17:33:55+08:00",
       "workspaces-plus:settings-v1": {
         "explorerFoldState": [
           "个人区",
-          "学习区"
+          "个人区/1-生活",
+          "个人区/1-生活/日记",
+          "个人区/6-SimpRead",
+          "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use",
+          "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin"
         ]
       }
     },

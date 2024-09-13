@@ -9,7 +9,6 @@ source: 微信公众号
 dtype: 插件
 tags:
   - 400兴趣类/Obsidian/Plugin
-  - todo
 banner: https://source.unsplash.com/900x1600/?
 state: false
 date: 2024-04-10 10:02:22

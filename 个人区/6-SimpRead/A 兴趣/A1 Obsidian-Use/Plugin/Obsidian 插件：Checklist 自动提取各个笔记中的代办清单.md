@@ -5,24 +5,12 @@ date: 2023-11-12 22:03:58
 tags:
   - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner:
+banner: 
 banner_icon: 🔖
 dtype: 插件
 state: true
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
-
-obsidian 社区插件
-
-[AI](https://pkmer.cn/authors/ai)
-
-于  2023-09-05 14:15  发布
-
-  分享
-
-* * *
-
-sr-annote { all: unset; }
 
 ## 概述
 
@@ -68,7 +56,7 @@ sr-annote { all: unset; }
 
 **标签名称（Tag name）：** 默认的待办事项标签是 `#todo`，但可以根据需要进行更改。
 
-**显示已完成任务？（Show Completed?）：** 默认情况下，插件只会显示未完成的任务，并且当任务完成时，它们将从侧边栏中过滤出去。
+- [ ] **显示已完成任务？（Show Completed?）：** 默认情况下，插件只会显示未完成的任务，并且当任务完成时，它们将从侧边栏中过滤出去。 
 
 ![](https://raw.githubusercontent.com/delashum/obsidian-checklist-plugin/master/images/screenshot-show-completed.png)
 

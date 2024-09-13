@@ -1,5 +1,5 @@
 ---
-time: 2023-11-13T16:41:00
+created time: 2023-11-13T16:41:00
 dtype: Project
 area: Area-笔记方法
 status: 已完成
@@ -12,6 +12,7 @@ progress:
 due: 
 aliases: 
 dg-publish: true
+updated time: 2024-04-13 HH:mm:ss
 ---
 
 # 怎么用Obsidian学习

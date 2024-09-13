@@ -1,10 +1,11 @@
 ---
-time: 2024-01-10 16:05:06
 dtype: QA
 subject: 中国近代史纲要
-tags:
+tags: 
 cards-deck: 中国近代史纲要
 dg-publish: true
+updated time: 2024-04-13 12:53:48
+created time: 2024-01-10 16:05:08
 ---
 
 中国半殖民地半封建社会的基本特质是什么？ #anki 

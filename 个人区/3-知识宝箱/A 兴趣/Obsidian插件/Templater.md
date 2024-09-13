@@ -1,5 +1,5 @@
 ---
-time: 2023-11-12T23:56:00
+created time: 2023-11-12T23:56:00
 dtype: Project
 area: Area-Obsidian
 status: 进行中
@@ -11,7 +11,8 @@ tags:
 totalcount: 
 progress: 26%
 due: 
-aliases:
+aliases: 
+updated time: 2024-04-16 23:15:25
 ---
 # Templater
 
@@ -29,10 +30,10 @@ aliases:
 
 ---
 ### 项目目标
-
+- [ ] 实现生成目录
 
 #### 途径/障碍
-
+- [ ] Js 脚本
  
 #### 计划
 - [ ] 

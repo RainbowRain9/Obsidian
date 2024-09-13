@@ -35,6 +35,40 @@
       "openFileInMode": "default"
     },
     {
+      "id": "927b1c86-eeea-4fe4-bae5-05fa7855048b",
+      "name": "✅待办",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "个人区/1-生活/日记/{{DATE:YYYY-MM-DD_dddd}}.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "个人区/_Templates/tp/日记模板.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "- [ ] {{DATE:HH:mm}}  {{VALUE:待办事项}}"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "## ✅Day planner",
+        "insertAtEnd": true,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
       "id": "4cb9b723-fced-4c04-9ae2-487bfd311b97",
       "name": "🏳️‍🌈金句",
       "type": "Capture",
@@ -49,14 +83,15 @@
       },
       "format": {
         "enabled": true,
-        "format": "\n> [!quote|notitle] \n> {{VALUE:你的感触}} #金句卡 ^{{DATE:YYYYMMDDHHmmss}}\n\n<font color='#6e6e6e' size=2> {{DATE:YYYY-MM-DD HH:mm:ss}} </font>\n\n---"
+        "format": "\n> [!quote|notitle] \n> {{VALUE:你的感触}} #金句卡 ^{{DATE:YYYYMMDDHHmmss}}\n\n<font color='#6e6e6e' size=2> {{DATE:YYYY-MM-DD HH:mm:ss}} </font>\n\n---\n"
       },
       "insertAfter": {
         "enabled": true,
         "after": "## 🏳️‍🌈金句",
         "insertAtEnd": true,
         "createIfNotFound": false,
-        "createIfNotFoundLocation": "top"
+        "createIfNotFoundLocation": "top",
+        "considerSubsections": false
       },
       "prepend": false,
       "task": false,
@@ -148,6 +183,38 @@
             "enabled": true,
             "folders": [
               "学习区/01-高等数学/笔记库",
+              "学习区/03-大学物理/知识库",
+              "学习区/06-离散数学/笔记库"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "horizontal",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "018fea32-8e47-444e-94df-b02ea4d9495e",
+          "name": "📽️视频笔记",
+          "type": "Template",
+          "command": false,
+          "templatePath": "学习区/_Templates/tp/输入笔记模板.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:主题}}-Movie"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "学习区/01-高等数学/笔记库",
               "学习区/03-大学物理/知识库"
             ],
             "chooseWhenCreatingNote": false,
@@ -179,7 +246,9 @@
             "enabled": true,
             "folders": [
               "学习区/01-高等数学/概念库",
-              "学习区/03-大学物理/概念库"
+              "学习区/03-大学物理/概念库",
+              "学习区/06-离散数学/概念库",
+              "学习区/04-C++/概念库"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -209,7 +278,8 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "学习区/01-高等数学/!书名库"
+              "学习区/01-高等数学/!书名库",
+              "学习区/03-大学物理/!书名页"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -345,7 +415,7 @@
           "fileExistsMode": "Nothing"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "5eff06bf-898f-44d8-8491-943bef5b63b3",
@@ -852,7 +922,7 @@
           "name": "收侧边栏",
           "type": "Macro",
           "command": true,
-          "macroId": "01bf9d36-fda5-4d42-a388-80527765905c"
+          "macroId": "2f73c51f-2e4c-488f-8388-7599b4f91a25"
         },
         {
           "id": "bf677523-d63f-4835-8b3e-fa8d286912f4",
@@ -883,7 +953,7 @@
           "macroId": "11957120-d6e0-4e3c-8fb5-4d6c856a7931"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "cd0405e7-6489-4e6a-beb1-07dac8f9a188",
@@ -925,6 +995,34 @@
       },
       "openFile": false,
       "openFileInMode": "default"
+    },
+    {
+      "id": "d6cdbd60-6b1c-49f9-a2bf-d7e87a668429",
+      "name": "直金",
+      "type": "Template",
+      "command": true,
+      "templatePath": "",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": false,
+        "folders": [],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
     }
   ],
   "macros": [
@@ -1086,6 +1184,37 @@
           "type": "Obsidian",
           "id": "dd426a3e-51d2-46b4-a1ec-58a5c21135ff",
           "commandId": "Enhanced-editing:add-kh3"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "收侧边栏",
+      "id": "2f73c51f-2e4c-488f-8388-7599b4f91a25",
+      "commands": [],
+      "runOnStartup": false
+    },
+    {
+      "name": "快加",
+      "id": "f7cebe4d-e263-47c0-bc26-62cd7bfa3cd0",
+      "commands": [
+        {
+          "name": "Copy",
+          "type": "EditorCommand",
+          "id": "68bcf811-9515-4697-bf0a-ea036b43e076",
+          "editorCommandType": "Copy"
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "d2fc9c9e-8f15-49ec-92be-2ec23fd2a2bb",
+          "time": 100
+        },
+        {
+          "name": "Paste",
+          "type": "EditorCommand",
+          "id": "71983a64-8a4f-49b3-8557-993b73dbd4ff",
+          "editorCommandType": "Paste"
         }
       ],
       "runOnStartup": false

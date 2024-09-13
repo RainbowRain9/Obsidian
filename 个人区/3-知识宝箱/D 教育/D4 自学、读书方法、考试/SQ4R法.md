@@ -1,10 +1,11 @@
 ---
-time: 2022-01-30T17:26:00
+created time: 2022-01-30T17:26:00
 aliases: 
 tags:
   - 300教育类/00-读书方法
 dtype: Project
 area: Area-笔记方法
+updated time: 2024-04-13 HH:mm:ss
 ---
 
 - 浏览（Survey）

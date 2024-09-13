@@ -30,10 +30,10 @@
       "mkv",
       "pdf"
     ],
-    "usePathToSearch": true,
+    "usePathToSearch": false,
     "useFileEditorSuggest": true,
-    "showPath": true,
-    "showTags": false,
+    "showPath": false,
+    "showTags": true,
     "historyDisplay": "使用完整路径",
     "searchWithTag": true
   },
@@ -42,7 +42,12 @@
     "headingIndent": true
   },
   "command": {
-    "pinnedCommands": []
+    "pinnedCommands": [
+      "Markmind: 切换为Markdown或思维导图模式",
+      "QuickAdd: 🏳️‍🌈金句",
+      "QuickAdd: 📔 快加文件",
+      "QuickAdd: ✍🏻即刻"
+    ]
   },
   "other": {
     "useTagEditorSuggest": true,

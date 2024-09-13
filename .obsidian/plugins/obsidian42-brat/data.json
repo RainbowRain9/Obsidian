@@ -1,8 +1,14 @@
 {
   "pluginList": [
+    "zigholding/obsidian-notechain-plugin",
+    "nothingislost/obsidian-bartender",
     "Kenshin/simpread-obsidian-plugin"
   ],
   "pluginSubListFrozenVersion": [
+    {
+      "repo": "zigholding/obsidian-notechain-plugin",
+      "version": "1.0.1"
+    },
     {
       "repo": "Kenshin/simpread-obsidian-plugin",
       "version": "2.1.0"
@@ -11,10 +17,11 @@
   "themesList": [],
   "updateAtStartup": false,
   "updateThemesAtStartup": false,
-  "ribbonIconEnabled": true,
+  "enableAfterInstall": true,
   "loggingEnabled": false,
   "loggingPath": "BRAT-log",
   "loggingVerboseEnabled": false,
   "debuggingMode": true,
-  "notificationsEnabled": true
+  "notificationsEnabled": true,
+  "ribbonIconEnabled": true
 }

@@ -9,6 +9,7 @@ source: 微信公众号
 dtype: 教程
 tags:
   - 400兴趣类/Obsidian/教程/实践
+  - 400兴趣类/Obsidian/Plugin/Templater
 state: true
 date: 2023-12-07 23:17:20
 ---

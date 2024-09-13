@@ -1,0 +1,18 @@
+{
+  "todoPageName": "todo",
+  "showChecked": false,
+  "showAllTodos": true,
+  "autoRefresh": true,
+  "subGroups": false,
+  "groupBy": "tag",
+  "sortDirectionItems": "new->old",
+  "sortDirectionGroups": "new->old",
+  "sortDirectionSubGroups": "new->old",
+  "includeFiles": "",
+  "lookAndFeel": "classic",
+  "_collapsedSections": [
+    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Checklist 自动提取各个笔记中的代办清单.md",
+    "#"
+  ],
+  "_hiddenTags": []
+}

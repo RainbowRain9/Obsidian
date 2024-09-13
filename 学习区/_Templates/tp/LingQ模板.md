@@ -1,5 +1,6 @@
 ---
-time: {{DATE:YYYY-MM-DD HH:mm:ss}}
+created time: 
+updated time: 
 langr: xxxx
 langr-audio: 
 langr-origin: 《》

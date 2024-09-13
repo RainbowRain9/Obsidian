@@ -1,5 +1,5 @@
 ---
-time: 2023-11-12T19:34:00
+created time: 2023-11-12T19:34:00
 dtype: Project
 area: Area-Obsidian
 status: 进行中
@@ -12,7 +12,8 @@ tags:
 totalcount: 
 progress: 
 due: 
-aliases:
+aliases: 
+updated time: 2024-04-13 HH:mm:ss
 ---
 # Flashcards
 

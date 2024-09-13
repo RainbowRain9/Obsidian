@@ -7,7 +7,6 @@ date: 2023-11-12 21:39:36
 tags:
   - 400兴趣类/Obsidian/Plugin/编辑/AnyBlock
 source: Pkmer
-type: 插件
 banner:
 banner_icon:
 ---

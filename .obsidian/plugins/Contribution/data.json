@@ -1,4 +1,31 @@
 {
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  },
   "widgets": [
     {
       "id": "8abedadd-59be-489f-a2bc-7a405090612a",
@@ -1038,7 +1065,8 @@
                 }
               ]
             },
-            "maxHeight": 300
+            "maxHeight": 300,
+            "backgroundColor": "#00000000"
           },
           {
             "id": "67bb9a92-1f11-4381-b173-ff40193403ce",
@@ -1065,7 +1093,8 @@
                 }
               ]
             },
-            "maxHeight": 300
+            "maxHeight": 300,
+            "backgroundColor": "#ffffff00"
           },
           {
             "id": "1735d341-2565-461e-a93e-5e0605fd0293",
@@ -1098,7 +1127,7 @@
                 "orders": [
                   {
                     "id": "4daee683-2b8b-4206-ad6b-f418d5c50b61",
-                    "property": "${file.mtime}",
+                    "property": "${file.ctime}",
                     "direction": "desc"
                   }
                 ]
@@ -1278,7 +1307,7 @@
         "layoutType": "tab"
       },
       "createAt": "2024-04-09T14:48:57.175Z",
-      "updateAt": "2024-04-10T03:36:23.337Z"
+      "updateAt": "2024-04-13T05:59:11.880Z"
     },
     {
       "id": "6b2d0abf-dc71-4b0b-9f36-7882b4c60a1c",
@@ -1348,7 +1377,7 @@
             "endMonth": 3,
             "endDayOfMonth": 15,
             "timeTextPattern": "dHm",
-            "endDayOfWeek": 0,
+            "endDayOfWeek": 1,
             "backgroundColor": "#5555a42b",
             "fontColor": "#aebdffff",
             "title": "这周要结束咯！"
@@ -1357,7 +1386,7 @@
         "layoutType": "column"
       },
       "createAt": "2024-04-09T15:10:09.570Z",
-      "updateAt": "2024-04-09T15:25:35.136Z"
+      "updateAt": "2024-04-13T06:53:37.630Z"
     },
     {
       "id": "65363fc0-3b78-497e-9566-ecef98957d6d",

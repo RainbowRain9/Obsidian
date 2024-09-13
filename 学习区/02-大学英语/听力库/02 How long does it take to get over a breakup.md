@@ -2,9 +2,11 @@
 langr: xxxx
 langr-audio: https://raw.githubusercontent.com/RainbowRain9/PicGo/master/202311270005206.mp3
 langr-origin: 《How long does it take to get over a breakup》
-langr-pos: "17"
+langr-pos: "1"
 dtype: 英语
 subject: 大学英语
+updated time: 2024-06-01 18:31:15
+created time: 2023-11-26 13:32:35
 ---
 
 ^^^article
@@ -102,6 +104,7 @@ So how long does it take to get over a breakup? Well, we don't have enough long-
 + **among** : prep. 在…之内，在…之中
 + **anecdotal** : adj. 轶事的，趣闻的；多轶事的
 + **basically** : adv. 基本上；主要地；总的说来，从根本上说
++ **big deal** : n. 大人物
 + **bottled up** : 抑制；掩饰（不快或担忧）
 + **breakup** : n. 崩溃;瓦解;休假停课;结业
 + **bump** : v. （使身体部位等）碰上，撞上
@@ -127,9 +130,6 @@ v. distract的现在分词
 + **drastically** : adv. （动作或变化）猛烈地，力度大地 ；极其，非常
 + **engaged** : adj. 从事……的，已订婚的，被占用的
 + **engaged with** : phr. 与…接洽；忙于，从事于
-+ **enough** : pron. 足够；受够了
-adv. 十分；足够地；说来奇怪，说起来有趣
-adj. 足够的；受够了的
 + **essentially** : adv. 本质上，根本上；本来
 + **ex** : n. 前妻，前夫
 prep. 不包括，除…之外
@@ -138,6 +138,7 @@ prep. 不包括，除…之外
 + **experience** : n. 经验，实践；经历，阅历；往事，体验
 v. 经历，参与；感受，体验
 + **face up to** : phr. 勇敢地面对
++ **fact** : n. 实际；事实，真相
 + **finding** : n. 【常用复数】调查发现，调研结果
 v. 发现（find的现在分词形式）
 + **get over** : phr. 恢复；克服；原谅；熬过；使明白
@@ -156,6 +157,9 @@ adj. 神奇的，魔术的，魔术般的
 v. 不如实地叙述（misrepresent 的过去式）
 + **muse** : n. 沉思；冥想；缪斯女神
 v. 沉思，冥想；沉思地说
++ **negative** : n. 否定，拒绝；负数
+v. 否定，拒绝
+adj. 否定的；反面的；负的阴性的
 + **out of** : phr. 自…离开；由于；脱离，摆脱；用完
 + **overall** : n. 罩衫；工装裤
 adv. 总的来说；全面地

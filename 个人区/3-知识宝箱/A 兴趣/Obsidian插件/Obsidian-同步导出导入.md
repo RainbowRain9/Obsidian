@@ -1,5 +1,5 @@
 ---
-time: 2023-12-05 21:12:50
+created time: 2023-12-05 21:12:50
 dtype: Project
 area: Area-Obsidian
 status: 已完成
@@ -9,6 +9,7 @@ tags:
   - 400兴趣类/Obsidian/教程
 aliases: 
 type: 教程
+updated time: 2024-04-13 HH:mm:ss
 ---
 
 # Obsidian-同步导出导入 

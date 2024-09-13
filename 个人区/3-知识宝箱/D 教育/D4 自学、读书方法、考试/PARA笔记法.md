@@ -1,5 +1,5 @@
 ---
-time: 2023-11-12T19:00:00
+created time: 2023-11-12T19:00:00
 dtype: Project
 area: Area-笔记方法
 status: 进行中
@@ -11,7 +11,8 @@ tags:
 totalcount: 
 progress: 
 due: 
-aliases:
+aliases: 
+updated time: 2024-04-13 HH:mm:ss
 ---
 # PARA笔记法
 

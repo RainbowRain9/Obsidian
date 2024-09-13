@@ -1,11 +1,12 @@
 ---
-time: 2023-11-27T11:26:00
 dtype: 例题
 tags:
   - 300教育类/01-高等数学/知识库/002导数与微分
 cards-deck: 高等数学::知识点
 subject: 高等数学
 dg-publish: true
+updated time: 2024-04-13 12:53:49
+created time: 2023-11-27 11:26:35
 ---
 常见的求导公式？ #anki 
 $$

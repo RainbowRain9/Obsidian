@@ -1,6 +1,5 @@
 ---
 id: 6d4af581-4b47-4bae-bbe6-73b8b4465e7a
-omnivore_error: There was an error parsing the front matter template. See console for details.
 state: true
 dtype: 教程
 tags:

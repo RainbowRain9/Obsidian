@@ -25,7 +25,7 @@ tags:
 
 大家好，我是来自1037号森林的BCS！
 
-## 写在前面 
+## 写在前面  
 
 虽然，新版Obsidian正式版迟迟没有到来
 
@@ -82,7 +82,6 @@ tags:
 
   
 ## 自动添加笔记创建时间&最新更新时间
-
 此插件名为Update time on edit，开发者是beaussan
 
 ![图片](https://proxy-prod.omnivore-image-cache.app/0x0,sFgy3z3YOCPBapzZBQa3F0mQ9ebWkZ-1eCGJOna5XxCA/https://mmbiz.qpic.cn/sz_mmbiz_png/h0UtZibCfO5mvIfuRCajajScU2Ia5CUxV1XCs19Icq9Qx1pLbKVewFiaicFBcBibxu13Pmyfibmd3XjBfbicrqEkFXJw/640?wx_fmt=png)

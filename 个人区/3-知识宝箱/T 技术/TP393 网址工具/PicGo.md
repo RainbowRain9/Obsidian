@@ -3,8 +3,10 @@ url: https://github.com/Molunerfinn/PicGo/blame/dev/README.md
 title: PicGo_README_md at dev · Molunerfinn_PicGo · GitHub
 date: 2023-11-10 13:20:41
 tag: 
-banner: "https://repository-images.githubusercontent.com/113965016/3822eb00-2508-11ea-9547-6abae0187ed7"
+banner: https://repository-images.githubusercontent.com/113965016/3822eb00-2508-11ea-9547-6abae0187ed7
 banner_icon: 🔖
+created time: 2023-11-11 HH:mm:ss
+updated time: 2023-11-13 HH:mm:ss
 ---
 [
 

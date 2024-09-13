@@ -1,13 +1,14 @@
 ---
 quickshare-date: 2024-03-18 15:11:29
-quickshare-url: "https://noteshare.space/note/cltwlxkzb2277801mwxb7q9wwb#U8M/5ZL32R2TPXpw1Rvs3KtGX0IyNtcSqvsvJ+36EyM"
-time: 2024-03-17 17:23:44
+quickshare-url: https://noteshare.space/note/cltwlxkzb2277801mwxb7q9wwb#U8M/5ZL32R2TPXpw1Rvs3KtGX0IyNtcSqvsvJ+36EyM
 tags:
   - 300教育类/03-大学物理
 subject: 大学物理
 mindmap-plugin: basic
 dtype: 思维导图
 dg-publish: true
+updated time: 2024-04-13 12:53:50
+created time: 2024-03-17 17:23:45
 ---
 
 # 质点运动学

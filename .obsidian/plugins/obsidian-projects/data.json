@@ -29,16 +29,16 @@
                 "hide": true
               },
               "created-date": {
-                "hide": true
+                "hide": false
               },
               "id": {
                 "hide": true
               },
               "idx": {
-                "hide": true
+                "hide": false
               },
               "omnivore_error": {
-                "hide": true
+                "hide": false
               },
               "tag": {
                 "hide": true
@@ -50,7 +50,7 @@
                 "hide": true
               },
               "alias": {
-                "hide": true
+                "hide": false
               },
               "name": {
                 "width": 309
@@ -59,15 +59,18 @@
                 "hide": false
               },
               "date_published": {
-                "hide": true
+                "hide": false
               },
               "url": {
-                "hide": true
+                "hide": false
               },
               "type": {
-                "hide": true
+                "hide": false
               },
               "date_saved": {
+                "hide": false
+              },
+              "source": {
                 "hide": true
               }
             },
@@ -263,7 +266,7 @@
                 "hide": true
               },
               "cssclass": {
-                "hide": true
+                "hide": false
               },
               "defines-react-components": {
                 "hide": true
@@ -324,17 +327,21 @@
               },
               "UID": {
                 "hide": true
+              },
+              "dg-publish": {
+                "hide": true
+              },
+              "path": {
+                "hide": true
               }
             },
             "orderFields": [
               "name",
-              "path",
-              "dg-publish",
-              "Dg-publish",
-              "time",
               "dtype",
               "subject",
-              "tags"
+              "tags",
+              "created time",
+              "updated time"
             ]
           },
           "filter": {
@@ -432,7 +439,7 @@
           "sort": {
             "criteria": [
               {
-                "field": "time",
+                "field": "updated time",
                 "order": "desc",
                 "enabled": true
               }
@@ -528,8 +535,8 @@
           "sort": {
             "criteria": [
               {
-                "field": "time",
-                "order": "desc",
+                "field": "updated time",
+                "order": "asc",
                 "enabled": true
               }
             ]
@@ -559,6 +566,40 @@
       ],
       "id": "f008944f-9f64-477a-971b-f155145d517f",
       "name": "课程"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "学习区/02-大学英语/四级真题/阅读",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "596cd797-cb8b-4783-828a-b4f57220f6e2",
+          "name": "表格",
+          "type": "table"
+        }
+      ],
+      "id": "fafed9ac-64b5-42ec-ac81-28f2235a3678",
+      "name": "阅读"
     }
   ],
   "archives": [],

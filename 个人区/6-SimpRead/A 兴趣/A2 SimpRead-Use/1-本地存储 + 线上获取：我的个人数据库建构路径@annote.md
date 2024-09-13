@@ -1,12 +1,8 @@
 ---
 title: 本地存储 + 线上获取：我的个人数据库建构路径
-alias:
-  - 本地存储 + 线上获取：我的个人数据库建构路径
-created-date: 2022-09-21T18:43:54+0800
 banner: "https://cdn.sspai.com/2021/11/17/365ff29b5ab274691d99b1417912aade.png "
 banner_icon: 🔖
 tag:
-idx: 1
 dtype: Simpread
 state: true
 ---

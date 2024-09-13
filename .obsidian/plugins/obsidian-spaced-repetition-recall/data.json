@@ -43,8 +43,8 @@
     "flashcardHeightPercentage": 80,
     "flashcardWidthPercentage": 40,
     "randomizeCardOrder": true,
-    "convertHighlightsToClozes": true,
-    "convertBoldTextToClozes": true,
+    "convertHighlightsToClozes": false,
+    "convertBoldTextToClozes": false,
     "convertCurlyBracketsToClozes": false,
     "singleLineCardSeparator": "::",
     "singleLineReversedCardSeparator": ":::",
@@ -104,7 +104,7 @@
     },
     "previousRelease": "1.10.1.11"
   },
-  "buryDate": "2024-04-08",
+  "buryDate": "2024-06-03",
   "buryList": [],
   "historyDeck": "word"
 }

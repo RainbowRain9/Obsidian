@@ -1,5 +1,6 @@
 ---
-time: {{DATE:YYYY-MM-DD HH:mm:ss}}
+created time: 
+updated time: 
 dtype: QA
 subject: {{VALUE: 高等数学, 大学物理, 离散数学}}
 tags: 

@@ -5,9 +5,10 @@ title: |
   20款VS Code实用插件推荐
 author: |
   大姚
-source:
-dtype:
+source: 微信公众号
+dtype: 插件
 tags:
+  - 400兴趣类/VSCode
 state: true
 date: 2024-03-16 15:08:28
 ---

@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6558168c9ecaf7fd",
+            "id": "02218b4749029dae",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -23,52 +23,37 @@
             }
           },
           {
-            "id": "9eaabc60dad4a7c9",
+            "id": "bd7ddb35fbd989f9",
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "thino_view",
-              "state": {},
-              "pinned": true
-            }
-          },
-          {
-            "id": "46d4c366184202c2",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "obsidian-projects",
-              "state": {},
-              "pinned": true
-            }
-          },
-          {
-            "id": "7cafc8002a2cb85a",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "surfing-view",
+              "type": "search",
               "state": {
-                "url": "https://www.ticktick.com/webapp#focus"
+                "query": "上传图片",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
               },
               "pinned": true
             }
           },
           {
-            "id": "93766e614b742e5f",
+            "id": "b9993f6648b476d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/20款VS Code实用插件推荐.md",
+                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
                 "mode": "source",
-                "backlinks": false,
+                "backlinks": true,
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -100,17 +85,84 @@
             }
           },
           {
-            "id": "a86ce6b692d1f694",
+            "id": "7248bb0e86973edd",
             "type": "leaf",
             "state": {
-              "type": "search",
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "142f1bcac20f7ffb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "89c2c2b4ca3b02ce",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-tab-tree",
+              "state": {}
+            }
+          },
+          {
+            "id": "f93627b8c2dd366f",
+            "type": "leaf",
+            "state": {
+              "type": "langr-search-panel",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "34fb4efa27cf970d",
+    "type": "split",
+    "children": [
+      {
+        "id": "d4a138574bae43c9",
+        "type": "tabs",
+        "dimension": 32.8125,
+        "children": [
+          {
+            "id": "d5875a4ebf9ee3f8",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
               "state": {
-                "query": "tag:#网络资源话题可以点击搜索啦",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
+                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": true,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": false,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1.965556045656677,
+                  "close": true
+                }
               }
             }
           },
@@ -123,35 +175,58 @@
             }
           },
           {
-            "id": "7248bb0e86973edd",
+            "id": "9bd71ae87dadd5d5",
             "type": "leaf",
             "state": {
-              "type": "calendar",
-              "state": {}
+              "type": "outgoing-link",
+              "state": {
+                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
             }
           },
           {
-            "id": "243e93891d090a71",
+            "id": "8a016bce3f412052",
             "type": "leaf",
             "state": {
-              "type": "surfing-tab-tree",
+              "type": "backlink",
+              "state": {
+                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "6fceb92901770fcb",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
               "state": {}
             }
           }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 223.5
-  },
-  "right": {
-    "id": "34fb4efa27cf970d",
-    "type": "split",
-    "children": [
+        ],
+        "currentTab": 4
+      },
       {
         "id": "72a4b91604aed60d",
         "type": "tabs",
+        "dimension": 67.1875,
         "children": [
+          {
+            "id": "b7f62067e71f949d",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          },
           {
             "id": "6f4659d6168a56bc",
             "type": "leaf",
@@ -161,14 +236,6 @@
                 "sortOrder": "frequency",
                 "useHierarchy": true
               }
-            }
-          },
-          {
-            "id": "b7f62067e71f949d",
-            "type": "leaf",
-            "state": {
-              "type": "quiet-outline",
-              "state": {}
             }
           },
           {
@@ -189,12 +256,12 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/20款VS Code实用插件推荐.md"
+                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md"
               }
             }
           },
           {
-            "id": "b27fc8bb8f8f7594",
+            "id": "84ab4fa7d9253665",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -205,27 +272,28 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5,
-    "collapsed": true
+    "width": 237.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-daily-notes-viewer:打开 Viewer": false,
+      "improved-random-note:Open improved random note": false,
+      "float-search:Search Obsidian In Modal": false,
       "random-note:开始漫游笔记": false,
       "canvas:新建白板": false,
+      "graph:查看关系图谱": false,
       "markdown-importer:打开 Markdown 格式转换器": true,
       "audio-recorder:开始/结束录音": true,
       "workspaces:管理工作区布局": true,
-      "switcher:打开快速切换": true,
-      "graph:查看关系图谱": false,
       "templater-obsidian:Templater": true,
       "daily-notes:打开/创建今天的日记": true,
       "templates:插入模板": true,
-      "obsidian-language-learner:打开统计": false,
       "command-palette:打开命令面板": true,
       "cmdr:显示当前文件": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-language-learner:打开查词面板": false,
       "obsidian-language-learner:打开新词面板": false,
+      "obsidian-language-learner:打开统计": false,
       "obsidian-language-learner:单词列表": false,
       "obsidian-spaced-repetition-recall:复习卡片": false,
       "obsidian-regex-pipeline:Regex Rulesets": false,
@@ -238,64 +306,64 @@
       "obsidian-omnivore:Omnivore": false,
       "fuzzy-chinese-pinyin:FuzzySearch": true,
       "cloze:显/隐所有填空": false,
+      "switcher:打开快速切换": false,
       "extract-highlights-plugin:Extract Highlights": false,
       "big-calendar:Big Calendar": false,
       "media-extended:Open media": false,
-      "obsidian-projects:Open projects": false,
-      "surfing:surfing-bookmark-manager": false,
-      "omnisearch:Omnisearch": false
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "93766e614b742e5f",
+  "active": "b9993f6648b476d0",
   "lastOpenFiles": [
-    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/27 个实用的 Visual Studio Code 扩展插件，让我们的工作效率翻倍.md",
-    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/60 个神级 VS Code 插件，助你打造最强编辑器 1.md",
-    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/VSCode中使用程序员专用字体 Fira Code.md",
+    "个人区/6-SimpRead/Obsidian 启动缓慢终结者，Lazy Plugin Loader 插件重度用户的福音.md",
+    "个人区/6-SimpRead/Obsidian插件Folder Note：轻松打造层级化笔记系统.md",
+    "个人区/6-SimpRead/Obsidian 也能垂直标签页，生产力拉满.md",
+    "学习区/07-Java/day01-Java入门/笔记/assets/1.png",
+    "学习区/07-Java/day02-Java基础概念/笔记/day02-Java基础语法.md",
+    "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
     "🏡Home.md",
-    "个人区/6-SimpRead/T 技术/TP350 AI/给ChatGPT施咒，让它为你制作Anki卡片——Prompt工程案例 - 知乎.md",
-    "个人区/6-SimpRead/370.分享我的obsidian知识管理库1.5+高效能人士.md",
-    "个人区/6-SimpRead/12个免费效率工具！让你事半功倍，赶快试试！.md",
-    "个人区/1-生活/日记/2024-04-09_星期二.md",
-    "学习区/01-高等数学/问题库/7.5 二阶线性微分方程-QA.md",
-    "学习区/03-大学物理/概念库/角动量定理.md",
-    "学习区/03-大学物理/概念库/力矩.md",
-    "学习区/03-大学物理/知识库/02-质点动力学-Xmind.md",
-    "学习区/03-大学物理/概念库/角动量.md",
-    "学习区/03-大学物理/问答题/02-质点动力学-QA.md",
-    "未命名.md",
-    "个人区/1-生活/日记/2024-04-08_星期一.md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Spaced Repetition 利用遗忘曲线间隔重复复习笔记中的内容.md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian-Anki的用法.md",
-    "学习区/03-大学物理/知识库/5.1-5.2 电荷 库仑定律 电场 电场强度-Xmind.md",
-    "个人区/3-知识宝箱/D 教育/D4 自学、读书方法、考试/一元化笔记.md",
-    "个人区/6-SimpRead/A 兴趣/A3 Visual Studio Code-Use/VS Code这几个天花板般的技巧杀疯了，效率真顶，居然比Goland还强.md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/obsidian文件列表排序困难-这俩款插件可以帮你解决烦恼..md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Media Extended——在Obsidian里对视频做笔记.md",
-    "个人区/6-SimpRead/T 技术/TP385 应用/自动生成PPT模板，AI强大到让我语塞！.md",
-    "个人区/6-SimpRead/T 技术/TP393 网址工具/中国版“谷歌学术”，来了.md",
-    "个人区/3-知识宝箱/T 技术/TP393 网址工具/PicGo.md",
-    "学习区/_Canvas/高等数学.canvas",
+    "学习区/07-Java/day01-Java入门/资料/必须安装的软件/JDK/jdk-17_windows-x64_bin.exe.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/其他软件/解压软件/rar.exe.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/其他软件/阅读笔记的软件/typora-setup-x64.exe.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/其他软件/视频播放器/VLC播放器.zip.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/其他软件/搜狗输入法/sogou_pinyin_8.7.0.1657_6991.exe.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/其他软件/翻译软件/YoudaoDict_V6.3.67.7016_setup.1439368979.exe.baiduyun.p.downloading",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/继承练习分析.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202211331250.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202210617427.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202195304827.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202195115179.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202194945932.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/3.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/2.jpg",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/1560747035458.png",
+    "学习区/07-Java/day12-学生管理系统升级版/作业/day11作业详解/day11作业详解.md",
+    "学习区/07-Java/day11-集合&学生管理系统/作业/day10作业讲解/day10字符串作业.md",
+    "学习区/07-Java/day10-字符串/作业/day09作业讲解/day09面向对象作业.md",
+    "学习区/07-Java/day09-面向对象综合训练/作业/day08作业讲解/day08面向对象.md",
+    "学习区/07-Java/day05-循环高级和数组/作业/day04作业答案/day04作业.md",
+    "学习区/07-Java/day07-综合练习/作业/day06作业讲解/方法.md",
+    "学习区/07-Java/day04-判断和循环/作业/day03作业答案/day03作业.md",
+    "学习区/07-Java/day06-方法/作业/day05作业讲解/day05作业.md",
+    "学习区/07-Java/day03-运算符/作业/day02作业讲解/day02作业.md",
+    "学习区/07-Java/day01-Java入门/资料/资料/JDK9_API帮助文档.CHM.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/资料/JDK6_API帮助文档.chw",
+    "学习区/07-Java/day01-Java入门/资料/资料/JDK6_API帮助文档.CHM.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/资料/JDK11_API帮助文档.CHM.baiduyun.p.downloading",
+    "学习区/07-Java/day02-Java基础概念/作业/day01作业讲解和答案/day01作业.md",
+    "学习区/07-Java/day12-学生管理系统升级版/资料/学生管理系统升级版的需求文档.md",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/day13面向对象进阶.md",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/作业/day13课后练习.md",
+    "学习区/07-Java/day12-学生管理系统升级版/作业/day12作业.md",
+    "学习区/07-Java/day11-集合&学生管理系统/资料/学生管理系统的需求文档.md",
+    "学习区/07-Java/day11-集合&学生管理系统/笔记/ArrayList&学生管理系统.md",
+    "学习区/07-Java/day11-集合&学生管理系统/作业/day11作业.md",
+    "学习区/07-Java/day10-字符串/笔记/常用API.md",
+    "学习区/07-Java/day10-字符串/作业/day10字符串作业.md",
+    "学习区/07-Java/day09-面向对象综合训练/笔记/面向对象综合训练综合练习.md",
     "学习区/_Canvas/大学物理.canvas",
-    "学习区/_Banners/1.jpg",
-    "学习区/06-离散数学",
-    "未命名",
-    "Aizhipu",
-    "学习区/04-C++/Untitled.js",
-    "学习区/_Templates/script/gentrandomImage.js",
-    "学习区/_附件/1541384366413.png",
-    "学习区/_Banners/搜图神器_1697195513602.png",
-    "学习区/_Banners/搜图神器_1697195129836.png",
-    "学习区/_Banners/青い瞳の猫.jpeg",
-    "学习区/_Banners/wallhaven-85dwdk.jpg",
-    "学习区/_Banners/p9km8echy.jpg",
-    "学习区/_Banners/p9km8e.jpg",
-    "学习区/_Banners/muyu3.jpeg",
-    "学习区/_Banners/muyu2.jpeg",
-    "学习区/_Banners",
-    "assets",
-    "学习区/_附件/How long does it take to get over a breakup.mp3",
-    "学习区/03-大学物理/问答题",
-    "个人区/1-生活/TickTick",
+    "学习区/_Canvas/高等数学.canvas",
+    "flomo/Flomo Canvas.canvas",
     "学习区/_Canvas/环境科学导论.canvas",
     "未命名 1.canvas",
     "未命名.canvas"

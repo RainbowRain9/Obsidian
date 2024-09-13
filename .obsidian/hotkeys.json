@@ -19,7 +19,7 @@
   "editor:insert-wikilink": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
       "key": "L"
     }
@@ -107,14 +107,6 @@
     }
   ],
   "Enhanced-editing:xieti-text": [],
-  "file-explorer:move-file": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "M"
-    }
-  ],
   "random-note": [
     {
       "modifiers": [
@@ -291,14 +283,6 @@
       "key": "M"
     }
   ],
-  "obsidian-language-learner:langr-search-word": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "F"
-    }
-  ],
   "templater-obsidian:replace-in-file-templater": [],
   "Enhanced-editing:internal-link2": [],
   "quickadd:choice:d3cd2aee-5994-469a-9dd5-ccf72268794f": [
@@ -393,14 +377,6 @@
   "convert-url-to-iframe:url-to-iframe": [],
   "easy-typing-obsidian:easy-typing-insert-codeblock": [],
   "editing-toolbar:header0-text": [],
-  "quickadd:choice:bf677523-d63f-4835-8b3e-fa8d286912f4": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "S"
-    }
-  ],
   "quickadd:choice:58280f89-34fa-430f-aed7-fada3d6bdf2f": [
     {
       "modifiers": [
@@ -530,6 +506,90 @@
         "Mod"
       ],
       "key": "N"
+    }
+  ],
+  "obsidian-language-learner:langr-search-word": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ],
+  "global-search:open": [],
+  "Enhanced-editing:add-daima": [],
+  "float-search:search-obsidian-globally": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F"
+    }
+  ],
+  "fuzzy-chinese-pinyin:search-heading": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "O"
+    }
+  ],
+  "command-palette:open": [],
+  "fuzzy-chinese-pinyin:execute-command": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "fuzzy-chinese-pinyin:move-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "obsidian-linter:lint-file": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "S"
+    }
+  ],
+  "Enhanced-editing:Selection-juzi": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "quickadd:choice:e673c08f-97a7-4a00-ac1d-e213d57d2ec0": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": ","
+    }
+  ],
+  "media-extended:save-screenshot-media-note": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "D"
+    }
+  ],
+  "quickadd:choice:927b1c86-eeea-4fe4-bae5-05fa7855048b": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
     }
   ]
 }

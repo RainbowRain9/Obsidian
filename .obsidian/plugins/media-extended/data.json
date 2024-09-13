@@ -1,46 +1,25 @@
 {
-  "mediaFragmentsEmbed": true,
-  "timestampLink": true,
-  "extendedImageEmbedSyntax": true,
-  "thumbnailPlaceholder": false,
-  "useYoutubeControls": false,
-  "interalBiliPlayback": true,
-  "hideYtbRecomm": false,
-  "embedMaxHeight": "30vh",
-  "embedMinWidth": "400px",
-  "plyrControls": {
-    "restart": false,
-    "rewind": false,
-    "play": true,
-    "fast-forward": false,
-    "progress": true,
-    "current-time": true,
-    "duration": true,
-    "mute": false,
-    "volume": true,
-    "captions": true,
-    "settings": true,
-    "pip": false,
-    "fullscreen": true
+  "defaultVolume": 80,
+  "devices": [],
+  "defaultMxLinkClick": {
+    "click": "split",
+    "alt": "window"
   },
-  "embedMaxHeightMobile": "20vh",
-  "embedMinWidthMobile": "200px",
-  "plyrControlsMobile": {
-    "restart": false,
-    "rewind": false,
-    "play": true,
-    "fast-forward": false,
-    "progress": true,
-    "current-time": false,
-    "duration": false,
-    "mute": false,
-    "volume": true,
-    "captions": true,
-    "settings": true,
-    "pip": false,
-    "fullscreen": true
+  "linkHandler": {
+    "mx-embed": [],
+    "mx-url-audio": [],
+    "mx-url-video": [],
+    "mx-webpage": []
   },
-  "timestampTemplate": "\n{{TIMESTAMP}}\n",
+  "loadStrategy": "play",
+  "timestampTemplate": "\n{{DURATION}}",
+  "screenshotTemplate": "\n> [!Idea|notitle]\n> !{{SCREENSHOT}}\n> <font color='#6e6e6e' size=2> {{TIMESTAMP}} </font>\n",
+  "screenshotEmbedTemplate": "{{TITLE}}",
+  "insertBefore": false,
   "timestampOffset": 0,
-  "hideEmbedControls": false
+  "biliDefaultQuality": 80,
+  "screenshotFormat": "image/jpeg",
+  "defaultLanguage": "zh-Hans",
+  "screenshotFolderPath": "学习区/00-临时文件",
+  "urlMappingData": []
 }

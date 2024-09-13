@@ -6,10 +6,11 @@ title: |
 author: 晓小
 dtype: 方法
 state: false
-time: 2023-12-01 12:38:44
+created time: 2023-12-01 12:38:44
 tags:
   - 300教育类/00-读书方法
   - 400兴趣类/Obsidian
+updated time: 2024-04-13 HH:mm:ss
 ---
 
 

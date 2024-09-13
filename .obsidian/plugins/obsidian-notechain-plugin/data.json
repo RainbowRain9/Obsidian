@@ -1,0 +1,7 @@
+{
+  "PrevChain": "10",
+  "NextChain": "10",
+  "refreshDataView": true,
+  "refreshTasks": true,
+  "isSortFileExplorer": false
+}

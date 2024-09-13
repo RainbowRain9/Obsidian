@@ -1,9 +1,11 @@
 ---
-cssclass: "cards"
-usage: "对dataview表格渲染成卡片视图"
-banner: "https://images.pexels.com/photos/1517355/pexels-photo-1517355.jpeg?auto=compress&cs=tinysrgb"
-obsidianUIMode: "preview"
-updated: "2022-03-10 23:59"
+cssclass: cards
+usage: 对dataview表格渲染成卡片视图
+banner: https://images.pexels.com/photos/1517355/pexels-photo-1517355.jpeg?auto=compress&cs=tinysrgb
+obsidianUIMode: preview
+updated: 2022-03-10 23:59
+created time: 2023-11-11 HH:mm:ss
+updated time: 2023-12-04 HH:mm:ss
 ---
 *所有已读图书，按阅读时间(readtime)从近到远排序*
 

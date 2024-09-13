@@ -1,11 +1,12 @@
 ---
-time: 2024-03-17 17:33:39
 tags:
   - 300教育类/03-大学物理
 subject: 大学物理
 mindmap-plugin: basic
 dtype: 思维导图
 dg-publish: true
+updated time: 2024-04-13 12:53:50
+created time: 2024-03-17 17:33:40
 ---
 
 # 质点动力学

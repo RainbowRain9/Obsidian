@@ -5,7 +5,7 @@ date: 2023-11-12 22:02:09
 tags:
   - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner:
+banner: 
 banner_icon: 🔖
 dtype: 插件
 state: true

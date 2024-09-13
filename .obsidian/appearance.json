@@ -1,22 +1,14 @@
 {
   "accentColor": "#7abdff",
   "cssTheme": "AnuPpuccin",
-  "textFontFamily": "仓耳今楷05,仓耳兰楷,Maple Mono NF",
+  "textFontFamily": "苹方-港,仓耳今楷05,仓耳兰楷,Maple Mono NF",
   "interfaceFontFamily": "仓耳兰楷",
   "theme": "obsidian",
   "enabledCssSnippets": [
-    "【自定义】mytools 样式",
     "【自定义】数字时钟",
-    "【自定义】表格样式TableStyles",
-    "【图标】checkbox",
-    "【天气】weather",
-    "【特效】fireworks",
-    "【日记】Time",
-    "【日记】timeline",
-    "【自定义】多彩进度条",
-    "【Linkcard】",
     "【日记】periodic日历",
-    "custom-admonitions.c9c6cb"
+    "custom-admonitions.c9c6cb",
+    "网格背景"
   ],
   "baseFontSize": 20,
   "translucency": false,

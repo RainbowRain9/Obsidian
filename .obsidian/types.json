@@ -3,7 +3,6 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "time": "datetime",
     "出生年月": "text",
     "性别": "text",
     "state": "checkbox",
@@ -15,6 +14,8 @@
     "subject": "text",
     "dg-publish": "checkbox",
     "dg-home": "checkbox",
-    "date": "datetime"
+    "date": "datetime",
+    "created time": "datetime",
+    "updated time": "datetime"
   }
 }

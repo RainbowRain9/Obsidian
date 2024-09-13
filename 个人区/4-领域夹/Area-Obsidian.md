@@ -3,6 +3,8 @@ UID: 20231112141102
 dtype: Area
 status: 进行中
 cover: 
+created time: 2023-11-12 HH:mm:ss
+updated time: 2024-04-20 17:10:33
 ---
 
 ## 目标描述
@@ -67,7 +69,7 @@ where contains(dtype, "Project") and contains(tags, "Obsidian")
 - [x] [[Obsidian 插件：Projects 提供笔记多视图的管理能力]]
 - [x] [[Obsidian 插件：Checklist 自动提取各个笔记中的代办清单]] 
 - [x] [[Obsidian 插件：Day Planner]]
-#### 搜索
+#### 搜索 
 - [x] [[Obsidian 插件：Fuzzy Chinese Pinyin 基于汉语拼音进行模糊搜索]]
 - [ ] [[Obsidian 插件：Better Command Palette 更好更易用的命令面板]]
 - [ ] [[Obsidian 插件：smart-connections 用 AI 查询本地库]]
@@ -98,7 +100,7 @@ ace
 #### 文件管理/文件夹管理
 - [x] [[Obsidian 插件：Recent Files 添加最近浏览过的文件列表]]
 #### 学习&语言
-- [ ] [[Obsidian 插件：Language Learner 事半功倍学习英文单词]]
+- [x] [[Obsidian 插件：Language Learner 事半功倍学习英文单词]]
 - [ ] [[外语书阅读工作流]]
 #### 标签页管理
 - [ ] [[Obsidian 插件：Close Similar Tabs 防止打开重复的笔记]]

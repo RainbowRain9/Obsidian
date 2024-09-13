@@ -18,7 +18,6 @@
   "blue-topaz-theme@@remove-custom-svg-icons": false,
   "blue-topaz-theme@@default-icons": false,
   "blue-topaz-theme@@blockquote-style-change-options": "blockquote-style-quotation-mark",
-  "time@@time-color@@light": "#009797",
   "blue-topaz-theme@@style-options-for-kanban-plugin-dynamic": "style-options-for-kanban-plugin-dynamic-neon-one",
   "blue-topaz-theme@@style-options-for-kanban-plugin-static": "style-options-for-kanban-plugin-static-little-color",
   "blue-topaz-theme@@tag-text@@light": "#004FAA",
@@ -220,5 +219,6 @@
   "anuppuccin-theme-settings@@anp-hide-borders": true,
   "anuppuccin-theme-settings@@anp-card-shadows": false,
   "anuppuccin-theme-settings@@anp-card-layout-actions": false,
-  "anuppuccin-theme-settings@@anp-card-layout-filebrowser": false
+  "anuppuccin-theme-settings@@anp-card-layout-filebrowser": false,
+  "time@@time-color@@dark": "#E45858"
 }

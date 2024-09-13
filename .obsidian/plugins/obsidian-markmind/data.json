@@ -1,10 +1,10 @@
 {
   "canvasSize": 160000,
-  "headLevel": 2,
+  "headLevel": 3,
   "fontSize": 16,
   "background": "transparent",
   "layout": "mindmap",
-  "layoutDirect": "mind map",
+  "layoutDirect": "right",
   "protocol": "jump-to-pdf",
   "registerPdfEvent": true,
   "viewerTheme": 2,
@@ -21,5 +21,6 @@
   "autoCenter": true,
   "useTranslate": false,
   "strokeArray": "",
-  "scaleSpeed": 10
+  "scaleSpeed": 10,
+  "addCollapseNodeMark": true
 }

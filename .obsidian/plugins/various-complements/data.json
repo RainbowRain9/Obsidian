@@ -6,6 +6,7 @@
   "minFuzzyMatchScore": 0.5,
   "matchingWithoutEmoji": true,
   "treatAccentDiacriticsAsAlphabeticCharacters": false,
+  "treatUnderscoreAsPartOfWord": false,
   "maxNumberOfSuggestions": 5,
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 2,
@@ -13,6 +14,7 @@
   "complementAutomatically": true,
   "delayMilliSeconds": 100,
   "disableSuggestionsDuringImeOn": true,
+  "disableSuggestionsInMathBlock": false,
   "insertAfterCompletion": false,
   "firstCharactersDisableSuggestions": "-#:/^@",
   "patternsToSuppressTrigger": [
@@ -32,6 +34,7 @@
         "key": "Enter"
       }
     ],
+    "select with custom alias": [],
     "up": [
       {
         "modifiers": [],
@@ -58,7 +61,7 @@
     "insert as text": []
   },
   "propagateEsc": true,
-  "enableCurrentFileComplement": false,
+  "enableCurrentFileComplement": true,
   "currentFileMinNumberOfCharacters": 0,
   "onlyComplementEnglishOnCurrentFileComplement": false,
   "enableCurrentVaultComplement": false,
@@ -66,7 +69,7 @@
   "includeCurrentVaultPathPrefixPatterns": "",
   "excludeCurrentVaultPathPrefixPatterns": "Template",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
-  "enableCustomDictionaryComplement": true,
+  "enableCustomDictionaryComplement": false,
   "customDictionaryPaths": "学习区\\02-大学英语\\单词库\\word.md",
   "columnDelimiter": "Tab",
   "customDictionaryWordRegexPattern": "",
@@ -76,7 +79,7 @@
   "displayedTextSuffix": " => ...",
   "enableInternalLinkComplement": true,
   "suggestInternalLinkWithAlias": true,
-  "excludeInternalLinkPathPrefixPatterns": "",
+  "excludeInternalLinkPathPrefixPatterns": "学习区\\_Templates\n个人区\\_Templates",
   "updateInternalLinksOnSave": true,
   "insertAliasTransformedFromDisplayedInternalLink": {
     "enabled": false,
