@@ -7,6 +7,8 @@ subject: 高等数学
 dg-publish: true
 updated time: 2024-04-16 16:59:43
 created time: 2023-11-20 16:23:59
+created: 2023-11-20T16:23
+updated: 2024-04-16T16:59
 ---
 [[第一章函数、极限与连续]]
 [[第二章导数与微分]]

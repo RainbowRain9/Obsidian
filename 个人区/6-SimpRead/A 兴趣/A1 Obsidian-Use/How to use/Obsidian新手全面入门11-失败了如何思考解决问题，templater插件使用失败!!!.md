@@ -11,6 +11,8 @@ date: 2023-12-05 11:17:11
 tags:
   - 400兴趣类/Obsidian/教程/实践
   - 400兴趣类/Obsidian/Plugin/Templater
+created: 2023-12-05T14:28
+updated: 2024-04-13T12:49
 ---
 
 

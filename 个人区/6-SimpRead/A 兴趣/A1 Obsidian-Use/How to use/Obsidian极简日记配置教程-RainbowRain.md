@@ -4,6 +4,8 @@ state: true
 dtype: 教程
 tags:
   - 400兴趣类/Obsidian/教程/实践
+created: 2023-11-16T21:34
+updated: 2024-04-13T12:49
 ---
 
 # Obsidian极简日记配置教程

@@ -1,4 +1,8 @@
 ---
+created: 2023-11-14T08:20
+updated: 2023-12-01T12:42
+---
+---
 cssclass: kanban gridlist noyaml
 tag: moc
 obsidianUIMode: preview

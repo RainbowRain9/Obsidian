@@ -10,6 +10,8 @@ banner:
 banner_icon: 🔖
 dtype: 教程
 state: true
+created: 2023-11-26T15:14
+updated: 2024-04-13T12:49
 ---
 这是一个视频笔记，视频来自台湾的 Youtuber 姜饼资。
 

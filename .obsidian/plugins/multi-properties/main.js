@@ -878,18 +878,18 @@ function __awaiter(thisArg, _arguments, P, generator) {
 
 // src/AddPropInput.svelte
 function add_css(target) {
-  append_styles(target, "svelte-lb92c0", "input.svelte-lb92c0{max-height:25px;overflow-x:auto}select.svelte-lb92c0{height:21px}#name-input.svelte-lb92c0{flex-grow:0}.modal-input-container.svelte-lb92c0{width:95%;display:flex;flex-direction:row;align-items:center;gap:10px;margin-top:10px}.btn-inactive.svelte-lb92c0{cursor:not-allowed;pointer-events:none;opacity:0.7}");
+  append_styles(target, "svelte-gwxj8w", "input.svelte-gwxj8w{max-height:25px;overflow-x:auto}select.svelte-gwxj8w{height:21px}#name-input.svelte-gwxj8w{flex-grow:0;width:auto}.modal-input-container.svelte-gwxj8w{width:95%;display:flex;flex-direction:row;align-items:center;gap:10px;margin-top:10px}.btn-inactive.svelte-gwxj8w{cursor:not-allowed;pointer-events:none;opacity:0.7}");
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[11] = list[i];
+  child_ctx[19] = list[i];
   return child_ctx;
 }
 function create_each_block(ctx) {
   let option;
   let t_value = (
     /*key*/
-    ctx[11] + ""
+    ctx[19] + ""
   );
   let t;
   let option_value_value;
@@ -898,9 +898,9 @@ function create_each_block(ctx) {
       option = element("option");
       t = text(t_value);
       option.__value = option_value_value = /*options*/
-      ctx[6][
+      ctx[8][
         /*key*/
-        ctx[11]
+        ctx[19]
       ];
       set_input_value(option, option.__value);
     },
@@ -932,7 +932,7 @@ function create_fragment(ctx) {
   let dispose;
   let each_value = ensure_array_like(Object.keys(
     /*options*/
-    ctx[6]
+    ctx[8]
   ));
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
@@ -954,37 +954,32 @@ function create_fragment(ctx) {
       input1 = element("input");
       attr(a, "id", "del-btn");
       attr(a, "class", a_class_value = "btn-del " + /*isFirst*/
-      (ctx[1] ? "btn-inactive" : "") + " svelte-lb92c0");
+      (ctx[2] ? "btn-inactive" : "") + " svelte-gwxj8w");
       attr(a, "tabindex", a_tabindex_value = /*isFirst*/
-      ctx[1] ? -1 : 0);
+      ctx[2] ? -1 : 0);
       attr(a, "href", "href");
       attr(select, "id", "type-input");
-      attr(select, "class", "flex-obj svelte-lb92c0");
+      attr(select, "class", "flex-obj svelte-gwxj8w");
       if (
-        /*inputType*/
-        ctx[4] === void 0
+        /*optionVal*/
+        ctx[7] === void 0
       )
         add_render_callback(() => (
           /*select_change_handler*/
-          ctx[8].call(select)
+          ctx[12].call(select)
         ));
       attr(input0, "id", "name-input");
-      attr(input0, "class", "name-input flex-obj svelte-lb92c0");
+      attr(input0, "class", "name-input flex-obj svelte-gwxj8w");
       attr(input0, "type", "text");
       attr(input0, "name", "name[]");
       attr(input0, "placeholder", "name");
       input0.required = true;
       attr(input1, "id", "value-input");
-      attr(
-        input1,
-        "type",
-        /*inputType*/
-        ctx[4]
-      );
+      attr(input1, "type", "text");
       attr(input1, "name", "value[]");
       attr(input1, "placeholder", "value");
-      attr(input1, "class", "value-input flex-obj svelte-lb92c0");
-      attr(div, "class", "modal-input-container svelte-lb92c0");
+      attr(input1, "class", "value-input flex-obj svelte-gwxj8w");
+      attr(div, "class", "modal-input-container svelte-gwxj8w");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -999,13 +994,13 @@ function create_fragment(ctx) {
       }
       select_option(
         select,
-        /*inputType*/
-        ctx[4],
+        /*optionVal*/
+        ctx[7],
         true
       );
       append(div, t2);
       append(div, input0);
-      ctx[9](input0);
+      ctx[14](input0);
       set_input_value(
         input0,
         /*nameVal*/
@@ -1013,25 +1008,43 @@ function create_fragment(ctx) {
       );
       append(div, t3);
       append(div, input1);
+      ctx[16](input1);
+      set_input_value(
+        input1,
+        /*valueVal*/
+        ctx[1]
+      );
       if (!mounted) {
         dispose = [
           listen(
             a,
             "click",
             /*click_handler*/
-            ctx[7]
+            ctx[11]
           ),
           listen(
             select,
             "change",
             /*select_change_handler*/
-            ctx[8]
+            ctx[12]
+          ),
+          listen(
+            select,
+            "change",
+            /*change_handler*/
+            ctx[13]
           ),
           listen(
             input0,
             "input",
             /*input0_input_handler*/
-            ctx[10]
+            ctx[15]
+          ),
+          listen(
+            input1,
+            "input",
+            /*input1_input_handler*/
+            ctx[17]
           )
         ];
         mounted = true;
@@ -1039,20 +1052,20 @@ function create_fragment(ctx) {
     },
     p(ctx2, [dirty]) {
       if (dirty & /*isFirst*/
-      2 && a_class_value !== (a_class_value = "btn-del " + /*isFirst*/
-      (ctx2[1] ? "btn-inactive" : "") + " svelte-lb92c0")) {
+      4 && a_class_value !== (a_class_value = "btn-del " + /*isFirst*/
+      (ctx2[2] ? "btn-inactive" : "") + " svelte-gwxj8w")) {
         attr(a, "class", a_class_value);
       }
       if (dirty & /*isFirst*/
-      2 && a_tabindex_value !== (a_tabindex_value = /*isFirst*/
-      ctx2[1] ? -1 : 0)) {
+      4 && a_tabindex_value !== (a_tabindex_value = /*isFirst*/
+      ctx2[2] ? -1 : 0)) {
         attr(a, "tabindex", a_tabindex_value);
       }
       if (dirty & /*options, Object*/
-      64) {
+      256) {
         each_value = ensure_array_like(Object.keys(
           /*options*/
-          ctx2[6]
+          ctx2[8]
         ));
         let i;
         for (i = 0; i < each_value.length; i += 1) {
@@ -1070,12 +1083,12 @@ function create_fragment(ctx) {
         }
         each_blocks.length = each_value.length;
       }
-      if (dirty & /*inputType, options, Object*/
-      80) {
+      if (dirty & /*optionVal, options, Object*/
+      384) {
         select_option(
           select,
-          /*inputType*/
-          ctx2[4]
+          /*optionVal*/
+          ctx2[7]
         );
       }
       if (dirty & /*nameVal*/
@@ -1087,13 +1100,13 @@ function create_fragment(ctx) {
           ctx2[0]
         );
       }
-      if (dirty & /*inputType, options, Object*/
-      80) {
-        attr(
+      if (dirty & /*valueVal*/
+      2 && input1.value !== /*valueVal*/
+      ctx2[1]) {
+        set_input_value(
           input1,
-          "type",
-          /*inputType*/
-          ctx2[4]
+          /*valueVal*/
+          ctx2[1]
         );
       }
     },
@@ -1104,7 +1117,8 @@ function create_fragment(ctx) {
         detach(div);
       }
       destroy_each(each_blocks, detaching);
-      ctx[9](null);
+      ctx[14](null);
+      ctx[16](null);
       mounted = false;
       run_all(dispose);
     }
@@ -1114,9 +1128,12 @@ function instance($$self, $$props, $$invalidate) {
   let { isFirst } = $$props;
   let { removeInput } = $$props;
   let { id } = $$props;
+  let { typeVal = "text" } = $$props;
   let { nameVal = "" } = $$props;
-  let inputType;
+  let { valueVal = "" } = $$props;
   let inputEl;
+  let valueEl;
+  let optionVal;
   const options = {
     Text: "string",
     Number: "number",
@@ -1124,17 +1141,30 @@ function instance($$self, $$props, $$invalidate) {
     Date: "date",
     Datetime: "datetime-local"
   };
+  const convertProps = {
+    text: "Text",
+    multitext: "Text",
+    number: "Number",
+    checkbox: "Checkbox",
+    date: "Date",
+    datetime: "Datetime"
+  };
   onMount(() => __awaiter(void 0, void 0, void 0, function* () {
     yield tick();
     inputEl.focus();
     inputEl.select();
+    $$invalidate(7, optionVal = options[convertProps[typeVal]]);
   }));
+  function changeType(type) {
+    $$invalidate(6, valueEl.type = type, valueEl);
+  }
   const click_handler = () => isFirst ? false : removeInput(id);
   function select_change_handler() {
-    inputType = select_value(this);
-    $$invalidate(4, inputType);
-    $$invalidate(6, options);
+    optionVal = select_value(this);
+    $$invalidate(7, optionVal);
+    $$invalidate(8, options);
   }
+  const change_handler = () => changeType(optionVal);
   function input0_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
       inputEl = $$value;
@@ -1145,28 +1175,49 @@ function instance($$self, $$props, $$invalidate) {
     nameVal = this.value;
     $$invalidate(0, nameVal);
   }
+  function input1_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      valueEl = $$value;
+      $$invalidate(6, valueEl);
+    });
+  }
+  function input1_input_handler() {
+    valueVal = this.value;
+    $$invalidate(1, valueVal);
+  }
   $$self.$$set = ($$props2) => {
     if ("isFirst" in $$props2)
-      $$invalidate(1, isFirst = $$props2.isFirst);
+      $$invalidate(2, isFirst = $$props2.isFirst);
     if ("removeInput" in $$props2)
-      $$invalidate(2, removeInput = $$props2.removeInput);
+      $$invalidate(3, removeInput = $$props2.removeInput);
     if ("id" in $$props2)
-      $$invalidate(3, id = $$props2.id);
+      $$invalidate(4, id = $$props2.id);
+    if ("typeVal" in $$props2)
+      $$invalidate(10, typeVal = $$props2.typeVal);
     if ("nameVal" in $$props2)
       $$invalidate(0, nameVal = $$props2.nameVal);
+    if ("valueVal" in $$props2)
+      $$invalidate(1, valueVal = $$props2.valueVal);
   };
   return [
     nameVal,
+    valueVal,
     isFirst,
     removeInput,
     id,
-    inputType,
     inputEl,
+    valueEl,
+    optionVal,
     options,
+    changeType,
+    typeVal,
     click_handler,
     select_change_handler,
+    change_handler,
     input0_binding,
-    input0_input_handler
+    input0_input_handler,
+    input1_binding,
+    input1_input_handler
   ];
 }
 var AddPropInput = class extends SvelteComponent {
@@ -1179,10 +1230,12 @@ var AddPropInput = class extends SvelteComponent {
       create_fragment,
       safe_not_equal,
       {
-        isFirst: 1,
-        removeInput: 2,
-        id: 3,
-        nameVal: 0
+        isFirst: 2,
+        removeInput: 3,
+        id: 4,
+        typeVal: 10,
+        nameVal: 0,
+        valueVal: 1
       },
       add_css
     );
@@ -1337,49 +1390,69 @@ var KNOWN_BAD_CHARACTERS = [
 // src/AddPropForm.svelte
 var { Map: Map_1 } = globals;
 function add_css2(target) {
-  append_styles(target, "svelte-iixbfw", ".modal-inputs-container.svelte-iixbfw{height:200px;width:100%;overflow-y:scroll;border-radius:5px;border-style:solid;display:flex;flex-direction:column;align-items:center}.modal-add-container.svelte-iixbfw{margin-top:10px}.alert-container.svelte-iixbfw{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;background-color:red;font-weight:bold}.hidden.svelte-iixbfw{display:none}");
+  append_styles(target, "svelte-1ied4k", ".modal-inputs-container.svelte-1ied4k{height:200px;width:100%;overflow-y:scroll;border-radius:5px;border-style:solid;display:flex;flex-direction:column;align-items:center}.modal-add-container.svelte-1ied4k{margin-top:10px}.alert-container.svelte-1ied4k{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;background-color:red;font-weight:bold}.hidden.svelte-1ied4k{display:none}");
 }
 function get_each_context2(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[18] = list[i];
-  child_ctx[19] = list;
-  child_ctx[20] = i;
+  child_ctx[22] = list[i];
+  child_ctx[23] = list;
+  child_ctx[24] = i;
   return child_ctx;
 }
 function create_each_block2(key_1, ctx) {
   let first;
   let propinput;
+  let updating_typeVal;
   let updating_nameVal;
   let current;
-  function propinput_nameVal_binding(value) {
-    ctx[13](
+  function propinput_typeVal_binding(value) {
+    ctx[15](
       value,
       /*input*/
-      ctx[18]
+      ctx[22]
+    );
+  }
+  function propinput_nameVal_binding(value) {
+    ctx[16](
+      value,
+      /*input*/
+      ctx[22]
     );
   }
   let propinput_props = {
     isFirst: (
       /*input*/
-      ctx[18].isFirst
+      ctx[22].isFirst
     ),
     id: (
       /*input*/
-      ctx[18].id
+      ctx[22].id
+    ),
+    valueVal: (
+      /*input*/
+      ctx[22].valueDef
     ),
     removeInput: (
       /*removeInput*/
-      ctx[7]
+      ctx[8]
     )
   };
   if (
     /*input*/
-    ctx[18].nameDef !== void 0
+    ctx[22].typeDef !== void 0
+  ) {
+    propinput_props.typeVal = /*input*/
+    ctx[22].typeDef;
+  }
+  if (
+    /*input*/
+    ctx[22].nameDef !== void 0
   ) {
     propinput_props.nameVal = /*input*/
-    ctx[18].nameDef;
+    ctx[22].nameDef;
   }
   propinput = new AddPropInput_default({ props: propinput_props });
+  binding_callbacks.push(() => bind(propinput, "typeVal", propinput_typeVal_binding));
   binding_callbacks.push(() => bind(propinput, "nameVal", propinput_nameVal_binding));
   return {
     key: key_1,
@@ -1398,18 +1471,29 @@ function create_each_block2(key_1, ctx) {
       ctx = new_ctx;
       const propinput_changes = {};
       if (dirty & /*inputEls*/
-      16)
+      32)
         propinput_changes.isFirst = /*input*/
-        ctx[18].isFirst;
+        ctx[22].isFirst;
       if (dirty & /*inputEls*/
-      16)
+      32)
         propinput_changes.id = /*input*/
-        ctx[18].id;
+        ctx[22].id;
+      if (dirty & /*inputEls*/
+      32)
+        propinput_changes.valueVal = /*input*/
+        ctx[22].valueDef;
+      if (!updating_typeVal && dirty & /*inputEls*/
+      32) {
+        updating_typeVal = true;
+        propinput_changes.typeVal = /*input*/
+        ctx[22].typeDef;
+        add_flush_callback(() => updating_typeVal = false);
+      }
       if (!updating_nameVal && dirty & /*inputEls*/
-      16) {
+      32) {
         updating_nameVal = true;
         propinput_changes.nameVal = /*input*/
-        ctx[18].nameDef;
+        ctx[22].nameDef;
         add_flush_callback(() => updating_nameVal = false);
       }
       propinput.$set(propinput_changes);
@@ -1443,22 +1527,25 @@ function create_fragment2(ctx) {
   let p0;
   let t5;
   let p1;
+  let t6;
   let t7;
-  let p2;
+  let t8;
   let t9;
+  let p2;
+  let t11;
   let form;
   let label;
   let input_1;
-  let t10_value = "Overwrite existing properties";
-  let t10;
-  let t11;
+  let t12_value = "Overwrite existing properties";
+  let t12;
+  let t13;
   let div3;
   let each_blocks = [];
   let each_1_lookup = new Map_1();
-  let t12;
+  let t14;
   let div4;
   let a;
-  let t14;
+  let t16;
   let div5;
   let button;
   let current;
@@ -1466,11 +1553,11 @@ function create_fragment2(ctx) {
   let dispose;
   let each_value = ensure_array_like(
     /*inputEls*/
-    ctx[4]
+    ctx[5]
   );
   const get_key = (ctx2) => (
     /*input*/
-    ctx2[18].id
+    ctx2[22].id
   );
   for (let i = 0; i < each_value.length; i += 1) {
     let child_ctx = get_each_context2(ctx, each_value, i);
@@ -1487,45 +1574,50 @@ function create_fragment2(ctx) {
       div1 = element("div");
       t2 = text(
         /*alertText*/
-        ctx[3]
+        ctx[4]
       );
       t3 = space();
       p0 = element("p");
-      p0.textContent = "Type in a property name, then value. Use the dropbox to choose what type of\r\n		data you wish to store.";
+      p0.textContent = "Type in a property name, then value. Use the dropbox to choose what type of\r\n    data you wish to store.";
       t5 = space();
       p1 = element("p");
-      p1.textContent = "If you want to make a List property, use the Text data type and separate\r\n		each value with commas.";
-      t7 = space();
+      t6 = text('If you want to make a List property, use the Text data type and separate\r\n    each value with a "');
+      t7 = text(
+        /*delimiter*/
+        ctx[1]
+      );
+      t8 = text('".');
+      t9 = space();
       p2 = element("p");
       p2.textContent = 'If you want to add Tags, use the name "tags".';
-      t9 = space();
+      t11 = space();
       form = element("form");
       label = element("label");
       input_1 = element("input");
-      t10 = text(t10_value);
-      t11 = space();
+      t12 = text(t12_value);
+      t13 = space();
       div3 = element("div");
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      t12 = space();
+      t14 = space();
       div4 = element("div");
       a = element("a");
       a.textContent = "Add";
-      t14 = space();
+      t16 = space();
       div5 = element("div");
       button = element("button");
       button.textContent = "Submit";
       attr(div1, "id", "alert-text");
       attr(div2, "id", "alert-container");
-      attr(div2, "class", "alert-container hidden svelte-iixbfw");
+      attr(div2, "class", "alert-container hidden svelte-1ied4k");
       attr(input_1, "type", "checkbox");
       input_1.checked = /*overwrite*/
       ctx[0];
-      attr(div3, "class", "modal-inputs-container svelte-iixbfw");
+      attr(div3, "class", "modal-inputs-container svelte-1ied4k");
       attr(a, "class", "a-btn");
       attr(a, "href", "href");
-      attr(div4, "class", "modal-add-container svelte-iixbfw");
+      attr(div4, "class", "modal-add-container svelte-1ied4k");
       attr(button, "class", "btn-submit");
       attr(div5, "class", "modal-button-container");
       attr(div6, "id", "multi-properties-modal");
@@ -1538,32 +1630,35 @@ function create_fragment2(ctx) {
       append(div2, t1);
       append(div2, div1);
       append(div1, t2);
-      ctx[12](div2);
+      ctx[14](div2);
       append(div6, t3);
       append(div6, p0);
       append(div6, t5);
       append(div6, p1);
-      append(div6, t7);
-      append(div6, p2);
+      append(p1, t6);
+      append(p1, t7);
+      append(p1, t8);
       append(div6, t9);
+      append(div6, p2);
+      append(div6, t11);
       append(div6, form);
       append(form, label);
       append(label, input_1);
-      append(label, t10);
-      append(form, t11);
+      append(label, t12);
+      append(form, t13);
       append(form, div3);
       for (let i = 0; i < each_blocks.length; i += 1) {
         if (each_blocks[i]) {
           each_blocks[i].m(div3, null);
         }
       }
-      append(form, t12);
+      append(form, t14);
       append(form, div4);
       append(div4, a);
-      append(form, t14);
+      append(form, t16);
       append(form, div5);
       append(div5, button);
-      ctx[14](form);
+      ctx[18](form);
       current = true;
       if (!mounted) {
         dispose = [
@@ -1571,23 +1666,23 @@ function create_fragment2(ctx) {
             input_1,
             "change",
             /*onCheckboxChange*/
-            ctx[5]
+            ctx[6]
           ),
           listen(
             a,
             "click",
-            /*addInput*/
-            ctx[6]
+            /*click_handler*/
+            ctx[17]
           ),
           listen(
             button,
             "click",
             /*onSubmit*/
-            ctx[8]
+            ctx[9]
           ),
           listen(form, "submit", prevent_default(
             /*submit_handler*/
-            ctx[11]
+            ctx[13]
           ))
         ];
         mounted = true;
@@ -1595,11 +1690,18 @@ function create_fragment2(ctx) {
     },
     p(ctx2, [dirty]) {
       if (!current || dirty & /*alertText*/
-      8)
+      16)
         set_data(
           t2,
           /*alertText*/
-          ctx2[3]
+          ctx2[4]
+        );
+      if (!current || dirty & /*delimiter*/
+      2)
+        set_data(
+          t7,
+          /*delimiter*/
+          ctx2[1]
         );
       if (!current || dirty & /*overwrite*/
       1) {
@@ -1607,10 +1709,10 @@ function create_fragment2(ctx) {
         ctx2[0];
       }
       if (dirty & /*inputEls, removeInput*/
-      144) {
+      288) {
         each_value = ensure_array_like(
           /*inputEls*/
-          ctx2[4]
+          ctx2[5]
         );
         group_outros();
         each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div3, outro_and_destroy_block, create_each_block2, null, get_each_context2);
@@ -1635,11 +1737,11 @@ function create_fragment2(ctx) {
       if (detaching) {
         detach(div6);
       }
-      ctx[12](null);
+      ctx[14](null);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].d();
       }
-      ctx[14](null);
+      ctx[18](null);
       mounted = false;
       run_all(dispose);
     }
@@ -1648,28 +1750,38 @@ function create_fragment2(ctx) {
 function instance2($$self, $$props, $$invalidate) {
   let { submission } = $$props;
   let { overwrite } = $$props;
+  let { delimiter = "," } = $$props;
+  let { defaultProps = [] } = $$props;
   let { changeBool } = $$props;
-  let countInputs = 1;
+  let countInputs = 0;
   let formEl;
   let errorEl;
   let alertText = ".";
+  let inputEls = [];
   function onCheckboxChange() {
     $$invalidate(0, overwrite = !overwrite);
     changeBool(overwrite);
   }
-  let inputEls = [{ id: 1, isFirst: true, nameDef: "" }];
-  function addInput() {
-    countInputs++;
-    const newInput = {
-      id: countInputs,
-      isFirst: false,
-      nameDef: ""
-    };
-    $$invalidate(4, inputEls = [...inputEls, newInput]);
+  onMount(() => {
+    defaultProps.length > 0 ? addInputs(defaultProps) : addInputs([{ type: "text", name: "", value: "" }]);
+  });
+  function addInputs(inputs = [{ type: "text", name: "", value: "" }]) {
+    let arr = [];
+    for (let input of inputs) {
+      countInputs++;
+      arr.push({
+        id: countInputs,
+        isFirst: countInputs === 1 ? true : false,
+        typeDef: input.type,
+        nameDef: input.name,
+        valueDef: input.value
+      });
+    }
+    $$invalidate(5, inputEls = [...inputEls, ...arr]);
   }
   function removeInput(id) {
     return __awaiter(this, void 0, void 0, function* () {
-      $$invalidate(4, inputEls = inputEls.filter((input) => input.id !== id));
+      $$invalidate(5, inputEls = inputEls.filter((input) => input.id !== id));
       yield tick();
       let inputs = formEl.querySelectorAll("input");
       if (!inputs)
@@ -1687,7 +1799,7 @@ function instance2($$self, $$props, $$invalidate) {
       return false;
   }
   function runError(errorText) {
-    $$invalidate(3, alertText = errorText);
+    $$invalidate(4, alertText = errorText);
     errorEl.classList.remove("hidden");
   }
   function onSubmit() {
@@ -1714,21 +1826,25 @@ function instance2($$self, $$props, $$invalidate) {
         if (name === "tags") {
           value = cleanTags(value);
         }
-        if (value.contains(",")) {
+        if (value.contains(delimiter)) {
           let str = removeExtraCommas(value);
-          value = str.split(",");
+          value = str.split(delimiter);
         }
       }
+      if (value === "")
+        value = null;
       let inputType = input.previousElementSibling.children[0].innerText.toLowerCase();
       let propObj = {
         type: inputType,
         data: value,
-        overwrite: false
+        overwrite: false,
+        delimiter
       };
       obj.set(name, propObj);
     });
     if (obj.size < inputs.length)
       return;
+    console.log(obj);
     submission(obj);
   }
   function submit_handler(event) {
@@ -1737,44 +1853,59 @@ function instance2($$self, $$props, $$invalidate) {
   function div2_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
       errorEl = $$value;
-      $$invalidate(2, errorEl);
+      $$invalidate(3, errorEl);
     });
+  }
+  function propinput_typeVal_binding(value, input) {
+    if ($$self.$$.not_equal(input.typeDef, value)) {
+      input.typeDef = value;
+      $$invalidate(5, inputEls);
+    }
   }
   function propinput_nameVal_binding(value, input) {
     if ($$self.$$.not_equal(input.nameDef, value)) {
       input.nameDef = value;
-      $$invalidate(4, inputEls);
+      $$invalidate(5, inputEls);
     }
   }
+  const click_handler = () => addInputs([{ type: "text", name: "", value: "" }]);
   function form_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
       formEl = $$value;
-      $$invalidate(1, formEl);
+      $$invalidate(2, formEl);
     });
   }
   $$self.$$set = ($$props2) => {
     if ("submission" in $$props2)
-      $$invalidate(9, submission = $$props2.submission);
+      $$invalidate(10, submission = $$props2.submission);
     if ("overwrite" in $$props2)
       $$invalidate(0, overwrite = $$props2.overwrite);
+    if ("delimiter" in $$props2)
+      $$invalidate(1, delimiter = $$props2.delimiter);
+    if ("defaultProps" in $$props2)
+      $$invalidate(11, defaultProps = $$props2.defaultProps);
     if ("changeBool" in $$props2)
-      $$invalidate(10, changeBool = $$props2.changeBool);
+      $$invalidate(12, changeBool = $$props2.changeBool);
   };
   return [
     overwrite,
+    delimiter,
     formEl,
     errorEl,
     alertText,
     inputEls,
     onCheckboxChange,
-    addInput,
+    addInputs,
     removeInput,
     onSubmit,
     submission,
+    defaultProps,
     changeBool,
     submit_handler,
     div2_binding,
+    propinput_typeVal_binding,
     propinput_nameVal_binding,
+    click_handler,
     form_binding
   ];
 }
@@ -1788,9 +1919,11 @@ var AddPropForm = class extends SvelteComponent {
       create_fragment2,
       safe_not_equal,
       {
-        submission: 9,
+        submission: 10,
         overwrite: 0,
-        changeBool: 10
+        delimiter: 1,
+        defaultProps: 11,
+        changeBool: 12
       },
       add_css2
     );
@@ -2064,10 +2197,12 @@ var AddConfirmModal = class extends import_obsidian.Modal {
 
 // src/AddPropModal.ts
 var PropModal = class extends import_obsidian2.Modal {
-  constructor(app, submission, overwrite, changeBool) {
+  constructor(app, submission, overwrite, delimiter, defaultProps, changeBool) {
     super(app);
     this.submission = submission;
     this.overwrite = overwrite;
+    this.delimiter = delimiter;
+    this.defaultProps = defaultProps;
     this.changeBool = changeBool;
   }
   //Run form submission if user clicks confirm.
@@ -2098,6 +2233,8 @@ var PropModal = class extends import_obsidian2.Modal {
       props: {
         submission: this.onSubmit.bind(this),
         overwrite: this.overwrite,
+        delimiter: this.delimiter,
+        defaultProps: this.defaultProps,
         changeBool: this.updateBool.bind(this)
       }
     });
@@ -2114,7 +2251,7 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
   display() {
     let { containerEl } = this;
     containerEl.empty();
-    new import_obsidian3.Setting(containerEl).setName("Overwrite existing text.").setDesc(
+    new import_obsidian3.Setting(containerEl).setName("Overwrite existing text").setDesc(
       "When adding a property with a name that already exists, the text will overwrite the prop's existing value.  If left disabled, the new value will be appended to the old as a List."
     ).addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.overwrite);
@@ -2123,12 +2260,35 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian3.Setting(containerEl).setName("Recursive Iteration.").setDesc(
+    new import_obsidian3.Setting(containerEl).setName("Recursive Iteration").setDesc(
       "When toggled on, while looping through all files in a folder, you will also loop through any sub-folders."
     ).addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.recursive);
       toggle.onChange(async (value) => {
         this.plugin.settings.recursive = value;
+        await this.plugin.saveSettings();
+      });
+    });
+    new import_obsidian3.Setting(containerEl).setName("List Delimiter").setDesc(
+      "Set delimiter to use when creating a list.  Commas(,) are used by default."
+    ).addText((text2) => {
+      text2.setValue(this.plugin.settings.delimiter);
+      text2.onChange(async (value) => {
+        if (value.length > 1) {
+          text2.setValue(value[0]);
+          new import_obsidian3.Notice("Delimiter must be a single character.");
+          return;
+        }
+        this.plugin.settings.delimiter = value;
+        await this.plugin.saveSettings();
+      });
+    });
+    new import_obsidian3.Setting(containerEl).setName("Default Props File").setDesc(
+      "Select a file with properties that you want to load into the Multi Properties form by default.  Type in the full path of the desired file.(ex. Templates/PropFile 1)"
+    ).addText((text2) => {
+      text2.setValue(this.plugin.settings.defaultPropPath);
+      text2.onChange(async (value) => {
+        this.plugin.settings.defaultPropPath = value;
         await this.plugin.saveSettings();
       });
     });
@@ -2140,68 +2300,89 @@ var import_obsidian5 = require("obsidian");
 
 // src/RemovePropForm.svelte
 function add_css4(target) {
-  append_styles(target, "svelte-1q2r7gq", ".name-container.svelte-1q2r7gq{display:flex;flex-direction:column;gap:5px;margin-top:10px;margin-bottom:20px}.alert-container.svelte-1q2r7gq{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;background-color:red;font-weight:bold}.hidden.svelte-1q2r7gq{display:none}");
+  append_styles(target, "svelte-1264666", ".name-container.svelte-1264666{display:flex;flex-direction:column;gap:5px;margin-top:10px;margin-bottom:20px}.alert-container.svelte-1264666{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;background-color:red;font-weight:bold}.button-container.svelte-1264666{display:flex;flex-direction:row;justify-content:space-between}.hidden.svelte-1264666{display:none}");
 }
 function get_each_context4(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[9] = list[i];
+  child_ctx[14] = list[i];
+  child_ctx[15] = list;
+  child_ctx[16] = i;
   return child_ctx;
 }
 function create_each_block4(ctx) {
   let label;
-  let input;
-  let input_value_value;
+  let input_1;
   let t0;
   let t1_value = (
-    /*name*/
-    ctx[9] + ""
+    /*input*/
+    ctx[14].name + ""
   );
   let t1;
   let t2;
   let mounted;
   let dispose;
-  function change_handler(...args) {
-    return (
-      /*change_handler*/
-      ctx[7](
-        /*name*/
-        ctx[9],
-        ...args
-      )
+  function input_1_change_handler() {
+    ctx[12].call(
+      input_1,
+      /*each_value*/
+      ctx[15],
+      /*input_index*/
+      ctx[16]
     );
   }
   return {
     c() {
       label = element("label");
-      input = element("input");
+      input_1 = element("input");
       t0 = space();
       t1 = text(t1_value);
       t2 = space();
-      attr(input, "type", "checkbox");
-      input.value = input_value_value = /*name*/
-      ctx[9];
+      attr(input_1, "type", "checkbox");
     },
     m(target, anchor) {
       insert(target, label, anchor);
-      append(label, input);
+      append(label, input_1);
+      set_input_value(
+        input_1,
+        /*input*/
+        ctx[14].name
+      );
+      input_1.checked = /*input*/
+      ctx[14].isChecked;
       append(label, t0);
       append(label, t1);
       append(label, t2);
       if (!mounted) {
-        dispose = listen(input, "change", change_handler);
+        dispose = [
+          listen(input_1, "change", input_1_change_handler),
+          listen(
+            input_1,
+            "change",
+            /*change_handler*/
+            ctx[13]
+          )
+        ];
         mounted = true;
       }
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
-      if (dirty & /*names*/
-      1 && input_value_value !== (input_value_value = /*name*/
-      ctx[9])) {
-        input.value = input_value_value;
+      if (dirty & /*inputs*/
+      8) {
+        set_input_value(
+          input_1,
+          /*input*/
+          ctx[14].name
+        );
       }
-      if (dirty & /*names*/
-      1 && t1_value !== (t1_value = /*name*/
-      ctx[9] + ""))
+      if (dirty & /*inputs*/
+      8) {
+        input_1.checked = /*input*/
+        ctx[14].isChecked;
+      }
+      if (dirty & /*inputs*/
+      8 && t1_value !== (t1_value = /*input*/
+      ctx[14].name + ""))
         set_data(t1, t1_value);
     },
     d(detaching) {
@@ -2209,12 +2390,12 @@ function create_each_block4(ctx) {
         detach(label);
       }
       mounted = false;
-      dispose();
+      run_all(dispose);
     }
   };
 }
 function create_fragment4(ctx) {
-  let div4;
+  let div5;
   let div2;
   let div0;
   let t1;
@@ -2226,12 +2407,20 @@ function create_fragment4(ctx) {
   let form;
   let div3;
   let t6;
-  let button;
+  let div4;
+  let button0;
+  let t8;
+  let button1;
+  let t9_value = (
+    /*isMaxChecked*/
+    ctx[0] ? "Uncheck All" : "Check All"
+  );
+  let t9;
   let mounted;
   let dispose;
   let each_value = ensure_array_like(
-    /*names*/
-    ctx[0]
+    /*inputs*/
+    ctx[3]
   );
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
@@ -2239,7 +2428,7 @@ function create_fragment4(ctx) {
   }
   return {
     c() {
-      div4 = element("div");
+      div5 = element("div");
       div2 = element("div");
       div0 = element("div");
       div0.textContent = "ERROR";
@@ -2259,26 +2448,31 @@ function create_fragment4(ctx) {
         each_blocks[i].c();
       }
       t6 = space();
-      button = element("button");
-      button.textContent = "Confirm";
+      div4 = element("div");
+      button0 = element("button");
+      button0.textContent = "Confirm";
+      t8 = space();
+      button1 = element("button");
+      t9 = text(t9_value);
       attr(div1, "id", "alert-text");
       attr(div2, "id", "alert-container");
-      attr(div2, "class", "alert-container hidden svelte-1q2r7gq");
-      attr(div3, "class", "name-container svelte-1q2r7gq");
-      attr(button, "type", "submit");
+      attr(div2, "class", "alert-container hidden svelte-1264666");
+      attr(div3, "class", "name-container svelte-1264666");
+      attr(button0, "type", "submit");
+      attr(div4, "class", "button-container svelte-1264666");
     },
     m(target, anchor) {
-      insert(target, div4, anchor);
-      append(div4, div2);
+      insert(target, div5, anchor);
+      append(div5, div2);
       append(div2, div0);
       append(div2, t1);
       append(div2, div1);
       append(div1, t2);
-      ctx[6](div2);
-      append(div4, t3);
-      append(div4, p);
-      append(div4, t5);
-      append(div4, form);
+      ctx[11](div2);
+      append(div5, t3);
+      append(div5, p);
+      append(div5, t5);
+      append(div5, form);
       append(form, div3);
       for (let i = 0; i < each_blocks.length; i += 1) {
         if (each_blocks[i]) {
@@ -2286,12 +2480,30 @@ function create_fragment4(ctx) {
         }
       }
       append(form, t6);
-      append(form, button);
+      append(form, div4);
+      append(div4, button0);
+      append(div4, t8);
+      append(div4, button1);
+      append(button1, t9);
       if (!mounted) {
-        dispose = listen(form, "submit", prevent_default(
-          /*onSubmit*/
-          ctx[4]
-        ));
+        dispose = [
+          listen(
+            button0,
+            "click",
+            /*onSubmit*/
+            ctx[6]
+          ),
+          listen(
+            button1,
+            "click",
+            /*toggleAll*/
+            ctx[5]
+          ),
+          listen(form, "submit", prevent_default(
+            /*submit_handler*/
+            ctx[10]
+          ))
+        ];
         mounted = true;
       }
     },
@@ -2303,11 +2515,11 @@ function create_fragment4(ctx) {
           /*alertText*/
           ctx2[2]
         );
-      if (dirty & /*names, handleCheckboxChange*/
-      9) {
+      if (dirty & /*inputs, onCheckboxChange*/
+      24) {
         each_value = ensure_array_like(
-          /*names*/
-          ctx2[0]
+          /*inputs*/
+          ctx2[3]
         );
         let i;
         for (i = 0; i < each_value.length; i += 1) {
@@ -2325,42 +2537,60 @@ function create_fragment4(ctx) {
         }
         each_blocks.length = each_value.length;
       }
+      if (dirty & /*isMaxChecked*/
+      1 && t9_value !== (t9_value = /*isMaxChecked*/
+      ctx2[0] ? "Uncheck All" : "Check All"))
+        set_data(t9, t9_value);
     },
     i: noop,
     o: noop,
     d(detaching) {
       if (detaching) {
-        detach(div4);
+        detach(div5);
       }
-      ctx[6](null);
+      ctx[11](null);
       destroy_each(each_blocks, detaching);
       mounted = false;
-      dispose();
+      run_all(dispose);
     }
   };
 }
 function instance4($$self, $$props, $$invalidate) {
+  let isMaxChecked;
   let { names = [] } = $$props;
   let { submission } = $$props;
   let errorEl;
   let alertText = ".";
-  let propNames = [];
+  let checkCount = 0;
+  let inputs = [];
+  for (let name of names) {
+    inputs.push({ name, isChecked: false });
+  }
   names.sort();
-  function handleCheckboxChange(event, string) {
-    const isChecked = event.target.checked;
-    if (isChecked) {
-      propNames = [...propNames, string];
+  function onCheckboxChange(event) {
+    let checked = event.target.checked;
+    checked ? $$invalidate(9, checkCount++, checkCount) : $$invalidate(9, checkCount--, checkCount);
+  }
+  function toggleAll() {
+    if (isMaxChecked) {
+      $$invalidate(3, inputs = inputs.map((input) => Object.assign(Object.assign({}, input), { isChecked: false })));
+      $$invalidate(9, checkCount = 0);
     } else {
-      propNames = propNames.filter((selected) => selected !== string);
+      $$invalidate(3, inputs = inputs.map((input) => Object.assign(Object.assign({}, input), { isChecked: true })));
+      $$invalidate(9, checkCount = names.length);
     }
   }
   function onSubmit() {
-    if (propNames.length === 0) {
+    if (checkCount === 0) {
       $$invalidate(2, alertText = "Please select at least one property to remove.");
       errorEl.classList.remove("hidden");
       return;
     }
+    let propNames = inputs.filter((input) => input.isChecked).map((input) => input.name);
     submission(propNames);
+  }
+  function submit_handler(event) {
+    bubble.call(this, $$self, event);
   }
   function div2_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
@@ -2368,28 +2598,51 @@ function instance4($$self, $$props, $$invalidate) {
       $$invalidate(1, errorEl);
     });
   }
-  const change_handler = (name, event) => handleCheckboxChange(event, name);
+  function input_1_change_handler(each_value, input_index) {
+    each_value[input_index].name = this.value;
+    each_value[input_index].isChecked = this.checked;
+    $$invalidate(3, inputs);
+  }
+  const change_handler = (event) => onCheckboxChange(event);
   $$self.$$set = ($$props2) => {
     if ("names" in $$props2)
-      $$invalidate(0, names = $$props2.names);
+      $$invalidate(7, names = $$props2.names);
     if ("submission" in $$props2)
-      $$invalidate(5, submission = $$props2.submission);
+      $$invalidate(8, submission = $$props2.submission);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & /*checkCount, names*/
+    640) {
+      $:
+        $$invalidate(0, isMaxChecked = checkCount >= names.length);
+    }
+    if ($$self.$$.dirty & /*isMaxChecked*/
+    1) {
+      $:
+        console.log(isMaxChecked);
+    }
   };
   return [
-    names,
+    isMaxChecked,
     errorEl,
     alertText,
-    handleCheckboxChange,
+    inputs,
+    onCheckboxChange,
+    toggleAll,
     onSubmit,
+    names,
     submission,
+    checkCount,
+    submit_handler,
     div2_binding,
+    input_1_change_handler,
     change_handler
   ];
 }
 var RemovePropForm = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance4, create_fragment4, safe_not_equal, { names: 0, submission: 5 }, add_css4);
+    init(this, options, instance4, create_fragment4, safe_not_equal, { names: 7, submission: 8 }, add_css4);
   }
 };
 var RemovePropForm_default = RemovePropForm;
@@ -2594,10 +2847,6 @@ var RemoveConfirmForm_default = RemoveConfirmForm;
 var RemoveConfirmModal = class extends import_obsidian4.Modal {
   constructor(app, names, submission) {
     super(app);
-    if (!names || names.length === 0) {
-      new import_obsidian4.Notice("No properties to remove");
-      return;
-    }
     this.names = names;
     this.submission = submission;
   }
@@ -2610,6 +2859,10 @@ var RemoveConfirmModal = class extends import_obsidian4.Modal {
     this.close();
   }
   onOpen() {
+    if (!this.names || this.names.length === 0) {
+      new import_obsidian4.Notice("Please check at least one property to remove.");
+      this.close();
+    }
     this.titleEl.createEl("h2", { text: "Remove Properties" });
     this.component = new RemoveConfirmForm_default({
       target: this.contentEl,
@@ -2664,18 +2917,23 @@ function addProperties(app, file, props, overwrite) {
   let propCache = app.metadataCache.getAllPropertyInfos();
   app.fileManager.processFrontMatter(file, (frontmatter) => {
     for (const [key, value] of props) {
+      console.log(value);
       if (!frontmatter[key] || overwrite) {
         frontmatter[key] = value.data;
         continue;
       }
       let type1 = value.type;
       let type2 = propCache[key.toLowerCase()].type;
-      if (!canBeAppended(type1, type2)) {
-        frontmatter[key] = value.data;
-        continue;
-      } else {
+      if (canBeAppended(type1, type2)) {
+        if (frontmatter[key] === value.data)
+          continue;
+        if (!value.data)
+          continue;
         let arr = mergeIntoArrays(frontmatter[key], value.data);
         frontmatter[key] = arr;
+        continue;
+      } else {
+        frontmatter[key] = value.data;
         continue;
       }
     }
@@ -2684,6 +2942,7 @@ function addProperties(app, file, props, overwrite) {
 async function addPropToSet(app, set, file) {
   await app.fileManager.processFrontMatter(file, (frontmatter) => {
     for (const key in frontmatter) {
+      console.log({ key });
       set.add(key);
     }
   });
@@ -2692,7 +2951,7 @@ async function addPropToSet(app, set, file) {
 function removeProperties(app, file, props) {
   app.fileManager.processFrontMatter(file, (frontmatter) => {
     for (const prop of props) {
-      delete frontmatter[prop];
+      frontmatter[prop] = void 0;
     }
   });
 }
@@ -2712,7 +2971,9 @@ function mergeIntoArrays(...args) {
 // src/main.ts
 var defaultSettings = {
   overwrite: false,
-  recursive: true
+  recursive: true,
+  delimiter: ",",
+  defaultPropPath: ""
 };
 var MultiPropPlugin = class extends import_obsidian6.Plugin {
   async loadSettings() {
@@ -2796,11 +3057,11 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
       }
       if (obj instanceof import_obsidian6.TFolder) {
         if (this.settings.recursive) {
-          this.getPropsFromFolder(obj, names);
+          await this.getPropsFromFolder(obj, names);
         }
       }
     }
-    return [...names];
+    return [...names].sort();
   }
   async getPropsFromFiles(files, names) {
     for (let file of files) {
@@ -2839,23 +3100,46 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
     });
     return files;
   }
-  /** Create modal for removing properties.  
+  /** Create modal for adding properties.
    * Will call a different function depending on whether files or a folder is used. */
   createPropModal(iterable) {
     let iterateFunc;
+    this.app.vault.getAllLoadedFiles;
     if (iterable instanceof import_obsidian6.TFolder) {
       iterateFunc = (props) => this.searchFolders(iterable, this.addPropsCallback(props));
     } else {
       iterateFunc = (props) => this.searchFiles(iterable, this.addPropsCallback(props));
     }
+    let defaultProps;
+    if (!this.settings.defaultPropPath) {
+      defaultProps = [{ name: "", value: "", type: "text" }];
+    } else {
+      try {
+        const file = this.app.vault.getAbstractFileByPath(
+          `${this.settings.defaultPropPath}.md`
+        );
+        let tmp = this.readYamlProperties(file);
+        if (tmp === void 0)
+          throw Error("Undefined path.");
+        defaultProps = tmp;
+      } catch (e) {
+        new import_obsidian6.Notice(
+          `${e}.  Check if you entered a valid path in the Default Props File setting.`,
+          1e4
+        );
+        defaultProps = [];
+      }
+    }
     new PropModal(
       this.app,
       iterateFunc,
       this.settings.overwrite,
+      this.settings.delimiter,
+      defaultProps,
       this.changeOverwrite.bind(this)
     ).open();
   }
-  /** Create modal for removing properties.  
+  /** Create modal for removing properties.
    * Will call a different function depending on whether files or a folder is used. */
   async createRemoveModal(iterable) {
     let names;
@@ -2868,10 +3152,37 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
       iterateFunc = (props) => this.searchFiles(iterable, this.removePropsCallback(props));
     }
     if (names.length === 0) {
-      new import_obsidian6.Notice("No properties to remove");
+      new import_obsidian6.Notice("No properties to remove", 4e3);
       return;
     }
-    new RemoveModal(this.app, names, iterateFunc).open();
+    const sortedNames = [...names].sort(
+      (a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1
+    );
+    new RemoveModal(this.app, sortedNames, iterateFunc).open();
+  }
+  /** Read through a given file and get name/value of props.
+   *  Revised from https://forum.obsidian.md/t/how-to-programmatically-access-a-files-properties-types/77826/4.
+   */
+  readYamlProperties(file) {
+    const metadata = this.app.metadataCache.getFileCache(file);
+    const frontmatter = metadata == null ? void 0 : metadata.frontmatter;
+    console.log({ frontmatter });
+    if (!frontmatter) {
+      new import_obsidian6.Notice("Not a valid Props template.", 4e3);
+      return;
+    }
+    const allPropsWithType = this.app.metadataCache.getAllPropertyInfos();
+    let result = [];
+    for (let [key, value] of Object.entries(frontmatter)) {
+      const keyLower = key.toLowerCase();
+      const obj = {
+        name: key,
+        value,
+        type: allPropsWithType[keyLower].type
+      };
+      result.push(obj);
+    }
+    return result;
   }
   /** Callback function to run addProperties inside iterative functions.*/
   addPropsCallback(props) {
@@ -2886,3 +3197,5 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
     };
   }
 };
+
+/* nosourcemap */

@@ -13,6 +13,8 @@ due:
 aliases: 
 dg-publish: true
 updated time: 2024-04-13 HH:mm:ss
+created: 2023-11-13T16:41
+updated: 2024-04-13T12:30
 ---
 
 # 怎么用Obsidian学习

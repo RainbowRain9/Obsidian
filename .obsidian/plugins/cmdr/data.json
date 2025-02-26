@@ -39,24 +39,6 @@
       "icon": "arrow-up-circle",
       "name": "导出为 PDF",
       "mode": "any"
-    },
-    {
-      "id": "obsidian-text-format:latex-letter",
-      "icon": "square-sigma",
-      "name": "Text Format: 识别并转换字符为数学模式（LaTeX）",
-      "mode": "any"
-    },
-    {
-      "id": "obsidian-text-format:latex-letter",
-      "icon": "square-sigma",
-      "name": "识别并转换字符为LaTeX",
-      "mode": "any"
-    },
-    {
-      "id": "obsidian-text-format:latex-letter",
-      "icon": "square-sigma",
-      "name": "转换LaTeX",
-      "mode": "any"
     }
   ],
   "pageHeader": [

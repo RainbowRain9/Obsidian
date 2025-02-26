@@ -2,9 +2,11 @@
 title: 看板、双向链接、知识图谱…… 简悦 2-2 想让你的稍后读不再不读
 banner: "https://cdn.sspai.com/article/053250ba-a755-1fb8-25d7-d96ca0aa7b31.png "
 banner_icon: 🔖
-tags:
+tags: 
 dtype: Simpread
 state: true
+created: 2023-11-11T22:36
+updated: 2024-04-13T12:49
 ---
 
 # 看板、双向链接、知识图谱…… 简悦 2-2 想让你的稍后读不再不读

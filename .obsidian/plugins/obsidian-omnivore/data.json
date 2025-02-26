@@ -3,18 +3,18 @@
   "dateSavedFormat": "yyyy-MM-dd HH:mm:ss",
   "apiKey": "dabce49f-7868-4c31-be99-8cc35997ac93",
   "filter": "ALL",
-  "syncAt": "2024-09-11T14:40:48",
+  "syncAt": "2024-10-24T17:04:28",
   "customQuery": "in:Inbox",
   "template": "\n# {{{title}}}\n#Omnivore\n\n[Read on Omnivore]({{{omnivoreUrl}}})\n[Read Original]({{{originalUrl}}})\n\n{{{ content }}}\n\n\n\n{{#highlights.length}}\n## Highlights\n\n{{#highlights}}\n> {{{text}}} [⤴️]({{{highlightUrl}}}) {{#labels}} #{{name}} {{/labels}} ^{{{highlightID}}}\n{{#note}}\n\n{{{note}}}\n{{/note}}\n\n{{/highlights}}\n{{/highlights.length}}",
   "highlightOrder": "LOCATION",
-  "syncing": true,
+  "syncing": false,
   "folder": "个人区/6-SimpRead",
   "folderDateFormat": "yyyy-MM-dd",
   "endpoint": "https://api-prod.omnivore.app/api/graphql",
   "filename": "{{{title}}}",
   "filenameDateFormat": "yyyy-MM-dd",
   "attachmentFolder": "个人区/6-SimpRead",
-  "version": "1.9.4",
+  "version": "1.10.4",
   "isSingleFile": false,
   "frequency": 0,
   "intervalId": 0,
@@ -30,5 +30,13 @@
     "description::banner"
   ],
   "frontMatterTemplate": "id: {{{id}}}\nurl: {{{originalUrl}}}\ntitle: >\n  {{{title}}}\n{{#author}}\nauthor: >\n  {{{author}}}\n{{/author}}\n{{#labels.length}}\ntags: \n{{#labels}} - {{{name}}}\n{{/labels}}\n{{/labels.length}}\nsource: \ndtype: \ntags: \nbanner: https://source.unsplash.com/900x1600/?\nstate: false\ndate: {{{dateSaved}}}\n",
-  "syncOnStart": true
+  "syncOnStart": true,
+  "enableHighlightColorRender": false,
+  "highlightManagerId": "omni",
+  "highlightColorMapping": {
+    "yellow": "#fff3a3",
+    "red": "#ff5582",
+    "blue": "#adccff",
+    "green": "#bbfabb"
+  }
 }

@@ -3,9 +3,10 @@ cssclass: cards
 usage: 对dataview表格渲染成卡片视图
 banner: https://images.pexels.com/photos/1517355/pexels-photo-1517355.jpeg?auto=compress&cs=tinysrgb
 obsidianUIMode: preview
-updated: 2022-03-10 23:59
+updated: 2023-12-04T18:51
 created time: 2023-11-11 HH:mm:ss
 updated time: 2023-12-04 HH:mm:ss
+created: 2023-11-11T20:12
 ---
 *所有已读图书，按阅读时间(readtime)从近到远排序*
 

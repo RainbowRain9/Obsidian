@@ -1,7 +1,9 @@
 ---
-banner: "https://source.unsplash.com/1600x900/?nature"
+banner: https://source.unsplash.com/1600x900/?nature
 cssclass: fullwidth,noyaml,noscroll,myhome
 obsidianUIMode: preview
+created: 2023-11-14T08:20
+updated: 2023-11-29T19:48
 ---
 
 > [!book] 每日一句

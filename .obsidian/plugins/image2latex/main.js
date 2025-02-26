@@ -14273,11 +14273,11 @@ var require_form_data = __commonJS({
     var mime = require_mime_types();
     var asynckit = require_asynckit();
     var populate = require_populate();
-    module2.exports = FormData3;
-    util.inherits(FormData3, CombinedStream);
-    function FormData3(options) {
-      if (!(this instanceof FormData3)) {
-        return new FormData3(options);
+    module2.exports = FormData5;
+    util.inherits(FormData5, CombinedStream);
+    function FormData5(options) {
+      if (!(this instanceof FormData5)) {
+        return new FormData5(options);
       }
       this._overheadLength = 0;
       this._valueLength = 0;
@@ -14288,9 +14288,9 @@ var require_form_data = __commonJS({
         this[option] = options[option];
       }
     }
-    FormData3.LINE_BREAK = "\r\n";
-    FormData3.DEFAULT_CONTENT_TYPE = "application/octet-stream";
-    FormData3.prototype.append = function(field, value, options) {
+    FormData5.LINE_BREAK = "\r\n";
+    FormData5.DEFAULT_CONTENT_TYPE = "application/octet-stream";
+    FormData5.prototype.append = function(field, value, options) {
       options = options || {};
       if (typeof options == "string") {
         options = { filename: options };
@@ -14310,7 +14310,7 @@ var require_form_data = __commonJS({
       append(footer);
       this._trackLength(header, value, options);
     };
-    FormData3.prototype._trackLength = function(header, value, options) {
+    FormData5.prototype._trackLength = function(header, value, options) {
       var valueLength = 0;
       if (options.knownLength != null) {
         valueLength += +options.knownLength;
@@ -14320,7 +14320,7 @@ var require_form_data = __commonJS({
         valueLength = Buffer.byteLength(value);
       }
       this._valueLength += valueLength;
-      this._overheadLength += Buffer.byteLength(header) + FormData3.LINE_BREAK.length;
+      this._overheadLength += Buffer.byteLength(header) + FormData5.LINE_BREAK.length;
       if (!value || !value.path && !(value.readable && value.hasOwnProperty("httpVersion")) && !(value instanceof Stream3)) {
         return;
       }
@@ -14328,7 +14328,7 @@ var require_form_data = __commonJS({
         this._valuesToMeasure.push(value);
       }
     };
-    FormData3.prototype._lengthRetriever = function(value, callback) {
+    FormData5.prototype._lengthRetriever = function(value, callback) {
       if (value.hasOwnProperty("fd")) {
         if (value.end != void 0 && value.end != Infinity && value.start != void 0) {
           callback(null, value.end + 1 - (value.start ? value.start : 0));
@@ -14355,7 +14355,7 @@ var require_form_data = __commonJS({
         callback("Unknown stream");
       }
     };
-    FormData3.prototype._multiPartHeader = function(field, value, options) {
+    FormData5.prototype._multiPartHeader = function(field, value, options) {
       if (typeof options.header == "string") {
         return options.header;
       }
@@ -14383,12 +14383,12 @@ var require_form_data = __commonJS({
           header = [header];
         }
         if (header.length) {
-          contents += prop + ": " + header.join("; ") + FormData3.LINE_BREAK;
+          contents += prop + ": " + header.join("; ") + FormData5.LINE_BREAK;
         }
       }
-      return "--" + this.getBoundary() + FormData3.LINE_BREAK + contents + FormData3.LINE_BREAK;
+      return "--" + this.getBoundary() + FormData5.LINE_BREAK + contents + FormData5.LINE_BREAK;
     };
-    FormData3.prototype._getContentDisposition = function(value, options) {
+    FormData5.prototype._getContentDisposition = function(value, options) {
       var filename, contentDisposition;
       if (typeof options.filepath === "string") {
         filename = path.normalize(options.filepath).replace(/\\/g, "/");
@@ -14402,7 +14402,7 @@ var require_form_data = __commonJS({
       }
       return contentDisposition;
     };
-    FormData3.prototype._getContentType = function(value, options) {
+    FormData5.prototype._getContentType = function(value, options) {
       var contentType = options.contentType;
       if (!contentType && value.name) {
         contentType = mime.lookup(value.name);
@@ -14417,13 +14417,13 @@ var require_form_data = __commonJS({
         contentType = mime.lookup(options.filepath || options.filename);
       }
       if (!contentType && typeof value == "object") {
-        contentType = FormData3.DEFAULT_CONTENT_TYPE;
+        contentType = FormData5.DEFAULT_CONTENT_TYPE;
       }
       return contentType;
     };
-    FormData3.prototype._multiPartFooter = function() {
+    FormData5.prototype._multiPartFooter = function() {
       return function(next) {
-        var footer = FormData3.LINE_BREAK;
+        var footer = FormData5.LINE_BREAK;
         var lastPart = this._streams.length === 0;
         if (lastPart) {
           footer += this._lastBoundary();
@@ -14431,10 +14431,10 @@ var require_form_data = __commonJS({
         next(footer);
       }.bind(this);
     };
-    FormData3.prototype._lastBoundary = function() {
-      return "--" + this.getBoundary() + "--" + FormData3.LINE_BREAK;
+    FormData5.prototype._lastBoundary = function() {
+      return "--" + this.getBoundary() + "--" + FormData5.LINE_BREAK;
     };
-    FormData3.prototype.getHeaders = function(userHeaders) {
+    FormData5.prototype.getHeaders = function(userHeaders) {
       var header;
       var formHeaders = {
         "content-type": "multipart/form-data; boundary=" + this.getBoundary()
@@ -14446,16 +14446,16 @@ var require_form_data = __commonJS({
       }
       return formHeaders;
     };
-    FormData3.prototype.setBoundary = function(boundary) {
+    FormData5.prototype.setBoundary = function(boundary) {
       this._boundary = boundary;
     };
-    FormData3.prototype.getBoundary = function() {
+    FormData5.prototype.getBoundary = function() {
       if (!this._boundary) {
         this._generateBoundary();
       }
       return this._boundary;
     };
-    FormData3.prototype.getBuffer = function() {
+    FormData5.prototype.getBuffer = function() {
       var dataBuffer = new Buffer.alloc(0);
       var boundary = this.getBoundary();
       for (var i2 = 0, len = this._streams.length; i2 < len; i2++) {
@@ -14466,20 +14466,20 @@ var require_form_data = __commonJS({
             dataBuffer = Buffer.concat([dataBuffer, Buffer.from(this._streams[i2])]);
           }
           if (typeof this._streams[i2] !== "string" || this._streams[i2].substring(2, boundary.length + 2) !== boundary) {
-            dataBuffer = Buffer.concat([dataBuffer, Buffer.from(FormData3.LINE_BREAK)]);
+            dataBuffer = Buffer.concat([dataBuffer, Buffer.from(FormData5.LINE_BREAK)]);
           }
         }
       }
       return Buffer.concat([dataBuffer, Buffer.from(this._lastBoundary())]);
     };
-    FormData3.prototype._generateBoundary = function() {
+    FormData5.prototype._generateBoundary = function() {
       var boundary = "--------------------------";
       for (var i2 = 0; i2 < 24; i2++) {
         boundary += Math.floor(Math.random() * 10).toString(16);
       }
       this._boundary = boundary;
     };
-    FormData3.prototype.getLengthSync = function() {
+    FormData5.prototype.getLengthSync = function() {
       var knownLength = this._overheadLength + this._valueLength;
       if (this._streams.length) {
         knownLength += this._lastBoundary().length;
@@ -14489,14 +14489,14 @@ var require_form_data = __commonJS({
       }
       return knownLength;
     };
-    FormData3.prototype.hasKnownLength = function() {
+    FormData5.prototype.hasKnownLength = function() {
       var hasKnownLength = true;
       if (this._valuesToMeasure.length) {
         hasKnownLength = false;
       }
       return hasKnownLength;
     };
-    FormData3.prototype.getLength = function(cb) {
+    FormData5.prototype.getLength = function(cb) {
       var knownLength = this._overheadLength + this._valueLength;
       if (this._streams.length) {
         knownLength += this._lastBoundary().length;
@@ -14516,7 +14516,7 @@ var require_form_data = __commonJS({
         cb(null, knownLength);
       });
     };
-    FormData3.prototype.submit = function(params, cb) {
+    FormData5.prototype.submit = function(params, cb) {
       var request, options, defaults = { method: "post" };
       if (typeof params == "string") {
         params = parseUrl(params);
@@ -14561,14 +14561,14 @@ var require_form_data = __commonJS({
       }.bind(this));
       return request;
     };
-    FormData3.prototype._error = function(err) {
+    FormData5.prototype._error = function(err) {
       if (!this.error) {
         this.error = err;
         this.pause();
         this.emit("error", err);
       }
     };
-    FormData3.prototype.toString = function() {
+    FormData5.prototype.toString = function() {
       return "[object FormData]";
     };
   }
@@ -14580,7 +14580,7 @@ __export(main_exports, {
   default: () => OCRLatexPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian = require("obsidian");
+var import_obsidian2 = require("obsidian");
 var import_electron = require("electron");
 
 // node_modules/node-fetch/src/index.js
@@ -15864,102 +15864,265 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
   });
 }
 
-// src/main.ts
+// src/pic2tex.ts
 var import_form_data = __toESM(require_form_data());
-var DEFAULT_SETTINGS = {
-  token: "",
-  selfHosted: false,
-  url: "https://server.simpletex.cn/api/latex_ocr",
-  username: "",
-  password: ""
+
+// src/tex-wrapper.ts
+var TexWrapper = class {
+  constructor(isMultiline) {
+    this.isMultiline = false;
+    this.isMultiline = isMultiline;
+  }
+  async sendRequest(image) {
+    const res = await this.getTex(image);
+    if (this.isMultiline)
+      return `$$ ${res}$$`;
+    return `$${res}$`;
+  }
 };
-var OCRLatexPlugin = class extends import_obsidian.Plugin {
-  async sendSimpleTexRequest(image) {
+
+// src/pic2tex.ts
+var Pic2Tex = class extends TexWrapper {
+  constructor(isMultiline, settings) {
+    super(isMultiline);
+    this.settings = settings;
+  }
+  async getTex(image) {
     const formData = new import_form_data.default();
     formData.append("file", image, {
       filename: "test.png",
       contentType: "image/png"
     });
     let response;
-    if (this.settings.selfHosted) {
-      let options = {
-        method: "POST",
-        body: formData
+    let options = {
+      method: "POST",
+      body: formData
+    };
+    if (this.settings.pix2tex.username && this.settings.pix2tex.password) {
+      options.headers = {
+        Authorization: `Basic ${btoa(`${this.settings.pix2tex.username}:${this.settings.pix2tex.password}`)}`
       };
-      if (this.settings.username && this.settings.password) {
-        options.headers = {
-          Authorization: `Basic ${btoa(`${this.settings.username}:${this.settings.password}`)}`
-        };
-      }
-      response = await fetch(this.settings.url, options);
-    } else {
-      response = await fetch(this.settings.url, {
-        method: "POST",
-        headers: {
-          token: this.settings.token
-        },
-        body: formData
-      });
     }
+    response = await fetch(this.settings.pix2tex.url, options);
     if (!response.ok)
-      response;
-    if (this.settings.selfHosted) {
-      const jsonString = await response.text();
-      let latexText = jsonString.substring(1, jsonString.length - 1);
-      latexText = latexText.replace(/\\\\/g, "\\");
-      const simpleTexResponse = {
-        status: true,
-        res: {
-          latex: latexText,
-          conf: 1
-        },
-        request_id: "docker_request"
-      };
-      return simpleTexResponse;
-    } else {
-      const data = await response.json();
-      console.log(data);
-      return data;
-    }
+      throw response;
+    const jsonString = await response.text();
+    let latexText = jsonString.substring(1, jsonString.length - 1);
+    latexText = latexText.replace(/\\\\/g, "\\");
+    return latexText;
   }
-  async insertLatexFromClipboard(isMultiline = false) {
-    console.log(import_electron.clipboard.availableFormats());
-    const view = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
-    const cursor = view == null ? void 0 : view.editor.getCursor();
-    const editor = view == null ? void 0 : view.editor;
-    if (!cursor || !editor) {
-      alert(
-        "No focus on editor, please insert cursor in a document then run command again."
-      );
-      return;
+};
+
+// src/simple-tex.ts
+var import_form_data2 = __toESM(require_form_data());
+var SimpleTex = class extends TexWrapper {
+  constructor(isMultiline, settings) {
+    super(isMultiline);
+    this.settings = settings;
+  }
+  async getTex(image) {
+    const formData = new import_form_data2.default();
+    formData.append("file", image, {
+      filename: "test.png",
+      contentType: "image/png"
+    });
+    let response;
+    response = await fetch("https://server.simpletex.cn/api/latex_ocr", {
+      method: "POST",
+      headers: {
+        token: this.settings.simpleTexToken
+      },
+      body: formData
+    });
+    if (!response.ok) {
+      console.error("Simpletext response", response);
+      alert("Simple TEX not working properly, see logs.");
     }
+    const resText = await response.text();
+    console.log("Simple tex response", resText);
+    const data = JSON.parse(resText);
+    console.log("Simple tex data");
+    return data.res.latex;
+  }
+};
+
+// src/texify.ts
+var import_form_data3 = __toESM(require_form_data());
+var Texify = class {
+  constructor(settings) {
+    this.settings = settings;
+  }
+  async sendRequest(image) {
+    const formData = new import_form_data3.default();
+    formData.append("image", image, {
+      filename: "image.png",
+      contentType: "image/png"
+    });
+    let options = {
+      method: "POST",
+      body: formData
+    };
+    if (this.settings.username && this.settings.password) {
+      options.headers = {
+        Authorization: `Basic ${btoa(`${this.settings.username}:${this.settings.password}`)}`
+      };
+    }
+    const response = await fetch(this.settings.url, options);
+    const parsed = await response.json();
+    console.log(parsed);
+    return parsed.results[0];
+  }
+};
+
+// src/settings.ts
+var import_obsidian = require("obsidian");
+var DEFAULT_SETTINGS = {
+  simpleTexToken: "",
+  latexProvider: "SimpleTex",
+  texify: {
+    url: "http://127.0.0.1:5000/predict",
+    username: "",
+    password: ""
+  },
+  pix2tex: {
+    url: "http://127.0.0.1:8502/predict/",
+    username: "",
+    password: ""
+  }
+};
+var OCRLatexSettings = class extends import_obsidian.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+  renderSelfHostedOptions(obj, containerEl, endWithSlash) {
+    new import_obsidian.Setting(containerEl).setName("URL").setDesc(
+      "The URL for the API endpoint, only active when self-hosted is enabled."
+    ).addText(
+      (text) => text.setPlaceholder("Enter your URL").setValue(obj.url).onChange(async (value) => {
+        if (!value.endsWith("/") && endWithSlash)
+          value += "/";
+        if (value.endsWith("/") && !endWithSlash)
+          value = value.slice(0, -1);
+        obj.url = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian.Setting(containerEl).setName("Username (self-hosted optional)").setDesc(
+      "Your username for authentication. If you use self-hosted and a basic auth proxy before the container."
+    ).addText(
+      (text) => text.setPlaceholder("Enter your username").setValue(obj.username).onChange(async (value) => {
+        obj.username = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian.Setting(containerEl).setName("Password (self-hosted optional)").setDesc(
+      "Your password for authentication. If you use self-hosted and a basic auth proxy before the container."
+    ).addText(
+      (text) => text.setPlaceholder("Enter your password").setValue(obj.password).onChange(async (value) => {
+        obj.password = value;
+        await this.plugin.saveSettings();
+      })
+    );
+  }
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    const readmeURL = "https://github.com/Hugo-Persson/obsidian-ocrlatex/blob/master/README.md";
+    containerEl.createEl("h1", { text: "Image2Latex" });
+    containerEl.createEl("div", { text: "Please see the README.md for info on how to configure the extension" });
+    containerEl.createEl("a", { href: readmeURL, text: readmeURL });
+    containerEl.createEl("h2", { text: "General" });
+    new import_obsidian.Setting(containerEl).setName("Latex provider").setDesc("Choose which provider to use for OCR and Latex conversion").addDropdown((dropdown) => {
+      dropdown.addOptions({
+        "SimpleTex": "SimpleTex",
+        "Pix2Tex": "Pix2Tex"
+      }).setValue(this.plugin.settings.latexProvider).onChange(async (value) => {
+        this.plugin.settings.latexProvider = value;
+        await this.plugin.saveSettings();
+      });
+    });
+    containerEl.createEl("h2", { text: "Texify" });
+    this.renderSelfHostedOptions(this.plugin.settings.texify, containerEl, false);
+    containerEl.createEl("h2", { text: "Pix2Tex" });
+    this.renderSelfHostedOptions(this.plugin.settings.pix2tex, containerEl, true);
+    containerEl.createEl("h2", { text: "SimpleTex" });
+    new import_obsidian.Setting(containerEl).setName("Token").setDesc(
+      "Your SimpleTexToken, see README.md for more info."
+    ).addText(
+      (text) => text.setPlaceholder("Enter token...").setValue(this.plugin.settings.simpleTexToken).onChange(async (value) => {
+        this.plugin.settings.simpleTexToken = value;
+        await this.plugin.saveSettings();
+      })
+    );
+  }
+};
+
+// src/editor-interact.ts
+var loadingText = `Loading latex...`;
+var EditorInteract = class {
+  constructor(view) {
+    this.view = view;
+    this.cursor = view.editor.getCursor();
+    this.editor = view.editor;
+  }
+  insertLoadingText() {
+    this.editor.replaceRange(loadingText, this.cursor);
+    this.editor.setCursor({
+      line: this.cursor.line,
+      ch: this.cursor.ch + loadingText.length
+    });
+  }
+  insertResponseToEditor(res) {
+    this.view.editor.replaceRange(res, this.cursor, {
+      // Insert the response
+      ch: this.cursor.ch + loadingText.length,
+      // We replace the loading text
+      line: this.cursor.line
+    });
+  }
+};
+
+// src/main.ts
+function getLatexProvider(isMultiline, settings) {
+  if (settings.latexProvider === "SimpleTex") {
+    return new SimpleTex(isMultiline, settings);
+  } else {
+    return new Pic2Tex(isMultiline, settings);
+  }
+}
+var OCRLatexPlugin = class extends import_obsidian2.Plugin {
+  getClipboardImage() {
     const hasImageCopied = import_electron.clipboard.availableFormats().includes("image/png") || import_electron.clipboard.availableFormats().includes("image/jpeg");
     if (!hasImageCopied) {
       alert(
         "No image found in clipboard, please copy an image then run command again."
       );
-      return;
+      return null;
     }
-    const loadingText = `Loading latex...`;
-    editor.replaceRange(loadingText, cursor);
-    editor.setCursor({
-      line: cursor.line,
-      ch: cursor.ch + loadingText.length
-    });
-    const image = import_electron.clipboard.readImage().toPNG();
-    const data = await this.sendSimpleTexRequest(image);
-    console.log(data);
-    let parsedLatex;
-    if (isMultiline)
-      parsedLatex = `$$ ${data.res.latex}$$`;
-    else
-      parsedLatex = `$${data.res.latex}$`;
-    view == null ? void 0 : view.editor.replaceRange(parsedLatex, cursor, {
-      // Insert the response
-      ch: cursor.ch + loadingText.length,
-      // We replace the loading text
-      line: cursor.line
-    });
+    return import_electron.clipboard.readImage().toPNG();
+  }
+  async insert(provider) {
+    try {
+      const view = this.app.workspace.getActiveViewOfType(import_obsidian2.MarkdownView);
+      if (!view) {
+        alert("No markdown view found, please open a markdown file.");
+        return;
+      }
+      const editorInteract = new EditorInteract(view);
+      const image = this.getClipboardImage();
+      if (!image)
+        return;
+      editorInteract.insertLoadingText();
+      const parsedLatex = await provider.sendRequest(image);
+      console.log(parsedLatex);
+      editorInteract.insertResponseToEditor(parsedLatex);
+    } catch (error) {
+      console.error(error);
+      alert(
+        "Error while fetching latex, please check the console for more information."
+      );
+    }
   }
   async onload() {
     await this.loadSettings();
@@ -15967,14 +16130,25 @@ var OCRLatexPlugin = class extends import_obsidian.Plugin {
       id: "generate-latex-from-last-image-multiline",
       name: "Generate multiline LaTeX from last image to clipboard",
       callback: () => {
-        this.insertLatexFromClipboard(true);
+        this.insert(
+          getLatexProvider(true, this.settings)
+        );
       }
     });
     this.addCommand({
       id: "generate-latex-from-last-image-inline",
       name: "Generate inline LaTeX from last image to clipboard",
       callback: () => {
-        this.insertLatexFromClipboard(false);
+        this.insert(
+          getLatexProvider(false, this.settings)
+        );
+      }
+    });
+    this.addCommand({
+      id: "generate-markdown-from-last-image",
+      name: "Generate markdown from last image to clipboard using Texify",
+      callback: async () => {
+        this.insert(new Texify(this.settings.texify));
       }
     });
     this.addSettingTab(new OCRLatexSettings(this.app, this));
@@ -15990,59 +16164,6 @@ var OCRLatexPlugin = class extends import_obsidian.Plugin {
   }
   async saveSettings() {
     await this.saveData(this.settings);
-  }
-};
-var OCRLatexSettings = class extends import_obsidian.PluginSettingTab {
-  constructor(app, plugin) {
-    super(app, plugin);
-    this.plugin = plugin;
-  }
-  display() {
-    const { containerEl } = this;
-    containerEl.empty();
-    new import_obsidian.Setting(containerEl).setName("Your token").setDesc(
-      "The token for SimpleTEX, see how to get here https://github.com/Hugo-Persson/obsidian-ocrlatex"
-    ).addText(
-      (text) => text.setPlaceholder("Enter your token").setValue(this.plugin.settings.token).onChange(async (value) => {
-        this.plugin.settings.token = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian.Setting(containerEl).setName("Use Docker").setDesc(
-      "Enable this option if you want to use a self-hosted Docker API."
-    ).addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings.selfHosted).onChange(async (value) => {
-        this.plugin.settings.selfHosted = value;
-        await this.plugin.saveSettings();
-        const pluginId = this.plugin.manifest.id;
-      })
-    );
-    new import_obsidian.Setting(containerEl).setName("URL").setDesc(
-      "The URL for the API endpoint, only active when self-hosted is enabled."
-    ).addText(
-      (text) => text.setPlaceholder("Enter your URL").setValue(this.plugin.settings.url).onChange(async (value) => {
-        if (!value.endsWith("/"))
-          value += "/";
-        this.plugin.settings.url = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian.Setting(containerEl).setName("Username (self-hosted optional)").setDesc(
-      "Your username for authentication. If you use self-hosted and a basic auth proxy before the container."
-    ).addText(
-      (text) => text.setPlaceholder("Enter your username").setValue(this.plugin.settings.username).onChange(async (value) => {
-        this.plugin.settings.username = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian.Setting(containerEl).setName("Password (self-hosted optional)").setDesc(
-      "Your password for authentication. If you use self-hosted and a basic auth proxy before the container."
-    ).addText(
-      (text) => text.setPlaceholder("Enter your password").setValue(this.plugin.settings.password).onChange(async (value) => {
-        this.plugin.settings.password = value;
-        await this.plugin.saveSettings();
-      })
-    );
   }
 };
 // Annotate the CommonJS export names for ESM import in node:
@@ -16083,3 +16204,5 @@ mime-types/index.js:
    * MIT Licensed
    *)
 */
+
+/* nosourcemap */

@@ -2,9 +2,11 @@
 title: 放弃纠结、拥抱妥协，重器轻用就是高效
 banner: "https://cdn.sspai.com/2022/02/21/88f0c0c3d31e13ff8e8c004893de5394.png "
 banner_icon: 🔖
-tag:
+tag: 
 dtype: Simpread
 state: true
+created: 2023-11-11T22:36
+updated: 2024-04-13T12:49
 ---
 
 # 放弃纠结、拥抱妥协，重器轻用就是高效

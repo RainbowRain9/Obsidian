@@ -1,3 +1,7 @@
+---
+created: 2023-11-22T20:29
+updated: 2023-11-24T16:57
+---
 obsidian-file-link
 obsidian-view-mode-by-frontmatter
 remember-cursor-position

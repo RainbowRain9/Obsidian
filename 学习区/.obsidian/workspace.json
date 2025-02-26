@@ -17,20 +17,36 @@
                 "mode": "source",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "第三章微值中分定理与导数的应用"
             }
           },
           {
             "id": "52423a1198c7a2ac",
             "type": "leaf",
             "state": {
+              "type": "mindmapview",
+              "state": {
+                "file": "01-高等数学/笔记库/3.1 微分中值定理-Xmind.md"
+              },
+              "icon": "blocks",
+              "title": "3.1 微分中值定理-Xmind"
+            }
+          },
+          {
+            "id": "740a8df5e3b6a475",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "01-高等数学/笔记库/3.1 微分中值定理-Xmind.md",
+                "file": "_Templates/home.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "home"
             }
           }
         ],
@@ -50,7 +66,9 @@
                 "mode": "source",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "柯西中值定理"
             }
           }
         ]
@@ -74,7 +92,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -89,7 +109,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -97,7 +119,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           },
           {
@@ -105,7 +129,9 @@
             "type": "leaf",
             "state": {
               "type": "langr-search-panel",
-              "state": {}
+              "state": {},
+              "icon": "book",
+              "title": "查词面板"
             }
           }
         ]
@@ -120,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "recent-files",
-              "state": {}
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
             }
           },
           {
@@ -128,15 +156,16 @@
             "type": "leaf",
             "state": {
               "type": "surfing-tab-tree",
-              "state": {}
+              "state": {},
+              "icon": "chrome",
+              "title": "Surfing Tab Tree"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -154,7 +183,9 @@
               "type": "outline",
               "state": {
                 "file": "01-高等数学/笔记库/3.1 微分中值定理-Xmind.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "3.1 微分中值定理-Xmind 的大纲"
             }
           },
           {
@@ -164,7 +195,9 @@
               "type": "file-properties",
               "state": {
                 "file": "01-高等数学/笔记库/3.1 微分中值定理-Xmind.md"
-              }
+              },
+              "icon": "lucide-info",
+              "title": "3.1 微分中值定理-Xmind的笔记属性"
             }
           },
           {
@@ -172,7 +205,9 @@
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           },
           {
@@ -181,8 +216,12 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
-              }
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
             }
           },
           {
@@ -190,7 +229,9 @@
             "type": "leaf",
             "state": {
               "type": "todo",
-              "state": {}
+              "state": {},
+              "icon": "checkmark",
+              "title": "Todo List"
             }
           },
           {
@@ -198,10 +239,23 @@
             "type": "leaf",
             "state": {
               "type": "langr-learn-panel",
-              "state": {}
+              "state": {},
+              "icon": "reading-glasses",
+              "title": "学习新单词"
+            }
+          },
+          {
+            "id": "bc0285754c9739ec",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "笔记复习序列"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       },
       {
         "id": "0b3485207df574dd",
@@ -222,7 +276,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "3.1 微分中值定理-Xmind 的反向链接列表"
             }
           },
           {
@@ -234,7 +290,9 @@
                 "file": "01-高等数学/笔记库/3.1 微分中值定理-Xmind.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "3.1 微分中值定理-Xmind 的出链列表"
             }
           },
           {
@@ -245,7 +303,9 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -253,7 +313,9 @@
             "type": "leaf",
             "state": {
               "type": "quiet-outline",
-              "state": {}
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
             }
           }
         ],

@@ -7,6 +7,8 @@ tags:
 subject: 高等数学
 updated time: 2024-04-13 12:53:50
 created time: 2023-11-20 18:15:29
+created: 2023-11-20T18:15
+updated: 2024-04-13T12:54
 ---
 ## 诱导公式
 $$

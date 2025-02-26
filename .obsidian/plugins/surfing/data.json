@@ -39,6 +39,18 @@
     ],
     "defaultFilterType": "menu"
   },
-  "treeData": [],
+  "treeData": [
+    {
+      "id": "aa1230322234e90a",
+      "parent": 0,
+      "droppable": true,
+      "text": "AudioMass - Audio Editor",
+      "data": {
+        "fileType": "site",
+        "fileSize": "",
+        "icon": {}
+      }
+    }
+  ],
   "enableHtmlPreview": true
 }

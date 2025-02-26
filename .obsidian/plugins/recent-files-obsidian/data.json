@@ -1,36 +1,152 @@
 {
   "recentFiles": [
     {
-      "basename": "day01-Java基础语法",
-      "path": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md"
+      "basename": "大英3",
+      "path": "学习区/02-大学英语/四级真题/作文/大英3.md"
     },
     {
-      "basename": "1",
-      "path": "学习区/07-Java/day01-Java入门/笔记/assets/1.png"
+      "basename": "02 How long does it take to get over a breakup",
+      "path": "学习区/02-大学英语/听力库/02 How long does it take to get over a breakup.md"
     },
     {
-      "basename": "day02-Java基础语法",
-      "path": "学习区/07-Java/day02-Java基础概念/笔记/day02-Java基础语法.md"
+      "basename": "题目5：提案 (Proposal) 学校开新俱乐部",
+      "path": "学习区/02-大学英语/四级真题/作文/题目5：提案 (Proposal) 学校开新俱乐部.md"
+    },
+    {
+      "basename": "议论文",
+      "path": "学习区/02-大学英语/四级真题/作文/议论文.md"
+    },
+    {
+      "basename": "期末复习",
+      "path": "学习区/09-马克思主义基本原理/期末复习.md"
+    },
+    {
+      "basename": "医疗保健系统",
+      "path": "学习区/02-大学英语/四级真题/翻译/医疗保健系统.md"
+    },
+    {
+      "basename": "改革开放与饮食升级",
+      "path": "学习区/02-大学英语/四级真题/翻译/改革开放与饮食升级.md"
     },
     {
       "basename": "🏡Home",
       "path": "🏡Home.md"
     },
     {
-      "basename": "ios 命名空间中常用的成员",
-      "path": "学习区/04-C++/概念库/ios 命名空间中常用的成员.md"
+      "basename": "review",
+      "path": "学习区/02-大学英语/单词库/review.md"
     },
     {
-      "basename": "getline 函数",
-      "path": "学习区/04-C++/概念库/getline 函数.md"
+      "basename": "Viewer",
+      "path": "个人区/1-生活/Viewer.md"
     },
     {
-      "basename": "get 函数",
-      "path": "学习区/04-C++/概念库/get 函数.md"
+      "basename": "PicGo",
+      "path": "个人区/3-知识宝箱/T 技术/TP393 网址工具/PicGo.md"
     },
     {
-      "basename": "read 函数",
-      "path": "学习区/04-C++/概念库/read 函数.md"
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT1M11.228S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT1M11.228S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT57.964S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT57.964S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT1M20.792S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT1M20.792S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT11M14.844S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT11M14.844S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT11M46.568S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT11M46.568S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT16M1.599S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT16M1.599S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT18M56.853S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT18M56.853S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT20M20.462S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT20M20.462S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT24M14.587S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT24M14.587S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT25M51.759S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT25M51.759S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT28M50.543S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT28M50.543S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT27M41.866S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT27M41.866S.jpeg"
+    },
+    {
+      "basename": "【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT31M30.193S",
+      "path": "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT31M30.193S.jpeg"
+    },
+    {
+      "basename": "01-Movie",
+      "path": "学习区/08-概率统计/01-Movie.md"
+    },
+    {
+      "basename": "2.1  矩阵的运算-Xmind",
+      "path": "学习区/07-线性代数/笔记库/2.1  矩阵的运算-Xmind.md"
+    },
+    {
+      "basename": "思维导图模板",
+      "path": "学习区/_Templates/tp/思维导图模板.md"
+    },
+    {
+      "basename": "微博被拿下？批量处理工具用起来就是屌！",
+      "path": "个人区/6-SimpRead/微博被拿下？批量处理工具用起来就是屌！.md"
+    },
+    {
+      "basename": "Obsidian插件Folder Note：轻松打造层级化笔记系统",
+      "path": "个人区/6-SimpRead/Obsidian插件Folder Note：轻松打造层级化笔记系统.md"
+    },
+    {
+      "basename": "应急响应-逆向工具箱",
+      "path": "个人区/6-SimpRead/应急响应-逆向工具箱.md"
+    },
+    {
+      "basename": "1.3MB小工具，让你的电脑好用100倍！",
+      "path": "个人区/6-SimpRead/T 技术/TP317 计算机软件/1.3MB小工具，让你的电脑好用100倍！.md"
+    },
+    {
+      "basename": "很遗憾，卷绩点的人不懂这个大学开挂密码",
+      "path": "个人区/6-SimpRead/很遗憾，卷绩点的人不懂这个大学开挂密码.md"
+    },
+    {
+      "basename": "Obsidian最强插件Dataview，基础入门讲解",
+      "path": "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian最强插件Dataview，基础入门讲解.md"
+    },
+    {
+      "basename": "百度网盘、阿里云盘、Chrome、Edge 都能用，就连 LocalSend 和 7z 都能用，你就说有用没？",
+      "path": "个人区/6-SimpRead/百度网盘、阿里云盘、Chrome、Edge 都能用，就连 LocalSend 和 7z 都能用，你就说有用没？.md"
+    },
+    {
+      "basename": "Z-library又凉凉了，此为最佳代替品！",
+      "path": "个人区/6-SimpRead/Z-library又凉凉了，此为最佳代替品！.md"
+    },
+    {
+      "basename": "Zotero不好用！计算机专业博士生，手搓一款开源免费且强大的文献管理神器！",
+      "path": "个人区/6-SimpRead/Zotero不好用！计算机专业博士生，手搓一款开源免费且强大的文献管理神器！.md"
+    },
+    {
+      "basename": "个性化打造，Obsidian背景美化，让工作空间焕然一新",
+      "path": "个人区/6-SimpRead/个性化打造，Obsidian背景美化，让工作空间焕然一新.md"
     },
     {
       "basename": "10.1 二重积分的概念和性质-Xmind",
@@ -69,16 +185,8 @@
       "path": "学习区/01-高等数学/笔记库/10.2(1) 直角坐标系下二重积分的计算-Xmind.md"
     },
     {
-      "basename": "医疗保健系统",
-      "path": "学习区/02-大学英语/四级真题/翻译/医疗保健系统.md"
-    },
-    {
       "basename": "题目1：时间管理的重要性",
       "path": "学习区/02-大学英语/四级真题/作文/题目1：时间管理的重要性.md"
-    },
-    {
-      "basename": "题目5：提案 (Proposal) 学校开新俱乐部",
-      "path": "学习区/02-大学英语/四级真题/作文/题目5：提案 (Proposal) 学校开新俱乐部.md"
     },
     {
       "basename": "题目4：观点讨论 社交媒体对年轻人的影响",
@@ -87,119 +195,14 @@
     {
       "basename": "题目3：感谢信 给导师的感谢信",
       "path": "学习区/02-大学英语/四级真题/作文/题目3：感谢信 给导师的感谢信.md"
-    },
-    {
-      "basename": "题目2：描述图画",
-      "path": "学习区/02-大学英语/四级真题/作文/题目2：描述图画.md"
-    },
-    {
-      "basename": "议论文",
-      "path": "学习区/02-大学英语/四级真题/作文/议论文.md"
-    },
-    {
-      "basename": "2023年3月（第1套）",
-      "path": "学习区/02-大学英语/四级真题/听力/2023年3月（第1套）.md"
-    },
-    {
-      "basename": "2022年12月（第2套）",
-      "path": "学习区/02-大学英语/四级真题/听力/2022年12月（第2套）.md"
-    },
-    {
-      "basename": "word",
-      "path": "学习区/02-大学英语/单词库/word.md"
-    },
-    {
-      "basename": "2024-06-10_星期一",
-      "path": "个人区/1-生活/日记/2024-06-10_星期一.md"
-    },
-    {
-      "basename": "review",
-      "path": "学习区/02-大学英语/单词库/review.md"
-    },
-    {
-      "basename": "Text 10",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 10.md"
-    },
-    {
-      "basename": "Text 9",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 9.md"
-    },
-    {
-      "basename": "2024-06-06_星期四",
-      "path": "个人区/1-生活/日记/2024-06-06_星期四.md"
-    },
-    {
-      "basename": "Text 8",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 8.md"
-    },
-    {
-      "basename": "Text 7",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 7.md"
-    },
-    {
-      "basename": "Text 5",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 5.md"
-    },
-    {
-      "basename": "Text 6",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 6.md"
-    },
-    {
-      "basename": "Text 4",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 4.md"
-    },
-    {
-      "basename": "Text 3",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 3.md"
-    },
-    {
-      "basename": "Text 1",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 1.md"
-    },
-    {
-      "basename": "Text 2",
-      "path": "学习区/02-大学英语/四级真题/阅读/Text 2.md"
-    },
-    {
-      "basename": "2023年12月（第2套）",
-      "path": "学习区/02-大学英语/四级真题/听力/2023年12月（第2套）.md"
-    },
-    {
-      "basename": "2023年12月（第1套）",
-      "path": "学习区/02-大学英语/四级真题/听力/2023年12月（第1套）.md"
-    },
-    {
-      "basename": "改革开放与饮食升级",
-      "path": "学习区/02-大学英语/四级真题/翻译/改革开放与饮食升级.md"
-    },
-    {
-      "basename": "中国饮食变迁：从温饱到健康",
-      "path": "学习区/02-大学英语/四级真题/翻译/中国饮食变迁：从温饱到健康.md"
-    },
-    {
-      "basename": "健康饮食：中国政府的民生关怀",
-      "path": "学习区/02-大学英语/四级真题/翻译/健康饮食：中国政府的民生关怀.md"
-    },
-    {
-      "basename": "02 How long does it take to get over a breakup",
-      "path": "学习区/02-大学英语/听力库/02 How long does it take to get over a breakup.md"
-    },
-    {
-      "basename": "LingQ模板",
-      "path": "学习区/_Templates/tp/LingQ模板.md"
-    },
-    {
-      "basename": "button",
-      "path": "学习区/_Templates/button.md"
-    },
-    {
-      "basename": "01 Is it really that bad to marry my cousin",
-      "path": "学习区/02-大学英语/听力库/01 Is it really that bad to marry my cousin.md"
     }
   ],
   "omittedPaths": [
     ""
   ],
+  "omittedTags": [],
+  "updateOn": "file-open",
+  "omitBookmarks": false,
   "maxLength": 50,
   "openType": "tab"
 }

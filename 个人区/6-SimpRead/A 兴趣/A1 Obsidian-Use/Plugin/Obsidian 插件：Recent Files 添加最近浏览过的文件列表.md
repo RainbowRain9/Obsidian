@@ -5,10 +5,12 @@ date: 2023-11-13 00:28:52
 tags:
   - 400兴趣类/Obsidian/Plugin
 source: Pkmer
-banner:
+banner: 
 banner_icon: 🔖
 dtype: 插件
 state: true
+created: 2023-11-13T00:28
+updated: 2024-04-13T12:49
 ---
 <div class="menu-toggle"> <SidebarToggle client:idle ></SidebarToggle> </div>
 

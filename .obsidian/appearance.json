@@ -1,7 +1,7 @@
 {
   "accentColor": "#7abdff",
   "cssTheme": "AnuPpuccin",
-  "textFontFamily": "苹方-港,仓耳今楷05,仓耳兰楷,Maple Mono NF",
+  "textFontFamily": ".苹方-港,仓耳今楷05,苹方-港,仓耳兰楷,Maple Mono NF",
   "interfaceFontFamily": "仓耳兰楷",
   "theme": "obsidian",
   "enabledCssSnippets": [

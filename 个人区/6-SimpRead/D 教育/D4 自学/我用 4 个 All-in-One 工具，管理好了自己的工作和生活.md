@@ -1,6 +1,8 @@
 ---
 id: b402866b-2b35-4f16-be30-2cf2039bfa09
 state: false
+created: 2023-11-16T21:34
+updated: 2024-04-13T12:49
 ---
 
 # 我用 4 个 All-in-One 工具，管理好了自己的工作和生活

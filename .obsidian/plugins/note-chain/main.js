@@ -7,6 +7,9 @@ var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __esm = (fn, res) => function __init() {
+  return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
+};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -21,97 +24,76 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// main.ts
-var main_exports = {};
-__export(main_exports, {
-  default: () => NoteChainPlugin
-});
-module.exports = __toCommonJS(main_exports);
-var import_obsidian3 = require("obsidian");
-
-// src/NCEditor.ts
-var NCEditor = class {
-  constructor(app2) {
-    this.app = app2;
-  }
-  async set_frontmatter(tfile, key, value) {
-    let prev = this.get_frontmatter(tfile, key);
-    if (prev === value) {
-      return;
-    }
-    await this.app.fileManager.processFrontMatter(tfile, (fm) => {
-      console.log(`${tfile.basename}---${key}---${value}`);
-      fm[key] = value;
-    });
-  }
-  get_frontmatter(tfile, key) {
-    let meta = this.app.metadataCache.getFileCache(tfile);
-    if (meta == null ? void 0 : meta.frontmatter) {
-      return meta.frontmatter[key];
-    }
-  }
-  regexp_link(tfile, mode) {
-    if (mode === "link") {
-      return new RegExp(`\\[\\[${tfile.basename}\\|?.*\\]\\]`, "g");
-    }
-    if (mode === "para") {
-      return new RegExp(`.*\\[\\[${tfile.basename}\\|?.*\\]\\].*`, "g");
-    }
-  }
-  sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-  concat_array(items) {
-    if (items == null) {
-      return [];
-    }
-    if (typeof items === "string") {
-      return [items];
-    }
-    if (!(items instanceof Array)) {
-      return [items];
-    }
-    let res = [];
-    for (let item of items) {
-      if (typeof item === "string") {
-        res.push(item);
-      } else if (item instanceof Array) {
-        res = res.concat(this.concat_array(item));
-      } else {
-        res.push(item);
-      }
-    }
-    return res;
-  }
-  async replace(tfile, regex, target) {
-    if (typeof regex === "string") {
-      await this.app.vault.process(tfile, (data) => {
-        if (data.indexOf(regex) > -1) {
-          console.log("Replace: ", tfile.path);
-          return data.replace(regex, target);
-        }
-        return data;
-      });
-    } else if (regex instanceof RegExp) {
-      await this.app.vault.process(tfile, (data) => {
-        if (data.match(regex)) {
-          console.log("Replace: ", tfile.path);
-          return data.replace(regex, target);
-        }
-        return data;
-      });
-    }
-  }
-};
-
-// src/NoteChain.ts
-var import_obsidian = require("obsidian");
-
 // src/utils.ts
-function get_tp_func(app2, target) {
-  let templater = app2.plugins.getPlugin(
+var utils_exports = {};
+__export(utils_exports, {
+  array_prefix_id: () => array_prefix_id,
+  check_value: () => check_value,
+  concat_array: () => concat_array,
+  get_customjs_func: () => get_customjs_func,
+  get_plugins: () => get_plugins,
+  get_str_func: () => get_str_func,
+  get_tp_func: () => get_tp_func,
+  get_tp_user_func: () => get_tp_user_func,
+  parse_templater: () => parse_templater,
+  templater$1: () => templater$1,
+  toogle_note_css: () => toogle_note_css
+});
+function get_plugins(app, name) {
+}
+function array_prefix_id(items, offset = 1) {
+  let res = new Array();
+  let N = items.length.toString().length;
+  for (let i = 0; i < items.length; i++) {
+    let id = (i + offset).toString().padStart(N, "0");
+    res.push(`${id} \u{1F525} ${items[i]}`);
+  }
+  return res;
+}
+function concat_array(items) {
+  if (items == null) {
+    return [];
+  }
+  if (typeof items === "string") {
+    return [items];
+  }
+  if (!(items instanceof Array)) {
+    return [items];
+  }
+  let res = [];
+  for (let item of items) {
+    if (typeof item === "string") {
+      res.push(item);
+    } else if (item instanceof Array) {
+      res = res.concat(this.concat_array(item));
+    } else {
+      res.push(item);
+    }
+  }
+  return res;
+}
+async function check_value(t, k, v, dt, T) {
+  let i = 0;
+  while (t[k] == null || !(t[k] === v)) {
+    await sleep(dt);
+    i = dt + dt;
+    if (i > T) {
+      break;
+    }
+  }
+  if (t[k] && t[k] === v) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function get_tp_func(app, target) {
+  let templater = app.plugins.getPlugin(
     "templater-obsidian"
   );
+  if (!templater) {
+    return null;
+  }
   let items = target.split(".");
   if (items[0].localeCompare("tp") != 0 || items.length != 3) {
     return void 0;
@@ -124,25 +106,848 @@ function get_tp_func(app2, target) {
   }
   return modules[0].static_functions.get(items[2]);
 }
+async function get_tp_user_func(app, target) {
+  if (!target.match(/^tp\.user\.\w+$/)) {
+    return null;
+  }
+  let templater = app.plugins.getPlugin(
+    "templater-obsidian"
+  );
+  if (!templater) {
+    return null;
+  }
+  let items = target.split(".");
+  if (items[0].localeCompare("tp") != 0 || items[1].localeCompare("user") != 0 || items.length != 3) {
+    return void 0;
+  }
+  let funcs = await templater.templater.functions_generator.user_functions.user_script_functions.generate_user_script_functions();
+  return funcs.get(items[2]);
+}
+async function get_customjs_func(target) {
+  if (!target.match(/^(cJS|customJS|customjs|customJs)(\.\w+)+$/)) {
+    return null;
+  }
+  let items = target.split(".");
+  if (window.hasOwnProperty("cJS")) {
+    let cJS = window["cJS"];
+    let tmp = await cJS();
+    for (let field of items.slice(1)) {
+      tmp = tmp[field];
+      if (!tmp) {
+        return null;
+      }
+    }
+    return tmp;
+  }
+}
+async function get_str_func(app, target) {
+  let ufunc = await get_tp_func(app, target);
+  if (ufunc) {
+    return ufunc;
+  }
+  ufunc = await get_tp_user_func(app, target);
+  if (ufunc) {
+    return ufunc;
+  }
+  ufunc = await get_customjs_func(target);
+  if (ufunc) {
+    return ufunc;
+  }
+  return null;
+}
+async function templater$1(app, template, active_file, target_file) {
+  const config = {
+    template_file: template,
+    active_file,
+    target_file,
+    run_mode: "DynamicProcessor"
+  };
+  const plugins = app.plugins.plugins;
+  const exists = plugins["templater-obsidian"];
+  if (!exists) {
+    new import_obsidian2.Notice("Templater is not installed. Please install it.");
+    return;
+  }
+  const { templater } = plugins["templater-obsidian"];
+  const functions = await templater.functions_generator.internal_functions.generate_object(config);
+  functions.user = {};
+  const userScriptFunctions = await templater.functions_generator.user_functions.user_script_functions.generate_user_script_functions(config);
+  userScriptFunctions.forEach(
+    (value, key) => {
+      functions.user[key] = value;
+    }
+  );
+  if (template) {
+    const userSystemFunctions = await templater.functions_generator.user_functions.user_system_functions.generate_system_functions(config);
+    userSystemFunctions.forEach(
+      (value, key) => {
+        functions.user[key] = value;
+      }
+    );
+  }
+  return async (command) => {
+    return await templater.parser.parse_commands(command, functions);
+  };
+}
+async function parse_templater(app, template, extract = true) {
+  let nc = app.plugins.getPlugin("note-chain");
+  if (!nc) {
+    return;
+  }
+  let file = nc.chain.get_tfile(template);
+  if (file) {
+    template = file;
+  }
+  let blocks;
+  let template_file = null;
+  if (template instanceof import_obsidian2.TFile) {
+    template_file = template;
+    if (extract) {
+      blocks = await nc.editor.extract_templater_block(template);
+    } else {
+      let item = await app.vault.cachedRead(template);
+      blocks = [item];
+    }
+  } else {
+    if (extract) {
+      blocks = await nc.editor.extract_templater_block(template);
+    } else {
+      blocks = [template];
+    }
+  }
+  if (!template_file) {
+    template_file = "";
+  }
+  let active_file = app.workspace.getActiveFile();
+  let notes = app.vault.getMarkdownFiles();
+  if (notes.length == 0) {
+    return;
+  }
+  let target_file = notes[0];
+  let templateFunc = await templater$1(app, template_file, active_file, target_file);
+  if (templateFunc) {
+    let res = [];
+    for (let block of blocks) {
+      let item = await templateFunc(block);
+      res.push(item);
+    }
+    return res;
+  } else {
+    return [];
+  }
+}
+async function toogle_note_css(app, document2, name, refresh = false) {
+  let nc = app.plugins.getPlugin("note-chain");
+  let tfile = nc.chain.get_tfile(name);
+  if (!tfile) {
+    let tfiles;
+    if (name == "/") {
+      tfiles = nc.chain.get_all_tfiles();
+    } else {
+      let folder = nc.chain.get_all_folders().filter((x) => x.name == name);
+      if (folder.length == 0) {
+        return;
+      }
+      tfiles = nc.utils.concat_array(
+        folder.map((x) => nc.chain.get_tfiles_of_folder(x))
+      );
+    }
+    if (tfiles.length == 0) {
+      return;
+    }
+    tfile = await nc.chain.sugguster_note(tfiles);
+    if (!tfile) {
+      return;
+    }
+  }
+  let link = document2.getElementById(tfile.basename);
+  if (link && !refresh) {
+    link.remove();
+  } else {
+    let css = await nc.editor.extract_code_block(tfile, "css");
+    let inner = css.join("\n");
+    if (link) {
+      link.innerHTML = inner;
+    } else {
+      if (inner != "") {
+        let styleElement = document2.createElement("style");
+        styleElement.innerHTML = inner;
+        styleElement.id = tfile.basename;
+        document2.head.appendChild(styleElement);
+      }
+    }
+  }
+}
+var import_obsidian2;
+var init_utils = __esm({
+  "src/utils.ts"() {
+    import_obsidian2 = require("obsidian");
+  }
+});
+
+// main.ts
+var main_exports = {};
+__export(main_exports, {
+  default: () => NoteChainPlugin
+});
+module.exports = __toCommonJS(main_exports);
+var import_obsidian12 = require("obsidian");
+
+// src/NCEditor.ts
+var import_obsidian = require("obsidian");
+var NCEditor = class {
+  constructor(plugin) {
+    this.plugin = plugin;
+    this.app = this.plugin.app;
+    this.nretry = 1;
+  }
+  async set_frontmatter(tfile, key, value, nretry = this.nretry) {
+    let kv = {};
+    kv[key] = value;
+    let flag = await this.set_multi_frontmatter(tfile, kv, nretry);
+    return flag;
+  }
+  check_frontmatter(tfile, kv) {
+    try {
+      if (!tfile) {
+        return false;
+      }
+      let meta = this.app.metadataCache.getFileCache(tfile);
+      if (meta == null ? void 0 : meta.frontmatter) {
+        for (let k in kv) {
+          if (!(meta.frontmatter[k] == kv[k])) {
+            return false;
+          }
+        }
+        return true;
+      }
+      return false;
+    } catch (error) {
+      return false;
+    }
+  }
+  async wait_frontmatter(tfile, kv, nretry = this.nretry) {
+    let flag = this.check_frontmatter(tfile, kv);
+    while (!flag && nretry > 0) {
+      await sleep(50);
+      nretry = nretry - 1;
+      flag = this.check_frontmatter(tfile, kv);
+    }
+    return flag;
+  }
+  _set_(data, key, value) {
+    let items = key.trim().split(".");
+    if (!items) {
+      return;
+    }
+    let curr = data;
+    for (let item of items.slice(0, items.length - 1)) {
+      let kv2 = item.match(/^(.*?)(\[-?\d+\])?$/);
+      if (!kv2) {
+        return;
+      }
+      let k2 = kv2[1];
+      if (kv2[2]) {
+        let i = parseInt(kv2[2].slice(1, kv2[2].length - 1));
+        if (!(k2 in curr)) {
+          curr[k2] = [{}];
+          curr = curr[k2][0];
+        } else {
+          if (Array.isArray(curr[k2])) {
+            let tmp = {};
+            if (i < 0) {
+              curr[k2].splice(-i - 1, 0, tmp);
+            } else if (i < curr[k2].length) {
+              curr[k2][i] = tmp;
+            } else {
+              curr[k2].push(tmp);
+            }
+            curr = tmp;
+          } else {
+            curr[k2] = [{}];
+            curr = curr[k2][0];
+          }
+        }
+      } else {
+        if (!(k2 in curr)) {
+          curr[k2] = {};
+          curr = curr[k2];
+        } else {
+          if (typeof curr[k2] != "object") {
+            curr[k2] = {};
+            curr = curr[k2];
+          } else {
+            curr = curr[k2];
+          }
+        }
+      }
+    }
+    let kv = items[items.length - 1].match(/^(.*?)(\[-?\d+\])?$/);
+    if (!kv) {
+      return;
+    }
+    let k = kv[1];
+    if (kv[2]) {
+      let i = parseInt(kv[2].slice(1, kv[2].length - 1));
+      if (k in curr) {
+        if (Array.isArray(curr[k])) {
+          if (i < 0) {
+            curr[k].splice(-i - 1, 0, value);
+          } else if (i < curr[k].length) {
+            curr[k][i] = value;
+          } else {
+            curr[k].push(value);
+          }
+        } else {
+          curr[k] = value;
+        }
+      } else {
+        curr[k] = [value];
+      }
+    } else {
+      curr[k] = value;
+    }
+  }
+  async set_multi_frontmatter(tfile, kv, nretry = this.nretry) {
+    if (Array.isArray(tfile)) {
+      for (let item of tfile) {
+        this.set_multi_frontmatter(item, kv, nretry);
+      }
+      return true;
+    }
+    if (typeof tfile == "string") {
+      tfile = this.plugin.chain.get_tfile(tfile);
+    }
+    if (!tfile || !(tfile instanceof import_obsidian.TFile)) {
+      return false;
+    }
+    let flag = false;
+    if (nretry > 1) {
+      flag = this.check_frontmatter(tfile, kv);
+    }
+    while (!flag && nretry > 0) {
+      await this.app.fileManager.processFrontMatter(tfile, (fm) => {
+        for (let k in kv) {
+          this._set_(fm, k, kv[k]);
+        }
+      });
+      await sleep(100);
+      nretry = nretry - 1;
+      flag = this.check_frontmatter(tfile, kv);
+    }
+    return flag;
+  }
+  get_frontmatter(tfile, key) {
+    try {
+      if (!tfile) {
+        return null;
+      }
+      let meta = this.app.metadataCache.getFileCache(tfile);
+      if (meta == null ? void 0 : meta.frontmatter) {
+        if (meta.frontmatter[key]) {
+          return meta.frontmatter[key];
+        }
+        let keys = key.split(".");
+        let cfm = meta.frontmatter;
+        for (let k of keys) {
+          let items = k.match(/^(.*?)(\[-?\d+\])?$/);
+          if (!items) {
+            return null;
+          }
+          if (items[1]) {
+            cfm = cfm[items[1]];
+          }
+          if (!cfm) {
+            return null;
+          }
+          if (Array.isArray(cfm) && items[2]) {
+            let i = parseInt(items[2].slice(1, items[2].length - 1));
+            if (i < 0) {
+              i = i + cfm.length;
+            }
+            cfm = cfm[i];
+          }
+        }
+        return cfm;
+      }
+    } catch (error) {
+      return null;
+    }
+  }
+  get_vault_name() {
+    let items = this.plugin.app.vault.adapter.basePath.split("\\");
+    items = items[items.length - 1].split("/");
+    return items[items.length - 1];
+  }
+  get_frontmatter_config(tfile, key) {
+    if (tfile instanceof import_obsidian.TFile) {
+      if (tfile.extension == "md") {
+        let config = this.get_frontmatter(tfile, key);
+        if (config) {
+          return config;
+        }
+      } else {
+        let file = this.plugin.chain.get_tfile(
+          tfile.path.slice(0, tfile.path.length - tfile.extension.length) + "md"
+        );
+        if (file) {
+          let config = this.get_frontmatter(file, key);
+          if (config) {
+            return config;
+          }
+        }
+      }
+    } else {
+      let file = this.plugin.chain.get_tfile(tfile.path + "/" + tfile.name + ".md");
+      if (file) {
+        let config = this.get_frontmatter(file, key);
+        if (config) {
+          return config;
+        }
+      }
+    }
+    let dir = tfile.parent;
+    while (dir) {
+      let cfile;
+      if (dir.parent) {
+        cfile = this.plugin.chain.get_tfile(
+          dir.path + "/" + dir.name + ".md"
+        );
+      } else {
+        cfile = this.plugin.chain.get_tfile(
+          this.get_vault_name()
+        );
+      }
+      let config = this.get_frontmatter(cfile, key);
+      if (config) {
+        return config;
+      }
+      dir = dir.parent;
+    }
+    return null;
+  }
+  regexp_link(tfile, mode) {
+    if (mode === "link") {
+      return new RegExp(`\\[\\[${tfile.basename}\\|?.*\\]\\]`, "g");
+    }
+    if (mode === "para") {
+      return new RegExp(`.*\\[\\[${tfile.basename}\\|?.*\\]\\].*`, "g");
+    }
+  }
+  async replace(tfile, regex, target) {
+    if (typeof regex === "string") {
+      await this.app.vault.process(tfile, (data) => {
+        if (data.indexOf(regex) > -1) {
+          return data.replace(regex, target);
+        }
+        return data;
+      });
+    } else if (regex instanceof RegExp) {
+      await this.app.vault.process(tfile, (data) => {
+        if (data.match(regex)) {
+          return data.replace(regex, target);
+        }
+        return data;
+      });
+    }
+  }
+  async remove_metadata(tfile) {
+    if (tfile instanceof import_obsidian.TFile) {
+      tfile = await this.plugin.app.vault.cachedRead(tfile);
+    }
+    if (typeof tfile != "string") {
+      return "";
+    }
+    let headerRegex = /^---\s*([\s\S]*?)\s*---/;
+    let match = headerRegex.exec(tfile);
+    if (match) {
+      tfile = tfile.slice(match[0].length).trim();
+    }
+    return tfile;
+  }
+  async extract_code_block(tfile, btype) {
+    if (tfile instanceof import_obsidian.TFile) {
+      tfile = await this.plugin.app.vault.cachedRead(tfile);
+    }
+    if (typeof tfile != "string") {
+      return "";
+    }
+    let cssCodeBlocks = [];
+    let reg = new RegExp(`\`\`\`${btype}\\n([\\s\\S]*?)
+\`\`\``, "g");
+    ;
+    let matches;
+    while ((matches = reg.exec(tfile)) !== null) {
+      cssCodeBlocks.push(matches[1].trim());
+    }
+    return cssCodeBlocks;
+  }
+  async extract_templater_block(tfile, reg = /<%\*\s*([\s\S]*?)\s*-?%>/g) {
+    if (tfile instanceof import_obsidian.TFile) {
+      tfile = await this.plugin.app.vault.cachedRead(tfile);
+    }
+    if (typeof tfile != "string") {
+      return "";
+    }
+    let cssCodeBlocks = [];
+    let matches;
+    while ((matches = reg.exec(tfile)) !== null) {
+      cssCodeBlocks.push(matches[0].trim());
+    }
+    let tpls = await this.extract_code_block(tfile, "js //templater");
+    for (let tpl of tpls) {
+      cssCodeBlocks.push(`<%*
+${tpl}
+-%>`);
+    }
+    return cssCodeBlocks;
+  }
+  async extract_yaml_block(tfile) {
+    if (tfile instanceof import_obsidian.TFile) {
+      tfile = await this.plugin.app.vault.cachedRead(tfile);
+    }
+    if (typeof tfile != "string") {
+      return "";
+    }
+    let headerRegex = /^---\s*([\s\S]*?)\s*---/;
+    let match = headerRegex.exec(tfile);
+    if (match) {
+      return match[0];
+    }
+    return "";
+  }
+  _extract_block_id_(para) {
+    let reg = /\s+\^[a-zA-Z0-9]+\r?\n?$/;
+    let match = reg.exec(para);
+    if (match) {
+      return match[0].trim();
+    } else {
+      return "";
+    }
+  }
+  _generate_random_string_(length) {
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+      let randomIndex = Math.floor(Math.random() * characters.length);
+      result += characters[randomIndex];
+    }
+    return result;
+  }
+  async extract_all_blocks(tfile) {
+    if (tfile instanceof import_obsidian.TFile) {
+      tfile = await this.plugin.app.vault.cachedRead(tfile);
+    }
+    if (typeof tfile != "string") {
+      return "";
+    }
+    let ctx = tfile;
+    let blocks = [];
+    let head = await this.plugin.editor.extract_yaml_block(ctx);
+    if (head != "") {
+      blocks.push(["YAML", head]);
+      ctx = ctx.slice(head.length);
+    }
+    let kvgets = {
+      "\u7A7A\u767D\u6BB5\u843D": /^(\s*\n)*/,
+      "\u4EE3\u7801\u5757": /^[ \t]*```[\s\S]*?\n[ \t]*```[ \t]*\n(\s*\^[a-zA-Z0-9]+\r?[\n$])?/,
+      "tpl\u4EE3\u7801\u5757": /^<%\*[\s\S]*?\n-?\*?%>[ \t]*\n(\s+\^[a-zA-Z0-9]+\r?[\n$])?/,
+      "\u4EFB\u52A1": /^[ \t]*- \[.\].*\n?(\s+\^[a-zA-Z0-9]+\r?[\n$])?/,
+      "\u65E0\u5E8F\u5217\u8868": /^[ \t]*- .*\n?(\s+\^[a-zA-Z0-9]+\r?[\n$])?/,
+      "\u6709\u5E8F\u5217\u8868": /^[ \t]*\d\. .*\n?(\s+[ \t]*\^[a-zA-Z0-9]+\r?[\n$])?/,
+      "\u5F15\u7528": /^(>.*\n)+(\s*\^[a-zA-Z0-9]+\r?[\n$])?/,
+      "\u6807\u9898": /^#+ .*\n(\s*\^[a-zA-Z0-9]+\r?[\n$])?/,
+      "\u6BB5\u843D": /^(.*\n?)(\s*\^[a-zA-Z0-9]+\r?[\n$])?/
+    };
+    while (ctx.length > 0) {
+      let flag = true;
+      for (let key of Object.keys(kvgets)) {
+        let reg = kvgets[key];
+        let match = reg.exec(ctx);
+        if (match) {
+          let curr = match[0];
+          if (curr.length > 0) {
+            let bid = this._extract_block_id_(curr);
+            if (key == "\u6BB5\u843D" && blocks.length > 0 && blocks[blocks.length - 1][0] == "\u6BB5\u843D") {
+              blocks[blocks.length - 1][1] = blocks[blocks.length - 1][1] + curr;
+              blocks[blocks.length - 1][2] = bid;
+            } else {
+              blocks.push([key, curr, bid]);
+            }
+            flag = false;
+            ctx = ctx.slice(curr.length);
+            break;
+          }
+        }
+      }
+      if (flag) {
+        break;
+      }
+    }
+    if (ctx.length > 0) {
+      let bid = this._extract_block_id_(ctx);
+      blocks.push(["\u6BB5\u843D", ctx, bid]);
+    }
+    return blocks;
+  }
+  async append_block_ids(tfile) {
+    let blocks = await this.extract_all_blocks(tfile);
+    let items = [];
+    for (let block of blocks) {
+      if (["\u7A7A\u767D\u6BB5\u843D", "YAML"].contains(block[0])) {
+        items.push(block[1]);
+      } else if (!block[2]) {
+        let bid = this._generate_random_string_(6);
+        if (["\u4EFB\u52A1", "\u65E0\u5E8F\u5217\u8868", "\u6709\u5E8F\u5217\u8868"].contains(block[0])) {
+          items.push(block[1].slice(0, -1) + " ^" + bid + "\n");
+        } else {
+          if (block[1].endsWith("\n")) {
+            items.push(block[1] + "^" + bid + "\n");
+          } else {
+            items.push(block[1] + "\n^" + bid + "\n");
+          }
+        }
+      } else {
+        items.push(block[1]);
+      }
+    }
+    let res = items.join("");
+    await this.app.vault.modify(tfile, res);
+    return res;
+  }
+  async remove_block_ids(tfile) {
+    let blocks = await this.extract_all_blocks(tfile);
+    let items = [];
+    for (let block of blocks) {
+      if (["\u7A7A\u767D\u6BB5\u843D", "YAML"].contains(block[0])) {
+        items.push(block[1]);
+      } else {
+        let reg = /\s+\^[a-zA-Z0-9]+\r?\n?$/;
+        let match = reg.exec(block[1]);
+        if (match) {
+          items.push(block[1].replace(reg, "\n"));
+        } else {
+          items.push(block[1]);
+        }
+      }
+    }
+    let res = items.join("");
+    await this.app.vault.modify(tfile, res);
+    return res;
+  }
+  async get_current_section() {
+    var _a, _b;
+    let view = this.app.workspace.getActiveFileView();
+    let editor = view.editor;
+    let tfile = view.file;
+    if (!view || !editor || !tfile) {
+      return null;
+    }
+    let cursor = editor.getCursor();
+    console.log("cursor", cursor);
+    let cache = this.app.metadataCache.getFileCache(tfile);
+    console.log("cache", cache);
+    if (!cache) {
+      return;
+    }
+    if (!cursor) {
+      let ctx = await this.app.vault.cachedRead(tfile);
+      let items = (_a = cache == null ? void 0 : cache.sections) == null ? void 0 : _a.map(
+        (section2) => ctx.slice(section2.position.start.offset, section2.position.end.offset)
+      );
+      if (!items) {
+        return null;
+      }
+      let section = await this.plugin.dialog_suggest(items, cache.sections);
+      return section;
+    } else {
+      let sections = (_b = cache == null ? void 0 : cache.sections) == null ? void 0 : _b.filter(
+        (x) => {
+          return x.position.start.line <= cursor.line && x.position.end.line >= cursor.line;
+        }
+      )[0];
+      return sections;
+    }
+  }
+  async set_frontmatter_align_file(src, dst, field) {
+    if (field) {
+      let value = this.get_frontmatter(src, field);
+      if (value) {
+        await this.set_frontmatter(dst, field, value, 1);
+      }
+    }
+  }
+};
+
+// src/NoteChain.ts
+var import_obsidian4 = require("obsidian");
+init_utils();
+
+// src/NCModal.ts
+var import_obsidian3 = require("obsidian");
+var NoteContentModal = class extends import_obsidian3.Modal {
+  constructor(app, content, plugin) {
+    super(app);
+    this.content = content;
+    this.plugin = plugin;
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.empty();
+    this.modalEl.style.display = "flex";
+    this.modalEl.style.overflow = "auto";
+    const container = contentEl.createDiv({ cls: "note-content-container" });
+    container.addClass("markdown-rendered");
+    container.style.display = "table-cell";
+    container.style.verticalAlign = "middle";
+    container.style.padding = "20px";
+    const component = new import_obsidian3.Component();
+    import_obsidian3.MarkdownRenderer.render(this.app, this.content, container, "", component);
+    this.addClickListener(container);
+  }
+  onClose() {
+    let { contentEl } = this;
+    contentEl.empty();
+  }
+  addClickListener(container) {
+    container.addEventListener("click", (event) => {
+      let target = event.target;
+      if (target.tagName === "A" && target.hasClass("internal-link")) {
+        event.preventDefault();
+        let href = target.getAttribute("href");
+        if (href) {
+          this.openNoteInMainView(href);
+        }
+      }
+    });
+  }
+  async openNoteInMainView(linkText) {
+    try {
+      await this.app.workspace.openLinkText(linkText, "", false, { active: true });
+      this.close();
+    } catch (error) {
+      new import_obsidian3.Notice(`Error opening note: ${error.message}`);
+    }
+  }
+};
+var NoteEditorModal = class extends import_obsidian3.Modal {
+  // 添加编辑模式属性
+  constructor(app, filePath, isEditMode = false) {
+    super(app);
+    this.filePath = filePath;
+    this.isEditMode = isEditMode;
+  }
+  async onOpen() {
+    const { contentEl } = this;
+    contentEl.empty();
+    if (this.isEditMode) {
+      let file = this.app.vault.getAbstractFileByPath(this.filePath);
+      if (file) {
+        const leaf = this.app.workspace.getLeaf(true);
+        await leaf.openFile(file, { state: { mode: "source" } });
+        this.close();
+      } else {
+        new import_obsidian3.Notice(`File not found: ${this.filePath}`);
+      }
+    } else {
+      new import_obsidian3.Notice("Not in edit mode.");
+    }
+  }
+  onClose() {
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+};
 
 // src/NoteChain.ts
 var NoteChain = class {
-  constructor(plugin, prev = "PrevNote", next = "NextNote") {
+  constructor(plugin, editor, prev = "PrevNote", next = "NextNote") {
     this.plugin = plugin;
     this.app = plugin.app;
-    this.editor = new NCEditor(this.app);
+    if (editor) {
+      this.editor = editor;
+    } else {
+      this.editor = new NCEditor(plugin);
+    }
+    this.NoteEditorModal = NoteEditorModal;
     this.prev = prev;
     this.next = next;
-    this.dv_api = this.app.plugins.getPlugin("dataview");
+    this.init_children();
   }
-  get find_tfile() {
+  async open_note_in_modal(notePath) {
+    try {
+      let file = this.get_tfile(notePath);
+      if (file instanceof import_obsidian4.TFile) {
+        let content = await this.app.vault.read(file);
+        let modal = new NoteContentModal(this.app, content, this.plugin);
+        modal.open();
+        return modal;
+      } else {
+        let modal = new NoteContentModal(this.app, notePath, this.plugin);
+        modal.open();
+        return modal;
+      }
+    } catch (error) {
+      new import_obsidian4.Notice(`Error opening note in modal: ${error.message}`);
+    }
+  }
+  init_children() {
+    var _a;
+    this.children = {};
+    for (let f of this.get_all_folders()) {
+      let tfiles = f.children;
+      if ((_a = this.plugin.explorer) == null ? void 0 : _a.file_explorer) {
+        tfiles = this.sort_tfiles(
+          tfiles,
+          this.plugin.explorer.file_explorer.sortOrder
+        );
+      }
+      this.children[f.path] = this.sort_tfiles_by_chain(tfiles);
+    }
+  }
+  refresh_folder(tfolder) {
+    if (tfolder == null ? void 0 : tfolder.children) {
+      let tfiles = tfolder.children;
+      if (this.plugin.explorer.file_explorer) {
+        tfiles = this.sort_tfiles(
+          tfiles,
+          this.plugin.explorer.file_explorer.sortOrder
+        );
+      }
+      this.children[tfolder.path] = this.sort_tfiles_by_chain(
+        tfiles
+      );
+    }
+  }
+  refresh_tfile(tfile) {
+    var _a;
+    if ((_a = tfile.parent) == null ? void 0 : _a.children) {
+      this.refresh_folder(tfile.parent);
+    }
+  }
+  get tp_find_tfile() {
     return get_tp_func(this.app, "tp.file.find_tfile");
   }
-  get suggester() {
+  get tp_suggester() {
     return get_tp_func(this.app, "tp.system.suggester");
   }
-  get_all_folders(sort_mode = "") {
-    return this.app.vault.getAllFolders();
+  get tp_prompt() {
+    return get_tp_func(this.app, "tp.system.prompt");
+  }
+  get_all_folders() {
+    let folders = this.app.vault.getAllFolders();
+    let folder = this.app.vault.getFolderByPath("/");
+    if (folder && !folders.contains(folder)) {
+      folders.push(folder);
+    }
+    return folders;
+  }
+  get_all_tfiles(sort_mode = "") {
+    let files = this.app.vault.getMarkdownFiles();
+    if (!(sort_mode === "")) {
+      this.sort_tfiles(files, sort_mode = sort_mode);
+    }
+    return files;
   }
   sort_folders_by_mtime(folders, reverse = true) {
     function ufunc(f) {
@@ -156,7 +961,7 @@ var NoteChain = class {
     }
     return res;
   }
-  async move_file_to_another_folder(tfile = this.current_note) {
+  async cmd_move_file_to_another_folder(tfile = this.current_note) {
     if (tfile == null) {
       return;
     }
@@ -168,9 +973,14 @@ var NoteChain = class {
       folders = folders.filter((f) => this.filter_user_ignore(f));
     }
     try {
-      let folder = await this.suggester((f) => f.path, folders);
+      let folder = await this.plugin.dialog_suggest(
+        this.plugin.utils.array_prefix_id(
+          folders.map((f) => f.path)
+        ),
+        folders
+      );
       let dst = folder.path + "/" + tfile.basename + "." + tfile.extension;
-      await app.fileManager.renameFile(tfile, dst);
+      await this.app.fileManager.renameFile(tfile, dst);
     } catch (error) {
     }
   }
@@ -182,8 +992,8 @@ var NoteChain = class {
         return false;
       }
     }
-    if (this.app.vault.config.userIgnoreFilters) {
-      for (let x of this.app.vault.config.userIgnoreFilters) {
+    if (this.app.vault.userIgnoreFilters) {
+      for (let x of this.app.vault.userIgnoreFilters) {
         if (note.path.startsWith(x)) {
           return false;
         }
@@ -191,100 +1001,363 @@ var NoteChain = class {
     }
     return true;
   }
-  async sugguster_note() {
-    let notes = this.sort_tfiles(
-      this.app.vault.getFiles(),
-      ["mtime", "x"]
-    ).filter((f) => this.filter_user_ignore(f));
+  async sugguster_note(notes = null, slice = 0) {
+    if (notes == null) {
+      notes = this.sort_tfiles(
+        this.app.vault.getFiles(),
+        ["mtime", "x"]
+      ).filter((f) => this.filter_user_ignore(f));
+    }
     try {
-      let note = await this.suggester((f) => f.path, notes);
+      let msg = this.plugin.utils.array_prefix_id(notes.map((f) => f.path.slice(slice)));
+      let note = await this.plugin.dialog_suggest(msg, notes);
       return note;
     } catch (error) {
+      return null;
     }
   }
-  open_note(tfile, new_tab = false) {
+  open_note(tfile, new_tab = false, revealFolder = false, collapse = true) {
     if (tfile) {
-      if (this.app.workspace.activeLeaf.pinned || new_tab) {
-        return this.app.workspace.getLeaf(true).openFile(tfile);
+      const view = this.app.workspace.getActiveViewOfType(import_obsidian4.MarkdownView);
+      if (new_tab || !view || !view.leaf) {
+        this.app.workspace.getLeaf(true).openFile(tfile);
+      } else if (view.leaf.pinned) {
+        this.app.workspace.getLeaf(true).openFile(tfile);
       } else {
-        return this.app.workspace.activeLeaf.openFile(tfile);
+        view.leaf.openFile(tfile);
+      }
+      if (revealFolder) {
+        if (collapse) {
+          this.plugin.explorer.file_explorer.tree.setCollapseAll(true);
+        }
+        this.plugin.explorer.file_explorer.revealInFolder(tfile);
       }
     }
   }
   async sugguster_open_note() {
     try {
       let note = await this.sugguster_note();
-      console.log(note);
       this.open_note(note);
     } catch (error) {
     }
   }
-  get_tfile(path) {
-    let name = path.split("|")[0].replace("[[", "").replace("]]", "");
-    return this.find_tfile(name);
+  get_tfile(path, only_first = true) {
+    try {
+      path = path.split("|")[0].replace("[[", "").replace("]]", "");
+      let tfile = this.app.vault.getFileByPath(path);
+      if (tfile) {
+        return tfile;
+      }
+      let tfiles = this.app.metadataCache.uniqueFileLookup.get(path.toLowerCase());
+      if (!tfiles) {
+        tfiles = this.app.metadataCache.uniqueFileLookup.get(path.toLowerCase() + ".md");
+        if (!tfiles) {
+          return null;
+        } else {
+          path = path + ".md";
+        }
+      }
+      let ctfiles = tfiles.filter((x) => x.name == path);
+      if (ctfiles.length > 0) {
+        if (only_first) {
+          return ctfiles[0];
+        } else {
+          return ctfiles;
+        }
+      }
+      if (tfiles.length > 0) {
+        if (only_first) {
+          return tfiles[0];
+        } else {
+          return tfiles;
+        }
+      }
+      return null;
+    } catch (e) {
+      return null;
+    }
   }
-  get MDFiles() {
-    return app.vault.getMarkdownFiles();
+  get_tags(tfile = this.current_note) {
+    var _a;
+    if (!tfile) {
+      return [];
+    }
+    let mcache = this.app.metadataCache.getFileCache(tfile);
+    let tags = [];
+    if (mcache == null ? void 0 : mcache.tags) {
+      for (let curr of mcache.tags) {
+        if (!tags.contains(curr.tag)) {
+          tags.push(curr.tag);
+        }
+      }
+    }
+    if ((_a = mcache == null ? void 0 : mcache.frontmatter) == null ? void 0 : _a.tags) {
+      if (Array.isArray(mcache.frontmatter.tags)) {
+        for (let curr of mcache.frontmatter.tags) {
+          let tag = "#" + curr;
+          if (!tags.contains(tag)) {
+            tags.push(tag);
+          }
+        }
+      } else if (typeof mcache.frontmatter.tags === "string") {
+        let tag = `#` + mcache.frontmatter.tags;
+        if (!tags.contains(tag)) {
+          tags.push(tag);
+        }
+      }
+    }
+    return tags;
+  }
+  get_recent_tfiles(only_md = true) {
+    var _a;
+    let recent = this.app.plugins.getPlugin("recent-files-obsidian");
+    if (recent) {
+      let files = recent.data.recentFiles.map(
+        (x) => this.get_tfile(x.path)
+      ).filter((x) => x);
+      return files;
+    } else {
+      let recent2 = [];
+      let files = (_a = this.app.workspace.recentFileTracker) == null ? void 0 : _a.lastOpenFiles;
+      if (files && files.length > 0) {
+        recent2 = files.map((x) => this.get_tfile(x)).filter((x) => x);
+      }
+      let tfile = this.app.workspace.getActiveFile();
+      if (tfile) {
+        recent2.unshift(tfile);
+      }
+      if (only_md) {
+        recent2 = recent2.filter((x) => x.extension == "md");
+      }
+      return recent2;
+    }
+  }
+  get_last_daily_note(recent_first = true) {
+    let pattern = /^\d{4}-\d{2}-\d{2}$/;
+    if (recent_first) {
+      let recent = this.get_recent_tfiles();
+      for (let tfile of recent) {
+        if (tfile.basename.match(pattern)) {
+          return tfile;
+        }
+      }
+    }
+    let t = (0, import_obsidian4.moment)();
+    for (let i = 0; i < 20; i++) {
+      let xt = t.clone().add(-i, "days");
+      let fname = xt.format("YYYY-MM-DD");
+      let tfile = this.get_tfile(fname);
+      if (tfile) {
+        return tfile;
+      }
+    }
+    let files = this.app.vault.getMarkdownFiles().filter(
+      (x) => x.basename.match(pattern)
+    );
+    files = this.sort_tfiles(files, "name");
+    if (files.length > 0) {
+      return files[files.length - 1];
+    }
+    return null;
+  }
+  get_neighbor_leaf(offset = 1) {
+    let app = this.plugin.app;
+    let leaves = app.workspace.getLeavesOfType("markdown");
+    let activeLeaf = app.workspace.getActiveViewOfType(import_obsidian4.MarkdownView);
+    if (activeLeaf) {
+      let idx = leaves.map((x) => x.view == activeLeaf).indexOf(true);
+      idx = idx + offset;
+      if (idx < 0 || idx > leaves.length - 1) {
+        return null;
+      }
+      return leaves[idx];
+    }
+  }
+  get_last_activate_leaf(skip_conote = true) {
+    let leaves = this.app.workspace.getLeavesOfType("markdown");
+    leaves = leaves.filter((x) => x.getViewState().state.file);
+    leaves = leaves.sort((a, b) => b.activeTime - a.activeTime);
+    for (let leaf2 of leaves) {
+      let file = leaf2.getViewState().state.file;
+      if (skip_conote && this.get_tags(file).contains("#conote")) {
+        continue;
+      }
+      return leaf2;
+    }
+    let leaf = null;
+    for (let i of [1, -1, 0]) {
+      leaf = this.plugin.chain.get_neighbor_leaf(i);
+      if (leaf) {
+        return leaf;
+      }
+    }
+    return null;
   }
   get current_note() {
     return this.app.workspace.getActiveFile();
   }
-  get_inlinks(tfile = this.current_note) {
+  get_selected_files(current_if_no_selected = true) {
+    let selector = document.querySelectorAll(
+      ".tree-item-self.is-selected"
+    );
+    let items = Object.values(selector).map((x) => {
+      var _a;
+      return (_a = x.dataset) == null ? void 0 : _a.path;
+    });
+    let tfiles = items.map(
+      (x) => this.get_tfile(x)
+    ).filter(
+      (x) => x.extension == "md"
+    );
+    if (tfiles.length > 0) {
+      return tfiles;
+    } else if (current_if_no_selected && this.current_note) {
+      return [this.current_note];
+    } else {
+      return [];
+    }
+  }
+  get_inlinks(tfile = this.current_note, only_md = true) {
     if (tfile == null) {
       return [];
     }
-    let res = new Array();
-    let dv_api = this.app.plugins.getPlugin("dataview");
-    let inlinks = dv_api.index.links.invMap.get(tfile.path);
-    if (inlinks == void 0) {
-      return [];
-    } else {
-      return Array.from(inlinks).map(
-        (path) => this.app.vault.fileMap[path]
-      ).filter(
-        (item) => item
-      );
+    let res = [];
+    let inlinks = this.app.metadataCache.getBacklinksForFile(tfile);
+    for (let [k, v] of inlinks.data) {
+      let curr = this.app.vault.getFileByPath(k);
+      if (curr) {
+        res.push(curr);
+      }
     }
+    return res;
   }
-  get_outlinks(tfile = this.current_note) {
+  get_outlinks(tfile = this.current_note, only_md = true) {
     if (tfile == null) {
       return [];
     }
-    let res = new Array();
-    let dv_api = this.app.plugins.getPlugin("dataview");
-    let inlinks = dv_api.index.links.map.get(tfile.path);
-    if (inlinks == void 0) {
+    let mcache = this.app.metadataCache.getFileCache(tfile);
+    if (!mcache) {
       return [];
-    } else {
-      return Array.from(inlinks).map(
-        (path) => this.app.vault.fileMap[path]
-      ).filter(
-        (item) => item
-      );
     }
+    let res = [];
+    if (mcache.links) {
+      for (let link of mcache.links) {
+        let tfile2 = this.get_tfile(link.link);
+        if (tfile2 && !res.contains(tfile2) && !(only_md && tfile2.extension != "md")) {
+          res.push(tfile2);
+        }
+      }
+    }
+    if (mcache.frontmatterLinks) {
+      for (let link of mcache.frontmatterLinks) {
+        let tfile2 = this.get_tfile(link.link);
+        if (tfile2 && !res.contains(tfile2) && !(only_md && tfile2.extension != "md")) {
+          res.push(tfile2);
+        }
+      }
+    }
+    if (!only_md && mcache.embeds) {
+      for (let link of mcache.embeds) {
+        let tfile2 = this.get_tfile(link.link);
+        if (tfile2 && !res.contains(tfile2)) {
+          res.push(tfile2);
+        }
+      }
+    }
+    return res;
   }
-  get_links(tfile = this.current_note) {
-    let inlinks = this.get_inlinks(tfile);
-    let outlinks = this.get_outlinks(tfile);
+  get_links(tfile = this.current_note, only_md = true) {
+    let inlinks = this.get_inlinks(tfile, only_md);
+    let outlinks = this.get_outlinks(tfile, only_md);
     for (let link of inlinks) {
-      if (!outlinks.includes(link)) {
+      if (!outlinks.contains(link)) {
         outlinks.push(link);
       }
     }
     return outlinks;
   }
-  get_same_parent(tfile = this.current_note) {
-    return this.get_tfiles_of_folder(tfile == null ? void 0 : tfile.parent, false);
+  get_group_inlinks(tfiles, level = 1) {
+    let items = tfiles.map((x) => x);
+    while (level != 0) {
+      let curr = items.map((x) => x);
+      for (let c of curr) {
+        let links = this.get_inlinks(c, true);
+        for (let link of links) {
+          if (!items.contains(link)) {
+            items.push(link);
+          }
+        }
+      }
+      if (curr.length == items.length) {
+        break;
+      }
+      level = level - 1;
+    }
+    return items;
   }
-  get_tfiles_of_folder(tfolder, with_children = true) {
+  get_group_outlinks(tfiles, level = 1) {
+    let items = tfiles.map((x) => x);
+    while (level != 0) {
+      let curr = items.map((x) => x);
+      for (let c of curr) {
+        let links = this.get_outlinks(c, true);
+        for (let link of links) {
+          if (!items.contains(link)) {
+            items.push(link);
+          }
+        }
+      }
+      if (curr.length == items.length) {
+        break;
+      }
+      level = level - 1;
+    }
+    return items;
+  }
+  get_group_links(tfiles, level = 1) {
+    let items = tfiles.map((x) => x);
+    while (level != 0) {
+      let curr = items.map((x) => x);
+      for (let c of curr) {
+        let links = this.get_links(c, true);
+        for (let link of links) {
+          if (!items.contains(link)) {
+            items.push(link);
+          }
+        }
+      }
+      if (curr.length == items.length) {
+        break;
+      }
+      level = level - 1;
+    }
+    return items;
+  }
+  get_brothers(tfile = this.current_note) {
+    if (tfile && tfile.parent) {
+      return this.get_tfiles_of_folder(tfile.parent, false);
+    } else {
+      return [];
+    }
+  }
+  get_uncles(tfile) {
+    if (tfile && tfile.parent && tfile.parent.parent) {
+      let folder = tfile.parent.parent;
+      return folder.children.filter(
+        (x) => x instanceof import_obsidian4.TFile
+      );
+    }
+    return [];
+  }
+  get_tfiles_of_folder(tfolder, with_children = false) {
     if (tfolder == null) {
       return [];
     }
     let notes = [];
     for (let c of tfolder.children) {
-      if (c instanceof import_obsidian.TFile && c.extension === "md") {
+      if (c instanceof import_obsidian4.TFile && c.extension === "md") {
         notes.push(c);
-      } else if (c instanceof import_obsidian.TFolder && with_children) {
+      } else if (c instanceof import_obsidian4.TFolder && with_children) {
         let tmp = this.get_tfiles_of_folder(c);
         for (let x of tmp) {
           notes.push(x);
@@ -293,22 +1366,38 @@ var NoteChain = class {
     }
     return notes;
   }
-  parse_item(item) {
-    var args = [].slice.call(arguments).slice(1);
-    let kwargs = {};
-    if (args.length == 1) {
-      kwargs = args[0];
+  indexOfFolder(tfile, tfiles) {
+    let fnote = this.get_tfile(tfile.name + ".md");
+    if (!fnote) {
+      return -1;
     }
-    let seq = kwargs["seq"];
-    if (seq != null) {
-      return `${seq} -> ${item}`;
+    let msg = this.plugin.editor.get_frontmatter(
+      fnote,
+      "FolderPrevNote"
+    );
+    if (!msg || typeof msg != "string") {
+      return -1;
     }
-    return item;
+    let anchor = this.get_tfile(msg);
+    if (!anchor) {
+      return -1;
+    }
+    let idx = tfiles.indexOf(anchor);
+    let offset = this.plugin.editor.get_frontmatter(
+      fnote,
+      "FolderPrevNoteOffset"
+    );
+    if (typeof offset == "string") {
+      idx = idx + parseFloat(offset);
+    } else {
+      idx = idx + 0.5;
+    }
+    return idx;
   }
   tfile_to_string(tfile) {
     let curr = this.current_note;
     let msg = "";
-    if (tfile.parent == curr.parent) {
+    if (tfile.parent == (curr == null ? void 0 : curr.parent)) {
       msg = tfile.basename;
     } else {
       msg = tfile.path;
@@ -319,76 +1408,55 @@ var NoteChain = class {
       return msg;
     }
   }
-  parse_items(items) {
-    var args = [].slice.call(arguments).slice(1);
-    let kwargs = {};
-    if (args.length == 1) {
-      kwargs = args[0];
+  async suggester_notes(tfile = this.current_note, curr_first = false, smode = "") {
+    if (tfile) {
+      tfile == this.current_note;
     }
-    let res = [];
-    let i = 0;
-    while (i < items.length) {
-      if (kwargs["seq"]) {
-        res.push(this.parse_item(items[i], { "seq": i + 1 }));
-      } else {
-        res.push(this.parse_item(items[i]));
-      }
-      i++;
-    }
-    return res;
-  }
-  async suggester_notes(tfile = this.current_note, curr_first = true, smode = "") {
     let kv = [
-      "\u540C\u7EA7\u76EE\u5F55",
-      "\u7B14\u8BB0\u94FE\u6761",
-      "\u540C\u7EA7\u76EE\u5F55+\u5B50\u76EE\u5F55",
-      "\u51FA\u94FE+\u5165\u94FE",
-      "\u5165\u94FE",
-      "\u51FA\u94FE",
-      "\u6240\u6709\u7B14\u8BB0",
-      "recent-files-obsidian"
+      this.plugin.strings.item_get_brothers,
+      this.plugin.strings.item_notechain,
+      this.plugin.strings.item_uncle_notes,
+      this.plugin.strings.item_same_folder,
+      this.plugin.strings.item_inlinks_outlinks,
+      this.plugin.strings.item_inlins,
+      this.plugin.strings.item_outlinks,
+      this.plugin.strings.item_all_noes,
+      this.plugin.strings.item_recent
     ];
     if (curr_first) {
-      kv.unshift("\u5F53\u524D\u7B14\u8BB0");
+      kv.unshift(this.plugin.strings.item_currentnote);
     } else {
-      kv.push("\u5F53\u524D\u7B14\u8BB0");
-    }
-    let kvs = [];
-    let i = 1;
-    for (let x of kv) {
-      kvs.push(`${i++} ${x}`);
+      kv.push(this.plugin.strings.item_currentnote);
     }
     let mode = "";
     if (kv.contains(smode)) {
       mode = smode;
     } else {
-      mode = await this.suggester(kvs, kv);
+      mode = await this.plugin.dialog_suggest(this.plugin.utils.array_prefix_id(kv), kv);
     }
-    if (mode === "\u5F53\u524D\u7B14\u8BB0") {
+    if (mode === this.plugin.strings.item_currentnote) {
       return [tfile];
-    } else if (mode === "\u540C\u7EA7\u76EE\u5F55") {
-      return this.get_same_parent(tfile);
-    } else if (mode === "\u540C\u7EA7\u76EE\u5F55+\u5B50\u76EE\u5F55") {
-      return this.get_tfiles_of_folder(tfile == null ? void 0 : tfile.parent, true);
-    } else if (mode === "\u51FA\u94FE+\u5165\u94FE") {
-      return this.get_links(tfile);
-    } else if (mode === "\u5165\u94FE") {
-      return this.get_inlinks(tfile);
-    } else if (mode === "\u51FA\u94FE") {
-      return this.get_outlinks(tfile);
-    } else if (mode === "\u6240\u6709\u7B14\u8BB0") {
-      return this.MDFiles;
-    } else if (mode === "recent-files-obsidian") {
-      let r = this.app.plugins.getPlugin("recent-files-obsidian");
-      if (!r) {
-        return [];
+    } else if (mode === this.plugin.strings.item_get_brothers) {
+      return this.get_brothers(tfile);
+    } else if (mode === this.plugin.strings.item_same_folder) {
+      if (tfile == null ? void 0 : tfile.parent) {
+        return this.get_tfiles_of_folder(tfile.parent, true);
       }
-      return Object.values(
-        r.data.recentFiles
-      ).map(
-        (f) => this.app.vault.fileMap[f.path]
-      ).filter((f) => f);
-    } else if (mode === "\u7B14\u8BB0\u94FE\u6761") {
+    } else if (mode === this.plugin.strings.item_inlinks_outlinks) {
+      return this.get_links(tfile);
+    } else if (mode === this.plugin.strings.item_inlins) {
+      return this.get_inlinks(tfile);
+    } else if (mode === this.plugin.strings.item_outlinks) {
+      return this.get_outlinks(tfile);
+    } else if (mode === this.plugin.strings.item_all_noes) {
+      return this.get_all_tfiles();
+    } else if (mode === this.plugin.strings.item_recent) {
+      return this.get_recent_tfiles();
+    } else if (mode === this.plugin.strings.item_uncle_notes) {
+      if (tfile) {
+        return this.get_uncles(tfile);
+      }
+    } else if (mode === this.plugin.strings.item_notechain) {
       return this.get_chain(
         tfile,
         Number(this.plugin.settings.PrevChain),
@@ -400,17 +1468,29 @@ var NoteChain = class {
   }
   // Chain
   get_prev_note(tfile = this.current_note) {
+    if (!tfile) {
+      return;
+    }
     if (tfile.deleted) {
       let tfiles = this.app.vault.getMarkdownFiles();
-      tfiles = tfiles.filter((f) => `[[${tfile.basename}]]` === this.editor.get_frontmatter(f, this.next));
+      tfiles = tfiles.filter((f) => {
+        if (!f) {
+          return false;
+        }
+        let next = this.editor.get_frontmatter(f, this.next);
+        if (typeof next != "string") {
+          return false;
+        }
+        return `[[${tfile.basename}]]` == next;
+      });
       if (tfiles.length > 0) {
-        return tfile[0];
+        return tfiles[0];
       } else {
         return null;
       }
     } else {
       let name = this.editor.get_frontmatter(tfile, this.prev);
-      if (!name) {
+      if (!name || typeof name != "string") {
         return null;
       }
       let note = this.get_tfile(name);
@@ -422,9 +1502,21 @@ var NoteChain = class {
     this.open_note(note);
   }
   get_next_note(tfile = this.current_note) {
+    if (!tfile) {
+      return null;
+    }
     if (tfile.deleted) {
       let tfiles = this.app.vault.getMarkdownFiles();
-      tfiles = tfiles.filter((f) => `[[${tfile.basename}]]` === this.editor.get_frontmatter(f, this.prev));
+      let prev = tfiles = tfiles.filter((f) => {
+        if (!f) {
+          return false;
+        }
+        let prev2 = this.editor.get_frontmatter(f, this.prev);
+        if (typeof prev2 != "string") {
+          return false;
+        }
+        return `[[${tfile.basename}]]` == prev2;
+      });
       if (tfiles.length > 0) {
         return tfiles[0];
       } else {
@@ -432,7 +1524,7 @@ var NoteChain = class {
       }
     } else {
       let name = this.editor.get_frontmatter(tfile, this.next);
-      if (!name) {
+      if (!name || typeof name != "string") {
         return null;
       }
       let note = this.get_tfile(name);
@@ -457,8 +1549,6 @@ var NoteChain = class {
       if (!note) {
         break;
       } else if (res.includes(note)) {
-        this.editor.set_frontmatter(note, this.next, "");
-        this.editor.set_frontmatter(tmp, this.prev, "");
         break;
       } else {
         res.unshift(note);
@@ -471,8 +1561,6 @@ var NoteChain = class {
       if (!note) {
         break;
       } else if (res.includes(note)) {
-        this.editor.set_frontmatter(note, this.prev, "");
-        this.editor.set_frontmatter(tmp, this.next, "");
         break;
       } else {
         res.push(note);
@@ -507,11 +1595,15 @@ var NoteChain = class {
     if (tfile == null || tfile == prev) {
       return;
     }
+    if (this.get_prev_note(tfile) == prev) {
+      return;
+    }
+    let msg = `Note Chain: ${prev == null ? void 0 : prev.basename} --> \u{1F3E0}${tfile.basename}`;
     if (prev == null) {
       await this.editor.set_frontmatter(
         tfile,
         this.prev,
-        ""
+        null
       );
     } else {
       await this.editor.set_frontmatter(
@@ -520,16 +1612,23 @@ var NoteChain = class {
         `[[${prev.basename}]]`
       );
     }
+    if (this.plugin.settings.notice_while_modify_chain) {
+      new import_obsidian4.Notice(msg, 5e3);
+    }
   }
   async chain_set_next(tfile, next) {
     if (tfile == null || tfile == next) {
       return;
     }
+    if (this.get_next_note(tfile) == next) {
+      return;
+    }
+    let msg = `Note Chain: \u{1F3E0}${tfile == null ? void 0 : tfile.basename} <-- ${next == null ? void 0 : next.basename}`;
     if (next == null) {
       await this.editor.set_frontmatter(
         tfile,
         this.next,
-        ""
+        null
       );
     } else {
       await this.editor.set_frontmatter(
@@ -538,36 +1637,36 @@ var NoteChain = class {
         `[[${next.basename}]]`
       );
     }
+    if (this.plugin.settings.notice_while_modify_chain) {
+      new import_obsidian4.Notice(msg, 5e3);
+    }
   }
-  async chain_set_prev_next(prev, next) {
+  async chain_set_prev_next(tfile, prev, next) {
+    if (tfile == null || prev == next || tfile == prev || tfile == next) {
+      return;
+    }
+    if (this.get_prev_note(tfile) == prev) {
+      await this.chain_set_next(tfile, next);
+      return;
+    }
+    if (this.get_next_note(tfile) == next) {
+      await this.chain_set_prev(tfile, prev);
+      return;
+    }
+    let msg = `Note Chain: ${prev == null ? void 0 : prev.basename} --> \u{1F3E0}${tfile == null ? void 0 : tfile.basename} <-- ${next == null ? void 0 : next.basename}`;
+    let fm = {};
+    fm[this.prev] = prev ? `[[${prev.basename}]]` : null;
+    fm[this.next] = next ? `[[${next.basename}]]` : null;
+    await this.plugin.editor.set_multi_frontmatter(tfile, fm);
+    if (this.plugin.settings.notice_while_modify_chain) {
+      new import_obsidian4.Notice(msg, 5e3);
+    }
+  }
+  async chain_link_prev_next(prev, next) {
     await this.chain_set_prev(next, prev);
     await this.chain_set_next(prev, next);
   }
-  async chain_pop_node(tfile) {
-    let notes = this.get_neighbors(tfile);
-    await this.chain_set_prev_next(notes[0], notes[1]);
-  }
-  async chain_insert_node_as_head(tfile, anchor) {
-    let head = this.get_first_note(anchor);
-    await this.chain_set_prev_next(tfile, head);
-  }
-  async chain_insert_node_as_tail(tfile, anchor) {
-    let tail = this.get_last_note(anchor);
-    await this.chain_set_prev_next(tail, tfile);
-  }
-  async chain_insert_node_after(tfile, anchor) {
-    this.chain_pop_node(tfile);
-    let next = this.get_next_note(anchor);
-    await this.chain_set_prev_next(anchor, tfile);
-    await this.chain_set_prev_next(tfile, next);
-  }
-  async chain_insert_node_before(tfile, anchor) {
-    this.chain_pop_node(tfile);
-    let prev = this.get_next_note(anchor);
-    await this.chain_set_prev_next(tfile, anchor);
-    await this.chain_set_prev_next(prev, tfile);
-  }
-  async chain_link_tfiles(tfiles) {
+  async chain_concat_tfiles(tfiles) {
     let prev = this.get_prev_note(tfiles[0]);
     if (tfiles.contains(prev)) {
       await this.chain_set_prev(tfiles[0], null);
@@ -576,31 +1675,119 @@ var NoteChain = class {
     if (tfiles.contains(next)) {
       await this.chain_set_next(tfiles[tfiles.length - 1], null);
     }
-    for (let i = 0; i < tfiles.length - 1; i++) {
-      await this.chain_set_prev_next(tfiles[i], tfiles[i + 1]);
+    if (tfiles.length <= 1) {
+      return;
+    }
+    let N = tfiles.length;
+    await this.chain_set_next(tfiles[0], tfiles[1]);
+    await this.chain_set_prev(tfiles[N - 1], tfiles[N - 2]);
+    for (let i = 1; i < tfiles.length - 1; i++) {
+      await this.chain_set_prev_next(tfiles[i], tfiles[i - 1], tfiles[i + 1]);
     }
   }
+  async chain_pop_node(tfile) {
+    let notes = this.get_neighbors(tfile);
+    await this.chain_link_prev_next(notes[0], notes[1]);
+  }
+  async chain_insert_node_as_head(tfile, anchor) {
+    let head = this.get_first_note(anchor);
+    await this.chain_link_prev_next(tfile, head);
+  }
+  async chain_insert_node_as_tail(tfile, anchor) {
+    let tail = this.get_last_note(anchor);
+    await this.chain_link_prev_next(tail, tfile);
+  }
+  async chain_insert_node_after(tfile, anchor) {
+    let anchor_next = this.get_next_note(anchor);
+    if (anchor_next == tfile) {
+      return;
+    }
+    let tfile_neighbor = this.get_neighbors(tfile);
+    if (tfile_neighbor[1] == anchor) {
+      await this.chain_concat_tfiles(
+        [tfile_neighbor[0], anchor, tfile, anchor_next]
+      );
+    } else {
+      await this.chain_pop_node(tfile);
+      await this.chain_concat_tfiles([anchor, tfile, anchor_next]);
+    }
+  }
+  async chain_insert_node_before(tfile, anchor) {
+    let anchor_prev = this.get_prev_note(anchor);
+    if (anchor_prev == tfile) {
+      return;
+    }
+    let tfile_neighbor = this.get_neighbors(tfile);
+    if (tfile_neighbor[0] == anchor) {
+      await this.chain_concat_tfiles(
+        [anchor_prev, tfile, anchor, tfile_neighbor[1]]
+      );
+    } else {
+      await this.chain_pop_node(tfile);
+      await this.chain_concat_tfiles([anchor_prev, tfile, anchor]);
+    }
+  }
+  async chain_insert_folder_after(tfile, anchor) {
+    if (!tfile.parent || tfile.parent.parent != anchor.parent) {
+      return;
+    }
+    let note = this.get_tfile(tfile.parent.name);
+    if (!note) {
+      return;
+    }
+    await this.plugin.editor.set_multi_frontmatter(
+      note,
+      {
+        "FolderPrevNote": `[[${anchor.basename}]]`,
+        "FolderPrevNoteOffset": 0.5
+      }
+    );
+  }
   async chain_suggester_tfiles(tfile = this.current_note, mode = "suggester") {
-    let notes = this.get_same_parent(tfile);
+    let notes = this.get_brothers(tfile);
     if (notes.length == 0) {
       return;
     }
     let files = await this.suggester_sort(notes);
-    await this.chain_link_tfiles(files);
+    await this.chain_concat_tfiles(files);
   }
   sort_tfiles(files, field) {
     if (typeof field === "string") {
-      if (field === "name") {
+      if (field === "name" || field === "alphabetical") {
         return files.sort(
           (a, b) => a.name.localeCompare(b.name)
         );
-      } else if (field === "mtime") {
+      } else if (field === "mtime" || field === "byModifiedTime") {
         return files.sort(
-          (a, b) => a.stat.mtime - b.stat.mtime
+          (a, b) => {
+            var _a, _b;
+            return ((_a = a.stat) == null ? void 0 : _a.mtime) - ((_b = b.stat) == null ? void 0 : _b.mtime);
+          }
         );
-      } else if (field === "ctime") {
+      } else if (field === "ctime" || field === "byCreatedTime") {
         return files.sort(
-          (a, b) => a.stat.ctime - b.stat.ctime
+          (a, b) => {
+            var _a, _b;
+            return ((_a = a.stat) == null ? void 0 : _a.ctime) - ((_b = b.stat) == null ? void 0 : _b.ctime);
+          }
+        );
+      } else if (field === "alphabeticalReverse") {
+        return files.sort(
+          (b, a) => a.name.localeCompare(b.name)
+        );
+      } else if (field === "byModifiedTimeReverse") {
+        return files.sort(
+          (b, a) => {
+            var _a, _b;
+            return ((_a = a.stat) == null ? void 0 : _a.mtime) - ((_b = b.stat) == null ? void 0 : _b.mtime);
+          }
+        );
+      } else if (field === "byCreatedTimeReverse") {
+        return files.sort(
+          (b, a) => {
+            var _a, _b;
+            return ((_a = a.stat) == null ? void 0 : _a.ctime) - ((_b = b.stat) == null ? void 0 : _b.ctime);
+          }
         );
       } else if (field === "chain") {
         return this.sort_tfiles_by_chain(files);
@@ -620,40 +1807,77 @@ var NoteChain = class {
     return files;
   }
   sort_tfiles_by_chain(tfiles) {
-    let notes = tfiles.map((f) => f);
+    let notes = tfiles.filter((f) => f instanceof import_obsidian4.TFile);
     let res = [];
+    let ctfiles = [];
     while (notes.length > 0) {
       let note = notes[0];
-      let tmp = [];
-      let xchain = this.get_chain(note, -1, -1);
-      for (let x of xchain) {
-        if (notes.contains(x)) {
-          tmp.push(x);
-          notes.remove(x);
+      if (note instanceof import_obsidian4.TFile) {
+        let xchain = this.get_chain(note, -1, -1);
+        for (let x of xchain) {
+          if (notes.contains(x)) {
+            ctfiles.push(x);
+            notes.remove(x);
+          }
         }
       }
-      res.push(tmp);
     }
-    res = res.sort((a, b) => b.length - a.length);
-    let rres = [];
-    for (let i of res) {
-      for (let j of i) {
-        rres.push(j);
+    res.push(...ctfiles);
+    let canvas = res.filter((f) => f instanceof import_obsidian4.TFile && f.extension == "canvas");
+    res = res.filter((f) => f instanceof import_obsidian4.TFile && f.extension != "canvas");
+    let folders = tfiles.filter((f) => f instanceof import_obsidian4.TFolder);
+    if (folders.length > 0) {
+      let indexOf = function(f) {
+        if (f instanceof import_obsidian4.TFile) {
+          return res.indexOf(f);
+        } else if (f instanceof import_obsidian4.TFolder) {
+          return idxs[folders.indexOf(f)];
+        } else {
+          return -1;
+        }
+      };
+      let idxs = folders.map(
+        (f) => this.indexOfFolder(f, ctfiles)
+      );
+      res.push(...folders);
+      res = res.sort((a, b) => indexOf(a) - indexOf(b));
+    }
+    for (let tfile of canvas) {
+      let rname = res.map((x) => x instanceof import_obsidian4.TFolder ? x.name : x.basename);
+      let cname = tfile.basename;
+      let idx = rname.indexOf(cname);
+      if (idx < 0) {
+        idx = rname.indexOf(cname.split(".").slice(0, -1).join("."));
+      }
+      if (idx < 0) {
+        res.push(tfile);
+      } else {
+        res.splice(idx + 1, 0, tfile);
       }
     }
-    return rres;
+    return res;
   }
   sort_tfiles_folder_first(tfiles) {
-    let A = tfiles.filter((f) => f instanceof import_obsidian.TFolder).sort((a, b) => a.name.localeCompare(b.name));
-    let B = tfiles.filter((f) => f instanceof import_obsidian.TFile);
-    return this.plugin.editor.concat_array([A, B]);
+    let A = tfiles.filter((f) => f instanceof import_obsidian4.TFolder).sort((a, b) => a.name.localeCompare(b.name));
+    let B = tfiles.filter((f) => f instanceof import_obsidian4.TFile);
+    return this.plugin.utils.concat_array([A, B]);
   }
   sort_tfiles_by_field(tfiles, field) {
     let res = tfiles.sort(
       (a, b) => {
         let av = this.editor.get_frontmatter(a, field);
         let bv = this.editor.get_frontmatter(b, field);
-        return av - bv;
+        if (typeof av != typeof bv) {
+          return 0;
+        }
+        if (typeof av == "number" && typeof bv == "number") {
+          return av - bv;
+        }
+        if (typeof av == "string" && typeof bv == "string") {
+          let v = av.localeCompare(bv);
+          return v;
+        }
+        return 0;
       }
     );
     return res;
@@ -668,19 +1892,22 @@ var NoteChain = class {
     ;
     let kv = {
       "chain": "chain",
-      "name": "name",
-      "ctime": "ctime",
-      "mtime": "mtime",
-      "name \u5012\u5E8F": ["name", "x"],
-      "ctime \u5012\u5E8F": ["ctime", "x"],
-      "mtime \u5012\u5E8F": ["mtime", "x"]
+      "name (a to z)": "name",
+      "ctime (old to new)": "ctime",
+      "mtime (old to new)": "mtime",
+      "name (z to a)": ["name", "x"],
+      "ctime (new to old)": ["ctime", "x"],
+      "mtime (new to old)": ["mtime", "x"]
     };
-    let field = await this.suggester(
+    let field = await this.plugin.dialog_suggest(
       Object.keys(kv),
       Object.values(kv)
     );
     if (field == null) {
       return [];
+    }
+    if (field == "chain") {
+      tfiles = this.sort_tfiles(tfiles, "name");
     }
     return this.sort_tfiles(tfiles, field);
   }
@@ -708,269 +1935,2962 @@ var NoteChain = class {
       view.tree.infinityScroll.compute();
     }
   }
+  async get_file_links(tfile, xlinks = true, inlinks = true, outlinks = true, onlymd = false) {
+    let items = {};
+    if (!tfile) {
+      return items;
+    }
+    items["\u{1F3E0} " + tfile.basename] = this.app.vault.adapter.getFullPath(tfile.path);
+    if (xlinks) {
+      let tmp;
+      tmp = this.editor.get_frontmatter(tfile, "github");
+      if (tmp) {
+        if (tmp.contains("github.com")) {
+          items["\u{1F310}github"] = tmp;
+        } else {
+          items["\u{1F310}github"] = `https://github.com/` + tmp;
+        }
+      }
+      tmp = this.editor.get_frontmatter(tfile, "huggingface");
+      if (tmp) {
+        if (tmp.contains("huggingface.co")) {
+          items["\u{1F310}huggingface\u{1F917}"] = tmp;
+        } else {
+          items["\u{1F310}huggingface\u{1F917}"] = `https://huggingface.co/` + tmp;
+        }
+      }
+      tmp = this.editor.get_frontmatter(tfile, "arxiv");
+      if (tmp == null ? void 0 : tmp.ID) {
+        items["\u{1F310}arxiv"] = `https://arxiv.org/abs/` + (tmp == null ? void 0 : tmp.ID);
+      }
+      let text = await this.app.vault.cachedRead(tfile);
+      const regex = /\[[^(\[\])]*?\]\(.*?\)/g;
+      const matches = text.match(regex);
+      if (matches) {
+        for (const match of matches) {
+          let key = match.slice(1, match.indexOf("]("));
+          let value = match.slice(match.indexOf("](")).slice(2, -1);
+          if (value === "") {
+            continue;
+          }
+          if (key === "") {
+            key = value;
+          }
+          if (value.startsWith("http")) {
+            key = "\u{1F310} " + key;
+          } else if (value.startsWith("file:///")) {
+            value = value.slice(8);
+            key = "\u{1F4C1} " + key;
+          } else {
+            key = "\u{1F517} " + key;
+          }
+          items[key] = value;
+        }
+      }
+    }
+    if (inlinks) {
+      let links = this.get_inlinks(tfile, false);
+      for (let i of links) {
+        if (onlymd && !(i.extension === "md")) {
+          continue;
+        }
+        if (i.extension === "md") {
+          items["\u2139\uFE0F " + i.basename] = this.app.vault.adapter.getFullPath(i.path);
+        } else {
+          items["\u2139\uFE0F " + i.name] = this.app.vault.adapter.getFullPath(i.path);
+        }
+      }
+    }
+    if (outlinks) {
+      let links = this.get_outlinks(tfile, false);
+      for (let i of links) {
+        if (onlymd && !(i.extension === "md")) {
+          continue;
+        }
+        if (i.extension === "md") {
+          items["\u{1F17E}\uFE0F " + i.basename] = this.app.vault.adapter.getFullPath(i.path);
+        } else {
+          items["\u{1F17E}\uFE0F " + i.name] = this.app.vault.adapter.getFullPath(i.path);
+        }
+      }
+    }
+    items["\u{1F492} vault"] = this.app.vault.adapter.getFullPath(".");
+    return items;
+  }
 };
 
 // src/NCFileExplorer.ts
-var import_obsidian2 = require("obsidian");
-chain_sort = function(org_sort) {
-  let plugin = app.plugins.getPlugin("note-chain");
-  return function(...d) {
+var import_obsidian5 = require("obsidian");
+var getSortedFolderItems = function(org_sort) {
+  let plugin = this.app.plugins.getPlugin("note-chain");
+  return function(e) {
     if (plugin) {
-      if (plugin == null ? void 0 : plugin.settings.isSortFileExplorer) {
-        var e = this.file, t = this.view, i = e.children.slice();
-        i = i.filter((x) => x);
-        i = plugin.chain.sort_tfiles_by_chain(i);
-        i = plugin.chain.sort_tfiles_folder_first(i);
-        for (var r = [], o = 0, a = i; o < a.length; o++) {
-          var s = a[o], l = t.fileItems[s.path];
-          l && r.push(l);
+      try {
+        let res = org_sort.call(this, e);
+        let tfiles = plugin.chain.children[e.path];
+        if (tfiles) {
+          res = res.sort((a, b) => tfiles.indexOf(a.file) - tfiles.indexOf(b.file));
         }
-        this.vChildren.setChildren(r);
-      } else {
-        return org_sort.call(this, ...d);
+        return res;
+      } catch (e2) {
+        return org_sort.call(this, e2);
       }
     } else {
-      return org_sort.call(this, ...d);
+      return org_sort.call(this, e);
+    }
+  };
+};
+var getTtitle = function(org_getTtile) {
+  let plugin = this.app.plugins.getPlugin("note-chain");
+  return function(e) {
+    if (plugin) {
+      try {
+        let res = plugin.explorer.get_display_text(this.file);
+        return res;
+      } catch (e2) {
+        return org_getTtile.call(this);
+      }
+    } else {
+      return org_getTtile.call(this);
     }
   };
 };
 var NCFileExplorer = class {
   constructor(plugin) {
     this.plugin = plugin;
+    this.chain = plugin.chain;
     this.app = plugin.app;
-    this.ob = require("obsidian");
     this.register();
   }
-  register() {
-    this.app.workspace.onLayoutReady(() => {
-      let folder = new import_obsidian2.TFolder(import_obsidian2.Vault, "");
-      let dom = this.file_explorer.createFolderDom(folder).constructor;
-      this._FolderDom_ = dom;
-      this.org_sort = dom.prototype.sort;
-      this.new_sort = chain_sort(this.org_sort);
-      this._FolderDom_.prototype.sort = this.new_sort;
-      this.file_explorer.sort();
-    });
-  }
-  unregister() {
-    if (this.org_sort) {
-      console.log("Reset FileExplorer to origin sort function.");
-      this._FolderDom_.prototype.sort = this.org_sort;
+  async register() {
+    await this.waitForFileExplorer();
+    this.getSortedFolderItems = this.file_explorer.constructor.prototype.getSortedFolderItems;
+    this.getSortedFolderItems_new = getSortedFolderItems(this.getSortedFolderItems);
+    this.file_explorer.constructor.prototype.getSortedFolderItems = this.getSortedFolderItems_new;
+    try {
+      let item = this.file_explorer.fileItems[this.plugin.chain.get_all_tfiles()[0].path];
+      if (item) {
+        this.getTitle = item.constructor.prototype.getTitle;
+        this.getTitle_new = getTtitle(this.getTitle);
+        item.constructor.prototype.getTitle = this.getTitle_new;
+      }
+      this.sort(0, true);
+      this.set_display_text();
+      this.set_fileitem_style();
+    } catch (error) {
     }
+  }
+  async unregister() {
+    if (this.getSortedFolderItems) {
+      this.file_explorer.constructor.prototype.getSortedFolderItems = this.getSortedFolderItems;
+    }
+    let items = this.file_explorer.fileItems;
+    for (let key in items) {
+      let item = items[key];
+      await this._set_display_text_(item, this.get_origin_text(item.file));
+      item.el.style.background = null;
+      item.el.style.border = null;
+    }
+  }
+  async waitForFileExplorer() {
+    while (!this.file_explorer.fileItems) {
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    return this.file_explorer.fileItems;
   }
   get file_explorer() {
     var _a;
-    let view = (_a = this.app.workspace.getLeavesOfType(
+    let a = this.app.workspace.getLeavesOfType(
       "file-explorer"
-    )[0]) == null ? void 0 : _a.view;
+    );
+    let view = (_a = a[0]) == null ? void 0 : _a.view;
     return view;
+  }
+  async sort(nsleep = 0, init = false) {
+    var _a;
+    if ((_a = this.file_explorer) == null ? void 0 : _a.sort) {
+      if (nsleep > 0) {
+        await sleep(nsleep);
+      }
+      if (init) {
+        this.plugin.chain.init_children();
+      }
+      if (Object.keys(this.plugin.chain.children).length == 0) {
+        setTimeout(() => {
+          this.sort(nsleep, true);
+        }, 3e3);
+      } else {
+        this.file_explorer.sort();
+      }
+    }
+  }
+  get_field_of_display_text(tfile) {
+    if (this.plugin.settings.field_of_display_text) {
+      let item = this.plugin.editor.get_frontmatter_config(tfile, this.plugin.settings.field_of_display_text);
+      if (typeof item != "string") {
+        return "";
+      }
+      return item;
+    }
+    return "";
+  }
+  get_origin_text(tfile) {
+    if (tfile instanceof import_obsidian5.TFile) {
+      if (tfile.extension == "md") {
+        return tfile.basename;
+      } else if (tfile.extension == "canvas") {
+        return tfile.basename;
+      } else {
+        return tfile.name;
+      }
+    } else {
+      return tfile.name;
+    }
+  }
+  get_item(tfile, field) {
+    var _a, _b;
+    if (!field) {
+      return "";
+    }
+    let fields = field.split("|");
+    let item = "";
+    for (let f of fields) {
+      if (f == "$0") {
+        return this.get_origin_text(tfile);
+      }
+      if (f.startsWith("?")) {
+        break;
+      }
+      if (tfile instanceof import_obsidian5.TFile) {
+        let s = this.plugin.editor.get_frontmatter(tfile, f);
+        if (typeof s === "number") {
+          item = `${s}`;
+        } else if (typeof s != "string" || s == "") {
+          continue;
+        }
+        item = s;
+        break;
+      }
+    }
+    if (((_a = fields.last()) == null ? void 0 : _a.startsWith("?")) && item) {
+      return ((_b = fields.last()) == null ? void 0 : _b.slice(1).replace(/\$1/g, item)) || "";
+    }
+    return item;
+  }
+  get_display_text(tfile) {
+    let str = this.get_field_of_display_text(tfile);
+    if (!str && this.plugin.settings.field_of_confluence_tab_format) {
+      str = `<${this.plugin.settings.field_of_confluence_tab_format}><$0>`;
+    } else {
+      str = `<${this.plugin.settings.field_of_confluence_tab_format}>${str}`;
+    }
+    if (!str || str == "$0" || str == "<$0>") {
+      return this.get_origin_text(tfile);
+    }
+    let mstr = str.replace(/\<(.+?)?\>/g, (match, field) => {
+      return this.get_item(tfile, field);
+    });
+    mstr = mstr;
+    if (mstr == "") {
+      return this.get_origin_text(tfile);
+    } else {
+      return mstr;
+    }
+  }
+  _set_display_text_(item, txt) {
+    if (item && txt) {
+      if (typeof txt == "string") {
+        item.innerEl.setText(txt);
+      }
+    }
+  }
+  set_display_text() {
+    let items = this.file_explorer.fileItems;
+    for (let key in items) {
+      let item = items[key];
+      let txt = this.get_display_text(item.file);
+      this._set_display_text_(item, txt);
+    }
+  }
+  async get_fileitem_style(tfile) {
+    if (this.plugin.settings.field_of_background_color) {
+      let style = this.plugin.editor.get_frontmatter_config(tfile, this.plugin.settings.field_of_background_color);
+      if (typeof style == "string") {
+        let func = await this.plugin.utils.get_str_func(this.app, style);
+        if (func) {
+          return func;
+        }
+      }
+      return style;
+    }
+    return null;
+  }
+  async set_fileitem_style() {
+    let items = this.file_explorer.fileItems;
+    for (let key in items) {
+      let item = items[key];
+      let style = await this.get_fileitem_style(item.file);
+      await this.set_fileitem_style_of_file(item.file, style);
+    }
+  }
+  async set_fileitem_style_of_file(tfile, style = null) {
+    if (!tfile) {
+      return;
+    }
+    if (!style) {
+      style = await this.get_fileitem_style(tfile);
+    }
+    let items = this.file_explorer.fileItems;
+    let item = items[tfile.path];
+    if (item) {
+      if (typeof style == "function") {
+        style = await style(tfile);
+        if (!style) {
+          return;
+        }
+      }
+      if (style == null) {
+        item.el.style.background = null;
+        item.el.style.border = null;
+      } else if (typeof style == "string") {
+        item.el.style.background = style;
+      } else if (typeof style == "object") {
+        for (let k in style) {
+          item.el.style[k] = style[k];
+        }
+      } else if (typeof style == "function") {
+        await style(tfile);
+      }
+    }
   }
 };
 
-// main.ts
+// src/strings.ts
+var Strings = class {
+  constructor() {
+    let lang = window.localStorage.getItem("language");
+    if (lang) {
+      this.language = lang;
+    } else {
+      this.language = "en";
+    }
+  }
+  get cmd_mermaid_flowchart_link() {
+    if (this.language == "zh") {
+      return "Mermaid\u94FE\u63A5\u5361\u7247";
+    } else {
+      return "Mermaid of linked notes";
+    }
+  }
+  get cmd_mermaid_flowchart_folder() {
+    if (this.language == "zh") {
+      return "Mermaid\u76EE\u5F55\u5361\u7247";
+    } else {
+      return "Mermaid of folder notes";
+    }
+  }
+  get cmd_mermaid_flowchart_auto() {
+    if (this.language == "zh") {
+      return "Mermaid\u5361\u7247";
+    } else {
+      return "Mermaid of notes";
+    }
+  }
+  get cmd_file_open_with_system_app() {
+    if (this.language == "zh") {
+      return "\u6587\u4EF6 - \u4F7F\u7528\u7CFB\u7EDF\u7A0B\u5E8F\u6253\u5F00\uFF08\u4EC5\u684C\u9762\uFF09";
+    } else {
+      return "File - open with system app (desktop only)";
+    }
+  }
+  get cmd_file_show_in_system_explorer() {
+    if (this.language == "zh") {
+      return "\u6587\u4EF6 - \u5728\u7CFB\u7EDF\u6D4F\u89C8\u7684\u67E5\u770B\uFF08\u4EC5\u684C\u9762\uFF09";
+    } else {
+      return "File - show in system explorer (desktop only)";
+    }
+  }
+  get cmd_file_rename() {
+    if (this.language == "zh") {
+      return "\u6587\u4EF6 - \u91CD\u547D\u540D\u6587\u4EF6";
+    } else {
+      return "File - rename file";
+    }
+  }
+  get cmd_longform2notechain() {
+    if (this.language == "zh") {
+      return "\u6839\u636ELongForm\u91CD\u7F6E\u7B14\u8BB0\u94FE\u6761";
+    } else {
+      return "Reset note chain by longform";
+    }
+  }
+  get cmd_longform4notechain() {
+    if (this.language == "zh") {
+      return "\u6839\u636E\u7B14\u8BB0\u94FE\u6761\uFF0C\u91CD\u7F6ELongForm\u573A\u666F";
+    } else {
+      return "Reset longform scenes by note chain";
+    }
+  }
+  get cmd_sort_file_explorer() {
+    if (this.language == "zh") {
+      return "\u6839\u636E\u7B14\u8BB0\u94FE\u6392\u5E8F";
+    } else {
+      return "Sort file explorer by note chain";
+    }
+  }
+  get cmd_open_notes_smarter() {
+    if (this.language == "zh") {
+      return "\u667A\u80FD\u6253\u5F00\u6587\u4EF6";
+    } else {
+      return "Open note smarter";
+    }
+  }
+  get cmd_open_note() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u6587\u4EF6";
+    } else {
+      return "Open note";
+    }
+  }
+  get cmd_open_prev_note() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u524D\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Open prev note";
+    }
+  }
+  get chain_move_up_node() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u524D\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Move node up";
+    }
+  }
+  get chain_move_down_node() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u524D\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Move node down";
+    }
+  }
+  get cmd_open_next_note() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u540E\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Open next note";
+    }
+  }
+  get cmd_reveal_note() {
+    if (this.language == "zh") {
+      return "\u5B9A\u4F4D\u5F53\u524D\u7B14\u8BB0";
+    } else {
+      return "Reveal current file in navigation";
+    }
+  }
+  get cmd_open_and_reveal_note() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u5E76\u5B9A\u4F4D\u7B14\u8BB0";
+    } else {
+      return "Open and reveal note";
+    }
+  }
+  get cmd_open_prev_note_of_right_leaf() {
+    if (this.language == "zh") {
+      return "\u53F3\u4FA7\u9875\u9762\u6253\u5F00\u524D\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Open prev note of right leaf";
+    }
+  }
+  get cmd_open_next_note_of_right_leaf() {
+    if (this.language == "zh") {
+      return "\u53F3\u4FA7\u9875\u9762\u6253\u5F00\u540E\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Open next note of right leaf";
+    }
+  }
+  get cmd_execute_template_modal() {
+    if (this.language == "zh") {
+      return "\u6267\u884C\u811A\u672C\u7B14\u8BB0";
+    } else {
+      return "Execute Templater modal";
+    }
+  }
+  get cmd_toogle_css_block_in_note() {
+    if (this.language == "zh") {
+      return "\u542F\u7528/\u5173\u95ED css \u4EE3\u7801\u5757";
+    } else {
+      return "Toogle css block in note";
+    }
+  }
+  get cmd_set_frontmatter() {
+    if (this.language == "zh") {
+      return "\u6240\u9009\u7B14\u8BB0\u8BBE\u7F6E\u5C5E\u6027";
+    } else {
+      return "Set fronmatter for selected notes";
+    }
+  }
+  get cmd_move_next_level() {
+    if (this.language == "zh") {
+      return "\u63D0\u9AD8\u7F29\u8FDB\u5C42\u7EA7";
+    } else {
+      return "Increase the indentation level";
+    }
+  }
+  get cmd_move_none_level() {
+    if (this.language == "zh") {
+      return "\u5220\u9664\u7F29\u8FDB\u5C42\u7EA7";
+    } else {
+      return "Remove the indentation level";
+    }
+  }
+  get cmd_move_prev_level() {
+    if (this.language == "zh") {
+      return "\u964D\u4F4E\u7F29\u8FDB\u5C42\u7EA7";
+    } else {
+      return "Decrease the indentation level";
+    }
+  }
+  get filemenu_create_next_note() {
+    if (this.language == "zh") {
+      return "\u521B\u5EFA\u540E\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Create next note";
+    }
+  }
+  get filemenu_move_as_next_note() {
+    if (this.language == "zh") {
+      return "\u79FB\u52A8\u4E3A\u540E\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Move as next note";
+    }
+  }
+  get filemenu_move_as_next_notes() {
+    if (this.language == "zh") {
+      return "\u79FB\u52A8\u4E3A\u540E\u7F6E\u7B14\u8BB0\uFF08\u9009\u4E2D\u7B14\u8BB0\uFF09";
+    } else {
+      return "Move as next notes(selected)";
+    }
+  }
+  get clear_inlinks() {
+    if (this.language == "zh") {
+      return "\u6E05\u7406\u7B14\u8BB0\u5165\u94FE";
+    } else {
+      return "Clear inlinks of current file";
+    }
+  }
+  get move_file_to_another_folder() {
+    if (this.language == "zh") {
+      return "\u79FB\u52A8\u5F53\u524D\u6587\u4EF6";
+    } else {
+      return "Move current file to another folder";
+    }
+  }
+  get replace_notes_with_regx() {
+    if (this.language == "zh") {
+      return "\u6B63\u5219\u8868\u8FBE\u5F0F\u66FF\u6362\u7B14\u8BB0\u5185\u5BB9";
+    } else {
+      return "Replace by regex";
+    }
+  }
+  get chain_insert_node() {
+    if (this.language == "zh") {
+      return "\u63D2\u5165\u8282\u70B9";
+    } else {
+      return "Insert node of chain";
+    }
+  }
+  get chain_set_seq_note() {
+    if (this.language == "zh") {
+      return "\u91CD\u5851\u5F53\u524D\u6587\u4EF6\u5939\u7B14\u8BB0\u94FE\u6761";
+    } else {
+      return "Rebuild the chain of current folder";
+    }
+  }
+  get create_new_note() {
+    if (this.language == "zh") {
+      return "\u521B\u5EFA\u65B0\u7B14\u8BB0";
+    } else {
+      return "Create new note";
+    }
+  }
+  get setting_isSortFileExplorer() {
+    if (this.language == "zh") {
+      return "\u6839\u636E\u7B14\u8BB0\u94FE\u6761\u6392\u5E8F\u76EE\u5F55";
+    } else {
+      return "Sort by chain in file explorer?";
+    }
+  }
+  get setting_isFolderFirst() {
+    if (this.language == "zh") {
+      return "\u6392\u5E8F\u65F6\u76EE\u5F55\u65F6\u6587\u4EF6\u5939\u4F18\u5148\uFF1F";
+    } else {
+      return "Sort folder first in file explorer?";
+    }
+  }
+  get setting_PrevChain() {
+    if (this.language == "zh") {
+      return "\u524D\u7F6E\u7B14\u8BB0\u6570\u91CF\uFF1F";
+    } else {
+      return "Number of prev notes to show?";
+    }
+  }
+  get setting_NextChain() {
+    if (this.language == "zh") {
+      return "\u540E\u7F6E\u7B14\u8BB0\u6570\u91CF\uFF1F";
+    } else {
+      return "Number of next notes to show?";
+    }
+  }
+  get setting_suggesterNotesMode() {
+    if (this.language == "zh") {
+      return `${this.chain_insert_node}\uFF1A\u9ED8\u8BA4\u6A21\u5F0F`;
+    } else {
+      return `${this.chain_insert_node}:Default mode`;
+    }
+  }
+  get setting_auto_notechain() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u6587\u4EF6\u65F6\uFF0C\u81EA\u52A8\u91CD\u5851\u6587\u4EF6\u5939\u7B14\u8BB0\u94FE\uFF1F";
+    } else {
+      return "Auto build notechain of folder while open new file?";
+    }
+  }
+  get setting_refreshDataView() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u6587\u4EF6\u65F6\uFF0C\u5237\u65B0Dataview\u89C6\u56FE\uFF1F";
+    } else {
+      return "Refresh dataview while open new file?";
+    }
+  }
+  get setting_refreshTasks() {
+    if (this.language == "zh") {
+      return "\u6253\u5F00\u6587\u4EF6\u65F6\uFF0C\u5237\u65B0Tasks\u89C6\u56FE\uFF1F";
+    } else {
+      return "Refresh tasks while open new file?";
+    }
+  }
+  get setting_wordcout() {
+    if (this.language == "zh") {
+      return "\u7EDF\u8BA1\u6BCF\u65E5\u5B57\u6570";
+    } else {
+      return "Register daily word count?";
+    }
+  }
+  get setting_avata() {
+    if (this.language == "zh") {
+      return "\u5934\u50CF";
+    } else {
+      return "Avata";
+    }
+  }
+  get setting_wordcout_xfolder() {
+    if (this.language == "zh") {
+      return "\u8DF3\u8FC7\u4EE5\u4E0B\u76EE\u5F55";
+    } else {
+      return "Ignore these folders";
+    }
+  }
+  get setting_notice_while_modify_chain() {
+    if (this.language == "zh") {
+      return "\u4FEE\u6539\u7B14\u8BB0\u94FE\u65F6\u663E\u793A\u901A\u77E5\uFF1F";
+    } else {
+      return "Notice while modify note chain?";
+    }
+  }
+  get setting_field_of_display_text() {
+    if (this.language == "zh") {
+      return "\u6587\u4EF6\u5217\u8868\u663E\u793A\u6587\u4EF6\u540D";
+    } else {
+      return "Display text for notes in file-explorer?";
+    }
+  }
+  get setting_confluence_tab_format() {
+    if (this.language == "zh") {
+      return "\u4F7F\u7528Confluence\u7F29\u8FDB\u683C\u5F0F";
+    } else {
+      return "Use confluence indentation format";
+    }
+  }
+  get setting_field_of_background_color() {
+    if (this.language == "zh") {
+      return "\u6587\u4EF6\u5217\u8868\u5143\u7D20\u98CE\u683C";
+    } else {
+      return "File-item style for notes in file-explorer?";
+    }
+  }
+  get item_insert_suggester() {
+    if (this.language == "zh") {
+      return "\u63D2\u5165\u6A21\u5F0F\uFF08\u76F8\u5BF9\u4E8E\u951A\u70B9\uFF09";
+    } else {
+      return "Insert mode(relate to anchor).";
+    }
+  }
+  get item_insert_node_after() {
+    if (this.language == "zh") {
+      return "\u540E\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Next note";
+    }
+  }
+  get item_insert_node_before() {
+    if (this.language == "zh") {
+      return "\u524D\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Prev note";
+    }
+  }
+  get item_insert_node_as_head() {
+    if (this.language == "zh") {
+      return "\u94FE\u5934";
+    } else {
+      return "Head of chain";
+    }
+  }
+  get item_insert_node_as_tail() {
+    if (this.language == "zh") {
+      return "\u94FE\u5C3E";
+    } else {
+      return "Tail of thain";
+    }
+  }
+  get item_insert_folder_after() {
+    if (this.language == "zh") {
+      return "\u6587\u4EF6\u5939\u540E\u7F6E";
+    } else {
+      return "Folder as next";
+    }
+  }
+  get item_get_brothers() {
+    if (this.language == "zh") {
+      return "\u540C\u7EA7\u7B14\u8BB0";
+    } else {
+      return "Notes in same folder";
+    }
+  }
+  get item_same_folder() {
+    if (this.language == "zh") {
+      return "\u540C\u7EA7\u7B14\u8BB0+\u5B50\u76EE\u5F55";
+    } else {
+      return "Notes in same folder(recursive)";
+    }
+  }
+  get item_inlinks_outlinks() {
+    if (this.language == "zh") {
+      return "\u51FA\u94FE+\u5165\u94FE";
+    } else {
+      return "outLinks + inLinks";
+    }
+  }
+  get item_inlins() {
+    if (this.language == "zh") {
+      return "\u5165\u94FE";
+    } else {
+      return "inlinks";
+    }
+  }
+  get item_outlinks() {
+    if (this.language == "zh") {
+      return "\u51FA\u94FE";
+    } else {
+      return "outlinks";
+    }
+  }
+  get item_all_noes() {
+    if (this.language == "zh") {
+      return "\u6240\u6709\u7B14\u8BB0";
+    } else {
+      return "All notes";
+    }
+  }
+  get item_recent() {
+    if (this.language == "zh") {
+      return "\u8FD1\u671F\u7B14\u8BB0";
+    } else {
+      return "Recent";
+    }
+  }
+  get item_uncle_notes() {
+    if (this.language == "zh") {
+      return "\u4E0A\u7EA7\u7B14\u8BB0";
+    } else {
+      return "Notes in grandpa folder";
+    }
+  }
+  get item_notechain() {
+    if (this.language == "zh") {
+      return "\u7B14\u8BB0\u94FE\u6761";
+    } else {
+      return "Note chain";
+    }
+  }
+  get item_currentnote() {
+    if (this.language == "zh") {
+      return "\u5F53\u524D\u7B14\u8BB0";
+    } else {
+      return "Current note";
+    }
+  }
+  get item_chain_insert_node_after() {
+    if (this.language == "zh") {
+      return "\u6DFB\u52A0\u540E\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Create next note";
+    }
+  }
+  get item_chain_insert_node_as_tail() {
+    if (this.language == "zh") {
+      return "\u94FE\u5C3E\u6DFB\u52A0\u7B14\u8BB0";
+    } else {
+      return "Create tail note";
+    }
+  }
+  get item_chain_insert_node_before() {
+    if (this.language == "zh") {
+      return "\u6DFB\u52A0\u524D\u7F6E\u7B14\u8BB0";
+    } else {
+      return "Create prev note";
+    }
+  }
+  get item_chain_insert_node_as_head() {
+    if (this.language == "zh") {
+      return "\u94FE\u5934\u6DFB\u52A0\u7B14\u8BB0";
+    } else {
+      return "Create head note";
+    }
+  }
+  get item_item_chain_insert_null() {
+    if (this.language == "zh") {
+      return "\u65E0\u94FE\u63A5";
+    } else {
+      return "Create note not in chain";
+    }
+  }
+  get prompt_notename() {
+    if (this.language == "zh") {
+      return "\u8F93\u5165\u7B14\u8BB0\u540D";
+    } else {
+      return "Input note name";
+    }
+  }
+};
+var strings = new Strings();
+
+// src/WordCount.ts
+var import_obsidian6 = require("obsidian");
+var WordCount = class {
+  constructor(plugin, app) {
+    this.plugin = plugin;
+    this.app = app;
+    this.nretry = 100;
+    this.register();
+  }
+  filter(tfile) {
+    var _a;
+    if (!tfile) {
+      return false;
+    }
+    if (tfile.deleted) {
+      return false;
+    }
+    if (tfile.extension != "md") {
+      return false;
+    }
+    let xfolders = this.plugin.settings.wordcountxfolder.split("\n").filter((x) => x != "");
+    for (let item of xfolders) {
+      if (tfile.path.startsWith(item)) {
+        return false;
+      } else if (item == "/") {
+        if (((_a = tfile.parent) == null ? void 0 : _a.path) == "/") {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+  // 统计字数
+  count_words(ctx, ignore = /[\s!"#$%&'()*+,./:;<=>?@[\]^_`{|}，。！？【】、；：“”‘’《》（）［］—…￥]/g) {
+    let N = ctx.replace(ignore, "").length;
+    let enregex = /[a-zA-Z0-9-]+/g;
+    let matches = ctx.match(enregex);
+    if (matches) {
+      let elen = 0;
+      matches.forEach((x) => elen = elen + x.length);
+      N = N - elen + matches.length;
+    }
+    return N;
+  }
+  async set_mtime_value(tfile, key, val) {
+    var _a, _b;
+    let activeView = this.app.workspace.getActiveViewOfType(import_obsidian6.MarkdownView);
+    let editorState = {};
+    if (activeView && activeView.file === tfile) {
+      let editor = activeView.editor;
+      if (editor) {
+        editorState.cursor = editor.getCursor();
+        editorState.selection = editor.getSelection();
+        editorState.sanchor = editor.getCursor("anchor");
+        editorState.shead = editor.getCursor("head");
+        editorState.scrollInfo = editor.getScrollInfo();
+      }
+    }
+    let aline = ((_a = editorState == null ? void 0 : editorState.cursor) == null ? void 0 : _a.line) !== void 0 ? (_b = activeView == null ? void 0 : activeView.editor) == null ? void 0 : _b.getLine(editorState.cursor.line) : void 0;
+    if (aline && aline.startsWith("|") && aline.endsWith("|")) {
+      return;
+    }
+    await this.app.fileManager.processFrontMatter(
+      tfile,
+      (fm) => {
+        let t = import_obsidian6.moment.unix(tfile.stat.mtime / 1e3);
+        let mtime = t.format("YYYY-MM-DD");
+        if (fm[key] == null) {
+          if (val > 0) {
+            fm[key] = {};
+            if (mtime == (0, import_obsidian6.moment)().format("YYYY-MM-DD") && mtime != import_obsidian6.moment.unix(tfile.stat.ctime / 1e3).format("YYYY-MM-DD")) {
+              fm[key][t.add(-1, "days").format("YYYY-MM-DD")] = val;
+            } else {
+              fm[key][mtime] = val;
+            }
+          }
+        } else {
+          let ts = Object.keys(fm[key]).sort((b, a) => a.localeCompare(b)).filter((x) => !(x == mtime));
+          if (ts.length == 0) {
+            if (val > 0) {
+              fm[key][mtime] = val;
+            } else if (fm[key][mtime]) {
+              fm[key][mtime] = val;
+            }
+          } else {
+            if (val - fm[key][ts[0]] != 0) {
+              fm[key][mtime] = val;
+            } else if (fm[key][mtime]) {
+              delete fm[key][mtime];
+            }
+          }
+        }
+      }
+    );
+    if (activeView && activeView.file === tfile) {
+      let editor = activeView.editor;
+      if (editor) {
+        if (editorState.scrollInfo) {
+          editor.scrollTo(editorState.scrollInfo.left, editorState.scrollInfo.top);
+        }
+        if (editorState.selection && editorState.sanchor && editorState.shead) {
+          try {
+            editor.setSelection(editorState.sanchor, editorState.shead);
+          } catch (error) {
+            new import_obsidian6.Notice(`Error setting selection:${error}`, 3e3);
+          }
+        } else if (editorState.cursor) {
+          editor.setCursor(editorState.cursor);
+        }
+      }
+    }
+  }
+  get_new_words(tfile, day = (0, import_obsidian6.moment)().format("YYYY-MM-DD")) {
+    var _a;
+    let meta = this.app.metadataCache.getFileCache(tfile);
+    let values = (_a = meta == null ? void 0 : meta.frontmatter) == null ? void 0 : _a.words;
+    if (values) {
+      let keys = Object.keys(values).sort((a, b) => a.localeCompare(b));
+      let idx = keys.indexOf(day);
+      if (idx < 0) {
+        return 0;
+      } else if (idx == 0) {
+        return values[day];
+      } else {
+        return values[day] - values[keys[idx - 1]];
+      }
+    }
+  }
+  async update_word_count(tfile) {
+    if (!this.filter(tfile)) {
+      return;
+    }
+    let ctx = await this.app.vault.cachedRead(tfile);
+    let mcache = this.app.metadataCache.getFileCache(tfile);
+    if (mcache == null ? void 0 : mcache.frontmatterPosition) {
+      ctx = ctx.slice(mcache.frontmatterPosition.end.offset);
+    }
+    let N = this.count_words(ctx);
+    await this.set_mtime_value(tfile, "words", N);
+  }
+  check_frontmatter(tfile, kv) {
+    try {
+      if (!tfile) {
+        return false;
+      }
+      let meta = this.app.metadataCache.getFileCache(tfile);
+      if (meta == null ? void 0 : meta.frontmatter) {
+        for (let k in kv) {
+          if (!(meta.frontmatter[k] == kv[k])) {
+            return false;
+          }
+        }
+        return true;
+      }
+      return false;
+    } catch (error) {
+      return false;
+    }
+  }
+  async wait_frontmatter(tfile, kv, nretry = this.nretry) {
+    let flag = this.check_frontmatter(tfile, kv);
+    while (!flag && nretry > 0) {
+      await sleep(50);
+      nretry = nretry - 1;
+      flag = this.check_frontmatter(tfile, kv);
+    }
+    return flag;
+  }
+  async update_word_count_of_vault() {
+    let tfiles = this.app.vault.getMarkdownFiles().filter((x) => this.filter(x));
+    let i = 0;
+    for (let tfile of tfiles) {
+      new import_obsidian6.Notice(`${i}/${tfiles.length}:${tfile.name}`, 3e3);
+      await this.update_word_count(tfile);
+      i = i + 1;
+    }
+  }
+  register() {
+    if (this.plugin.settings.wordcout) {
+      this.regeister_editor_change();
+      this.regeister_active_leaf_change();
+    }
+  }
+  regeister_editor_change() {
+    this.plugin.registerEvent(
+      this.app.workspace.on("editor-change", async (editor, info) => {
+        var _a;
+        if (((_a = info.file) == null ? void 0 : _a.extension) != "md") {
+          return;
+        }
+        if (this.timerId !== null) {
+          clearTimeout(this.timerId);
+        }
+        if (info.file) {
+          this.timerId = setTimeout(() => {
+            this.update_word_count(info.file);
+          }, 3e3);
+        }
+      })
+    );
+  }
+  regeister_active_leaf_change() {
+    this.plugin.registerEvent(
+      this.app.workspace.on("active-leaf-change", async (leaf) => {
+        var _a, _b;
+        let tfile = (leaf == null ? void 0 : leaf.view).file;
+        if (!(leaf == null ? void 0 : leaf.view)) {
+          return;
+        }
+        if (!(((_b = (_a = leaf.view) == null ? void 0 : _a.file) == null ? void 0 : _b.extension) == "md")) {
+          return;
+        }
+        await this.update_word_count(tfile);
+        if (this.curr_active_file == null) {
+          this.curr_active_file = tfile;
+          return;
+        }
+        if (this.curr_active_file != tfile) {
+          await this.update_word_count(this.curr_active_file);
+          this.curr_active_file = tfile;
+        }
+      })
+    );
+  }
+  get_words_of_tfiles() {
+    return this.plugin.chain.get_all_tfiles().map(
+      (x) => this.plugin.editor.get_frontmatter(x, "words")
+    ).filter((x) => x);
+  }
+  sum_words_of_tifles(files, begt, endt) {
+    if (typeof begt == "number") {
+      begt = (0, import_obsidian6.moment)().add(-begt, "days").format("YYYY-MM-DD");
+    }
+    if (typeof endt == "number") {
+      endt = (0, import_obsidian6.moment)().add(-endt, "days").format("YYYY-MM-DD");
+    }
+    let startDate = new Date(begt);
+    let endDate = new Date(endt);
+    let dailyWordCounts = {};
+    for (let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
+      let dateStr = date.toISOString().split("T")[0];
+      dailyWordCounts[dateStr] = 0;
+    }
+    files.forEach((file) => {
+      let lastWordCount = 0;
+      let earliestDate = new Date(Object.keys(file).sort()[0]);
+      if (earliestDate < startDate) {
+        lastWordCount = file[earliestDate.toISOString().split("T")[0]];
+      }
+      for (let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
+        let dateStr = date.toISOString().split("T")[0];
+        if (file.hasOwnProperty(dateStr)) {
+          lastWordCount = file[dateStr];
+        }
+        dailyWordCounts[dateStr] += lastWordCount;
+      }
+    });
+    return dailyWordCounts;
+  }
+  diff_words_of_tifles(dailyWordCounts, first_as_zero = true) {
+    let dailyNewWordCounts = {};
+    let previousTotal = 0;
+    let first = "";
+    for (let date in dailyWordCounts) {
+      if (first === "") {
+        first = date;
+      }
+      let currentTotal = dailyWordCounts[date];
+      dailyNewWordCounts[date] = currentTotal - previousTotal;
+      previousTotal = currentTotal;
+    }
+    if (first_as_zero && first !== "") {
+      dailyNewWordCounts[first] = 0;
+    }
+    return dailyNewWordCounts;
+  }
+};
+
+// src/graph.ts
+var import_obsidian7 = require("obsidian");
+var NoteNode = class {
+  constructor(tfile, plugin) {
+    this.tfile = tfile;
+    this.note2id = {};
+    this.id = 0;
+    this.plugin = plugin;
+  }
+  // 返回 IDXXXX
+  get_id(tfile) {
+    if (tfile.basename in this.note2id) {
+      return this.note2id[tfile.basename];
+    }
+    let newId = `ID${this.id.toString().padStart(4, "0")}`;
+    this.note2id[tfile.basename] = newId;
+    this.id = this.id + 1;
+    return newId;
+  }
+  // 返回IDXXXX["tfile.basename"]
+  get_node(tfile) {
+    let id = this.get_id(tfile);
+    return `${id}("${tfile.basename}")`;
+  }
+  get_mehrmaid_node(node, avata = "") {
+    if (node in this.note2id) {
+      return this.note2id[node];
+    }
+    if (node.startsWith("subgraph ")) {
+      return node.slice("subgraph ".length);
+    }
+    let newId = `ID${this.id.toString().padStart(4, "0")}`;
+    this.note2id[node] = newId;
+    this.id = this.id + 1;
+    let tfile = this.plugin.chain.get_tfile(node);
+    if (tfile) {
+      if (avata == "") {
+        avata = this.plugin.settings.avata;
+      }
+      let meta = this.plugin.editor.get_frontmatter(tfile, avata);
+      if (meta) {
+        if (meta.startsWith("#")) {
+          node = `![[${tfile.basename}${meta}|no-head]]`;
+        } else {
+          node = meta.replace("SELF", `[[${tfile.basename}]]`);
+        }
+      }
+    }
+    return `${newId}("${node}")`;
+  }
+  get_canvas_node(node) {
+    if (node in this.note2id) {
+      return this.note2id[node];
+    }
+    let newId = `ID${this.id.toString().padStart(4, "0")}`;
+    this.note2id[node] = newId;
+    this.id = this.id + 1;
+    return newId;
+  }
+  notes2class() {
+    let msg = "\n";
+    for (let tfile in this.note2id) {
+      msg = msg + `	class ${this.note2id[tfile]} internal-link;
+`;
+    }
+    return msg;
+  }
+};
+var MermaidGraph = class {
+  constructor(plugin) {
+    this.plugin = plugin;
+    this.app = plugin.app;
+    this.editor = plugin.editor;
+  }
+  get_note_node(tfile) {
+    let node = new NoteNode(tfile, this.plugin);
+    return node;
+  }
+  subgraph_chain(node, tfiles, subgraph = "", line = "<-->") {
+    let msg = "";
+    let items = tfiles.map((x) => x);
+    let stab = "	";
+    if (subgraph != "") {
+      msg = msg + `
+	subgraph ${subgraph}
+`;
+      stab = "		";
+    }
+    let i = 0;
+    while (i < items.length - 1) {
+      let prev = node.get_node(items[i]);
+      let next = node.get_node(items[i + 1]);
+      msg = msg + `${stab}${prev}${line}${next}
+`;
+      i = i + 1;
+    }
+    if (subgraph != "") {
+      msg = msg + "	end\n";
+    }
+    return msg;
+  }
+  subgraph_links(node, tfiles, subgraph = "", line = "-->", tfiles_first = false) {
+    let msg = "";
+    let items = tfiles.map((x) => x);
+    let stab = "	";
+    if (subgraph != "") {
+      msg = msg + `
+	subgraph ${subgraph}
+`;
+      stab = "		";
+    }
+    let i = 0;
+    let sid = node.get_node(node.tfile);
+    while (i < items.length) {
+      let id = node.get_node(items[i]);
+      if (tfiles_first) {
+        msg = msg + `${stab}${id}${line}${sid}
+`;
+      } else {
+        msg = msg + `${stab}${sid}${line}${id}
+`;
+      }
+      i = i + 1;
+    }
+    if (subgraph != "") {
+      msg = msg + "	end\n";
+    }
+    return msg;
+  }
+  // [src,dst,io]
+  edges_of_tfiles(tfiles, merge_inout = true) {
+    let inlinks = {};
+    let outlinks = {};
+    for (let tfile of tfiles) {
+      outlinks[tfiles.indexOf(tfile)] = this.plugin.chain.get_outlinks(tfile, true);
+      inlinks[tfiles.indexOf(tfile)] = this.plugin.chain.get_inlinks(tfile, true);
+    }
+    let edges = [];
+    for (let tfile of tfiles) {
+      let i = tfiles.indexOf(tfile);
+      for (let outlink of outlinks[i]) {
+        if (tfiles.contains(outlink)) {
+          if (tfiles.indexOf(outlink) <= i) {
+            continue;
+          }
+          if (merge_inout) {
+            if (inlinks[i].contains(outlink)) {
+              edges.push([tfile, outlink, true]);
+            } else {
+              edges.push([tfile, outlink, false]);
+            }
+          } else {
+            edges.push([tfile, outlink, false]);
+          }
+        }
+      }
+      for (let inlink of inlinks[i]) {
+        if (tfiles.contains(inlink)) {
+          if (tfiles.indexOf(inlink) <= i) {
+            continue;
+          }
+          if (merge_inout) {
+            if (!outlinks[i].contains(inlink)) {
+              edges.push([inlink, tfile, false]);
+            }
+          } else {
+            edges.push([inlink, tfile, false]);
+          }
+        }
+      }
+    }
+    return edges;
+  }
+  subgraph_cross(node, tfiles, subgraph = "", line = "-->", tfiles_first = false) {
+    let msg = "";
+    let items = tfiles.map((x) => x);
+    let stab = "	";
+    if (subgraph != "") {
+      msg = msg + `
+	subgraph ${subgraph}
+`;
+      stab = "		";
+    }
+    let edges = this.edges_of_tfiles(tfiles);
+    for (let edge of edges) {
+      let sid = node.get_node(edge[0]);
+      let did = node.get_node(edge[1]);
+      if (edge[2]) {
+        msg = msg + `${stab}${sid}<-.->${did}
+`;
+      } else {
+        msg = msg + `${stab}${sid}-.->${did}
+`;
+      }
+    }
+    if (subgraph != "") {
+      msg = msg + "	end\n";
+    }
+    return msg;
+  }
+  get_flowchart(tfile, N = 2, c_chain = "#F05454", c_inlink = "#776B5D", c_outlink = "#222831", c_anchor = "#40A578") {
+    if (!tfile) {
+      let leaf = this.plugin.chain.get_last_activate_leaf();
+      if (leaf) {
+        tfile = leaf.view.file;
+      }
+    }
+    if (!tfile) {
+      return "No File.";
+    }
+    let node = new NoteNode(tfile, this.plugin);
+    let nc = this.plugin;
+    let msg = "```mermaid\nflowchart TD\n";
+    let chain = nc.chain.get_chain(tfile, N, N);
+    msg = msg + this.subgraph_chain(node, chain, "\u7B14\u8BB0\u94FE");
+    let inlinks = nc.chain.get_inlinks(tfile, true).filter((x) => !chain.contains(x));
+    let outlinks = nc.chain.get_outlinks(tfile, true).filter((x) => !chain.contains(x));
+    msg = msg + this.subgraph_links(node, inlinks, "\u5165\u94FE", "-->", true);
+    msg = msg + this.subgraph_links(node, outlinks, "\u51FA\u94FE", "-->");
+    msg = msg + node.notes2class();
+    msg = msg + [
+      "classDef \u7B14\u8BB0\u94FEC fill:" + c_chain,
+      "classDef \u5165\u94FEC fill:" + c_inlink,
+      "classDef \u51FA\u94FEC fill:" + c_outlink,
+      `classDef Anchor fill:${c_anchor},stoke:${c_anchor}`,
+      "class \u7B14\u8BB0\u94FE \u7B14\u8BB0\u94FEC",
+      "class \u5165\u94FE \u5165\u94FEC",
+      "class \u51FA\u94FE \u51FA\u94FEC",
+      ""
+    ].join("\n");
+    msg = msg + "```";
+    msg = msg.replace(
+      `class ${node.get_id(tfile)} internal-link;`,
+      `class ${node.get_id(tfile)} Anchor;`
+    );
+    return msg;
+  }
+  flowchart_folder(tfile, subgraph = "Folder", color = "#F05454", c_anchor = "#40A578") {
+    if (!tfile) {
+      let leaf = this.plugin.chain.get_last_activate_leaf();
+      if (leaf) {
+        tfile = leaf.view.file;
+      }
+    }
+    if (!tfile) {
+      return "No File.";
+    }
+    let tfiles = this.plugin.chain.get_brothers(tfile);
+    return this.flowchart_cross(tfile, tfiles, subgraph, color, c_anchor);
+  }
+  flowchart_notechain(tfile, N = 10, subgraph = "NoteChain", color = "#F05454", c_anchor = "#40A578") {
+    if (!tfile) {
+      let leaf = this.plugin.chain.get_last_activate_leaf();
+      if (leaf) {
+        tfile = leaf.view.file;
+      }
+    }
+    if (!tfile) {
+      return "No File.";
+    }
+    let tfiles = this.plugin.chain.get_chain(tfile, N, N);
+    return this.flowchart_cross(tfile, tfiles, subgraph, color, c_anchor);
+  }
+  flowchart_cross(anchor, tfiles, subgraph = "", color = "#F05454", c_anchor = "#40A578") {
+    let node = new NoteNode(tfiles[0], this.plugin);
+    let msg = "```mermaid\nflowchart TD\n";
+    msg = msg + this.subgraph_cross(node, tfiles, subgraph);
+    msg = msg + node.notes2class();
+    msg = msg + [
+      `classDef ${subgraph}C fill:${color}`,
+      `classDef Anchor fill:${c_anchor},stoke:${c_anchor}`,
+      `class ${subgraph} ${subgraph}C`,
+      ""
+    ].join("\n");
+    msg = msg + "```";
+    msg = msg.replace(
+      `class ${node.get_id(anchor)} internal-link;`,
+      `class ${node.get_id(anchor)} Anchor;`
+    );
+    return msg;
+  }
+  get_subgrah_names(group_name, tfiles, name = "group") {
+    let nc = this.plugin;
+    let items = {};
+    for (let cfile of tfiles) {
+      let cgroup = nc.editor.get_frontmatter(cfile, name);
+      if (cgroup && Array.isArray(cgroup)) {
+        for (let cg of cgroup) {
+          let tmp = cg.split("/");
+          if (tmp[0] == group_name) {
+            if (tmp.length == 1) {
+              items[tfiles.indexOf(cfile)] = "";
+            } else {
+              items[tfiles.indexOf(cfile)] = tmp[1];
+            }
+            break;
+          }
+        }
+      }
+    }
+    return items;
+  }
+  flowchart_groups(anchor, name = "group") {
+    let nc = this.plugin;
+    let tfiles = nc.chain.get_brothers(anchor);
+    tfiles = nc.chain.get_group_links(tfiles, 1);
+    let node = nc.mermaid.get_note_node(anchor);
+    let group = nc.editor.get_frontmatter(anchor, name);
+    if (!group || !Array.isArray(group)) {
+      return [];
+    }
+    let res = [];
+    for (let g of group) {
+      g = g.split("/")[0];
+      let items = this.get_subgrah_names(g, tfiles, name);
+      let subs = new Set(Object.values(items));
+      let msg = `\`\`\`mermaid
+---
+title: ${g}
+---
+flowchart TD
+`;
+      for (let sub of subs) {
+        if (sub == "") {
+          for (let idx in items) {
+            if (items[idx] == sub) {
+              msg = msg + "\n" + node.get_node(tfiles[idx]);
+            }
+          }
+        } else {
+          msg = msg + "\nsubgraph " + sub + "\n";
+          for (let idx in items) {
+            if (items[idx] == sub) {
+              msg = msg + "\n	" + node.get_node(tfiles[idx]);
+            }
+          }
+          msg = msg + "\nend";
+        }
+      }
+      msg = msg + "\n" + this.subgraph_cross(node, Object.keys(items).map((x) => tfiles[x]));
+      msg = msg + "\n" + node.notes2class();
+      msg = msg + "\n```";
+      res.push(msg);
+    }
+    return res;
+  }
+  get_relationship_graph(tfile, N = 1, key = "link", show_all_node = true) {
+    let nc = this.plugin;
+    let node = new NoteNode(tfile, this.plugin);
+    let msg = "```mermaid\nflowchart TD\n";
+    let tfiles = nc.chain.get_group_links([tfile], N);
+    if (show_all_node) {
+      for (let tfile2 of tfiles) {
+        msg += `${node.get_node(tfile2)}
+`;
+      }
+    }
+    let processedFiles = /* @__PURE__ */ new Set();
+    for (let currentFile of tfiles) {
+      if (processedFiles.has(currentFile))
+        continue;
+      processedFiles.add(currentFile);
+      let links = nc.editor.get_frontmatter(currentFile, key);
+      if (links) {
+        for (let [relation, linkedNote] of Object.entries(links)) {
+          if (linkedNote instanceof Array) {
+            for (let item of linkedNote) {
+              let linkedTFile = nc.chain.get_tfile(item);
+              if (linkedTFile instanceof import_obsidian7.TFile) {
+                msg += `	${node.get_node(currentFile)} -->|${relation}| ${node.get_node(linkedTFile)}
+`;
+              }
+            }
+          } else {
+            let linkedTFile = nc.chain.get_tfile(linkedNote);
+            if (linkedTFile instanceof import_obsidian7.TFile) {
+              msg += `	${node.get_node(currentFile)} -->|${relation}| ${node.get_node(linkedTFile)}
+`;
+            }
+          }
+        }
+      }
+    }
+    msg = msg + node.notes2class();
+    msg += "```";
+    let c_anchor = "#40A578";
+    msg = msg.replace(
+      `class ${node.get_id(tfile)} internal-link;`,
+      `classDef Anchor fill:${c_anchor},stoke:${c_anchor}
+class ${node.get_id(tfile)} Anchor;`
+    );
+    return msg;
+  }
+  get_mehrmaid_graph(tfile, N = 1, key = "mermaid", c_anchor = "#d4c4b7", field = "avata") {
+    if (!tfile) {
+      let leaf = this.plugin.chain.get_last_activate_leaf();
+      if (leaf) {
+        tfile = leaf.view.file;
+      }
+    }
+    if (!tfile) {
+      return "No File.";
+    }
+    let nc = this.plugin;
+    let node = new NoteNode(tfile, this.plugin);
+    let msg = "```mehrmaid\nflowchart TD\n";
+    let tfiles;
+    if (N == -1) {
+      tfiles = nc.chain.get_brothers(tfile);
+    } else {
+      tfiles = nc.chain.get_group_links([tfile], N);
+    }
+    tfiles = nc.chain.sort_tfiles_by_chain(tfiles);
+    for (let currentFile of tfiles) {
+      let src2 = `[[${currentFile.basename}]]`;
+      let links = nc.editor.get_frontmatter(currentFile, key);
+      if (links && Array.isArray(links)) {
+        for (let link of links) {
+          if (link["edge"] != null && link["node"] != null) {
+            let cedge = link["edge"];
+            let cnode = link["node"];
+            if (cedge == "") {
+              cedge = "";
+            } else {
+              cedge = `|"${cedge}"|`;
+            }
+            let line = "-->";
+            if (link["line"]) {
+              line = link["line"];
+            }
+            if (line[0] == "<" && line[line.length - 1] != ">") {
+              line = line.slice(1) + ">";
+              if (cnode instanceof Array) {
+                for (let item of cnode) {
+                  msg += `${node.get_mehrmaid_node(item, field)} ${line} ${cedge} ${node.get_mehrmaid_node(src2, field)}
+`;
+                }
+              } else {
+                msg += `${node.get_mehrmaid_node(cnode, field)} ${line} ${cedge} ${node.get_mehrmaid_node(src2, field)}
+`;
+              }
+            } else {
+              if (cnode instanceof Array) {
+                for (let item of cnode) {
+                  msg += `${node.get_mehrmaid_node(src2, field)} ${line} ${cedge} ${node.get_mehrmaid_node(item, field)}
+`;
+                }
+              } else {
+                msg += `${node.get_mehrmaid_node(src2, field)} ${line} ${cedge} ${node.get_mehrmaid_node(cnode, field)}
+`;
+              }
+            }
+          } else {
+            if (link["group"]) {
+              msg += `subgraph ${link["group"]}
+	${node.get_mehrmaid_node(src2, field)}
+end
+`;
+              if (link["color"]) {
+                msg += `classDef ${link["group"]}Class fill:${link["color"]}
+`;
+                msg += `class ${link["group"]} ${link["group"]}Class
+`;
+              }
+            }
+          }
+        }
+      }
+    }
+    let src = `[[${tfile.basename}]]`;
+    msg += `${node.get_mehrmaid_node(src)}
+`;
+    if (c_anchor) {
+      msg += `classDef Anchor fill:${c_anchor},stoke:${c_anchor}
+class ${node.get_mehrmaid_node(src)} Anchor;
+`;
+    }
+    msg += "```";
+    return msg;
+  }
+};
+var CanvasGraph = class {
+  constructor(plugin) {
+    this.plugin = plugin;
+    this.app = plugin.app;
+    this.editor = plugin.editor;
+  }
+  gen_random_string(length) {
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let randomString = "";
+    for (let i = 0; i < length; i++) {
+      let randomIndex = Math.floor(Math.random() * characters.length);
+      randomString += characters.charAt(randomIndex);
+    }
+    return randomString;
+  }
+  new_note_node(tfile) {
+    let node = new NoteNode(tfile, this.plugin);
+    return node;
+  }
+  gen_node(NN, tfile, x = 0, y = 0, width = 400, height = 400) {
+    let rsp = {};
+    if (typeof tfile == "string") {
+      rsp["type"] = "text";
+      rsp["text"] = tfile;
+      rsp["id"] = NN.get_canvas_node(rsp["text"]);
+    } else {
+      rsp["type"] = "file";
+      if (tfile instanceof import_obsidian7.TFolder) {
+        rsp["file"] = tfile.path + "/" + tfile.name + ".md";
+      } else {
+        rsp["file"] = tfile.path;
+      }
+      rsp["id"] = NN.get_canvas_node(rsp["file"]);
+    }
+    rsp["x"] = x;
+    rsp["y"] = y;
+    rsp["height"] = height;
+    rsp["width"] = width;
+    return rsp;
+  }
+  rc_of_sequence(i, r, c) {
+    let row = Math.floor((i - 1) / c) + 1;
+    let col = row % 2 === 1 ? (i - 1) % c + 1 : c - (i - 1) % c;
+    return [row, col];
+  }
+  async note_to_canvas(tfile, nrow = 1, ncol = 1, width = 400, height = 400, wmarin = 100, hmargin = 100, write = true) {
+    let content = await this.plugin.app.vault.read(tfile);
+    let titles = [...content.matchAll(/^(#+)\s+(.+)/gm)];
+    if (nrow * ncol < titles.length) {
+      ncol = Math.ceil(titles.length / nrow);
+    }
+    let nodes = [];
+    let i = 0;
+    let NN = this.new_note_node(tfile);
+    for (let match of titles) {
+      i = i + 1;
+      let title = `![[${tfile.basename}#${match[2]}]]`;
+      let pos = this.rc_of_sequence(i, nrow, ncol);
+      let node = this.gen_node(
+        NN = NN,
+        title,
+        pos[1] * (width + wmarin),
+        pos[0] * (height + hmargin),
+        width = width,
+        height = height
+      );
+      nodes.push(node);
+    }
+    let res = {
+      "nodes": nodes,
+      "edges": []
+    };
+    if (write) {
+      let path = this.path_md2canvas(tfile);
+      await this.write_canvas_file(res, path);
+    }
+    return res;
+  }
+  async write_canvas_file(canvas, path) {
+    let msg = JSON.stringify(canvas);
+    let canvasFile = this.plugin.app.vault.getAbstractFileByPath(path);
+    if (canvasFile) {
+      await this.plugin.app.vault.modify(canvasFile, msg);
+    } else {
+      await this.plugin.app.vault.create(path, msg);
+    }
+  }
+  path_md2canvas(tfile) {
+    return tfile.path.replace(".md", ".canvas");
+  }
+};
+
+// src/setting.ts
+var import_obsidian8 = require("obsidian");
 var DEFAULT_SETTINGS = {
   PrevChain: "10",
   NextChain: "10",
+  field_of_display_text: "notechain.display",
+  field_of_confluence_tab_format: "notechain.level",
+  field_of_background_color: "notechain.style",
+  auto_notechain: false,
+  notice_while_modify_chain: false,
   refreshDataView: true,
   refreshTasks: true,
-  isSortFileExplorer: true
+  isSortFileExplorer: true,
+  isFolderFirst: true,
+  suggesterNotesMode: "",
+  wordcout: true,
+  wordcountxfolder: "",
+  modal_default_width: 800,
+  modal_default_height: 600,
+  avata: "avata"
 };
-var longform2notechain = (plugin) => ({
+var NCSettingTab = class extends import_obsidian8.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_isSortFileExplorer).addToggle(
+      (text) => text.setValue(this.plugin.settings.isSortFileExplorer).onChange(async (value) => {
+        this.plugin.settings.isSortFileExplorer = value;
+        await this.plugin.saveSettings();
+        this.plugin.explorer.sort();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_isFolderFirst).addToggle(
+      (text) => text.setValue(this.plugin.settings.isFolderFirst).onChange(async (value) => {
+        this.plugin.settings.isFolderFirst = value;
+        await this.plugin.saveSettings();
+        this.plugin.explorer.sort();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_PrevChain).addText((text) => text.setValue(this.plugin.settings.PrevChain).onChange(async (value) => {
+      this.plugin.settings.PrevChain = value;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_suggesterNotesMode).addDropdown((dropdown) => dropdown.addOption("item_get_brothers", this.plugin.strings.item_get_brothers).addOption("item_uncle_notes", this.plugin.strings.item_uncle_notes).addOption("item_notechain", this.plugin.strings.item_notechain).addOption("item_same_folder", this.plugin.strings.item_same_folder).addOption("item_inlinks_outlinks", this.plugin.strings.item_inlinks_outlinks).addOption("item_inlins", this.plugin.strings.item_inlins).addOption("item_outlinks", this.plugin.strings.item_outlinks).addOption("item_all_noes", this.plugin.strings.item_all_noes).addOption("item_recent", this.plugin.strings.item_recent).addOption("", "").setValue(this.plugin.settings.suggesterNotesMode).onChange(async (value) => {
+      this.plugin.settings.suggesterNotesMode = value;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_NextChain).addText((text) => text.setValue(this.plugin.settings.NextChain).onChange(async (value) => {
+      this.plugin.settings.NextChain = value;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_auto_notechain).addToggle(
+      (text) => text.setValue(this.plugin.settings.auto_notechain).onChange(async (value) => {
+        this.plugin.settings.auto_notechain = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_field_of_display_text).addText((text) => text.setValue(this.plugin.settings.field_of_display_text).onChange(async (value) => {
+      this.plugin.settings.field_of_display_text = value;
+      this.plugin.explorer.set_display_text();
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_confluence_tab_format).addText((text) => text.setValue(this.plugin.settings.field_of_confluence_tab_format).onChange(async (value) => {
+      this.plugin.settings.field_of_confluence_tab_format = value;
+      this.plugin.explorer.set_display_text();
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_field_of_background_color).addText((text) => text.setValue(this.plugin.settings.field_of_background_color).onChange(async (value) => {
+      this.plugin.settings.field_of_background_color = value;
+      this.plugin.explorer.set_fileitem_style();
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_notice_while_modify_chain).addToggle(
+      (text) => text.setValue(this.plugin.settings.notice_while_modify_chain).onChange(async (value) => {
+        this.plugin.settings.notice_while_modify_chain = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_refreshDataView).addToggle(
+      (text) => text.setValue(this.plugin.settings.refreshDataView).onChange(async (value) => {
+        this.plugin.settings.refreshDataView = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_refreshTasks).addToggle(
+      (text) => text.setValue(this.plugin.settings.refreshTasks).onChange(async (value) => {
+        this.plugin.settings.refreshTasks = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_wordcout).addToggle(
+      (text) => text.setValue(this.plugin.settings.wordcout).onChange(async (value) => {
+        this.plugin.settings.wordcout = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_wordcout_xfolder).addTextArea(
+      (text) => text.setValue(this.plugin.settings.wordcountxfolder).onChange(async (value) => {
+        this.plugin.settings.wordcountxfolder = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_avata).addTextArea(
+      (text) => text.setValue(this.plugin.settings.avata).onChange(async (value) => {
+        this.plugin.settings.avata = value;
+        await this.plugin.saveSettings();
+      })
+    );
+  }
+};
+
+// src/commands.ts
+var import_obsidian9 = require("obsidian");
+var cmd_longform2notechain = (plugin) => ({
   id: "longform2notechain",
-  name: "Reset Note Chain by LongForm.",
-  callback: () => {
+  name: plugin.strings.cmd_longform2notechain,
+  icon: "git-pull-request-create-arrow",
+  callback: async () => {
     let curr = plugin.chain.current_note;
     if (curr == null) {
       return;
     }
-    app.fileManager.processFrontMatter(
+    plugin.app.fileManager.processFrontMatter(
       curr,
-      (fm) => {
+      async (fm) => {
         if (curr == null) {
           return;
         }
         if (fm["longform"] == null) {
           return;
         }
-        let scenes = plugin.editor.concat_array(fm.longform.scenes);
-        let ignoredFiles = plugin.editor.concat_array(fm.longform.ignoredFiles);
+        let scenes = plugin.utils.concat_array(fm.longform.scenes);
+        let ignoredFiles = plugin.utils.concat_array(fm.longform.ignoredFiles);
         ignoredFiles = ignoredFiles.filter((f) => !scenes.contains(f));
-        let notes = plugin.editor.concat_array([scenes, ignoredFiles]);
-        notes = notes.map((f) => plugin.chain.find_tfile(f));
+        let notes = plugin.utils.concat_array([scenes, ignoredFiles]);
+        notes = notes.map((f) => plugin.chain.get_tfile(f));
         if (curr.parent == null) {
           return;
         }
         ;
         let tfiles = plugin.chain.get_tfiles_of_folder(curr.parent).filter((f) => !notes.contains(f));
-        notes = plugin.editor.concat_array([tfiles, notes]);
-        plugin.chain.chain_link_tfiles(notes);
+        notes = plugin.utils.concat_array([tfiles, notes]);
+        await plugin.chain.chain_concat_tfiles(notes);
+        plugin.explorer.sort();
       }
     );
   }
 });
-var longform4notechain = (plugin) => ({
+var cmd_longform4notechain = (plugin) => ({
   id: "longform4notechain",
-  name: "Reset LongForm Secnes by Note Chain.",
-  callback: () => {
+  name: plugin.strings.cmd_longform4notechain,
+  icon: "git-pull-request-draft",
+  callback: async () => {
+    let nc = plugin;
     let curr = plugin.chain.current_note;
-    if (curr == null) {
+    if (curr == null || curr.parent == null) {
       return;
     }
-    app.fileManager.processFrontMatter(
-      curr,
+    let path = curr.parent.path + "/" + curr.parent.name + ".md";
+    let dst = await nc.chain.get_tfile(path);
+    if (dst == null) {
+      dst = await plugin.app.vault.create(
+        curr.parent.path + "/" + curr.parent.name + ".md",
+        ""
+      );
+    }
+    await nc.app.fileManager.processFrontMatter(
+      dst,
       (fm) => {
-        if (curr == null) {
+        if (fm["longform"] == null) {
+          fm["longform"] = {
+            "format": "scenes",
+            "title": dst.parent.name,
+            "workflow": "Default Workflow",
+            "sceneFolder": "/",
+            "scenes": [],
+            "ignoredFiles": []
+          };
+        }
+      }
+    );
+    await plugin.app.fileManager.processFrontMatter(
+      dst,
+      (fm) => {
+        if (dst == null) {
           return;
         }
-        if (curr.parent == null) {
+        if (dst.parent == null) {
           return;
         }
         ;
         if (fm["longform"] == null) {
           return;
         }
-        let notes = plugin.chain.get_tfiles_of_folder(curr.parent);
+        let notes = plugin.chain.get_tfiles_of_folder(dst.parent);
         notes = plugin.chain.sort_tfiles_by_chain(notes);
         fm.longform.scenes = notes.map((f) => f.basename);
       }
     );
+    await nc.chain.open_note(dst);
   }
 });
-var sort_file_explorer = (plugin) => ({
+var cmd_sort_file_explorer = (plugin) => ({
   id: "sort_file_explorer",
-  name: "Sort File Explorer by Note Chain.",
+  name: plugin.strings.cmd_sort_file_explorer,
+  icon: "arrow-down-wide-narrow",
+  callback: async () => {
+    await plugin.explorer.sort(0, true);
+  }
+});
+var cmd_open_notes_smarter = (plugin) => ({
+  id: "open_notes_smarter",
+  name: plugin.strings.cmd_open_notes_smarter,
+  icon: "binoculars",
   callback: () => {
-    plugin.chain.view_sort_by_chain();
+    plugin.open_note_smarter();
+  }
+});
+var cmd_open_note = (plugin) => ({
+  id: "suggestor_open_note",
+  name: plugin.strings.cmd_open_note,
+  icol: "square-arrow-out-up-right",
+  callback: () => {
+    plugin.chain.sugguster_open_note();
+  }
+});
+var cmd_open_prev_note = (plugin) => ({
+  id: "open_prev_notes",
+  name: plugin.strings.cmd_open_prev_note,
+  icon: "file-output",
+  callback: () => {
+    plugin.chain.open_prev_notes();
+  }
+});
+var cmd_open_next_note = (plugin) => ({
+  id: "open_next_notes",
+  name: plugin.strings.cmd_open_next_note,
+  icon: "file-input",
+  callback: () => {
+    plugin.chain.open_next_notes();
+  }
+});
+var clear_inlinks = (plugin) => ({
+  id: "clear_inlinks",
+  name: plugin.strings.clear_inlinks,
+  icon: "unlink",
+  callback: () => {
+    plugin.clear_inlinks();
+  }
+});
+var move_file_to_another_folder = (plugin) => ({
+  id: "move_file_to_another_folder",
+  name: plugin.strings.move_file_to_another_folder,
+  icon: "folder-tree",
+  callback: () => {
+    plugin.chain.cmd_move_file_to_another_folder();
+  }
+});
+var replace_notes_with_regx = (plugin) => ({
+  id: "replace_notes_with_regx",
+  name: plugin.strings.replace_notes_with_regx,
+  icon: "regex",
+  callback: () => {
+    plugin.replace_notes_with_regx();
+  }
+});
+var chain_insert_node = (plugin) => ({
+  id: "chain_insert_node",
+  name: plugin.strings.chain_insert_node,
+  icon: "git-branch-plus",
+  callback: async () => {
+    await plugin.cmd_chain_insert_node();
+    await plugin.explorer.sort(500);
+  }
+});
+var chain_set_seq_note = (plugin) => ({
+  id: "chain_set_seq_note",
+  name: plugin.strings.chain_set_seq_note,
+  icon: "wind-arrow-down",
+  callback: async () => {
+    await plugin.chain.chain_suggester_tfiles();
+    plugin.explorer.sort();
+  }
+});
+var chain_move_up_node = (plugin) => ({
+  id: "chain_move_up_node",
+  name: plugin.strings.chain_move_up_node,
+  icon: "arrow-up-from-line",
+  callback: async () => {
+    let tfile = plugin.chain.current_note;
+    if (tfile) {
+      let anchor = plugin.chain.get_prev_note(tfile);
+      if (anchor) {
+        await plugin.chain.chain_insert_node_before(
+          tfile,
+          anchor
+        );
+        await plugin.explorer.sort();
+      }
+    }
+  }
+});
+var chain_move_down_node = (plugin) => ({
+  id: "chain_move_donw_node",
+  name: plugin.strings.chain_move_down_node,
+  icon: "arrow-down-from-line",
+  callback: async () => {
+    let tfile = plugin.chain.current_note;
+    if (tfile) {
+      let anchor = plugin.chain.get_next_note(tfile);
+      if (anchor) {
+        await plugin.chain.chain_insert_node_after(
+          tfile,
+          anchor
+        );
+        await plugin.explorer.sort();
+      }
+    }
+  }
+});
+var create_new_note = (plugin) => ({
+  id: "create_new_note",
+  name: plugin.strings.create_new_note,
+  icon: "file-plus",
+  callback: async () => {
+    let targets = {};
+    targets[plugin.strings.item_chain_insert_node_after] = "chain_insert_node_after";
+    targets[plugin.strings.item_chain_insert_node_as_tail] = "chain_insert_node_as_tail";
+    targets[plugin.strings.item_chain_insert_node_before] = "chain_insert_node_before";
+    targets[plugin.strings.item_chain_insert_node_as_head] = "chain_insert_node_as_head";
+    targets[plugin.strings.item_item_chain_insert_null] = "null";
+    let target = await plugin.dialog_suggest(
+      plugin.utils.array_prefix_id(Object.keys(targets)),
+      Object.values(targets),
+      true
+    );
+    if (!target) {
+      return;
+    }
+    let name = await plugin.dialog_prompt(plugin.strings.prompt_notename);
+    if (name) {
+      let curr = plugin.chain.current_note;
+      if (curr && curr.parent) {
+        let path = curr.parent.path + "/" + name + ".md";
+        let dst = await plugin.chain.get_tfile(path);
+        if (dst == null) {
+          dst = await plugin.app.vault.create(
+            curr.parent.path + "/" + name + ".md",
+            ""
+          );
+          if (!(target === "null")) {
+            await plugin.chain[target](dst, curr);
+            if (target == "chain_insert_node_after" || target == "chain_insert_node_before") {
+              await plugin.editor.set_frontmatter_align_file(
+                curr,
+                dst,
+                plugin.settings.field_of_confluence_tab_format
+              );
+            }
+          }
+          await plugin.chain.open_note(dst);
+          await plugin.explorer.sort();
+        }
+      }
+    }
+  }
+});
+var cmd_reveal_note = (plugin) => ({
+  id: "cmd_reveal_note",
+  name: plugin.strings.cmd_reveal_note,
+  icon: "locate",
+  callback: async () => {
+    let nc = plugin;
+    let note = nc.chain.current_note;
+    if (note) {
+      await plugin.app.commands.executeCommandById("file-explorer:open");
+      await nc.explorer.file_explorer.tree.setCollapseAll(true);
+      await nc.explorer.file_explorer.revealInFolder(note);
+      await sleep(100);
+      let containerEl = nc.explorer.file_explorer.containerEl;
+      let panel = containerEl.querySelector(".nav-files-container");
+      let itemEl = containerEl.querySelector(`[data-path="${note.path}"]`);
+      if (panel && itemEl && itemEl.offsetTop) {
+        let xtop = panel.scrollTop + (itemEl.offsetTop - (panel.scrollTop + panel.clientHeight / 2));
+        panel.scrollTo({ top: xtop, behavior: "smooth" });
+      }
+    }
+  }
+});
+var cmd_open_and_reveal_note = (plugin) => ({
+  id: "cmd_open_and_reveal_note",
+  name: plugin.strings.cmd_open_and_reveal_note,
+  icon: "map-pin-house",
+  callback: async () => {
+    let nc = plugin;
+    let note = await nc.chain.sugguster_note();
+    if (note) {
+      await nc.chain.open_note(note);
+      await nc.explorer.file_explorer.tree.setCollapseAll(true);
+      await nc.explorer.file_explorer.revealInFolder(note);
+      await sleep(100);
+      let containerEl = nc.explorer.file_explorer.containerEl;
+      let panel = containerEl.querySelector(".nav-files-container");
+      let itemEl = containerEl.querySelector(`[data-path="${note.path}"]`);
+      if (panel && itemEl && itemEl.offsetTop) {
+        let xtop = panel.scrollTop + (itemEl.offsetTop - (panel.scrollTop + panel.clientHeight / 2));
+        panel.scrollTo({ top: xtop, behavior: "smooth" });
+      }
+    }
+  }
+});
+var cmd_open_prev_note_of_right_leaf = (plugin) => ({
+  id: "cmd_open_prev_note_of_right_leaf",
+  name: plugin.strings.cmd_open_prev_note_of_right_leaf,
+  icon: "file-output",
+  callback: async () => {
+    let nc = plugin;
+    let leaf = nc.chain.get_last_activate_leaf();
+    if (leaf) {
+      let prev = nc.chain.get_prev_note(leaf.view.file);
+      if (prev) {
+        await leaf.openFile(prev, { active: false });
+        await nc.app.workspace.trigger("file-open", leaf);
+      }
+    }
+  }
+});
+var cmd_open_next_note_of_right_leaf = (plugin) => ({
+  id: "cmd_open_next_note_of_right_leaf",
+  name: plugin.strings.cmd_open_next_note_of_right_leaf,
+  icon: "file-input",
+  callback: async () => {
+    let nc = plugin;
+    let leaf = nc.chain.get_last_activate_leaf();
+    if (leaf) {
+      let next = nc.chain.get_next_note(leaf.view.file);
+      if (next) {
+        await leaf.openFile(next, { active: false });
+        await nc.app.workspace.trigger("file-open", leaf);
+      }
+    }
+  }
+});
+var cmd_file_open_with_system_app = (plugin) => ({
+  id: "cmd_file_open_with_system_app",
+  name: plugin.strings.cmd_file_open_with_system_app,
+  icon: "book-open",
+  callback: async () => {
+    let nc = plugin;
+    if (nc.app.isMobile) {
+      return;
+    }
+    let tfile = nc.chain.current_note;
+    if (tfile) {
+      let items = await nc.chain.get_file_links(tfile);
+      let keys = Object.keys(items);
+      let key = await nc.dialog_suggest(
+        nc.utils.array_prefix_id(keys),
+        keys
+      );
+      if (key) {
+        let item = items[key];
+        let electron = require("electron");
+        electron.remote.shell.openPath(item);
+      }
+    }
+  }
+});
+var cmd_file_show_in_system_explorer = (plugin) => ({
+  id: "cmd_file_show_in_system_explorer",
+  name: plugin.strings.cmd_file_show_in_system_explorer,
+  icon: "book-open-text",
+  callback: async () => {
+    let nc = plugin;
+    if (nc.app.isMobile) {
+      return;
+    }
+    let tfile = nc.chain.current_note;
+    if (tfile) {
+      let items = await nc.chain.get_file_links(tfile);
+      let keys = Object.keys(items);
+      let key = await nc.dialog_suggest(
+        nc.utils.array_prefix_id(keys),
+        keys
+      );
+      if (key) {
+        let item = items[key];
+        let electron = require("electron");
+        electron.remote.shell.showItemInFolder(item);
+      }
+    }
+  }
+});
+var cmd_file_rename = (plugin) => ({
+  id: "cmd_file_rename",
+  name: plugin.strings.cmd_file_rename,
+  icon: "pen-line",
+  callback: async () => {
+    let nc = plugin;
+    if (nc.app.isMobile) {
+      return;
+    }
+    let tfile = nc.chain.current_note;
+    if (tfile) {
+      let items = {};
+      let links = nc.chain.get_inlinks(tfile, false);
+      for (let i of links) {
+        if (i.extension === "md") {
+          items["\u2139\uFE0F " + i.basename] = i;
+        } else {
+          items["\u2139\uFE0F " + i.name] = i;
+        }
+      }
+      links = nc.chain.get_outlinks(tfile, false);
+      for (let i of links) {
+        if (i.extension === "md") {
+          items["\u{1F17E}\uFE0F " + i.basename] = i;
+        } else {
+          items["\u{1F17E}\uFE0F " + i.name] = i;
+        }
+      }
+      let keys = Object.keys(items);
+      let key = await nc.dialog_suggest(
+        nc.utils.array_prefix_id(keys),
+        keys
+      );
+      if (key) {
+        let note = items[key];
+        let res = await nc.dialog_prompt("New Name", "", note.basename);
+        if (res && !(res === note.basename) && !(res === "")) {
+          let npath = note.parent.path + "/" + res + "." + note.extension;
+          let dst = nc.chain.get_tfile(res + "." + note.extension);
+          if (dst) {
+            new import_obsidian9.Notice("Exist:" + res + note.extension, 3e3);
+          } else {
+            nc.app.fileManager.renameFile(note, npath);
+          }
+        }
+      }
+    }
+  }
+});
+var cmd_mermaid_flowchart_link = (plugin) => ({
+  id: "cmd_mermaid_flowchart_link",
+  name: plugin.strings.cmd_mermaid_flowchart_link,
+  icon: "file-heart",
+  callback: async () => {
+    const content = "```dataviewjs\nlet nc=app.plugins.getPlugin('note-chain');\nlet msg =nc.mermaid.get_flowchart(null,2);\ndv.span(msg)\n```";
+    await plugin.chain.open_note_in_modal(content);
+  }
+});
+var cmd_mermaid_flowchart_folder = (plugin) => ({
+  id: "cmd_mermaid_flowchart_folder",
+  name: plugin.strings.cmd_mermaid_flowchart_folder,
+  icon: "folder-heart",
+  callback: async () => {
+    const content = "```dataviewjs\nlet nc=app.plugins.getPlugin('note-chain');\nlet msg =nc.mermaid.flowchart_folder(null,'Folder');\ndv.span(msg)\n```";
+    await plugin.chain.open_note_in_modal(content);
+  }
+});
+var cmd_mermaid_flowchart_auto = (plugin) => ({
+  id: "cmd_mermaid_flowchart_auto",
+  name: plugin.strings.cmd_mermaid_flowchart_auto,
+  icon: "heart",
+  callback: async () => {
+    const content = "```dataviewjs\nlet nc=app.plugins.getPlugin('note-chain');\nlet msg =nc.mermaid.get_mehrmaid_graph(null,4,'mermaid');\ndv.span(msg)\n```";
+    await plugin.chain.open_note_in_modal(content);
+  }
+});
+var cmd_execute_template_modal = (plugin) => ({
+  id: "cmd_execute_template_modal",
+  name: plugin.strings.cmd_execute_template_modal,
+  icon: "file-terminal",
+  callback: async () => {
+    let tpl = plugin.app.plugins.plugins["templater-obsidian"];
+    if (!tpl) {
+      return;
+    }
+    let folder = plugin.app.vault.getFolderByPath(tpl.settings.templates_folder);
+    let slice = 0;
+    let tfiles;
+    if (folder) {
+      slice = folder.path.length + 1;
+      tfiles = plugin.chain.get_tfiles_of_folder(folder, true);
+      tfiles = plugin.chain.sort_tfiles_by_chain(tfiles);
+    } else {
+      tfiles = plugin.chain.get_all_tfiles();
+    }
+    let tfile = await plugin.chain.sugguster_note(tfiles, slice);
+    if (tfile) {
+      let res = await plugin.utils.parse_templater(plugin.app, tfile.basename);
+      let txt = res.join("\n").trim();
+      let view = plugin.app.workspace.getActiveFileView();
+      if (view) {
+        view.editor.replaceSelection(txt);
+      }
+    }
+  }
+});
+var cmd_toogle_css_block_in_note = (plugin) => ({
+  id: "cmd_toogle_css_block_in_note",
+  name: plugin.strings.cmd_toogle_css_block_in_note,
+  icon: "atom",
+  callback: async () => {
+    await plugin.utils.toogle_note_css(plugin.app, document, "/");
+  }
+});
+var cmd_set_frontmatter = (plugin) => ({
+  id: "cmd_set_frontmatter",
+  name: plugin.strings.cmd_set_frontmatter,
+  icon: "database",
+  callback: async () => {
+    let files = plugin.chain.get_selected_files(true);
+    if (files.length == 0) {
+      return;
+    }
+    let field = await plugin.dialog_prompt("Frontmatter name");
+    if (!field) {
+      return;
+    }
+    let prev = plugin.editor.get_frontmatter(files[0], field);
+    if (prev) {
+      if (Array.isArray(prev)) {
+        prev = prev.map((x) => x.toString()).join("\n");
+      } else {
+        prev = prev.toString();
+      }
+    } else {
+      prev = "";
+    }
+    let value = await plugin.dialog_prompt("Frontmatter value", "", prev);
+    value = value.trim();
+    if (!value) {
+      return;
+    }
+    value = value.replace(/\\n/g, "\n").replace(/\\t/g, "	");
+    value = value.split("\n");
+    value = value.map((x) => {
+      if (x.match(/^-?\d+$/)) {
+        return parseInt(x);
+      } else if (x.match(/^-?\d+(\.\d*)?$/)) {
+        return parseFloat(x);
+      } else {
+        return x;
+      }
+    });
+    if (value.length == 1) {
+      value = value[0];
+    }
+    for (let tfile of files) {
+      await plugin.editor.set_frontmatter(tfile, field, value, 1);
+    }
+  }
+});
+var cmd_move_next_level = (plugin) => ({
+  id: "move_next_level",
+  name: plugin.strings.cmd_move_next_level,
+  hotkeys: [{ modifiers: ["Mod", "Shift"], key: "L" }],
+  icon: "arrow-right-from-line",
+  callback: async () => {
+    let key = plugin.settings.field_of_confluence_tab_format;
+    if (!key) {
+      return;
+    }
+    let tfiles = plugin.chain.get_selected_files();
+    for (let tfile of tfiles) {
+      let level = plugin.editor.get_frontmatter(tfile, key);
+      if (!level) {
+        await plugin.editor.set_frontmatter(tfile, key, "	", 1);
+      } else {
+        await plugin.editor.set_frontmatter(tfile, key, level + "	", 1);
+      }
+    }
+  }
+});
+var cmd_move_none_level = (plugin) => ({
+  id: "move_none_level",
+  name: plugin.strings.cmd_move_none_level,
+  hotkeys: [{ modifiers: ["Mod", "Shift"], key: "K" }],
+  icon: "align-justify",
+  callback: async () => {
+    let key = plugin.settings.field_of_confluence_tab_format;
+    if (!key) {
+      return;
+    }
+    let tfiles = plugin.chain.get_selected_files();
+    for (let tfile of tfiles) {
+      let level = plugin.editor.get_frontmatter(tfile, key);
+      if (level) {
+        await plugin.editor.set_frontmatter(tfile, key, "", 1);
+      }
+    }
+  }
+});
+var cmd_move_prev_level = (plugin) => ({
+  id: "move_prev_level",
+  name: plugin.strings.cmd_move_prev_level,
+  hotkeys: [{ modifiers: ["Mod", "Shift"], key: "J" }],
+  icon: "arrow-left-from-line",
+  callback: async () => {
+    let key = plugin.settings.field_of_confluence_tab_format;
+    if (!key) {
+      return;
+    }
+    let tfiles = plugin.chain.get_selected_files();
+    for (let tfile of tfiles) {
+      let level = plugin.editor.get_frontmatter(tfile, key);
+      if (level) {
+        await plugin.editor.set_frontmatter(tfile, key, level.slice(1), 1);
+      }
+    }
   }
 });
 var commandBuilders = [
-  longform2notechain,
-  longform4notechain,
-  sort_file_explorer
-  // suggester_reveal_folder,
+  cmd_open_note,
+  cmd_reveal_note,
+  cmd_open_and_reveal_note,
+  cmd_open_prev_note,
+  cmd_open_next_note,
+  cmd_open_prev_note_of_right_leaf,
+  cmd_open_next_note_of_right_leaf,
+  cmd_open_notes_smarter,
+  cmd_longform2notechain,
+  cmd_longform4notechain,
+  cmd_sort_file_explorer,
+  clear_inlinks,
+  replace_notes_with_regx,
+  move_file_to_another_folder,
+  chain_insert_node,
+  chain_set_seq_note,
+  create_new_note,
+  chain_move_up_node,
+  chain_move_down_node,
+  cmd_file_rename,
+  cmd_mermaid_flowchart_link,
+  cmd_mermaid_flowchart_folder,
+  cmd_mermaid_flowchart_auto,
+  cmd_execute_template_modal,
+  cmd_toogle_css_block_in_note,
+  cmd_set_frontmatter,
+  cmd_move_next_level,
+  cmd_move_none_level,
+  cmd_move_prev_level
+];
+var commandBuildersDesktop = [
+  cmd_file_open_with_system_app,
+  cmd_file_show_in_system_explorer
 ];
 function addCommands(plugin) {
   commandBuilders.forEach((c) => {
     plugin.addCommand(c(plugin));
   });
+  if (plugin.app.isMobile == false) {
+    commandBuildersDesktop.forEach((c) => {
+      plugin.addCommand(c(plugin));
+    });
+  }
 }
-var NoteChainPlugin = class extends import_obsidian3.Plugin {
-  async onload() {
-    await this.loadSettings();
-    this.editor = new NCEditor(this.app);
-    this.chain = new NoteChain(this);
-    this.explorer = new NCFileExplorer(this);
-    addCommands(this);
-    this.addCommand({
-      id: "chain_insert_node",
-      name: "Insert node of chain",
-      callback: () => {
-        this.chain_insert_node().then(
-          () => {
-            this.explorer.file_explorer.sort();
-          }
-        );
-      }
+
+// src/gui/inputSuggester.ts
+var import_obsidian10 = require("obsidian");
+var InputSuggester = class extends import_obsidian10.FuzzySuggestModal {
+  constructor(app, displayItems, items, options = {}, new_value = false) {
+    super(app);
+    this.displayItems = displayItems;
+    this.items = items;
+    this.new_value = new_value;
+    this.promise = new Promise((resolve, reject) => {
+      this.resolvePromise = resolve;
+      this.rejectPromise = reject;
     });
-    this.addCommand({
-      id: "chain_set_seq_note",
-      name: "Reset the chain of current folder! Warning: It will reset your chain",
-      callback: () => {
-        this.chain.chain_suggester_tfiles().then(
-          () => {
-            this.explorer.file_explorer.sort();
-          }
-        );
+    this.inputEl.addEventListener("keydown", (event) => {
+      var _a;
+      if (event.code !== "Tab") {
+        return;
       }
+      const self = this;
+      const { values, selectedItem } = self.chooser;
+      const { value } = this.inputEl;
+      this.inputEl.value = (_a = values[selectedItem].item) != null ? _a : value;
     });
-    this.addCommand({
-      id: "open_notes_smarter",
-      name: "Open note smarter",
-      callback: () => {
-        this.open_note_smarter();
-      }
-    });
-    this.addCommand({
-      id: "sugguster_open_note",
-      name: "Open note",
-      callback: () => {
-        this.chain.sugguster_open_note();
-      }
-    });
-    this.addCommand({
-      id: "open_prev_notes",
-      name: "Open prev note",
-      callback: () => {
-        this.chain.open_prev_notes();
-      }
-    });
-    this.addCommand({
-      id: "open_next_notes",
-      name: "Open next note",
-      callback: () => {
-        this.chain.open_next_notes();
-      }
-    });
-    this.addCommand({
-      id: "clear_inlinks",
-      name: "Clear inlinks of current file",
-      callback: () => {
-        this.clear_inlinks();
-      }
-    });
-    this.addCommand({
-      id: "move_file_to_another_folder",
-      name: "Move current file to another folder",
-      callback: () => {
-        this.chain.move_file_to_another_folder();
-      }
-    });
-    this.addCommand({
-      id: "replace_notes_with_regx",
-      name: "Replace by regex",
-      callback: () => {
-        this.replace_notes_with_regx();
-      }
-    });
-    this.addSettingTab(new NCSettingTab(this.app, this));
-    console.log("Zig-Holding:regeister ufunc_on_file_open");
-    this.registerEvent(
-      this.app.workspace.on("file-open", this.ufunc_on_file_open)
+    if (options.placeholder)
+      this.setPlaceholder(options.placeholder);
+    if (options.limit)
+      this.limit = options.limit;
+    if (options.emptyStateText)
+      this.emptyStateText = options.emptyStateText;
+    this.open();
+  }
+  static Suggest(app, displayItems, items, options = {}, new_value = false) {
+    const newSuggester = new InputSuggester(
+      app,
+      displayItems,
+      items,
+      options,
+      new_value
     );
-    this.registerEvent(this.app.workspace.on("file-menu", (menu, file) => {
-      menu.addItem((item) => {
-        item.setTitle("NoteChain: sort by chain").onClick(() => {
-          this.chain.view_sort_by_chain();
-        });
-      });
-    }));
+    return newSuggester.promise;
+  }
+  getItemText(item) {
+    if (item === this.inputEl.value)
+      return item;
+    return this.displayItems[this.items.indexOf(item)];
+  }
+  getItems() {
+    if (this.inputEl.value === "" || !this.new_value)
+      return this.items;
+    return [...this.items, this.inputEl.value];
+  }
+  selectSuggestion(value, evt) {
+    this.resolved = true;
+    super.selectSuggestion(value, evt);
+  }
+  onChooseItem(item, evt) {
+    this.resolved = true;
+    this.resolvePromise(item);
+  }
+  onClose() {
+    super.onClose();
+    if (!this.resolved)
+      this.rejectPromise("no input given.");
+  }
+};
+async function dialog_suggest(displayItems, items, placeholder = "", new_value = false) {
+  try {
+    return await InputSuggester.Suggest(
+      this.app,
+      displayItems,
+      items,
+      {
+        placeholder
+      },
+      new_value
+    );
+  } catch (error) {
+    return null;
+  }
+}
+
+// src/gui/inputPrompt.ts
+var import_obsidian11 = require("obsidian");
+var InputPrompt = class extends import_obsidian11.Modal {
+  constructor(app, header, placeholder, value) {
+    super(app);
+    this.header = header;
+    this.didSubmit = false;
+    this.submitClickCallback = (evt) => this.submit();
+    this.cancelClickCallback = (evt) => this.cancel();
+    this.submitEnterCallback = (evt) => {
+      if (!evt.isComposing && evt.key === "Enter") {
+        evt.preventDefault();
+        this.submit();
+      }
+    };
+    this.placeholder = placeholder != null ? placeholder : "";
+    this.input = value != null ? value : "";
+    this.waitForClose = new Promise((resolve, reject) => {
+      this.resolvePromise = resolve;
+      this.rejectPromise = reject;
+    });
+    this.display();
+    this.open();
+  }
+  static Prompt(app, header, placeholder, value) {
+    const newPromptModal = new InputPrompt(
+      app,
+      header,
+      placeholder,
+      value
+    );
+    return newPromptModal.waitForClose;
+  }
+  display() {
+    this.containerEl.addClass("quickAddModal", "qaInputPrompt");
+    this.contentEl.empty();
+    this.titleEl.textContent = this.header;
+    const mainContentContainer = this.contentEl.createDiv();
+    this.inputComponent = this.createInputField(
+      mainContentContainer,
+      this.placeholder,
+      this.input
+    );
+    this.createButtonBar(mainContentContainer);
+  }
+  createInputField(container, placeholder, value) {
+    const textComponent = new import_obsidian11.TextComponent(container);
+    textComponent.inputEl.style.width = "100%";
+    textComponent.setPlaceholder(placeholder != null ? placeholder : "").setValue(value != null ? value : "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
+    return textComponent;
+  }
+  createButton(container, text, callback) {
+    const btn = new import_obsidian11.ButtonComponent(container);
+    btn.setButtonText(text).onClick(callback);
+    return btn;
+  }
+  createButtonBar(mainContentContainer) {
+    const buttonBarContainer = mainContentContainer.createDiv();
+    this.createButton(
+      buttonBarContainer,
+      "Ok",
+      this.submitClickCallback
+    ).setCta().buttonEl.style.marginRight = "0";
+    this.createButton(
+      buttonBarContainer,
+      "Cancel",
+      this.cancelClickCallback
+    );
+    buttonBarContainer.style.display = "flex";
+    buttonBarContainer.style.flexDirection = "row-reverse";
+    buttonBarContainer.style.justifyContent = "flex-start";
+    buttonBarContainer.style.marginTop = "1rem";
+    buttonBarContainer.style.gap = "0.5rem";
+  }
+  submit() {
+    this.didSubmit = true;
+    this.close();
+  }
+  cancel() {
+    this.close();
+  }
+  resolveInput() {
+    if (!this.didSubmit)
+      this.rejectPromise("No input given.");
+    else
+      this.resolvePromise(this.input);
+  }
+  removeInputListener() {
+    this.inputComponent.inputEl.removeEventListener(
+      "keydown",
+      this.submitEnterCallback
+    );
+  }
+  onOpen() {
+    super.onOpen();
+    this.inputComponent.inputEl.focus();
+    this.inputComponent.inputEl.select();
+  }
+  onClose() {
+    super.onClose();
+    this.resolveInput();
+    this.removeInputListener();
+  }
+};
+async function dialog_prompt(header = "Input", placeholder = "", value = "") {
+  try {
+    return await InputPrompt.Prompt(
+      this.app,
+      header,
+      placeholder,
+      value
+    );
+  } catch (e) {
+    return null;
+  }
+}
+
+// main.ts
+var NoteChainPlugin = class extends import_obsidian12.Plugin {
+  async onload() {
+    this.dialog_suggest = dialog_suggest;
+    this.dialog_prompt = dialog_prompt;
+    this.status = "waiting";
+    this.app.workspace.onLayoutReady(
+      async () => {
+        await this._onload_();
+        this._after_loading_();
+      }
+    );
+  }
+  async _after_loading_() {
+    var _a, _b;
+    while (!((_a = this.app.plugins) == null ? void 0 : _a.plugins["note-chain"])) {
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    this.app.commands.executeCommandById(
+      "dataview:dataview-force-refresh-views"
+    );
+    let target = await this.app.plugins.getPlugin("obsidian-tasks-plugin");
+    target && target.cache.notifySubscribers();
+    return (_b = this.app.plugins) == null ? void 0 : _b.plugins["note-chain"];
+  }
+  async _onload_() {
+    this.status = "loading";
+    this.debug = true;
+    await this.loadSettings();
+    this.utils = (init_utils(), __toCommonJS(utils_exports));
+    this.ob = require("obsidian");
+    this.editor = new NCEditor(this);
+    this.chain = new NoteChain(this, this.editor);
+    this.explorer = new NCFileExplorer(this);
+    this.mermaid = new MermaidGraph(this);
+    this.canvas = new CanvasGraph(this);
+    this.strings = new Strings();
+    addCommands(this);
+    this.addSettingTab(new NCSettingTab(this.app, this));
+    this.registerEvent(
+      this.app.workspace.on("file-open", this.ufunc_on_file_open.bind(this))
+    );
     this.registerEvent(this.app.vault.on(
       "delete",
-      (file) => {
-        this.chain.chain_pop_node(file);
-        this.explorer.file_explorer.sort();
+      async (file) => {
+        await this.chain.chain_pop_node(file);
+        await this.explorer.sort();
       }
     ));
+    this.registerEvent(this.app.vault.on(
+      "create",
+      async () => {
+        await sleep(500);
+        this.explorer.sort(0, true);
+      }
+    ));
+    this.registerEvent(this.app.vault.on(
+      "rename",
+      async (file, oldPath) => {
+        let oldFolder = this.app.vault.getFolderByPath(
+          oldPath.slice(0, oldPath.lastIndexOf("/"))
+        );
+        oldFolder && this.chain.refresh_folder(oldFolder);
+        this.chain.refresh_tfile(file);
+        this.explorer.sort();
+        this.explorer.set_fileitem_style_of_file(file);
+      }
+    ));
+    this.registerEvent(
+      this.app.workspace.on("file-menu", (menu, file) => {
+        if (file instanceof import_obsidian12.TFile) {
+          menu.addItem((item) => {
+            item.setTitle(this.strings.filemenu_create_next_note).setIcon("file-plus").onClick(async () => {
+              let filename = await this.dialog_prompt("File name");
+              if (!filename) {
+                return;
+              }
+              let dst = file.parent ? file.parent.path + "/" + filename + ".md" : filename + ".md";
+              if (this.chain.get_tfile(dst)) {
+                new import_obsidian12.Notice("Exists:" + file.path, 3e3);
+              } else {
+                let tfile = await this.app.vault.create(dst, "");
+                await this.chain.chain_insert_node_after(tfile, file);
+                await this.editor.set_frontmatter_align_file(
+                  file,
+                  tfile,
+                  this.settings.field_of_confluence_tab_format
+                );
+                await this.chain.open_note(tfile, false, false);
+              }
+            });
+          });
+        }
+      })
+    );
+    this.registerEvent(
+      this.app.workspace.on("file-menu", (menu, file) => {
+        if (file instanceof import_obsidian12.TFile && file.extension == "md") {
+          menu.addItem((item) => {
+            item.setTitle(this.strings.filemenu_move_as_next_note).setIcon("hand").onClick(async () => {
+              let anchor = await this.chain.sugguster_note();
+              if (anchor) {
+                await this.chain.chain_insert_node_after(file, anchor);
+                await this.editor.set_frontmatter_align_file(
+                  anchor,
+                  file,
+                  this.settings.field_of_confluence_tab_format
+                );
+                if (file.parent != anchor.parent) {
+                  let dst = anchor.parent.path + "/" + file.name;
+                  await this.app.fileManager.renameFile(file, dst);
+                }
+                this.explorer.sort();
+              }
+            });
+          });
+        } else if (file instanceof import_obsidian12.TFolder) {
+          menu.addItem((item) => {
+            item.setTitle(this.strings.filemenu_move_as_next_note).setIcon("hand").onClick(async () => {
+              var _a;
+              let notes = (_a = file.parent) == null ? void 0 : _a.children;
+              if (notes) {
+                let anchor = await this.dialog_suggest(
+                  (f) => f.name,
+                  notes.filter((x) => x instanceof import_obsidian12.TFile)
+                );
+                let note = this.chain.get_tfile(file.path + "/" + file.name + ".md");
+                if (!note) {
+                  note = await this.app.vault.create(
+                    file.path + "/" + file.name + ".md",
+                    ""
+                  );
+                }
+                await this.editor.set_multi_frontmatter(
+                  note,
+                  {
+                    "FolderPrevNote": `[[${anchor.basename}]]`,
+                    "FolderPrevNoteOffset": 0.5
+                  }
+                );
+                this.chain.refresh_tfile(file);
+                await this.explorer.sort(0, false);
+              }
+            });
+          });
+        }
+        let selector = document.querySelectorAll(
+          ".tree-item-self.is-selected"
+        );
+        let items = Object.values(selector).map((x) => {
+          var _a;
+          return (_a = x.dataset) == null ? void 0 : _a.path;
+        });
+        let tfiles = items.map((x) => this.chain.get_tfile(x)).filter((x) => x.extension == "md");
+        if (tfiles.length > 1) {
+          menu.addItem((item) => {
+            item.setTitle(this.strings.filemenu_move_as_next_notes).setIcon("hand").onClick(async () => {
+              tfiles = this.chain.sort_tfiles_by_chain(tfiles);
+              let notes = this.chain.get_all_tfiles();
+              notes = notes.filter((x) => !tfiles.contains(x));
+              let anchor = await this.chain.sugguster_note(notes);
+              if (!anchor) {
+                return;
+              }
+              for (let tfile of tfiles) {
+                if (tfile.parent.path != anchor.parent.path) {
+                  let dst = anchor.parent.path + "/" + tfile.name;
+                  await this.app.fileManager.renameFile(tfile, dst);
+                }
+                await this.chain.chain_pop_node(tfile);
+              }
+              tfiles.unshift(anchor);
+              let anchor_next = this.chain.get_next_note(anchor);
+              if (anchor_next) {
+                tfiles.push(anchor_next);
+              }
+              await this.chain.chain_concat_tfiles(tfiles);
+              for (let dst of tfiles.slice(1, tfiles.length - 1)) {
+                await this.editor.set_frontmatter_align_file(
+                  anchor,
+                  dst,
+                  this.settings.field_of_confluence_tab_format
+                );
+              }
+            });
+          });
+        }
+      })
+    );
+    this.registerEvent(
+      this.app.metadataCache.on(
+        "changed",
+        async (file, data, cache) => {
+          if (file == this.chain.current_note) {
+            clearTimeout(this.timerId);
+          }
+          let timerId = setTimeout(async () => {
+            if (file.parent) {
+              this.chain.children[file.parent.path] = this.chain.sort_tfiles_by_chain(
+                file.parent.children
+              );
+            }
+            this.explorer.sort(0, false);
+            if (this.settings.field_of_display_text) {
+              let txt = this.explorer.get_display_text(file);
+              let items = this.explorer.file_explorer.fileItems;
+              this.explorer._set_display_text_(items[file.path], txt);
+              let canvas = items[file.path.slice(0, file.path.length - 2) + "canvas"];
+              this.explorer._set_display_text_(canvas, txt);
+              if (file.parent && file.basename == file.parent.name || file.parent && file.parent.path == "/") {
+                let field = this.editor.get_frontmatter(file, this.settings.field_of_display_text);
+                let prev = file.note_chain_display_field;
+                if (!prev || prev != field) {
+                  for (let key in items) {
+                    let item = items[key];
+                    let ppath = "";
+                    if (file.parent.path == "/") {
+                      ppath == "";
+                    } else {
+                      ppath = file.parent.path + "/";
+                    }
+                    if (item.file.path.startsWith(ppath) || item.file.path == file.parent.path) {
+                      let txt2 = this.explorer.get_display_text(item.file);
+                      this.explorer._set_display_text_(item, txt2);
+                    }
+                  }
+                }
+                file.note_chain_display_field = field;
+              }
+            }
+            if (this.settings.field_of_background_color) {
+              let style = await this.explorer.get_fileitem_style(file);
+              await this.explorer.set_fileitem_style_of_file(file, style);
+              let items = this.explorer.file_explorer.fileItems;
+              let canvas = items[file.path.slice(0, file.path.length - 2) + "canvas"];
+              if (canvas) {
+                await this.explorer.set_fileitem_style_of_file(canvas.file, style);
+              }
+              if (file.parent && file.basename == file.parent.name || file.parent && file.parent.path == "/") {
+                let field = this.editor.get_frontmatter(file, this.settings.field_of_background_color);
+                let prev = file.note_chain_bgcolor;
+                if (!prev || prev != field) {
+                  for (let key in items) {
+                    let item = items[key];
+                    let ppath = "";
+                    if (file.parent.path == "/") {
+                      ppath == "";
+                    } else {
+                      ppath = file.parent.path + "/";
+                    }
+                    if (item.file.path.startsWith(ppath) || item.file.path == file.parent.path) {
+                      let style2 = await this.explorer.get_fileitem_style(item.file);
+                      await this.explorer.set_fileitem_style_of_file(item.file, style2);
+                    }
+                  }
+                }
+                file.note_chain_bgcolor = field;
+              }
+            }
+          }, 500);
+          if (file == this.chain.current_note) {
+            this.timerId = this.timerId;
+          }
+        }
+      )
+    );
+    this.wordcout = new WordCount(this, this.app);
+    this.status = "loaded";
   }
-  onunload() {
-    console.log("Zig-Holding:unregeister ufunc_on_file_open");
-    this.app.workspace.off("file-open", this.ufunc_on_file_open);
-    this.explorer.unregister();
-    this.explorer.file_explorer.sort();
+  async onunload() {
+    await this.explorer.unregister();
+    await this.explorer.sort();
   }
   async ufunc_on_file_open(file) {
-    let zh = await app.plugins.getPlugin("note-chain");
-    if (!zh) {
-      return;
-    }
-    if (zh.settings.refreshDataView) {
-      zh.app.commands.executeCommandById(
+    var _a, _b;
+    if (this.settings.refreshDataView) {
+      this.app.commands.executeCommandById(
         "dataview:dataview-force-refresh-views"
       );
     }
-    if (zh.settings.refreshTasks) {
-      let target = await app.plugins.getPlugin("obsidian-tasks-plugin");
-      target.cache.notifySubscribers();
+    if (this.settings.refreshTasks) {
+      let target = await this.app.plugins.getPlugin("obsidian-tasks-plugin");
+      target && target.cache.notifySubscribers();
+    }
+    if (this.settings.auto_notechain) {
+      let notes = this.chain.get_brothers(file);
+      if (notes.length == 0) {
+        return;
+      }
+      let xfolders = this.settings.wordcountxfolder.split("\n").filter((x) => x != "");
+      for (let item of xfolders) {
+        if (file.path.startsWith(item)) {
+          return false;
+        } else if (item == "/") {
+          if (((_a = file.parent) == null ? void 0 : _a.path) == "/") {
+            return false;
+          }
+        }
+      }
+      if ((_b = this.explorer) == null ? void 0 : _b.file_explorer) {
+        notes = this.chain.sort_tfiles(notes, this.explorer.file_explorer.sortOrder);
+        notes = this.chain.sort_tfiles(notes, "chain");
+        await this.chain.chain_concat_tfiles(notes);
+        this.explorer.sort();
+      }
     }
   }
   async loadSettings() {
@@ -980,11 +4900,14 @@ var NoteChainPlugin = class extends import_obsidian3.Plugin {
     await this.saveData(this.settings);
   }
   async clear_inlinks(tfile = this.chain.current_note, mode = "suggester") {
+    if (tfile == null) {
+      return;
+    }
     let notes = this.chain.get_inlinks(tfile);
     if (notes.length) {
       if (mode === "suggester") {
-        mode = await this.chain.suggester(
-          ["\u5220\u9664\u94FE\u63A5", "\u66FF\u6362\u94FE\u63A5", "\u5220\u9664\u6BB5\u843D"],
+        mode = await this.dialog_suggest(
+          ["delete links", "replace links", "delete paragraph with links"],
           [["link", "del"], ["link", "rep"], ["para", "del"]]
         );
       }
@@ -1002,80 +4925,123 @@ var NoteChainPlugin = class extends import_obsidian3.Plugin {
       }
     }
   }
-  get prompt() {
-    return get_tp_func(this.app, "tp.system.prompt");
-  }
   async replace_notes_with_regx() {
     let notes = await this.chain.suggester_notes();
     if ((notes == null ? void 0 : notes.length) > 0) {
       try {
-        let regs = await this.prompt("\u8981\u66FF\u6362\u7684\u6B63\u5219\u8868\u8FBE\u5F0F");
+        let regs = await this.dialog_prompt("Enter the regular expression to replace.");
         if (regs == null) {
           return;
         }
         let reg = new RegExp(regs, "g");
-        let target = await this.prompt("\u76EE\u6807\u5B57\u7B26\u4E32");
+        let target = await this.dialog_prompt("Enter the target string.");
         if (target == null) {
           return;
         }
-        target = target.trim().replace(
+        target = target.replace(
           /\\n/g,
           "\n"
         );
-        console.log(regs, reg, target);
         for (let note of notes) {
           await this.editor.replace(note, reg, target);
         }
       } catch (error) {
-        console.log(error);
       }
     }
   }
-  async chain_insert_node() {
+  async cmd_chain_insert_node() {
+    let selector = document.querySelectorAll(
+      ".tree-item-self.is-selected"
+    );
+    let items = Object.values(selector).map((x) => {
+      var _a;
+      return (_a = x.dataset) == null ? void 0 : _a.path;
+    });
+    let tfiles = items.map((x) => this.chain.get_tfile(x)).filter((x) => x.extension == "md");
+    if (tfiles.length > 1) {
+      tfiles = this.chain.sort_tfiles_by_chain(tfiles);
+      let notes2 = this.chain.get_all_tfiles();
+      notes2 = notes2.filter((x) => !tfiles.contains(x));
+      let anchor = await this.chain.sugguster_note(notes2);
+      if (!anchor) {
+        return;
+      }
+      for (let tfile of tfiles) {
+        if (tfile.parent.path != anchor.parent.path) {
+          let dst = anchor.parent.path + "/" + tfile.name;
+          await this.app.fileManager.renameFile(tfile, dst);
+        }
+        await this.chain.chain_pop_node(tfile);
+      }
+      tfiles.unshift(anchor);
+      let anchor_next = this.chain.get_next_note(anchor);
+      if (anchor_next) {
+        tfiles.push(anchor_next);
+      }
+      await this.chain.chain_concat_tfiles(tfiles);
+      return;
+    }
     let curr = this.chain.current_note;
     if (curr == null) {
       return;
     }
-    let notes = this.chain.get_tfiles_of_folder(curr == null ? void 0 : curr.parent, false);
+    let smode = this.strings[this.settings.suggesterNotesMode];
+    let notes = await this.chain.suggester_notes(curr, false, smode);
+    if (!notes) {
+      return;
+    }
     notes = this.chain.sort_tfiles(notes, ["mtime", "x"]);
     notes = this.chain.sort_tfiles_by_chain(notes);
-    const note = await this.chain.suggester(
-      (file) => this.tfile_to_string(file, [], ""),
+    const note = await this.dialog_suggest(
+      this.utils.array_prefix_id(
+        notes.map((file) => this.tfile_to_string(file, [], ""))
+      ),
       notes
     );
     if (!note) {
       return;
     }
     let sitems = [
-      "insert_node_after",
-      "insert_node_before",
-      "insert_node_as_head",
-      "insert_node_as_tail"
+      this.strings.item_insert_node_after,
+      this.strings.item_insert_node_before,
+      this.strings.item_insert_node_as_head,
+      this.strings.item_insert_node_as_tail,
+      this.strings.item_insert_folder_after
     ];
-    let mode = await this.chain.suggester(
-      sitems,
+    let mode = await this.dialog_suggest(
+      this.utils.array_prefix_id(sitems),
       sitems,
       false,
-      "Select Node Insert Mode."
+      this.strings.item_insert_suggester
     );
     if (!mode) {
       return;
     }
-    console.log(typeof mode, mode);
-    if (mode === "insert_node_as_head") {
-      this.chain.chain_insert_node_as_head(curr, note);
-    } else if (mode === "insert_node_as_tail") {
-      this.chain.chain_insert_node_as_tail(curr, note);
-    } else if (mode === "insert_node_before") {
-      this.chain.chain_insert_node_before(curr, note);
-    } else if (mode === "insert_node_after") {
-      this.chain.chain_insert_node_after(curr, note);
+    if (mode === this.strings.item_insert_node_as_head) {
+      await this.chain.chain_insert_node_as_head(curr, note);
+    } else if (mode === this.strings.item_insert_node_as_tail) {
+      await this.chain.chain_insert_node_as_tail(curr, note);
+    } else if (mode === this.strings.item_insert_node_before) {
+      await this.chain.chain_insert_node_before(curr, note);
+      await this.editor.set_frontmatter_align_file(
+        note,
+        curr,
+        this.settings.field_of_confluence_tab_format
+      );
+    } else if (mode === this.strings.item_insert_node_after) {
+      await this.chain.chain_insert_node_after(curr, note);
+      await this.editor.set_frontmatter_align_file(
+        note,
+        curr,
+        this.settings.field_of_confluence_tab_format
+      );
+    } else if (mode === this.strings.item_insert_folder_after) {
+      await this.chain.chain_insert_folder_after(curr, note);
     } else {
       return;
     }
   }
   tfile_to_string(tfile, fields, seq) {
-    let meta = this.app.metadataCache.getFileCache(tfile);
     let items = new Array();
     if (tfile == this.chain.current_note) {
       items.push("\u{1F3E0}" + tfile.basename);
@@ -1084,68 +5050,30 @@ var NoteChainPlugin = class extends import_obsidian3.Plugin {
     }
     for (let field of fields) {
       try {
-        items.push(meta.frontmatter[field]);
+        items.push(this.editor.get_frontmatter(tfile, field));
       } catch (error) {
         items.push("-");
       }
     }
     return items.join(seq);
   }
-  open_note_smarter() {
+  async open_note_smarter() {
     let curr = this.chain.current_note;
-    return this.chain.suggester_notes(curr, false).then((notes) => {
-      notes = this.chain.sort_tfiles(notes, ["mtime", "x"]);
-      notes = this.chain.sort_tfiles_by_chain(notes);
-      return this.chain.suggester(
-        (file) => this.chain.tfile_to_string(file),
+    let notes = await this.chain.suggester_notes(curr, false);
+    notes = this.chain.sort_tfiles(notes, ["mtime", "x"]);
+    notes = this.chain.sort_tfiles_by_chain(notes);
+    if (notes.length > 0) {
+      let note = await this.dialog_suggest(
+        this.utils.array_prefix_id(
+          notes.map((file) => this.chain.tfile_to_string(file))
+        ),
         notes
-      ).then((note) => {
-        return this.chain.open_note(note);
-      });
-    });
+      );
+      if (note) {
+        await this.chain.open_note(note);
+      }
+    }
   }
 };
-var NCSettingTab = class extends import_obsidian3.PluginSettingTab {
-  constructor(app2, plugin) {
-    super(app2, plugin);
-    this.plugin = plugin;
-  }
-  display() {
-    const { containerEl } = this;
-    containerEl.empty();
-    new import_obsidian3.Setting(containerEl).setName("Sort File Explorer").setDesc("Sort File Explorer by Chain").addToggle(
-      (text) => text.setValue(this.plugin.settings.isSortFileExplorer).onChange(async (value) => {
-        this.plugin.settings.isSortFileExplorer = value;
-        await this.plugin.saveSettings();
-        this.plugin.explorer.file_explorer.sort();
-      })
-    );
-    new import_obsidian3.Setting(containerEl).setName("PrevChain").setDesc("Number of Prev Notes to show?").addText((text) => text.setValue(this.plugin.settings.PrevChain).onChange(async (value) => {
-      this.plugin.settings.PrevChain = value;
-      await this.plugin.saveSettings();
-    }));
-    new import_obsidian3.Setting(containerEl).setName("NextChain").setDesc("Number of Next Notes to show?").addText((text) => text.setValue(this.plugin.settings.NextChain).onChange(async (value) => {
-      this.plugin.settings.NextChain = value;
-      await this.plugin.saveSettings();
-    }));
-    new import_obsidian3.Setting(containerEl).setName("allFiles").setDesc("Show All Notes while Insert Node?").addToggle(
-      (text) => text.setValue(this.plugin.settings.allFiles).onChange(async (value) => {
-        this.plugin.settings.allFiles = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian3.Setting(containerEl).setName("refreshDataView").setDesc("Refresh Dataview while open new file?").addToggle(
-      (text) => text.setValue(this.plugin.settings.refreshDataView).onChange(async (value) => {
-        this.plugin.settings.refreshDataView = value;
-        await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian3.Setting(containerEl).setName("refreshTasks").setDesc("Refresh Tasks while open new file?").addToggle(
-      (text) => text.setValue(this.plugin.settings.refreshTasks).onChange(async (value) => {
-        this.plugin.settings.refreshTasks = value;
-        await this.plugin.saveSettings();
-      })
-    );
-  }
-};
-//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsibWFpbi50cyIsICJzcmMvTkNFZGl0b3IudHMiLCAic3JjL05vdGVDaGFpbi50cyIsICJzcmMvdXRpbHMudHMiLCAic3JjL05DRmlsZUV4cGxvcmVyLnRzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJpbXBvcnQgeyBcclxuXHRBcHAsIEVkaXRvciwgTWFya2Rvd25WaWV3LCBNb2RhbCwgTm90aWNlLCBcclxuXHRQbHVnaW4sIFBsdWdpblNldHRpbmdUYWIsIFNldHRpbmcsXHJcblx0VEZpbGUsVEZvbGRlclxyXG59IGZyb20gJ29ic2lkaWFuJztcclxuXHJcblxyXG5pbXBvcnQge05DRWRpdG9yfSBmcm9tICcuL3NyYy9OQ0VkaXRvcic7XHJcbmltcG9ydCB7Tm90ZUNoYWlufSBmcm9tICcuL3NyYy9Ob3RlQ2hhaW4nO1xyXG5pbXBvcnQge05DRmlsZUV4cGxvcmVyfSBmcm9tICcuL3NyYy9OQ0ZpbGVFeHBsb3Jlcic7XHJcbmltcG9ydCB7Z2V0X3RwX2Z1bmN9IGZyb20gJy4vc3JjL3V0aWxzJ1xyXG5cclxuLy8gUmVtZW1iZXIgdG8gcmVuYW1lIHRoZXNlIGNsYXNzZXMgYW5kIGludGVyZmFjZXMhXHJcblxyXG5pbnRlcmZhY2UgTkNTZXR0aW5ncyB7XHJcblx0UHJldkNoYWluOnN0cmluZztcclxuXHROZXh0Q2hhaW46c3RyaW5nO1xyXG5cdHJlZnJlc2hEYXRhVmlldzpib29sZWFuO1xyXG5cdHJlZnJlc2hUYXNrczpib29sZWFuLFxyXG5cdGlzU29ydEZpbGVFeHBsb3Jlcjpib29sZWFuLFxyXG59XHJcblxyXG5jb25zdCBERUZBVUxUX1NFVFRJTkdTOiBOQ1NldHRpbmdzID0ge1xyXG5cdFByZXZDaGFpbiA6IFwiMTBcIixcclxuXHROZXh0Q2hhaW4gOiBcIjEwXCIsXHJcblx0cmVmcmVzaERhdGFWaWV3IDogdHJ1ZSxcclxuXHRyZWZyZXNoVGFza3MgOiB0cnVlLFxyXG5cdGlzU29ydEZpbGVFeHBsb3JlciA6IHRydWVcclxufVxyXG5cclxuY29uc3QgbG9uZ2Zvcm0ybm90ZWNoYWluID0gKHBsdWdpbjpOb3RlQ2hhaW5QbHVnaW4pID0+ICh7XHJcblx0aWQ6IFwibG9uZ2Zvcm0ybm90ZWNoYWluXCIsXHJcbiAgICBuYW1lOiBcIlJlc2V0IE5vdGUgQ2hhaW4gYnkgTG9uZ0Zvcm0uXCIsXHJcblx0Y2FsbGJhY2s6ICgpID0+IHtcclxuXHRcdGxldCBjdXJyID0gcGx1Z2luLmNoYWluLmN1cnJlbnRfbm90ZTtcclxuXHRcdGlmKGN1cnIgPT0gbnVsbCl7cmV0dXJuO31cclxuXHRcdGFwcC5maWxlTWFuYWdlci5wcm9jZXNzRnJvbnRNYXR0ZXIoXHJcblx0XHRcdGN1cnIsXHJcblx0XHRcdGZtID0+e1xyXG5cdFx0XHRcdGlmKGN1cnI9PW51bGwpe3JldHVybjt9XHJcblx0XHRcdFx0aWYoZm1bJ2xvbmdmb3JtJ109PW51bGwpe3JldHVybjt9XHJcblx0XHRcdFx0bGV0IHNjZW5lcyA9IHBsdWdpbi5lZGl0b3IuY29uY2F0X2FycmF5KGZtLmxvbmdmb3JtLnNjZW5lcyk7XHJcblx0XHRcdFx0bGV0IGlnbm9yZWRGaWxlcyA9IHBsdWdpbi5lZGl0b3IuY29uY2F0X2FycmF5KGZtLmxvbmdmb3JtLmlnbm9yZWRGaWxlcyk7XHJcblx0XHRcdFx0aWdub3JlZEZpbGVzID0gaWdub3JlZEZpbGVzLmZpbHRlcigoZjpzdHJpbmcpPT4hc2NlbmVzLmNvbnRhaW5zKGYpKTtcclxuXHRcdFx0XHRsZXQgbm90ZXMgPSBwbHVnaW4uZWRpdG9yLmNvbmNhdF9hcnJheShbc2NlbmVzLGlnbm9yZWRGaWxlc10pO1xyXG5cdFx0XHRcdG5vdGVzID0gbm90ZXMubWFwKChmOnN0cmluZyk9PnBsdWdpbi5jaGFpbi5maW5kX3RmaWxlKGYpKTtcclxuXHRcdFx0XHRpZihjdXJyLnBhcmVudD09bnVsbCl7cmV0dXJufTtcclxuXHRcdFx0XHRsZXQgdGZpbGVzID0gcGx1Z2luLmNoYWluLmdldF90ZmlsZXNfb2ZfZm9sZGVyKGN1cnIucGFyZW50KS5maWx0ZXIoKGY6YW55KT0+IW5vdGVzLmNvbnRhaW5zKGYpKTtcclxuXHRcdFx0XHRub3RlcyA9IHBsdWdpbi5lZGl0b3IuY29uY2F0X2FycmF5KFt0ZmlsZXMsbm90ZXNdKTtcclxuXHRcdFx0XHRwbHVnaW4uY2hhaW4uY2hhaW5fbGlua190ZmlsZXMobm90ZXMpO1xyXG5cdFx0XHR9XHJcblx0XHQpXHJcblx0fVxyXG59KTtcclxuXHJcbmNvbnN0IGxvbmdmb3JtNG5vdGVjaGFpbiA9IChwbHVnaW46Tm90ZUNoYWluUGx1Z2luKSA9PiAoe1xyXG5cdGlkOiBcImxvbmdmb3JtNG5vdGVjaGFpblwiLFxyXG4gICAgbmFtZTogXCJSZXNldCBMb25nRm9ybSBTZWNuZXMgYnkgTm90ZSBDaGFpbi5cIixcclxuXHRjYWxsYmFjazogKCkgPT4ge1xyXG5cdFx0bGV0IGN1cnIgPSBwbHVnaW4uY2hhaW4uY3VycmVudF9ub3RlO1xyXG5cdFx0aWYoY3Vycj09bnVsbCl7cmV0dXJuO31cclxuXHRcdGFwcC5maWxlTWFuYWdlci5wcm9jZXNzRnJvbnRNYXR0ZXIoXHJcblx0XHRcdGN1cnIsXHJcblx0XHRcdGZtID0+e1xyXG5cdFx0XHRcdGlmKGN1cnI9PW51bGwpe3JldHVybjt9XHJcblx0XHRcdFx0aWYoY3Vyci5wYXJlbnQ9PW51bGwpe3JldHVybn07XHJcblxyXG5cdFx0XHRcdGlmKGZtWydsb25nZm9ybSddPT1udWxsKXtyZXR1cm47fVxyXG5cdFx0XHRcdGxldCBub3RlcyA9IHBsdWdpbi5jaGFpbi5nZXRfdGZpbGVzX29mX2ZvbGRlcihjdXJyLnBhcmVudCk7XHJcblx0XHRcdFx0bm90ZXMgPSBwbHVnaW4uY2hhaW4uc29ydF90ZmlsZXNfYnlfY2hhaW4obm90ZXMpO1xyXG5cdFx0XHRcdGZtLmxvbmdmb3JtLnNjZW5lcyA9IG5vdGVzLm1hcCgoZjpURmlsZSk9PmYuYmFzZW5hbWUpO1xyXG5cdFx0XHR9XHJcblx0XHQpXHJcblx0fVxyXG59KTtcclxuXHJcblxyXG5jb25zdCBzb3J0X2ZpbGVfZXhwbG9yZXIgPSAocGx1Z2luOk5vdGVDaGFpblBsdWdpbikgPT4gKHtcclxuXHRpZDogXCJzb3J0X2ZpbGVfZXhwbG9yZXJcIixcclxuICAgIG5hbWU6IFwiU29ydCBGaWxlIEV4cGxvcmVyIGJ5IE5vdGUgQ2hhaW4uXCIsXHJcblx0Y2FsbGJhY2s6ICgpID0+IHtcclxuXHRcdHBsdWdpbi5jaGFpbi52aWV3X3NvcnRfYnlfY2hhaW4oKTtcclxuXHR9XHJcbn0pO1xyXG5cclxuXHJcbmNvbnN0IHN1Z2dlc3Rlcl9yZXZlYWxfZm9sZGVyID0gKHBsdWdpbjpOb3RlQ2hhaW5QbHVnaW4pID0+ICh7XHJcbiAgICBpZDogXCJyZXZlYWxfZm9sZGVyXCIsXHJcbiAgICBuYW1lOiBcIlJldmVhbCBGb2xkZXJcIixcclxuICAgIGNhbGxiYWNrOiAoKSA9PiB7XHJcblx0XHRsZXQgZm9sZGVycyA9IHBsdWdpbi5jaGFpbi5nZXRfYWxsX2ZvbGRlcnMoKTtcclxuXHRcdGxldCBmb2xkZXIgPSBwbHVnaW4uY2hhaW4uc3VnZ2VzdGVyKFxyXG5cdFx0XHQoZjpURm9sZGVyKT0+Zi5wYXRoLFxyXG5cdFx0XHRmb2xkZXJzLFxyXG5cdFx0XHRmYWxzZSxcclxuXHRcdFx0J0Nob29zZSBmb2xkZXIgdG8gcmV2ZWFsLidcclxuXHRcdCkudGhlbihcclxuXHRcdFx0KGZvbGRlcjpURm9sZGVyKT0+e1xyXG5cdFx0XHRcdHBsdWdpbi5hcHAuaW50ZXJuYWxQbHVnaW5zPy5wbHVnaW5zW1wiZmlsZS1leHBsb3JlclwiXS5pbnN0YW5jZS5yZXZlYWxJbkZvbGRlcihmb2xkZXIpO1xyXG5cdFx0XHR9XHJcblx0XHQpXHJcbiAgICB9LFxyXG59KTtcclxuXHJcblxyXG5jb25zdCBjb21tYW5kQnVpbGRlcnMgPSBbXHJcblx0bG9uZ2Zvcm0ybm90ZWNoYWluLFxyXG5cdGxvbmdmb3JtNG5vdGVjaGFpbixcclxuXHRzb3J0X2ZpbGVfZXhwbG9yZXJcclxuXHQvLyBzdWdnZXN0ZXJfcmV2ZWFsX2ZvbGRlcixcclxuXTtcclxuXHJcbmZ1bmN0aW9uIGFkZENvbW1hbmRzKHBsdWdpbjpOb3RlQ2hhaW5QbHVnaW4pIHtcclxuICAgIGNvbW1hbmRCdWlsZGVycy5mb3JFYWNoKChjKSA9PiB7XHJcbiAgICAgICAgcGx1Z2luLmFkZENvbW1hbmQoYyhwbHVnaW4pKTtcclxuICAgIH0pO1xyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBOb3RlQ2hhaW5QbHVnaW4gZXh0ZW5kcyBQbHVnaW4ge1xyXG5cdHNldHRpbmdzOiBOQ1NldHRpbmdzO1xyXG5cdGNoYWluIDogTm90ZUNoYWluO1xyXG5cdGVkaXRvciA6IE5DRWRpdG9yOyBcclxuXHRleHBsb3JlciA6IE5DRmlsZUV4cGxvcmVyO1xyXG5cclxuXHRhc3luYyBvbmxvYWQoKSB7XHJcblx0XHRhd2FpdCB0aGlzLmxvYWRTZXR0aW5ncygpO1xyXG5cclxuXHRcdHRoaXMuZWRpdG9yID0gbmV3IE5DRWRpdG9yKHRoaXMuYXBwKTtcclxuXHRcdHRoaXMuY2hhaW4gPSBuZXcgTm90ZUNoYWluKHRoaXMpO1xyXG5cdFx0dGhpcy5leHBsb3JlciA9IG5ldyBOQ0ZpbGVFeHBsb3Jlcih0aGlzKTtcclxuXHJcblx0XHRhZGRDb21tYW5kcyh0aGlzKTtcclxuXHJcblx0XHR0aGlzLmFkZENvbW1hbmQoe1xyXG5cdFx0XHRpZDogJ2NoYWluX2luc2VydF9ub2RlJyxcclxuXHRcdFx0bmFtZTogJ0luc2VydCBub2RlIG9mIGNoYWluJyxcclxuXHRcdFx0Y2FsbGJhY2s6ICgpID0+IHtcclxuXHRcdFx0XHR0aGlzLmNoYWluX2luc2VydF9ub2RlKCkudGhlbihcclxuXHRcdFx0XHRcdCgpPT57dGhpcy5leHBsb3Jlci5maWxlX2V4cGxvcmVyLnNvcnQoKTt9XHJcblx0XHRcdFx0KTtcclxuXHRcdFx0fVxyXG5cdFx0fSk7XHJcblx0XHRcclxuXHRcdHRoaXMuYWRkQ29tbWFuZCh7XHJcblx0XHRcdGlkOiAnY2hhaW5fc2V0X3NlcV9ub3RlJyxcclxuXHRcdFx0bmFtZTogJ1Jlc2V0IHRoZSBjaGFpbiBvZiBjdXJyZW50IGZvbGRlciEgV2FybmluZzogSXQgd2lsbCByZXNldCB5b3VyIGNoYWluJyxcclxuXHRcdFx0Y2FsbGJhY2s6ICgpID0+IHtcclxuXHRcdFx0XHR0aGlzLmNoYWluLmNoYWluX3N1Z2dlc3Rlcl90ZmlsZXMoKS50aGVuKFxyXG5cdFx0XHRcdFx0KCk9Pnt0aGlzLmV4cGxvcmVyLmZpbGVfZXhwbG9yZXIuc29ydCgpO31cclxuXHRcdFx0XHQpO1xyXG5cdFx0XHR9XHJcblx0XHR9KTtcclxuXHJcblx0XHR0aGlzLmFkZENvbW1hbmQoe1xyXG5cdFx0XHRpZDogJ29wZW5fbm90ZXNfc21hcnRlcicsXHJcblx0XHRcdG5hbWU6ICdPcGVuIG5vdGUgc21hcnRlcicsXHJcblx0XHRcdGNhbGxiYWNrOiAoKSA9PiB7XHJcblx0XHRcdFx0dGhpcy5vcGVuX25vdGVfc21hcnRlcigpO1xyXG5cdFx0XHR9XHJcblx0XHR9KTtcclxuXHJcblx0XHR0aGlzLmFkZENvbW1hbmQoe1xyXG5cdFx0XHRpZDogJ3N1Z2d1c3Rlcl9vcGVuX25vdGUnLFxyXG5cdFx0XHRuYW1lOiAnT3BlbiBub3RlJyxcclxuXHRcdFx0Y2FsbGJhY2s6ICgpID0+IHtcclxuXHRcdFx0XHR0aGlzLmNoYWluLnN1Z2d1c3Rlcl9vcGVuX25vdGUoKTtcclxuXHRcdFx0fVxyXG5cdFx0fSk7XHJcblxyXG5cdFx0dGhpcy5hZGRDb21tYW5kKHtcclxuXHRcdFx0aWQ6ICdvcGVuX3ByZXZfbm90ZXMnLFxyXG5cdFx0XHRuYW1lOiAnT3BlbiBwcmV2IG5vdGUnLFxyXG5cdFx0XHRjYWxsYmFjazogKCkgPT4ge1xyXG5cdFx0XHRcdHRoaXMuY2hhaW4ub3Blbl9wcmV2X25vdGVzKCk7XHJcblx0XHRcdH1cclxuXHRcdH0pO1xyXG5cclxuXHRcdHRoaXMuYWRkQ29tbWFuZCh7XHJcblx0XHRcdGlkOiAnb3Blbl9uZXh0X25vdGVzJyxcclxuXHRcdFx0bmFtZTogJ09wZW4gbmV4dCBub3RlJyxcclxuXHRcdFx0Y2FsbGJhY2s6ICgpID0+IHtcclxuXHRcdFx0XHR0aGlzLmNoYWluLm9wZW5fbmV4dF9ub3RlcygpO1xyXG5cdFx0XHR9XHJcblx0XHR9KTtcclxuXHJcblxyXG5cdFx0dGhpcy5hZGRDb21tYW5kKHtcclxuXHRcdFx0aWQ6ICdjbGVhcl9pbmxpbmtzJyxcclxuXHRcdFx0bmFtZTogJ0NsZWFyIGlubGlua3Mgb2YgY3VycmVudCBmaWxlJyxcclxuXHRcdFx0Y2FsbGJhY2s6ICgpID0+IHtcclxuXHRcdFx0XHR0aGlzLmNsZWFyX2lubGlua3MoKTtcclxuXHRcdFx0fVxyXG5cdFx0fSk7XHJcblxyXG5cdFx0dGhpcy5hZGRDb21tYW5kKHtcclxuXHRcdFx0aWQ6ICdtb3ZlX2ZpbGVfdG9fYW5vdGhlcl9mb2xkZXInLFxyXG5cdFx0XHRuYW1lOiAnTW92ZSBjdXJyZW50IGZpbGUgdG8gYW5vdGhlciBmb2xkZXInLFxyXG5cdFx0XHRjYWxsYmFjazogKCkgPT4ge1xyXG5cdFx0XHRcdHRoaXMuY2hhaW4ubW92ZV9maWxlX3RvX2Fub3RoZXJfZm9sZGVyKCk7XHJcblx0XHRcdH1cclxuXHRcdH0pO1xyXG5cdFx0XHJcblx0XHR0aGlzLmFkZENvbW1hbmQoe1xyXG5cdFx0XHRpZDogJ3JlcGxhY2Vfbm90ZXNfd2l0aF9yZWd4JyxcclxuXHRcdFx0bmFtZTogJ1JlcGxhY2UgYnkgcmVnZXgnLFxyXG5cdFx0XHRjYWxsYmFjazogKCkgPT4ge1xyXG5cdFx0XHRcdHRoaXMucmVwbGFjZV9ub3Rlc193aXRoX3JlZ3goKTtcclxuXHRcdFx0fVxyXG5cdFx0fSk7XHJcblxyXG5cdFx0Ly8gVGhpcyBhZGRzIGEgc2V0dGluZ3MgdGFiIHNvIHRoZSB1c2VyIGNhbiBjb25maWd1cmUgdmFyaW91cyBhc3BlY3RzIG9mIHRoZSBwbHVnaW5cclxuXHRcdHRoaXMuYWRkU2V0dGluZ1RhYihuZXcgTkNTZXR0aW5nVGFiKHRoaXMuYXBwLCB0aGlzKSk7XHJcblxyXG5cdFx0Y29uc29sZS5sb2coJ1ppZy1Ib2xkaW5nOnJlZ2Vpc3RlciB1ZnVuY19vbl9maWxlX29wZW4nKTtcclxuXHRcdHRoaXMucmVnaXN0ZXJFdmVudChcclxuXHRcdFx0dGhpcy5hcHAud29ya3NwYWNlLm9uKCdmaWxlLW9wZW4nLCB0aGlzLnVmdW5jX29uX2ZpbGVfb3BlbilcclxuXHRcdCk7XHJcblxyXG5cdFx0dGhpcy5yZWdpc3RlckV2ZW50KHRoaXMuYXBwLndvcmtzcGFjZS5vbihcImZpbGUtbWVudVwiLCAobWVudSwgZmlsZSkgPT4ge1xyXG5cdFx0XHRtZW51LmFkZEl0ZW0oKGl0ZW0pID0+IHtcclxuXHRcdFx0XHRpdGVtXHJcblx0XHRcdFx0XHQuc2V0VGl0bGUoXCJOb3RlQ2hhaW46IHNvcnQgYnkgY2hhaW5cIilcclxuXHRcdFx0XHRcdC5vbkNsaWNrKCgpID0+IHtcclxuXHRcdFx0XHRcdFx0dGhpcy5jaGFpbi52aWV3X3NvcnRfYnlfY2hhaW4oKTtcclxuXHRcdFx0XHR9KTtcclxuXHRcdFx0fSk7XHJcblx0XHR9KSk7XHJcblxyXG5cdFx0dGhpcy5yZWdpc3RlckV2ZW50KHRoaXMuYXBwLnZhdWx0Lm9uKFxyXG5cdFx0XHRcImRlbGV0ZVwiLCAoZmlsZTogVEZpbGUpID0+IHtcclxuXHRcdFx0XHR0aGlzLmNoYWluLmNoYWluX3BvcF9ub2RlKGZpbGUpO1xyXG5cdFx0XHRcdHRoaXMuZXhwbG9yZXIuZmlsZV9leHBsb3Jlci5zb3J0KCk7XHJcblx0XHRcdH1cclxuXHRcdCkpXHJcblx0fVxyXG5cclxuXHJcblx0b251bmxvYWQoKSB7XHJcblx0XHRjb25zb2xlLmxvZygnWmlnLUhvbGRpbmc6dW5yZWdlaXN0ZXIgdWZ1bmNfb25fZmlsZV9vcGVuJyk7XHJcblx0XHR0aGlzLmFwcC53b3Jrc3BhY2Uub2ZmKCdmaWxlLW9wZW4nLCB0aGlzLnVmdW5jX29uX2ZpbGVfb3Blbik7XHJcblx0XHR0aGlzLmV4cGxvcmVyLnVucmVnaXN0ZXIoKTtcclxuXHRcdHRoaXMuZXhwbG9yZXIuZmlsZV9leHBsb3Jlci5zb3J0KCk7XHJcblx0XHRcclxuXHR9XHJcblxyXG5cdGFzeW5jIHVmdW5jX29uX2ZpbGVfb3BlbihmaWxlKXtcclxuXHRcdGxldCB6aCA9IGF3YWl0IGFwcC5wbHVnaW5zLmdldFBsdWdpbihcIm5vdGUtY2hhaW5cIik7XHJcblx0XHRpZighemgpe3JldHVybjt9XHJcblx0XHRpZih6aC5zZXR0aW5ncy5yZWZyZXNoRGF0YVZpZXcpe1xyXG5cdFx0XHR6aC5hcHAuY29tbWFuZHMuZXhlY3V0ZUNvbW1hbmRCeUlkKFxyXG5cdFx0XHRcdFwiZGF0YXZpZXc6ZGF0YXZpZXctZm9yY2UtcmVmcmVzaC12aWV3c1wiXHJcblx0XHRcdClcclxuXHRcdH1cclxuXHRcdGlmKHpoLnNldHRpbmdzLnJlZnJlc2hUYXNrcyl7XHJcblx0XHRcdGxldCB0YXJnZXQgPSBhd2FpdCBhcHAucGx1Z2lucy5nZXRQbHVnaW4oXCJvYnNpZGlhbi10YXNrcy1wbHVnaW5cIik7XHJcblx0XHRcdHRhcmdldC5jYWNoZS5ub3RpZnlTdWJzY3JpYmVycygpO1xyXG5cdFx0fVxyXG5cdH1cclxuXHRcclxuXHRhc3luYyBsb2FkU2V0dGluZ3MoKSB7XHJcblx0XHR0aGlzLnNldHRpbmdzID0gT2JqZWN0LmFzc2lnbih7fSwgREVGQVVMVF9TRVRUSU5HUywgYXdhaXQgdGhpcy5sb2FkRGF0YSgpKTtcclxuXHR9XHJcblxyXG5cdGFzeW5jIHNhdmVTZXR0aW5ncygpIHtcclxuXHRcdGF3YWl0IHRoaXMuc2F2ZURhdGEodGhpcy5zZXR0aW5ncyk7XHJcblx0fVxyXG5cclxuXHRhc3luYyBjbGVhcl9pbmxpbmtzKHRmaWxlPXRoaXMuY2hhaW4uY3VycmVudF9ub3RlLG1vZGU9J3N1Z2dlc3Rlcicpe1xyXG5cdFx0bGV0IG5vdGVzID0gdGhpcy5jaGFpbi5nZXRfaW5saW5rcyh0ZmlsZSk7XHJcblx0XHRpZihub3Rlcy5sZW5ndGgpe1xyXG5cdFx0XHRpZihtb2RlPT09J3N1Z2dlc3Rlcicpe1xyXG5cdFx0XHRcdG1vZGUgPSBhd2FpdCB0aGlzLmNoYWluLnN1Z2dlc3RlcihcclxuXHRcdFx0XHRcdFtcIlx1NTIyMFx1OTY2NFx1OTRGRVx1NjNBNVwiLCdcdTY2RkZcdTYzNjJcdTk0RkVcdTYzQTUnLFwiXHU1MjIwXHU5NjY0XHU2QkI1XHU4NDNEXCIsXSxcclxuXHRcdFx0XHRcdFtbJ2xpbmsnLCdkZWwnXSxbJ2xpbmsnLCdyZXAnXSxbJ3BhcmEnLCdkZWwnXV1cclxuXHRcdFx0XHQpO1xyXG5cdFx0XHR9XHJcblx0XHRcdGxldCByZWcgPSB0aGlzLmVkaXRvci5yZWdleHBfbGluayh0ZmlsZSxtb2RlWzBdKTtcclxuXHRcdFx0aWYocmVnKXtcclxuXHRcdFx0XHRmb3IobGV0IG5vdGUgb2Ygbm90ZXMpe1xyXG5cdFx0XHRcdFx0bGV0IHRhcmdldDtcclxuXHRcdFx0XHRcdGlmKG1vZGVbMV09PT0ncmVwJyl7XHJcblx0XHRcdFx0XHRcdHRhcmdldD10ZmlsZS5iYXNlbmFtZTtcclxuXHRcdFx0XHRcdH1lbHNle1xyXG5cdFx0XHRcdFx0XHR0YXJnZXQ9JydcclxuXHRcdFx0XHRcdH1cclxuXHRcdFx0XHRcdHRoaXMuZWRpdG9yLnJlcGxhY2Uobm90ZSxyZWcsdGFyZ2V0KTtcclxuXHRcdFx0XHR9XHJcblx0XHRcdH1cclxuXHRcdH1cclxuXHR9XHJcblxyXG5cdGdldCBwcm9tcHQoKXtcclxuXHRcdHJldHVybiBnZXRfdHBfZnVuYyh0aGlzLmFwcCwndHAuc3lzdGVtLnByb21wdCcpO1xyXG5cdH1cclxuXHJcblx0YXN5bmMgcmVwbGFjZV9ub3Rlc193aXRoX3JlZ3goKXtcclxuXHRcdGxldCBub3RlcyA9IGF3YWl0IHRoaXMuY2hhaW4uc3VnZ2VzdGVyX25vdGVzKCk7XHJcblx0XHRpZihub3Rlcz8ubGVuZ3RoPjApe1xyXG5cdFx0XHR0cnkge1xyXG5cdFx0XHRcdGxldCByZWdzID0gYXdhaXQgdGhpcy5wcm9tcHQoJ1x1ODk4MVx1NjZGRlx1NjM2Mlx1NzY4NFx1NkI2M1x1NTIxOVx1ODg2OFx1OEZCRVx1NUYwRicpO1xyXG5cdFx0XHRcdGlmKHJlZ3M9PW51bGwpe1xyXG5cdFx0XHRcdFx0cmV0dXJuO1xyXG5cdFx0XHRcdH1cclxuXHRcdFx0XHRsZXQgcmVnID0gbmV3IFJlZ0V4cChyZWdzLCdnJyk7XHJcblx0XHRcdFx0XHJcblx0XHRcdFx0bGV0IHRhcmdldCA9IGF3YWl0IHRoaXMucHJvbXB0KCdcdTc2RUVcdTY4MDdcdTVCNTdcdTdCMjZcdTRFMzInKTtcclxuXHRcdFx0XHRpZih0YXJnZXQ9PW51bGwpe1xyXG5cdFx0XHRcdFx0cmV0dXJuO1xyXG5cdFx0XHRcdH1cclxuXHRcdFx0XHR0YXJnZXQgPSB0YXJnZXQudHJpbSgpLnJlcGxhY2UoXHJcblx0XHRcdFx0XHQvXFxcXG4vZywnXFxuJ1xyXG5cdFx0XHRcdCk7XHJcblx0XHRcdFx0Y29uc29sZS5sb2cocmVncyxyZWcsdGFyZ2V0KTtcclxuXHRcdFx0XHRmb3IobGV0IG5vdGUgb2Ygbm90ZXMpe1xyXG5cdFx0XHRcdFx0YXdhaXQgdGhpcy5lZGl0b3IucmVwbGFjZShub3RlLHJlZyx0YXJnZXQpO1xyXG5cdFx0XHRcdH1cclxuXHRcdFx0fSBjYXRjaCAoZXJyb3IpIHtcclxuXHRcdFx0XHRjb25zb2xlLmxvZyhlcnJvcik7XHJcblx0XHRcdH1cclxuXHRcdFx0XHJcblx0XHR9XHJcblx0fVxyXG5cdFxyXG5cdGFzeW5jIGNoYWluX2luc2VydF9ub2RlKCl7XHJcblxyXG5cdFx0bGV0IGN1cnIgPSB0aGlzLmNoYWluLmN1cnJlbnRfbm90ZTtcclxuXHRcdGlmKGN1cnI9PW51bGwpe3JldHVybjt9XHJcblxyXG5cdFx0bGV0IG5vdGVzID0gdGhpcy5jaGFpbi5nZXRfdGZpbGVzX29mX2ZvbGRlcihjdXJyPy5wYXJlbnQsZmFsc2UpO1xyXG5cdFx0bm90ZXMgPSB0aGlzLmNoYWluLnNvcnRfdGZpbGVzKG5vdGVzLFsnbXRpbWUnLCd4J10pO1xyXG5cdFx0bm90ZXMgPSB0aGlzLmNoYWluLnNvcnRfdGZpbGVzX2J5X2NoYWluKG5vdGVzKTtcclxuXHRcdC8vbm90ZXMgPSBub3Rlcy5maWx0ZXIoZj0+ZiE9Y3Vycik7XHJcblxyXG5cdFx0Y29uc3Qgbm90ZSA9IGF3YWl0IHRoaXMuY2hhaW4uc3VnZ2VzdGVyKFxyXG5cdFx0XHQoZmlsZSkgPT4gdGhpcy50ZmlsZV90b19zdHJpbmcoZmlsZSxbXSxcIlwiKSwgXHJcblx0XHRcdG5vdGVzXHJcblx0XHQpOyBcclxuXHRcdFxyXG5cdFx0aWYoIW5vdGUpe3JldHVybjt9XHJcblx0XHRcclxuXHRcdGxldCBzaXRlbXMgPSBbXHJcblx0XHRcdFwiaW5zZXJ0X25vZGVfYWZ0ZXJcIixcclxuXHRcdFx0XCJpbnNlcnRfbm9kZV9iZWZvcmVcIixcclxuXHRcdFx0XCJpbnNlcnRfbm9kZV9hc19oZWFkXCIsXHJcblx0XHRcdFwiaW5zZXJ0X25vZGVfYXNfdGFpbFwiLFxyXG5cdFx0XTtcclxuXHRcdGxldCBtb2RlID0gYXdhaXQgdGhpcy5jaGFpbi5zdWdnZXN0ZXIoXHJcblx0XHRcdHNpdGVtcyxzaXRlbXMsZmFsc2UsXCJTZWxlY3QgTm9kZSBJbnNlcnQgTW9kZS5cIlxyXG5cdFx0KTtcclxuXHRcdFxyXG5cdFx0aWYoIW1vZGUpe3JldHVybjt9XHJcblxyXG5cdFx0Y29uc29sZS5sb2codHlwZW9mKG1vZGUpLG1vZGUpO1xyXG5cclxuXHRcdGlmKG1vZGU9PT0naW5zZXJ0X25vZGVfYXNfaGVhZCcpe1xyXG5cdFx0XHR0aGlzLmNoYWluLmNoYWluX2luc2VydF9ub2RlX2FzX2hlYWQoY3Vycixub3RlKTtcclxuXHRcdH1lbHNlIGlmKG1vZGU9PT0naW5zZXJ0X25vZGVfYXNfdGFpbCcpe1xyXG5cdFx0XHR0aGlzLmNoYWluLmNoYWluX2luc2VydF9ub2RlX2FzX3RhaWwoY3Vycixub3RlKTtcclxuXHRcdH1lbHNlIGlmKG1vZGU9PT0naW5zZXJ0X25vZGVfYmVmb3JlJyl7XHJcblx0XHRcdHRoaXMuY2hhaW4uY2hhaW5faW5zZXJ0X25vZGVfYmVmb3JlKGN1cnIsbm90ZSk7XHJcblx0XHR9ZWxzZSBpZihtb2RlPT09J2luc2VydF9ub2RlX2FmdGVyJyl7XHJcblx0XHRcdHRoaXMuY2hhaW4uY2hhaW5faW5zZXJ0X25vZGVfYWZ0ZXIoY3Vycixub3RlKTtcclxuXHRcdH1lbHNle1xyXG5cdFx0XHRyZXR1cm47XHJcblx0XHR9XHJcblxyXG5cdH1cclxuXHRcclxuXHR0ZmlsZV90b19zdHJpbmcodGZpbGUsZmllbGRzLHNlcSl7XHJcblx0XHRsZXQgbWV0YSA9IHRoaXMuYXBwLm1ldGFkYXRhQ2FjaGUuZ2V0RmlsZUNhY2hlKHRmaWxlKTtcclxuXHRcdGxldCBpdGVtcyA9IG5ldyBBcnJheSgpO1xyXG5cdFx0aWYodGZpbGU9PXRoaXMuY2hhaW4uY3VycmVudF9ub3RlKXtcclxuXHRcdFx0aXRlbXMucHVzaCgnXHVEODNDXHVERkUwJyArIHRmaWxlLmJhc2VuYW1lKVxyXG5cdFx0fWVsc2V7XHJcblx0XHRcdGl0ZW1zLnB1c2godGZpbGUuYmFzZW5hbWUpXHJcblx0XHR9XHJcblx0XHRcclxuXHRcdGZvcihsZXQgZmllbGQgb2YgZmllbGRzKXtcclxuXHRcdFx0dHJ5e1xyXG5cdFx0XHRcdGl0ZW1zLnB1c2gobWV0YS5mcm9udG1hdHRlcltmaWVsZF0pO1xyXG5cdFx0XHR9Y2F0Y2goZXJyb3Ipe1xyXG5cdFx0XHRcdGl0ZW1zLnB1c2goXCItXCIpO1xyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0XHRyZXR1cm4gaXRlbXMuam9pbihzZXEpO1xyXG5cdH1cclxuXHJcblx0b3Blbl9ub3RlX3NtYXJ0ZXIoKXtcclxuXHRcdC8vIFx1OTRGRVx1NUYwRlx1OEMwM1x1NzUyOFxyXG5cdFx0bGV0IGN1cnIgPSB0aGlzLmNoYWluLmN1cnJlbnRfbm90ZTtcclxuXHRcdHJldHVybiB0aGlzLmNoYWluLnN1Z2dlc3Rlcl9ub3RlcyhjdXJyLGZhbHNlKS50aGVuKChub3Rlcyk9PntcclxuXHRcdFx0bm90ZXMgPSB0aGlzLmNoYWluLnNvcnRfdGZpbGVzKG5vdGVzLFsnbXRpbWUnLCd4J10pO1xyXG5cdFx0XHRub3RlcyA9IHRoaXMuY2hhaW4uc29ydF90ZmlsZXNfYnlfY2hhaW4obm90ZXMpO1xyXG5cdFx0XHRyZXR1cm4gdGhpcy5jaGFpbi5zdWdnZXN0ZXIoXHJcblx0XHRcdFx0KGZpbGUpID0+IHRoaXMuY2hhaW4udGZpbGVfdG9fc3RyaW5nKGZpbGUpLCBcclxuXHRcdFx0XHRub3Rlc1xyXG5cdFx0XHQpLnRoZW4oKG5vdGUpPT57XHJcblx0XHRcdFx0cmV0dXJuIHRoaXMuY2hhaW4ub3Blbl9ub3RlKG5vdGUpO1xyXG5cdFx0XHR9KVxyXG5cdFx0fSk7XHJcblx0fVxyXG5cclxufVxyXG5cclxuY2xhc3MgTkNTZXR0aW5nVGFiIGV4dGVuZHMgUGx1Z2luU2V0dGluZ1RhYiB7XHJcblx0cGx1Z2luOiBOb3RlQ2hhaW5QbHVnaW47XHJcblxyXG5cdGNvbnN0cnVjdG9yKGFwcDogQXBwLCBwbHVnaW46IE5vdGVDaGFpblBsdWdpbikge1xyXG5cdFx0c3VwZXIoYXBwLCBwbHVnaW4pO1xyXG5cdFx0dGhpcy5wbHVnaW4gPSBwbHVnaW47XHJcblx0fVxyXG5cclxuXHRkaXNwbGF5KCk6IHZvaWQge1xyXG5cdFx0Y29uc3Qge2NvbnRhaW5lckVsfSA9IHRoaXM7XHJcblxyXG5cdFx0Y29udGFpbmVyRWwuZW1wdHkoKTtcclxuXHJcblx0XHRuZXcgU2V0dGluZyhjb250YWluZXJFbClcclxuXHRcdFx0XHQuc2V0TmFtZSgnU29ydCBGaWxlIEV4cGxvcmVyJylcclxuXHRcdFx0XHQuc2V0RGVzYygnU29ydCBGaWxlIEV4cGxvcmVyIGJ5IENoYWluJylcclxuXHRcdFx0XHQuYWRkVG9nZ2xlKHRleHQgPT4gdGV4dFxyXG5cdFx0XHRcdFx0LnNldFZhbHVlKHRoaXMucGx1Z2luLnNldHRpbmdzLmlzU29ydEZpbGVFeHBsb3JlcilcclxuXHRcdFx0XHRcdC5vbkNoYW5nZShhc3luYyAodmFsdWUpID0+IHtcclxuXHRcdFx0XHRcdFx0dGhpcy5wbHVnaW4uc2V0dGluZ3MuaXNTb3J0RmlsZUV4cGxvcmVyID0gdmFsdWU7XHJcblx0XHRcdFx0XHRcdGF3YWl0IHRoaXMucGx1Z2luLnNhdmVTZXR0aW5ncygpO1xyXG5cdFx0XHRcdFx0XHR0aGlzLnBsdWdpbi5leHBsb3Jlci5maWxlX2V4cGxvcmVyLnNvcnQoKTtcclxuXHRcdFx0XHRcdH0pXHJcblx0XHRcdFx0KTtcclxuXHJcblx0XHRcclxuXHRcdG5ldyBTZXR0aW5nKGNvbnRhaW5lckVsKVxyXG5cdFx0XHQuc2V0TmFtZSgnUHJldkNoYWluJylcclxuXHRcdFx0LnNldERlc2MoJ051bWJlciBvZiBQcmV2IE5vdGVzIHRvIHNob3c/JylcclxuXHRcdFx0LmFkZFRleHQodGV4dCA9PiB0ZXh0XHJcblx0XHRcdFx0LnNldFZhbHVlKHRoaXMucGx1Z2luLnNldHRpbmdzLlByZXZDaGFpbilcclxuXHRcdFx0XHQub25DaGFuZ2UoYXN5bmMgKHZhbHVlKSA9PiB7XHJcblx0XHRcdFx0XHR0aGlzLnBsdWdpbi5zZXR0aW5ncy5QcmV2Q2hhaW4gPSB2YWx1ZTtcclxuXHRcdFx0XHRcdGF3YWl0IHRoaXMucGx1Z2luLnNhdmVTZXR0aW5ncygpO1xyXG5cdFx0XHRcdH0pKTtcclxuXHJcblx0XHRuZXcgU2V0dGluZyhjb250YWluZXJFbClcclxuXHRcdFx0LnNldE5hbWUoJ05leHRDaGFpbicpXHJcblx0XHRcdC5zZXREZXNjKCdOdW1iZXIgb2YgTmV4dCBOb3RlcyB0byBzaG93PycpXHJcblx0XHRcdC5hZGRUZXh0KHRleHQgPT4gdGV4dFxyXG5cdFx0XHRcdC5zZXRWYWx1ZSh0aGlzLnBsdWdpbi5zZXR0aW5ncy5OZXh0Q2hhaW4pXHJcblx0XHRcdFx0Lm9uQ2hhbmdlKGFzeW5jICh2YWx1ZSkgPT4ge1xyXG5cdFx0XHRcdFx0dGhpcy5wbHVnaW4uc2V0dGluZ3MuTmV4dENoYWluID0gdmFsdWU7XHJcblx0XHRcdFx0XHRhd2FpdCB0aGlzLnBsdWdpbi5zYXZlU2V0dGluZ3MoKTtcclxuXHRcdFx0XHR9KSk7XHJcblxyXG5cdFx0bmV3IFNldHRpbmcoY29udGFpbmVyRWwpXHJcblx0XHRcdFx0LnNldE5hbWUoJ2FsbEZpbGVzJylcclxuXHRcdFx0XHQuc2V0RGVzYygnU2hvdyBBbGwgTm90ZXMgd2hpbGUgSW5zZXJ0IE5vZGU/JylcclxuXHRcdFx0XHQuYWRkVG9nZ2xlKHRleHQgPT4gdGV4dFxyXG5cdFx0XHRcdFx0LnNldFZhbHVlKHRoaXMucGx1Z2luLnNldHRpbmdzLmFsbEZpbGVzKVxyXG5cdFx0XHRcdFx0Lm9uQ2hhbmdlKGFzeW5jICh2YWx1ZSkgPT4ge1xyXG5cdFx0XHRcdFx0XHR0aGlzLnBsdWdpbi5zZXR0aW5ncy5hbGxGaWxlcyA9IHZhbHVlO1xyXG5cdFx0XHRcdFx0XHRhd2FpdCB0aGlzLnBsdWdpbi5zYXZlU2V0dGluZ3MoKTtcclxuXHRcdFx0XHRcdH0pXHJcblx0XHRcdFx0KTtcclxuXHRcdFxyXG5cdFx0bmV3IFNldHRpbmcoY29udGFpbmVyRWwpICBcclxuXHRcdFx0XHQuc2V0TmFtZSgncmVmcmVzaERhdGFWaWV3JylcclxuXHRcdFx0XHQuc2V0RGVzYygnUmVmcmVzaCBEYXRhdmlldyB3aGlsZSBvcGVuIG5ldyBmaWxlPycpXHJcblx0XHRcdFx0LmFkZFRvZ2dsZSh0ZXh0ID0+IHRleHRcclxuXHRcdFx0XHRcdC5zZXRWYWx1ZSh0aGlzLnBsdWdpbi5zZXR0aW5ncy5yZWZyZXNoRGF0YVZpZXcpXHJcblx0XHRcdFx0XHQub25DaGFuZ2UoYXN5bmMgKHZhbHVlKSA9PiB7XHJcblx0XHRcdFx0XHRcdHRoaXMucGx1Z2luLnNldHRpbmdzLnJlZnJlc2hEYXRhVmlldyA9IHZhbHVlO1xyXG5cdFx0XHRcdFx0XHRhd2FpdCB0aGlzLnBsdWdpbi5zYXZlU2V0dGluZ3MoKTtcclxuXHRcdFx0XHRcdH0pXHJcblx0XHRcdFx0KTtcclxuXHRcdG5ldyBTZXR0aW5nKGNvbnRhaW5lckVsKVxyXG5cdFx0XHRcdC5zZXROYW1lKCdyZWZyZXNoVGFza3MnKVxyXG5cdFx0XHRcdC5zZXREZXNjKCdSZWZyZXNoIFRhc2tzIHdoaWxlIG9wZW4gbmV3IGZpbGU/JylcclxuXHRcdFx0XHQuYWRkVG9nZ2xlKHRleHQgPT4gdGV4dFxyXG5cdFx0XHRcdFx0LnNldFZhbHVlKHRoaXMucGx1Z2luLnNldHRpbmdzLnJlZnJlc2hUYXNrcylcclxuXHRcdFx0XHRcdC5vbkNoYW5nZShhc3luYyAodmFsdWUpID0+IHtcclxuXHRcdFx0XHRcdFx0dGhpcy5wbHVnaW4uc2V0dGluZ3MucmVmcmVzaFRhc2tzID0gdmFsdWU7XHJcblx0XHRcdFx0XHRcdGF3YWl0IHRoaXMucGx1Z2luLnNhdmVTZXR0aW5ncygpO1xyXG5cdFx0XHRcdFx0fSlcclxuXHRcdFx0XHQpO1xyXG5cdH1cclxufVxyXG4iLCAiaW1wb3J0IHsgXHJcblx0QXBwLCBFZGl0b3IsIE1hcmtkb3duVmlldywgTW9kYWwsIE5vdGljZSwgXHJcblx0UGx1Z2luLCBQbHVnaW5TZXR0aW5nVGFiLCBTZXR0aW5nLFxyXG5cdFRGaWxlLFRGb2xkZXJcclxufSBmcm9tICdvYnNpZGlhbic7XHJcblxyXG5cclxuXHJcbmV4cG9ydCBjbGFzcyBOQ0VkaXRvcntcclxuXHRhcHA6QXBwO1xyXG5cclxuXHRjb25zdHJ1Y3RvcihhcHA6QXBwKXtcclxuXHRcdHRoaXMuYXBwID0gYXBwO1xyXG5cdH1cclxuXHJcblx0YXN5bmMgc2V0X2Zyb250bWF0dGVyKHRmaWxlOlRGaWxlLGtleTpzdHJpbmcsdmFsdWU6YW55KXtcclxuXHRcdGxldCBwcmV2ID0gdGhpcy5nZXRfZnJvbnRtYXR0ZXIodGZpbGUsa2V5KTtcclxuXHRcdGlmKHByZXY9PT12YWx1ZSl7cmV0dXJuO31cclxuXHJcblx0XHRhd2FpdCB0aGlzLmFwcC5maWxlTWFuYWdlci5wcm9jZXNzRnJvbnRNYXR0ZXIodGZpbGUsZm0gPT57XHJcblx0XHRcdGNvbnNvbGUubG9nKGAke3RmaWxlLmJhc2VuYW1lfS0tLSR7a2V5fS0tLSR7dmFsdWV9YCk7XHJcblx0XHRcdGZtW2tleV0gPSB2YWx1ZTtcclxuXHRcdH0pO1xyXG5cdH1cclxuXHJcblx0Z2V0X2Zyb250bWF0dGVyKHRmaWxlOlRGaWxlLGtleTphbnkpe1xyXG5cdFx0bGV0IG1ldGEgPSB0aGlzLmFwcC5tZXRhZGF0YUNhY2hlLmdldEZpbGVDYWNoZSh0ZmlsZSk7XHJcblx0XHRpZihtZXRhPy5mcm9udG1hdHRlcil7XHJcblx0XHRcdHJldHVybiBtZXRhLmZyb250bWF0dGVyW2tleV07XHJcblx0XHR9XHJcblx0fVxyXG5cclxuXHRyZWdleHBfbGluayh0ZmlsZTpURmlsZSxtb2RlOnN0cmluZyl7XHJcblx0XHQvL1tbbm90ZXx8YWxpYXNdXVxyXG5cdFx0aWYobW9kZT09PSdsaW5rJyl7XHJcblx0XHRcdHJldHVybiBuZXcgUmVnRXhwKGBcXFxcW1xcXFxbJHt0ZmlsZS5iYXNlbmFtZX1cXFxcfD8uKlxcXFxdXFxcXF1gLCdnJyk7XHJcblx0XHR9XHJcblx0XHRcclxuXHRcdC8vcGFyYWdyYXBoXHJcblx0XHRpZihtb2RlPT09J3BhcmEnKXtcclxuXHRcdFx0cmV0dXJuIG5ldyBSZWdFeHAoYC4qXFxcXFtcXFxcWyR7dGZpbGUuYmFzZW5hbWV9XFxcXHw/LipcXFxcXVxcXFxdLipgLCdnJyk7XHJcblx0XHR9XHJcblx0fVxyXG5cclxuXHRzbGVlcChtcyl7XHJcblx0XHRyZXR1cm4gbmV3IFByb21pc2UocmVzb2x2ZSA9PiBzZXRUaW1lb3V0KHJlc29sdmUsIG1zKSk7XHJcblx0fVxyXG5cclxuXHRjb25jYXRfYXJyYXkoaXRlbXM6QXJyYXk8YW55Pil7XHJcblx0XHRpZihpdGVtcz09bnVsbCl7cmV0dXJuIFtdO31cclxuXHRcdGlmKHR5cGVvZiBpdGVtcyA9PT0gJ3N0cmluZycpe3JldHVybiBbaXRlbXNdO31cclxuXHRcdGlmKCEoaXRlbXMgaW5zdGFuY2VvZiBBcnJheSkpe3JldHVybiBbaXRlbXNdO31cclxuXHJcblx0XHRsZXQgcmVzID0gW107XHJcblx0XHRmb3IobGV0IGl0ZW0gb2YgaXRlbXMpe1xyXG5cdFx0XHRpZih0eXBlb2YgaXRlbSA9PT0gJ3N0cmluZycpe1xyXG5cdFx0XHRcdHJlcy5wdXNoKGl0ZW0pO1xyXG5cdFx0XHR9ZWxzZSBpZihpdGVtIGluc3RhbmNlb2YgQXJyYXkpe1xyXG5cdFx0XHRcdHJlcyA9IHJlcy5jb25jYXQodGhpcy5jb25jYXRfYXJyYXkoaXRlbSkpO1xyXG5cdFx0XHR9ZWxzZXtcclxuXHRcdFx0XHRyZXMucHVzaChpdGVtKTtcclxuXHRcdFx0fVxyXG5cdFx0fVxyXG5cdFx0cmV0dXJuIHJlcztcclxuXHR9XHJcblxyXG5cdGFzeW5jIHJlcGxhY2UodGZpbGU6VEZpbGUscmVnZXg6YW55LHRhcmdldDpzdHJpbmcpe1xyXG5cdFx0aWYodHlwZW9mIHJlZ2V4ID09PSAnc3RyaW5nJyl7XHJcblx0XHRcdGF3YWl0IHRoaXMuYXBwLnZhdWx0LnByb2Nlc3ModGZpbGUsKGRhdGEpPT57XHJcblx0XHRcdFx0aWYoZGF0YS5pbmRleE9mKHJlZ2V4KT4tMSl7XHJcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnUmVwbGFjZTogJyx0ZmlsZS5wYXRoKTtcclxuXHRcdFx0XHRcdHJldHVybiBkYXRhLnJlcGxhY2UocmVnZXgsIHRhcmdldCk7XHJcblx0XHRcdFx0fVxyXG5cdFx0XHRcdHJldHVybiBkYXRhO1xyXG5cdFx0XHR9KVxyXG5cdFx0fWVsc2UgaWYocmVnZXggaW5zdGFuY2VvZiBSZWdFeHApe1xyXG5cdFx0XHRhd2FpdCB0aGlzLmFwcC52YXVsdC5wcm9jZXNzKHRmaWxlLChkYXRhKT0+e1xyXG5cdFx0XHRcdGlmKGRhdGEubWF0Y2gocmVnZXgpKXtcclxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdSZXBsYWNlOiAnLHRmaWxlLnBhdGgpO1xyXG5cdFx0XHRcdFx0cmV0dXJuIGRhdGEucmVwbGFjZShyZWdleCwgdGFyZ2V0KTtcclxuXHRcdFx0XHR9XHJcblx0XHRcdFx0cmV0dXJuIGRhdGE7XHJcblx0XHRcdH0pXHJcblx0XHR9XHJcblx0fVxyXG59IiwgIlxyXG5pbXBvcnQgeyBcclxuXHRBcHAsIEVkaXRvciwgTWFya2Rvd25WaWV3LCBNb2RhbCwgTm90aWNlLCBcclxuXHRQbHVnaW4sIFBsdWdpblNldHRpbmdUYWIsIFNldHRpbmcsXHJcblx0VEZpbGUsVEZvbGRlclxyXG59IGZyb20gJ29ic2lkaWFuJztcclxuXHJcbmltcG9ydCB7Tm90ZUNoYWluUGx1Z2lufSBmcm9tIFwiLi4vbWFpblwiO1xyXG5pbXBvcnQge05DRWRpdG9yfSBmcm9tICcuL05DRWRpdG9yJztcclxuaW1wb3J0IHtnZXRfdHBfZnVuY30gZnJvbSAnLi91dGlscydcclxuXHJcbmV4cG9ydCBjbGFzcyBOb3RlQ2hhaW57XHJcblx0cGx1Z2luOk5vdGVDaGFpblBsdWdpbjtcclxuXHRhcHA6QXBwO1xyXG5cdHByZXY6c3RyaW5nO1xyXG5cdG5leHQ6c3RyaW5nO1xyXG5cdGVkaXRvcjpOQ0VkaXRvcjtcclxuXHJcblx0Y29uc3RydWN0b3IocGx1Z2luOk5vdGVDaGFpblBsdWdpbixwcmV2PVwiUHJldk5vdGVcIixuZXh0PVwiTmV4dE5vdGVcIikge1xyXG5cdFx0dGhpcy5wbHVnaW4gPSBwbHVnaW47XHJcblx0XHR0aGlzLmFwcCA9IHBsdWdpbi5hcHA7XHJcblx0XHR0aGlzLmVkaXRvciA9IG5ldyBOQ0VkaXRvcih0aGlzLmFwcCk7XHJcblx0XHR0aGlzLnByZXYgPSBwcmV2O1xyXG5cdFx0dGhpcy5uZXh0ID0gbmV4dDtcclxuXHRcdHRoaXMuZHZfYXBpID0gdGhpcy5hcHAucGx1Z2lucy5nZXRQbHVnaW4oXCJkYXRhdmlld1wiKTtcclxuXHR9XHJcbiAgICBcclxuXHRnZXQgZmluZF90ZmlsZSgpe1xyXG5cdFx0cmV0dXJuIGdldF90cF9mdW5jKHRoaXMuYXBwLCd0cC5maWxlLmZpbmRfdGZpbGUnKTtcclxuXHJcblx0fVxyXG5cclxuXHRnZXQgc3VnZ2VzdGVyKCl7XHJcblx0XHRyZXR1cm4gZ2V0X3RwX2Z1bmModGhpcy5hcHAsJ3RwLnN5c3RlbS5zdWdnZXN0ZXInKTtcclxuXHR9XHJcblxyXG5cdGdldF9hbGxfZm9sZGVycyhzb3J0X21vZGU9Jycpe1xyXG5cdFx0cmV0dXJuIHRoaXMuYXBwLnZhdWx0LmdldEFsbEZvbGRlcnMoKTtcclxuXHR9XHJcblx0XHJcblx0c29ydF9mb2xkZXJzX2J5X210aW1lKGZvbGRlcnM6QXJyYXk8VEZvbGRlcj4scmV2ZXJzZT10cnVlKXtcclxuXHRcdGZ1bmN0aW9uIHVmdW5jKGY6VEZvbGRlcil7XHJcblx0XHRcdHJldHVybiBNYXRoLm1heChcclxuXHRcdFx0XHQuLi5mLmNoaWxkcmVuLmZpbHRlcigoZjpURmlsZSk9PmYuYmFzZW5hbWUpLm1hcCgoZjpURmlsZSk9PmYuc3RhdFxyXG5cdFx0XHRcdC5tdGltZSlcclxuXHRcdFx0KVxyXG5cdFx0fVxyXG5cdFx0bGV0IHJlcyA9IGZvbGRlcnMuc29ydCgoYSxiKT0+dWZ1bmMoYSktdWZ1bmMoYikpO1xyXG5cdFx0aWYocmV2ZXJzZSl7XHJcblx0XHRcdHJlcyA9IHJlcy5yZXZlcnNlKCk7XHJcblx0XHR9XHJcblx0XHRyZXR1cm4gcmVzO1xyXG5cdH1cclxuXHJcblx0YXN5bmMgbW92ZV9maWxlX3RvX2Fub3RoZXJfZm9sZGVyKHRmaWxlPXRoaXMuY3VycmVudF9ub3RlKXtcclxuXHRcdGlmKHRmaWxlPT1udWxsKXtyZXR1cm47fVxyXG5cclxuXHRcdGxldCBmb2xkZXJzID0gdGhpcy5nZXRfYWxsX2ZvbGRlcnMoKTtcclxuXHRcdGZvbGRlcnMgPSB0aGlzLnNvcnRfZm9sZGVyc19ieV9tdGltZShmb2xkZXJzXHJcblx0XHQpLmZpbHRlcihmPT5mIT10ZmlsZS5wYXJlbnQpO1xyXG5cclxuXHRcdGlmKHRmaWxlLmV4dGVuc2lvbj09PSdtZCcpe1xyXG5cdFx0XHRmb2xkZXJzID0gZm9sZGVycy5maWx0ZXIoKGY6VEZpbGUpPT50aGlzLmZpbHRlcl91c2VyX2lnbm9yZShmKSk7XHJcblx0XHR9XHJcblx0XHR0cnkge1xyXG5cdFx0XHRsZXQgZm9sZGVyID0gYXdhaXQgdGhpcy5zdWdnZXN0ZXIoKGY6VEZpbGUpPT5mLnBhdGgsZm9sZGVycyk7XHJcblx0XHRcdC8vIFx1NzlGQlx1NTJBOFx1N0IxNFx1OEJCMFxyXG5cdFx0XHRsZXQgZHN0ID0gZm9sZGVyLnBhdGgrXCIvXCIrdGZpbGUuYmFzZW5hbWUrXCIuXCIrdGZpbGUuZXh0ZW5zaW9uO1xyXG5cdFx0XHRhd2FpdCBhcHAuZmlsZU1hbmFnZXIucmVuYW1lRmlsZSh0ZmlsZSxkc3QpO1xyXG5cdFx0fSBjYXRjaCAoZXJyb3IpIHtcclxuXHRcdFx0XHJcblx0XHR9XHJcblx0fVxyXG5cdFxyXG5cdGZpbHRlcl91c2VyX2lnbm9yZShub3RlOlRGaWxlKXtcclxuXHRcdGlmKCEodGhpcy5hcHAudmF1bHQuY29uZmlnLmF0dGFjaG1lbnRGb2xkZXJQYXRoPT09Jy4vJykpe1xyXG5cdFx0XHRpZihub3RlLnBhdGguc3RhcnRzV2l0aChcclxuXHRcdFx0XHR0aGlzLmFwcC52YXVsdC5jb25maWcuYXR0YWNobWVudEZvbGRlclBhdGgpXHJcblx0XHRcdCl7XHJcblx0XHRcdFx0cmV0dXJuIGZhbHNlO1xyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0XHRpZih0aGlzLmFwcC52YXVsdC5jb25maWcudXNlcklnbm9yZUZpbHRlcnMpe1xyXG5cdFx0XHRmb3IobGV0IHggb2YgdGhpcy5hcHAudmF1bHQuY29uZmlnLnVzZXJJZ25vcmVGaWx0ZXJzKXtcclxuXHRcdFx0XHRpZihub3RlLnBhdGguc3RhcnRzV2l0aCh4KSl7XHJcblx0XHRcdFx0XHRyZXR1cm4gZmFsc2U7XHJcblx0XHRcdFx0fVxyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0XHRyZXR1cm4gdHJ1ZTtcclxuXHR9XHJcblxyXG5cdGFzeW5jIHN1Z2d1c3Rlcl9ub3RlKCl7XHJcblx0XHRsZXQgbm90ZXMgPSB0aGlzLnNvcnRfdGZpbGVzKFxyXG5cdFx0XHR0aGlzLmFwcC52YXVsdC5nZXRGaWxlcygpLFxyXG5cdFx0XHRbJ210aW1lJywneCddXHJcblx0XHQpLmZpbHRlcigoZjpURmlsZSk9PnRoaXMuZmlsdGVyX3VzZXJfaWdub3JlKGYpKTtcclxuXHRcdHRyeSB7XHJcblx0XHRcdGxldCBub3RlID0gYXdhaXQgdGhpcy5zdWdnZXN0ZXIoKGY6VEZpbGUpPT5mLnBhdGgsbm90ZXMpO1xyXG5cdFx0XHRyZXR1cm4gbm90ZTtcclxuXHRcdH0gY2F0Y2ggKGVycm9yKSB7XHJcblx0XHR9XHJcblx0fVxyXG5cclxuXHRvcGVuX25vdGUodGZpbGU6VEZpbGUsbmV3X3RhYj1mYWxzZSl7XHJcblx0XHRpZih0ZmlsZSl7XHJcblx0XHRcdGlmKHRoaXMuYXBwLndvcmtzcGFjZS5hY3RpdmVMZWFmLnBpbm5lZCB8fCBuZXdfdGFiKXtcclxuXHRcdFx0XHRyZXR1cm4gdGhpcy5hcHAud29ya3NwYWNlLmdldExlYWYodHJ1ZSkub3BlbkZpbGUodGZpbGUpO1xyXG5cdFx0XHR9ZWxzZXtcclxuXHRcdFx0XHRyZXR1cm4gdGhpcy5hcHAud29ya3NwYWNlLmFjdGl2ZUxlYWYub3BlbkZpbGUodGZpbGUpO1xyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0fVxyXG5cclxuXHRhc3luYyBzdWdndXN0ZXJfb3Blbl9ub3RlKCl7XHJcblx0XHR0cnkge1xyXG5cdFx0XHRsZXQgbm90ZSA9IGF3YWl0IHRoaXMuc3VnZ3VzdGVyX25vdGUoKTtcclxuXHRcdFx0Y29uc29sZS5sb2cobm90ZSk7XHJcblx0XHRcdHRoaXMub3Blbl9ub3RlKG5vdGUpO1xyXG5cdFx0fSBjYXRjaCAoZXJyb3IpIHtcclxuXHRcdH1cclxuXHR9XHJcblxyXG5cclxuXHJcblx0Z2V0X3RmaWxlKHBhdGgpe1xyXG5cdFx0bGV0IG5hbWUgPSBwYXRoLnNwbGl0KCd8JylbMF0ucmVwbGFjZSgnW1snLCcnKS5yZXBsYWNlKCddXScsJycpO1xyXG5cdFx0cmV0dXJuIHRoaXMuZmluZF90ZmlsZShuYW1lKTtcclxuXHR9XHJcblxyXG5cdGdldCBNREZpbGVzKCl7XHJcblx0XHRyZXR1cm4gYXBwLnZhdWx0LmdldE1hcmtkb3duRmlsZXMoKTtcclxuXHR9XHJcblxyXG5cdGdldCBjdXJyZW50X25vdGUoKXtcclxuXHRcdHJldHVybiB0aGlzLmFwcC53b3Jrc3BhY2UuZ2V0QWN0aXZlRmlsZSgpO1xyXG5cdH1cclxuXHJcblx0Z2V0X2lubGlua3ModGZpbGU9dGhpcy5jdXJyZW50X25vdGUpe1xyXG5cdFx0aWYodGZpbGU9PW51bGwpe3JldHVybiBbXTt9XHJcblxyXG5cdFx0bGV0IHJlcyA9IG5ldyBBcnJheSgpO1xyXG5cclxuXHRcdGxldCBkdl9hcGkgPSB0aGlzLmFwcC5wbHVnaW5zLmdldFBsdWdpbihcImRhdGF2aWV3XCIpO1xyXG5cclxuXHRcdGxldCBpbmxpbmtzID0gZHZfYXBpLmluZGV4LmxpbmtzLmludk1hcC5nZXQodGZpbGUucGF0aCk7XHJcblx0XHRpZihpbmxpbmtzPT11bmRlZmluZWQpe1xyXG5cdFx0XHRyZXR1cm4gW107XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0cmV0dXJuIEFycmF5LmZyb20oaW5saW5rcykubWFwKFxyXG5cdFx0XHRcdChwYXRoKT0+KHRoaXMuYXBwLnZhdWx0LmZpbGVNYXBbcGF0aF0pXHJcblx0XHRcdCkuZmlsdGVyKFxyXG5cdFx0XHRcdChpdGVtKT0+KGl0ZW0pXHJcblx0XHRcdClcclxuXHRcdH1cclxuXHR9XHJcblxyXG5cdGdldF9vdXRsaW5rcyh0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSl7XHJcblx0XHRpZih0ZmlsZT09bnVsbCl7cmV0dXJuIFtdO31cclxuXHJcblx0XHRsZXQgcmVzID0gbmV3IEFycmF5KCk7XHJcblx0XHRsZXQgZHZfYXBpID0gdGhpcy5hcHAucGx1Z2lucy5nZXRQbHVnaW4oXCJkYXRhdmlld1wiKTtcclxuXHRcdGxldCBpbmxpbmtzID0gZHZfYXBpLmluZGV4LmxpbmtzLm1hcC5nZXQodGZpbGUucGF0aCk7XHJcblx0XHRpZihpbmxpbmtzPT11bmRlZmluZWQpe1xyXG5cdFx0XHRyZXR1cm4gW107XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0cmV0dXJuIEFycmF5LmZyb20oaW5saW5rcykubWFwKFxyXG5cdFx0XHRcdChwYXRoKT0+KHRoaXMuYXBwLnZhdWx0LmZpbGVNYXBbcGF0aF0pXHJcblx0XHRcdCkuZmlsdGVyKFxyXG5cdFx0XHRcdChpdGVtKT0+KGl0ZW0pXHJcblx0XHRcdClcclxuXHRcdH1cclxuXHR9XHJcblxyXG5cdGdldF9saW5rcyh0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSl7XHJcblx0XHRsZXQgaW5saW5rcyA9IHRoaXMuZ2V0X2lubGlua3ModGZpbGUpO1xyXG5cdFx0bGV0IG91dGxpbmtzID0gdGhpcy5nZXRfb3V0bGlua3ModGZpbGUpO1xyXG5cdFx0Zm9yKGxldCBsaW5rIG9mIGlubGlua3Mpe1xyXG5cdFx0XHRpZighb3V0bGlua3MuaW5jbHVkZXMobGluaykpe1xyXG5cdFx0XHRcdG91dGxpbmtzLnB1c2gobGluaylcclxuXHRcdFx0fVxyXG5cdFx0fVxyXG5cdFx0cmV0dXJuIG91dGxpbmtzO1xyXG5cdH1cclxuXHJcblx0Z2V0X3NhbWVfcGFyZW50KHRmaWxlPXRoaXMuY3VycmVudF9ub3RlKXtcclxuXHRcdHJldHVybiB0aGlzLmdldF90ZmlsZXNfb2ZfZm9sZGVyKHRmaWxlPy5wYXJlbnQsZmFsc2UpO1xyXG5cdH1cclxuXHJcblx0Z2V0X3RmaWxlc19vZl9mb2xkZXIodGZvbGRlcjpURm9sZGVyLHdpdGhfY2hpbGRyZW49dHJ1ZSl7XHJcblx0XHRpZih0Zm9sZGVyPT1udWxsKXtyZXR1cm4gW107fVxyXG5cdFx0bGV0IG5vdGVzID0gW107XHJcblx0XHRmb3IobGV0IGMgb2YgdGZvbGRlci5jaGlsZHJlbil7XHJcblx0XHRcdGlmKGMgaW5zdGFuY2VvZiBURmlsZSAmJiBjLmV4dGVuc2lvbj09PSdtZCcpe1xyXG5cdFx0XHRcdG5vdGVzLnB1c2goYyk7XHJcblx0XHRcdH1lbHNlIGlmKGMgaW5zdGFuY2VvZiBURm9sZGVyICYmIHdpdGhfY2hpbGRyZW4pe1xyXG5cdFx0XHRcdGxldCB0bXAgPSB0aGlzLmdldF90ZmlsZXNfb2ZfZm9sZGVyKGMpO1xyXG5cdFx0XHRcdGZvcihsZXQgeCBvZiB0bXApe1xyXG5cdFx0XHRcdFx0bm90ZXMucHVzaCh4KTtcclxuXHRcdFx0XHR9XHJcblx0XHRcdH1cclxuXHRcdH1cclxuXHRcdHJldHVybiBub3RlcztcclxuXHJcblx0fVxyXG5cclxuXHRwYXJzZV9pdGVtKGl0ZW0pe1xyXG5cdFx0dmFyIGFyZ3MgPSBbXS5zbGljZS5jYWxsKGFyZ3VtZW50cykuc2xpY2UoMSk7XHJcblx0XHRsZXQga3dhcmdzID0ge31cclxuXHRcdGlmKGFyZ3MubGVuZ3RoPT0xKXtcclxuXHRcdFx0a3dhcmdzID0gYXJnc1swXTtcclxuXHRcdH1cclxuXHRcdGxldCBzZXEgPSBrd2FyZ3NbJ3NlcSddO1xyXG5cclxuXHRcdGlmKHNlcSE9bnVsbCl7XHJcblx0XHRcdHJldHVybiBgJHtzZXF9IC0+ICR7aXRlbX1gO1xyXG5cdFx0fVxyXG5cdFx0cmV0dXJuIGl0ZW07XHJcblx0fVxyXG5cclxuXHR0ZmlsZV90b19zdHJpbmcodGZpbGU6VEZpbGUpe1xyXG5cdFx0bGV0IGN1cnIgPSB0aGlzLmN1cnJlbnRfbm90ZTtcclxuXHRcdGxldCBtc2cgPSAnJztcclxuXHRcdGlmKHRmaWxlLnBhcmVudD09Y3Vyci5wYXJlbnQpe1xyXG5cdFx0XHRtc2cgPSB0ZmlsZS5iYXNlbmFtZTtcclxuXHRcdH1lbHNle1xyXG5cdFx0XHRtc2cgPSB0ZmlsZS5wYXRoO1xyXG5cdFx0fVxyXG5cdFx0aWYodGZpbGU9PXRoaXMuY3VycmVudF9ub3RlKXtcclxuXHRcdFx0cmV0dXJuIGBcdUQ4M0NcdURGRTAgJHttc2d9YFxyXG5cdFx0fWVsc2V7XHJcblx0XHRcdHJldHVybiBtc2c7XHJcblx0XHR9XHJcblx0XHRcclxuXHR9XHJcblxyXG5cdHBhcnNlX2l0ZW1zKGl0ZW1zOkFycmF5PHN0cmluZ3xURmlsZT4pe1xyXG5cdFx0dmFyIGFyZ3MgPSBbXS5zbGljZS5jYWxsKGFyZ3VtZW50cykuc2xpY2UoMSk7XHJcblx0XHRsZXQga3dhcmdzID0ge31cclxuXHRcdGlmKGFyZ3MubGVuZ3RoPT0xKXtcclxuXHRcdFx0a3dhcmdzID0gYXJnc1swXTtcclxuXHRcdH1cclxuXHJcblx0XHRsZXQgcmVzID0gW107XHJcblx0XHRsZXQgaSA9IDA7XHJcblx0XHR3aGlsZShpPGl0ZW1zLmxlbmd0aCl7XHJcblx0XHRcdGlmKGt3YXJnc1snc2VxJ10pe1xyXG5cdFx0XHRcdHJlcy5wdXNoKHRoaXMucGFyc2VfaXRlbShpdGVtc1tpXSx7J3NlcSc6aSsxfSkpO1xyXG5cdFx0XHR9ZWxzZXtcclxuXHRcdFx0XHRyZXMucHVzaCh0aGlzLnBhcnNlX2l0ZW0oaXRlbXNbaV0pKTtcclxuXHRcdFx0fVxyXG5cdFx0XHRcclxuXHRcdFx0aSsrO1xyXG5cdFx0fVxyXG5cdFx0cmV0dXJuIHJlcztcclxuXHR9XHJcblxyXG5cdGFzeW5jIHN1Z2dlc3Rlcl9ub3Rlcyh0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSxjdXJyX2ZpcnN0PXRydWUsc21vZGU9Jycpe1xyXG5cdFx0bGV0IGt2ID0gW1x0XHRcdFxyXG5cdFx0XHQnXHU1NDBDXHU3RUE3XHU3NkVFXHU1RjU1JyxcclxuXHRcdFx0J1x1N0IxNFx1OEJCMFx1OTRGRVx1Njc2MScsXHJcblx0XHRcdCdcdTU0MENcdTdFQTdcdTc2RUVcdTVGNTUrXHU1QjUwXHU3NkVFXHU1RjU1JyxcclxuXHRcdFx0J1x1NTFGQVx1OTRGRStcdTUxNjVcdTk0RkUnLFxyXG5cdFx0XHQnXHU1MTY1XHU5NEZFJyxcclxuXHRcdFx0J1x1NTFGQVx1OTRGRScsXHJcblx0XHRcdCdcdTYyNDBcdTY3MDlcdTdCMTRcdThCQjAnLFxyXG5cdFx0XHQncmVjZW50LWZpbGVzLW9ic2lkaWFuJ1xyXG5cdFx0XVxyXG5cdFx0XHJcblx0XHRpZihjdXJyX2ZpcnN0KXtcclxuXHRcdFx0a3YudW5zaGlmdCgnXHU1RjUzXHU1MjREXHU3QjE0XHU4QkIwJylcclxuXHRcdH1lbHNle1xyXG5cdFx0XHRrdi5wdXNoKCdcdTVGNTNcdTUyNERcdTdCMTRcdThCQjAnKVxyXG5cdFx0fVxyXG5cdFx0XHJcblx0XHRsZXQga3ZzID0gW11cclxuXHRcdGxldCBpID0gMTtcclxuXHRcdGZvcihsZXQgeCBvZiBrdil7XHJcblx0XHRcdGt2cy5wdXNoKGAke2krK30gJHt4fWApO1xyXG5cdFx0fVxyXG5cclxuXHRcdGxldCBtb2RlID0gJyc7XHJcblx0XHRpZihrdi5jb250YWlucyhzbW9kZSkpe1xyXG5cdFx0XHRtb2RlID0gc21vZGU7XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0bW9kZSA9IGF3YWl0IHRoaXMuc3VnZ2VzdGVyKGt2cyxrdik7XHJcblx0XHR9XHJcblx0XHRpZihtb2RlPT09J1x1NUY1M1x1NTI0RFx1N0IxNFx1OEJCMCcpe1xyXG5cdFx0XHRyZXR1cm4gW3RmaWxlXTtcclxuXHRcdH1lbHNlIGlmKG1vZGU9PT0nXHU1NDBDXHU3RUE3XHU3NkVFXHU1RjU1Jyl7XHJcblx0XHRcdHJldHVybiB0aGlzLmdldF9zYW1lX3BhcmVudCh0ZmlsZSk7XHJcblx0XHR9ZWxzZSBpZihtb2RlPT09J1x1NTQwQ1x1N0VBN1x1NzZFRVx1NUY1NStcdTVCNTBcdTc2RUVcdTVGNTUnKXtcclxuXHRcdFx0cmV0dXJuIHRoaXMuZ2V0X3RmaWxlc19vZl9mb2xkZXIodGZpbGU/LnBhcmVudCx0cnVlKTtcclxuXHRcdH1lbHNlIGlmKG1vZGU9PT0nXHU1MUZBXHU5NEZFK1x1NTE2NVx1OTRGRScpe1xyXG5cdFx0XHRyZXR1cm4gdGhpcy5nZXRfbGlua3ModGZpbGUpO1xyXG5cdFx0fWVsc2UgaWYobW9kZT09PSdcdTUxNjVcdTk0RkUnKXtcclxuXHRcdFx0cmV0dXJuIHRoaXMuZ2V0X2lubGlua3ModGZpbGUpO1xyXG5cdFx0fWVsc2UgaWYobW9kZT09PSdcdTUxRkFcdTk0RkUnKXtcclxuXHRcdFx0cmV0dXJuIHRoaXMuZ2V0X291dGxpbmtzKHRmaWxlKTtcclxuXHRcdH1lbHNlIGlmKG1vZGU9PT0nXHU2MjQwXHU2NzA5XHU3QjE0XHU4QkIwJyl7XHJcblx0XHRcdHJldHVybiB0aGlzLk1ERmlsZXM7XHJcblx0XHR9ZWxzZSBpZihtb2RlPT09J3JlY2VudC1maWxlcy1vYnNpZGlhbicpe1xyXG5cdFx0XHRsZXQgciA9IHRoaXMuYXBwLnBsdWdpbnMuZ2V0UGx1Z2luKFwicmVjZW50LWZpbGVzLW9ic2lkaWFuXCIpO1xyXG5cdFx0XHRpZighcil7cmV0dXJuIFtdO31cclxuXHRcdFx0cmV0dXJuIE9iamVjdC52YWx1ZXMoXHJcblx0XHRcdFx0ci5kYXRhLnJlY2VudEZpbGVzKS5tYXAoZj0+dGhpcy5hcHAudmF1bHQuZmlsZU1hcFtmLnBhdGhdXHJcblx0XHRcdCkuZmlsdGVyKGY9PmYpO1xyXG5cdFx0fWVsc2UgaWYobW9kZT09PSdcdTdCMTRcdThCQjBcdTk0RkVcdTY3NjEnKXtcclxuXHRcdFx0cmV0dXJuIHRoaXMuZ2V0X2NoYWluKFxyXG5cdFx0XHRcdHRmaWxlLFxyXG5cdFx0XHRcdE51bWJlcih0aGlzLnBsdWdpbi5zZXR0aW5ncy5QcmV2Q2hhaW4pLFxyXG5cdFx0XHRcdE51bWJlcih0aGlzLnBsdWdpbi5zZXR0aW5ncy5OZXh0Q2hhaW4pXHJcblx0XHRcdCk7XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0cmV0dXJuIFtdO1xyXG5cdFx0fVxyXG5cdH1cclxuXHJcblxyXG5cdC8vIENoYWluXHJcblx0Z2V0X3ByZXZfbm90ZSh0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSl7XHJcblx0XHRpZih0ZmlsZS5kZWxldGVkKXtcclxuXHRcdFx0bGV0IHRmaWxlcyA9IHRoaXMuYXBwLnZhdWx0LmdldE1hcmtkb3duRmlsZXMoKTtcclxuXHRcdFx0dGZpbGVzID0gdGZpbGVzLmZpbHRlcihmPT5gW1ske3RmaWxlLmJhc2VuYW1lfV1dYD09PXRoaXMuZWRpdG9yLmdldF9mcm9udG1hdHRlcihmLHRoaXMubmV4dCkpO1xyXG5cdFx0XHRpZih0ZmlsZXMubGVuZ3RoPjApe1xyXG5cdFx0XHRcdHJldHVybiB0ZmlsZVswXTtcclxuXHRcdFx0fWVsc2V7XHJcblx0XHRcdFx0cmV0dXJuIG51bGw7XHJcblx0XHRcdH1cclxuXHRcdH1lbHNle1xyXG5cdFx0XHRsZXQgbmFtZSA9IHRoaXMuZWRpdG9yLmdldF9mcm9udG1hdHRlcih0ZmlsZSx0aGlzLnByZXYpO1xyXG5cdFx0XHRpZighbmFtZSl7cmV0dXJuIG51bGw7fVxyXG5cclxuXHRcdFx0bGV0IG5vdGUgPSB0aGlzLmdldF90ZmlsZShuYW1lKTtcclxuXHRcdFx0cmV0dXJuIG5vdGU/bm90ZTpudWxsO1xyXG5cdFx0fVxyXG5cdH1cclxuXHJcblx0b3Blbl9wcmV2X25vdGVzKHRmaWxlPXRoaXMuY3VycmVudF9ub3RlKXtcclxuXHRcdGxldCBub3RlID0gdGhpcy5nZXRfcHJldl9ub3RlKHRmaWxlKTtcclxuXHRcdHRoaXMub3Blbl9ub3RlKG5vdGUpO1xyXG5cdH1cclxuXHJcblx0Z2V0X25leHRfbm90ZSh0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSl7XHJcblx0XHRpZih0ZmlsZS5kZWxldGVkKXtcclxuXHRcdFx0bGV0IHRmaWxlcyA9IHRoaXMuYXBwLnZhdWx0LmdldE1hcmtkb3duRmlsZXMoKTtcclxuXHRcdFx0dGZpbGVzID0gdGZpbGVzLmZpbHRlcihmPT5gW1ske3RmaWxlLmJhc2VuYW1lfV1dYD09PXRoaXMuZWRpdG9yLmdldF9mcm9udG1hdHRlcihmLHRoaXMucHJldikpO1xyXG5cdFx0XHRpZih0ZmlsZXMubGVuZ3RoPjApe1xyXG5cdFx0XHRcdHJldHVybiB0ZmlsZXNbMF07XHJcblx0XHRcdH1lbHNle1xyXG5cdFx0XHRcdHJldHVybiBudWxsO1xyXG5cdFx0XHR9XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0bGV0IG5hbWUgPSB0aGlzLmVkaXRvci5nZXRfZnJvbnRtYXR0ZXIodGZpbGUsdGhpcy5uZXh0KTtcclxuXHRcdFx0aWYoIW5hbWUpe3JldHVybiBudWxsO31cclxuXHJcblx0XHRcdGxldCBub3RlID0gdGhpcy5nZXRfdGZpbGUobmFtZSk7XHJcblx0XHRcdHJldHVybiBub3RlP25vdGU6bnVsbDtcclxuXHRcdH1cclxuXHR9XHJcblxyXG5cdG9wZW5fbmV4dF9ub3Rlcyh0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSl7XHJcblx0XHRsZXQgbm90ZSA9IHRoaXMuZ2V0X25leHRfbm90ZSh0ZmlsZSk7XHJcblx0XHR0aGlzLm9wZW5fbm90ZShub3RlKTtcclxuXHR9XHJcblxyXG5cdGdldF9jaGFpbih0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSxwcmV2PTEwLG5leHQ9MTAsd2l0aF9zZWxmPXRydWUpe1xyXG5cdFx0aWYodGZpbGU9PW51bGwpe3JldHVybiBbXTt9XHJcblx0XHRcclxuXHRcdGxldCByZXMgPSBuZXcgQXJyYXkoKTtcclxuXHRcdGlmKHdpdGhfc2VsZil7XHJcblx0XHRcdHJlcy5wdXNoKHRmaWxlKTtcclxuXHRcdH1cclxuXHRcdFxyXG5cdFx0bGV0IHRtcCA9IHRmaWxlO1xyXG5cdFx0Zm9yKGxldCBpPXByZXY7aSE9MDtpLS0pe1x0XHJcblx0XHRcdGxldCBub3RlID0gdGhpcy5nZXRfcHJldl9ub3RlKHRtcCk7XHJcblx0XHRcdGlmKCFub3RlKXtcclxuXHRcdFx0XHRicmVhaztcclxuXHRcdFx0fWVsc2UgaWYocmVzLmluY2x1ZGVzKG5vdGUpKXtcclxuXHRcdFx0XHQvLyBcdTZCQ0ZcdTZCMjFcdTgxRUFcdTUyQThcdTUyMjBcdTk2NjRcdTVGQUFcdTczQUZcdTk0RkVcdTYzQTVcclxuXHRcdFx0XHR0aGlzLmVkaXRvci5zZXRfZnJvbnRtYXR0ZXIobm90ZSx0aGlzLm5leHQsXCJcIik7XHJcblx0XHRcdFx0dGhpcy5lZGl0b3Iuc2V0X2Zyb250bWF0dGVyKHRtcCx0aGlzLnByZXYsXCJcIik7XHJcblx0XHRcdFx0YnJlYWs7XHJcblx0XHRcdH1lbHNle1xyXG5cdFx0XHRcdHJlcy51bnNoaWZ0KG5vdGUpO1xyXG5cdFx0XHRcdHRtcCA9IG5vdGU7XHJcblx0XHRcdH1cclxuXHRcdH1cclxuXHRcclxuXHRcdHRtcCA9IHRmaWxlO1xyXG5cdFx0Zm9yKGxldCBpPW5leHQ7aSE9MDtpLS0pe1xyXG5cdFx0XHRsZXQgbm90ZSA9IHRoaXMuZ2V0X25leHRfbm90ZSh0bXApO1xyXG5cdFx0XHRpZighbm90ZSl7XHJcblx0XHRcdFx0YnJlYWs7XHJcblx0XHRcdH1lbHNlIGlmKHJlcy5pbmNsdWRlcyhub3RlKSl7XHJcblx0XHRcdFx0Ly8gXHU2QkNGXHU2QjIxXHU4MUVBXHU1MkE4XHU1MjIwXHU5NjY0XHU1RkFBXHU3M0FGXHU5NEZFXHU2M0E1XHJcblx0XHRcdFx0dGhpcy5lZGl0b3Iuc2V0X2Zyb250bWF0dGVyKG5vdGUsdGhpcy5wcmV2LFwiXCIpO1xyXG5cdFx0XHRcdHRoaXMuZWRpdG9yLnNldF9mcm9udG1hdHRlcih0bXAsdGhpcy5uZXh0LFwiXCIpO1xyXG5cdFx0XHRcdGJyZWFrO1xyXG5cdFx0XHR9ZWxzZXtcclxuXHRcdFx0XHRyZXMucHVzaChub3RlKTtcclxuXHRcdFx0XHR0bXAgPSBub3RlO1xyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0XHRyZXR1cm4gcmVzO1xyXG5cdH1cclxuXHJcblx0Z2V0X2ZpcnN0X25vdGUodGZpbGU9dGhpcy5jdXJyZW50X25vdGUpe1xyXG5cdFx0bGV0IG5vdGVzID0gdGhpcy5nZXRfY2hhaW4odGZpbGUsLTEsMCxmYWxzZSk7XHJcblx0XHRpZihub3Rlcy5sZW5ndGg+MCl7XHJcblx0XHRcdHJldHVybiBub3Rlc1swXTtcclxuXHRcdH1lbHNle1xyXG5cdFx0XHRyZXR1cm4gbnVsbDtcclxuXHRcdH1cclxuXHR9XHJcblxyXG5cdGdldF9sYXN0X25vdGUodGZpbGU9dGhpcy5jdXJyZW50X25vdGUpe1xyXG5cdFx0bGV0IG5vdGVzID0gdGhpcy5nZXRfY2hhaW4odGZpbGUsMCwtMSxmYWxzZSk7XHJcblx0XHRpZihub3Rlcy5sZW5ndGg+MCl7XHJcblx0XHRcdHJldHVybiBub3Rlc1tub3Rlcy5sZW5ndGgtMV07XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0cmV0dXJuIG51bGw7XHJcblx0XHR9XHJcblx0fVxyXG5cclxuXHRcclxuXHJcblx0Z2V0X25laWdoYm9ycyh0ZmlsZT10aGlzLmN1cnJlbnRfbm90ZSl7XHJcblx0XHRyZXR1cm4gW1xyXG5cdFx0XHR0aGlzLmdldF9wcmV2X25vdGUodGZpbGUpLFxyXG5cdFx0XHR0aGlzLmdldF9uZXh0X25vdGUodGZpbGUpLFxyXG5cdFx0XVxyXG5cdH1cclxuXHRcclxuXHRhc3luYyBjaGFpbl9zZXRfcHJldih0ZmlsZTpURmlsZSxwcmV2OlRGaWxlKXtcclxuXHRcdGlmKHRmaWxlPT1udWxsIHx8IHRmaWxlPT1wcmV2KXtyZXR1cm47fVxyXG5cdFx0aWYocHJldj09bnVsbCApe1xyXG5cdFx0XHRhd2FpdCB0aGlzLmVkaXRvci5zZXRfZnJvbnRtYXR0ZXIoXHJcblx0XHRcdFx0dGZpbGUsdGhpcy5wcmV2LCcnXHJcblx0XHRcdCk7XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0YXdhaXQgdGhpcy5lZGl0b3Iuc2V0X2Zyb250bWF0dGVyKFxyXG5cdFx0XHRcdHRmaWxlLHRoaXMucHJldixgW1ske3ByZXYuYmFzZW5hbWV9XV1gXHJcblx0XHRcdCk7XHJcblx0XHR9XHJcblx0fVxyXG5cclxuXHRhc3luYyBjaGFpbl9zZXRfbmV4dCh0ZmlsZTpURmlsZSxuZXh0OlRGaWxlKXtcclxuXHRcdGlmKHRmaWxlPT1udWxsIHx8IHRmaWxlPT1uZXh0KXtyZXR1cm47fVxyXG5cdFx0aWYobmV4dD09bnVsbCApe1xyXG5cdFx0XHRhd2FpdCB0aGlzLmVkaXRvci5zZXRfZnJvbnRtYXR0ZXIoXHJcblx0XHRcdFx0dGZpbGUsdGhpcy5uZXh0LCcnXHJcblx0XHRcdCk7XHJcblx0XHR9ZWxzZXtcclxuXHRcdFx0YXdhaXQgdGhpcy5lZGl0b3Iuc2V0X2Zyb250bWF0dGVyKFxyXG5cdFx0XHRcdHRmaWxlLHRoaXMubmV4dCxgW1ske25leHQuYmFzZW5hbWV9XV1gXHJcblx0XHRcdCk7XHJcblx0XHR9XHJcblx0fVxyXG5cclxuXHRhc3luYyBjaGFpbl9zZXRfcHJldl9uZXh0KHByZXY6VEZpbGUsbmV4dDpURmlsZSl7XHJcblx0XHRhd2FpdCB0aGlzLmNoYWluX3NldF9wcmV2KG5leHQscHJldik7XHJcblx0XHRhd2FpdCB0aGlzLmNoYWluX3NldF9uZXh0KHByZXYsbmV4dCk7XHJcblx0fVxyXG5cclxuXHRhc3luYyBjaGFpbl9wb3Bfbm9kZSh0ZmlsZTpURmlsZSl7XHJcblx0XHRsZXQgbm90ZXMgPSB0aGlzLmdldF9uZWlnaGJvcnModGZpbGUpO1xyXG5cdFx0YXdhaXQgdGhpcy5jaGFpbl9zZXRfcHJldl9uZXh0KG5vdGVzWzBdLG5vdGVzWzFdKTtcclxuXHR9XHJcblxyXG5cdGFzeW5jIGNoYWluX2luc2VydF9ub2RlX2FzX2hlYWQodGZpbGU6VEZpbGUsYW5jaG9yOlRGaWxlKXtcclxuXHRcdGxldCBoZWFkID0gdGhpcy5nZXRfZmlyc3Rfbm90ZShhbmNob3IpO1xyXG5cdFx0YXdhaXQgdGhpcy5jaGFpbl9zZXRfcHJldl9uZXh0KHRmaWxlLGhlYWQpO1xyXG5cdH1cclxuXHJcblx0YXN5bmMgY2hhaW5faW5zZXJ0X25vZGVfYXNfdGFpbCh0ZmlsZTpURmlsZSxhbmNob3I6VEZpbGUpe1xyXG5cdFx0bGV0IHRhaWwgPSB0aGlzLmdldF9sYXN0X25vdGUoYW5jaG9yKTtcclxuXHRcdGF3YWl0IHRoaXMuY2hhaW5fc2V0X3ByZXZfbmV4dCh0YWlsLHRmaWxlKTtcclxuXHR9XHJcblxyXG5cdGFzeW5jIGNoYWluX2luc2VydF9ub2RlX2FmdGVyKHRmaWxlOlRGaWxlLGFuY2hvcjpURmlsZSl7XHJcblx0XHR0aGlzLmNoYWluX3BvcF9ub2RlKHRmaWxlKTtcclxuXHJcblx0XHRsZXQgbmV4dCA9IHRoaXMuZ2V0X25leHRfbm90ZShhbmNob3IpO1xyXG5cdFx0YXdhaXQgdGhpcy5jaGFpbl9zZXRfcHJldl9uZXh0KGFuY2hvcix0ZmlsZSk7XHJcblx0XHRhd2FpdCB0aGlzLmNoYWluX3NldF9wcmV2X25leHQodGZpbGUsbmV4dCk7XHJcblx0fVxyXG5cclxuXHRhc3luYyBjaGFpbl9pbnNlcnRfbm9kZV9iZWZvcmUodGZpbGU6VEZpbGUsYW5jaG9yOlRGaWxlKXtcclxuXHRcdHRoaXMuY2hhaW5fcG9wX25vZGUodGZpbGUpO1xyXG5cdFx0bGV0IHByZXYgPSB0aGlzLmdldF9uZXh0X25vdGUoYW5jaG9yKTtcclxuXHRcdGF3YWl0IHRoaXMuY2hhaW5fc2V0X3ByZXZfbmV4dCh0ZmlsZSxhbmNob3IpO1xyXG5cdFx0YXdhaXQgdGhpcy5jaGFpbl9zZXRfcHJldl9uZXh0KHByZXYsdGZpbGUpO1xyXG5cdH1cclxuXHJcblx0YXN5bmMgY2hhaW5fbGlua190ZmlsZXModGZpbGVzOkFycmF5PFRGaWxlPil7XHJcblx0XHRsZXQgcHJldiA9IHRoaXMuZ2V0X3ByZXZfbm90ZSh0ZmlsZXNbMF0pO1xyXG5cdFx0aWYodGZpbGVzLmNvbnRhaW5zKHByZXYpKXtcclxuXHRcdFx0YXdhaXQgdGhpcy5jaGFpbl9zZXRfcHJldih0ZmlsZXNbMF0sbnVsbCk7XHJcblx0XHR9XHJcblxyXG5cdFx0bGV0IG5leHQgPSB0aGlzLmdldF9uZXh0X25vdGUodGZpbGVzW3RmaWxlcy5sZW5ndGgtMV0pO1xyXG5cdFx0aWYodGZpbGVzLmNvbnRhaW5zKG5leHQpKXtcclxuXHRcdFx0YXdhaXQgdGhpcy5jaGFpbl9zZXRfbmV4dCh0ZmlsZXNbdGZpbGVzLmxlbmd0aC0xXSxudWxsKTtcclxuXHRcdH1cclxuXHRcdFxyXG5cclxuXHRcdGZvcihsZXQgaT0wO2k8dGZpbGVzLmxlbmd0aC0xO2krKyl7XHJcblx0XHRcdGF3YWl0IHRoaXMuY2hhaW5fc2V0X3ByZXZfbmV4dCh0ZmlsZXNbaV0sdGZpbGVzW2krMV0pXHJcblx0XHR9XHJcblx0fVxyXG5cdFxyXG5cdGFzeW5jIGNoYWluX3N1Z2dlc3Rlcl90ZmlsZXModGZpbGU9dGhpcy5jdXJyZW50X25vdGUsbW9kZT0nc3VnZ2VzdGVyJyl7XHJcblx0XHRsZXQgbm90ZXMgPSB0aGlzLmdldF9zYW1lX3BhcmVudCh0ZmlsZSk7XHJcblx0XHRpZihub3Rlcy5sZW5ndGg9PTApe3JldHVybjt9XHJcblxyXG5cdFx0bGV0IGZpbGVzID0gYXdhaXQgdGhpcy5zdWdnZXN0ZXJfc29ydChub3Rlcyk7XHJcblx0XHRhd2FpdCB0aGlzLmNoYWluX2xpbmtfdGZpbGVzKGZpbGVzKTtcclxuXHR9XHJcblxyXG5cdHNvcnRfdGZpbGVzKGZpbGVzOkFycmF5PFRGaWxlPixmaWVsZDphbnkpe1xyXG5cdFx0aWYodHlwZW9mIGZpZWxkID09PSAnc3RyaW5nJyl7XHJcblx0XHRcdGlmKGZpZWxkPT09J25hbWUnKXtcclxuXHRcdFx0XHRyZXR1cm4gZmlsZXMuc29ydChcclxuXHRcdFx0XHRcdChhLGIpPT4oYS5uYW1lLmxvY2FsZUNvbXBhcmUoYi5uYW1lKSlcclxuXHRcdFx0XHQpO1xyXG5cdFx0XHR9ZWxzZSBpZihmaWVsZD09PSdtdGltZScpe1xyXG5cdFx0XHRcdHJldHVybiBmaWxlcy5zb3J0KFxyXG5cdFx0XHRcdFx0KGEsYik9PihhLnN0YXQubXRpbWUtYi5zdGF0Lm10aW1lKVxyXG5cdFx0XHRcdClcclxuXHRcdFx0fWVsc2UgaWYoZmllbGQ9PT0nY3RpbWUnKXtcclxuXHRcdFx0XHRyZXR1cm4gZmlsZXMuc29ydChcclxuXHRcdFx0XHRcdChhLGIpPT4oYS5zdGF0LmN0aW1lLWIuc3RhdC5jdGltZSlcclxuXHRcdFx0XHQpXHJcblx0XHRcdH1cclxuXHRcdFx0ZWxzZSBpZihmaWVsZD09PSdjaGFpbicpe1xyXG5cdFx0XHRcdHJldHVybiB0aGlzLnNvcnRfdGZpbGVzX2J5X2NoYWluKGZpbGVzKTtcclxuXHRcdFx0fVxyXG5cdFx0XHRyZXR1cm4gZmlsZXM7XHJcblx0XHR9ZWxzZSBpZih0eXBlb2YgZmllbGQgPT09ICdvYmplY3QnKXtcclxuXHRcdFx0aWYoZmllbGQgaW5zdGFuY2VvZiBBcnJheSl7XHJcblx0XHRcdFx0bGV0IG5maWxlcyA9IHRoaXMuc29ydF90ZmlsZXMoZmlsZXMsZmllbGRbMF0pO1xyXG5cdFx0XHRcdGlmKGZpZWxkLmxlbmd0aD49Mil7XHJcblx0XHRcdFx0XHRpZihmaWVsZFsxXT09PSd4Jyl7XHJcblx0XHRcdFx0XHRcdHJldHVybiBuZmlsZXMucmV2ZXJzZSgpXHJcblx0XHRcdFx0XHR9XHJcblx0XHRcdFx0fVxyXG5cdFx0XHRcdHJldHVybiBuZmlsZXM7XHJcblx0XHRcdH1cclxuXHRcdH1cclxuXHRcdHJldHVybiBmaWxlcztcclxuXHR9XHJcblx0XHJcblx0c29ydF90ZmlsZXNfYnlfY2hhaW4odGZpbGVzOkFycmF5PFRGaWxlPil7XHJcblx0XHRsZXQgbm90ZXMgPSB0ZmlsZXMubWFwKGY9PmYpO1xyXG5cdFx0bGV0IHJlcyA9IFtdO1xyXG5cdFx0d2hpbGUobm90ZXMubGVuZ3RoPjApe1xyXG5cdFx0XHRsZXQgbm90ZSA9IG5vdGVzWzBdO1xyXG5cdFx0XHRsZXQgdG1wID0gW107XHJcblx0XHRcdGxldCB4Y2hhaW4gPSB0aGlzLmdldF9jaGFpbihub3RlLC0xLC0xKTtcclxuXHRcdFx0Zm9yKGxldCB4IG9mIHhjaGFpbil7XHJcblx0XHRcdFx0aWYobm90ZXMuY29udGFpbnMoeCkpe1xyXG5cdFx0XHRcdFx0dG1wLnB1c2goeCk7XHJcblx0XHRcdFx0XHRub3Rlcy5yZW1vdmUoeCk7XHJcblx0XHRcdFx0fVxyXG5cdFx0XHR9XHJcblx0XHRcdHJlcy5wdXNoKHRtcCk7XHJcblx0XHR9XHJcblx0XHRyZXMgPSByZXMuc29ydCgoYSxiKT0+Yi5sZW5ndGgtYS5sZW5ndGgpO1xyXG5cdFx0bGV0IHJyZXMgPSBbXTtcclxuXHRcdGZvcihsZXQgaSBvZiByZXMpe1xyXG5cdFx0XHRmb3IobGV0IGogb2YgaSl7XHJcblx0XHRcdFx0cnJlcy5wdXNoKGopO1xyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0XHRyZXR1cm4gcnJlcztcclxuXHR9XHJcblxyXG5cdHNvcnRfdGZpbGVzX2ZvbGRlcl9maXJzdCh0ZmlsZXM6QXJyYXk8VEZpbGU+KXtcclxuXHRcdGxldCBBID0gdGZpbGVzLmZpbHRlcihmPT5mIGluc3RhbmNlb2YgVEZvbGRlcikuc29ydCgoYSxiKT0+KGEubmFtZS5sb2NhbGVDb21wYXJlKGIubmFtZSkpKTtcclxuXHRcdGxldCBCID0gdGZpbGVzLmZpbHRlcihmPT5mIGluc3RhbmNlb2YgVEZpbGUpO1xyXG5cdFx0cmV0dXJuIHRoaXMucGx1Z2luLmVkaXRvci5jb25jYXRfYXJyYXkoW0EsQl0pO1xyXG5cdH1cclxuXHJcblx0c29ydF90ZmlsZXNfYnlfZmllbGQodGZpbGVzOkFycmF5PFRGaWxlPixmaWVsZDpzdHJpbmcpe1xyXG5cdFx0bGV0IHJlcyA9IHRmaWxlcy5zb3J0KFxyXG5cdFx0XHQoYSxiKT0+e1xyXG5cdFx0XHRcdGxldCBhdiA9IHRoaXMuZWRpdG9yLmdldF9mcm9udG1hdHRlcihhLGZpZWxkKTtcclxuXHRcdFx0XHRsZXQgYnYgPSB0aGlzLmVkaXRvci5nZXRfZnJvbnRtYXR0ZXIoYixmaWVsZCk7XHJcblx0XHRcdFx0cmV0dXJuIGF2IC0gYnY7XHJcblx0XHRcdH1cclxuXHRcdClcclxuXHRcdHJldHVybiByZXM7XHJcblx0fVxyXG5cclxuXHRhc3luYyBzdWdnZXN0ZXJfc29ydCh0ZmlsZXM6QXJyYXk8VEZpbGU+KXtcclxuXHRcdGlmKCF0ZmlsZXMpe3JldHVybiBbXTt9XHJcblx0XHRpZih0ZmlsZXMubGVuZ3RoPT0wKXtyZXR1cm4gW119O1xyXG5cdFx0bGV0IGt2ID0ge1xyXG5cdFx0XHQnY2hhaW4nOidjaGFpbicsXHJcblx0XHRcdCduYW1lJzonbmFtZScsXHJcblx0XHRcdCdjdGltZSc6J2N0aW1lJyxcclxuXHRcdFx0J210aW1lJzonbXRpbWUnLFxyXG5cdFx0XHQnbmFtZSBcdTUwMTJcdTVFOEYnOlsnbmFtZScsJ3gnXSxcclxuXHRcdFx0J2N0aW1lIFx1NTAxMlx1NUU4Ric6WydjdGltZScsJ3gnXSxcclxuXHRcdFx0J210aW1lIFx1NTAxMlx1NUU4Ric6WydtdGltZScsJ3gnXSxcclxuXHRcdH1cclxuXHRcdGxldCBmaWVsZCA9IGF3YWl0IHRoaXMuc3VnZ2VzdGVyKFxyXG5cdFx0XHRPYmplY3Qua2V5cyhrdiksXHJcblx0XHRcdE9iamVjdC52YWx1ZXMoa3YpXHJcblx0XHQpO1xyXG5cdFx0aWYoZmllbGQ9PW51bGwpe3JldHVybiBbXTt9XHJcblx0XHRyZXR1cm4gdGhpcy5zb3J0X3RmaWxlcyh0ZmlsZXMsZmllbGQpO1xyXG5cdH1cclxuXHJcblx0dmlld19zb3J0X2J5X2NoYWluKCl7XHJcblx0XHRsZXQgdmlldyA9IHRoaXMuYXBwLndvcmtzcGFjZS5nZXRMZWF2ZXNPZlR5cGUoXHJcblx0XHRcdFwiZmlsZS1leHBsb3JlclwiXHJcblx0XHQpWzBdPy52aWV3O1xyXG5cdFx0aWYoIXZpZXcpe3JldHVybjt9XHJcblx0XHR2aWV3LnNvcnQoKTtcclxuXHRcdGlmKHZpZXcucmVhZHkpe1xyXG5cdFx0XHRmb3IobGV0IHBhdGggaW4gdmlldy5maWxlSXRlbXMpe1xyXG5cdFx0XHRcdGxldCBpdGVtID0gdmlldy5maWxlSXRlbXNbcGF0aF07XHJcblx0XHRcdFx0aWYoaXRlbS52Q2hpbGRyZW4pe1xyXG5cdFx0XHRcdFx0bGV0IGZpbGVzID0gaXRlbS52Q2hpbGRyZW4uX2NoaWxkcmVuLm1hcChmPT5mLmZpbGUpO1xyXG5cdFx0XHRcdFx0ZmlsZXMgPSB0aGlzLnNvcnRfdGZpbGVzX2J5X2NoYWluKGZpbGVzKTtcclxuXHRcdFx0XHRcdGxldCBjaGlsZHJlbiA9IGl0ZW0udkNoaWxkcmVuLl9jaGlsZHJlbi5zb3J0KFxyXG5cdFx0XHRcdFx0XHQoYSxiKT0+ZmlsZXMuaW5kZXhPZihhLmZpbGUpLWZpbGVzLmluZGV4T2YoYi5maWxlKVxyXG5cdFx0XHRcdFx0KVxyXG5cdFx0XHRcdFx0aXRlbS52Q2hpbGRyZW4uc2V0Q2hpbGRyZW4oY2hpbGRyZW4pO1xyXG5cdFx0XHRcdH1cclxuXHRcdFx0fVxyXG5cdFx0XHR2aWV3LnRyZWUuaW5maW5pdHlTY3JvbGwuY29tcHV0ZSgpXHJcblx0XHR9XHJcblx0fVxyXG5cclxufSIsICJpbXBvcnQgeyBcclxuXHRBcHAsIEVkaXRvciwgTWFya2Rvd25WaWV3LCBNb2RhbCwgTm90aWNlLCBcclxuXHRQbHVnaW4sIFBsdWdpblNldHRpbmdUYWIsIFNldHRpbmcsXHJcblx0VEZpbGUsVEZvbGRlclxyXG59IGZyb20gJ29ic2lkaWFuJztcclxuXHJcblxyXG5leHBvcnQgZnVuY3Rpb24gZ2V0X3RwX2Z1bmMoYXBwOkFwcCx0YXJnZXQ6c3RyaW5nKSB7XHJcblx0Ly8gXHU4M0I3XHU1M0Q2ICB0ZW1wbGF0ZXIgXHU1MUZEXHU2NTcwXHJcblx0Ly8gZ2V0X3RwX2Z1bmMoXCJ0cC5zeXN0ZW0ucHJvbXB0XCIpXHJcblxyXG5cdGxldCB0ZW1wbGF0ZXIgPSBhcHAucGx1Z2lucy5nZXRQbHVnaW4oXHJcblx0XHRcInRlbXBsYXRlci1vYnNpZGlhblwiXHJcblx0KTtcclxuXHJcblx0bGV0IGl0ZW1zID0gdGFyZ2V0LnNwbGl0KFwiLlwiKTtcclxuXHRpZihpdGVtc1swXS5sb2NhbGVDb21wYXJlKFwidHBcIikhPTAgfHwgaXRlbXMubGVuZ3RoIT0zKXtyZXR1cm4gdW5kZWZpbmVkO31cclxuXHRcclxuXHRsZXQgbW9kdWxlcyA9IHRlbXBsYXRlci50ZW1wbGF0ZXIuZnVuY3Rpb25zX2dlbmVyYXRvci5cclxuXHRcdGludGVybmFsX2Z1bmN0aW9ucy5tb2R1bGVzX2FycmF5LmZpbHRlcihcclxuXHRcdFx0KGl0ZW06YW55KT0+KGl0ZW0ubmFtZS5sb2NhbGVDb21wYXJlKGl0ZW1zWzFdKT09MClcclxuXHRcdCk7XHJcblxyXG5cdGlmKG1vZHVsZXMubGVuZ3RoPT0wKXtyZXR1cm4gdW5kZWZpbmVkfVxyXG5cdFxyXG5cdHJldHVybiBtb2R1bGVzWzBdLnN0YXRpY19mdW5jdGlvbnMuZ2V0KGl0ZW1zWzJdKTtcclxufVxyXG5cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBzZXRfcHJvdG90eXBlKHQsIGUpIHtcclxuICAgIC8vIFx1NUY1MyBlIFx1NEUyRFx1NjcwOVx1NTkxQVx1NEUyQVx1NTkxQVx1NEUyQVx1NTFGRFx1NjU3MFx1NjVGNlx1RkYwQ1x1OEZENFx1NTZERVx1NEUwMFx1NEUyQVx1NTFGRFx1NjU3MFx1RkYwQ1x1NjI2N1x1ODg0Q1x1NjI0MFx1NjcwOVx1NTFGRFx1NjU3MFxyXG4gICAgLy9cclxuICAgIGxldCByID0gT2JqZWN0LmtleXMoZSkubWFwKGk9PnNldF9wcm90b3R5cGVfb24odCwgaSwgZVtpXSkpO1xyXG4gICAgcmV0dXJuIHIubGVuZ3RoID09PSAxID8gclswXSA6IGZ1bmN0aW9uKCkge1xyXG4gICAgICAgIHIuZm9yRWFjaChpPT5pKCkpXHJcbiAgICB9XHJcbn1cclxuXHJcbmZ1bmN0aW9uIHNldF9wcm90b3R5cGVfb24ocHJvdG90eXBlLCBuYW1lLCBmdW5jKSB7XHJcbiAgICAvLyBwcm90b3R5cGVcdUZGMUFcdTc2RUVcdTY4MDdcdTVCRjlcdThDNjEgT2JqZWN0LnByb3RvdHlwZSBcdTYyMTYgb2JqZWN0LmNvbnN0cnVjdG9yLnByb3RvdHlwZVxyXG4gICAgLy8gbmFtZVx1RkYxQVx1NUM1RVx1NjAyN1x1NTQwRFxyXG4gICAgLy8gZnVuYzogXHU0RjIwXHU1M0MyXHU0RTNBIGZ1bmMocHJvdG90eXBlW25hbWVdKVx1RkYwQ1x1N0VDNFx1NTQwOFx1NjI2N1x1ODg0Q1x1NjVCMFx1NTFGRFx1NjU3MFx1NTQ4Q1x1NjVFN1x1NTFGRFx1NjU3MFxyXG5cdGxldCBvcmdfZnVuYyA9IHByb3RvdHlwZVtuYW1lXVxyXG5cdCAgLCBpc093blByb3BlcnR5ID0gcHJvdG90eXBlLmhhc093blByb3BlcnR5KG5hbWUpXHJcblx0ICAsIGZpbmFsX2Z1bmMgPSBmdW5jKG9yZ19mdW5jKTtcclxuICAgIFxyXG4gICAgXHJcbiAgICBpZihvcmdfZnVuYyl7XHJcbiAgICAgICAgT2JqZWN0LnNldFByb3RvdHlwZU9mKGZpbmFsX2Z1bmMsIG9yZ19mdW5jKTtcclxuICAgIH1cclxuICAgIE9iamVjdC5zZXRQcm90b3R5cGVPZihhLCBmaW5hbF9mdW5jKTtcclxuICAgIHByb3RvdHlwZVtuYW1lXSA9IGE7XHJcbiAgICByZXR1cm4gcztcclxuXHJcblx0ZnVuY3Rpb24gYSguLi5kKSB7XHJcbiAgICAgICAgaWYoZmluYWxfZnVuYyA9PT0gb3JnX2Z1bmMgJiYgcHJvdG90eXBlW25hbWVdID09PSBhKXtcclxuICAgICAgICAgICAgcygpO1xyXG4gICAgICAgIH1cclxuXHRcdHJldHVybiAgZmluYWxfZnVuYy5hcHBseSh0aGlzLCBkKTtcclxuXHR9XHJcblx0ZnVuY3Rpb24gcygpIHtcclxuICAgICAgICBpZihwcm90b3R5cGVbbmFtZV0gPT09IGEpe1xyXG4gICAgICAgICAgICBpZihpc093blByb3BlcnR5KXtcclxuICAgICAgICAgICAgICAgIHByb3RvdHlwZVtuYW1lXSA9IG9yZ19mdW5jO1xyXG4gICAgICAgICAgICB9ZWxzZXtcclxuICAgICAgICAgICAgICAgIGRlbGV0ZSBwcm90b3R5cGVbbmFtZV07XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICAgICAgaWYoZmluYWxfZnVuYyAhPT0gb3JnX2Z1bmMpe1xyXG4gICAgICAgICAgICBmaW5hbF9mdW5jID0gb3JnX2Z1bmM7XHJcbiAgICAgICAgICAgIE9iamVjdC5zZXRQcm90b3R5cGVPZihhLCBvcmdfZnVuYyB8fCBGdW5jdGlvbilcclxuICAgICAgICB9XHJcblx0fVxyXG59IiwgImltcG9ydCB7IFxyXG5cdEFwcCxURm9sZGVyLFZhdWx0XHJcbn0gZnJvbSAnb2JzaWRpYW4nO1xyXG5cclxuaW1wb3J0IHtOb3RlQ2hhaW5QbHVnaW59IGZyb20gXCIuLi9tYWluXCI7XHJcblxyXG5jaGFpbl9zb3J0ID0gZnVuY3Rpb24ob3JnX3NvcnQpIHtcclxuXHRsZXQgcGx1Z2luID0gYXBwLnBsdWdpbnMuZ2V0UGx1Z2luKCdub3RlLWNoYWluJyk7XHJcblx0cmV0dXJuIGZ1bmN0aW9uKC4uLmQpe1xyXG5cdFx0aWYocGx1Z2luKXtcclxuXHRcdFx0aWYocGx1Z2luPy5zZXR0aW5ncy5pc1NvcnRGaWxlRXhwbG9yZXIpe1xyXG5cdFx0XHRcdHZhciBlID0gdGhpcy5maWxlXHJcblx0XHRcdFx0LCB0ID0gdGhpcy52aWV3XHJcblx0XHRcdFx0LCBpID0gZS5jaGlsZHJlbi5zbGljZSgpO1xyXG5cdFx0XHRcdGkgPSBpLmZpbHRlcih4PT54KTtcclxuXHRcdFx0XHRpID0gcGx1Z2luLmNoYWluLnNvcnRfdGZpbGVzX2J5X2NoYWluKGkpO1xyXG5cdFx0XHRcdGkgPSBwbHVnaW4uY2hhaW4uc29ydF90ZmlsZXNfZm9sZGVyX2ZpcnN0KGkpO1xyXG5cdFx0XHRcdGZvciAodmFyIHIgPSBbXSwgbyA9IDAsIGEgPSBpOyBvIDwgYS5sZW5ndGg7IG8rKykge1xyXG5cdFx0XHRcdFx0dmFyIHMgPSBhW29dXHJcblx0XHRcdFx0XHQsIGwgPSB0LmZpbGVJdGVtc1tzLnBhdGhdO1xyXG5cdFx0XHRcdFx0bCAmJiByLnB1c2gobClcclxuXHRcdFx0XHR9XHJcblx0XHRcdFx0dGhpcy52Q2hpbGRyZW4uc2V0Q2hpbGRyZW4ocilcclxuXHRcdFx0fWVsc2V7XHJcblx0XHRcdFx0cmV0dXJuIG9yZ19zb3J0LmNhbGwodGhpcywuLi5kKTtcclxuXHRcdFx0fVxyXG5cdFx0fWVsc2V7XHJcblx0XHRcdHJldHVybiBvcmdfc29ydC5jYWxsKHRoaXMsLi4uZCk7XHJcblx0XHR9XHJcblx0fVxyXG59XHJcblxyXG5cclxuZXhwb3J0IGNsYXNzIE5DRmlsZUV4cGxvcmVye1xyXG5cdHBsdWdpbjpOb3RlQ2hhaW5QbHVnaW47XHJcblx0YXBwOkFwcDtcclxuXHRvcmdfc29ydDpGdW5jdGlvbjtcclxuXHJcblx0Y29uc3RydWN0b3IocGx1Z2luOk5vdGVDaGFpblBsdWdpbil7XHJcblx0XHR0aGlzLnBsdWdpbiA9IHBsdWdpbjtcclxuXHRcdHRoaXMuYXBwID0gcGx1Z2luLmFwcDtcclxuXHRcdHRoaXMub2IgPSByZXF1aXJlKCdvYnNpZGlhbicpO1xyXG5cdFx0dGhpcy5yZWdpc3RlcigpO1xyXG5cdH1cclxuXHJcblx0cmVnaXN0ZXIoKXtcclxuXHRcdHRoaXMuYXBwLndvcmtzcGFjZS5vbkxheW91dFJlYWR5KCgpPT57XHJcblx0XHRcdGxldCBmb2xkZXIgPSBuZXcgVEZvbGRlcihWYXVsdCxcIlwiKTtcclxuXHRcdFx0bGV0IGRvbSA9IHRoaXMuZmlsZV9leHBsb3Jlci5jcmVhdGVGb2xkZXJEb20oZm9sZGVyKS5jb25zdHJ1Y3RvcjtcclxuXHRcdFx0dGhpcy5fRm9sZGVyRG9tXyA9IGRvbTtcclxuXHRcdFx0dGhpcy5vcmdfc29ydCA9IGRvbS5wcm90b3R5cGUuc29ydDtcclxuXHRcdFx0dGhpcy5uZXdfc29ydCA9IGNoYWluX3NvcnQodGhpcy5vcmdfc29ydCk7XHJcblx0XHRcdHRoaXMuX0ZvbGRlckRvbV8ucHJvdG90eXBlLnNvcnQgPSB0aGlzLm5ld19zb3J0O1xyXG5cdFx0XHR0aGlzLmZpbGVfZXhwbG9yZXIuc29ydCgpO1xyXG5cdFx0fSlcclxuXHR9XHJcblxyXG5cclxuXHR1bnJlZ2lzdGVyKCl7XHJcblx0XHRpZih0aGlzLm9yZ19zb3J0KXtcclxuXHRcdFx0Y29uc29sZS5sb2coXCJSZXNldCBGaWxlRXhwbG9yZXIgdG8gb3JpZ2luIHNvcnQgZnVuY3Rpb24uXCIpO1xyXG5cdFx0XHR0aGlzLl9Gb2xkZXJEb21fLnByb3RvdHlwZS5zb3J0ID0gdGhpcy5vcmdfc29ydDtcclxuXHRcdH1cclxuXHRcdFxyXG5cdH1cclxuXHJcblx0Z2V0IGZpbGVfZXhwbG9yZXIoKXtcclxuXHRcdGxldCB2aWV3ID0gdGhpcy5hcHAud29ya3NwYWNlLmdldExlYXZlc09mVHlwZShcclxuXHRcdFx0XCJmaWxlLWV4cGxvcmVyXCJcclxuXHRcdClbMF0/LnZpZXc7XHJcblx0XHRyZXR1cm4gdmlldztcclxuXHR9XHJcbn0iXSwKICAibWFwcGluZ3MiOiAiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFBQUEsbUJBSU87OztBQ0lBLElBQU0sV0FBTixNQUFjO0FBQUEsRUFHcEIsWUFBWUMsTUFBUTtBQUNuQixTQUFLLE1BQU1BO0FBQUEsRUFDWjtBQUFBLEVBRUEsTUFBTSxnQkFBZ0IsT0FBWSxLQUFXLE9BQVU7QUFDdEQsUUFBSSxPQUFPLEtBQUssZ0JBQWdCLE9BQU0sR0FBRztBQUN6QyxRQUFHLFNBQU8sT0FBTTtBQUFDO0FBQUEsSUFBTztBQUV4QixVQUFNLEtBQUssSUFBSSxZQUFZLG1CQUFtQixPQUFNLFFBQUs7QUFDeEQsY0FBUSxJQUFJLEdBQUcsTUFBTSxjQUFjLFNBQVMsT0FBTztBQUNuRCxTQUFHLEdBQUcsSUFBSTtBQUFBLElBQ1gsQ0FBQztBQUFBLEVBQ0Y7QUFBQSxFQUVBLGdCQUFnQixPQUFZLEtBQVE7QUFDbkMsUUFBSSxPQUFPLEtBQUssSUFBSSxjQUFjLGFBQWEsS0FBSztBQUNwRCxRQUFHLDZCQUFNLGFBQVk7QUFDcEIsYUFBTyxLQUFLLFlBQVksR0FBRztBQUFBLElBQzVCO0FBQUEsRUFDRDtBQUFBLEVBRUEsWUFBWSxPQUFZLE1BQVk7QUFFbkMsUUFBRyxTQUFPLFFBQU87QUFDaEIsYUFBTyxJQUFJLE9BQU8sU0FBUyxNQUFNLHdCQUF1QixHQUFHO0FBQUEsSUFDNUQ7QUFHQSxRQUFHLFNBQU8sUUFBTztBQUNoQixhQUFPLElBQUksT0FBTyxXQUFXLE1BQU0sMEJBQXlCLEdBQUc7QUFBQSxJQUNoRTtBQUFBLEVBQ0Q7QUFBQSxFQUVBLE1BQU0sSUFBRztBQUNSLFdBQU8sSUFBSSxRQUFRLGFBQVcsV0FBVyxTQUFTLEVBQUUsQ0FBQztBQUFBLEVBQ3REO0FBQUEsRUFFQSxhQUFhLE9BQWlCO0FBQzdCLFFBQUcsU0FBTyxNQUFLO0FBQUMsYUFBTyxDQUFDO0FBQUEsSUFBRTtBQUMxQixRQUFHLE9BQU8sVUFBVSxVQUFTO0FBQUMsYUFBTyxDQUFDLEtBQUs7QUFBQSxJQUFFO0FBQzdDLFFBQUcsRUFBRSxpQkFBaUIsUUFBTztBQUFDLGFBQU8sQ0FBQyxLQUFLO0FBQUEsSUFBRTtBQUU3QyxRQUFJLE1BQU0sQ0FBQztBQUNYLGFBQVEsUUFBUSxPQUFNO0FBQ3JCLFVBQUcsT0FBTyxTQUFTLFVBQVM7QUFDM0IsWUFBSSxLQUFLLElBQUk7QUFBQSxNQUNkLFdBQVMsZ0JBQWdCLE9BQU07QUFDOUIsY0FBTSxJQUFJLE9BQU8sS0FBSyxhQUFhLElBQUksQ0FBQztBQUFBLE1BQ3pDLE9BQUs7QUFDSixZQUFJLEtBQUssSUFBSTtBQUFBLE1BQ2Q7QUFBQSxJQUNEO0FBQ0EsV0FBTztBQUFBLEVBQ1I7QUFBQSxFQUVBLE1BQU0sUUFBUSxPQUFZLE9BQVUsUUFBYztBQUNqRCxRQUFHLE9BQU8sVUFBVSxVQUFTO0FBQzVCLFlBQU0sS0FBSyxJQUFJLE1BQU0sUUFBUSxPQUFNLENBQUMsU0FBTztBQUMxQyxZQUFHLEtBQUssUUFBUSxLQUFLLElBQUUsSUFBRztBQUN6QixrQkFBUSxJQUFJLGFBQVksTUFBTSxJQUFJO0FBQ2xDLGlCQUFPLEtBQUssUUFBUSxPQUFPLE1BQU07QUFBQSxRQUNsQztBQUNBLGVBQU87QUFBQSxNQUNSLENBQUM7QUFBQSxJQUNGLFdBQVMsaUJBQWlCLFFBQU87QUFDaEMsWUFBTSxLQUFLLElBQUksTUFBTSxRQUFRLE9BQU0sQ0FBQyxTQUFPO0FBQzFDLFlBQUcsS0FBSyxNQUFNLEtBQUssR0FBRTtBQUNwQixrQkFBUSxJQUFJLGFBQVksTUFBTSxJQUFJO0FBQ2xDLGlCQUFPLEtBQUssUUFBUSxPQUFPLE1BQU07QUFBQSxRQUNsQztBQUNBLGVBQU87QUFBQSxNQUNSLENBQUM7QUFBQSxJQUNGO0FBQUEsRUFDRDtBQUNEOzs7QUNwRkEsc0JBSU87OztBQ0VBLFNBQVMsWUFBWUMsTUFBUSxRQUFlO0FBSWxELE1BQUksWUFBWUEsS0FBSSxRQUFRO0FBQUEsSUFDM0I7QUFBQSxFQUNEO0FBRUEsTUFBSSxRQUFRLE9BQU8sTUFBTSxHQUFHO0FBQzVCLE1BQUcsTUFBTSxDQUFDLEVBQUUsY0FBYyxJQUFJLEtBQUcsS0FBSyxNQUFNLFVBQVEsR0FBRTtBQUFDLFdBQU87QUFBQSxFQUFVO0FBRXhFLE1BQUksVUFBVSxVQUFVLFVBQVUsb0JBQ2pDLG1CQUFtQixjQUFjO0FBQUEsSUFDaEMsQ0FBQyxTQUFZLEtBQUssS0FBSyxjQUFjLE1BQU0sQ0FBQyxDQUFDLEtBQUc7QUFBQSxFQUNqRDtBQUVELE1BQUcsUUFBUSxVQUFRLEdBQUU7QUFBQyxXQUFPO0FBQUEsRUFBUztBQUV0QyxTQUFPLFFBQVEsQ0FBQyxFQUFFLGlCQUFpQixJQUFJLE1BQU0sQ0FBQyxDQUFDO0FBQ2hEOzs7QURmTyxJQUFNLFlBQU4sTUFBZTtBQUFBLEVBT3JCLFlBQVksUUFBdUIsT0FBSyxZQUFXLE9BQUssWUFBWTtBQUNuRSxTQUFLLFNBQVM7QUFDZCxTQUFLLE1BQU0sT0FBTztBQUNsQixTQUFLLFNBQVMsSUFBSSxTQUFTLEtBQUssR0FBRztBQUNuQyxTQUFLLE9BQU87QUFDWixTQUFLLE9BQU87QUFDWixTQUFLLFNBQVMsS0FBSyxJQUFJLFFBQVEsVUFBVSxVQUFVO0FBQUEsRUFDcEQ7QUFBQSxFQUVBLElBQUksYUFBWTtBQUNmLFdBQU8sWUFBWSxLQUFLLEtBQUksb0JBQW9CO0FBQUEsRUFFakQ7QUFBQSxFQUVBLElBQUksWUFBVztBQUNkLFdBQU8sWUFBWSxLQUFLLEtBQUkscUJBQXFCO0FBQUEsRUFDbEQ7QUFBQSxFQUVBLGdCQUFnQixZQUFVLElBQUc7QUFDNUIsV0FBTyxLQUFLLElBQUksTUFBTSxjQUFjO0FBQUEsRUFDckM7QUFBQSxFQUVBLHNCQUFzQixTQUF1QixVQUFRLE1BQUs7QUFDekQsYUFBUyxNQUFNLEdBQVU7QUFDeEIsYUFBTyxLQUFLO0FBQUEsUUFDWCxHQUFHLEVBQUUsU0FBUyxPQUFPLENBQUNDLE9BQVVBLEdBQUUsUUFBUSxFQUFFLElBQUksQ0FBQ0EsT0FBVUEsR0FBRSxLQUM1RCxLQUFLO0FBQUEsTUFDUDtBQUFBLElBQ0Q7QUFDQSxRQUFJLE1BQU0sUUFBUSxLQUFLLENBQUMsR0FBRSxNQUFJLE1BQU0sQ0FBQyxJQUFFLE1BQU0sQ0FBQyxDQUFDO0FBQy9DLFFBQUcsU0FBUTtBQUNWLFlBQU0sSUFBSSxRQUFRO0FBQUEsSUFDbkI7QUFDQSxXQUFPO0FBQUEsRUFDUjtBQUFBLEVBRUEsTUFBTSw0QkFBNEIsUUFBTSxLQUFLLGNBQWE7QUFDekQsUUFBRyxTQUFPLE1BQUs7QUFBQztBQUFBLElBQU87QUFFdkIsUUFBSSxVQUFVLEtBQUssZ0JBQWdCO0FBQ25DLGNBQVUsS0FBSztBQUFBLE1BQXNCO0FBQUEsSUFDckMsRUFBRSxPQUFPLE9BQUcsS0FBRyxNQUFNLE1BQU07QUFFM0IsUUFBRyxNQUFNLGNBQVksTUFBSztBQUN6QixnQkFBVSxRQUFRLE9BQU8sQ0FBQyxNQUFVLEtBQUssbUJBQW1CLENBQUMsQ0FBQztBQUFBLElBQy9EO0FBQ0EsUUFBSTtBQUNILFVBQUksU0FBUyxNQUFNLEtBQUssVUFBVSxDQUFDLE1BQVUsRUFBRSxNQUFLLE9BQU87QUFFM0QsVUFBSSxNQUFNLE9BQU8sT0FBSyxNQUFJLE1BQU0sV0FBUyxNQUFJLE1BQU07QUFDbkQsWUFBTSxJQUFJLFlBQVksV0FBVyxPQUFNLEdBQUc7QUFBQSxJQUMzQyxTQUFTLE9BQVA7QUFBQSxJQUVGO0FBQUEsRUFDRDtBQUFBLEVBRUEsbUJBQW1CLE1BQVc7QUFDN0IsUUFBRyxFQUFFLEtBQUssSUFBSSxNQUFNLE9BQU8seUJBQXVCLE9BQU07QUFDdkQsVUFBRyxLQUFLLEtBQUs7QUFBQSxRQUNaLEtBQUssSUFBSSxNQUFNLE9BQU87QUFBQSxNQUFvQixHQUMxQztBQUNBLGVBQU87QUFBQSxNQUNSO0FBQUEsSUFDRDtBQUNBLFFBQUcsS0FBSyxJQUFJLE1BQU0sT0FBTyxtQkFBa0I7QUFDMUMsZUFBUSxLQUFLLEtBQUssSUFBSSxNQUFNLE9BQU8sbUJBQWtCO0FBQ3BELFlBQUcsS0FBSyxLQUFLLFdBQVcsQ0FBQyxHQUFFO0FBQzFCLGlCQUFPO0FBQUEsUUFDUjtBQUFBLE1BQ0Q7QUFBQSxJQUNEO0FBQ0EsV0FBTztBQUFBLEVBQ1I7QUFBQSxFQUVBLE1BQU0saUJBQWdCO0FBQ3JCLFFBQUksUUFBUSxLQUFLO0FBQUEsTUFDaEIsS0FBSyxJQUFJLE1BQU0sU0FBUztBQUFBLE1BQ3hCLENBQUMsU0FBUSxHQUFHO0FBQUEsSUFDYixFQUFFLE9BQU8sQ0FBQyxNQUFVLEtBQUssbUJBQW1CLENBQUMsQ0FBQztBQUM5QyxRQUFJO0FBQ0gsVUFBSSxPQUFPLE1BQU0sS0FBSyxVQUFVLENBQUMsTUFBVSxFQUFFLE1BQUssS0FBSztBQUN2RCxhQUFPO0FBQUEsSUFDUixTQUFTLE9BQVA7QUFBQSxJQUNGO0FBQUEsRUFDRDtBQUFBLEVBRUEsVUFBVSxPQUFZLFVBQVEsT0FBTTtBQUNuQyxRQUFHLE9BQU07QUFDUixVQUFHLEtBQUssSUFBSSxVQUFVLFdBQVcsVUFBVSxTQUFRO0FBQ2xELGVBQU8sS0FBSyxJQUFJLFVBQVUsUUFBUSxJQUFJLEVBQUUsU0FBUyxLQUFLO0FBQUEsTUFDdkQsT0FBSztBQUNKLGVBQU8sS0FBSyxJQUFJLFVBQVUsV0FBVyxTQUFTLEtBQUs7QUFBQSxNQUNwRDtBQUFBLElBQ0Q7QUFBQSxFQUNEO0FBQUEsRUFFQSxNQUFNLHNCQUFxQjtBQUMxQixRQUFJO0FBQ0gsVUFBSSxPQUFPLE1BQU0sS0FBSyxlQUFlO0FBQ3JDLGNBQVEsSUFBSSxJQUFJO0FBQ2hCLFdBQUssVUFBVSxJQUFJO0FBQUEsSUFDcEIsU0FBUyxPQUFQO0FBQUEsSUFDRjtBQUFBLEVBQ0Q7QUFBQSxFQUlBLFVBQVUsTUFBSztBQUNkLFFBQUksT0FBTyxLQUFLLE1BQU0sR0FBRyxFQUFFLENBQUMsRUFBRSxRQUFRLE1BQUssRUFBRSxFQUFFLFFBQVEsTUFBSyxFQUFFO0FBQzlELFdBQU8sS0FBSyxXQUFXLElBQUk7QUFBQSxFQUM1QjtBQUFBLEVBRUEsSUFBSSxVQUFTO0FBQ1osV0FBTyxJQUFJLE1BQU0saUJBQWlCO0FBQUEsRUFDbkM7QUFBQSxFQUVBLElBQUksZUFBYztBQUNqQixXQUFPLEtBQUssSUFBSSxVQUFVLGNBQWM7QUFBQSxFQUN6QztBQUFBLEVBRUEsWUFBWSxRQUFNLEtBQUssY0FBYTtBQUNuQyxRQUFHLFNBQU8sTUFBSztBQUFDLGFBQU8sQ0FBQztBQUFBLElBQUU7QUFFMUIsUUFBSSxNQUFNLElBQUksTUFBTTtBQUVwQixRQUFJLFNBQVMsS0FBSyxJQUFJLFFBQVEsVUFBVSxVQUFVO0FBRWxELFFBQUksVUFBVSxPQUFPLE1BQU0sTUFBTSxPQUFPLElBQUksTUFBTSxJQUFJO0FBQ3RELFFBQUcsV0FBUyxRQUFVO0FBQ3JCLGFBQU8sQ0FBQztBQUFBLElBQ1QsT0FBSztBQUNKLGFBQU8sTUFBTSxLQUFLLE9BQU8sRUFBRTtBQUFBLFFBQzFCLENBQUMsU0FBUSxLQUFLLElBQUksTUFBTSxRQUFRLElBQUk7QUFBQSxNQUNyQyxFQUFFO0FBQUEsUUFDRCxDQUFDLFNBQVE7QUFBQSxNQUNWO0FBQUEsSUFDRDtBQUFBLEVBQ0Q7QUFBQSxFQUVBLGFBQWEsUUFBTSxLQUFLLGNBQWE7QUFDcEMsUUFBRyxTQUFPLE1BQUs7QUFBQyxhQUFPLENBQUM7QUFBQSxJQUFFO0FBRTFCLFFBQUksTUFBTSxJQUFJLE1BQU07QUFDcEIsUUFBSSxTQUFTLEtBQUssSUFBSSxRQUFRLFVBQVUsVUFBVTtBQUNsRCxRQUFJLFVBQVUsT0FBTyxNQUFNLE1BQU0sSUFBSSxJQUFJLE1BQU0sSUFBSTtBQUNuRCxRQUFHLFdBQVMsUUFBVTtBQUNyQixhQUFPLENBQUM7QUFBQSxJQUNULE9BQUs7QUFDSixhQUFPLE1BQU0sS0FBSyxPQUFPLEVBQUU7QUFBQSxRQUMxQixDQUFDLFNBQVEsS0FBSyxJQUFJLE1BQU0sUUFBUSxJQUFJO0FBQUEsTUFDckMsRUFBRTtBQUFBLFFBQ0QsQ0FBQyxTQUFRO0FBQUEsTUFDVjtBQUFBLElBQ0Q7QUFBQSxFQUNEO0FBQUEsRUFFQSxVQUFVLFFBQU0sS0FBSyxjQUFhO0FBQ2pDLFFBQUksVUFBVSxLQUFLLFlBQVksS0FBSztBQUNwQyxRQUFJLFdBQVcsS0FBSyxhQUFhLEtBQUs7QUFDdEMsYUFBUSxRQUFRLFNBQVE7QUFDdkIsVUFBRyxDQUFDLFNBQVMsU0FBUyxJQUFJLEdBQUU7QUFDM0IsaUJBQVMsS0FBSyxJQUFJO0FBQUEsTUFDbkI7QUFBQSxJQUNEO0FBQ0EsV0FBTztBQUFBLEVBQ1I7QUFBQSxFQUVBLGdCQUFnQixRQUFNLEtBQUssY0FBYTtBQUN2QyxXQUFPLEtBQUsscUJBQXFCLCtCQUFPLFFBQU8sS0FBSztBQUFBLEVBQ3JEO0FBQUEsRUFFQSxxQkFBcUIsU0FBZ0IsZ0JBQWMsTUFBSztBQUN2RCxRQUFHLFdBQVMsTUFBSztBQUFDLGFBQU8sQ0FBQztBQUFBLElBQUU7QUFDNUIsUUFBSSxRQUFRLENBQUM7QUFDYixhQUFRLEtBQUssUUFBUSxVQUFTO0FBQzdCLFVBQUcsYUFBYSx5QkFBUyxFQUFFLGNBQVksTUFBSztBQUMzQyxjQUFNLEtBQUssQ0FBQztBQUFBLE1BQ2IsV0FBUyxhQUFhLDJCQUFXLGVBQWM7QUFDOUMsWUFBSSxNQUFNLEtBQUsscUJBQXFCLENBQUM7QUFDckMsaUJBQVEsS0FBSyxLQUFJO0FBQ2hCLGdCQUFNLEtBQUssQ0FBQztBQUFBLFFBQ2I7QUFBQSxNQUNEO0FBQUEsSUFDRDtBQUNBLFdBQU87QUFBQSxFQUVSO0FBQUEsRUFFQSxXQUFXLE1BQUs7QUFDZixRQUFJLE9BQU8sQ0FBQyxFQUFFLE1BQU0sS0FBSyxTQUFTLEVBQUUsTUFBTSxDQUFDO0FBQzNDLFFBQUksU0FBUyxDQUFDO0FBQ2QsUUFBRyxLQUFLLFVBQVEsR0FBRTtBQUNqQixlQUFTLEtBQUssQ0FBQztBQUFBLElBQ2hCO0FBQ0EsUUFBSSxNQUFNLE9BQU8sS0FBSztBQUV0QixRQUFHLE9BQUssTUFBSztBQUNaLGFBQU8sR0FBRyxVQUFVO0FBQUEsSUFDckI7QUFDQSxXQUFPO0FBQUEsRUFDUjtBQUFBLEVBRUEsZ0JBQWdCLE9BQVk7QUFDM0IsUUFBSSxPQUFPLEtBQUs7QUFDaEIsUUFBSSxNQUFNO0FBQ1YsUUFBRyxNQUFNLFVBQVEsS0FBSyxRQUFPO0FBQzVCLFlBQU0sTUFBTTtBQUFBLElBQ2IsT0FBSztBQUNKLFlBQU0sTUFBTTtBQUFBLElBQ2I7QUFDQSxRQUFHLFNBQU8sS0FBSyxjQUFhO0FBQzNCLGFBQU8sYUFBTTtBQUFBLElBQ2QsT0FBSztBQUNKLGFBQU87QUFBQSxJQUNSO0FBQUEsRUFFRDtBQUFBLEVBRUEsWUFBWSxPQUEwQjtBQUNyQyxRQUFJLE9BQU8sQ0FBQyxFQUFFLE1BQU0sS0FBSyxTQUFTLEVBQUUsTUFBTSxDQUFDO0FBQzNDLFFBQUksU0FBUyxDQUFDO0FBQ2QsUUFBRyxLQUFLLFVBQVEsR0FBRTtBQUNqQixlQUFTLEtBQUssQ0FBQztBQUFBLElBQ2hCO0FBRUEsUUFBSSxNQUFNLENBQUM7QUFDWCxRQUFJLElBQUk7QUFDUixXQUFNLElBQUUsTUFBTSxRQUFPO0FBQ3BCLFVBQUcsT0FBTyxLQUFLLEdBQUU7QUFDaEIsWUFBSSxLQUFLLEtBQUssV0FBVyxNQUFNLENBQUMsR0FBRSxFQUFDLE9BQU0sSUFBRSxFQUFDLENBQUMsQ0FBQztBQUFBLE1BQy9DLE9BQUs7QUFDSixZQUFJLEtBQUssS0FBSyxXQUFXLE1BQU0sQ0FBQyxDQUFDLENBQUM7QUFBQSxNQUNuQztBQUVBO0FBQUEsSUFDRDtBQUNBLFdBQU87QUFBQSxFQUNSO0FBQUEsRUFFQSxNQUFNLGdCQUFnQixRQUFNLEtBQUssY0FBYSxhQUFXLE1BQUssUUFBTSxJQUFHO0FBQ3RFLFFBQUksS0FBSztBQUFBLE1BQ1I7QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRDtBQUVBLFFBQUcsWUFBVztBQUNiLFNBQUcsUUFBUSwwQkFBTTtBQUFBLElBQ2xCLE9BQUs7QUFDSixTQUFHLEtBQUssMEJBQU07QUFBQSxJQUNmO0FBRUEsUUFBSSxNQUFNLENBQUM7QUFDWCxRQUFJLElBQUk7QUFDUixhQUFRLEtBQUssSUFBRztBQUNmLFVBQUksS0FBSyxHQUFHLE9BQU8sR0FBRztBQUFBLElBQ3ZCO0FBRUEsUUFBSSxPQUFPO0FBQ1gsUUFBRyxHQUFHLFNBQVMsS0FBSyxHQUFFO0FBQ3JCLGFBQU87QUFBQSxJQUNSLE9BQUs7QUFDSixhQUFPLE1BQU0sS0FBSyxVQUFVLEtBQUksRUFBRTtBQUFBLElBQ25DO0FBQ0EsUUFBRyxTQUFPLDRCQUFPO0FBQ2hCLGFBQU8sQ0FBQyxLQUFLO0FBQUEsSUFDZCxXQUFTLFNBQU8sNEJBQU87QUFDdEIsYUFBTyxLQUFLLGdCQUFnQixLQUFLO0FBQUEsSUFDbEMsV0FBUyxTQUFPLCtDQUFXO0FBQzFCLGFBQU8sS0FBSyxxQkFBcUIsK0JBQU8sUUFBTyxJQUFJO0FBQUEsSUFDcEQsV0FBUyxTQUFPLDZCQUFRO0FBQ3ZCLGFBQU8sS0FBSyxVQUFVLEtBQUs7QUFBQSxJQUM1QixXQUFTLFNBQU8sZ0JBQUs7QUFDcEIsYUFBTyxLQUFLLFlBQVksS0FBSztBQUFBLElBQzlCLFdBQVMsU0FBTyxnQkFBSztBQUNwQixhQUFPLEtBQUssYUFBYSxLQUFLO0FBQUEsSUFDL0IsV0FBUyxTQUFPLDRCQUFPO0FBQ3RCLGFBQU8sS0FBSztBQUFBLElBQ2IsV0FBUyxTQUFPLHlCQUF3QjtBQUN2QyxVQUFJLElBQUksS0FBSyxJQUFJLFFBQVEsVUFBVSx1QkFBdUI7QUFDMUQsVUFBRyxDQUFDLEdBQUU7QUFBQyxlQUFPLENBQUM7QUFBQSxNQUFFO0FBQ2pCLGFBQU8sT0FBTztBQUFBLFFBQ2IsRUFBRSxLQUFLO0FBQUEsTUFBVyxFQUFFO0FBQUEsUUFBSSxPQUFHLEtBQUssSUFBSSxNQUFNLFFBQVEsRUFBRSxJQUFJO0FBQUEsTUFDekQsRUFBRSxPQUFPLE9BQUcsQ0FBQztBQUFBLElBQ2QsV0FBUyxTQUFPLDRCQUFPO0FBQ3RCLGFBQU8sS0FBSztBQUFBLFFBQ1g7QUFBQSxRQUNBLE9BQU8sS0FBSyxPQUFPLFNBQVMsU0FBUztBQUFBLFFBQ3JDLE9BQU8sS0FBSyxPQUFPLFNBQVMsU0FBUztBQUFBLE1BQ3RDO0FBQUEsSUFDRCxPQUFLO0FBQ0osYUFBTyxDQUFDO0FBQUEsSUFDVDtBQUFBLEVBQ0Q7QUFBQTtBQUFBLEVBSUEsY0FBYyxRQUFNLEtBQUssY0FBYTtBQUNyQyxRQUFHLE1BQU0sU0FBUTtBQUNoQixVQUFJLFNBQVMsS0FBSyxJQUFJLE1BQU0saUJBQWlCO0FBQzdDLGVBQVMsT0FBTyxPQUFPLE9BQUcsS0FBSyxNQUFNLGlCQUFlLEtBQUssT0FBTyxnQkFBZ0IsR0FBRSxLQUFLLElBQUksQ0FBQztBQUM1RixVQUFHLE9BQU8sU0FBTyxHQUFFO0FBQ2xCLGVBQU8sTUFBTSxDQUFDO0FBQUEsTUFDZixPQUFLO0FBQ0osZUFBTztBQUFBLE1BQ1I7QUFBQSxJQUNELE9BQUs7QUFDSixVQUFJLE9BQU8sS0FBSyxPQUFPLGdCQUFnQixPQUFNLEtBQUssSUFBSTtBQUN0RCxVQUFHLENBQUMsTUFBSztBQUFDLGVBQU87QUFBQSxNQUFLO0FBRXRCLFVBQUksT0FBTyxLQUFLLFVBQVUsSUFBSTtBQUM5QixhQUFPLE9BQUssT0FBSztBQUFBLElBQ2xCO0FBQUEsRUFDRDtBQUFBLEVBRUEsZ0JBQWdCLFFBQU0sS0FBSyxjQUFhO0FBQ3ZDLFFBQUksT0FBTyxLQUFLLGNBQWMsS0FBSztBQUNuQyxTQUFLLFVBQVUsSUFBSTtBQUFBLEVBQ3BCO0FBQUEsRUFFQSxjQUFjLFFBQU0sS0FBSyxjQUFhO0FBQ3JDLFFBQUcsTUFBTSxTQUFRO0FBQ2hCLFVBQUksU0FBUyxLQUFLLElBQUksTUFBTSxpQkFBaUI7QUFDN0MsZUFBUyxPQUFPLE9BQU8sT0FBRyxLQUFLLE1BQU0saUJBQWUsS0FBSyxPQUFPLGdCQUFnQixHQUFFLEtBQUssSUFBSSxDQUFDO0FBQzVGLFVBQUcsT0FBTyxTQUFPLEdBQUU7QUFDbEIsZUFBTyxPQUFPLENBQUM7QUFBQSxNQUNoQixPQUFLO0FBQ0osZUFBTztBQUFBLE1BQ1I7QUFBQSxJQUNELE9BQUs7QUFDSixVQUFJLE9BQU8sS0FBSyxPQUFPLGdCQUFnQixPQUFNLEtBQUssSUFBSTtBQUN0RCxVQUFHLENBQUMsTUFBSztBQUFDLGVBQU87QUFBQSxNQUFLO0FBRXRCLFVBQUksT0FBTyxLQUFLLFVBQVUsSUFBSTtBQUM5QixhQUFPLE9BQUssT0FBSztBQUFBLElBQ2xCO0FBQUEsRUFDRDtBQUFBLEVBRUEsZ0JBQWdCLFFBQU0sS0FBSyxjQUFhO0FBQ3ZDLFFBQUksT0FBTyxLQUFLLGNBQWMsS0FBSztBQUNuQyxTQUFLLFVBQVUsSUFBSTtBQUFBLEVBQ3BCO0FBQUEsRUFFQSxVQUFVLFFBQU0sS0FBSyxjQUFhLE9BQUssSUFBRyxPQUFLLElBQUcsWUFBVSxNQUFLO0FBQ2hFLFFBQUcsU0FBTyxNQUFLO0FBQUMsYUFBTyxDQUFDO0FBQUEsSUFBRTtBQUUxQixRQUFJLE1BQU0sSUFBSSxNQUFNO0FBQ3BCLFFBQUcsV0FBVTtBQUNaLFVBQUksS0FBSyxLQUFLO0FBQUEsSUFDZjtBQUVBLFFBQUksTUFBTTtBQUNWLGFBQVEsSUFBRSxNQUFLLEtBQUcsR0FBRSxLQUFJO0FBQ3ZCLFVBQUksT0FBTyxLQUFLLGNBQWMsR0FBRztBQUNqQyxVQUFHLENBQUMsTUFBSztBQUNSO0FBQUEsTUFDRCxXQUFTLElBQUksU0FBUyxJQUFJLEdBQUU7QUFFM0IsYUFBSyxPQUFPLGdCQUFnQixNQUFLLEtBQUssTUFBSyxFQUFFO0FBQzdDLGFBQUssT0FBTyxnQkFBZ0IsS0FBSSxLQUFLLE1BQUssRUFBRTtBQUM1QztBQUFBLE1BQ0QsT0FBSztBQUNKLFlBQUksUUFBUSxJQUFJO0FBQ2hCLGNBQU07QUFBQSxNQUNQO0FBQUEsSUFDRDtBQUVBLFVBQU07QUFDTixhQUFRLElBQUUsTUFBSyxLQUFHLEdBQUUsS0FBSTtBQUN2QixVQUFJLE9BQU8sS0FBSyxjQUFjLEdBQUc7QUFDakMsVUFBRyxDQUFDLE1BQUs7QUFDUjtBQUFBLE1BQ0QsV0FBUyxJQUFJLFNBQVMsSUFBSSxHQUFFO0FBRTNCLGFBQUssT0FBTyxnQkFBZ0IsTUFBSyxLQUFLLE1BQUssRUFBRTtBQUM3QyxhQUFLLE9BQU8sZ0JBQWdCLEtBQUksS0FBSyxNQUFLLEVBQUU7QUFDNUM7QUFBQSxNQUNELE9BQUs7QUFDSixZQUFJLEtBQUssSUFBSTtBQUNiLGNBQU07QUFBQSxNQUNQO0FBQUEsSUFDRDtBQUNBLFdBQU87QUFBQSxFQUNSO0FBQUEsRUFFQSxlQUFlLFFBQU0sS0FBSyxjQUFhO0FBQ3RDLFFBQUksUUFBUSxLQUFLLFVBQVUsT0FBTSxJQUFHLEdBQUUsS0FBSztBQUMzQyxRQUFHLE1BQU0sU0FBTyxHQUFFO0FBQ2pCLGFBQU8sTUFBTSxDQUFDO0FBQUEsSUFDZixPQUFLO0FBQ0osYUFBTztBQUFBLElBQ1I7QUFBQSxFQUNEO0FBQUEsRUFFQSxjQUFjLFFBQU0sS0FBSyxjQUFhO0FBQ3JDLFFBQUksUUFBUSxLQUFLLFVBQVUsT0FBTSxHQUFFLElBQUcsS0FBSztBQUMzQyxRQUFHLE1BQU0sU0FBTyxHQUFFO0FBQ2pCLGFBQU8sTUFBTSxNQUFNLFNBQU8sQ0FBQztBQUFBLElBQzVCLE9BQUs7QUFDSixhQUFPO0FBQUEsSUFDUjtBQUFBLEVBQ0Q7QUFBQSxFQUlBLGNBQWMsUUFBTSxLQUFLLGNBQWE7QUFDckMsV0FBTztBQUFBLE1BQ04sS0FBSyxjQUFjLEtBQUs7QUFBQSxNQUN4QixLQUFLLGNBQWMsS0FBSztBQUFBLElBQ3pCO0FBQUEsRUFDRDtBQUFBLEVBRUEsTUFBTSxlQUFlLE9BQVksTUFBVztBQUMzQyxRQUFHLFNBQU8sUUFBUSxTQUFPLE1BQUs7QUFBQztBQUFBLElBQU87QUFDdEMsUUFBRyxRQUFNLE1BQU07QUFDZCxZQUFNLEtBQUssT0FBTztBQUFBLFFBQ2pCO0FBQUEsUUFBTSxLQUFLO0FBQUEsUUFBSztBQUFBLE1BQ2pCO0FBQUEsSUFDRCxPQUFLO0FBQ0osWUFBTSxLQUFLLE9BQU87QUFBQSxRQUNqQjtBQUFBLFFBQU0sS0FBSztBQUFBLFFBQUssS0FBSyxLQUFLO0FBQUEsTUFDM0I7QUFBQSxJQUNEO0FBQUEsRUFDRDtBQUFBLEVBRUEsTUFBTSxlQUFlLE9BQVksTUFBVztBQUMzQyxRQUFHLFNBQU8sUUFBUSxTQUFPLE1BQUs7QUFBQztBQUFBLElBQU87QUFDdEMsUUFBRyxRQUFNLE1BQU07QUFDZCxZQUFNLEtBQUssT0FBTztBQUFBLFFBQ2pCO0FBQUEsUUFBTSxLQUFLO0FBQUEsUUFBSztBQUFBLE1BQ2pCO0FBQUEsSUFDRCxPQUFLO0FBQ0osWUFBTSxLQUFLLE9BQU87QUFBQSxRQUNqQjtBQUFBLFFBQU0sS0FBSztBQUFBLFFBQUssS0FBSyxLQUFLO0FBQUEsTUFDM0I7QUFBQSxJQUNEO0FBQUEsRUFDRDtBQUFBLEVBRUEsTUFBTSxvQkFBb0IsTUFBVyxNQUFXO0FBQy9DLFVBQU0sS0FBSyxlQUFlLE1BQUssSUFBSTtBQUNuQyxVQUFNLEtBQUssZUFBZSxNQUFLLElBQUk7QUFBQSxFQUNwQztBQUFBLEVBRUEsTUFBTSxlQUFlLE9BQVk7QUFDaEMsUUFBSSxRQUFRLEtBQUssY0FBYyxLQUFLO0FBQ3BDLFVBQU0sS0FBSyxvQkFBb0IsTUFBTSxDQUFDLEdBQUUsTUFBTSxDQUFDLENBQUM7QUFBQSxFQUNqRDtBQUFBLEVBRUEsTUFBTSwwQkFBMEIsT0FBWSxRQUFhO0FBQ3hELFFBQUksT0FBTyxLQUFLLGVBQWUsTUFBTTtBQUNyQyxVQUFNLEtBQUssb0JBQW9CLE9BQU0sSUFBSTtBQUFBLEVBQzFDO0FBQUEsRUFFQSxNQUFNLDBCQUEwQixPQUFZLFFBQWE7QUFDeEQsUUFBSSxPQUFPLEtBQUssY0FBYyxNQUFNO0FBQ3BDLFVBQU0sS0FBSyxvQkFBb0IsTUFBSyxLQUFLO0FBQUEsRUFDMUM7QUFBQSxFQUVBLE1BQU0sd0JBQXdCLE9BQVksUUFBYTtBQUN0RCxTQUFLLGVBQWUsS0FBSztBQUV6QixRQUFJLE9BQU8sS0FBSyxjQUFjLE1BQU07QUFDcEMsVUFBTSxLQUFLLG9CQUFvQixRQUFPLEtBQUs7QUFDM0MsVUFBTSxLQUFLLG9CQUFvQixPQUFNLElBQUk7QUFBQSxFQUMxQztBQUFBLEVBRUEsTUFBTSx5QkFBeUIsT0FBWSxRQUFhO0FBQ3ZELFNBQUssZUFBZSxLQUFLO0FBQ3pCLFFBQUksT0FBTyxLQUFLLGNBQWMsTUFBTTtBQUNwQyxVQUFNLEtBQUssb0JBQW9CLE9BQU0sTUFBTTtBQUMzQyxVQUFNLEtBQUssb0JBQW9CLE1BQUssS0FBSztBQUFBLEVBQzFDO0FBQUEsRUFFQSxNQUFNLGtCQUFrQixRQUFvQjtBQUMzQyxRQUFJLE9BQU8sS0FBSyxjQUFjLE9BQU8sQ0FBQyxDQUFDO0FBQ3ZDLFFBQUcsT0FBTyxTQUFTLElBQUksR0FBRTtBQUN4QixZQUFNLEtBQUssZUFBZSxPQUFPLENBQUMsR0FBRSxJQUFJO0FBQUEsSUFDekM7QUFFQSxRQUFJLE9BQU8sS0FBSyxjQUFjLE9BQU8sT0FBTyxTQUFPLENBQUMsQ0FBQztBQUNyRCxRQUFHLE9BQU8sU0FBUyxJQUFJLEdBQUU7QUFDeEIsWUFBTSxLQUFLLGVBQWUsT0FBTyxPQUFPLFNBQU8sQ0FBQyxHQUFFLElBQUk7QUFBQSxJQUN2RDtBQUdBLGFBQVEsSUFBRSxHQUFFLElBQUUsT0FBTyxTQUFPLEdBQUUsS0FBSTtBQUNqQyxZQUFNLEtBQUssb0JBQW9CLE9BQU8sQ0FBQyxHQUFFLE9BQU8sSUFBRSxDQUFDLENBQUM7QUFBQSxJQUNyRDtBQUFBLEVBQ0Q7QUFBQSxFQUVBLE1BQU0sdUJBQXVCLFFBQU0sS0FBSyxjQUFhLE9BQUssYUFBWTtBQUNyRSxRQUFJLFFBQVEsS0FBSyxnQkFBZ0IsS0FBSztBQUN0QyxRQUFHLE1BQU0sVUFBUSxHQUFFO0FBQUM7QUFBQSxJQUFPO0FBRTNCLFFBQUksUUFBUSxNQUFNLEtBQUssZUFBZSxLQUFLO0FBQzNDLFVBQU0sS0FBSyxrQkFBa0IsS0FBSztBQUFBLEVBQ25DO0FBQUEsRUFFQSxZQUFZLE9BQW1CLE9BQVU7QUFDeEMsUUFBRyxPQUFPLFVBQVUsVUFBUztBQUM1QixVQUFHLFVBQVEsUUFBTztBQUNqQixlQUFPLE1BQU07QUFBQSxVQUNaLENBQUMsR0FBRSxNQUFLLEVBQUUsS0FBSyxjQUFjLEVBQUUsSUFBSTtBQUFBLFFBQ3BDO0FBQUEsTUFDRCxXQUFTLFVBQVEsU0FBUTtBQUN4QixlQUFPLE1BQU07QUFBQSxVQUNaLENBQUMsR0FBRSxNQUFLLEVBQUUsS0FBSyxRQUFNLEVBQUUsS0FBSztBQUFBLFFBQzdCO0FBQUEsTUFDRCxXQUFTLFVBQVEsU0FBUTtBQUN4QixlQUFPLE1BQU07QUFBQSxVQUNaLENBQUMsR0FBRSxNQUFLLEVBQUUsS0FBSyxRQUFNLEVBQUUsS0FBSztBQUFBLFFBQzdCO0FBQUEsTUFDRCxXQUNRLFVBQVEsU0FBUTtBQUN2QixlQUFPLEtBQUsscUJBQXFCLEtBQUs7QUFBQSxNQUN2QztBQUNBLGFBQU87QUFBQSxJQUNSLFdBQVMsT0FBTyxVQUFVLFVBQVM7QUFDbEMsVUFBRyxpQkFBaUIsT0FBTTtBQUN6QixZQUFJLFNBQVMsS0FBSyxZQUFZLE9BQU0sTUFBTSxDQUFDLENBQUM7QUFDNUMsWUFBRyxNQUFNLFVBQVEsR0FBRTtBQUNsQixjQUFHLE1BQU0sQ0FBQyxNQUFJLEtBQUk7QUFDakIsbUJBQU8sT0FBTyxRQUFRO0FBQUEsVUFDdkI7QUFBQSxRQUNEO0FBQ0EsZUFBTztBQUFBLE1BQ1I7QUFBQSxJQUNEO0FBQ0EsV0FBTztBQUFBLEVBQ1I7QUFBQSxFQUVBLHFCQUFxQixRQUFvQjtBQUN4QyxRQUFJLFFBQVEsT0FBTyxJQUFJLE9BQUcsQ0FBQztBQUMzQixRQUFJLE1BQU0sQ0FBQztBQUNYLFdBQU0sTUFBTSxTQUFPLEdBQUU7QUFDcEIsVUFBSSxPQUFPLE1BQU0sQ0FBQztBQUNsQixVQUFJLE1BQU0sQ0FBQztBQUNYLFVBQUksU0FBUyxLQUFLLFVBQVUsTUFBSyxJQUFHLEVBQUU7QUFDdEMsZUFBUSxLQUFLLFFBQU87QUFDbkIsWUFBRyxNQUFNLFNBQVMsQ0FBQyxHQUFFO0FBQ3BCLGNBQUksS0FBSyxDQUFDO0FBQ1YsZ0JBQU0sT0FBTyxDQUFDO0FBQUEsUUFDZjtBQUFBLE1BQ0Q7QUFDQSxVQUFJLEtBQUssR0FBRztBQUFBLElBQ2I7QUFDQSxVQUFNLElBQUksS0FBSyxDQUFDLEdBQUUsTUFBSSxFQUFFLFNBQU8sRUFBRSxNQUFNO0FBQ3ZDLFFBQUksT0FBTyxDQUFDO0FBQ1osYUFBUSxLQUFLLEtBQUk7QUFDaEIsZUFBUSxLQUFLLEdBQUU7QUFDZCxhQUFLLEtBQUssQ0FBQztBQUFBLE1BQ1o7QUFBQSxJQUNEO0FBQ0EsV0FBTztBQUFBLEVBQ1I7QUFBQSxFQUVBLHlCQUF5QixRQUFvQjtBQUM1QyxRQUFJLElBQUksT0FBTyxPQUFPLE9BQUcsYUFBYSx1QkFBTyxFQUFFLEtBQUssQ0FBQyxHQUFFLE1BQUssRUFBRSxLQUFLLGNBQWMsRUFBRSxJQUFJLENBQUU7QUFDekYsUUFBSSxJQUFJLE9BQU8sT0FBTyxPQUFHLGFBQWEscUJBQUs7QUFDM0MsV0FBTyxLQUFLLE9BQU8sT0FBTyxhQUFhLENBQUMsR0FBRSxDQUFDLENBQUM7QUFBQSxFQUM3QztBQUFBLEVBRUEscUJBQXFCLFFBQW9CLE9BQWE7QUFDckQsUUFBSSxNQUFNLE9BQU87QUFBQSxNQUNoQixDQUFDLEdBQUUsTUFBSTtBQUNOLFlBQUksS0FBSyxLQUFLLE9BQU8sZ0JBQWdCLEdBQUUsS0FBSztBQUM1QyxZQUFJLEtBQUssS0FBSyxPQUFPLGdCQUFnQixHQUFFLEtBQUs7QUFDNUMsZUFBTyxLQUFLO0FBQUEsTUFDYjtBQUFBLElBQ0Q7QUFDQSxXQUFPO0FBQUEsRUFDUjtBQUFBLEVBRUEsTUFBTSxlQUFlLFFBQW9CO0FBQ3hDLFFBQUcsQ0FBQyxRQUFPO0FBQUMsYUFBTyxDQUFDO0FBQUEsSUFBRTtBQUN0QixRQUFHLE9BQU8sVUFBUSxHQUFFO0FBQUMsYUFBTyxDQUFDO0FBQUEsSUFBQztBQUFDO0FBQy9CLFFBQUksS0FBSztBQUFBLE1BQ1IsU0FBUTtBQUFBLE1BQ1IsUUFBTztBQUFBLE1BQ1AsU0FBUTtBQUFBLE1BQ1IsU0FBUTtBQUFBLE1BQ1IscUJBQVUsQ0FBQyxRQUFPLEdBQUc7QUFBQSxNQUNyQixzQkFBVyxDQUFDLFNBQVEsR0FBRztBQUFBLE1BQ3ZCLHNCQUFXLENBQUMsU0FBUSxHQUFHO0FBQUEsSUFDeEI7QUFDQSxRQUFJLFFBQVEsTUFBTSxLQUFLO0FBQUEsTUFDdEIsT0FBTyxLQUFLLEVBQUU7QUFBQSxNQUNkLE9BQU8sT0FBTyxFQUFFO0FBQUEsSUFDakI7QUFDQSxRQUFHLFNBQU8sTUFBSztBQUFDLGFBQU8sQ0FBQztBQUFBLElBQUU7QUFDMUIsV0FBTyxLQUFLLFlBQVksUUFBTyxLQUFLO0FBQUEsRUFDckM7QUFBQSxFQUVBLHFCQUFvQjtBQXhtQnJCO0FBeW1CRSxRQUFJLFFBQU8sVUFBSyxJQUFJLFVBQVU7QUFBQSxNQUM3QjtBQUFBLElBQ0QsRUFBRSxDQUFDLE1BRlEsbUJBRUw7QUFDTixRQUFHLENBQUMsTUFBSztBQUFDO0FBQUEsSUFBTztBQUNqQixTQUFLLEtBQUs7QUFDVixRQUFHLEtBQUssT0FBTTtBQUNiLGVBQVEsUUFBUSxLQUFLLFdBQVU7QUFDOUIsWUFBSSxPQUFPLEtBQUssVUFBVSxJQUFJO0FBQzlCLFlBQUcsS0FBSyxXQUFVO0FBQ2pCLGNBQUksUUFBUSxLQUFLLFVBQVUsVUFBVSxJQUFJLE9BQUcsRUFBRSxJQUFJO0FBQ2xELGtCQUFRLEtBQUsscUJBQXFCLEtBQUs7QUFDdkMsY0FBSSxXQUFXLEtBQUssVUFBVSxVQUFVO0FBQUEsWUFDdkMsQ0FBQyxHQUFFLE1BQUksTUFBTSxRQUFRLEVBQUUsSUFBSSxJQUFFLE1BQU0sUUFBUSxFQUFFLElBQUk7QUFBQSxVQUNsRDtBQUNBLGVBQUssVUFBVSxZQUFZLFFBQVE7QUFBQSxRQUNwQztBQUFBLE1BQ0Q7QUFDQSxXQUFLLEtBQUssZUFBZSxRQUFRO0FBQUEsSUFDbEM7QUFBQSxFQUNEO0FBRUQ7OztBRTluQkEsSUFBQUMsbUJBRU87QUFJUCxhQUFhLFNBQVMsVUFBVTtBQUMvQixNQUFJLFNBQVMsSUFBSSxRQUFRLFVBQVUsWUFBWTtBQUMvQyxTQUFPLFlBQVksR0FBRTtBQUNwQixRQUFHLFFBQU87QUFDVCxVQUFHLGlDQUFRLFNBQVMsb0JBQW1CO0FBQ3RDLFlBQUksSUFBSSxLQUFLLE1BQ1gsSUFBSSxLQUFLLE1BQ1QsSUFBSSxFQUFFLFNBQVMsTUFBTTtBQUN2QixZQUFJLEVBQUUsT0FBTyxPQUFHLENBQUM7QUFDakIsWUFBSSxPQUFPLE1BQU0scUJBQXFCLENBQUM7QUFDdkMsWUFBSSxPQUFPLE1BQU0seUJBQXlCLENBQUM7QUFDM0MsaUJBQVMsSUFBSSxDQUFDLEdBQUcsSUFBSSxHQUFHLElBQUksR0FBRyxJQUFJLEVBQUUsUUFBUSxLQUFLO0FBQ2pELGNBQUksSUFBSSxFQUFFLENBQUMsR0FDVCxJQUFJLEVBQUUsVUFBVSxFQUFFLElBQUk7QUFDeEIsZUFBSyxFQUFFLEtBQUssQ0FBQztBQUFBLFFBQ2Q7QUFDQSxhQUFLLFVBQVUsWUFBWSxDQUFDO0FBQUEsTUFDN0IsT0FBSztBQUNKLGVBQU8sU0FBUyxLQUFLLE1BQUssR0FBRyxDQUFDO0FBQUEsTUFDL0I7QUFBQSxJQUNELE9BQUs7QUFDSixhQUFPLFNBQVMsS0FBSyxNQUFLLEdBQUcsQ0FBQztBQUFBLElBQy9CO0FBQUEsRUFDRDtBQUNEO0FBR08sSUFBTSxpQkFBTixNQUFvQjtBQUFBLEVBSzFCLFlBQVksUUFBdUI7QUFDbEMsU0FBSyxTQUFTO0FBQ2QsU0FBSyxNQUFNLE9BQU87QUFDbEIsU0FBSyxLQUFLLFFBQVEsVUFBVTtBQUM1QixTQUFLLFNBQVM7QUFBQSxFQUNmO0FBQUEsRUFFQSxXQUFVO0FBQ1QsU0FBSyxJQUFJLFVBQVUsY0FBYyxNQUFJO0FBQ3BDLFVBQUksU0FBUyxJQUFJLHlCQUFRLHdCQUFNLEVBQUU7QUFDakMsVUFBSSxNQUFNLEtBQUssY0FBYyxnQkFBZ0IsTUFBTSxFQUFFO0FBQ3JELFdBQUssY0FBYztBQUNuQixXQUFLLFdBQVcsSUFBSSxVQUFVO0FBQzlCLFdBQUssV0FBVyxXQUFXLEtBQUssUUFBUTtBQUN4QyxXQUFLLFlBQVksVUFBVSxPQUFPLEtBQUs7QUFDdkMsV0FBSyxjQUFjLEtBQUs7QUFBQSxJQUN6QixDQUFDO0FBQUEsRUFDRjtBQUFBLEVBR0EsYUFBWTtBQUNYLFFBQUcsS0FBSyxVQUFTO0FBQ2hCLGNBQVEsSUFBSSw2Q0FBNkM7QUFDekQsV0FBSyxZQUFZLFVBQVUsT0FBTyxLQUFLO0FBQUEsSUFDeEM7QUFBQSxFQUVEO0FBQUEsRUFFQSxJQUFJLGdCQUFlO0FBbEVwQjtBQW1FRSxRQUFJLFFBQU8sVUFBSyxJQUFJLFVBQVU7QUFBQSxNQUM3QjtBQUFBLElBQ0QsRUFBRSxDQUFDLE1BRlEsbUJBRUw7QUFDTixXQUFPO0FBQUEsRUFDUjtBQUNEOzs7QUpsREEsSUFBTSxtQkFBK0I7QUFBQSxFQUNwQyxXQUFZO0FBQUEsRUFDWixXQUFZO0FBQUEsRUFDWixpQkFBa0I7QUFBQSxFQUNsQixjQUFlO0FBQUEsRUFDZixvQkFBcUI7QUFDdEI7QUFFQSxJQUFNLHFCQUFxQixDQUFDLFlBQTRCO0FBQUEsRUFDdkQsSUFBSTtBQUFBLEVBQ0QsTUFBTTtBQUFBLEVBQ1QsVUFBVSxNQUFNO0FBQ2YsUUFBSSxPQUFPLE9BQU8sTUFBTTtBQUN4QixRQUFHLFFBQVEsTUFBSztBQUFDO0FBQUEsSUFBTztBQUN4QixRQUFJLFlBQVk7QUFBQSxNQUNmO0FBQUEsTUFDQSxRQUFLO0FBQ0osWUFBRyxRQUFNLE1BQUs7QUFBQztBQUFBLFFBQU87QUFDdEIsWUFBRyxHQUFHLFVBQVUsS0FBRyxNQUFLO0FBQUM7QUFBQSxRQUFPO0FBQ2hDLFlBQUksU0FBUyxPQUFPLE9BQU8sYUFBYSxHQUFHLFNBQVMsTUFBTTtBQUMxRCxZQUFJLGVBQWUsT0FBTyxPQUFPLGFBQWEsR0FBRyxTQUFTLFlBQVk7QUFDdEUsdUJBQWUsYUFBYSxPQUFPLENBQUMsTUFBVyxDQUFDLE9BQU8sU0FBUyxDQUFDLENBQUM7QUFDbEUsWUFBSSxRQUFRLE9BQU8sT0FBTyxhQUFhLENBQUMsUUFBTyxZQUFZLENBQUM7QUFDNUQsZ0JBQVEsTUFBTSxJQUFJLENBQUMsTUFBVyxPQUFPLE1BQU0sV0FBVyxDQUFDLENBQUM7QUFDeEQsWUFBRyxLQUFLLFVBQVEsTUFBSztBQUFDO0FBQUEsUUFBTTtBQUFDO0FBQzdCLFlBQUksU0FBUyxPQUFPLE1BQU0scUJBQXFCLEtBQUssTUFBTSxFQUFFLE9BQU8sQ0FBQyxNQUFRLENBQUMsTUFBTSxTQUFTLENBQUMsQ0FBQztBQUM5RixnQkFBUSxPQUFPLE9BQU8sYUFBYSxDQUFDLFFBQU8sS0FBSyxDQUFDO0FBQ2pELGVBQU8sTUFBTSxrQkFBa0IsS0FBSztBQUFBLE1BQ3JDO0FBQUEsSUFDRDtBQUFBLEVBQ0Q7QUFDRDtBQUVBLElBQU0scUJBQXFCLENBQUMsWUFBNEI7QUFBQSxFQUN2RCxJQUFJO0FBQUEsRUFDRCxNQUFNO0FBQUEsRUFDVCxVQUFVLE1BQU07QUFDZixRQUFJLE9BQU8sT0FBTyxNQUFNO0FBQ3hCLFFBQUcsUUFBTSxNQUFLO0FBQUM7QUFBQSxJQUFPO0FBQ3RCLFFBQUksWUFBWTtBQUFBLE1BQ2Y7QUFBQSxNQUNBLFFBQUs7QUFDSixZQUFHLFFBQU0sTUFBSztBQUFDO0FBQUEsUUFBTztBQUN0QixZQUFHLEtBQUssVUFBUSxNQUFLO0FBQUM7QUFBQSxRQUFNO0FBQUM7QUFFN0IsWUFBRyxHQUFHLFVBQVUsS0FBRyxNQUFLO0FBQUM7QUFBQSxRQUFPO0FBQ2hDLFlBQUksUUFBUSxPQUFPLE1BQU0scUJBQXFCLEtBQUssTUFBTTtBQUN6RCxnQkFBUSxPQUFPLE1BQU0scUJBQXFCLEtBQUs7QUFDL0MsV0FBRyxTQUFTLFNBQVMsTUFBTSxJQUFJLENBQUMsTUFBVSxFQUFFLFFBQVE7QUFBQSxNQUNyRDtBQUFBLElBQ0Q7QUFBQSxFQUNEO0FBQ0Q7QUFHQSxJQUFNLHFCQUFxQixDQUFDLFlBQTRCO0FBQUEsRUFDdkQsSUFBSTtBQUFBLEVBQ0QsTUFBTTtBQUFBLEVBQ1QsVUFBVSxNQUFNO0FBQ2YsV0FBTyxNQUFNLG1CQUFtQjtBQUFBLEVBQ2pDO0FBQ0Q7QUFzQkEsSUFBTSxrQkFBa0I7QUFBQSxFQUN2QjtBQUFBLEVBQ0E7QUFBQSxFQUNBO0FBQUE7QUFFRDtBQUVBLFNBQVMsWUFBWSxRQUF3QjtBQUN6QyxrQkFBZ0IsUUFBUSxDQUFDLE1BQU07QUFDM0IsV0FBTyxXQUFXLEVBQUUsTUFBTSxDQUFDO0FBQUEsRUFDL0IsQ0FBQztBQUNMO0FBRUEsSUFBcUIsa0JBQXJCLGNBQTZDLHdCQUFPO0FBQUEsRUFNbkQsTUFBTSxTQUFTO0FBQ2QsVUFBTSxLQUFLLGFBQWE7QUFFeEIsU0FBSyxTQUFTLElBQUksU0FBUyxLQUFLLEdBQUc7QUFDbkMsU0FBSyxRQUFRLElBQUksVUFBVSxJQUFJO0FBQy9CLFNBQUssV0FBVyxJQUFJLGVBQWUsSUFBSTtBQUV2QyxnQkFBWSxJQUFJO0FBRWhCLFNBQUssV0FBVztBQUFBLE1BQ2YsSUFBSTtBQUFBLE1BQ0osTUFBTTtBQUFBLE1BQ04sVUFBVSxNQUFNO0FBQ2YsYUFBSyxrQkFBa0IsRUFBRTtBQUFBLFVBQ3hCLE1BQUk7QUFBQyxpQkFBSyxTQUFTLGNBQWMsS0FBSztBQUFBLFVBQUU7QUFBQSxRQUN6QztBQUFBLE1BQ0Q7QUFBQSxJQUNELENBQUM7QUFFRCxTQUFLLFdBQVc7QUFBQSxNQUNmLElBQUk7QUFBQSxNQUNKLE1BQU07QUFBQSxNQUNOLFVBQVUsTUFBTTtBQUNmLGFBQUssTUFBTSx1QkFBdUIsRUFBRTtBQUFBLFVBQ25DLE1BQUk7QUFBQyxpQkFBSyxTQUFTLGNBQWMsS0FBSztBQUFBLFVBQUU7QUFBQSxRQUN6QztBQUFBLE1BQ0Q7QUFBQSxJQUNELENBQUM7QUFFRCxTQUFLLFdBQVc7QUFBQSxNQUNmLElBQUk7QUFBQSxNQUNKLE1BQU07QUFBQSxNQUNOLFVBQVUsTUFBTTtBQUNmLGFBQUssa0JBQWtCO0FBQUEsTUFDeEI7QUFBQSxJQUNELENBQUM7QUFFRCxTQUFLLFdBQVc7QUFBQSxNQUNmLElBQUk7QUFBQSxNQUNKLE1BQU07QUFBQSxNQUNOLFVBQVUsTUFBTTtBQUNmLGFBQUssTUFBTSxvQkFBb0I7QUFBQSxNQUNoQztBQUFBLElBQ0QsQ0FBQztBQUVELFNBQUssV0FBVztBQUFBLE1BQ2YsSUFBSTtBQUFBLE1BQ0osTUFBTTtBQUFBLE1BQ04sVUFBVSxNQUFNO0FBQ2YsYUFBSyxNQUFNLGdCQUFnQjtBQUFBLE1BQzVCO0FBQUEsSUFDRCxDQUFDO0FBRUQsU0FBSyxXQUFXO0FBQUEsTUFDZixJQUFJO0FBQUEsTUFDSixNQUFNO0FBQUEsTUFDTixVQUFVLE1BQU07QUFDZixhQUFLLE1BQU0sZ0JBQWdCO0FBQUEsTUFDNUI7QUFBQSxJQUNELENBQUM7QUFHRCxTQUFLLFdBQVc7QUFBQSxNQUNmLElBQUk7QUFBQSxNQUNKLE1BQU07QUFBQSxNQUNOLFVBQVUsTUFBTTtBQUNmLGFBQUssY0FBYztBQUFBLE1BQ3BCO0FBQUEsSUFDRCxDQUFDO0FBRUQsU0FBSyxXQUFXO0FBQUEsTUFDZixJQUFJO0FBQUEsTUFDSixNQUFNO0FBQUEsTUFDTixVQUFVLE1BQU07QUFDZixhQUFLLE1BQU0sNEJBQTRCO0FBQUEsTUFDeEM7QUFBQSxJQUNELENBQUM7QUFFRCxTQUFLLFdBQVc7QUFBQSxNQUNmLElBQUk7QUFBQSxNQUNKLE1BQU07QUFBQSxNQUNOLFVBQVUsTUFBTTtBQUNmLGFBQUssd0JBQXdCO0FBQUEsTUFDOUI7QUFBQSxJQUNELENBQUM7QUFHRCxTQUFLLGNBQWMsSUFBSSxhQUFhLEtBQUssS0FBSyxJQUFJLENBQUM7QUFFbkQsWUFBUSxJQUFJLDBDQUEwQztBQUN0RCxTQUFLO0FBQUEsTUFDSixLQUFLLElBQUksVUFBVSxHQUFHLGFBQWEsS0FBSyxrQkFBa0I7QUFBQSxJQUMzRDtBQUVBLFNBQUssY0FBYyxLQUFLLElBQUksVUFBVSxHQUFHLGFBQWEsQ0FBQyxNQUFNLFNBQVM7QUFDckUsV0FBSyxRQUFRLENBQUMsU0FBUztBQUN0QixhQUNFLFNBQVMsMEJBQTBCLEVBQ25DLFFBQVEsTUFBTTtBQUNkLGVBQUssTUFBTSxtQkFBbUI7QUFBQSxRQUNoQyxDQUFDO0FBQUEsTUFDRixDQUFDO0FBQUEsSUFDRixDQUFDLENBQUM7QUFFRixTQUFLLGNBQWMsS0FBSyxJQUFJLE1BQU07QUFBQSxNQUNqQztBQUFBLE1BQVUsQ0FBQyxTQUFnQjtBQUMxQixhQUFLLE1BQU0sZUFBZSxJQUFJO0FBQzlCLGFBQUssU0FBUyxjQUFjLEtBQUs7QUFBQSxNQUNsQztBQUFBLElBQ0QsQ0FBQztBQUFBLEVBQ0Y7QUFBQSxFQUdBLFdBQVc7QUFDVixZQUFRLElBQUksNENBQTRDO0FBQ3hELFNBQUssSUFBSSxVQUFVLElBQUksYUFBYSxLQUFLLGtCQUFrQjtBQUMzRCxTQUFLLFNBQVMsV0FBVztBQUN6QixTQUFLLFNBQVMsY0FBYyxLQUFLO0FBQUEsRUFFbEM7QUFBQSxFQUVBLE1BQU0sbUJBQW1CLE1BQUs7QUFDN0IsUUFBSSxLQUFLLE1BQU0sSUFBSSxRQUFRLFVBQVUsWUFBWTtBQUNqRCxRQUFHLENBQUMsSUFBRztBQUFDO0FBQUEsSUFBTztBQUNmLFFBQUcsR0FBRyxTQUFTLGlCQUFnQjtBQUM5QixTQUFHLElBQUksU0FBUztBQUFBLFFBQ2Y7QUFBQSxNQUNEO0FBQUEsSUFDRDtBQUNBLFFBQUcsR0FBRyxTQUFTLGNBQWE7QUFDM0IsVUFBSSxTQUFTLE1BQU0sSUFBSSxRQUFRLFVBQVUsdUJBQXVCO0FBQ2hFLGFBQU8sTUFBTSxrQkFBa0I7QUFBQSxJQUNoQztBQUFBLEVBQ0Q7QUFBQSxFQUVBLE1BQU0sZUFBZTtBQUNwQixTQUFLLFdBQVcsT0FBTyxPQUFPLENBQUMsR0FBRyxrQkFBa0IsTUFBTSxLQUFLLFNBQVMsQ0FBQztBQUFBLEVBQzFFO0FBQUEsRUFFQSxNQUFNLGVBQWU7QUFDcEIsVUFBTSxLQUFLLFNBQVMsS0FBSyxRQUFRO0FBQUEsRUFDbEM7QUFBQSxFQUVBLE1BQU0sY0FBYyxRQUFNLEtBQUssTUFBTSxjQUFhLE9BQUssYUFBWTtBQUNsRSxRQUFJLFFBQVEsS0FBSyxNQUFNLFlBQVksS0FBSztBQUN4QyxRQUFHLE1BQU0sUUFBTztBQUNmLFVBQUcsU0FBTyxhQUFZO0FBQ3JCLGVBQU8sTUFBTSxLQUFLLE1BQU07QUFBQSxVQUN2QixDQUFDLDRCQUFPLDRCQUFPLDBCQUFPO0FBQUEsVUFDdEIsQ0FBQyxDQUFDLFFBQU8sS0FBSyxHQUFFLENBQUMsUUFBTyxLQUFLLEdBQUUsQ0FBQyxRQUFPLEtBQUssQ0FBQztBQUFBLFFBQzlDO0FBQUEsTUFDRDtBQUNBLFVBQUksTUFBTSxLQUFLLE9BQU8sWUFBWSxPQUFNLEtBQUssQ0FBQyxDQUFDO0FBQy9DLFVBQUcsS0FBSTtBQUNOLGlCQUFRLFFBQVEsT0FBTTtBQUNyQixjQUFJO0FBQ0osY0FBRyxLQUFLLENBQUMsTUFBSSxPQUFNO0FBQ2xCLHFCQUFPLE1BQU07QUFBQSxVQUNkLE9BQUs7QUFDSixxQkFBTztBQUFBLFVBQ1I7QUFDQSxlQUFLLE9BQU8sUUFBUSxNQUFLLEtBQUksTUFBTTtBQUFBLFFBQ3BDO0FBQUEsTUFDRDtBQUFBLElBQ0Q7QUFBQSxFQUNEO0FBQUEsRUFFQSxJQUFJLFNBQVE7QUFDWCxXQUFPLFlBQVksS0FBSyxLQUFJLGtCQUFrQjtBQUFBLEVBQy9DO0FBQUEsRUFFQSxNQUFNLDBCQUF5QjtBQUM5QixRQUFJLFFBQVEsTUFBTSxLQUFLLE1BQU0sZ0JBQWdCO0FBQzdDLFNBQUcsK0JBQU8sVUFBTyxHQUFFO0FBQ2xCLFVBQUk7QUFDSCxZQUFJLE9BQU8sTUFBTSxLQUFLLE9BQU8sd0RBQVc7QUFDeEMsWUFBRyxRQUFNLE1BQUs7QUFDYjtBQUFBLFFBQ0Q7QUFDQSxZQUFJLE1BQU0sSUFBSSxPQUFPLE1BQUssR0FBRztBQUU3QixZQUFJLFNBQVMsTUFBTSxLQUFLLE9BQU8sZ0NBQU87QUFDdEMsWUFBRyxVQUFRLE1BQUs7QUFDZjtBQUFBLFFBQ0Q7QUFDQSxpQkFBUyxPQUFPLEtBQUssRUFBRTtBQUFBLFVBQ3RCO0FBQUEsVUFBTztBQUFBLFFBQ1I7QUFDQSxnQkFBUSxJQUFJLE1BQUssS0FBSSxNQUFNO0FBQzNCLGlCQUFRLFFBQVEsT0FBTTtBQUNyQixnQkFBTSxLQUFLLE9BQU8sUUFBUSxNQUFLLEtBQUksTUFBTTtBQUFBLFFBQzFDO0FBQUEsTUFDRCxTQUFTLE9BQVA7QUFDRCxnQkFBUSxJQUFJLEtBQUs7QUFBQSxNQUNsQjtBQUFBLElBRUQ7QUFBQSxFQUNEO0FBQUEsRUFFQSxNQUFNLG9CQUFtQjtBQUV4QixRQUFJLE9BQU8sS0FBSyxNQUFNO0FBQ3RCLFFBQUcsUUFBTSxNQUFLO0FBQUM7QUFBQSxJQUFPO0FBRXRCLFFBQUksUUFBUSxLQUFLLE1BQU0scUJBQXFCLDZCQUFNLFFBQU8sS0FBSztBQUM5RCxZQUFRLEtBQUssTUFBTSxZQUFZLE9BQU0sQ0FBQyxTQUFRLEdBQUcsQ0FBQztBQUNsRCxZQUFRLEtBQUssTUFBTSxxQkFBcUIsS0FBSztBQUc3QyxVQUFNLE9BQU8sTUFBTSxLQUFLLE1BQU07QUFBQSxNQUM3QixDQUFDLFNBQVMsS0FBSyxnQkFBZ0IsTUFBSyxDQUFDLEdBQUUsRUFBRTtBQUFBLE1BQ3pDO0FBQUEsSUFDRDtBQUVBLFFBQUcsQ0FBQyxNQUFLO0FBQUM7QUFBQSxJQUFPO0FBRWpCLFFBQUksU0FBUztBQUFBLE1BQ1o7QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNEO0FBQ0EsUUFBSSxPQUFPLE1BQU0sS0FBSyxNQUFNO0FBQUEsTUFDM0I7QUFBQSxNQUFPO0FBQUEsTUFBTztBQUFBLE1BQU07QUFBQSxJQUNyQjtBQUVBLFFBQUcsQ0FBQyxNQUFLO0FBQUM7QUFBQSxJQUFPO0FBRWpCLFlBQVEsSUFBSSxPQUFPLE1BQU0sSUFBSTtBQUU3QixRQUFHLFNBQU8sdUJBQXNCO0FBQy9CLFdBQUssTUFBTSwwQkFBMEIsTUFBSyxJQUFJO0FBQUEsSUFDL0MsV0FBUyxTQUFPLHVCQUFzQjtBQUNyQyxXQUFLLE1BQU0sMEJBQTBCLE1BQUssSUFBSTtBQUFBLElBQy9DLFdBQVMsU0FBTyxzQkFBcUI7QUFDcEMsV0FBSyxNQUFNLHlCQUF5QixNQUFLLElBQUk7QUFBQSxJQUM5QyxXQUFTLFNBQU8scUJBQW9CO0FBQ25DLFdBQUssTUFBTSx3QkFBd0IsTUFBSyxJQUFJO0FBQUEsSUFDN0MsT0FBSztBQUNKO0FBQUEsSUFDRDtBQUFBLEVBRUQ7QUFBQSxFQUVBLGdCQUFnQixPQUFNLFFBQU8sS0FBSTtBQUNoQyxRQUFJLE9BQU8sS0FBSyxJQUFJLGNBQWMsYUFBYSxLQUFLO0FBQ3BELFFBQUksUUFBUSxJQUFJLE1BQU07QUFDdEIsUUFBRyxTQUFPLEtBQUssTUFBTSxjQUFhO0FBQ2pDLFlBQU0sS0FBSyxjQUFPLE1BQU0sUUFBUTtBQUFBLElBQ2pDLE9BQUs7QUFDSixZQUFNLEtBQUssTUFBTSxRQUFRO0FBQUEsSUFDMUI7QUFFQSxhQUFRLFNBQVMsUUFBTztBQUN2QixVQUFHO0FBQ0YsY0FBTSxLQUFLLEtBQUssWUFBWSxLQUFLLENBQUM7QUFBQSxNQUNuQyxTQUFPLE9BQU47QUFDQSxjQUFNLEtBQUssR0FBRztBQUFBLE1BQ2Y7QUFBQSxJQUNEO0FBQ0EsV0FBTyxNQUFNLEtBQUssR0FBRztBQUFBLEVBQ3RCO0FBQUEsRUFFQSxvQkFBbUI7QUFFbEIsUUFBSSxPQUFPLEtBQUssTUFBTTtBQUN0QixXQUFPLEtBQUssTUFBTSxnQkFBZ0IsTUFBSyxLQUFLLEVBQUUsS0FBSyxDQUFDLFVBQVE7QUFDM0QsY0FBUSxLQUFLLE1BQU0sWUFBWSxPQUFNLENBQUMsU0FBUSxHQUFHLENBQUM7QUFDbEQsY0FBUSxLQUFLLE1BQU0scUJBQXFCLEtBQUs7QUFDN0MsYUFBTyxLQUFLLE1BQU07QUFBQSxRQUNqQixDQUFDLFNBQVMsS0FBSyxNQUFNLGdCQUFnQixJQUFJO0FBQUEsUUFDekM7QUFBQSxNQUNELEVBQUUsS0FBSyxDQUFDLFNBQU87QUFDZCxlQUFPLEtBQUssTUFBTSxVQUFVLElBQUk7QUFBQSxNQUNqQyxDQUFDO0FBQUEsSUFDRixDQUFDO0FBQUEsRUFDRjtBQUVEO0FBRUEsSUFBTSxlQUFOLGNBQTJCLGtDQUFpQjtBQUFBLEVBRzNDLFlBQVlDLE1BQVUsUUFBeUI7QUFDOUMsVUFBTUEsTUFBSyxNQUFNO0FBQ2pCLFNBQUssU0FBUztBQUFBLEVBQ2Y7QUFBQSxFQUVBLFVBQWdCO0FBQ2YsVUFBTSxFQUFDLFlBQVcsSUFBSTtBQUV0QixnQkFBWSxNQUFNO0FBRWxCLFFBQUkseUJBQVEsV0FBVyxFQUNwQixRQUFRLG9CQUFvQixFQUM1QixRQUFRLDZCQUE2QixFQUNyQztBQUFBLE1BQVUsVUFBUSxLQUNqQixTQUFTLEtBQUssT0FBTyxTQUFTLGtCQUFrQixFQUNoRCxTQUFTLE9BQU8sVUFBVTtBQUMxQixhQUFLLE9BQU8sU0FBUyxxQkFBcUI7QUFDMUMsY0FBTSxLQUFLLE9BQU8sYUFBYTtBQUMvQixhQUFLLE9BQU8sU0FBUyxjQUFjLEtBQUs7QUFBQSxNQUN6QyxDQUFDO0FBQUEsSUFDRjtBQUdGLFFBQUkseUJBQVEsV0FBVyxFQUNyQixRQUFRLFdBQVcsRUFDbkIsUUFBUSwrQkFBK0IsRUFDdkMsUUFBUSxVQUFRLEtBQ2YsU0FBUyxLQUFLLE9BQU8sU0FBUyxTQUFTLEVBQ3ZDLFNBQVMsT0FBTyxVQUFVO0FBQzFCLFdBQUssT0FBTyxTQUFTLFlBQVk7QUFDakMsWUFBTSxLQUFLLE9BQU8sYUFBYTtBQUFBLElBQ2hDLENBQUMsQ0FBQztBQUVKLFFBQUkseUJBQVEsV0FBVyxFQUNyQixRQUFRLFdBQVcsRUFDbkIsUUFBUSwrQkFBK0IsRUFDdkMsUUFBUSxVQUFRLEtBQ2YsU0FBUyxLQUFLLE9BQU8sU0FBUyxTQUFTLEVBQ3ZDLFNBQVMsT0FBTyxVQUFVO0FBQzFCLFdBQUssT0FBTyxTQUFTLFlBQVk7QUFDakMsWUFBTSxLQUFLLE9BQU8sYUFBYTtBQUFBLElBQ2hDLENBQUMsQ0FBQztBQUVKLFFBQUkseUJBQVEsV0FBVyxFQUNwQixRQUFRLFVBQVUsRUFDbEIsUUFBUSxtQ0FBbUMsRUFDM0M7QUFBQSxNQUFVLFVBQVEsS0FDakIsU0FBUyxLQUFLLE9BQU8sU0FBUyxRQUFRLEVBQ3RDLFNBQVMsT0FBTyxVQUFVO0FBQzFCLGFBQUssT0FBTyxTQUFTLFdBQVc7QUFDaEMsY0FBTSxLQUFLLE9BQU8sYUFBYTtBQUFBLE1BQ2hDLENBQUM7QUFBQSxJQUNGO0FBRUYsUUFBSSx5QkFBUSxXQUFXLEVBQ3BCLFFBQVEsaUJBQWlCLEVBQ3pCLFFBQVEsdUNBQXVDLEVBQy9DO0FBQUEsTUFBVSxVQUFRLEtBQ2pCLFNBQVMsS0FBSyxPQUFPLFNBQVMsZUFBZSxFQUM3QyxTQUFTLE9BQU8sVUFBVTtBQUMxQixhQUFLLE9BQU8sU0FBUyxrQkFBa0I7QUFDdkMsY0FBTSxLQUFLLE9BQU8sYUFBYTtBQUFBLE1BQ2hDLENBQUM7QUFBQSxJQUNGO0FBQ0YsUUFBSSx5QkFBUSxXQUFXLEVBQ3BCLFFBQVEsY0FBYyxFQUN0QixRQUFRLG9DQUFvQyxFQUM1QztBQUFBLE1BQVUsVUFBUSxLQUNqQixTQUFTLEtBQUssT0FBTyxTQUFTLFlBQVksRUFDMUMsU0FBUyxPQUFPLFVBQVU7QUFDMUIsYUFBSyxPQUFPLFNBQVMsZUFBZTtBQUNwQyxjQUFNLEtBQUssT0FBTyxhQUFhO0FBQUEsTUFDaEMsQ0FBQztBQUFBLElBQ0Y7QUFBQSxFQUNIO0FBQ0Q7IiwKICAibmFtZXMiOiBbImltcG9ydF9vYnNpZGlhbiIsICJhcHAiLCAiYXBwIiwgImYiLCAiaW1wb3J0X29ic2lkaWFuIiwgImFwcCJdCn0K
+
+/* nosourcemap */

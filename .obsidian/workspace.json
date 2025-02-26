@@ -4,52 +4,46 @@
     "type": "split",
     "children": [
       {
-        "id": "cbe6b4dc158be4c5",
+        "id": "7045532e27a07410",
         "type": "tabs",
         "children": [
           {
-            "id": "02218b4749029dae",
+            "id": "bee257b9be5d23a9",
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🏡Home.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
-              "pinned": true
+              "type": "langr-stat",
+              "state": {},
+              "pinned": true,
+              "icon": "bar-chart-4",
+              "title": "统计"
             }
           },
           {
-            "id": "bd7ddb35fbd989f9",
+            "id": "e137e32cb9ca758f",
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "search",
-              "state": {
-                "query": "上传图片",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "pinned": true
+              "type": "langr-data-panel",
+              "state": {},
+              "pinned": true,
+              "icon": "database",
+              "title": "单词列表"
             }
           },
           {
-            "id": "b9993f6648b476d0",
+            "id": "af1431b97ce60fe6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
+                "file": "学习区/02-大学英语/四级真题/作文/大英3.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "大英3"
             }
           }
         ],
@@ -73,158 +67,71 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
-            "id": "e042589813d6689a",
+            "id": "a86ce6b692d1f694",
             "type": "leaf",
             "state": {
-              "type": "recent-files",
-              "state": {}
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
-            "id": "7248bb0e86973edd",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "142f1bcac20f7ffb",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
-          },
-          {
-            "id": "89c2c2b4ca3b02ce",
-            "type": "leaf",
-            "state": {
-              "type": "surfing-tab-tree",
-              "state": {}
-            }
-          },
-          {
-            "id": "f93627b8c2dd366f",
+            "id": "1ce830c13bbcb28b",
             "type": "leaf",
             "state": {
               "type": "langr-search-panel",
-              "state": {}
+              "state": {},
+              "icon": "book",
+              "title": "查词面板"
+            }
+          },
+          {
+            "id": "e2cfbf8b71e504ac",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-tab-tree",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 265.5
   },
   "right": {
     "id": "34fb4efa27cf970d",
     "type": "split",
     "children": [
       {
-        "id": "d4a138574bae43c9",
-        "type": "tabs",
-        "dimension": 32.8125,
-        "children": [
-          {
-            "id": "d5875a4ebf9ee3f8",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
-                "options": {
-                  "collapse-filter": false,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": true,
-                  "showTags": true,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": false,
-                  "colorGroups": [],
-                  "collapse-display": false,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": false,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1.965556045656677,
-                  "close": true
-                }
-              }
-            }
-          },
-          {
-            "id": "2c10a3b5e1baab1f",
-            "type": "leaf",
-            "state": {
-              "type": "QUICKSHARE_SIDE_VIEW",
-              "state": {}
-            }
-          },
-          {
-            "id": "9bd71ae87dadd5d5",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "8a016bce3f412052",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "6fceb92901770fcb",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 4
-      },
-      {
         "id": "72a4b91604aed60d",
         "type": "tabs",
-        "dimension": 67.1875,
         "children": [
           {
-            "id": "b7f62067e71f949d",
+            "id": "efb588280c1fc08d",
             "type": "leaf",
             "state": {
-              "type": "quiet-outline",
-              "state": {}
+              "type": "langr-learn-panel",
+              "state": {},
+              "icon": "reading-glasses",
+              "title": "学习新单词"
             }
           },
           {
@@ -233,134 +140,153 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
-            "id": "c8f493acf1e3c447",
+            "id": "40cc0fb830140984",
             "type": "leaf",
             "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              }
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "笔记复习序列"
             }
           },
           {
-            "id": "a6687704af4f2030",
+            "id": "98c3fba07f7febc6",
             "type": "leaf",
             "state": {
-              "type": "file-properties",
-              "state": {
-                "file": "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md"
-              }
+              "type": "QUICKSHARE_SIDE_VIEW",
+              "state": {},
+              "icon": "cloud",
+              "title": "QuickShare"
             }
           },
           {
-            "id": "84ab4fa7d9253665",
+            "id": "b0982c8b788a6a29",
             "type": "leaf",
             "state": {
               "type": "timeline",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          },
+          {
+            "id": "6b675e81be9ded43",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 237.5
+    "width": 323.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-weread-plugin:同步微信读书笔记": false,
+      "obsidian-memos:Thino": false,
+      "fuzzy-chinese-pinyin:FuzzySearch": false,
       "obsidian-daily-notes-viewer:打开 Viewer": false,
       "improved-random-note:Open improved random note": false,
       "float-search:Search Obsidian In Modal": false,
+      "media-extended:Open media": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
+      "float-search:Search obsidian in modal view": false,
+      "obsidian-kanban:创建新看板": false,
+      "obsidian-projects:打开项目": false,
       "random-note:开始漫游笔记": false,
       "canvas:新建白板": false,
-      "graph:查看关系图谱": false,
       "markdown-importer:打开 Markdown 格式转换器": true,
       "audio-recorder:开始/结束录音": true,
       "workspaces:管理工作区布局": true,
-      "templater-obsidian:Templater": true,
+      "switcher:打开快速切换": true,
+      "graph:查看关系图谱": false,
+      "templater-obsidian:Templater": false,
       "daily-notes:打开/创建今天的日记": true,
       "templates:插入模板": true,
       "command-palette:打开命令面板": true,
       "cmdr:显示当前文件": false,
       "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-day-planner:Timeline": false,
       "obsidian-language-learner:打开查词面板": false,
       "obsidian-language-learner:打开新词面板": false,
       "obsidian-language-learner:打开统计": false,
       "obsidian-language-learner:单词列表": false,
+      "obsidian42-brat:BRAT": true,
       "obsidian-spaced-repetition-recall:复习卡片": false,
+      "cloze:显/隐所有填空": false,
       "obsidian-regex-pipeline:Regex Rulesets": false,
       "flashcards-obsidian:Generate flashcards": false,
-      "obsidian-day-planner:Timeline": false,
-      "obsidian42-brat:BRAT": true,
       "remotely-save:Remotely Save": false,
-      "obsidian-memos:Thino": false,
-      "obsidian-weread-plugin:同步微信读书笔记": false,
       "obsidian-omnivore:Omnivore": false,
-      "fuzzy-chinese-pinyin:FuzzySearch": true,
-      "cloze:显/隐所有填空": false,
-      "switcher:打开快速切换": false,
       "extract-highlights-plugin:Extract Highlights": false,
       "big-calendar:Big Calendar": false,
-      "media-extended:Open media": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-projects:Open projects": false,
+      "surfing:surfing-bookmark-manager": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "b9993f6648b476d0",
+  "active": "af1431b97ce60fe6",
   "lastOpenFiles": [
-    "个人区/6-SimpRead/Obsidian 启动缓慢终结者，Lazy Plugin Loader 插件重度用户的福音.md",
-    "个人区/6-SimpRead/Obsidian插件Folder Note：轻松打造层级化笔记系统.md",
-    "个人区/6-SimpRead/Obsidian 也能垂直标签页，生产力拉满.md",
-    "学习区/07-Java/day01-Java入门/笔记/assets/1.png",
-    "学习区/07-Java/day02-Java基础概念/笔记/day02-Java基础语法.md",
-    "学习区/07-Java/day01-Java入门/笔记/day01-Java基础语法.md",
-    "🏡Home.md",
-    "学习区/07-Java/day01-Java入门/资料/必须安装的软件/JDK/jdk-17_windows-x64_bin.exe.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/其他软件/解压软件/rar.exe.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/其他软件/阅读笔记的软件/typora-setup-x64.exe.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/其他软件/视频播放器/VLC播放器.zip.baiduyun.p.downloading",
+    "学习区/04-C 1/概念库/链表.md",
+    "学习区/04-C 1/C  基础入门.md",
+    "学习区/04-C 1/概念库/字符串.md",
+    "学习区/04-C 1/概念库/静态变量.md",
+    "学习区/04-C 1/概念库/随机函数.md",
+    "学习区/04-C 1/概念库/递归函数.md",
+    "学习区/04-C 1/概念库/函数重载.md",
+    "学习区/04-C 1/概念库/字符数组.md",
+    "学习区/04-C 1/概念库/函数模板.md",
+    "学习区/04-C 1/概念库/二维数组.md",
+    "学习区/04-C 1/Untitled.js",
+    "学习区/04-C 1/概念库/辗转相除法.md",
+    "学习区/04-C 1/概念库/选择排序法.md",
+    "学习区/04-C 1/概念库/冒泡排序法.md",
+    "学习区/04-C 1/概念库/顺序查找法.md",
+    "学习区/04-C 1/概念库/二分查找法.md",
+    "学习区/04-C 1/概念库/this指针.md",
+    "学习区/04-C 1/概念库/get 函数.md",
+    "学习区/04-C 1/概念库/字符检查函数.md",
+    "学习区/04-C 1/概念库/read 函数.md",
+    "学习区/04-C 1/概念库/getline 函数.md",
+    "学习区/04-C 1/概念库/ios 命名空间中常用的成员.md",
+    "个人区/2-weread/龙族全套 共七册（龙族Ⅰ-龙族Ⅳ 龙族前传）.md",
+    "学习区/02-大学英语/听力库/02 How long does it take to get over a breakup.md",
+    "学习区/02-大学英语/四级真题/作文/大英3.md",
+    "个人区/6-SimpRead/低调使用！30 神级功能，永久激活版，大小仅6M！.md",
+    "学习区/02-大学英语/四级真题/作文/题目5：提案 (Proposal) 学校开新俱乐部.md",
+    "学习区/07-Java/day01-Java入门/资料/资料/JDK9_API帮助文档.CHM.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/资料/JDK6_API帮助文档.CHM.baiduyun.p.downloading",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202194945932.jpg",
     "学习区/07-Java/day01-Java入门/资料/其他软件/搜狗输入法/sogou_pinyin_8.7.0.1657_6991.exe.baiduyun.p.downloading",
     "学习区/07-Java/day01-Java入门/资料/其他软件/翻译软件/YoudaoDict_V6.3.67.7016_setup.1439368979.exe.baiduyun.p.downloading",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/继承练习分析.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202211331250.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202210617427.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202195304827.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202195115179.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202194945932.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/3.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/2.jpg",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/1560747035458.png",
-    "学习区/07-Java/day12-学生管理系统升级版/作业/day11作业详解/day11作业详解.md",
-    "学习区/07-Java/day11-集合&学生管理系统/作业/day10作业讲解/day10字符串作业.md",
-    "学习区/07-Java/day10-字符串/作业/day09作业讲解/day09面向对象作业.md",
-    "学习区/07-Java/day09-面向对象综合训练/作业/day08作业讲解/day08面向对象.md",
-    "学习区/07-Java/day05-循环高级和数组/作业/day04作业答案/day04作业.md",
-    "学习区/07-Java/day07-综合练习/作业/day06作业讲解/方法.md",
-    "学习区/07-Java/day04-判断和循环/作业/day03作业答案/day03作业.md",
-    "学习区/07-Java/day06-方法/作业/day05作业讲解/day05作业.md",
-    "学习区/07-Java/day03-运算符/作业/day02作业讲解/day02作业.md",
-    "学习区/07-Java/day01-Java入门/资料/资料/JDK9_API帮助文档.CHM.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/资料/JDK6_API帮助文档.chw",
-    "学习区/07-Java/day01-Java入门/资料/资料/JDK6_API帮助文档.CHM.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/资料/JDK11_API帮助文档.CHM.baiduyun.p.downloading",
-    "学习区/07-Java/day02-Java基础概念/作业/day01作业讲解和答案/day01作业.md",
-    "学习区/07-Java/day12-学生管理系统升级版/资料/学生管理系统升级版的需求文档.md",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/day13面向对象进阶.md",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/作业/day13课后练习.md",
-    "学习区/07-Java/day12-学生管理系统升级版/作业/day12作业.md",
-    "学习区/07-Java/day11-集合&学生管理系统/资料/学生管理系统的需求文档.md",
-    "学习区/07-Java/day11-集合&学生管理系统/笔记/ArrayList&学生管理系统.md",
-    "学习区/07-Java/day11-集合&学生管理系统/作业/day11作业.md",
-    "学习区/07-Java/day10-字符串/笔记/常用API.md",
-    "学习区/07-Java/day10-字符串/作业/day10字符串作业.md",
-    "学习区/07-Java/day09-面向对象综合训练/笔记/面向对象综合训练综合练习.md",
+    "学习区/07-Java/day01-Java入门/资料/其他软件/翻译软件",
+    "学习区/07-Java/day01-Java入门/资料/其他软件/搜狗输入法",
+    "学习区/07-Java/day01-Java入门/资料/资料",
+    "学习区/07-Java/day01-Java入门/资料/其他软件",
+    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT38M54.16S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT37M25.529S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT34M32.228S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT33M51.703S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT32M32.033S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT1M11.228S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT57.964S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT1M20.792S.jpeg",
+    "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT11M14.844S.jpeg",
     "学习区/_Canvas/大学物理.canvas",
     "学习区/_Canvas/高等数学.canvas",
     "flomo/Flomo Canvas.canvas",

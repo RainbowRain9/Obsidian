@@ -1,23 +1,36 @@
 ---
-UID: {{DATE:YYYYMMDDHHmmss}}
-name: {{VALUE:fileName}}
+UID:
+  "{ DATE:YYYYMMDDHHmmss }": 
+name:
+  "{ VALUE:fileName }": 
 tags: []
 dtype: movie
-douban_url: {{VALUE:douban_url}}
-director: {{VALUE:director}}
-alias: {{VALUE:alias}}
-rating: {{VALUE:rating}}
-year: {{VALUE:year}}
-genre: {{VALUE:genre}}
+douban_url:
+  "{ VALUE:douban_url }": 
+director:
+  "{ VALUE:director }": 
+alias:
+  "{ VALUE:alias }": 
+rating:
+  "{ VALUE:rating }": 
+year:
+  "{ VALUE:year }": 
+genre:
+  "{ VALUE:genre }": 
 banner_icon: 🎞
-banner: {{VALUE:banner}}
-IMDb:  {{VALUE:IMDb}}
-language: {{VALUE:language}} 
-country: {{VALUE:country}} 
-viewtime:
-updated: 
+banner:
+  "{ VALUE:banner }": 
+IMDb:
+  "{ VALUE:IMDb }": 
+language:
+  "{ VALUE:language }": 
+country:
+  "{ VALUE:country }": 
+viewtime: 
+updated: 2023-11-15T01:42
 status: 
 grade: 
+created: 2023-11-13T23:19
 ---
 > [!bookinfo|noicon]+ 🎬《{{VALUE:fileName}}》
 > ![bookcover|200]({{VALUE:Poster}})

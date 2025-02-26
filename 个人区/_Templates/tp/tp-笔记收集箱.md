@@ -1,3 +1,7 @@
+---
+created: 2023-11-11T20:12
+updated: 2023-11-13T16:33
+---
 
 <%-*  let filetype = await tp.system.suggester(["笔记收集箱","流水账模板","人物模板","临时默认"], ["笔记收集箱", "流水账模板","人物模板","临时默认"], false, "Which template do you want to use?") -%>
 <%-* if (filetype === "笔记收集箱") {  -%>

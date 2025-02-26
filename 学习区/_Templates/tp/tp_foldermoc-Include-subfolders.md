@@ -1,3 +1,7 @@
+---
+created: 2023-11-13T23:19
+updated: 2023-11-15T01:42
+---
 <%* 
 let content=`---
 cssclass: kanban gridlist noyaml

@@ -7,6 +7,8 @@ subject: 高等数学
 dg-publish: true
 updated time: 2024-04-13 12:53:49
 created time: 2023-11-27 11:26:35
+created: 2023-11-27T11:26
+updated: 2024-04-13T12:54
 ---
 常见的求导公式？ #anki 
 $$

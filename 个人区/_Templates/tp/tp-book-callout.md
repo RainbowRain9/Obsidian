@@ -1,16 +1,22 @@
 ---
-UID: {{DATE:YYYYMMDDHHmmss}}
-name: {{VALUE:bookname}}
+UID:
+  "{ DATE:YYYYMMDDHHmmss }": 
+name:
+  "{ VALUE:bookname }": 
 tags: []
 dtype: book
 source: 
-author: {{VALUE:author}}
+author:
+  "{ VALUE:author }": 
 banner: "{{VALUE:cover}}"
 banner_icon: 📖
 status: 未开始
 readtime: 
-rating: {{VALUE:rating}}
+rating:
+  "{ VALUE:rating }": 
 grade: ⭐⭐⭐
+created: 2023-11-11T20:12
+updated: 2023-11-13T16:33
 ---
 
 > [!bookinfo]+ **《{{VALUE:bookname}}》**

@@ -1,3 +1,7 @@
+---
+created: 2023-11-22T20:29
+updated: 2023-11-24T16:57
+---
 persistent-graph
 obsidian-regex-pipeline
 obsidian-image-auto-upload-plugin
