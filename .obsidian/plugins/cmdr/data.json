@@ -15,6 +15,12 @@
       "icon": "alert-triangle",
       "name": "增强编辑: 修复意外断行",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-enhancing-mindmap:Toggle to markdown or mindmap",
+      "icon": "lucide-anchor",
+      "name": "Enhancing Mindmap: 切换为 markdown 或 mindmap 模式",
+      "mode": "any"
     }
   ],
   "leftRibbon": [

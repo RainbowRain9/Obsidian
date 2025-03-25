@@ -33,7 +33,6 @@
   "obsidian-local-rest-api",
   "floating-toc",
   "obsidian-style-settings",
-  "obsidian-markmind",
   "obsidian-importer",
   "folder-notes",
   "obsidian-to-notion",
@@ -62,5 +61,6 @@
   "obsidian-local-images",
   "settings-search",
   "obsidian-git",
-  "share-to-notionnext"
+  "share-to-notionnext",
+  "obsidian-markmind"
 ]
