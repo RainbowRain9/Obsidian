@@ -1,16 +1,16 @@
 {
   "accentColor": "#7abdff",
   "cssTheme": "AnuPpuccin",
-  "textFontFamily": ".苹方-港,仓耳今楷05,苹方-港,仓耳兰楷,Maple Mono NF",
-  "interfaceFontFamily": "仓耳兰楷",
+  "textFontFamily": "Comic Sans MS,苹方-港,.苹方-港,仓耳今楷05,仓耳兰楷,Maple Mono NF",
+  "interfaceFontFamily": "Comic Sans MS,仓耳今楷05",
   "theme": "obsidian",
   "enabledCssSnippets": [
     "【自定义】数字时钟",
     "【日记】periodic日历",
-    "custom-admonitions.c9c6cb",
-    "网格背景"
+    "custom-admonitions.c9c6cb"
   ],
   "baseFontSize": 20,
   "translucency": false,
-  "monospaceFontFamily": "Maple Mono NF"
+  "monospaceFontFamily": "Maple Mono NF",
+  "nativeMenus": false
 }

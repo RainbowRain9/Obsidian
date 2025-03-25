@@ -3,8 +3,7 @@ id: 106b95ab-39b3-4e3d-8590-03de1d61a184
 url: https://mp.weixin.qq.com/s/SjjoXs7fUvyi9AKNzluQeQ
 title: |
   KIMI官方精选提示词，一个超惊喜发现！
-author: |
-  Ai牛叔
+author: Ai牛叔
 source: 微信公众号
 dtype: 教程
 tags:
@@ -12,6 +11,8 @@ tags:
 banner: https://source.unsplash.com/900x1600/?
 state: false
 date: 2024-04-02 10:17:17
+created: 2024-04-06T21:19
+updated: 2025-02-27T13:50
 ---
 
 

@@ -5,7 +5,7 @@
   "insertAfter": "## 🏳️‍🌈金句",
   "insertBefore": "Over",
   "dailyNotesFormat": "YYYY-MM-DD_dddd",
-  "lastCookieTime": 1732542122727,
+  "lastCookieTime": 1742879689204,
   "isCookieValid": false,
   "user": "",
   "userVid": "",
@@ -17,5 +17,6 @@
   "notesBlacklist": "",
   "showEmptyChapterTitleToggle": false,
   "convertTags": false,
-  "saveArticleToggle": false
+  "saveArticleToggle": false,
+  "saveReadingInfoToggle": true
 }

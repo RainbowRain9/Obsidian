@@ -225,6 +225,11 @@
       "id": "copy-document-as-html:copy-as-html",
       "name": "Copy document as HTML: Copy current document to clipboard",
       "icon": "remix-FileCopyLine"
+    },
+    {
+      "id": "markdown-importer:open",
+      "name": "Markdown 格式转换器: 打开 Markdown 格式转换器",
+      "icon": "lucide-download"
     }
   ],
   "appendMethod": "workspace",
@@ -233,8 +238,8 @@
   "cMenuBottomValue": 4.25,
   "cMenuNumRows": 12,
   "cMenuWidth": 554,
-  "cMenuFontColor": "#ff0000",
-  "cMenuBackgroundColor": "#affad1",
+  "cMenuFontColor": "#00b0f0",
+  "cMenuBackgroundColor": "#fff88f",
   "autohide": true,
   "custom_bg1": "#FFB78B8C",
   "custom_bg2": "#CDF4698C",
@@ -245,5 +250,6 @@
   "custom_fc2": "#DE7802",
   "custom_fc3": "#245BDB",
   "custom_fc4": "#6425D0",
-  "custom_fc5": "#646A73"
+  "custom_fc5": "#646A73",
+  "isLoadOnMobile": false
 }

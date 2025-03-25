@@ -38052,15 +38052,25 @@ var ContentSplitter = class {
           currentHtml = "";
           currentAnchorIndex = file.hrefs.indexOf(id);
         }
-        currentHtml += node.outerHTML;
+        currentHtml += `<${element.tagName.toLowerCase()}${getAttributes(element)}>`;
+        if (node.hasChildNodes()) {
+          node.childNodes.forEach((child) => {
+            processNode(child);
+          });
+        }
+        currentHtml += `</${element.tagName.toLowerCase()}>`;
       } else if (node.nodeType === Node.TEXT_NODE) {
         currentHtml += node.textContent;
       }
-      if (node.hasChildNodes()) {
-        node.childNodes.forEach((child) => {
-          processNode(child);
-        });
+    };
+    const getAttributes = (element) => {
+      const attributes = element.attributes;
+      let result = "";
+      for (let i = 0; i < attributes.length; i++) {
+        const attr = attributes[i];
+        result += ` ${attr.name}="${attr.value}"`;
       }
+      return result;
     };
     processNode(doc.body);
     if (currentHtml) {

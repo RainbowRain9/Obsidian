@@ -18,10 +18,12 @@
                   "state": {
                     "file": "🏡Home.md",
                     "mode": "preview",
-                    "backlinks": false,
-                    "source": false
+                    "source": false,
+                    "backlinks": false
                   },
-                  "pinned": true
+                  "pinned": true,
+                  "icon": "lucide-file",
+                  "title": "🏡Home"
                 }
               },
               {
@@ -31,29 +33,44 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "上传图片",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
-                    "collapseAll": true,
+                    "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical"
                   },
-                  "pinned": true
+                  "pinned": true,
+                  "icon": "lucide-search",
+                  "title": "搜索"
                 }
               },
               {
-                "id": "7cafc8002a2cb85a",
+                "id": "9ba278e9a6dacde9",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
-                  "type": "surfing-view",
+                  "type": "markdown",
                   "state": {
-                    "url": "https://www.ticktick.com/webapp/#q/all/kanban"
+                    "file": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
                   },
-                  "pinned": true
+                  "icon": "lucide-file",
+                  "title": "第一章 行列式"
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           }
         ],
         "direction": "vertical"
@@ -72,8 +89,11 @@
                 "state": {
                   "type": "file-explorer",
                   "state": {
-                    "sortOrder": "alphabetical"
-                  }
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
                 }
               },
               {
@@ -81,7 +101,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "recent-files",
-                  "state": {}
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Recent Files"
                 }
               },
               {
@@ -89,7 +111,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "calendar",
-                  "state": {}
+                  "state": {},
+                  "icon": "calendar-with-checkmark",
+                  "title": "Calendar"
                 }
               },
               {
@@ -97,7 +121,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "bookmarks",
-                  "state": {}
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "书签"
                 }
               }
             ]
@@ -113,7 +139,7 @@
           {
             "id": "d4a138574bae43c9",
             "type": "tabs",
-            "dimension": 32.8125,
+            "dimension": 27.01421800947867,
             "children": [
               {
                 "id": "d5875a4ebf9ee3f8",
@@ -121,7 +147,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "🏡Home.md",
+                    "file": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -144,10 +170,12 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 1.0000000000000022,
+                      "scale": 0.6906394964510819,
                       "close": true
                     }
-                  }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "第一章 行列式 的关系图"
                 }
               },
               {
@@ -155,7 +183,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "QUICKSHARE_SIDE_VIEW",
-                  "state": {}
+                  "state": {},
+                  "icon": "cloud",
+                  "title": "QuickShare"
                 }
               },
               {
@@ -167,7 +197,9 @@
                     "file": "🏡Home.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": false
-                  }
+                  },
+                  "icon": "links-going-out",
+                  "title": "🏡Home 的出链列表"
                 }
               },
               {
@@ -176,7 +208,7 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "🏡Home.md",
+                    "file": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -184,23 +216,46 @@
                     "searchQuery": "",
                     "backlinkCollapsed": false,
                     "unlinkedCollapsed": false
-                  }
+                  },
+                  "icon": "links-coming-in",
+                  "title": "第一章 行列式 的反向链接列表"
+                }
+              },
+              {
+                "id": "8e3fd365e354bff6",
+                "type": "leaf",
+                "state": {
+                  "type": "todo",
+                  "state": {},
+                  "icon": "checkmark",
+                  "title": "Todo List"
+                }
+              },
+              {
+                "id": "8a1644af5cf2584f",
+                "type": "leaf",
+                "state": {
+                  "type": "planner-timeline",
+                  "state": {},
+                  "icon": "checkmark",
+                  "title": "Timeline"
                 }
               }
-            ],
-            "currentTab": 3
+            ]
           },
           {
             "id": "72a4b91604aed60d",
             "type": "tabs",
-            "dimension": 67.1875,
+            "dimension": 72.98578199052133,
             "children": [
               {
                 "id": "b7f62067e71f949d",
                 "type": "leaf",
                 "state": {
                   "type": "quiet-outline",
-                  "state": {}
+                  "state": {},
+                  "icon": "lines-of-text",
+                  "title": "Quiet Outline"
                 }
               },
               {
@@ -210,8 +265,12 @@
                   "type": "tag",
                   "state": {
                     "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
                 }
               },
               {
@@ -223,7 +282,9 @@
                     "sortOrder": "frequency",
                     "showSearch": false,
                     "searchQuery": ""
-                  }
+                  },
+                  "icon": "lucide-archive",
+                  "title": "添加笔记属性"
                 }
               },
               {
@@ -232,29 +293,40 @@
                 "state": {
                   "type": "file-properties",
                   "state": {
-                    "file": "🏡Home.md"
-                  }
+                    "file": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "第一章 行列式的笔记属性"
                 }
               },
               {
-                "id": "84ab4fa7d9253665",
+                "id": "4bd5f8f0fa1c4bcb",
                 "type": "leaf",
                 "state": {
-                  "type": "timeline",
-                  "state": {}
+                  "type": "copilot-chat-view",
+                  "state": {},
+                  "icon": "message-square",
+                  "title": "Copilot"
                 }
               }
-            ]
+            ],
+            "currentTab": 4
           }
         ],
         "direction": "horizontal",
-        "width": 237.5
+        "width": 366.5
       },
       "left-ribbon": {
         "hiddenItems": {
+          "obsidian-kanban:创建新看板": false,
+          "obsidian-day-planner:Open Timeline": false,
+          "obsidian-day-planner:Open Multi-Day View": false,
+          "float-search:Search obsidian in modal view": false,
+          "obsidian-importer:Open Importer": false,
+          "obsidian-to-notion:Share to notion": false,
+          "copilot:Open Copilot Chat": false,
           "obsidian-daily-notes-viewer:打开 Viewer": false,
           "improved-random-note:Open improved random note": false,
-          "float-search:Search Obsidian In Modal": false,
           "random-note:开始漫游笔记": false,
           "canvas:新建白板": false,
           "graph:查看关系图谱": false,
@@ -267,32 +339,30 @@
           "command-palette:打开命令面板": true,
           "cmdr:显示当前文件": false,
           "oz-clear-unused-images:Clear Unused Images": false,
-          "obsidian-language-learner:打开查词面板": false,
-          "obsidian-language-learner:打开新词面板": false,
-          "obsidian-language-learner:打开统计": false,
-          "obsidian-language-learner:单词列表": false,
           "obsidian-spaced-repetition-recall:复习卡片": false,
           "obsidian-regex-pipeline:Regex Rulesets": false,
-          "flashcards-obsidian:Generate flashcards": false,
-          "obsidian-day-planner:Timeline": false,
           "obsidian42-brat:BRAT": true,
           "remotely-save:Remotely Save": false,
           "obsidian-memos:Thino": false,
           "obsidian-weread-plugin:同步微信读书笔记": false,
-          "obsidian-omnivore:Omnivore": false,
           "fuzzy-chinese-pinyin:FuzzySearch": true,
           "cloze:显/隐所有填空": false,
+          "switcher:打开快速切换": false,
+          "tickticksync:TickTickSync": false,
           "extract-highlights-plugin:Extract Highlights": false,
+          "flashcards-obsidian:Generate flashcards": false,
           "big-calendar:Big Calendar": false,
           "media-extended:Open media": false,
-          "obsidian-projects:Open projects": false,
-          "surfing:surfing-bookmark-manager": false,
-          "omnisearch:Omnisearch": false,
-          "switcher:打开快速切换": false
+          "obsidian-projects:打开项目": false,
+          "obsidian-language-learner:打开查词面板": false,
+          "obsidian-language-learner:打开新词面板": false,
+          "obsidian-language-learner:打开统计": false,
+          "obsidian-language-learner:单词列表": false,
+          "omnisearch:Omnisearch": false
         }
       },
-      "active": "02218b4749029dae",
-      "mtime": "2024-04-16T17:33:55+08:00",
+      "active": "9ba278e9a6dacde9",
+      "mtime": "2025-03-25T12:27:03+08:00",
       "workspaces-plus:settings-v1": {
         "explorerFoldState": [
           "个人区",
@@ -300,7 +370,11 @@
           "个人区/1-生活/日记",
           "个人区/6-SimpRead",
           "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use",
-          "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin"
+          "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin",
+          "学习区",
+          "学习区/07-线性代数",
+          "学习区/07-线性代数/笔记库",
+          "学习区/07-线性代数/笔记库/第一章 行列式"
         ]
       }
     },
@@ -555,54 +629,71 @@
         "type": "split",
         "children": [
           {
-            "id": "7045532e27a07410",
+            "id": "cbe6b4dc158be4c5",
             "type": "tabs",
             "children": [
               {
-                "id": "9b4c93efd6c0e404",
+                "id": "02218b4749029dae",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
-                  "type": "langr-reading",
+                  "type": "markdown",
                   "state": {
-                    "file": "学习区/02-大学英语/听力库/02 How long does it take to get over a breakup.md"
+                    "file": "🏡Home.md",
+                    "mode": "preview",
+                    "source": false,
+                    "backlinks": false
                   },
-                  "pinned": true
+                  "pinned": true,
+                  "icon": "lucide-file",
+                  "title": "🏡Home"
                 }
               },
               {
-                "id": "aa1230322234e90a",
+                "id": "bd7ddb35fbd989f9",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
-                  "type": "surfing-view",
+                  "type": "search",
                   "state": {
-                    "url": "https://audiomass.co/"
+                    "query": "上传图片",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": true,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
                   },
-                  "pinned": true
+                  "pinned": true,
+                  "icon": "lucide-search",
+                  "title": "搜索"
                 }
               },
               {
-                "id": "bee257b9be5d23a9",
+                "id": "315b068456a5e9c8",
                 "type": "leaf",
-                "pinned": true,
                 "state": {
-                  "type": "langr-stat",
-                  "state": {},
-                  "pinned": true
-                }
-              },
-              {
-                "id": "e137e32cb9ca758f",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "langr-data-panel",
-                  "state": {},
-                  "pinned": true
+                  "type": "markdown",
+                  "state": {
+                    "file": "学习区/02-大学英语/考研真题/阅读/2010年真题/2010-02.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "2010-02"
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           }
         ],
         "direction": "vertical"
@@ -621,159 +712,201 @@
                 "state": {
                   "type": "file-explorer",
                   "state": {
-                    "sortOrder": "alphabetical"
-                  }
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
                 }
               },
               {
-                "id": "a86ce6b692d1f694",
+                "id": "e042589813d6689a",
                 "type": "leaf",
                 "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
-                  }
+                  "type": "recent-files",
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Recent Files"
                 }
               },
               {
-                "id": "1ce830c13bbcb28b",
+                "id": "7248bb0e86973edd",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {},
+                  "icon": "calendar-with-checkmark",
+                  "title": "Calendar"
+                }
+              },
+              {
+                "id": "142f1bcac20f7ffb",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "书签"
+                }
+              },
+              {
+                "id": "1a3d12f9829bd286",
                 "type": "leaf",
                 "state": {
                   "type": "langr-search-panel",
-                  "state": {}
-                }
-              },
-              {
-                "id": "e2cfbf8b71e504ac",
-                "type": "leaf",
-                "state": {
-                  "type": "surfing-tab-tree",
-                  "state": {}
+                  "state": {},
+                  "icon": "book",
+                  "title": "查词面板"
                 }
               }
             ],
-            "currentTab": 2
+            "currentTab": 4
           }
         ],
         "direction": "horizontal",
-        "width": 265.5
+        "width": 200
       },
       "right": {
         "id": "34fb4efa27cf970d",
         "type": "split",
         "children": [
           {
-            "id": "72a4b91604aed60d",
+            "id": "d4a138574bae43c9",
             "type": "tabs",
             "children": [
               {
-                "id": "efb588280c1fc08d",
+                "id": "f37eea8d75b3fa6c",
                 "type": "leaf",
                 "state": {
                   "type": "langr-learn-panel",
-                  "state": {}
+                  "state": {},
+                  "icon": "reading-glasses",
+                  "title": "学习新单词"
                 }
               },
               {
-                "id": "6f4659d6168a56bc",
+                "id": "bd202ee1e7652f69",
+                "type": "leaf",
+                "state": {
+                  "type": "copilot-chat-view",
+                  "state": {},
+                  "icon": "message-square",
+                  "title": "Copilot"
+                }
+              },
+              {
+                "id": "2c10a3b5e1baab1f",
+                "type": "leaf",
+                "state": {
+                  "type": "QUICKSHARE_SIDE_VIEW",
+                  "state": {},
+                  "icon": "cloud",
+                  "title": "QuickShare"
+                }
+              },
+              {
+                "id": "2fc1ee798ea19cf7",
+                "type": "leaf",
+                "state": {
+                  "type": "planner-timeline",
+                  "state": {},
+                  "icon": "checkmark",
+                  "title": "Timeline"
+                }
+              },
+              {
+                "id": "4bead876f5d48173",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
                   "state": {
-                    "sortOrder": "alphabetical",
-                    "useHierarchy": true
-                  }
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
                 }
               },
               {
-                "id": "40cc0fb830140984",
+                "id": "7d6a65fc6ba76324",
                 "type": "leaf",
                 "state": {
-                  "type": "review-queue-list-view",
-                  "state": {}
-                }
-              },
-              {
-                "id": "98c3fba07f7febc6",
-                "type": "leaf",
-                "state": {
-                  "type": "QUICKSHARE_SIDE_VIEW",
-                  "state": {}
-                }
-              },
-              {
-                "id": "b0982c8b788a6a29",
-                "type": "leaf",
-                "state": {
-                  "type": "timeline",
-                  "state": {}
-                }
-              },
-              {
-                "id": "6b675e81be9ded43",
-                "type": "leaf",
-                "state": {
-                  "type": "calendar",
-                  "state": {}
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "添加笔记属性"
                 }
               }
             ]
           }
         ],
         "direction": "horizontal",
-        "width": 323.5
+        "width": 329.5
       },
       "left-ribbon": {
         "hiddenItems": {
-          "digitalgarden:Digital Garden Publication Center": false,
-          "obsidian-memos:Memos": false,
+          "obsidian-kanban:创建新看板": false,
+          "obsidian-day-planner:Open Timeline": false,
+          "obsidian-day-planner:Open Multi-Day View": false,
+          "float-search:Search obsidian in modal view": false,
+          "obsidian-importer:Open Importer": false,
+          "obsidian-to-notion:Share to notion": false,
+          "copilot:Open Copilot Chat": false,
+          "obsidian-daily-notes-viewer:打开 Viewer": false,
+          "improved-random-note:Open improved random note": false,
           "random-note:开始漫游笔记": false,
           "canvas:新建白板": false,
+          "graph:查看关系图谱": false,
           "markdown-importer:打开 Markdown 格式转换器": true,
           "audio-recorder:开始/结束录音": true,
           "workspaces:管理工作区布局": true,
-          "switcher:打开快速切换": true,
-          "graph:查看关系图谱": false,
-          "templater-obsidian:Templater": false,
+          "templater-obsidian:Templater": true,
           "daily-notes:打开/创建今天的日记": true,
           "templates:插入模板": true,
           "command-palette:打开命令面板": true,
           "cmdr:显示当前文件": false,
           "oz-clear-unused-images:Clear Unused Images": false,
-          "obsidian-day-planner:Timeline": false,
+          "obsidian-spaced-repetition-recall:复习卡片": false,
+          "obsidian-regex-pipeline:Regex Rulesets": false,
+          "flashcards-obsidian:Generate flashcards": false,
+          "obsidian42-brat:BRAT": true,
+          "remotely-save:Remotely Save": false,
+          "obsidian-memos:Thino": false,
+          "obsidian-weread-plugin:同步微信读书笔记": false,
+          "fuzzy-chinese-pinyin:FuzzySearch": true,
+          "cloze:显/隐所有填空": false,
+          "switcher:打开快速切换": false,
+          "tickticksync:TickTickSync": false,
+          "extract-highlights-plugin:Extract Highlights": false,
+          "big-calendar:Big Calendar": false,
+          "media-extended:Open media": false,
+          "obsidian-projects:打开项目": false,
           "obsidian-language-learner:打开查词面板": false,
           "obsidian-language-learner:打开新词面板": false,
           "obsidian-language-learner:打开统计": false,
           "obsidian-language-learner:单词列表": false,
-          "obsidian42-brat:BRAT": true,
-          "obsidian-spaced-repetition-recall:复习卡片": false,
-          "cloze:显/隐所有填空": false,
-          "obsidian-regex-pipeline:Regex Rulesets": false,
-          "flashcards-obsidian:Generate flashcards": false,
-          "remotely-save:Remotely Save": false,
-          "obsidian-weread-plugin:Weread": false,
-          "obsidian-omnivore:Omnivore": false,
-          "extract-highlights-plugin:Extract Highlights": false,
-          "big-calendar:Big Calendar": false,
-          "obsidian-projects:Open projects": false,
-          "surfing:surfing-bookmark-manager": false,
           "omnisearch:Omnisearch": false
         }
       },
-      "active": "9b4c93efd6c0e404",
+      "active": "f37eea8d75b3fa6c",
+      "mtime": "2025-03-23T10:12:43+08:00",
       "workspaces-plus:settings-v1": {
         "explorerFoldState": [
           "学习区",
-          "学习区/01-高等数学/问题库",
+          "学习区/02-大学英语",
+          "学习区/02-大学英语/考研真题",
+          "学习区/02-大学英语/考研真题/阅读",
+          "学习区/02-大学英语/考研真题/阅读/2010年真题",
           "学习区/02-大学英语/听力库"
         ]
       }
     }
   },
-  "active": "English-Learning"
+  "active": "Home"
 }

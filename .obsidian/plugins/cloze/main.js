@@ -40,6 +40,8 @@ var langs = {
   setting_selector_tag_desc: "If you provide a tag here, the plugin will only activate on notes with that tag i.e. #cloze.",
   setting_hide_by_default: "Hide by default",
   setting_hide_by_default_desc: "Enable this setting, all clozes will be hidden by default when reading the page. \u{1F648}",
+  setting_hover_to_reveal: "Hover to reveal",
+  setting_hover_to_reveal_desc: "Enable this setting, clozes will be be revealed on hover.",
   setting_auto_convert: "Auto Convert",
   setting_highlight: "Highlighted text",
   setting_highlight_desc: "Enable this setting, all ==highlighted texts== will be converted to cloze.",
@@ -82,6 +84,8 @@ var langs2 = {
   setting_selector_tag_desc: "\u8BE5\u63D2\u4EF6\u5C06\u4EC5\u4F5C\u7528\u4E8E\u5E26\u6709\u8BE5\u6807\u7B7E\u7684\u7B14\u8BB0\u4E0A\uFF0C\u4E3A\u7A7A\u5219\u4F5C\u7528\u4E8E\u6240\u6709\u7B14\u8BB0 i.e. #cloze\u3002",
   setting_hide_by_default: "\u9ED8\u8BA4\u9690\u85CF",
   setting_hide_by_default_desc: "\u542F\u7528\u6B64\u8BBE\u7F6E\u540E\uFF0C\u6253\u5F00\u9875\u9762\u65F6\u6240\u6709\u586B\u7A7A\u5185\u5BB9\u5C06\u9ED8\u8BA4\u9690\u85CF\u3002\u{1F648}",
+  setting_hover_to_reveal: "\u9F20\u6807\u60AC\u505C\u663E\u793A",
+  setting_hover_to_reveal_desc: "\u542F\u7528\u6B64\u8BBE\u7F6E\u540E\uFF0C\u9F20\u6807\u60AC\u505C\u5728\u586B\u7A7A\u4E0A\u65F6\u5C06\u663E\u793A\u5185\u5BB9\u3002",
   setting_auto_convert: "\u81EA\u52A8\u8F6C\u6362",
   setting_highlight: "\u9AD8\u4EAE\u6587\u5B57",
   setting_highlight_desc: "\u542F\u7528\u6B64\u8BBE\u7F6E\u540E\uFF0C\u6240\u6709==\u9AD8\u4EAE\u6587\u5B57==\u4E5F\u5C06\u8F6C\u6362\u4E3A\u586B\u7A7A\u3002",
@@ -129,6 +133,7 @@ var HINT_STRATEGY = {
 };
 var DEFAULT_SETTINGS = {
   defaultHide: true,
+  hoverToReveal: false,
   selectorTag: "#",
   includeHighlighted: false,
   includeUnderlined: false,
@@ -197,12 +202,16 @@ var SettingTab = class extends import_obsidian.PluginSettingTab {
       this.plugin.settings.selectorTag = this.sanitizeTag(value);
       await this.plugin.saveSettings();
     }));
-    new import_obsidian.Setting(containerEl).setName(lang_default.setting_fixed_cloze_width).setDesc(lang_default.setting_fixed_cloze_width_desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.fixedClozeWidth).onChange((value) => {
-      this.plugin.settings.fixedClozeWidth = value;
-      this.plugin.saveSettings();
-    }));
     new import_obsidian.Setting(containerEl).setName(lang_default.setting_hide_by_default).setDesc(lang_default.setting_hide_by_default_desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.defaultHide).onChange((value) => {
       this.plugin.settings.defaultHide = value;
+      this.plugin.saveSettings();
+    }));
+    new import_obsidian.Setting(containerEl).setName(lang_default.setting_hover_to_reveal).setDesc(lang_default.setting_hover_to_reveal_desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.hoverToReveal).onChange((value) => {
+      this.plugin.settings.hoverToReveal = value;
+      this.plugin.saveSettings();
+    }));
+    new import_obsidian.Setting(containerEl).setName(lang_default.setting_fixed_cloze_width).setDesc(lang_default.setting_fixed_cloze_width_desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.fixedClozeWidth).onChange((value) => {
+      this.plugin.settings.fixedClozeWidth = value;
       this.plugin.saveSettings();
     }));
   }
@@ -321,6 +330,7 @@ var HintModal = class extends import_obsidian2.Modal {
 var ATTRS = {
   hide: "data-cloze-hide",
   hint: "data-cloze-hint",
+  hover: "data-cloze-hover",
   content: "data-cloze-content"
 };
 var CLASSES = {
@@ -330,7 +340,8 @@ var CLASSES = {
   bold: "cloze-bold",
   underline: "cloze-underline",
   hint: "cloze-hint",
-  fixedWidth: "cloze-fixed-width"
+  fixedWidth: "cloze-fixed-width",
+  colzeHide: "cloze-hide"
 };
 
 // src/utils.ts
@@ -380,8 +391,8 @@ var utils_default = utils;
 
 // src/main.ts
 var ClozePlugin = class extends import_obsidian3.Plugin {
-  constructor() {
-    super(...arguments);
+  constructor(app, manifest) {
+    super(app, manifest);
     this.isSourceHide = false;
     this.isPreviewHide = true;
     this.clozeSelector = () => {
@@ -436,14 +447,37 @@ var ClozePlugin = class extends import_obsidian3.Plugin {
     };
     // ----------- cloze interaction ------------
     this.hideClozeContent = (target) => {
+      if (!target)
+        return;
       if (!target.getAttribute(ATTRS.hide)) {
         target.setAttribute(ATTRS.hide, "true");
       }
+      this.updateClozeClass(target);
       this.initHint(target);
     };
     this.showClozeContent = (target) => {
+      if (!target)
+        return;
       if (target.getAttribute(ATTRS.hide)) {
         target.removeAttribute(ATTRS.hide);
+      }
+      this.updateClozeClass(target);
+    };
+    this.setClozeOnHover = (target, hoverState) => {
+      if (!target)
+        return;
+      if (hoverState) {
+        target.setAttribute(ATTRS.hover, "true");
+      } else {
+        target.removeAttribute(ATTRS.hover);
+      }
+      this.updateClozeClass(target);
+    };
+    this.updateClozeClass = (target) => {
+      if (target.getAttribute(ATTRS.hover) || !target.getAttribute(ATTRS.hide)) {
+        target.classList.remove(CLASSES.colzeHide);
+      } else {
+        target.classList.add(CLASSES.colzeHide);
       }
     };
     this.addCloze = (editor, needHint) => {
@@ -480,16 +514,8 @@ var ClozePlugin = class extends import_obsidian3.Plugin {
     this.initEditorMenu();
     this.initCommand();
     this.initMarkdownPostProcessor();
-    this.registerDomEvent(document, "click", (event) => {
-      if (this.isPreviewMode()) {
-        this.toggleHide(utils_default.getClozeEl(event.target));
-      }
-    });
-    this.registerDomEvent(document, "contextmenu", (event) => {
-      if (this.isPreviewMode()) {
-        this.onRightClick(event, utils_default.getClozeEl(event.target));
-      }
-    });
+    this.initPageClickEvent();
+    this.initNewWindowPageClickEvent();
   }
   initRibbon() {
     this.addRibbonIcon("fish", lang_default.toggle_cloze, (evt) => {
@@ -591,8 +617,53 @@ var ClozePlugin = class extends import_obsidian3.Plugin {
       if (this.settings.includeCurlyBrackets) {
         this.transformCurlyBracketedText(element);
       }
-      element.querySelectorAll(this.clozeSelector()).forEach(this.renderCloze);
+      element.querySelectorAll(this.clozeSelector()).forEach(($cloze) => {
+        this.renderCloze($cloze);
+        if (this.settings.hoverToReveal) {
+          this.initClozeMouseOverReveal($cloze);
+        }
+      });
       this.toggleAllHide(element, this.isAllHide());
+    });
+  }
+  initClozeMouseOverReveal($cloze) {
+    this.registerDomEvent($cloze, "mouseenter", (event) => {
+      if (this.isPreviewMode()) {
+        this.setClozeOnHover($cloze, true);
+      }
+    });
+    this.registerDomEvent($cloze, "mouseleave", (event) => {
+      if (this.isPreviewMode()) {
+        this.setClozeOnHover($cloze, false);
+      }
+    });
+  }
+  initPageClickEvent() {
+    this.registerDomEvent(document, "click", (event) => {
+      if (this.isPreviewMode()) {
+        this.toggleHide(utils_default.getClozeEl(event.target));
+      }
+    });
+    this.registerDomEvent(document, "contextmenu", (event) => {
+      if (this.isPreviewMode()) {
+        this.onRightClick(event, utils_default.getClozeEl(event.target));
+      }
+    });
+  }
+  // init for new window
+  initNewWindowPageClickEvent() {
+    const handler = (event) => {
+      this.toggleHide(utils_default.getClozeEl(event.target));
+    };
+    this.app.workspace.on("window-open", (a, win) => {
+      if (win !== null) {
+        win.document.addEventListener("click", handler);
+      }
+    });
+    this.app.workspace.on("window-close", (a, win) => {
+      if (win !== null) {
+        win.document.removeEventListener("click", handler);
+      }
     });
   }
   onRightClick(event, $cloze) {

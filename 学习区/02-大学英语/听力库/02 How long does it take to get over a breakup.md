@@ -8,7 +8,7 @@ subject: 大学英语
 updated time: 2024-06-01 18:31:15
 created time: 2023-11-26 13:32:35
 created: 2023-11-26T13:32
-updated: 2025-01-12T19:53
+updated: 2025-03-16T22:22
 ---
 
 ^^^article
@@ -137,12 +137,8 @@ v. distract的现在分词
 prep. 不包括，除…之外
 + **exactly** : adv. 确切地；究竟；正是如此
 + **expensive** : adj. 费用大的；昂贵的，高价的
-+ **experience** : n. 经验，实践；经历，阅历；往事，体验
-v. 经历，参与；感受，体验
 + **face up to** : phr. 勇敢地面对
 + **fact** : n. 实际；事实，真相
-+ **finding** : n. 【常用复数】调查发现，调研结果
-v. 发现（find的现在分词形式）
 + **get over** : phr. 恢复；克服；原谅；熬过；使明白
 + **heal** : v. 愈合，治愈；结束，较容易忍受；调停，消除
 + **hopefully** : adv. 有希望地，有前途地
@@ -155,6 +151,7 @@ adj. 长期的，长远的
 + **longitudinal** : adj. 长度的，纵向的，经线的
 + **magic** : n. 魔术，巫术，戏法，魅力
 adj. 神奇的，魔术的，魔术般的
++ **means** : n. 方法，手段；工具；金钱，财富，财产，财力，收入
 + **misrepresented** : adj. 不如实叙述的
 v. 不如实地叙述（misrepresent 的过去式）
 + **muse** : n. 沉思；冥想；缪斯女神
@@ -186,13 +183,10 @@ n. 擦伤处
 + **relationships** : n. 关系；人际关系；恋爱关系；血缘关系
 + **specifically** : adv. 明确地，具体地；特意地，专门地
 + **statements** : n. 陈述；声明；供述；表达；报表，结算单
-+ **straightforward** : adj. 简单的，易懂的；（人）诚实的，坦率的
-adv. 直截了当地，坦率地
++ **straightforward** : adj. 简单的，易懂的；（人）诚实的，坦率的；adv. 直截了当地，坦率地
 + **strategies** : n. 策略，战略（strategy 的复数）
 + **strategy** : n. 战略学；战略，策略
-+ **subjects** : n. 主题；话题；学科；主语；国民
-v. 使…隶属；使屈从于；提供
-adj. 易遭受…的；服从的；受制于…的；统治下的
++ **subjects** : n. 主题；话题；学科；主语；国民 ；v. 使…隶属；使屈从于；提供 ；adj. 易遭受…的；服从的；受制于…的；统治下的
 + **swipes** : n. 味道平淡的廉价啤酒
 + **term** : n. 期，期限；学期；任期；条款；项；条；术语
 v. 把…称为，把…叫做

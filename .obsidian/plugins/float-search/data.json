@@ -1,11 +1,13 @@
 {
   "searchViewState": {
-    "query": "tag:#400兴趣类/Obsidian/Plugin  image",
-    "matchingCase": false,
+    "collapseAll": false,
     "explainSearch": false,
-    "collapseAll": true,
     "extraContext": false,
+    "matchingCase": false,
+    "query": "",
     "sortOrder": "alphabetical"
   },
-  "showFilePath": false
+  "showFilePath": false,
+  "showInstructions": true,
+  "defaultViewType": "modal"
 }

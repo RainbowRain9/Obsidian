@@ -1,4 +1,16 @@
 {
+  "simpleTexToken": "2t5lNMeSGy4e80J3rejrwDJKdNF7FlSE5DsHWLKkPZpbIPgTvLLYuRnImTaksmku",
+  "latexProvider": "SimpleTex",
+  "texify": {
+    "url": "http://127.0.0.1:5000/predict",
+    "username": "",
+    "password": ""
+  },
+  "pix2tex": {
+    "url": "http://127.0.0.1:8502/predict/",
+    "username": "",
+    "password": ""
+  },
   "token": "l0A9qYBDNzsy5mpXVv9vnujk3CwG6tl9L8n0OllgdeAVjKAlGRUj6vqs90Jstf9G",
   "selfHosted": false,
   "url": "https://server.simpletex.cn/api/latex_ocr",

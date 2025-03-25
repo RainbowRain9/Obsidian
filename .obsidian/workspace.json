@@ -4,46 +4,55 @@
     "type": "split",
     "children": [
       {
-        "id": "7045532e27a07410",
+        "id": "cbe6b4dc158be4c5",
         "type": "tabs",
         "children": [
           {
-            "id": "bee257b9be5d23a9",
+            "id": "02218b4749029dae",
             "type": "leaf",
             "pinned": true,
-            "state": {
-              "type": "langr-stat",
-              "state": {},
-              "pinned": true,
-              "icon": "bar-chart-4",
-              "title": "统计"
-            }
-          },
-          {
-            "id": "e137e32cb9ca758f",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "langr-data-panel",
-              "state": {},
-              "pinned": true,
-              "icon": "database",
-              "title": "单词列表"
-            }
-          },
-          {
-            "id": "af1431b97ce60fe6",
-            "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习区/02-大学英语/四级真题/作文/大英3.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "🏡Home.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "大英3"
+              "title": "🏡Home"
+            }
+          },
+          {
+            "id": "bd7ddb35fbd989f9",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "zoom",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "pinned": true,
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "9ba278e9a6dacde9",
+            "type": "leaf",
+            "state": {
+              "type": "langr-reading",
+              "state": {
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md"
+              },
+              "icon": "highlight-glyph",
+              "title": "2005-02"
             }
           }
         ],
@@ -66,31 +75,25 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
           },
           {
-            "id": "a86ce6b692d1f694",
+            "id": "142f1bcac20f7ffb",
             "type": "leaf",
             "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           },
           {
-            "id": "1ce830c13bbcb28b",
+            "id": "29b72c5eba9d9838",
             "type": "leaf",
             "state": {
               "type": "langr-search-panel",
@@ -100,65 +103,70 @@
             }
           },
           {
-            "id": "e2cfbf8b71e504ac",
+            "id": "1bb352666307d0c2",
             "type": "leaf",
             "state": {
-              "type": "surfing-tab-tree",
+              "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 291.5024719238281
   },
   "right": {
     "id": "34fb4efa27cf970d",
     "type": "split",
     "children": [
       {
-        "id": "72a4b91604aed60d",
+        "id": "d4a138574bae43c9",
         "type": "tabs",
+        "dimension": 35.82443653618031,
         "children": [
           {
-            "id": "efb588280c1fc08d",
+            "id": "d5875a4ebf9ee3f8",
             "type": "leaf",
             "state": {
-              "type": "langr-learn-panel",
-              "state": {},
-              "icon": "reading-glasses",
-              "title": "学习新单词"
-            }
-          },
-          {
-            "id": "6f4659d6168a56bc",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
+              "type": "localgraph",
               "state": {
-                "sortOrder": "alphabetical",
-                "useHierarchy": true
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": true,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": false,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.6906394964510819,
+                  "close": true
+                }
               },
-              "icon": "lucide-tags",
-              "title": "标签"
+              "icon": "lucide-git-fork",
+              "title": "2005-02 的关系图"
             }
           },
           {
-            "id": "40cc0fb830140984",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "笔记复习序列"
-            }
-          },
-          {
-            "id": "98c3fba07f7febc6",
+            "id": "2c10a3b5e1baab1f",
             "type": "leaf",
             "state": {
               "type": "QUICKSHARE_SIDE_VIEW",
@@ -168,17 +176,50 @@
             }
           },
           {
-            "id": "b0982c8b788a6a29",
+            "id": "9bd71ae87dadd5d5",
             "type": "leaf",
             "state": {
-              "type": "timeline",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "type": "outgoing-link",
+              "state": {
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "2005-02 的出链列表"
             }
           },
           {
-            "id": "6b675e81be9ded43",
+            "id": "8a016bce3f412052",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "2005-02 的反向链接列表"
+            }
+          },
+          {
+            "id": "957ed477c63681ca",
+            "type": "leaf",
+            "state": {
+              "type": "QUICKSHARE_SIDE_VIEW",
+              "state": {},
+              "icon": "cloud",
+              "title": "QuickShare"
+            }
+          },
+          {
+            "id": "6cf7bf9e9348e0fb",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -186,98 +227,190 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "102fbb55eb62d1d0",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Todo List"
+            }
+          },
+          {
+            "id": "bf5a1c364bad612a",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Timeline"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "72a4b91604aed60d",
+        "type": "tabs",
+        "dimension": 64.1755634638197,
+        "children": [
+          {
+            "id": "b7f62067e71f949d",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          },
+          {
+            "id": "6f4659d6168a56bc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "c8f493acf1e3c447",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "a6687704af4f2030",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md"
+              },
+              "icon": "lucide-info",
+              "title": "第一章 行列式的笔记属性"
+            }
+          },
+          {
+            "id": "d3d01cb8b0e02a79",
+            "type": "leaf",
+            "state": {
+              "type": "langr-learn-panel",
+              "state": {},
+              "icon": "reading-glasses",
+              "title": "学习新单词"
+            }
+          }
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 366.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "random-note:开始漫游笔记": false,
+      "canvas:新建白板": false,
+      "graph:查看关系图谱": false,
+      "markdown-importer:打开 Markdown 格式转换器": true,
+      "audio-recorder:开始/结束录音": true,
+      "workspaces:管理工作区布局": true,
+      "daily-notes:打开/创建今天的日记": true,
+      "templates:插入模板": true,
+      "command-palette:打开命令面板": true,
+      "switcher:打开快速切换": true,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-kanban:创建新看板": true,
+      "remotely-save:Remotely Save": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
+      "obsidian-regex-pipeline:Regex Rulesets": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-spaced-repetition-recall:复习卡片": false,
+      "cloze:显/隐所有填空": false,
       "obsidian-weread-plugin:同步微信读书笔记": false,
       "obsidian-memos:Thino": false,
       "fuzzy-chinese-pinyin:FuzzySearch": false,
       "obsidian-daily-notes-viewer:打开 Viewer": false,
       "improved-random-note:Open improved random note": false,
-      "float-search:Search Obsidian In Modal": false,
-      "media-extended:Open media": false,
-      "obsidian-day-planner:Open Timeline": false,
-      "obsidian-day-planner:Open Multi-Day View": false,
       "float-search:Search obsidian in modal view": false,
-      "obsidian-kanban:创建新看板": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-to-notion:Share to notion": false,
+      "copilot:Open Copilot Chat": false,
+      "flashcards-obsidian:Generate flashcards": false,
+      "tickticksync:TickTickSync": true,
+      "extract-highlights-plugin:Extract Highlights": false,
+      "big-calendar:Big Calendar": true,
+      "media-extended:Open media": false,
       "obsidian-projects:打开项目": false,
-      "random-note:开始漫游笔记": false,
-      "canvas:新建白板": false,
-      "markdown-importer:打开 Markdown 格式转换器": true,
-      "audio-recorder:开始/结束录音": true,
-      "workspaces:管理工作区布局": true,
-      "switcher:打开快速切换": true,
-      "graph:查看关系图谱": false,
-      "templater-obsidian:Templater": false,
-      "daily-notes:打开/创建今天的日记": true,
-      "templates:插入模板": true,
-      "command-palette:打开命令面板": true,
-      "cmdr:显示当前文件": false,
-      "oz-clear-unused-images:Clear Unused Images": false,
-      "obsidian-day-planner:Timeline": false,
-      "obsidian-language-learner:打开查词面板": false,
-      "obsidian-language-learner:打开新词面板": false,
+      "obsidian-language-learner:打开查词面板": true,
+      "obsidian-language-learner:打开新词面板": true,
       "obsidian-language-learner:打开统计": false,
       "obsidian-language-learner:单词列表": false,
-      "obsidian42-brat:BRAT": true,
-      "obsidian-spaced-repetition-recall:复习卡片": false,
-      "cloze:显/隐所有填空": false,
-      "obsidian-regex-pipeline:Regex Rulesets": false,
-      "flashcards-obsidian:Generate flashcards": false,
-      "remotely-save:Remotely Save": false,
-      "obsidian-omnivore:Omnivore": false,
-      "extract-highlights-plugin:Extract Highlights": false,
-      "big-calendar:Big Calendar": false,
-      "obsidian-projects:Open projects": false,
-      "surfing:surfing-bookmark-manager": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "obsidian42-brat:BRAT": false,
+      "cmdr:显示当前文件": true,
+      "digitalgarden:Digital Garden Publication Center": true,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "af1431b97ce60fe6",
+  "active": "9bd71ae87dadd5d5",
   "lastOpenFiles": [
-    "学习区/04-C 1/概念库/链表.md",
-    "学习区/04-C 1/C  基础入门.md",
-    "学习区/04-C 1/概念库/字符串.md",
-    "学习区/04-C 1/概念库/静态变量.md",
-    "学习区/04-C 1/概念库/随机函数.md",
-    "学习区/04-C 1/概念库/递归函数.md",
-    "学习区/04-C 1/概念库/函数重载.md",
-    "学习区/04-C 1/概念库/字符数组.md",
-    "学习区/04-C 1/概念库/函数模板.md",
-    "学习区/04-C 1/概念库/二维数组.md",
-    "学习区/04-C 1/Untitled.js",
-    "学习区/04-C 1/概念库/辗转相除法.md",
-    "学习区/04-C 1/概念库/选择排序法.md",
-    "学习区/04-C 1/概念库/冒泡排序法.md",
-    "学习区/04-C 1/概念库/顺序查找法.md",
-    "学习区/04-C 1/概念库/二分查找法.md",
-    "学习区/04-C 1/概念库/this指针.md",
-    "学习区/04-C 1/概念库/get 函数.md",
-    "学习区/04-C 1/概念库/字符检查函数.md",
-    "学习区/04-C 1/概念库/read 函数.md",
-    "学习区/04-C 1/概念库/getline 函数.md",
-    "学习区/04-C 1/概念库/ios 命名空间中常用的成员.md",
-    "个人区/2-weread/龙族全套 共七册（龙族Ⅰ-龙族Ⅳ 龙族前传）.md",
-    "学习区/02-大学英语/听力库/02 How long does it take to get over a breakup.md",
-    "学习区/02-大学英语/四级真题/作文/大英3.md",
-    "个人区/6-SimpRead/低调使用！30 神级功能，永久激活版，大小仅6M！.md",
-    "学习区/02-大学英语/四级真题/作文/题目5：提案 (Proposal) 学校开新俱乐部.md",
-    "学习区/07-Java/day01-Java入门/资料/资料/JDK9_API帮助文档.CHM.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/资料/JDK6_API帮助文档.CHM.baiduyun.p.downloading",
+    "未命名看板.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
+    "个人区/1-生活/课程表.md",
+    "个人区/1-生活/📖学习安排.md",
+    "个人区/1-生活/🏠个人备忘.md",
+    "个人区/1-生活/日记.md",
+    "个人区/1-生活/💼工作任务.md",
+    "个人区/1-生活/Viewer.md",
+    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Zoom 通过快捷键，快速聚焦到大纲.md",
+    "个人区/4-领域夹/Area-Obsidian.md",
+    "🏡Home.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-04.md",
+    "学习区/02-大学英语/考研真题/阅读/2010年真题/2010-02.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/02-行列式的性质.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/01-行列式的定义.md",
+    "学习区/01-高等数学/笔记库/7.4 可降解的高阶微分方程-Xmind.md",
+    "学习区/01-高等数学/笔记库/1.7 无穷小阶的比较-Xmind.md",
+    "学习区/01-高等数学/笔记库/1.1 初等函数-Xmind.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/数学归纳法.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/03-行列式的按行按列展开定理.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/05-克拉默法则.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/04、经典永恒类别行列式计算.md",
+    "学习区/01-高等数学/概念库/行列式.md",
+    "学习区/02-大学英语/单词库/word.md",
+    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/数学笔记轻松搞定：Obsidian 中 Image2Latex 插件带你识别图片公式.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式",
+    "学习区/02-大学英语/考研真题/阅读/2010年真题",
+    "References",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-01",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题",
+    "学习区/10-计算机网络",
+    "学习区/09-马克思主义基本原理/未命名",
+    "学习区/02-大学英语/考研真题/阅读/2008年真题",
+    "未命名",
+    "学习区/02-大学英语/考研真题/阅读",
+    "个人区/7-程序夹/心语精灵/开发路径.canvas",
     "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202194945932.jpg",
-    "学习区/07-Java/day01-Java入门/资料/其他软件/搜狗输入法/sogou_pinyin_8.7.0.1657_6991.exe.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/其他软件/翻译软件/YoudaoDict_V6.3.67.7016_setup.1439368979.exe.baiduyun.p.downloading",
-    "学习区/07-Java/day01-Java入门/资料/其他软件/翻译软件",
-    "学习区/07-Java/day01-Java入门/资料/其他软件/搜狗输入法",
-    "学习区/07-Java/day01-Java入门/资料/资料",
-    "学习区/07-Java/day01-Java入门/资料/其他软件",
-    "学习区/07-Java/day13-面向对象进阶（static&继承）/笔记/imgs",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT38M54.16S.jpeg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT37M25.529S.jpeg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT34M32.228S.jpeg",

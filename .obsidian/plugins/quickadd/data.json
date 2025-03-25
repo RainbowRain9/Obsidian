@@ -359,6 +359,37 @@
           "setFileExistsBehavior": false
         },
         {
+          "id": "8144ce01-9b6b-40da-8f86-5bfb78d2cb50",
+          "name": "微信小程序",
+          "type": "Template",
+          "command": false,
+          "templatePath": "学习区/_Templates/tp/微信小程序开发模版.md",
+          "fileNameFormat": {
+            "enabled": false,
+            "format": ""
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "",
+              "个人区/7-程序夹/心智精灵"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": true
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
           "id": "5dbce0e3-0932-4df0-a5a7-4cfd6dc92c1c",
           "name": "Area",
           "type": "Template",
@@ -1226,7 +1257,7 @@
   "devMode": false,
   "templateFolderPath": "学习区/_Templates",
   "announceUpdates": true,
-  "version": "1.11.5",
+  "version": "1.12.0",
   "disableOnlineFeatures": true,
   "enableRibbonIcon": false,
   "ai": {

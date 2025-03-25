@@ -1,4148 +1,2604 @@
 ---
 created: 2023-11-22T15:58
-updated: 2025-01-12T23:02
+updated: 2025-03-25T13:50
 ---
 #flashcards
 
 #word
-#### absurd
+#### a majority of
 #anki
-adj. 愚蠢的，荒谬的；滑稽可笑的；荒诞派的
-n. 荒诞，荒诞的事物 （the absurd）
+大部分,大多数
 **Sentences**:
-*A) It is simply absurd.*
-A)很荒谬。
-《2020年9月（第2套）》
+*But it's obvious that a majority of the president's advisers still don't take global warming seriously.*
+但很明显，总统的大多数顾问仍然没有认真对待全球变暖问题。
+《2005年英语Text2》
 
 #word
-#### abundant
+#### about-face
 #anki
-adj. 大量的，丰富的
+n. 向后转,大改变； vi. 向后转,作大改变
 **Sentences**:
-*An early study gave participants abundant time to complete problem-solving and word-association exercises.Once all the obvious answers were exhausted, participants gave more and more inventive answers to combat boredom.*
-一项早期的研究给了参与者充足的时间来完成问题解决和单词联想练习。一旦所有显而易见的答案都被用尽，参与者就会给出越来越多有创意的答案来对抗无聊。
-《2020年12月（第2套）》
+*Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets.*
+对商业方法专利的限制将是一个戏剧性的大转变，因为正是联邦巡回法院自己在1998年对所谓的道富银行案的裁决中引入了这类专利，批准了一项关于汇集共同基金资产的方法的专利。
+《2010年英语一Test2》
 
 #word
-#### accompany
+#### above all
 #anki
-v. 陪伴；伴随，附加；为...伴奏
+phr. 尤其，重要的是，首先；毕竟
 **Sentences**:
-*48.What are entrepreneurs advised to do to avoid traps that often accompany rivalry?*
-48.企业家们被建议做些什么来避免经常伴随竞争而来的陷阱
-《Text 3》
+*Above all, like their female human counterparts, they tend to pay much closer attention to the value of "goods and services" than males.*
+最重要的是，就像她们的女性同伴一样，她们往往比男性更关注“商品和服务”的价值。
+《2005年英语Text1》
 
 #word
-#### accomplishments
+#### abundantly
 #anki
-n. 成就；技艺；专长；完成
+adv. 大量地，丰富地；充分地
 **Sentences**:
-*D)He believes busyness ensures accomplishments.*
-D)他认为忙碌确保成就。
-《TEXT1》
+*Refusing a lesser reward completely makes these feelings abundantly clear to other members of the group.*
+拒绝较低的奖励会让群体中的其他成员清楚地感受到这种感觉。
+《2005年英语Text1》
 
 #word
-#### account
+#### adjoining
 #anki
-n. 账户，户头；客户，老主顾；网络账号；
-v. 把……视作，认为；解释，说明
+adj. 邻近的； v. 邻近（adjoin的现在分词）
 **Sentences**:
-*52.What should we take into account in order to make informed decisions?*
-52.为了做出明智的决定，我们应该考虑什么
-《Text 6》
+*However, when two monkeys were placed in separate but adjoining chambers, so that each could observe what the other was getting in return for its rock, their behaviour became markedly different.*
+然而，当两只猴子被放在分开但相邻的房间里，以便每只猴子都能看到对方用石头得到什么回报时，它们的行为就明显不同了。
+《2005年英语Text1》
 
 #word
-#### acquaintance
+#### adolescents
 #anki
-n. 相识的人，熟人；认识；了解
+n. 青少年（adolescent 的复数）
 **Sentences**:
-*A mere acquaintance entering our intimate space makes us uncomfortable.*
-一个熟人进入我们的私密空间会让我们感到不舒服。
-《2023年12月（第1套）》
+*But as diet and health improved, children and adolescents have, on average, increased in height by about an inch and a half every 20 years, a pattern known as the secular trend in height.*
+但随着饮食和健康状况的改善，儿童和青少年的身高平均每20年增加1.5英寸，这种模式被称为身高的长期趋势。
+《2008年英语一》
 
 #word
-#### adaptable
+#### advisers
 #anki
-adj. 能适应的，适应性强的；可改变（以适应新用途）的
+n. 顾问；指导教授；劝告者
 **Sentences**:
-*B)It is an adaptable capability required of all workers.*
-B)它是所有工人都需要的适应能力。
-《Text 4》
+*But it's obvious that a majority of the president's advisers still don't take global warming seriously.*
+但很明显，总统的大多数顾问仍然没有认真对待全球变暖问题。
+《2005年英语Text2》
 
 #word
-#### addictive
+#### affiliations
 #anki
-adj. 使人上瘾的；使人着迷的
+ n. 附属机构
 **Sentences**:
-*Boredom has been linked to behavior issues including inattentive driving, mindless snacking, excessive drinking, and addictive gambling.*
-无聊与行为问题有关，包括粗心驾驶、盲目吃零食、过度饮酒和上瘾赌博。
-《2020年12月（第2套）》
+*A journal editor would then remove the authors' names and affiliations from the paper and send it to their peers for review.*
+然后，期刊编辑会从论文中删除作者的姓名和所属单位，并将其发送给同行进行评审。
+《2008年英语一》
 
 #word
-#### adequate
+#### agencies
 #anki
-adj. 足够的；适当的；胜任的；差强人意的
+ n. 代理；代理处；政府机构（agency 的复数）
 **Sentences**:
-*So with no adequate data, I decided to seek professional help.*
-《How long does it take to get over a breakup》
+*The Internet — and pressure from funding agencies, who are questioning why commercial publishers are making money from government-funded research by restricting access to it—is making free access to scientific results a reality.*
+互联网和来自资助机构的压力正在使免费获取科学成果成为现实。资助机构质疑为什么商业出版商要通过限制对政府资助的研究的访问来赚钱。
+《2008年英语一》
 
 #word
-#### advised
+#### all too
 #anki
-adj. 考虑过的,细想过的
+phr. 实在太…； 非常，过分地
+**Notes**:
+强调行为或情况正常
 **Sentences**:
-*48.What are entrepreneurs advised to do to avoid traps that often accompany rivalry?*
-48.企业家们被建议做些什么来避免经常伴随竞争而来的陷阱
-《Text 3》
+*Such behaviour is regarded as "all too human", with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.*
+这种行为被认为是“人之常情”，潜在的假设是，其他动物不可能有这种高度发达的委屈感。
+《2005年英语Text1》
+*But a study by Sarah Brosnan and Frans de Waal ofEmory University in Atlanta, Georgia, which has just been published in Nature, suggests that it is all too monkey. as well.*
+但是，佐治亚州亚特兰大市埃默里大学的Sarah Brosnan和Frans de Waal刚刚发表在《自然》杂志上的一项研究表明，这一切都太猴了。也。
+《2005年英语Text1》
 
 #word
-#### affection
+#### allocation
 #anki
-n. 喜爱，爱慕，感情；疾病，病情
+n. 分配，配置；安置
 **Sentences**:
-*In the history of horse racing, few horses have captured the affection of the British public like Red Rum.*
-在赛马的历史上，很少有赛马能像红朗姆酒那样赢得英国公众的喜爱。
-《Text 5》
+*Merrill Lynch got legal protection for an asset allocation strategy.*
+美林的资产配置策略得到了法律保护。
+《2010年英语一Test2》
 
 #word
-#### affluent
+#### antismoking
 #anki
-n. 支流；富人
-adj. 富裕的，丰富的
+adj. 反对吸烟(的) 禁止吸烟(的)
 **Sentences**:
-*He told the northern echo, it isn't an affluent part of the world.*
-他告诉《北方回声报》，这不是世界上一个富裕的地区。
-《2022年12月（第2套）》
+*That the antismoking lobby was out to destroy our way of life and the government should stay out of the way?*
+反对吸烟的游说团体企图破坏我们的生活方式，政府应该置身事外
+《2005年英语Text2》
 
 #word
-#### aftereffects
+#### approving
 #anki
-n. 余波,后效,后果； 副作用
+adj. 赞成的，满意的； v. 同意；批准
 **Sentences**:
-*It only focused on the aftereffects of ending a relationship, specifically among undergrads, which is a whole other can of worms.*
-它只关注结束一段关系的后果，尤其是对大学生的影响，这是另一回事。
-《How long does it take to get over a breakup》
+*Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets.*
+对商业方法专利的限制将是一个戏剧性的大转变，因为正是联邦巡回法院自己在1998年对所谓的道富银行案的裁决中引入了这类专利，批准了一项关于汇集共同基金资产的方法的专利。
+《2010年英语一Test2》
 
 #word
-#### agents
+#### architecture
 #anki
-n. 代理人，代理商；间谍；动力；媒介；剂
+n. 建筑学；建筑风格；结构，体系结构
 **Sentences**:
-*Artificial Intelligent Agents play evermore influential role in our lives.*
-人工智能代理在我们的生活中扮演着越来越重要的角色。
-《2023年12月（第1套）》
+*"There are some real constraints that are set by the genetic architecture of the individual organism," says anthropologist William Leonard ofNorthwestem University.*
+西北大学的人类学家威廉·伦纳德说：“个体生物的基因结构确实存在一些限制。”
+《2008年英语一》
 
 #word
-#### airfares
+#### are exposed to
 #anki
-n. 飞机票价
+phr. 遭受；暴露于；接触
+**Notes**:
+应对/面对
+几乎不用“使暴露”
 **Sentences**:
-*51.What did the author's team conclude about the gender difference in airfares from their further investigation?*
-51.作者的团队从进一步的调查中得出了关于机票价格性别差异的什么结论
-《Text 2》
+*[D] are exposed to more stress.*
+[D]暴露在更大的压力下。
+《2008年英语一》
 
 #word
-#### alleviate
+#### argued
 #anki
-vt. 减轻，缓和
+v. 争论；论证，说服；支持/反对；不承认
+**Sentences**:
+*Do you remember all those years when scientists argued that smoking would kill us but the doubters insisted that we didn't know for sure?*
+你还记得那些年科学家们争辩说吸烟会致人死亡，但怀疑者坚持说我们对此并不确定吗
+《2005年英语Text2》
 
 #word
-#### among
+#### aroused
 #anki
-prep. 在…之内，在…之中
+唤醒
 **Sentences**:
-*It only focused on the aftereffects of ending a relationship, specifically among undergrads, which is a whole other can of worms.*
-它只关注结束一段关系的后果，尤其是对大学生的影响，这是另一回事。
-《How long does it take to get over a breakup》
+*26. Business-method patents have recently aroused concern because of*
+26. 商业方法专利最近引起了人们的关注，因为
+《2010年英语一Test2》
 
 #word
-#### anecdotal
+#### as well
 #anki
-adj. 轶事的，趣闻的；多轶事的
+phr. 同样，也，还
 **Sentences**:
-*He has anecdotal experience with countless people in relationships and, full disclosure, he was my couple’s therapist, too.*
-《How long does it take to get over a breakup》
-
-#word
-#### apart
-#anki
-adv. 相距地；相隔地；...除外；分开地；分离地；拆散地；单独地
-**Sentences**:
-*A multitasker is one who can perform two or more tasks effectively at the same time, which—apart from the obvious differences—is similar to what a computer does.*
-多任务者是指能够同时有效地执行两项或两项以上任务的人，除了明显的区别之外，这与计算机的功能类似。
-《Text 4》
-
-#word
-#### apparent
-#anki
-adj. 显然的；表面上的
-**Sentences**:
-*It wasn't apparent at the time, but Red Rum had a serious bone disease in his foot.*
-当时还不明显，但瑞德·朗姆的脚有严重的骨病。
-《Text 5》
-
-#word
-#### appear
-#anki
-vi. 出现，显现；显得；似乎；出庭，出场；演出；发表
-**Sentences**:
-*That's why we feel like we have to appear busy, and there's a real perception that if someone is knee-deep in meetings, emails, and stress, then they're probably a big deal.*
-这就是为什么我们觉得自己必须表现得很忙，而且有一种真实的看法是，如果有人深陷会议、电子邮件和压力之中，那么他们可能是个大问题。
-《TEXT1》
-
-#word
-#### approach
-#anki
-n. 靠近，接近；方式，方法，态度；通路
-v. 接近，靠近；着手处理
-**Sentences**:
-*On the other hand, there is a more rational approach to making decisions.*
-另一方面，有一种更理性的决策方法。
-《Text 6》
-
-#word
-#### arbitrarily
-#anki
-adv. 随意地，任意地；武断地，专横地
-**Sentences**:
-*D)Refraining from trusting instincts arbitrarily.*
-D)不轻易相信直觉。
-《Text 6》
-
-#word
-#### are headed by
-#anki
-以...为首,由...率领
-**Sentences**:
-*Approximately 10 percent of the world's families are headed by couples who are second cousins or closer.*
-世界上大约有10%的家庭是由近亲或近亲组成的。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### argument
-#anki
-n. 争论，争吵；论据，理由；辩论，讨论；自变数；主词，受词；<古>书的内容提要
-**Sentences**:
-*The anti-pollution message of the reverse graffiti artists confuses city authorities since the main argument against graffiti is that it spoils the appearance of both types of property: public and private.*
-反涂鸦艺术家的反污染信息让城市当局感到困惑，因为反对涂鸦的主要理由是它破坏了公共和私人财产的外观。
-《2020年9月（第2套）》
-
-#word
-#### arrive
-#anki
-v. 到达；被送达；到来，出现；成功；达成；出生
-**Sentences**:
-*How did the personal bubble arrive?*
-个人泡沫是如何产生的
-《2023年12月（第1套）》
-
-#word
-#### artificial
-#anki
-adj. 人工的；矫揉造作的
-**Sentences**:
-*Artificial Intelligent Agents play evermore influential role in our lives.*
-人工智能代理在我们的生活中扮演着越来越重要的角色。
-《2023年12月（第1套）》
-
-#word
-#### as opposed to
-#anki
-与……相对比：用于表示与某事物相对立或相对比的另一事物。
-**Sentences**:
-*Phrases like "I have limited access to email 'and "it'll respond as soon as I get back”sound like you're being held against your will from working as opposed to making the most of your time off.*
-像“我不能收发电子邮件”和“我一回来就会回复”这样的话，听起来就像你被强迫工作，而不是充分利用你的休假时间。
-《TEXT1》
-
-#word
-#### as soon as
-#anki
-phr. 一…就，尽快
-**Sentences**:
-*As soon as two tasks require our attention, productivity suffers.*
-一旦有两项任务需要我们的注意力，效率就会受到影响。
-《Text 4》
+*But a study by Sarah Brosnan and Frans de Waal ofEmory University in Atlanta, Georgia, which has just been published in Nature, suggests that it is all too monkey. as well.*
+但是，佐治亚州亚特兰大市埃默里大学的Sarah Brosnan和Frans de Waal刚刚发表在《自然》杂志上的一项研究表明，这一切都太猴了。也。
+《2005年英语Text1》
 
 #word
 #### assess
 #anki
-v. 估价；对…征税；确定…的金额；评价
+ v. 估价；对…征税；确定…的金额；评价
 **Sentences**:
-*55.How do we assess the value of a commodity, according to the passage?*
-55.根据文章，我们如何评估商品的价值
-《2020年12月（第1套）》
+*[D] assess the achievements of famous NBA players.*
+[D]评价著名NBA球员的成就。
+《2008年英语一》
 
 #word
-#### assessing
+#### assets
 #anki
-v. 评价，评估（assess 的 ing 形式）
+n. 有价值的人或物，有利条件，优点；资产
 **Sentences**:
-*B)Assessing all factors when making a choice.*
-B)在做出选择时评估所有因素。
-《Text 6》
+*Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets.*
+对商业方法专利的限制将是一个戏剧性的大转变，因为正是联邦巡回法院自己在1998年对所谓的道富银行案的裁决中引入了这类专利，批准了一项关于汇集共同基金资产的方法的专利。
+《2010年英语一Test2》
 
 #word
-#### asymmetric
+#### assumption
 #anki
-adj. 不对称的，不匀称的
+n. 假定，假设，设想；承担，担任；夺取；假装
 **Sentences**:
-*Brain scientists call this effect "asymmetric dominance" and it means that people gravitate toward the choice nearest a clearly inferior option.*
-大脑科学家称这种效应为“不对称优势”，这意味着人们倾向于选择最接近明显较差的选项。
-《2020年12月（第1套）》
+*Such behaviour is regarded as "all too human",with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.*
+这种行为被认为是“人之常情”，潜在的假设是，其他动物不可能有这种高度发达的委屈感。
+《2005年英语Text1》
 
 #word
-#### attaching
+#### atmosphere
 #anki
-v. 系上，贴上，把…固定；附属，依附；使（未受邀请而）加入，缠着；把…归于；附加，伴随
+n. 大气层；空气；气氛；风格，魅力
 **Sentences**:
-*With the constant improvement of living standard, people are having an increasingly high requirement of diet, and are attaching more importance on healthy and nutritious foods.*
-随着生活水平的不断提高，人们对饮食的要求越来越高，对健康营养食品的重视程度越来越高。
-《中国饮食变迁：从温饱到健康》
+*The latest was a panel from the National Academy of Sciences, enlisted by the White House, to tell us that the Earth's atmosphere is definitely warming and that the problem is largely man-made.*
+美国国家科学院（National Academy of Sciences）的一个专家小组受白宫邀请，告诉我们地球大气确实在变暖，而这个问题主要是人为造成的。
+《2005年英语Text2》
 
 #word
-#### attentive
+#### attorney
 #anki
-adj. 注意的，专心的；贴心的
+n. 律师；代理人
 **Sentences**:
-*One way you can overcome the risk- inducing effects of rivalry that stand to endanger your venture's success is to remain attentive to your emotional state and actively monitor how such feelings are affecting your decision-making.*
-要想克服竞争带来的风险，从而危及企业的成功，一种方法是时刻关注自己的情绪状态，并积极监控这种情绪如何影响你的决策。
-《Text 3》
+*The judges on the Federal Circuit are "reacting to the anti-patent trend at the Supreme Court," says Harold C. Wegner, a patent attorney and professor at George Washington University Law School.*
+乔治·华盛顿大学法学院的专利律师哈罗德·c·韦格纳教授说，联邦巡回法院的法官们正在“对最高法院的反专利趋势做出反应”。
+《2010年英语一Test2》
 
 #word
-#### attributed
+#### authorized
 #anki
-n. 属性，特质，性质；标志，象征
-
-v. 把……归因于；认为……是某人所有（所做）
+v. 授权，委托； adj. 权威认可的
 **Sentences**:
-*A)Our status can be attributed to our social mobility.*
-A)我们的地位可以归因于我们的社会流动性。
-《TEXT1》
+*Now the nation's top patent court appears completely ready to scale back on business-method patents, which have been controversial ever since they were first authorized 10 years ago.*
+现在，美国最高专利法院似乎完全准备好缩减商业方法专利的规模。自从10年前首次获得授权以来，商业方法专利一直存在争议。
+《2010年英语一Test2》
 
 #word
-#### authorities
+#### awaken
 #anki
-n. 当局，官方；官方机构；权威人士（authority 的复数）
+vt. 唤醒；唤起；使……意识到； vi. 觉醒；醒来；意识到
 **Sentences**:
-*The anti-pollution message of the reverse graffiti artists confuses city authorities since the main argument against graffiti is that it spoils the appearance of both types of property: public and private.*
-反涂鸦艺术家的反污染信息让城市当局感到困惑，因为反对涂鸦的主要理由是它破坏了公共和私人财产的外观。
-《2020年9月（第2套）》
-
-#word
-#### authority
-#anki
-n. 专家，权威人士；行政管理机构；权利，权限；权威，威信；许可，授权；当局，官方
-**Sentences**:
-*Cuts to local authority budgets since 2010 have resulted in a significant decline of these services, despite strong evidence of their effectiveness in preventing crises further down the line.*
-自2010年以来，地方政府预算的削减导致了这些服务的大幅下降，尽管有强有力的证据表明，这些服务在预防未来危机方面是有效的。
-《2020年12月（第1套）》
-
-#word
-#### automatic
-#anki
-n. 自动枪；自动挡汽车；自动机械
-adj. 自动的，自动化的；无意识的；必然的
-**Sentences**:
-*This requires two essential conditions: that one of the tasks needs to be automatic, like walking or eating, and that they both need different mental processes.*
-这需要两个基本条件:其中一项任务必须是自动的，比如走路或吃饭，而且它们都需要不同的心理过程。
-《Text 4》
-
-#word
-#### autonomy
-#anki
-n. 自治，自治权
-**Sentences**:
-*Mobility may have played a factor, but researchers also think that greater autonomy for women and smaller family sizes, meaning that there were just fewer cousins to marry, also influenced the change.*
-流动性可能是一个因素，但研究人员也认为，女性更大的自主权和更小的家庭规模(意味着可以结婚的表兄弟姐妹更少)也影响了这种变化。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### average
-#anki
-n. 平均，平均数；一般，普通
-v. 平均达到；使平衡；平均为
-adj. 平均的；一般的，普通的
-**Sentences**:
-*One study looking at millions of genealogy profiles concluded that between 1650 and 1850, the average person was fourth cousins with their spouse.*
-一项调查了数百万份家谱资料的研究得出结论，在1650年至1850年间，人们与配偶的平均关系是第四代表亲。
-《Is it really that bad to marry my cousin？》
-*Well, it basically means that the average person had the same great great great grandparent as their romantic partner.*
-嗯，这基本上意味着一般人的曾曾曾曾祖父母和他们的恋人是同一个人。
-《Is it really that bad to marry my cousin？》
-*Nowadays, men eat in a approximate average of 140 grams of bread daily.*
-现在，男人平均每天吃大约140克面包。
-《2023年3月（第1套）》
-
-#word
-#### avoidance
-#anki
-n. 避免，避开；废止
-**Sentences**:
-*None of these explained away the gender gap, so we applied data collected from surveys that express consumer preferences that play a central role in economic decisions, such as patience and risk avoidance.*
-这些都不能解释性别差异，所以我们应用了从调查中收集的数据，这些数据表达了消费者的偏好，这些偏好在经济决策中起着核心作用，比如耐心和风险规避。
-《Text 2》
-
-#word
-#### awareness
-#anki
-n. 认识，意识；感悟能力
-**Sentences**:
-*C) Raise public awareness of environmental pollution.*
-C)提高公众对环境污染的意识。
-《2020年9月（第2套）》
-
-#word
-#### back up
-#anki
-phr. 支持；倒车；证实；淤塞
-
-#word
-#### band
-#anki
-n. 带；橡皮圈，松紧带；条纹；群；乐团，乐队
-v. 用带捆；使聚集
-**Sentences**:
-*World pipe band championship will take place in Glasgow.*
-世界管乐队锦标赛将在格拉斯哥举行。
-《2022年12月（第2套）》
-
-#word
-#### basically
-#anki
-adv. 基本上；主要地；总的说来，从根本上说
-**Sentences**:
-*To really answer that question of how long it takes to get over a breakup, you would need to do a longitudinal study, a study that would basically follow a ton of people from the moment of their breakup and track their progress year after year after year.*
-要真正回答从分手中恢复需要多长时间这个问题，你需要做一个纵向研究，这个研究基本上会跟踪大量的人，从他们分手的那一刻开始，年复一年地跟踪他们的进展。
-《How long does it take to get over a breakup》
-
-#word
-#### be born with
-#anki
-phr. 生来就有…，有…天赋，与生俱来
-**Sentences**:
-*In the general population, the risk that a child will be born with serious complications is three to four percent.*
-在一般人群中，孩子出生时患有严重并发症的风险是3%到4%。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### be devoted to
-#anki
-致力于...
-**Sentences**:
-*C)He thinks everyone should be devoted to work.*
-C)他认为每个人都应该致力于工作。
-《TEXT1》
-
-#word
-#### behalf
-#anki
-n. 代表；利益
-**Sentences**:
-*Another role they're expecting to take over, is negotiating on our behalf commercial transaction or legal disputes.*
-他们期望接手的另一个角色是代表我们谈判商业交易或法律纠纷。
-《2023年12月（第1套）》
-
-#word
-#### bend
-#anki
-n. 弯曲处，拐弯，弯道
-v. （使）弯曲，成角度，拉；弯腰；专心；歪曲，篡改；低（头）；屈从
-**Sentences**:
-*Are caused by the way people bend their heads when they use phone, this shifts the way onto the muscles at the back of their heads and causes the bone the grow away that is not normal.*
-是由于人们在使用手机时低头的方式造成的，这会将方式转移到他们后脑的肌肉上，导致骨骼生长脱落，这是不正常的。
-《2023年12月（第1套）》
+*There are upsetting parallels today, as scientists in one wave after another try to awaken us to the growing threat of global warming.*
+如今，科学家们一波接一波地试图唤醒我们，让我们意识到全球变暖日益严重的威胁。
+《2005年英语Text2》
 
 #word
 #### benefits
 #anki
 n. 利益，好处；福利政策；救济金；福利；义演，义卖（benefit 的复数）
-**Sentences**:
-*B)People's performance benefits from the perception of what they are doing as multitasking.*
-B)人们的表现受益于他们正在做的多任务处理的感觉。
-《Text 4》
-
-#word
-#### beyond
-#anki
-n. 更远处；来世
-adv. 在远处；在更远处
-prep. 那一边；在...较远的一边；超过；越过
-**Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
 
 #word
 #### big deal
 #anki
 n. 大人物
 **Sentences**:
-*That's why we feel like we have to appear busy, and there's a real perception that if someone is knee-deep in meetings, emails, and stress, then they're probably a big deal.*
-这就是为什么我们觉得自己必须表现得很忙，而且有一种真实的看法是，如果有人深陷会议、电子邮件和压力之中，那么他们可能是个大问题。
-《TEXT1》
+*There is the so-called big deal, where institutional subscribers pay for access to a collection of online journal titles through site-licensing agreements.*
+一种是所谓的“大交易”，即机构订阅者通过网站许可协议付费获取一系列在线期刊。
+《2008年英语一》
 
 #word
-#### bin
+#### bipedal
 #anki
-n. 垃圾箱；箱子；二进制
-v. 扔掉；把……放入箱中
+adj. 两足动物
 **Sentences**:
-*He should throw that soup in the bin.*
-他应该把汤扔进垃圾桶。
-《2023年12月（第1套）》
+*Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.*
+此外，尽管人类已经直立行走了数百万年，但我们的脚和背部仍在努力适应两足行走的姿势，无法轻易承受超大四肢带来的反复压力。
+《2008年英语一》
 
 #word
-#### biological
+#### birth canal
 #anki
-adj. 生物的；生物学的；利用生物的，生物性的；亲生的
-**Sentences**:
-*And with those figures, the researchers concluded that there was no biological reason to discourage cousins from marrying.*
-根据这些数据，研究人员得出结论，没有生物学上的原因阻止表亲结婚。
-《Is it really that bad to marry my cousin？》
+产道
 
 #word
-#### boredom
+#### calories
 #anki
-n. 厌倦；无聊；令人厌烦的事物
+n. 卡路里（热量单位，calorie 的复数）
 **Sentences**:
-*46.When are people likely to experience boredom, according to an accepted psychological definition?*
-46.根据公认的心理学定义，人们什么时候容易感到无聊
-《2020年12月（第2套）》
+*Growth, which rarely continues beyond the age of 20, demands calories and nutrients — notably, protein — to feed expanding tissues.*
+在20岁以后很少会继续生长，需要卡路里和营养，特别是蛋白质来喂养扩张的组织。
+《2008年英语一》
 
 #word
-#### bottled up
+#### candidates
 #anki
-抑制；掩饰（不快或担忧）
+n. 候选人；申请者；应征人员（candidate 的复数）
 **Sentences**:
-*If we feel like we can express ourselves in how we're feeling, we don't have to keep it bottled up.*
-《How long does it take to get over a breakup》
+*Such characteristics make them perfect candidates for Dr. Brosnan's and Dr. de Waal's study.*
+这些特征使他们成为布鲁斯南博士和德瓦尔博士研究的完美对象。
+《2005年英语Text1》
 
 #word
-#### bottom
+#### capuchin
 #anki
-adj. 底部的
-n. 底部；末端；尽头；臀部
-v. 装底；建立基础；到达底部
+卷尾猴
 **Sentences**:
-*So we would welcome any information that will help us get to the bottom of this random incidents.*
-所以我们欢迎任何能帮助我们弄清这一随机事件真相的信息。
-《2022年12月（第2套）》
+*The researchers studied the behaviour of female brown capuchin monkeys.*
+研究人员研究了雌性棕色卷尾猴的行为。
+《2005年英语Text1》
 
 #word
-#### bound
+#### catching up
 #anki
-adj. 必然的，肯定的；受约束的，有义务的；
-v. 跳跃，蹦跳着走；形成……的边界，划界；
+phr. 赶上，追上；把…缠住
 **Sentences**:
-*A)They may adopt strategies that are bound to ruin their venture.*
-A)他们可能会采取注定会毁掉他们的冒险的策略。
-《Text 3》
+*While still catching up to men in some spheres of modem life, women appear to be way ahead in at least one undesirable category.*
+虽然在现代生活的某些领域，女性仍在追赶男性，但至少在一个不受欢迎的领域，女性似乎遥遥领先。
+《2008年英语一》
 
 #word
-#### brake
+#### celebrities
 #anki
-n. 阻碍；闸，刹车
-v. 刹车
+n. 名人（celebrity 的复数）
 **Sentences**:
-*His feet could barely _reach_ the _brake_ and his head was only just _high enough_ to see out of the windows.*
-他的脚几乎够不到刹车，他的头只够看到窗外。
-《2023年12月（第1套）》
+*[D] most celebrities enjoy wide media attention.*
+[D]大多数名人享有广泛的媒体关注。
+《2010年英语一Test3》
 
 #word
-#### breakup
+#### chambers
 #anki
-n. 崩溃;瓦解;休假停课;结业
+n. 房间，室，厅;议院
 **Sentences**:
-*How long does it take to get over a breakup?*
-从失恋中走出来需要多长时间
-《How long does it take to get over a breakup》
+*However, when two monkeys were placed in separate but adjoining chambers, so that each could observe what the other was getting in return for its rock, their behaviour became markedly different.*
+然而，当两只猴子被放在分开但相邻的房间里，以便每只猴子都能看到对方用石头得到什么回报时，它们的行为就明显不同了。
+《2005年英语Text1》
 
 #word
-#### brochures
+#### characteristics
 #anki
-n. 小册子，手册
+n. 特性，特征；特质
 **Sentences**:
-*We have bunches of brochures here, I would recommend getting out on a boat trip.*
-我们这里有很多小册子，我建议你乘船出游。
-《2023年12月（第1套）》
+*Such characteristics make them perfect candidates for Dr. Brosnan's and Dr. de Waal's study.*
+这些特征使他们成为布鲁斯南博士和德瓦尔博士研究的完美对象。
+《2005年英语Text1》
 
 #word
-#### budget
+#### cheated
 #anki
-n. 预算；一堆
-v. 编预算；安排
-adj. 低廉的
+v. 欺骗，欺诈；作弊，舞弊；对某人不忠； n. 骗子；欺诈，欺骗，作弊
 **Sentences**:
-*A)They have deteriorated due to budget cuts.*
-A)由于预算削减，它们已经恶化了。
-《2020年12月（第1套）》
+*Such co­operation is likely to be stable only when each animal feels it is not being cheated.*
+只有当每只动物都感到自己没有被欺骗时，这种合作才可能是稳定的。
+《2005年英语Text1》
 
 #word
-#### bump
+#### childbirth
 #anki
-v. （使身体部位等）碰上，撞上
-n. 肿块；隆起，凸块；碰撞，撞击；
+n. 分娩
 **Sentences**:
-*You can bump into each other and not feel pain."*
-你们可以相互碰撞而不感到疼痛。
-《How long does it take to get over a breakup》
+*During childbirth, larger babies have more difficulty passing through the birth canal.*
+在分娩过程中，较大的婴儿通过产道的困难更大。
+《2008年英语一Text3》
 
 #word
-#### bump into
+#### chronic
 #anki
-偶然遇见或碰到某人或某物
+adj. 慢性的，长期的；严重的，顽固的；习惯性的
 **Sentences**:
-*You can bump into each other and not feel pain."*
-你们可以相互碰撞而不感到疼痛。
-《How long does it take to get over a breakup》
-
-#word
-#### bundles
-#anki
-n. 捆，束，包；大量；一大笔钱；极度
-v. 归拢；捆；匆忙打发；捆绑销售；匆忙离开
-**Sentences**:
-*Bundles containing thousands of pounds in cash keep turning up on streets of BHC in northern England according to police.*
-据警方称，英格兰北部BHC的街道上不断出现装有数千英镑现金的包裹。
-《2022年12月（第2套）》
-
-#word
-#### campaign
-#anki
-n. （有计划的）活动，运动；战役，战斗
-v. 领导（参加）运动，从事竞选活动
-**Sentences**:
-*The artist merely continued his campaign on the other side.*
-这位艺术家只是在另一边继续他的运动。
-《2020年9月（第2套）》
-
-#word
-#### can of worms
-#anki
-潘多拉魔盒：指打开后会引发一系列问题或麻烦的事情。
-**Sentences**:
-*It only focused on the aftereffects of ending a relationship, specifically among undergrads, which is a whole other can of worms.*
-它只关注结束一段关系的后果，尤其是对大学生的影响，这是另一回事。
-《How long does it take to get over a breakup》
-
-#word
-#### career
-#anki
-n. 事业，职业；生涯；全速
-v. 全速前进，猛冲
-**Sentences**:
-*The study found that when participants were distracted into thinking about something other than their ex, like, their favorite hobby or ideal career, their love feelings for their ex stayed the same, but it did make them feel more pleasant.*
-研究发现，当参与者分心去想前任以外的事情时，比如他们最喜欢的爱好或理想的职业，他们对前任的爱的感觉保持不变，但这确实让他们感觉更愉快。
-《How long does it take to get over a breakup》
-
-#word
-#### carriage
-#anki
-n. 马车；车厢；运输；运费；仪态
-**Sentences**:
-*Then you can walk down trough the train to your carriage and take your seats when you arrive in London, hand the ticket to the guard.*
-然后你可以沿着火车走到你的车厢里，当你到达伦敦时，你可以坐下来，把票交给警卫。
-《2023年3月（第1套）》
-
-#word
-#### carry out
-#anki
-phr. 实施；抬出；完成
-**Sentences**:
-*But studies like that are expensive and complicated to carry out.*
-《How long does it take to get over a breakup》
-
-#word
-#### charity
-#anki
-n. 慈善（事业）；慈善机关；慈善团体；施舍，施舍物；仁爱，宽容
-**Sentences**:
-*C)He lived on various charity benefits.*
-C)他靠各种慈善救济金生活。
-《Text 5》
-
-#word
-#### charm
-#anki
-n. 魅力；咒文；魔法；小装饰品
-v. 使陶醉；行魔法，用符咒
-**Sentences**:
-*C)He had lost his charm with the leagues of Grand National fans.*
-C)他已经失去了对大国家赛马迷们的吸引力。
-《Text 5》
-
-#word
-#### circumstances
-#anki
-n. 环境，状况；（尤指经济上的）境况；原委（circumstance 的复数）
-**Sentences**:
-*C)One is forced by circumstances to stop working.*
-C)一个人被环境强迫停止工作。
-《TEXT1》
+*Not everyone experiences the kinds of severe chronic stresses Alvarez describes.*
+并不是每个人都经历过阿尔瓦雷斯描述的那种严重的慢性压力。
+《2008年英语一》
 
 #word
 #### claimed
 #anki
-v. （提出）要求；声称；断言；需要；索取；认领
-n. 要求；索赔；值得；声称；断言；声明
+v. 声称；宣称；断言（claim 的过去式）
+**Notes**:
+所谓的（不认可）
 **Sentences**:
-*Their owner has 2 weeks to collect the cash, which is then returned to the finders if not claimed according Peter Lee police.*
-据彼得李警方称，失主有两周的时间来领取现金，如果没有人认领，现金就会归还给失主。
-《2022年12月（第2套）》
+*The Bilski case involves a claimed patent on a method for hedging risk in the energy market.*
+比尔斯基案涉及一项关于能源市场对冲风险方法的专利要求。
+《2010年英语一Test2》
+
+#word
+#### claims
+#anki
+v. （提出）要求；声称；索取；认领；  n. 要求；索赔
+**Sentences**:
+*Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets.*
+对商业方法专利的限制将是一个戏剧性的大转变，因为正是联邦巡回法院自己在1998年对所谓的道富银行案的裁决中引入了这类专利，批准了一项关于汇集共同基金资产的方法的专利。
+《2010年英语一Test2》
 
 #word
 #### clear
 #anki
-adv. 清晰地；完全地
-v. 变清澈；使清楚；扫除，清除；清（嗓子）；跳过，通过；结清；放晴
-adj. 清澈的；清晰的；明确的；晴朗的，明亮的；无瑕疵的；畅通的
+adv. 清晰地；完全地； v. 变清澈；使清楚； adj. 清澈的；清晰的；
 **Sentences**:
-*The benefits of multitasking are clear.*
-多任务处理的好处是显而易见的。
-《Text 4》
-
-#word
-#### clinical
-#anki
-adj. 临床的；诊所的；冷静的
-**Sentences**:
-*Young people have reported that for low-level conditions such as stress and anxiety, a clinical setting can sometimes be daunting （令人却步的）.*
-年轻人报告说，对于压力和焦虑等低水平的疾病，临床环境有时会令人望而生畏。
-《2020年12月（第1套）》
-
-#word
-#### colleagues
-#anki
-n. 同事；同行（colleague 的复数）
-**Sentences**:
-*We found that women paid on average $18 less per ticket than their male colleagues.*
-我们发现，女性平均每张票比男性同事少付18美元。
-《Text 2》
+*The clear message is that we should get moving to protect ourselves.*
+明确的信息是，我们应该行动起来保护自己。
+《2005年英语Text2》
 
 #word
 #### come up
 #anki
 phr. 发生，升起，审理，中奖，被提及，即将发生
 **Sentences**:
-*If you ask people why cousin marriage seems wrong, health might come up.*
-如果你问人们为什么表亲结婚是错误的，他们可能会提到健康问题。
-《Is it really that bad to marry my cousin？》
+*In their recent work, however, some researchers have come up with the finding that influentials have far less impact on social epidemics than is generally supposed.*
+然而，在他们最近的工作中，一些研究人员发现，有影响力的人对社会流行的影响远不如人们通常认为的那样大。
+《2010年英语一Test3》
 
 #word
 #### commercial
 #anki
-n. 商业广告
-adj. 商业的；商业性的
+n. 商业广告| adj. 商业的；商业性的
 **Sentences**:
-*Another role they're expecting to take over, is negotiating on our behalf commercial transaction or legal disputes.*
-他们期望接手的另一个角色是代表我们谈判商业交易或法律纠纷。
-《2023年12月（第1套）》
+*The Internet — and pressure from funding agencies, who are questioning why commercial publishers are making money from government-funded research by restricting access to it—is making free access to scientific results a reality.*
+互联网和来自资助机构的压力正在使免费获取科学成果成为现实。资助机构质疑为什么商业出版商要通过限制对政府资助的研究的访问来赚钱。
+《2008年英语一》
 
 #word
-#### commissioned
+#### compelling
 #anki
-adj. 受委任的，受任命的；服役的，现役的
-v. 委任（commission 的过去分词）
+adj. 引人入胜的；不可抗拒的，强制的；有说服力的； v. 强迫，强制（compel的现在分词）
 **Sentences**:
-*The UK's Paul Curtis, better known as Moose, operates around Leeds and London and has been commissioned by a number of companies to make reverse graffiti advertisements.*
-英国的保罗·柯蒂斯(Paul Curtis)，更广为人知的名字是Moose，在利兹和伦敦附近开展业务，并已受多家公司委托制作反向涂鸦广告。
-《2020年9月（第2套）》
+*The idea is intuitively compelling, but it doesn't explain how ideas actually spread.*
+这个想法在直觉上很有说服力，但它并没有解释思想实际上是如何传播的。
+《2010年英语一Test3》
 
 #word
-#### committed
+#### completely
 #anki
-adj. 效忠的；坚定的；承担义务的
-v. 承诺（commit的过去式和过去分词）
+adv. 完全地，彻底地，完整地
 **Sentences**:
-*Having a rival can keep you committed to achieving your goals and enhance your overall performance.*
-有一个对手可以让你致力于实现你的目标，提高你的整体表现。
-《Text 3》
+*Refusing a lesser reward completely makes these feelings abundantly clear to other members of the group.*
+拒绝较低的奖励会让群体中的其他成员清楚地感受到这种感觉。
+《2005年英语Text1》
 
 #word
-#### commodity
+#### complies
 #anki
-n. 商品；日用品
+v. 遵从，服从；（商品）符合特定标准（comply 的第三人称单数）
 **Sentences**:
-*55.How do we assess the value of a commodity, according to the passage?*
-55.根据文章，我们如何评估商品的价值
-《2020年12月（第1套）》
+*[A] Its ruling complies with the court decisions.*
+[A]它的裁决符合法院的判决。
+《2010年英语一Test2》
 
 #word
-#### compels
+#### compromises
 #anki
-v. 强迫，迫使
+n. 妥协；折衷; v. 妥协；违背；危害
 **Sentences**:
-*B)It compels some 20% of employees to appear always busy.*
-B)它迫使大约20%的员工看起来总是很忙。
-《TEXT1》
+*[D] political compromises are easily found throughout the U.S. history.*
+[D]政治妥协在美国历史上随处可见。
+《2008年英语一Text4》
 
 #word
-#### complaining
+#### concerning
 #anki
-v. 抱怨；（诗、文）悲叹；投诉；（机器因拉力或压力）咯吱作响（complain 的现在分词）
-adj. 抱怨的
+prep. 关于，就…而论； v. 涉及，参与，关系到（concern的现在分词）
 **Sentences**:
-*46.What are teachers complaining about?*
-46.老师们在抱怨什么
-《2020年12月（第1套）》
+*But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions."*
+但科学确实为我们提供了最好的未来指南，至关重要的是，我们的国家和世界要根据科学对当前行动的未来后果所能提供的最佳判断来制定重要的政策。
+《2005年英语Text2》
 
 #word
-#### completed
+#### confront
 #anki
-adj. 完整的；完全的
-v. 完成，使完满（complete的过去式和过去分词）
+v. 使面对，遇到；与…对抗；比较
 **Sentences**:
-*Being quicker and more efficient increases our performance and the number of tasks completed.*
-更快、更高效能提高我们的表现和完成任务的数量。
-《Text 4》
+*23. According to Paragraph 4, the stress women confront tends to be*
+23. 根据第4段，女性面临的压力往往是
+《2008年英语一》
 
 #word
-#### completion
+#### consequences
 #anki
-n. 完成，结束，实现
+n. 后果，结果；影响
 **Sentences**:
-*These benefits remained 6 months after the completion of the course.*
-这些好处在课程结束后6个月仍然存在。
-《2023年12月（第1套）》
-
-#word
-#### complicated
-#anki
-adj. 复杂的，难懂的，混乱的
-**Sentences**:
-*But studies like that are expensive and complicated to carry out.*
-《How long does it take to get over a breakup》
-
-#word
-#### complication
-#anki
-n. 复杂，纠纷；混乱；并发症
-
-#word
-#### concentrating
-#anki
-v. 浓缩；专心（concentrate 的现在分词）
-**Sentences**:
-*Overall, the researchers concluded, and I'm not using the scientific language here, that concentrating on the bad things about your ex can help you to feel less in love.*
-总的来说，研究人员得出结论，我在这里没有用科学的语言，把注意力集中在前任的不好的事情上会让你感觉更少爱。
-《How long does it take to get over a breakup》
-
-#word
-#### concept
-#anki
-n. 概念，观念
-adj. （围绕）某主题的；为表达一种想法而创造的
-v. <非正式>想象，设想
-**Sentences**:
-*We found that only the concept of "negative reciprocity"-in which an employee who feels unfairly treated engages in negative behaviors, such as spending their company's money less carefully-explains these differences.*
-《Text 2》
-
-#word
-#### conception
-#anki
-n. 概念，观念；想出，构想；受孕，怀孕；创始
-**Sentences**:
-*D) A change in the conception of what schools are.*
-D)学校概念的改变。
-《2020年12月（第1套）》
-
-#word
-#### concern
-#anki
-n. 关心的事；关心，顾虑；关系，有关；公司，企业
-v. 涉及，参与，关系到；使关心，使担忧
-**Sentences**:
-*The most significiant concern here is how early this is all happening.*
-这里最值得关注的是，这一切发生得有多早。
-《2022年12月（第2套）》
-
-#word
-#### conclude
-#anki
-v. 完成，结束；以…作为结束；达成，决定
-**Sentences**:
-*51.What did the author's team conclude about the gender difference in airfares from their further investigation?*
-51.作者的团队从进一步的调查中得出了关于机票价格性别差异的什么结论
-《Text 2》
-
-#word
-#### concluded
-#anki
-v. 完成，结束；以…作为结束；达成，决定
-**Sentences**:
-*Overall, the researchers concluded, and I'm not using the scientific language here, that concentrating on the bad things about your ex can help you to feel less in love.*
-总的来说，研究人员得出结论，我在这里没有用科学的语言，把注意力集中在前任的不好的事情上会让你感觉更少爱。
-《How long does it take to get over a breakup》
-
-#word
-#### conducting
-#anki
-v. 指挥；行为；传导（conduct 的 ing 形式）；指导
-adj. [物]传导的
-n. 指挥；执行；传导
-**Sentences**:
-*But it's possible to avoid such costly mistakes by making a habit of engaging in critical thinking, such as considering opposing viewpoints and conducting cost-benefit analyses, especially for those decisions that are complex and can determine the future of your venture.*
-但是，养成批判性思维的习惯是有可能避免这种代价高昂的错误的，比如考虑相反的观点，进行成本效益分析，尤其是那些复杂的决定，可以决定你的企业的未来。
-《Text 3》
-
-#word
-#### conflicts
-#anki
-n. 冲突盾（conflict 的复数）
-v. 冲突，抵触（conflict 的第三人称单数）
-**Sentences**:
-*D)It can result in increasing labor-management conflicts.*
-D)会导致劳资矛盾的增加。
-《Text 2》
-
-#word
-#### confused
-#anki
-adj. 困惑的；混乱的；糊涂的
-v. 使困惑（confuse的过去式和过去分词）
-**Sentences**:
-*The boy later told confused officers that he was planing to travel to California and buy a Lamborghini Sports Car.*
-这名男孩后来告诉困惑的警察，他打算去加利福尼亚买一辆兰博基尼跑车。
-《2023年12月（第1套）》
-
-#word
-#### conjunction
-#anki
-n. 结合，同时发生；连词；（占星术中两个天体的）相合
-**Sentences**:
-*A)Applying instincts and data in conjunction.*
-A)直觉和数据相结合。
-《Text 6》
-
-#word
-#### consistently
-#anki
-adv. 一贯地，坚持地；总；一致地
-**Sentences**:
-*Female employees consistently pay lower airfares than men do for the same flights because they tend to book earlier.*
-同样的航班，女性员工总是比男性员工支付更低的机票价格，因为她们往往预订得更早。
-《Text 2》
+*But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions."*
+但科学确实为我们提供了最好的未来指南，至关重要的是，我们的国家和世界要根据科学对当前行动的未来后果所能提供的最佳判断来制定重要的政策。
+《2005年英语Text2》
 
 #word
 #### constraints
 #anki
 n. 限制（constraint 的复数）
 **Sentences**:
-*Absence of definitive criteria, and time and resource constraints, and novel situations are instances which limit the practicality of data.*
-缺乏明确的标准、时间和资源的限制以及新的情况限制了数据的实用性。
-《Text 6》
+*"There are some real constraints that are set by the genetic architecture of the individual organism," says anthropologist William Leonard ofNorthwestem University.*
+西北大学的人类学家威廉·伦纳德说：“个体生物的基因结构确实存在一些限制。”
+《2008年英语一》
 
 #word
-#### construct
+#### controversial
 #anki
-n. 构思的结果，构想；概念
-
-v. 建造；构成；创立；（按照数学规则）编制，绘制；制造
-
-#word
-#### continent
-#anki
-n. 大陆，洲，陆地；欧洲大陆
-adj. 自制的，克制的
+adj. 有争议的；引起争论的
 **Sentences**:
-*African leaders planed to turn the continent into a continent without boarders.*
-非洲领导人计划把非洲大陆变成一个没有边界的大陆。
-《2023年3月（第1套）》
+*Now the nation's top patent court appears completely ready to scale back on business-method patents, which have been controversial ever since they were first authorized 10 years ago.*
+现在，美国最高专利法院似乎完全准备好缩减商业方法专利的规模。自从10年前首次获得授权以来，商业方法专利一直存在争议。
+《2010年英语一Test2》
 
 #word
-#### continuously
+#### controversy
 #anki
-adv. 连续不断地
+n. 争论，论战
 **Sentences**:
-*Since the reform and opening up, Living standard of Chinese people has been improved continuously, which has reflected in the changes of people's diet.*
-改革开放以来，中国人民的生活水平不断提高，这体现在人们饮食的变化上。
-《中国饮食变迁：从温饱到健康》
+*[C] has caused the controversy over the counter-culture.*
+[C]引起了关于反主流文化的争论。
+《2005年英语一Text4》
 
 #word
-#### cookie
+#### cope
 #anki
-n. 饼干，曲奇；人；储存在用户本地终端上的数据
+v. 对付，处理； n. 长袍，法衣
 **Sentences**:
-*Academic measured the program's effect on cookie confidence and self-perceived mental health.*
-学术测量了该项目对饼干信心和自我认知心理健康的影响。
-《2023年12月（第1套）》
+*"It's not necessarily that women don't cope as well.*
+“这并不是说女性不能很好地应对。
+《2008年英语一》
 
 #word
-#### council
+#### copyright
 #anki
-n. 会议，政务会，协商会议；地方议会
-**Sentences**:
-*What does Glasgow city council say the event will do?*
-格拉斯哥市议会说这次活动有什么作用
-《2022年12月（第2套）》
+n. 版权
 
 #word
-#### counseling
+#### counterparts
 #anki
-n. 咨询服务
-v. 建议；劝告；商讨（counsel 的 ing 形式）
+n. （职位或作用）相当的人；相对应的事物；（法律文件）副本（counterpart 的复数）
 **Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
+*Above all, like their female human counterparts, they tend to pay much closer attention to the value of "goods and services" than males.*
+最重要的是，就像她们的女性同伴一样，她们往往比男性更关注“商品和服务”的价值。
+《2005年英语Text1》
 
 #word
-#### counsellor
+#### court
 #anki
-n. 顾问，辅导顾问；律师；<美>夏令营负责人；（使馆的）参赞
+n. 法院；（开）庭；庭院；球场；朝臣；宫廷
 **Sentences**:
-*Recent studies have shown that children and young people largely prefer to see a counsellor in school rather than in an outside environment.*
-最近的研究表明，儿童和年轻人大多更喜欢在学校而不是在外面的环境中去看辅导员。
-《2020年12月（第1套）》
+*Now the nation's top patent court appears completely ready to scale back on business-method patents, which have been controversial ever since they were first authorized 10 years ago.*
+现在，美国最高专利法院似乎完全准备好缩减商业方法专利的规模。自从10年前首次获得授权以来，商业方法专利一直存在争议。
+《2010年英语一Test2》
 
 #word
-#### counterproductive
+#### cover the cost
 #anki
-adj. 事与愿违的，起反作用的
+支付费用
 **Sentences**:
-*C)It proves to be counterproductive in a number of ways.*
-C，它在很多方面被证明是适得其反的。
-《Text 2》
+*[A] cover the cost of its publication.*
+[A]支付出版费用。
+《2008年英语一》
 
 #word
-#### counting down
+#### creatures
 #anki
-计时倒数，倒计时
+n. 生物；动物；人；创造物，产物
 **Sentences**:
-*But more importantly, I’ve learned that instead of counting down the days, we're much better off reconnecting with the things we love to do.*
-但更重要的是，我学会了与其倒计时，不如和我们喜欢做的事情重新联系起来。
-《How long does it take to get over a breakup》
+*They are good-natured, co-operative creatures, and they share their food readily.*
+它们是性情善良、乐于合作的动物，它们乐于分享食物。
+《2005年英语Text1》
 
 #word
-#### countless
+#### critical
 #anki
-adj. 无数的
+adj. 紧要的，关键性的；评判性的；批评的；危急的；
 **Sentences**:
-*He has anecdotal experience with countless people in relationships and, full disclosure, he was my couple’s therapist, too.*
-《How long does it take to get over a breakup》
+*But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions."*
+但科学确实为我们提供了最好的未来指南，至关重要的是，我们的国家和世界要根据科学对当前行动的未来后果所能提供的最佳判断来制定重要的政策。
+《2005年英语Text2》
 
 #word
-#### crime
+#### criticizes
 #anki
-n. 罪行；犯罪活动，不法行为；罪过
-v. 控告…违反纪律
+v. 批评，评论
 **Sentences**:
-*When is cleaning walls a crime?*
-什么时候擦墙是犯罪
-《2020年9月（第2套）》
+*[A] It criticizes government-funded research.*
+[A]它批评政府资助的研究。
+《2008年英语一》
 
 #word
-#### criteria
+#### cruelty
 #anki
-n. （评判或做决定的）标准，准则，尺度 （criterion 的复数）
+n. 残酷，残忍
 **Sentences**:
-*D)Apply definitive criteria.*
-D)应用明确的标准。
-《Text 6》
+*[B] demonstrate the cruelty of slavery in his days.*
+[B]证明他那个时代奴隶制的残酷。
+《2008年英语一Text4》
 
 #word
-#### deceptive
+#### cucumber
 #anki
-adj. 欺诈的，靠不住的；虚伪的
+n. 黄瓜
 **Sentences**:
-*These are both examples of deceptive strategy, participants were more willing to employ deceptive strategies when they signed an agent on their behalf to negotiate?*
-这些都是欺骗策略的例子，当参与者代表他们签署代理人进行谈判时，他们更愿意使用欺骗策略
-《2023年12月（第1套）》
+*Normally, the monkeys were happy enough to exchange pieces of rock for slices of cucumber.*
+通常情况下，猴子们很乐意用石头换黄瓜片。
+《2005年英语Text1》
 
 #word
-#### defect
+#### curbs on
 #anki
-n. 缺点，过失，缺陷
-v. 叛变，脱离，背叛，投敌
+对……的限制
 **Sentences**:
-*The fear of birth defects and genetic disorders has influenced the change in social norms.*
-对出生缺陷和遗传疾病的恐惧影响了社会规范的变化。
-《Is it really that bad to marry my cousin？》
+*Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets.*
+对商业方法专利的限制将是一个戏剧性的大转变，因为正是联邦巡回法院自己在1998年对所谓的道富银行案的裁决中引入了这类专利，批准了一项关于汇集共同基金资产的方法的专利。
+《2010年英语一Test2》
 
 #word
-#### definitive
+#### cursory
 #anki
-adj. 最终的，确定的；最好的，最权威的；（邮票）普通标准型的
-n. 普通邮票；限定词
+adj. 粗略的，仓促的
 **Sentences**:
-*D)Apply definitive criteria.*
-D)应用明确的标准。
-《Text 6》
+*In many such cases, a cursory search for causes finds that some small group of people was wearing, promoting, or developing whatever it is before anyone else paid attention.*
+在许多这样的情况下，粗略地搜索一下原因就会发现，在其他人注意到之前，就有一小群人在穿着、推广或开发某种东西。
+《2010年英语一Test3》
 
 #word
-#### deliberate
+#### decision
 #anki
-v. 仔细考虑；商讨
-adj. 故意的；深思熟虑的；从容的
+n. 决定，决心；作决定；决议；判决；决断（力）
 **Sentences**:
-*A)Deliberate on what really matters.*
-A)慎重考虑真正重要的事情。
-《Text 3》
+*Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets.*
+对商业方法专利的限制将是一个戏剧性的大转变，因为正是联邦巡回法院自己在1998年对所谓的道富银行案的裁决中引入了这类专利，批准了一项关于汇集共同基金资产的方法的专利。
+《2010年英语一Test2》
 
 #word
-#### demand
+#### decline
 #anki
-n. 要求，所需之物；需求，需要
-v. 要求；询问，质问；命令；需要
+v. 下降，衰退；拒绝，谢绝；变格，词形变化； n. 减少，衰退
 **Sentences**:
-*By making an opening demand.*
-通过开口要求。
-《2023年12月（第1套）》
+*36. According to Mc Whorter, the decline of formal English*
+36. 根据Whorter的说法，正式英语的衰落
+《2005年英语一Text4》
 
 #word
-#### depending
+#### degree
+#anki
+n. 阶层；度；学位；程度
+**Notes**:
+学位
+**Sentences**:
+*"I struggled a lot to get the college degree.*
+“为了拿到大学学位，我付出了很多努力。
+《2008年英语一》
+
+#word
+#### deliberately
+#anki
+adv. 故意地；从容不迫地
+**Notes**:
+等同于 intentionally/purposefully
+**Sentences**:
+*[C] historians deliberately made up some stories of Jefferson's life.*
+[C]历史学家故意编造了一些关于杰弗逊生活的故事。
+《2008年英语一Text4》
+
+#word
+#### delicate
+#anki
+adj.脆的，易碎的；精美的；雅致的
+**Sentences**:
+*[B] in its early days the U.S. was confronted with delicate situations.*
+[B]在早期，美国面临着微妙的局势。
+《2008年英语一Text4》
+
+#word
+#### demonstrates
+#anki
+v. 论述，证明；演示；显示；示威游行
+**Sentences**:
+*Alvarez's experience demonstrates the importance of finding ways to diffuse stress before it threatens your health and your ability to function.*
+阿尔瓦雷斯的经历证明了在压力威胁到你的健康和工作能力之前找到缓解压力的方法的重要性。
+《2008年英语一》
+
+#word
+#### dental
+#anki
+adj. 牙齿的；牙科的；齿音的
+**Sentences**:
+*36. George Washington's dental surgery is mentioned to*
+36. 乔治·华盛顿的牙科手术被提到
+《2008年英语一Text4》
+
+#word
+#### dentist
+#anki
+n. 牙科医生，牙医
+**Sentences**:
+*So he hired a dentist to transplant nine teeth into his jaw — having extracted them from the mouths of his slaves.*
+于是，他雇了一位牙医，把从奴隶嘴里拔出来的九颗牙齿移植到他的下巴上。
+《2008年英语一Text4》
+
+#word
+#### depends
 #anki
 v. 取决于；依赖，依靠；相信，信赖
 **Sentences**:
-*Whether you fancy your cousin or not, depending on where you're from, this can still be a bit of a taboo subject.*
-不管你喜不喜欢你的表亲，这取决于你来自哪里，这仍然是一个有点禁忌的话题。
-《Is it really that bad to marry my cousin？》
+*The value of knowledge and the return on the public investment in research depends, in part, upon wide distribution and ready access.*
+知识的价值和公共研究投资的回报在一定程度上取决于广泛传播和随时获取。
+《2008年英语一》
 
 #word
-#### descend
+#### devastating
 #anki
-v. 下来；下去；下降；下斜；降临；遗传；屈尊；堕落；袭击
+v. [devastate] 的现在分词形式；毁坏，摧毁| adj. 毁灭性的；令人震惊的；强有力的
 **Sentences**:
-*Over 400 pipers and drammers are expected to descend on the city for the annual event.*
-预计将有400多名风笛手和鼓手来到这座城市参加一年一度的活动。
-《2022年12月（第2套）》
+*The wear-and-tear that comes from these longer relationships can be quite devastating."*
+这些长期关系带来的磨损可能是相当毁灭性的。
+《2008年英语一》
 
 #word
-#### desirable
+#### dignity
 #anki
-adj. 令人向往的，值得拥有的；可取的；性感的
-n. 称心合意的人（或物），好的品质
+n. 尊严；庄严；尊贵；高尚
 **Sentences**:
-*D)It is a desirable ability that can be developed.*
-D)这是一种可以培养的令人向往的能力。
-《Text 4》
-
-#word
-#### deteriorated
-#anki
-adj. 恶化的；已变质的
-vt. 恶化（deteriorate 的过去式）；蚀薄
-**Sentences**:
-*A)They have deteriorated due to budget cuts.*
-A)由于预算削减，它们已经恶化了。
-《2020年12月（第1套）》
-
-#word
-#### deterioration
-#anki
-n. 恶化，退化；堕落
-**Sentences**:
-*C) Mental deterioration.*
-C)精神退化。
-
-#word
-#### determination
-#anki
-n. 坚定；果断；决心；确定
-**Sentences**:
-*A) Determination.*
-一个)的决心。
-《2020年12月（第2套）》
-
-#word
-#### diagnosable
-#anki
-adj. 可诊断的
-**Sentences**:
-*Three children in every classroom have a diagnosable mental health condition.*
-每个班级有三个孩子有可诊断的心理健康问题。
-《2020年12月（第1套）》
-
-#word
-#### dilemma
-#anki
-n. （进退两难的）窘境，困境；二难推理，两刀论法
-**Sentences**:
-*A)Resolve the dilemma with previous experience.*
-A)用以前的经验来解决这个困境。
-《Text 6》
-
-#word
-#### dirt
-#anki
-n. 污物；污泥；泥土，尘土，灰尘
-**Sentences**:
-*Either way, it's the same principle: the image is made by cleaning away the dirt.*
-无论哪种方式，原理都是一样的:图像是通过清除污垢而产生的。
-《2020年9月（第2套）》
-
-#word
-#### disclosure
-#anki
-n. 披露；揭发；揭发（或败露）的事情
-**Sentences**:
-*He has anecdotal experience with countless people in relationships and, full disclosure, he was my couple’s therapist, too.*
-《How long does it take to get over a breakup》
+*[D] enhancement of dignity.*
+[D]提高尊严。
+《2010年英语一Test2》
 
 #word
 #### disorders
 #anki
-n. 紊乱，失调（disorder 的复数）
-v. 打乱；失调（disorder 的第三人称单数）
+n. 紊乱，失调（disorder 的复数）； v. 打乱；失调（disorder 的第三人称单数）
 **Sentences**:
-*The fear of birth defects and genetic disorders has influenced the change in social norms.*
-对出生缺陷和遗传疾病的恐惧影响了社会规范的变化。
-《Is it really that bad to marry my cousin？》
+*"Women are particularly susceptible to developing depression and anxiety disorders in response to stress compared to men," according to Dr. Yehuda, chief psychiatrist at New York's Veteran's Administration Hospital.*
+纽约退伍军人管理医院的首席精神病学家耶胡达博士说：“与男性相比，女性在面对压力时特别容易患上抑郁症和焦虑症。”
+《2008年英语一》
 
 #word
-#### disputes
+#### domestic
 #anki
-n. 辩论，争论；争端；纠纷
-v. 对…提出质询，对…表示异议（或怀疑）；辩论，争论
+adj. 家庭的；热心家务的；国内的；驯养的| n. 仆人，佣人
 **Sentences**:
-*Another role they're expecting to take over, is negotiating on our behalf commercial transaction or legal disputes.*
-他们期望接手的另一个角色是代表我们谈判商业交易或法律纠纷。
-《2023年12月（第1套）》
+*[A] domestic and temporary.*
+A .国内的和暂时的。
+《2008年英语一》
 
 #word
-#### dissatisfaction
+#### doubters
 #anki
-n. 不满，不悦
+n．怀疑者：对某事或某人表示怀疑或不信任的人。
 **Sentences**:
-*D) Express their dissatisfaction with local governments.*
-D)表达对地方政府的不满。
-《2020年9月（第2套）》
+*Do you remember all those years when scientists argued that smoking would kill us but the doubters insisted that we didn't know for sure?*
+你还记得那些年科学家们争辩说吸烟会致人死亡，但怀疑者坚持说我们对此并不确定吗
+《2005年英语Text2》
 
 #word
-#### distract
+#### dramatic
 #anki
-v. 使分心，使转移注意力；<古>使困惑，使迷惑
+adj. 戏剧的；戏剧性的；激动人心的；引人注目的
 **Sentences**:
-*Finding something to distract us and unpacking our feelings when we're ready.*
-找一些事情来分散我们的注意力，准备好了就把自己的感受宣泄出来。
-《How long does it take to get over a breakup》
+*Curbs on business-method claims would be a dramatic about-face, because it was the Federal Circuit itself that introduced such patents with its 1998 decision in the so-called State Street Bank case, approving a patent on a way of pooling mutual-fund assets.*
+对商业方法专利的限制将是一个戏剧性的大转变，因为正是联邦巡回法院自己在1998年对所谓的道富银行案的裁决中引入了这类专利，批准了一项关于汇集共同基金资产的方法的专利。
+《2010年英语一Test2》
 
 #word
-#### distracted
+#### dramatically
 #anki
-adj. 心烦意乱的，思想不集中的
-v. 转移（注意力）（distract的过去式和过去分词）
+adv. 剧烈地，明显地；戏剧性地，夸张地
 **Sentences**:
-*Once you're doing other things that you're engaged with and distracted by, then at some point you look back and like, 'Oh yeah, that's my ex.'*
-《How long does it take to get over a breakup》
+*If he had played last season, however, he would have been one of 42. The bodies playing major professional sports have changed dramatically over the years, and managers have been more than willing to adjust team uniforms to fit the growing numbers of bigger,longer frames.*
+然而，如果他上赛季上场，他将成为42人中的一员。多年来，主要职业运动的身体发生了巨大的变化，经理们非常愿意调整队服，以适应越来越多的体型更大、更长的人。
+《2008年英语一Text3》
 
 #word
-#### distracting
+#### driven
 #anki
-adj. 使分散注意力的，分心的
-v. distract的现在分词
+adj. 有紧迫感的；被迫的；吹积的； suf. 表示
 **Sentences**:
-*While distracting yourself with other subjects, as my therapist suggested, can actually make you feel better.*
-正如我的治疗师建议的那样，用其他话题分散注意力实际上可以让你感觉更好。
-《How long does it take to get over a breakup》
+*In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics"are driven in large part by the actions of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well connected.*
+马尔科姆·格拉德威尔（Malcolm Gladwell）在他的著作《引爆点》（The Tipping Point）中认为，“社会流行病”在很大程度上是由极少数特殊个人的行为驱动的，这些人通常被称为有影响力的人，他们见多识广、有说服力或人脉广泛。
+《2010年英语一Test3》
 
 #word
-#### distraction
+#### dynamics
 #anki
-n. 注意力分散；使人分心的事物；消遣；心烦意乱
+n. 动力学，力学， 动态的
 **Sentences**:
-*However, the research and Dr. Tamir would both tell you that while distraction is good in the short term, it is not a long-term solution.*
-然而，研究和塔米尔博士都会告诉你，虽然分心在短期内是好的，但它不是一个长期的解决方案。
-《How long does it take to get over a breakup》
-*B)It causes lots of distraction to drivers.*
-B)这会使司机分心。
-《2020年9月（第2套）》
-
-#word
-#### distractions
-#anki
-n. 注意力分散；使人分心的事物；消遣；心烦意乱
-**Sentences**:
-*Using distractions to start to feel better is exactly what Dr. Tamir has suggested.*
-利用分散注意力的方法让自己感觉更好，这正是塔米尔博士所建议的。
-《How long does it take to get over a breakup》
-
-#word
-#### dominance
-#anki
-n. 优势；统治
-**Sentences**:
-*Brain scientists call this effect "asymmetric dominance" and it means that people gravitate toward the choice nearest a clearly inferior option.*
-大脑科学家称这种效应为“不对称优势”，这意味着人们倾向于选择最接近明显较差的选项。
-《2020年12月（第1套）》
-
-#word
-#### drastic
-#anki
-adj. 极端的，激烈的
-**Sentences**:
-*The city officials then decided to take drastic action.*
-市政府官员于是决定采取严厉措施。
-《2020年9月（第2套）》
-
-#word
-#### drastically
-#anki
-adv. （动作或变化）猛烈地，力度大地 ；极其，非常
-**Sentences**:
-*See, those articles drastically misrepresented that study.*
-那些文章完全歪曲了那项研究。
-《How long does it take to get over a breakup》
-
-#word
-#### drifting
-#anki
-adj. 漂流的，飘动的
-v. 漂移（drift的现在分词）
-**Sentences**:
-*A police officer in the US stopped a large SUV car that was going very slowly and _drifting_ across lanes on a highway.*
-美国一名警察在高速公路上拦下了一辆开得很慢、横冲直撞的大型SUV。
-
-#word
-#### drives
-#anki
-n. 驱动器；驱动力；驱动程序（drive 的复数形式）
-v. [交]驾驶；达成；强迫（drive 的第三人称单数形式）
-**Sentences**:
-*One reason having a rival can enhance your venture's performance is that it creates a level of excitement that drives you to work harder.*
-有竞争对手可以提高你的企业业绩的一个原因是，它会产生一定程度的兴奋，促使你更加努力地工作。
-《Text 3》
-
-#word
-#### drown
-#anki
-v. 淹死；淹没；沉没；压过，盖过
-**Sentences**:
-*Simply "feeling"that something is right or should be done is highly subjective and can drown you.*
-简单地“感觉”某事是对的或应该做的是非常主观的，可能会淹死你。
-《Text 6》
-
-#word
-#### eager
-#anki
-adj. 热切的，渴望的，渴求的
-**Sentences**:
-*C)They may be too eager to succeed while ignoring the huge labor cost.*
-C)他们可能过于渴望成功，而忽视了巨大的劳动力成本。
-《Text 3》
+*35. What is the essential element in the dynamics of social influence?*
+35. 什么是社会影响动态的基本要素
+《2010年英语一Test3》
 
 #word
 #### eagerness
 #anki
 n. 渴望，热心
 **Sentences**:
-*But this eagerness to win may also hurt your venture's success, particularly when it causes you to make impulsive, insensible decisions.*
-但是这种对胜利的渴望也可能会损害你的企业的成功，特别是当它导致你做出冲动、不明智的决定时。
-《Text 3》
-
-#word
-#### edition
-#anki
-n. 版本；一份；版次
-**Sentences**:
-*C)The Economist's print edition turns out to sell the best.*
-C)《经济学人》的印刷版卖得最好。
-《2020年12月（第1套）》
+*[A] The eagerness to be accepted.*
+[A]渴望被接受。
+《2010年英语一Test3》
 
 #word
 #### effective
 #anki
 adj. 产生预期结果的，有效的；实际的，事实上的；（法律、规则等）生效的，起作用的；给人深刻印象的
-n. 实际可作战的士兵
 **Sentences**:
-*After all, competitive rivalry can also hinder effective decision-making and increase your willingness to take risks, behaviors that can ultimately hurt your venture's success.*
-毕竟，竞争性竞争也会阻碍有效的决策，增加你承担风险的意愿，这些行为最终会损害你的企业的成功。
-《Text 3》
+*[B] It introduces an effective means of publication.*
+[B]它引入了一种有效的出版方式。
+《2008年英语一》
 
 #word
-#### effectively
+#### eliminate
 #anki
-adv. 有效地；有力地；实际上
+v. 排除，消除，淘汰，不加考虑，忽视，杀人
 **Sentences**:
-*A multitasker is one who can perform two or more tasks effectively at the same time, which—apart from the obvious differences—is similar to what a computer does.*
-多任务者是指能够同时有效地执行两项或两项以上任务的人，除了明显的区别之外，这与计算机的功能类似。
-《Text 4》
+*It "has the potential to eliminate an entire class of patents."*
+它“有可能消除一整类专利。
+《2010年英语一Test2》
 
 #word
-#### efficiency
+#### endeavour
 #anki
-n. 效率，功效；提高功效的方法
+n. 努力，竭力； v. 努力；力图
 **Sentences**:
-*D)Increase efficiency.*
-D)提高效率。
-《Text 4》
+*It signals a change in what has, until now, been a key element of scientific endeavour.*
+它标志着迄今为止一直是科学努力的一个关键因素的变化。
+《2008年英语一》
 
 #word
-#### efficient
+#### enhancement
 #anki
-adj. 效率高的，能胜任的；生效的，有效的
+n. 增强；放大；改善
 **Sentences**:
-*D)An efficient person able to perform multiple tasks at the same time.*
-D)一个能同时执行多项任务的高效率的人。
-《Text 4》
+*[D] enhancement of dignity.*
+[D]提高尊严。
+《2010年英语一Test2》
 
 #word
-#### elevate
+#### enlisted
 #anki
-v. 举起；抬起；使上升；提高；振奋情绪
-
-#word
-#### emergency
-#anki
-n. 紧急情况；突发事件；非常时刻
-adj. 紧急的，应急的
-**Sentences**:
-*He _expected_ to find a driver who was either very drunk or having a medical _emergency_.*
-他希望找到一个要么喝得烂醉，要么有紧急医疗情况的司机。
-《2023年12月（第1套）》
-
-#word
-#### emphasize
-#anki
-v. 强调，着重；重读（单词或短语）；使突出（或明显）
-**Sentences**:
-*55.What does the author emphasize about their analysis in the last paragraph?*
-55.作者在最后一段的分析中强调了什么
-《Text 2》
-
-#word
-#### end up
-#anki
-phr. 结束；最后；最终到达；死亡
-**Sentences**:
-*If you weren't traveling far in your young life, you're more likely to end up with someone you already know, like a second cousin.*
-如果你年轻的时候没有去过很远的地方，你更有可能和你已经认识的人在一起，比如你的表亲。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### engaged
-#anki
-adj. 从事……的，已订婚的，被占用的
-**Sentences**:
-*Once you're doing other things that you're engaged with and distracted by, then at some point you look back and like, 'Oh yeah, that's my ex.'*
-《How long does it take to get over a breakup》
-
-#word
-#### engaged with
-#anki
-phr. 与…接洽；忙于，从事于
+v. 谋求（某人的帮助）；征募，参军（enlist 的过去式和过去分词）； adj. 士兵的，应募入伍的
 **Notes**:
-
+召集
 **Sentences**:
-*Once you're doing other things that you're engaged with and distracted by, then at some point you look back and like, 'Oh yeah, that's my ex.'*
-《How long does it take to get over a breakup》
-
-#word
-#### engagements
-#anki
-n. 订婚；约会；正式的承诺；交战
-**Sentences**:
-*Red Rum traveled all over the country for various engagements.*
-红朗姆酒在全国各地参加各种活动。
-《Text 5》
+*The latest was a panel from the National Academy of Sciences, enlisted by the White House, to tell us that the Earth's atmosphere is definitely warming and that the problem is largely man-made.*
+美国国家科学院（National Academy of Sciences）的一个专家小组受白宫邀请，告诉我们地球大气确实在变暖，而这个问题主要是人为造成的。
+《2005年英语Text2》
 
 #word
-#### enhancing
+#### entire
 #anki
-v. 提高，增加
+adj. 全部的；整个的；全然的，完全的
 **Sentences**:
-*There is no doubt(denying) that the improvement of food quality and diet structure has provided a powerful guarantee for enhancing people's health.*
-毫无疑问(否认)，食品质量和饮食结构的改善为增进人们的健康提供了有力的保障。
-《中国饮食变迁：从温饱到健康》
+*It "has the potential to eliminate an entire class of patents."*
+它“有可能消除一整类专利。
+《2010年英语一Test2》
 
 #word
-#### enormous
+#### epidemics
 #anki
-adj. 巨大的，极大的；<古>凶暴的，极恶的
+n. 流行病；风尚等的流行； adj. 流行的；传染性的
 **Sentences**:
-*B)He won enormous fame and love from British people.*
-B)他赢得了英国人民极大的名声和爱戴。
-《Text 5》
+*In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics"are driven in large part by the actions of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well connected.*
+马尔科姆·格拉德威尔（Malcolm Gladwell）在他的著作《引爆点》（The Tipping Point）中认为，“社会流行病”在很大程度上是由极少数特殊个人的行为驱动的，这些人通常被称为有影响力的人，他们见多识广、有说服力或人脉广泛。
+《2010年英语一Test3》
+*In their recent work, however, some researchers have come up with the finding that influentials have far less impact on social epidemics than is generally supposed.*
+然而，在他们最近的工作中，一些研究人员发现，有影响力的人对社会流行的影响远不如人们通常认为的那样大。
+《2010年英语一Test3》
 
 #word
-#### entrepreneur
+#### equal
 #anki
-n. 创业者，企业家
+n. 同辈；相等的事物；对手，匹敌者； v. 等于；比得上； adj. 相等的；平等的；胜任的
 **Sentences**:
-*But before you go out and find an entrepreneur to out compete, it's important to understand and avoid the traps that often come with rivalry.*
-但是，在你出去寻找一个企业家来竞争之前，重要的是要了解并避免竞争中经常出现的陷阱。
-《Text 3》
+*In several of the studies, when stressed-out female rats had their ovaries (the female reproductive organs) removed,their chemical responses became equal to those of the males.*
+在几项研究中，当压力过大的雌性老鼠的卵巢（雌性生殖器官）被切除后，它们的化学反应变得和雄性老鼠一样。
+《2008年英语一》
 
 #word
-#### equation
+#### escape
 #anki
-n. 方程式，等式；相等；同等；反应式
+v. 逃跑；避免；逃避| n. 逃跑；避免；逃避
 **Sentences**:
-*If more options are introduced, the value equation changes.*
-如果引入更多选项，则价值方程会发生变化。
-《2020年12月（第1套）》
+*I was living in so much frustration that that was my escape, to go to school, and get ahead and do better."*
+我生活在如此多的挫折中，这是我的逃避，去上学，出人头地，做得更好。
+《2008年英语一》
 
 #word
-#### essential
+#### esteem
 #anki
-adj. 必要的；本质的，基本的；精华的
-n. 要素，要点；本质；必需品
+n. 敬重；看法； v. 敬重；认为
+**Notes**:
+尊严
 **Sentences**:
-*This requires two essential conditions: that one of the tasks needs to be automatic, like walking or eating, and that they both need different mental processes.*
-这需要两个基本条件:其中一项任务必须是自动的，比如走路或吃饭，而且它们都需要不同的心理过程。
-《Text 4》
-
-#word
-#### essentially
-#anki
-adv. 本质上，根本上；本来
-**Sentences**:
-*The study also found that a negative reappraisal strategy, essentially remembering all of the shit things your ex said and did, does decrease love feelings for your ex.*
-研究还发现，消极的重新评价策略，本质上是记住你前任说过和做过的所有糟糕的事情，确实会降低你对前任的爱的感觉。
-《How long does it take to get over a breakup》
-
-#word
-#### establish
-#anki
-v. 建立，设立；安置；使立足；证实；制定，规定；（使）确定，确立
-**Sentences**:
-*It also wants to establish a free trade deal across continent.*
-它还希望建立一个跨大陆的自由贸易协定。
-《2023年3月（第1套）》
-
-#word
-#### estimate
-#anki
-n. 估计；估价；预测；看法，评价；判断；报价，预算书
-v. 估计，估算，估量，估价；评价，评论，判断
-**Sentences**:
-*C)Estimate the long-term consequences.*
-C)估计长期后果。
-《Text 3》
+*[C] lower the esteem for patent holders.*
+[C]降低对专利持有者的尊重。
+《2010年英语一Test2》
 
 #word
 #### estimated
 #anki
-adj. 估计的，预计的
-v. 估计，估算；判断，评价（estimate 的过去式和过去分词）
+adj. 估计的，预计的；v. 估计，估算；判断，评价（estimate 的过去式和过去分词）
 **Sentences**:
-*It's estimated that less than one percent of American couples are cousins.*
-据估计，只有不到1%的美国夫妇是表亲。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### ethic
-#anki
-n. 道德规范；伦理观；伦理学
-**Sentences**:
-*We know the friends are more likely to be the same age , gender , and _ethic_ background **as**(and) each other.*
-我们知道朋友之间更可能是相同的年龄、性别和种族背景。
-《2023年12月（第2套）》
-
-#word
-#### evermore
-#anki
-adv. 永远,经常,从此以后
-**Sentences**:
-*Artificial Intelligent Agents play evermore influential role in our lives.*
-人工智能代理在我们的生活中扮演着越来越重要的角色。
-《2023年12月（第1套）》
-
-#word
-#### ex
-#anki
-n. 前妻，前夫
-prep. 不包括，除…之外
-**Sentences**:
-*Once you're doing other things that you're engaged with and distracted by, then at some point you look back and like, 'Oh yeah, that's my ex.'*
-《How long does it take to get over a breakup》
-
-#word
-#### exactly
-#anki
-adv. 确切地；究竟；正是如此
-**Sentences**:
-*Using distractions to start to feel better is exactly what Dr. Tamir has suggested.*
-利用分散注意力的方法让自己感觉更好，这正是塔米尔博士所建议的。
-《How long does it take to get over a breakup》
+*In America, the core scientific publishing market is estimated at between $7 billion and $11 billion.*
+在美国，核心科学出版市场估计在70亿到110亿美元之间。
+《2008年英语一》
 
 #word
 #### examined
 #anki
-adj. 检查过的；验讫
-v. 检查；调查（examine 的过去式和过去分词）
-**Sentences**:
-*One group of researchers, for example, examined the link between rivalry and unethical behavior.*
-例如，一组研究人员研究了竞争与不道德行为之间的联系。
-《Text 3》
+v. 调查；诊察；检查；检测；考试；审问
 
 #word
-#### excel
+#### exemplify
 #anki
-v. 精通，擅长；超过，胜过
+v. 是…的典型；举例说明
 **Sentences**:
-*A)It was simply a hindrance they had to get over to excel.*
-A)这只是他们为了超越而必须克服的障碍。
-《Text 5》
+*[C] exemplify people's intuitive response to social epidemics.*
+[C]举例说明人们对社会流行病的直觉反应。
+《2010年英语一Test3》
 
 #word
-#### excessive
+#### expanding
 #anki
-adj. 过多的，过分的；极度的
+adj. 扩大的，扩展的； v. 扩大；扩展（业务）；详述；（宇宙）膨胀
 **Sentences**:
-*Boredom has been linked to behavior issues including inattentive driving, mindless snacking, excessive drinking, and addictive gambling.*
-无聊与行为问题有关，包括粗心驾驶、盲目吃零食、过度饮酒和上瘾赌博。
-《2020年12月（第2套）》
+*Growth, which rarely continues beyond the age of 20, demands calories and nutrients — notably, protein — to feed expanding tissues.*
+在20岁以后很少会继续生长，需要卡路里和营养，特别是蛋白质来喂养扩张的组织。
+《2008年英语一》
 
 #word
-#### execute
+#### explain
 #anki
-v. 执行，实施；处决；完成，表演（高难度动作）；制作（艺术作品）；（计算机）执行指令（或程序）
+v. 讲解，解释；说明…的原因；辩解
 **Sentences**:
-*The concept does indeed come from the realms of technology, where it is used to refer to an operating system that can execute multiple tasks at the same time.*
-这个概念确实来自技术领域，它被用来指可以同时执行多个任务的操作系统。
-《Text 4》
+*The idea is intuitively compelling, but it doesn't explain how ideas actually spread.*
+这个想法在直觉上很有说服力，但它并没有解释思想实际上是如何传播的。
+《2010年英语一Test3》
 
 #word
-#### executing
+#### explosion
 #anki
-v. 实施；将…处死；使…生效
+n. 爆炸；激增；爆发
 **Sentences**:
-*B)A skilled worker executing more than one task at the same time.*
-B)同时执行多项任务的熟练工人。
-《Text 4》
+*That ruling produced an explosion in business-method patent filings, initially by emerging Internet companies trying to stake out exclusive rights to specific types of online transactions.*
+这一裁决导致商业方法专利申请激增，最初是新兴互联网公司试图在特定类型的在线交易中获得专有权。
+《2010年英语一Test2》
 
 #word
-#### exert
+#### far less
 #anki
-v. 运用，施加（影响）；努力，尽力（exert oneself）
+远不及
 **Sentences**:
-*C)People's active mental processes exert a positive effect on their multitasking.*
-C)人们活跃的心理过程对他们的多任务处理有积极的影响。
-《Text 4》
+*In their recent work, however, some researchers have come up with the finding that influentials have far less impact on social epidemics than is generally supposed.*
+然而，在他们最近的工作中，一些研究人员发现，有影响力的人对社会流行的影响远不如人们通常认为的那样大。
+《2010年英语一Test3》
 
 #word
-#### exhausted
+#### far-reaching
 #anki
-adj. 疲惫的；耗尽的
+adj. 深远的,广泛的
 **Sentences**:
-*An early study gave participants abundant time to complete problem-solving and word-association exercises.Once all the obvious answers were exhausted, participants gave more and more inventive answers to combat boredom.*
-一项早期的研究给了参与者充足的时间来完成问题解决和单词联想练习。一旦所有显而易见的答案都被用尽，参与者就会给出越来越多有创意的答案来对抗无聊。
-《2020年12月（第2套）》
+*The Organization for Economic Co-operation and Development (OECD) has just issued a report describing the far-reaching consequences of this.*
+经济合作与发展组织（OECD）刚刚发布了一份报告，描述了这种情况的深远影响。
+《2008年英语一》
 
 #word
-#### existed
+#### fat
 #anki
-v. 存在，实际上有；持续存在，生存
+adj. 大量的，丰富的
 **Sentences**:
-*C)The gender difference in airfare expenses no longer existed.*
-C)机票费用的性别差异不再存在。
-《Text 2》
+*Everybody loves a fat pay rise.*
+人人都喜欢大幅加薪。
+《2005年英语Text1》
 
 #word
-#### existence
+#### founding generation
 #anki
-n. 存在；实有；生存，生活，生活方式；存在物
+建国年代
 **Sentences**:
-*Many begin to search for the meaning of their existence.*
-许多人开始寻找他们存在的意义。
-《2022年12月（第2套）》
+*But recently, many historians have begun to focus on the role slavery played in the lives of the founding generation.*
+但最近，许多历史学家开始关注奴隶制在建国一代的生活中所扮演的角色。
+《2008年英语一Text4》
 
 #word
-#### expanded
+#### fragile
 #anki
-adj. 扩充的，展开的；（材料）多孔的，泡沫的；（金属板）网眼的；（形状）相对宽的；（活字）阔体的
-v. 扩大（expand 的过去式和过去分词）
-**Sentences**:
-*D)Their attention span cannot be expanded.*
-D)他们的注意力持续时间无法扩大。
-《Text 4》
+adj. 易碎的，脆弱的，精细的，虚弱的
 
 #word
-#### expenses
+#### frustration
 #anki
-n. 业务费用，报销；代价，费用（expense 的复数）
-v. <非正式>把……记入费用账户；向……收取费用；被花掉（expense 的第三人称单数）
+n. 挫折；失败
 **Sentences**:
-*C)The gender difference in airfare expenses no longer existed.*
-C)机票费用的性别差异不再存在。
-《Text 2》
+*I was living in so much frustration that that was my escape, to go to school, and get ahead and do better."*
+我生活在如此多的挫折中，这是我的逃避，去上学，出人头地，做得更好。
+《2008年英语一》
 
 #word
-#### expensive
+#### fumes
 #anki
-adj. 费用大的；昂贵的，高价的
+n. 烟气
 **Sentences**:
-*But studies like that are expensive and complicated to carry out.*
-《How long does it take to get over a breakup》
+*Just as on smoking, voices now come from many quarters insisting that the science about global warming is incomplete, that it's OK to keep pouring fumes into the air until we know for sure.*
+就像吸烟一样，现在来自许多方面的声音坚持认为，关于全球变暖的科学是不完整的，在我们确定之前，可以继续向空气中排放烟雾。
+《2005年英语Text2》
 
 #word
-#### experience
+#### funding
 #anki
-n. 经验，实践；经历，阅历；往事，体验
-v. 经历，参与；感受，体验
+n. 提供资金； v. 提供资金（fund的现在分词）
 **Sentences**:
-*He has anecdotal experience with countless people in relationships and, full disclosure, he was my couple’s therapist, too.*
-《How long does it take to get over a breakup》
+*The Internet — and pressure from funding agencies, who are questioning why commercial publishers are making money from government-funded research by restricting access to it—is making free access to scientific results a reality.*
+互联网和来自资助机构的压力正在使免费获取科学成果成为现实。资助机构质疑为什么商业出版商要通过限制对政府资助的研究的访问来赚钱。
+《2008年英语一》
 
 #word
-#### face up to
+#### garment
 #anki
-phr. 勇敢地面对
+n. （一件）衣服
 **Sentences**:
-*Eventually, for the sake of ourselves and our future partners, we're going to have to face up to our feelings.*
-最终，为了我们自己和我们未来的伴侣，我们将不得不面对我们的感受。
-《How long does it take to get over a breakup》
-
-#word
-#### facilitate
-#anki
-v. 使容易，使便利，有助于
-**Sentences**:
-*B)They facilitate local residents' everyday lives.*
-B)他们便利了当地居民的日常生活。
-《2020年12月（第1套）》
-
-#word
-#### fact
-#anki
-n. 实际；事实，真相
-**Sentences**:
-*D)It is due to the fact that women care more about their company's money.*
-D)这是因为女性更关心公司的钱。
-《Text 2》
-
-#word
-#### fame
-#anki
-n. 名誉，名气
-v. 使闻名，使有名望
-**Sentences**:
-*B)He won enormous fame and love from British people.*
-B)他赢得了英国人民极大的名声和爱戴。
-《Text 5》
-
-#word
-#### fancy
-#anki
-n. 想象力；幻想；爱好
-v. 想象，设想；幻想；相信
-adj. 别致的；想象的；精选的
-**Sentences**:
-*Whether you fancy your cousin or not, depending on where you're from, this can still be a bit of a taboo subject.*
-不管你喜不喜欢你的表亲，这取决于你来自哪里，这仍然是一个有点禁忌的话题。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### fatal
-#anki
-adj. 致命的；导致失败的，灾难性的
-**Sentences**:
-*B)It was surely a disadvantage though not considered fatal.*
-B)虽然不被认为是致命的，但这确实是一个缺点。
-《Text 5》
-
-#word
-#### favour
-#anki
-n. 喜爱；；赞同；偏爱；偏袒；善行；帮助
-v. 喜爱；赞同；偏袒；有助于，有利于；容貌像
-**Sentences**:
-*From this different perspective, you can not only be multitasking but this ability can also be taught: something that is easier in fluid organisations, which favour flexibility in their working practices.*
-从这个不同的角度来看，你不仅可以同时处理多项任务，而且这种能力还可以被教授:在流动性强的组织中，这种能力更容易获得，因为这些组织喜欢在工作实践中具有灵活性。
-《Text 4》
-
-#word
-#### feasible
-#anki
-adj. 可行的，办得到的；很可能会发生的
-**Sentences**:
-*B)Explore the most feasible options.*
-B)探索最可行的选项。
-《Text 6》
-
-#word
-#### figure out
-#anki
-phr. 算出；想出
-**Sentences**:
-*B)Figure out which of the two is more reliable.*
-B)找出两者中哪一个更可靠。
-《Text 6》
-
-#word
-#### finding
-#anki
-n. 【常用复数】调查发现，调研结果
-v. 发现（find的现在分词形式）
-**Sentences**:
-*Finding something to distract us and unpacking our feelings when we're ready.*
-找一些事情来分散我们的注意力，准备好了就把自己的感受宣泄出来。
-《How long does it take to get over a breakup》
-
-#word
-#### first off
-#anki
-phr. 首先；马上
-**Sentences**:
-*First off, cousin marriage is way more common than you may think.*
-首先，表亲结婚比你想象的要普遍得多。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### fixed
-#anki
-adj. 固定的；（神情）僵硬的；确定的，不变的；
-v. 修理（fix 的过去式和过去分词形式）
-**Sentences**:
-*We began to develop our individual sense of personal space around age 3 or 4. The sizes of our bubble are fixed by our teens.*
-我们在三四岁左右开始发展个人空间感。我们泡泡的大小是由我们的青少年决定的。
-《2023年12月（第1套）》
-
-#word
-#### flexibility
-#anki
-n. 柔韧性，机动性，灵活性
-**Sentences**:
-*From this different perspective, you can not only be multitasking but this ability can also be taught: something that is easier in fluid organisations, which favour flexibility in their working practices.*
-从这个不同的角度来看，你不仅可以同时处理多项任务，而且这种能力还可以被教授:在流动性强的组织中，这种能力更容易获得，因为这些组织喜欢在工作实践中具有灵活性。
-《Text 4》
-
-#word
-#### flexible
-#anki
-adj. 灵活的，能适应新情况的；柔韧的，有弹性的
-**Sentences**:
-*A)Work in a flexible way.*
-A)工作方式灵活。
-《Text 4》
-
-#word
-#### fluid
-#anki
-n. 液体，流质
-adj. 流动的，液体的；不稳定的，不固定的；流畅优美的
-**Sentences**:
-*A)It is a rare skill often found in fluid organisations.*
-A)这是在流动性组织中经常发现的一种罕见技能。
-《Text 4》
-
-#word
-#### forbidden
-#anki
-adj. 禁止的；禁止进入的；忌讳的，禁止做（谈论）的；禁戒的
-v. 禁止；使不可能，妨碍（forbid 的过去分词形式）
-**Sentences**:
-*Strangers are forbidden.*
-陌生人禁止入内。
-《2023年12月（第1套）》
-
-#word
-#### force
-#anki
-n. 军队，暴力
-v. 强迫，用力推动
-**Sentences**:
-*It is quite horrifying to see people being guided by some unknown force.*
-看到人们被某种未知的力量所引导是相当可怕的。
-《Text 6》
-
-#word
-#### forces
-#anki
-n. 势力；武装力量；影响大的人（force 的复数）
-v. 迫使；催熟（force 的第三人称单数）
-**Sentences**:
-*A)Strive to make sense of some unknown forces.*
-A)努力理解一些未知的力量。
-《Text 6》
-
-#word
-#### frame
-#anki
-n. 框架；骨架；体形；画面
-v. 设计；建造；使…适合；陷害
-adj. 有木架的，有构架的
-**Sentences**:
-*The business perspective offers a different view: multitasking is understood as the ability to adapt to all  types of environment within a company and effectively undertake different activities within a set time frame.*
-商业角度提供了不同的观点:多任务被理解为适应公司内所有类型环境的能力，并在规定的时间框架内有效地进行不同的活动。
-《Text 4》
-
-#word
-#### frequent
-#anki
-adj. 频繁的，经常性的；<古>间隔很近的
-v. 常去，常出入于
-**Sentences**:
-*A)What made male frequent travelers book air tickets late.*
-A)是什么让经常旅行的男性订机票晚了?
-《Text 2》
-
-#word
-#### gap
-#anki
-n. 缝隙，缺口；（时间上的）间隔；空白，缺漏；隔阂，差距
-**Sentences**:
-*None of these explained away the gender gap, so we applied data collected from surveys that express consumer preferences that play a central role in economic decisions, such as patience and risk avoidance.*
-这些都不能解释性别差异，所以我们应用了从调查中收集的数据，这些数据表达了消费者的偏好，这些偏好在经济决策中起着核心作用，比如耐心和风险规避。
-《Text 2》
-
-#word
-#### genealogy
-#anki
-n. 系谱,宗谱,家系
-**Sentences**:
-*One study looking at millions of genealogy profiles concluded that between 1650 and 1850, the average person was fourth cousins with their spouse.*
-一项调查了数百万份家谱资料的研究得出结论，在1650年至1850年间，人们与配偶的平均关系是第四代表亲。
-《Is it really that bad to marry my cousin？》
+*[A] the garment industry will reconsider the uniform size.*
+[A]服装行业将重新考虑统一尺寸。
+《2008年英语一》
 
 #word
 #### general
 #anki
-adj. 普遍的，全体的；正常的；大致的，笼统的
-n. 将军
+ adj. 普遍的，全体的；正常的；大致的，笼统的； n. 将军
 **Sentences**:
-*In the general population, the risk that a child will be born with serious complications is three to four percent.*
-在一般人群中，孩子出生时患有严重并发症的风险是3%到4%。
-《Is it really that bad to marry my cousin？》
+*"In the general population today, at this genetic, envirornnental level, we've pretty much gone as far as we can go," says anthropologist William Cameron Chumlea of Wright State University.*
+赖特州立大学的人类学家威廉·卡梅伦·查姆利说：“在今天的普通人群中，在基因和环境层面上，我们已经尽了最大努力。”
+《2008年英语一》
+
+#word
+#### generations
+#anki
+n. 世代
+**Sentences**:
+*[C] compare different generations of NBA players.*
+[C]比较不同时代的NBA球员。
+《2008年英语一Text3》
 
 #word
 #### genetic
 #anki
 adj. 遗传的；基因的
 **Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
+*"In the general population today, at this genetic, envirornnental level, we've pretty much gone as far as we can go," says anthropologist William Cameron Chumlea of Wright State University.*
+赖特州立大学的人类学家威廉·卡梅伦·查姆利说：“在今天的普通人群中，在基因和环境层面上，我们已经尽了最大努力。”
+《2008年英语一》
+*"There are some real constraints that are set by the genetic architecture of the individual organism," says anthropologist William Leonard ofNorthwestem University.*
+西北大学的人类学家威廉·伦纳德说：“个体生物的基因结构确实存在一些限制。”
+《2008年英语一》
 
 #word
-#### get over
+#### get moving
 #anki
-phr. 恢复；克服；原谅；熬过；使明白
+开始移动，赶紧行动：迅速开始移动或行动；赶快。
 **Sentences**:
-*How long does it take to get over a breakup?*
-从失恋中走出来需要多长时间
-《How long does it take to get over a breakup》
+*The clear message is that we should get moving to protect ourselves.*
+明确的信息是，我们应该行动起来保护自己。
+《2005年英语Text2》
 
 #word
-#### get to the bottom
+#### goes with
 #anki
-弄清真相；弄个水落石出；测深；追根究底
+与...成正比
 **Sentences**:
-*So we would welcome any information that will help us get to the bottom of this random incidents.*
-所以我们欢迎任何能帮助我们弄清这一随机事件真相的信息。
-《2022年12月（第2套）》
+*[A] the power of influence goes with social interactions.*
+[A]影响力伴随着社会互动。
+《2010年英语一Test3》
 
 #word
-#### glory
+#### good-natured
 #anki
-n. 光荣，荣誉；壮观，壮丽；值得称赞的事；赞美
-v. 得意；自豪
+adj. 脾气好的,温厚的
 **Sentences**:
-*D)He could be expected to repeat his glory in the prime of his career.*
-D)他有望在职业生涯的黄金时期重现辉煌。
-《Text 5》
+*They are good-natured, co-operative creatures, and they share their food readily.*
+它们是性情善良、乐于合作的动物，它们乐于分享食物。
+《2005年英语Text1》
 
 #word
-#### go out
+#### goodwill
 #anki
-phr. 出去；谈恋爱；熄灭；广播；出国；很快睡着；不再流行
+n. 友好，好意；商誉
 **Sentences**:
-*But even with the onset of the railroad and the industrial revolution, it still took another 50 years for cousin marriage to go out of style in Western society.*
-但即使随着铁路和工业革命的出现，表亲结婚在西方社会仍然花了50年的时间才过时。
-《Is it really that bad to marry my cousin？》
+*[A] loss of goodwill.*
+[A]商誉损失。
+《2010年英语一Test2》
 
 #word
-#### goal-oriented
+#### granted
 #anki
-adj. [计] 面向目标的
+conj. 假定，就算; adv. 不错，的确
 **Sentences**:
-*D)By helping them to stay goal-oriented.*
-D)帮助他们保持目标导向。
-《Text 3》
+*Over the past decade, thousands of patents have been granted for what are called business methods.*
+在过去的十年里，成千上万的专利被授予了所谓的商业方法。
+《2010年英语一Test2》
 
 #word
-#### grand
+#### granting
 #anki
-adj. 宏伟的；豪华的；极好的，极重要的
+v. 同意，准予（grant 的 ing 形式）
 **Sentences**:
-*C)He had lost his charm with the leagues of Grand National fans.*
-C)他已经失去了对大国家赛马迷们的吸引力。
-《Text 5》
+*In 2005, IBM noted in a court filing that it had been issued more than 300 business-method patents, despite the fact that it questioned the legal basis for granting them.*
+2005年，IBM在一份法庭文件中指出，尽管它质疑授予这些专利的法律依据，但它已经获得了300多项商业方法专利。
+《2010年英语一Test2》
 
 #word
-#### gravitate
+#### graves
 #anki
-v. 被吸引，被重力吸引；下沉，沉没；自然地移动；使受重力吸引
+n. 坟墓（grave的复数）
 **Sentences**:
-*Brain scientists call this effect "asymmetric dominance" and it means that people gravitate toward the choice nearest a clearly inferior option.*
-大脑科学家称这种效应为“不对称优势”，这意味着人们倾向于选择最接近明显较差的选项。
-《2020年12月（第1套）》
+*Lots of Americans bought that nonsense, and over three decades, some 10 million smokers went to early graves.*
+许多美国人相信了这种无稽之谈，30多年来，约有1000万吸烟者早逝。
+《2005年英语Text2》
 
 #word
-#### greatness
+#### grievance
 #anki
-n. 伟大；巨大
+n. 不满；委屈，冤情
 **Sentences**:
-*For Ginger and Red Rum, though, it was just an obstacle to greatness that had to be overcome.*
-然而，对于姜和红朗姆酒来说，这只是一个必须克服的障碍。
-《Text 5》
+*Such behaviour is regarded as "all too human",with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.*
+这种行为被认为是“人之常情”，潜在的假设是，其他动物不可能有这种高度发达的委屈感。
+《2005年英语Text1》
 
 #word
-#### guarantee
+#### handle
 #anki
-n. 保证，担保；保证人；保证书；担保金，担保物；保修单
-v. 保证；担保
+n. 柄，把手；把柄；手感| v. 触摸，举起；搬动；操作，操控；管理；处理；经营；运用
+**Notes**:
+处理
 **Sentences**:
-*There is no doubt(denying) that the improvement of food quality and diet structure has provided a powerful guarantee for enhancing people's health.*
-毫无疑问(否认)，食品质量和饮食结构的改善为增进人们的健康提供了有力的保障。
-《中国饮食变迁：从温饱到健康》
+*[A] need extra doses of chemicals to handle stress.*
+[A]需要额外剂量的化学物质来处理压力。
+《2008年英语一》
 
 #word
-#### guard
+#### hedging
 #anki
-n. 卫兵；护卫队；守卫；警戒；防护装置；列车长
-v. 看守；监视；控制；防范
+抛买; 套购保值; 包围
+**Notes**:
+hedge 规避
 **Sentences**:
-*When the train arrives, tell the train guard where are you going.*
-火车到站时，告诉列车员你要去哪里。
-《2023年3月（第1套）》
+*The Bilski case involves a claimed patent on a method for hedging risk in the energy market.*
+比尔斯基案涉及一项关于能源市场对冲风险方法的专利要求。
+《2010年英语一Test2》
 
 #word
-#### heal
+#### hired
 #anki
-v. 愈合，治愈；结束，较容易忍受；调停，消除
+v. 聘用（hire的过去式和过去分词）
 **Sentences**:
-*"Taking that time to process and understand it is actually a much quicker way to heal than ignoring it."*
-“花时间去处理和理解它，实际上比忽视它更快地治愈它。
-《How long does it take to get over a breakup》
+*So he hired a dentist to transplant nine teeth into his jaw — having extracted them from the mouths of his slaves.*
+于是，他雇了一位牙医，把从奴隶嘴里拔出来的九颗牙齿移植到他的下巴上。
+《2008年英语一Text4》
 
 #word
-#### hell
+#### hormones
 #anki
-v. 花天酒地；（车辆）疾驰
-n. 地狱；悲惨状况；胡闹
-interj. 该死，见鬼
+n. 荷尔蒙，激素，性激素，荷尔蒙制剂（hormone的复数）
 **Sentences**:
-*I know, I know, what the hell is a fourth cousin?*
-我知道，我知道，四堂兄是什么鬼东西
-《Is it really that bad to marry my cousin？》
+*Studies of both animals and humans have shown that sex hormones somehow affect the stress response, causing females under stress to produce more of the trigger chemicals than do males under the same conditions.*
+对动物和人类的研究表明，性激素在某种程度上影响压力反应，使处于压力下的雌性比在相同条件下的雄性产生更多的触发化学物质。
+《2008年英语一》
 
 #word
-#### hinder
+#### hostility
 #anki
-v. 阻碍，妨碍
-adj. （尤指身体部位）后面的
+n. 敌意；反对
 **Sentences**:
-*After all, competitive rivalry can also hinder effective decision-making and increase your willingness to take risks, behaviors that can ultimately hurt your venture's success.*
-毕竟，竞争性竞争也会阻碍有效的决策，增加你承担风险的意愿，这些行为最终会损害你的企业的成功。
-《Text 3》
-
-#word
-#### hindrance
-#anki
-n. 造成妨碍的人（或事物）；阻碍，妨碍
-**Sentences**:
-*A)It was simply a hindrance they had to get over to excel.*
-A)这只是他们为了超越而必须克服的障碍。
-《Text 5》
-
-#word
-#### hoop
-#anki
-n. （金属、木或类似材料制成的）箍，环（尤指用于箍桶或制框架）
-v. （用环或似用环）绑，箍
-**Sentences**:
-*And it maybe wildly out of fashion in Europe and North America now, but like hoop skirts and top hats, cousin marriage used to be a much more common sight.*
-这在欧洲和北美可能已经不流行了，但就像箍裙和高礼帽一样，表亲结婚在过去也很常见。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### hopefully
-#anki
-adv. 有希望地，有前途地
-**Sentences**:
-*If we can do all that, then one day hopefully we'll come out of it feeling OK.*
-如果我们能做到这一切，那么有一天我们会感觉很好。
-《How long does it take to get over a breakup》
-
-#word
-#### horn
-#anki
-n. 角，触角；角质；圆号；号角；喇叭，警报器；角状物；喇叭形物
-v. 装角于；不请自来，强行介入；用角抵撞
-**Sentences**:
-*The result is a piece of bone like a horn that sticks out from the head by the neck.*
-结果是一块像角一样的骨头从脖子处伸出来。
-《2023年12月（第1套）》
-
-#word
-#### horrifying
-#anki
-adj. 令人恐惧的
-v. 令人恐惧（horrify的现在分词
-**Sentences**:
-*It is quite horrifying to see people being guided by some unknown force.*
-看到人们被某种未知的力量所引导是相当可怕的。
-《Text 6》
-
-#word
-#### icky
-#anki
-adj. 讨厌的；过分甜的；粘得讨厌的
-n. 令人作呕的人
-[ 比较级 ickier或more icky 最高级 ickiest或most icky ]
-**Sentences**:
-*For example, the idea that cousin marriage is, to use a scientific term, icky.*
-举个例子，用科学术语来说，表亲婚姻是令人讨厌的。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### ignoring
-#anki
-v. 不顾；不理会，忽视
-**Sentences**:
-*"Taking that time to process and understand it is actually a much quicker way to heal than ignoring it."*
-“花时间去处理和理解它，实际上比忽视它更快地治愈它。
-《How long does it take to get over a breakup》
-
-#word
-#### illegal
-#anki
-n. 非法移民
-adj. 违法的
-**Sentences**:
-*Though it became much less popular on both sides of the Atlantic, it was only in the US that it became illegal.*
-尽管它在大西洋两岸变得不那么受欢迎了，但只有在美国，它才成为非法行为。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### illegality
-#anki
-n. 非法行为,犯规
-**Sentences**:
-*But the widespread illegality, not to mention the social stigma, makes quantifying it quite difficult.*
-但是，广泛存在的非法行为，更不用说社会上的耻辱，使得量化它变得相当困难。
-《Is it really that bad to marry my cousin？》
+*[B] increase of hostility.*
+[B]增加敌意。
+《2010年英语一Test2》
 
 #word
 #### illustrate
 #anki
 v. 阐明；（举例）说明；加插图
 **Sentences**:
-*A)To illustrate people's peculiar shopping behavior.*
-A)说明人们奇特的购物行为。
-《2020年12月（第1套）》
+*[A] illustrate the change of height of NBA players.*
+[A]说明NBA球员身高的变化。
+《2008年英语一》
 
 #word
-#### immediate
+#### immune
 #anki
-adj. 立即的；直接的；最接近的；目前的
+n. 免疫者；免除者； adj. 免除的；不受影响的；免疫的，有免疫力的
 **Sentences**:
-*B)Prioritize reaping immediate benefits.*
-B)优先考虑获得直接利益。
-《Text 3》
+*[A] are immune to legal challenges.*
+[A]不受法律挑战。
+《2010年英语一Test2》
 
 #word
-#### imply
+#### impulse
 #anki
-v. 含有...的意思；暗示；暗指；必然包含（某事物）
+n. 冲动；推动力；刺激；脉冲； v. 推动； adj. 冲动的
 **Sentences**:
-*55.What does the author imply we should do if we have to focus on some task and do it well?*
-55.如果我们必须专注于某项任务并做好它，作者暗示我们应该做什么
-《Text 4》
+*[B] The impulse to influence others.*
+[B]影响他人的冲动。
+《2010年英语一Test3》
 
 #word
-#### importantly
+#### in large part
 #anki
-adv. 重要地；自命不凡地
+在很大程度上
 **Sentences**:
-*But more importantly, I’ve learned that instead of counting down the days, we're much better off reconnecting with the things we love to do.*
-但更重要的是，我学会了与其倒计时，不如和我们喜欢做的事情重新联系起来。
-《How long does it take to get over a breakup》
+*In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics"are driven in large part by the actions of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well connected.*
+马尔科姆·格拉德威尔（Malcolm Gladwell）在他的著作《引爆点》（The Tipping Point）中认为，“社会流行病”在很大程度上是由极少数特殊个人的行为驱动的，这些人通常被称为有影响力的人，他们见多识广、有说服力或人脉广泛。
+《2010年英语一Test3》
 
 #word
-#### impulsive
+#### in that
 #anki
-adj. 冲动的，受感情驱使的，任性的；冲击的
+因为，由于
 **Sentences**:
-*49.How can entrepreneurs avoid making impulsive and insensible decisions?*
-49.企业家如何才能避免做出冲动和不明智的决定
-《Text 3》
+*28. According to the text, online publication is significant in that*
+28. 本文认为，网络出版在这方面具有重要意义
+《2008年英语一》
 
 #word
-#### in other words
+#### in the way
 #anki
-phr. 换句话说，就是说
+阻碍，妨碍：阻止或干扰某人或某事物的移动或进展。
 **Sentences**:
-*In other words, can a few simple methods change how much you love someone?*
-换句话说，几个简单的方法能改变你对某人的爱吗
-《How long does it take to get over a breakup》
+*At the start of the 20th century,under-nutrition and childhood infections got in the way.*
+20世纪初，营养不良和儿童感染阻碍了这一进程。
+《2008年英语一》
+
+#word
+#### inadequate
+#anki
+adj. 不充足的，不适当的；不够格的；不能胜任的
+**Sentences**:
+*But research alone is inadequate.*
+但仅靠研究是不够的。
+《2005年英语Text2》
+
+#word
+#### inclination
+#anki
+n. 倾向；意愿；倾斜度
+**Sentences**:
+*[D] The inclination to rely on others.*
+[D]依赖他人的倾向。
+《2010年英语一Test3》
+
+#word
+#### inclinations
+#anki
+n. 倾向；意愿；倾斜度
+**Sentences**:
+*[D] Men and women show different inclinations when faced with stress.*
+[D]男性和女性在面对压力时表现出不同的倾向。
+《2008年英语一》
+
+#word
+#### inconclusive
+#anki
+adj. 非决定性,不确定的,不得要领的
+**Sentences**:
+*That the evidence was inconclusive, the science uncertain?*
+证据不确凿，科学不确定
+《2005年英语Text2》
 
 #word
 #### indeed
 #anki
-adv. 确实，的确；实际上；真正地；<非正式> 真的吗（表示惊讶或觉得某事物荒谬）
+事实就是如此
 **Sentences**:
-*The concept does indeed come from the realms of technology, where it is used to refer to an operating system that can execute multiple tasks at the same time.*
-这个概念确实来自技术领域，它被用来指可以同时执行多个任务的操作系统。
-《Text 4》
+*Indeed, if he has a reputation for slacking, you might even be outraged.*
+事实上，如果他有懈怠的名声，你甚至可能会感到愤怒。
+《2005年英语Text1》
 
 #word
-#### individual
+#### independently
 #anki
-n. 个人，个体
-adj. 个别的；个人的；独特的
+adv. 独立地，自立地
 **Sentences**:
-*Each artist has their own individual style but all artists share a common aim: to draw attention to the pollution in our cities.*
-每个艺术家都有自己的个人风格，但所有艺术家都有一个共同的目标:引起人们对城市污染的关注。
-《2020年9月（第2套）》
+*However, whether such a sense of fairness evolved independently in capuchins and humans, or whether it stems from the common ancestor that the species had 35 million years ago, is, as yet, an unanswered question.*
+然而，这种公平感是在卷尾猴和人类身上独立进化而来，还是源于3500万年前这两个物种的共同祖先，至今仍是一个没有答案的问题。
+《2005年英语Text1》
 
 #word
-#### industrial
+#### indignation
 #anki
-adj. 工业的，产业的，用于工业的；从事工业的；产业工人的
+n. 愤怒，愤慨
 **Sentences**:
-*But even with the onset of the railroad and the industrial revolution, it still took another 50 years for cousin marriage to go out of style in Western society.*
-但即使随着铁路和工业革命的出现，表亲结婚在西方社会仍然花了50年的时间才过时。
-《Is it really that bad to marry my cousin？》
+*Feelings of righteous indignation, it seems, are not the preserve of people alone.*
+这种义愤填膺的感觉，似乎不只是人们的专利。
+《2005年英语Text1》
+
+#word
+#### individuals
+#anki
+n. 个人，个体； adj. 个别的；个人的；独特的
+**Notes**:
+词形变化： [individual]是[individuals]的原形形式
+**Sentences**:
+*In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics"are driven in large part by the actions of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well connected.*
+马尔科姆·格拉德威尔（Malcolm Gladwell）在他的著作《引爆点》（The Tipping Point）中认为，“社会流行病”在很大程度上是由极少数特殊个人的行为驱动的，这些人通常被称为有影响力的人，他们见多识广、有说服力或人脉广泛。
+《2010年英语一Test3》
 
 #word
 #### industry
 #anki
 n. 企业，行业；【总称】工业；勤勉，勤奋；
 **Sentences**:
-*The development of logistics industry has made it easy for people to taste(sample) the specialties all over the country.*
-物流业的发展使人们可以方便地品尝(品尝)全国各地的特产。
-《中国饮食变迁：从温饱到健康》
+*[A] the garment industry will reconsider the uniform size.*
+[A]服装行业将重新考虑统一尺寸。
+《2008年英语一》
 
 #word
-#### ineffective
+#### inevitable
 #anki
-adj. 无效的，失效的
+adj. 不可避免的，必然发生的
 **Sentences**:
-*C)They prove ineffective in helping mental patients.*
-C)他们在帮助精神病人方面被证明是无效的。
-《2020年12月（第1套）》
+*[A] is inevitable in radical education reforms.*
+在激进的教育改革中是不可避免的。
+《2005年英语一Text4》
 
 #word
-#### informal
+#### infancy
 #anki
-adj. 非正式的；口语体的，通俗的；不拘礼节的
+n. 婴儿期；幼年；初期
+
+#word
+#### influential
+#anki
+adj. 有很大影响的，施以影响的，有权势的
 **Sentences**:
-*Especially during informal conversation.*
-尤其是在非正式的谈话中。
-《2023年12月（第1套）》
+*[D] are influenced by the initial influential.*
+[D]被最初的有影响力的人所影响。
+《2010年英语一Test3》
+
+#word
+#### influentials
+#anki
+adj. 有影响力的，有势力的； n. 有影响力的人
+**Notes**:
+网红 influencer
+**Sentences**:
+*In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics"are driven in large part by the actions of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well connected.*
+马尔科姆·格拉德威尔（Malcolm Gladwell）在他的著作《引爆点》（The Tipping Point）中认为，“社会流行病”在很大程度上是由极少数特殊个人的行为驱动的，这些人通常被称为有影响力的人，他们见多识广、有说服力或人脉广泛。
+《2010年英语一Test3》
 
 #word
 #### informed
 #anki
-adj. 消息灵通的，见多识广的
-v. 通知（inform的过去式和过去分词）
+adj. 消息灵通的，见多识广的； v. 通知（inform的过去式和过去分词）
 **Sentences**:
-*Data and analysis have long been associated with informed decisions.*
-长期以来，数据和分析一直与明智的决策联系在一起。
-《Text 6》
+*In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics"are driven in large part by the actions of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well connected.*
+马尔科姆·格拉德威尔（Malcolm Gladwell）在他的著作《引爆点》（The Tipping Point）中认为，“社会流行病”在很大程度上是由极少数特殊个人的行为驱动的，这些人通常被称为有影响力的人，他们见多识广、有说服力或人脉广泛。
+《2010年英语一Test3》
 
 #word
-#### inner
+#### initial
 #anki
-adj. 内部的，靠近中心的；内心的，未表达出来的；
-n. 内部，内里；靶子内圈；命中靶子内圈的一发
+adj. 最初的；字首的
 **Sentences**:
-*C)Resort to our inner wisdom.*
-C)求助于我们内心的智慧。
-《Text 6》
+*[D] are influenced by the initial influential.*
+[D]被最初的有影响力的人所影响。
+《2010年英语一Test3》
 
 #word
-#### insensible
+#### initially
 #anki
-adj. 麻木不仁的；昏迷的，无知觉的
+adv. 开始，最初
 **Sentences**:
-*49.How can entrepreneurs avoid making impulsive and insensible decisions?*
-49.企业家如何才能避免做出冲动和不明智的决定
-《Text 3》
+*That ruling produced an explosion in business-method patent filings, initially by emerging Internet companies trying to stake out exclusive rights to specific types of online transactions.*
+这一裁决导致商业方法专利申请激增，最初是新兴互联网公司试图在特定类型的在线交易中获得专有权。
+《2010年英语一Test2》
 
 #word
-#### instead
+#### insisted
 #anki
-adv. 代替；反而
+v. 坚决要求，坚持；坚持说，固执己见
 **Sentences**:
-*But more importantly, I’ve learned that instead of counting down the days, we're much better off reconnecting with the things we love to do.*
-但更重要的是，我学会了与其倒计时，不如和我们喜欢做的事情重新联系起来。
-《How long does it take to get over a breakup》
+*Do you remember all those years when scientists argued that smoking would kill us but the doubters insisted that we didn't know for sure?*
+你还记得那些年科学家们争辩说吸烟会致人死亡，但怀疑者坚持说我们对此并不确定吗
+《2005年英语Text2》
 
 #word
-#### instinctive
+#### instead of
 #anki
-adj. 本能的，直觉的；天生的
-**Sentences**:
-*Combining instinctive and rational analysis produces well-rounded decisions.*
-结合本能和理性的分析产生全面的决策。
-《Text 6》
-
-#word
-#### instincts
-#anki
-n. 本能；直觉，天性；天资，天才
-adj. 充满的
-**Sentences**:
-*But how wise is it, really, to let your instincts drive your decisions?*
-但是，让你的直觉驱动你的决定是多么明智啊
-《Text 6》
-*D)Rely on instincts in decision-making.*
-D)依靠直觉做决定。
-《Text 6》
-
-#word
-#### integrity
-#anki
-n. 正直，诚实；完整，完全；职业操守；（电子数据的）集成度
-**Sentences**:
-*While outperforming your rivals may provide short-term benefits, the loss of your integrity will have long-term consequences.*
-虽然超越竞争对手可能会带来短期利益，但丧失诚信将带来长期后果。
-《Text 3》
-
-#word
-#### intently
-#anki
-adv. 专心地；一心一意地；心无旁骛地
-**Sentences**:
-*D)They may be intently focused on winning at the current market level.*
-D)他们可能专注于在当前的市场水平上取胜。
-《Text 3》
-
-#word
-#### interaction
-#anki
-n. 相互交流；相互沟通；交互作用，互动；相互作用，相互影响
-**Sentences**:
-*People feel comfortable conducting routine social interaction new aquintance or total strangers.*
-人们对新认识的人或完全陌生的人进行日常的社交活动感到自在。
-《2023年12月（第1套）》
-
-#word
-#### interracial
-#anki
-adj. 人种间的；人种混合的
-**Sentences**:
-*American states began to outlaw not only interracial marriage but cousin marriage as well.*
-美国各州开始不仅禁止异族通婚，而且禁止表亲通婚。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### intervention
-#anki
-n. 干预，介入；调停，斡旋；（为改善情况尤指病痛采取的）措施，做法
-**Sentences**:
-*The only way to break the pressures on both mental health services and schools is to reinvest in early intervention services inside schools.*
-打破心理健康服务和学校压力的唯一方法是重新投资于学校内部的早期干预服务。
-《2020年12月（第1套）》
-
-#word
-#### intimate
-#anki
-n. 知己，密友
-v. 暗示；提示
-adj. 熟悉的；亲密的；个人的；秘密的；怡人的；精通的
-**Sentences**:
-*The smallest zone is called intimate space.*
-最小的区域被称为亲密空间。
-《2023年12月（第1套）》
-
-#word
-#### inventive
-#anki
-adj. 发明的，善于发明的，有创造力的，独出心裁的
-**Sentences**:
-*An early study gave participants abundant time to complete problem-solving and word-association exercises.Once all the obvious answers were exhausted, participants gave more and more inventive answers to combat boredom.*
-一项早期的研究给了参与者充足的时间来完成问题解决和单词联想练习。一旦所有显而易见的答案都被用尽，参与者就会给出越来越多有创意的答案来对抗无聊。
-《2020年12月（第2套）》
-
-#word
-#### investigation
-#anki
-n. 研究；调查
-**Sentences**:
-*51.What did the author's team conclude about the gender difference in airfares from their further investigation?*
-51.作者的团队从进一步的调查中得出了关于机票价格性别差异的什么结论
-《Text 2》
-
-#word
-#### involvement
-#anki
-n. 参与，介入；投入，沉迷；暧昧关系，恋爱关系
-**Sentences**:
-*B) Parents' involvement in schools' policy-making.*
-B)家长对学校决策的参与。
-《2020年12月（第1套）》
-
-#word
-#### leagues
-#anki
-n. 联盟，同盟；盟约；联合会
-v. 组成联盟，结盟
-**Sentences**:
-*C)He had lost his charm with the leagues of Grand National fans.*
-C)他已经失去了对大国家赛马迷们的吸引力。
-《Text 5》
-
-#word
-#### leap
-#anki
-v. 猛冲，突然而迅速地移动；剧增，猛涨；赶紧抓住（机会）；（心）猛跳；跳，跳跃
-n. 跳跃，跳高；骤变，激增；（对新事物的）认真尝试
-**Sentences**:
-*Politicians, policymakers, commissioners and school leaders must be brave enough to make the leap towards reimagining schools as providers of health as well as education services.*
-政治家、政策制定者、委员和学校领导必须有足够的勇气迈出这一步，将学校重塑为健康和教育服务的提供者。
-《2020年12月（第1套）》
-
-#word
-#### leisure
-#anki
-n. 空闲，悠闲，闲暇
-
-adj. 闲暇的，空闲的
-**Sentences**:
-*They found busy people are perceived to be of high status, and interestingly, these status attributions are heavily influenced by our own beliefs about social mobility. In other words, the more we believe that one has the opportunity for success based on hard work, the more we tend to think that people who skip leisure and work all the time are of higher standing.*
-他们发现忙碌的人被认为地位高，有趣的是，这些地位归属在很大程度上受到我们自己对社会流动性的看法的影响。换句话说，我们越相信一个人有机会通过努力工作获得成功，我们就越倾向于认为那些不休闲而一直工作的人地位更高。
-《TEXT1》
-
-#word
-#### likelihood
-#anki
-n. 可能，可能性
-**Sentences**:
-*These reduce the likelihood of errors and increase the chances of success.*
-这减少了出错的可能性，增加了成功的机会。
-《Text 6》
-
-#word
-#### logistics
-#anki
-n. 后勤；物流
-**Sentences**:
-*物流业 (logistics industry)的发展使人们很容易品尝到全国各地的特产。*
-The development of the logistics industry has made it easy for people to taste specialties from all over the country
-《中国饮食变迁：从温饱到健康》
-
-#word
-#### long-term
-#anki
-n. 长期，长远
-adj. 长期的，长远的
-**Sentences**:
-*However, the research and Dr. Tamir would both tell you that while distraction is good in the short term, it is not a long-term solution.*
-然而，研究和塔米尔博士都会告诉你，虽然分心在短期内是好的，但它不是一个长期的解决方案。
-《How long does it take to get over a breakup》
-
-#word
-#### longitudinal
-#anki
-adj. 长度的，纵向的，经线的
-**Sentences**:
-*To really answer that question of how long it takes to get over a breakup, you would need to do a longitudinal study, a study that would basically follow a ton of people from the moment of their breakup and track their progress year after year after year.*
-要真正回答从分手中恢复需要多长时间这个问题，你需要做一个纵向研究，这个研究基本上会跟踪大量的人，从他们分手的那一刻开始，年复一年地跟踪他们的进展。
-《How long does it take to get over a breakup》
-
-#word
-#### magic
-#anki
-n. 魔术，巫术，戏法，魅力
-adj. 神奇的，魔术的，魔术般的
-**Sentences**:
-*"I don't think there is a magic number …*
-《How long does it take to get over a breakup》
-
-#word
-#### making the most of
-#anki
-充分利用：指充分利用某种机会、资源或情况，以获得最大的好处。
-**Sentences**:
-*Phrases like "I have limited access to email 'and "it'll respond as soon as I get back”sound like you're being held against your will from working as opposed to making the most of your time off.*
-像“我不能收发电子邮件”和“我一回来就会回复”这样的话，听起来就像你被强迫工作，而不是充分利用你的休假时间。
-《TEXT1》
-
-#word
-#### mall
-#anki
-n. 购物中心
-**Sentences**:
-*What about hamburgers then there is a lot of American style dinners on the way to the mall.*
-汉堡包怎么样?去商场的路上有很多美式晚餐。
-《2023年12月（第1套）》
-
-#word
-#### manifest
-#anki
-v. 显示，表明；（鬼魂或神灵）显灵，出现；（病症）显现；把……列入货单
-adj. 明显的，显而易见的
-n. 旅客名单，载货清单；货运列车编组清单
-**Sentences**:
-*Our results show another way these negative behaviors can manifest themselves, like in airline bookings, and add to evidence that women are less likely to engage in them.*
-我们的研究结果显示了这些负面行为的另一种表现方式，比如在机票预订方面，并进一步证明女性不太可能参与其中。
-《Text 2》
-
-#word
-#### materials
-#anki
-n. [material]的复数形式；材料，物质
-**Sentences**:
-*B)When they don't enjoy the materials they are studying.*
-B)当他们不喜欢他们正在学习的材料时。
-《2020年12月（第2套）》
-
-#word
-#### melted
-#anki
-adj. 融化的；溶解的
-v. 融化；溶解（melt 的过去式）
-**Sentences**:
-*The vast island usually locks away enough freshwater in its ice sheets which if melted can raise global sea level by 7 meters and research shows that in recent years its ice has melted faster than ever before.*
-这个巨大的岛屿通常在其冰盖中封存足够的淡水，如果融化，可以使全球海平面上升7米。研究表明，近年来，该岛的冰融化速度比以往任何时候都要快。
-《2022年12月（第2套）》
-
-#word
-#### mentality
-#anki
-n. 心态，思维方式；智力，智能
-**Sentences**:
-*But when you're intently focused on outperforming your rivals, you may begin to develop a“win-at-all-costs”mentality that causes you to ignore how you achieve success.*
-但是当你专注于超越你的竞争对手时，你可能会开始形成一种不惜一切代价取胜的心态，导致你忽略了你是如何取得成功的。
-《Text 3》
-
-#word
-#### mere
-#anki
-adj. 仅仅，只不过；只凭……就足以
-n. <旧>小湖，池塘；（尤指毛利人用绿岩制的武器）石棒
-【名】 （Mere）（日）目连，（西）梅雷（人名）
-**Sentences**:
-*A recent study concluded that regardless of whether people are actually handling several tasks or not, the mere fact that they perceive this activity as multitasking has a positive effect on their performance.*
-最近的一项研究得出结论，无论人们是否真的在处理几项任务，仅仅是他们认为这项活动是多任务处理，就会对他们的表现产生积极的影响。
-《Text 4》
-
-#word
-#### mere fact
-#anki
-仅仅事实：指一个事实本身，没有其他附加的意义或解释。
-**Sentences**:
-*A recent study concluded that regardless of whether people are actually handling several tasks or not, the mere fact that they perceive this activity as multitasking has a positive effect on their performance.*
-最近的一项研究得出结论，无论人们是否真的在处理几项任务，仅仅是他们认为这项活动是多任务处理，就会对他们的表现产生积极的影响。
-《Text 4》
-
-#word
-#### merely
-#anki
-adv. 仅仅，只不过；只是
-**Sentences**:
-*People were merely satisfied with having enough food.*
-人们仅仅满足于有足够的食物。
-《中国饮食变迁：从温饱到健康》
-
-#word
-#### millions
-#anki
-n. [million]的复数 数百万
+phr. 代替；作为…的替换
 **Notes**:
-
+没有做某事，而是
 **Sentences**:
-*One study looking at millions of genealogy profiles concluded that between 1650 and 1850, the average person was fourth cousins with their spouse.*
-一项调查了数百万份家谱资料的研究得出结论，在1650年至1850年间，人们与配偶的平均关系是第四代表亲。
-《Is it really that bad to marry my cousin？》
+*Instead of a plan of action, they continue to press for more research - a classic case of "paralysis by analysis".*
+他们没有制定行动计划，而是继续要求进行更多的研究——这是一个典型的“分析瘫痪”案例。
+《2005年英语Text2》
 
 #word
-#### mindless
+#### insurance
 #anki
-adj. 盲目的，愚蠢的；单调乏味的，无需动脑筋的；无心的；无意识的，不顾…的
+n. 保险；保险费；预防措施
 **Sentences**:
-*Boredom has been linked to behavior issues including inattentive driving, mindless snacking, excessive drinking, and addictive gambling.*
-无聊与行为问题有关，包括粗心驾驶、盲目吃零食、过度饮酒和上瘾赌博。
-《2020年12月（第2套）》
+*With the risks obvious and growing, a prudent people would take out an insurance policy now.*
+随着风险的明显和不断增长，谨慎的人现在就会采取保险措施。
+《2005年英语Text2》
 
 #word
-#### minor
+#### intellectual-property
 #anki
-adj. 较小的；未成年的
-n. 副修科目；未成年人
-v. 辅修
+知识产权
 **Sentences**:
-*But in 2002, researchers from the National Society of Genetic Counselors found that the increased risk was a minor one.*
-但是在2002年，国家遗传咨询师协会的研究人员发现，增加的风险是很小的。
-《Is it really that bad to marry my cousin？》
+*In a move that has intellectual-property lawyers abuzz, the U.S. Court of Appeals for the Federal Circuit said it would use a particular case to conduct a broad review of business-method patents.*
+美国联邦巡回上诉法院（U.S. Court of Appeals for the Federal Circuit）说，它将利用一个特殊案件对商业方法专利进行广泛审查，此举令知识产权律师们议论纷纷。
+《2010年英语一Test2》
 
 #word
-#### misrepresented
+#### interact
 #anki
-adj. 不如实叙述的
-v. 不如实地叙述（misrepresent 的过去式）
+v. 互相影响，交互作用；互动
 **Sentences**:
-*See, those articles drastically misrepresented that study.*
-那些文章完全歪曲了那项研究。
-《How long does it take to get over a breakup》
+*The researchers' argument stems from a simple observation about social influence: With the exception of a few celebrities like Oprah Winfrey - whose outsize presence is primarily a function of media, not interpersonal, influence - even the most influential members of a population simply don't interact with that many others.*
+研究人员的论点源于对社会影响力的一个简单观察：除了像奥普拉·温弗瑞这样的少数名人——她的巨大影响力主要是媒体的作用，而不是人际关系的影响——即使是最具影响力的成员也不会与那么多其他人互动。
+《2010年英语一Test3》
 
 #word
-#### mobility.
+#### interactions
 #anki
-n. （住处、社会阶层、职业方面的）流动能力；活动性，灵活性
+n. 相互交流；相互沟通；交互作用，互动
 **Sentences**:
-*They found busy people are perceived to be of high status, and interestingly, these status attributions are heavily influenced by our own beliefs about social mobility. In other words, the more we believe that one has the opportunity for success based on hard work, the more we tend to think that people who skip leisure and work all the time are of higher standing.*
-他们发现忙碌的人被认为地位高，有趣的是，这些地位归属在很大程度上受到我们自己对社会流动性的看法的影响。换句话说，我们越相信一个人有机会通过努力工作获得成功，我们就越倾向于认为那些不休闲而一直工作的人地位更高。
-《TEXT1》
+*[A] the power of influence goes with social interactions.*
+[A]影响力伴随着社会互动。
+《2010年英语一Test3》
 
 #word
-#### mock
+#### intuitive
 #anki
-n. 模拟考试；仿制品；嘲弄
-v. 嘲笑；嘲弄；模仿；不尊重；蔑视
-adj. 虚假的；不诚实的；模仿的；模拟的；伪造的；仿制的
+adj. 直觉的；有直觉力的；易懂的，使用简便的
+**Sentences**:
+*[C] exemplify people's intuitive response to social epidemics.*
+[C]举例说明人们对社会流行病的直觉反应。
+《2010年英语一Test3》
 
 #word
-#### multinational
+#### intuitively
 #anki
-adj. 跨国的；由多个国家的人组成的；（国家或地区）多民族的
-n. 跨国公司
+adv. 直觉地;直观地
 **Sentences**:
-*Our analysis suggests early booking by women can translate into savings of $1 million a year for a large multinational company with 20, 000 regular travelers.*
-我们的分析表明，女性提前预订可以为一家拥有2万名常客的大型跨国公司每年节省100万美元。
-《Text 2》
+*The idea is intuitively compelling, but it doesn't explain how ideas actually spread.*
+这个想法在直觉上很有说服力，但它并没有解释思想实际上是如何传播的。
+《2010年英语一Test3》
 
 #word
-#### multiple
+#### investment
 #anki
-adj. 多个的，多种的；多人共有的；影响身体许多部位的
-n. 倍数；<英>连锁商店；（电信）复联，复接
+n. 投资（额）；投入；可投资的东西
 **Sentences**:
-*The concept does indeed come from the realms of technology, where it is used to refer to an operating system that can execute multiple tasks at the same time.*
-这个概念确实来自技术领域，它被用来指可以同时执行多个任务的操作系统。
-《Text 4》
+*The value of knowledge and the return on the public investment in research depends, in part, upon wide distribution and ready access.*
+知识的价值和公共研究投资的回报在一定程度上取决于广泛传播和随时获取。
+《2008年英语一》
+*[D] it facilitates public investment in scientific research.*
+[D]它促进了科学研究的公共投资。
+《2008年英语一》
 
 #word
-#### muse
+#### is regarded as
 #anki
-n. 沉思；冥想；缪斯女神
-v. 沉思，冥想；沉思地说
+被认为是，被当做是
 **Sentences**:
-*For this, participants had to muse over statements like "Love is part of life" and "It's OK to love someone I'm no longer with."*
-为此，参与者必须思考诸如“爱是生活的一部分”和“爱一个我不再在一起的人是可以的”之类的陈述。
-《How long does it take to get over a breakup》
+*Such behaviour is regarded as "all too human",with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.*
+这种行为被认为是“人之常情”，潜在的假设是，其他动物不可能有这种高度发达的委屈感。
+《2005年英语Text1》
 
 #word
-#### myth
+#### issued
 #anki
-n. 错误的观点，荒诞的说法；神话，神话故事；虚构的人（或事），想象中的人（或事）
+v. 发行
 **Sentences**:
-*C)He became a myth three decades after his retirement.*
-C)他在退休30年后成为一个神话。
-《Text 5》
+*The Organization for Economic Co-operation and Development (OECD) has just issued a report describing the far-reaching consequences of this.*
+经济合作与发展组织（OECD）刚刚发布了一份报告，描述了这种情况的深远影响。
+《2008年英语一》
 
 #word
-#### necessarily
+#### it is critical that
 #anki
-adv. 必定，必然；必要地
+…是至关重要的； 重要的是……
 **Sentences**:
-*But the truth is, our feelings around it are shaped by the culture we live in and not necessarily by whether it's objectively dangerous or not.*
-但事实是，我们对它的感觉是由我们所处的文化塑造的，而不一定是客观上是否危险。
-《Is it really that bad to marry my cousin？》
+*But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions."*
+但科学确实为我们提供了最好的未来指南，至关重要的是，我们的国家和世界要根据科学对当前行动的未来后果所能提供的最佳判断来制定重要的政策。
+《2005年英语Text2》
 
 #word
-#### negative
+#### jaw
 #anki
-n. 否定，拒绝；负数
-v. 否定，拒绝
-adj. 否定的；反面的；负的阴性的
+n. 下颌，下巴；唠叨； v. 教训；唠叨
 **Sentences**:
-*53.What happened when the negative reciprocity variable was taken into account?*
-53.当考虑到负互惠变量时会发生什么
-《Text 2》
+*So he hired a dentist to transplant nine teeth into his jaw — having extracted them from the mouths of his slaves.*
+于是，他雇了一位牙医，把从奴隶嘴里拔出来的九颗牙齿移植到他的下巴上。
+《2008年英语一Text4》
 
 #word
-#### negotiate
+#### judgments
 #anki
-v. 商议，谈判；谈妥，转让；超越
+n. 判断力；判断；看法；判决；判决书
 **Sentences**:
-*So, it's important to know whether using an AI Agent might affect how we negotiate.*
-所以，重要的是要知道使用人工智能代理是否会影响我们的谈判方式。
-《2023年12月（第1套）》
+*But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions."*
+但科学确实为我们提供了最好的未来指南，至关重要的是，我们的国家和世界要根据科学对当前行动的未来后果所能提供的最佳判断来制定重要的政策。
+《2005年英语Text2》
 
 #word
-#### negotiating
+#### lawyers
 #anki
-n. 谈判
-v. 谈判（negotiate 的 ing 形式）；磋商
+n. 律师，法学家
 **Sentences**:
-*Another role they're expecting to take over, is negotiating on our behalf commercial transaction or legal disputes.*
-他们期望接手的另一个角色是代表我们谈判商业交易或法律纠纷。
-《2023年12月（第1套）》
+*In a move that has intellectual-property lawyers abuzz, the U.S. Court of Appeals for the Federal Circuit said it would use a particular case to conduct a broad review of business-method patents.*
+美国联邦巡回上诉法院（U.S. Court of Appeals for the Federal Circuit）说，它将利用一个特殊案件对商业方法专利进行广泛审查，此举令知识产权律师们议论纷纷。
+《2010年英语一Test2》
 
 #word
-#### norms
+#### lobby
 #anki
-n. 标准，规范；定额
+n. 门厅，大厅；休息室；会客室；游说团； v. 游说；对……进行游说
 **Sentences**:
-*The fear of birth defects and genetic disorders has influenced the change in social norms.*
-对出生缺陷和遗传疾病的恐惧影响了社会规范的变化。
-《Is it really that bad to marry my cousin？》
+*That the antismoking lobby was out to destroy our way of life and the government should stay out of the way?*
+反对吸烟的游说团体企图破坏我们的生活方式，政府应该置身事外
+《2005年英语Text2》
 
 #word
-#### objectively
+#### looming
 #anki
-adv. 客观地
+adj. 隐隐约约的； n. 上现蜃景； v. 逼近；隐约出现（loom的现在分词形式）
 **Sentences**:
-*But the truth is, our feelings around it are shaped by the culture we live in and not necessarily by whether it's objectively dangerous or not.*
-但事实是，我们对它的感觉是由我们所处的文化塑造的，而不一定是客观上是否危险。
-《Is it really that bad to marry my cousin？》
+*[A] A looming threat to business-method patents.*
+[A]对商业方法专利的潜在威胁。
+《2010年英语一Test2》
 
 #word
-#### obvious
+#### luxury
 #anki
-adj. 显然的，明显的；明白的
+adj. 奢侈的； n. 奢华，华贵
 **Sentences**:
-*There are things we accept as obvious truths that aren't necessarily backed up by data.*
-有些事情我们认为是显而易见的事实，但并不一定有数据支持。
-《Is it really that bad to marry my cousin？》
+*In the world of capuchins grapes are luxury goods (and much preferable to cucumbers).*
+在卷尾猴的世界里，葡萄是奢侈品（比黄瓜更受欢迎）。
+《2005年英语Text1》
 
 #word
-#### occupied
+#### made up
 #anki
-v. 占领，使用（occupy的过去式和过去分词）
+捏造的，虚构的
 **Sentences**:
-*B)He is actually proud to be fully occupied.*
-B)他很自豪自己很忙。
-《TEXT1》
+*[C] historians deliberately made up some stories of Jefferson's life.*
+[C]历史学家故意编造了一些关于杰弗逊生活的故事。
+《2008年英语一Text4》
 
 #word
-#### on both sides of
+#### majority
 #anki
-在……的两侧：表示某物或某人在某个区域的两侧。
+n. 大多数，大部分；多数票
 **Sentences**:
-*Though it became much less popular on both sides of the Atlantic, it was only in the US that it became illegal.*
-尽管它在大西洋两岸变得不那么受欢迎了，但只有在美国，它才成为非法行为。
-《Is it really that bad to marry my cousin？》
+*But it's obvious that a majority of the president's advisers still don't take global warming seriously.*
+但很明显，总统的大多数顾问仍然没有认真对待全球变暖问题。
+《2005年英语Text2》
 
 #word
-#### one in five
+#### means
 #anki
-五分之一：表示比例或比率中的一个部分，指的是五个中的一个。
+ n. 方法，手段；工具；金钱，财富，财产，财力，收入
 **Sentences**:
-*According to a recent study, one in five highly engaged employees is at risk of burnout (精疲力竭).*
-根据最近的一项研究，五分之一的高度敬业的员工有倦怠的风险(精疲力竭)。
-《TEXT1》
+*[B] It introduces an effective means of publication.*
+[B]它引入了一种有效的出版方式。
+《2008年英语一》
 
 #word
-#### operate
+#### neighborhoods
 #anki
-v. 运转；引起；起作用；动手术；作战；执行任务；操作，控制；经营，管理
+n. 邻居，近邻；附近；邻里情谊
 **Sentences**:
-*It may be because you bring operate in harmony with each other.*
-这可能是因为你带来的操作彼此和谐。
-《2023年12月（第2套）》
+*The theory also seems to explain the sudden and unexpected popularity of certain looks,brands, or neighborhoods.*
+这一理论似乎也解释了某些外表、品牌或社区为何突然出乎意料地流行起来。
+《2010年英语一Test3》
 
 #word
-#### operating
+#### non-celebrity
 #anki
-adj. 操作的；业务上的；外科手术的
+n. 非名人
 **Sentences**:
-*A)An operating system capable of doing several tasks at once.*
-A)一种能够同时执行多项任务的操作系统。
-《Text 4》
+*Yet it is precisely these non-celebrity influentials who, according to the two-step-flow theory, are supposed to drive social epidemics, by influencing their friends and colleagues directly.*
+然而，根据两步流理论，正是这些非名人的影响力人物，通过直接影响他们的朋友和同事，推动了社会流行。
+《2010年英语一Test3》
 
 #word
-#### out of
+#### nonsense
 #anki
-phr. 自…离开；由于；脱离，摆脱；用完
+n. 胡说；废话；愚蠢的行为；胡闹； adj. 无意义的；荒谬的
 **Sentences**:
-*And it maybe wildly out of fashion in Europe and North America now, but like hoop skirts and top hats, cousin marriage used to be a much more common sight.*
-这在欧洲和北美可能已经不流行了，但就像箍裙和高礼帽一样，表亲结婚在过去也很常见。
-《Is it really that bad to marry my cousin？》
-*But even with the onset of the railroad and the industrial revolution, it still took another 50 years for cousin marriage to go out of style in Western society.*
-但即使随着铁路和工业革命的出现，表亲结婚在西方社会仍然花了50年的时间才过时。
-《Is it really that bad to marry my cousin？》
+*Lots of Americans bought that nonsense, and over three decades, some 10 million smokers went to early graves.*
+许多美国人相信了这种无稽之谈，30多年来，约有1000万吸烟者早逝。
+《2005年英语Text2》
 
 #word
-#### outperform
+#### normally
 #anki
-v. 胜过，做得比……好
+adv. 通常地，一般地；正常地
 **Sentences**:
-*B)They may resort to unethical means to outperform their rivals.*
-B)他们可能会采取不道德的手段来超越竞争对手。
-《Text 3》
+*Normally, the monkeys were happy enough to exchange pieces of rock for slices of cucumber.*
+通常情况下，猴子们很乐意用石头换黄瓜片。
+《2005年英语Text1》
 
 #word
-#### outright
+#### notably
 #anki
-adj. 完全的，彻底的；公开的，直率的；绝对的，全面的
-adv. 公开地，直率地；完全地，彻底地；立刻，立即；一次付清地
+adv. 明显地，显著地；尤其，特别
 **Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
+*Growth, which rarely continues beyond the age of 20, demands calories and nutrients — notably, protein — to feed expanding tissues.*
+在20岁以后很少会继续生长，需要卡路里和营养，特别是蛋白质来喂养扩张的组织。
+《2008年英语一》
 
 #word
-#### overall
+#### nutrients
 #anki
-n. 罩衫；工装裤
-adv. 总的来说；全面地
-adj. 全部的；全体的；综合的
+n. 营养物；养分（nutrient 的复数）
 **Sentences**:
-*Overall, the researchers concluded, and I'm not using the scientific language here, that concentrating on the bad things about your ex can help you to feel less in love.*
-总的来说，研究人员得出结论，我在这里没有用科学的语言，把注意力集中在前任的不好的事情上会让你感觉更少爱。
-《How long does it take to get over a breakup》
+*Growth, which rarely continues beyond the age of 20, demands calories and nutrients — notably, protein — to feed expanding tissues.*
+在20岁以后很少会继续生长，需要卡路里和营养，特别是蛋白质来喂养扩张的组织。
+《2008年英语一》
 
 #word
-#### parades
+#### oceanic
 #anki
-n. 检阅，阅兵；游行，行进
-v. 游行，列队行进；展示；炫耀
+adj. 海洋的，与海洋有关的；（
 **Sentences**:
-*He often led pre-race parades at Aintree Racecourse and was a popular guest at charity benefits and public events.*
-他经常在安特里赛马场(Aintree Racecourse)带领赛前游行队伍，也是慈善活动和公共活动的热门嘉宾。
-《Text 5》
+*To serve as responsible stewards of the planet, we must press forward on deeper atmospheric and oceanic research.*
+作为地球的负责任的管理者，我们必须推进更深层次的大气和海洋研究。
+《2005年英语Text2》
 
 #word
-#### paradoxically
+#### one-shot
 #anki
-adv. 似非而是地；反常地；悖理地
+adj. 只有一次的
 **Sentences**:
-*Boredom has, paradoxically, become quite interesting to academics lately.*
-矛盾的是，无聊最近对学者来说变得相当有趣了。
-《2020年12月（第2套）》
+*The kinds of interpersonal violence that women are exposed to tend to be in domestic situations, by, unfortunately, parents or other family members, and they tend not to be one-shot deals.*
+不幸的是，女性所遭受的人际暴力往往发生在家庭环境中，是由父母或其他家庭成员造成的，而且往往不是一次性的。
+《2008年英语一》
 
 #word
-#### participants
+#### open-access
 #anki
-n. 参与者；参加者
+adj. 开放式的；开放使得可以接入的
 **Sentences**:
-*The study found that when participants were distracted into thinking about something other than their ex, like, their favorite hobby or ideal career, their love feelings for their ex stayed the same, but it did make them feel more pleasant.*
-研究发现，当参与者分心去想前任以外的事情时，比如他们最喜欢的爱好或理想的职业，他们对前任的爱的感觉保持不变，但这确实让他们感觉更愉快。
-《How long does it take to get over a breakup》
+*There is open-access publishing, typically supported by asking the author (or his employer) to pay for the paper to be published.*
+一种是开放获取出版，通常要求作者（或其雇主）支付论文的出版费用。
+《2008年英语一》
+*Finally, there are open-access archives, where organizations such as universities or international laboratories support institutional repositories.*
+最后，还有开放存取档案，大学或国际实验室等组织支持机构存储库。
+《2008年英语一》
 
 #word
-#### peculiar
+#### outraged
 #anki
-adj. 奇怪的；罕见的；特殊的
+adj. 义愤填膺的；愤慨的，气愤的； v. 使愤怒（outrage 的过去式，过去分词）
 **Sentences**:
-*A)To cater to the peculiar needs of some customers.*
-A)迎合一些顾客的特殊需求。
-《2020年12月（第1套）》
+*Indeed, if he has a reputation for slacking, you might even be outraged.*
+事实上，如果他有懈怠的名声，你甚至可能会感到愤怒。
+《2005年英语Text1》
 
 #word
-#### peculiarity
+#### outsize
 #anki
-n. 古怪之处，怪癖；独特之处，特性
+adj. 特大的； n. 特大号
 **Sentences**:
-*I have written about this peculiarity in human nature before with my friend Dan Ariely, who studied this phenomenon extensively after noticing pricing for subscriptions (订阅) to The Economist.*
-我以前曾和朋友丹•艾瑞里(Dan Ariely)一起写过关于人性中的这一特性的文章。艾瑞里在注意到《经济学人》(The Economist)的订阅定价(订阅)后，对这一现象进行了广泛的研究。
-《2020年12月（第1套）》
+*The researchers' argument stems from a simple observation about social influence: With the exception of a few celebrities like Oprah Winfrey - whose outsize presence is primarily a function of media, not interpersonal, influence - even the most influential members of a population simply don't interact with that many others.*
+研究人员的论点源于对社会影响力的一个简单观察：除了像奥普拉·温弗瑞这样的少数名人——她的巨大影响力主要是媒体的作用，而不是人际关系的影响——即使是最具影响力的成员也不会与那么多其他人互动。
+《2010年英语一Test3》
 
 #word
-#### perceive
+#### ovaries
 #anki
-vt. 认为，理解；察觉，注意到；意识到
+n. [解剖]卵巢，[植]子房（ovary 复数形式）
 **Sentences**:
-*A recent study concluded that regardless of whether people are actually handling several tasks or not, the mere fact that they perceive this activity as multitasking has a positive effect on their performance.*
-最近的一项研究得出结论，无论人们是否真的在处理几项任务，仅仅是他们认为这项活动是多任务处理，就会对他们的表现产生积极的影响。
-《Text 4》
+*In several of the studies, when stressed-out female rats had their ovaries (the female reproductive organs) removed,their chemical responses became equal to those of the males.*
+在几项研究中，当压力过大的雌性老鼠的卵巢（雌性生殖器官）被切除后，它们的化学反应变得和雄性老鼠一样。
+《2008年英语一》
 
 #word
-#### perceived
+#### over the past decade
 #anki
-v. 认为，感觉（perceive的过去式和过去分词）
+在过去的十年中
 **Sentences**:
-*They found busy people are perceived to be of high status, and interestingly, these status attributions are heavily influenced by our own beliefs about social mobility. In other words, the more we believe that one has the opportunity for success based on hard work, the more we tend to think that people who skip leisure and work all the time are of higher standing.*
-他们发现忙碌的人被认为地位高，有趣的是，这些地位归属在很大程度上受到我们自己对社会流动性的看法的影响。换句话说，我们越相信一个人有机会通过努力工作获得成功，我们就越倾向于认为那些不休闲而一直工作的人地位更高。
-《TEXT1》
+*Over the past decade, thousands of patents have been granted for what are called business methods.*
+在过去的十年里，成千上万的专利被授予了所谓的商业方法。
+《2010年英语一Test2》
 
 #word
-#### perception
+#### panel
 #anki
-n. 看法，认识；感觉，感知；洞察力；<法律>（租金、农作物等的）收取，占有
+n. 专家小组
 **Sentences**:
-*B)People's performance benefits from the perception of what they are doing as multitasking.*
-B)人们的表现受益于他们正在做的多任务处理的感觉。
-《Text 4》
+*The latest was a panel from the National Academy of Sciences, enlisted by the White House, to tell us that the Earth's atmosphere is definitely warming and that the problem is largely man-made.*
+美国国家科学院（National Academy of Sciences）的一个专家小组受白宫邀请，告诉我们地球大气确实在变暖，而这个问题主要是人为造成的。
+《2005年英语Text2》
 
 #word
-#### perspective
+#### parallels
 #anki
-n. （观察问题的）视角，观点；透视（画）法；（几何）透视关系，投影比例；洞察力，判断力；景观，远景；角度；（声音）立体效果
-adj. 透视的
+n. 平行线；平行状态；匹敌者（parallel 的复数形式）； v. 使……成平行；与……相应（parallel 的第三人称单数）
 **Sentences**:
-*The business perspective offers a different view: multitasking is understood as the ability to adapt to all  types of environment within a company and effectively undertake different activities within a set time frame.*
-商业角度提供了不同的观点:多任务被理解为适应公司内所有类型环境的能力，并在规定的时间框架内有效地进行不同的活动。
-《Text 4》
+*There are upsetting parallels today, as scientists in one wave after another try to awaken us to the growing threat of global warming.*
+如今，科学家们一波接一波地试图唤醒我们，让我们意识到全球变暖日益严重的威胁。
+《2005年英语Text2》
 
 #word
-#### pipe
+#### paralysis
 #anki
-n. 管子；烟斗；管乐器，笛子
-v. 以管输送；以管乐器演奏；尖声地说；吹哨子下令；滚边
+n. 麻痹，瘫痪；无力；停顿
 **Sentences**:
-*World pipe band championship will take place in Glasgow.*
-世界管乐队锦标赛将在格拉斯哥举行。
-《2022年12月（第2套）》
+*Instead of a plan of action, they continue to press for more research - a classic case of "paralysis by analysis".*
+他们没有制定行动计划，而是继续要求进行更多的研究——这是一个典型的“分析瘫痪”案例。
+《2005年英语Text2》
 
 #word
-#### pleasant
+#### particular
 #anki
-adj. 令人愉快的，可喜的，吸引人的；友好的，和善的，文雅的
+adj. 特别的，独有的； n. 详细说明；
 **Sentences**:
-*The study found that when participants were distracted into thinking about something other than their ex, like, their favorite hobby or ideal career, their love feelings for their ex stayed the same, but it did make them feel more pleasant.*
-研究发现，当参与者分心去想前任以外的事情时，比如他们最喜欢的爱好或理想的职业，他们对前任的爱的感觉保持不变，但这确实让他们感觉更愉快。
-《How long does it take to get over a breakup》
+*In a move that has intellectual-property lawyers abuzz, the U.S. Court of Appeals for the Federal Circuit said it would use a particular case to conduct a broad review of business-method patents.*
+美国联邦巡回上诉法院（U.S. Court of Appeals for the Federal Circuit）说，它将利用一个特殊案件对商业方法专利进行广泛审查，此举令知识产权律师们议论纷纷。
+《2010年英语一Test2》
 
 #word
-#### plug
+#### particularly
 #anki
-n. 插头；插座;
-v. 堵，塞；补足；接电源，插插头；推广，宣传；
+adv. 特别地，详细地，明确地，细致地
 **Sentences**:
-*It only means that the gender gap disappears when we plug in the negative reciprocity variable.*
-只有当我们加入负互惠变量时，性别差距才会消失。
-《Text 2》
+*"Women are particularly susceptible to developing depression and anxiety disorders in response to stress compared to men," according to Dr. Yehuda, chief psychiatrist at New York's Veteran's Administration Hospital.*
+纽约退伍军人管理医院的首席精神病学家耶胡达博士说：“与男性相比，女性在面对压力时特别容易患上抑郁症和焦虑症。”
+《2008年英语一》
+
+#word
+#### patent
+#anki
+n. 专利； v. 取得专利； adj. 专利的
+**Sentences**:
+*Now the nation's top patent court appears completely ready to scale back on business-method patents, which have been controversial ever since they were first authorized 10 years ago.*
+现在，美国最高专利法院似乎完全准备好缩减商业方法专利的规模。自从10年前首次获得授权以来，商业方法专利一直存在争议。
+《2010年英语一Test2》
+
+#word
+#### patented
+#anki
+adj. 专利的
+**Sentences**:
+*One inventor patented a technique for lifting a box.*
+一位发明家为提起箱子的技术申请了专利。
+《2010年英语一Test2》
+
+#word
+#### patents
+#anki
+n. 专利；专利品；专利权； v. 取得专利；取得专利； adj. 专利的；显然的；新奇的
+**Notes**:
+词形变化： [patents]是[patent]的第三人称单数形式
+**Sentences**:
+*26. Business-method patents have recently aroused concern because of*
+26. 商业方法专利最近引起了人们的关注，因为
+《2010年英语一Test2》
+
+#word
+#### paycheck
+#anki
+n. 付薪水的支票，薪水
+**Sentences**:
+*I lived from paycheck to paycheck."*
+我靠薪水过日子。
+《2008年英语一》
+
+#word
+#### peer-review
+#anki
+n. 各领域专家互相评阅，同行评审；同业监督小组
+**Sentences**:
+*[D] complete the peer-review before submission.*
+[D]在提交之前完成同行评审。
+《2008年英语一》
+
+#word
+#### persuasive
+#anki
+adj. 有说服力的，能使人信服的
+**Sentences**:
+*In his book The Tipping Point, Malcolm Gladwell argues that "social epidemics"are driven in large part by the actions of a tiny minority of special individuals, often called influentials, who are unusually informed, persuasive, or well connected.*
+马尔科姆·格拉德威尔（Malcolm Gladwell）在他的著作《引爆点》（The Tipping Point）中认为，“社会流行病”在很大程度上是由极少数特殊个人的行为驱动的，这些人通常被称为有影响力的人，他们见多识广、有说服力或人脉广泛。
+《2010年英语一Test3》
+
+#word
+#### phrase
+#anki
+n. 措辞，说法；短语，词组；成语，习语；乐句； v. 叙述，措词
+**Sentences**:
+*34. The underlined phrase "these people" in Paragraph 4 refers to the ones who*
+34. 第4段中划线的短语“这些人”指的是那些
+《2010年英语一Test3》
+
+#word
+#### plausible-sounding
+#anki
+听起来貌似有道理
+**Sentences**:
+*The supposed importance of influentials derives from a plausible-sounding but largely untested theory called the "two-step flow of communication": Information flows from the media to the influentials and from them to everyone else.*
+有影响力的人之所以重要，是因为一个听起来似乎很有道理，但在很大程度上未经验证的理论——“两步传播”：信息从媒体流向有影响力的人，再从他们流向其他人。
+《2010年英语一Test3》
 
 #word
 #### point
 #anki
-n. 点；标点；要点；尖端；得分
-v. 削尖；指向；加标点于；表明
+n. 观点，论点；目的，意图； v. 指，指向；
 **Sentences**:
-*Once you're doing other things that you're engaged with and distracted by, then at some point you look back and like, 'Oh yeah, that's my ex.'*
-《How long does it take to get over a breakup》
+*The president of the National Academy, Bruce Alberts, added this key point in the preface to the panel's report: "Science never has all the answers.*
+美国国家科学院院长布鲁斯·阿尔伯茨（Bruce Alberts）在专家组报告的序言中补充了这一关键点：“科学永远不会有所有的答案。
+《2005年英语Text2》
 
 #word
-#### possible
+#### posture
 #anki
-n. 可能适合的（人或事）
-adj. 可能的；潜在的；合适的；合理的
+n. 姿势；态度，立场； v. 故作姿态
 **Sentences**:
-*However, on the other side of the coin there are people who maintain that it is possible to be, or at least seem to be, multitasking.*
-然而，在硬币的另一面，有人坚持认为是可能的，或者至少看起来是，多任务处理。
-《Text 4》
-*Well after the rush hour, I think, we'd like to avoid the crowd if possible.*
-嗯，在高峰时间之后，我想，如果可能的话，我们要避开人群。
-《2023年3月（第1套）》
+*Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.*
+此外，尽管人类已经直立行走了数百万年，但我们的脚和背部仍在努力适应两足行走的姿势，无法轻易承受超大四肢带来的反复压力。
+《2008年英语一》
 
 #word
-#### practicality
+#### potential
 #anki
-n. 实用性，可行性；务实，实事求是；实例，实际情况（practicalities）
+adj. 潜在的；电势的； n. 潜在性，可能性；
 **Sentences**:
-*54.What should we do when facing various factors that limit the practicality of data?*
-54.面对各种限制数据实用性的因素，我们应该怎么做
-《Text 6》
+*It "has the potential to eliminate an entire class of patents."*
+它“有可能消除一整类专利。
+《2010年英语一Test2》
 
 #word
-#### practice
+#### preface
 #anki
-n. 实践；练习；业务；惯例；诊所；律师事务所
-v. 练习；实习；惯常地进行；执业；实践，实行
+n. 前言，引语； v. 作序，以…开始
 **Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
+*The president of the National Academy, Bruce Alberts, added this key point in the preface to the panel's report: "Science never has all the answers.*
+美国国家科学院院长布鲁斯·阿尔伯茨（Bruce Alberts）在专家组报告的序言中补充了这一关键点：“科学永远不会有所有的答案。
+《2005年英语Text2》
+
+#word
+#### presence
+#anki
+n. 出席；风度；鬼怪；存在
+**Sentences**:
+*The researchers' argument stems from a simple observation about social influence: With the exception of a few celebrities like Oprah Winfrey - whose outsize presence is primarily a function of media, not interpersonal, influence - even the most influential members of a population simply don't interact with that many others.*
+研究人员的论点源于对社会影响力的一个简单观察：除了像奥普拉·温弗瑞这样的少数名人——她的巨大影响力主要是媒体的作用，而不是人际关系的影响——即使是最具影响力的成员也不会与那么多其他人互动。
+《2010年英语一Test3》
+
+#word
+#### present
+#anki
+adj. 目前的，现在的；出席的，在场的； v. 赠送；提出；介绍； n. 礼物；现在
+**Sentences**:
+*But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions."*
+但科学确实为我们提供了最好的未来指南，至关重要的是，我们的国家和世界要根据科学对当前行动的未来后果所能提供的最佳判断来制定重要的政策。
+《2005年英语Text2》
+
+#word
+#### press for
+#anki
+phr. 催逼，追问，迫切要求
+**Notes**:
+竭力做某事
+**Sentences**:
+*Instead of a plan of action, they continue to press for more research - a classic case of "paralysis by analysis".*
+他们没有制定行动计划，而是继续要求进行更多的研究——这是一个典型的“分析瘫痪”案例。
+《2005年英语Text2》
+
+#word
+#### press forward on
+#anki
+继续前进
+**Sentences**:
+*To serve as responsible stewards of the planet, we must press forward on deeper atmospheric and oceanic research.*
+作为地球的负责任的管理者，我们必须推进更深层次的大气和海洋研究。
+《2005年英语Text2》
 
 #word
 #### prevailing
 #anki
-adj. 现存的，存在的； 风靡的，盛行的
-v. 盛行，流行；劝说（某人）做某事；（在比赛、竞赛或争辩中）击败，获胜（prevail 的现在分词）
-**Notes**:
-=popular
+adj. 占优势的；主要的；流行的；普遍的
 **Sentences**:
-*B)One is opposed to the prevailing work culture.*
-B)反对主流的工作文化。
-《TEXT1》
+*[D] A prevailing trend against business-method patents*
+[D]反对商业方法专利的流行趋势
+《2010年英语一Test2》
 
 #word
-#### previously
+#### prevalent
 #anki
-adv. 预先；以前
+adj. 流行的；普遍的
 **Sentences**:
-*Researchers have previously found a link between eating more fruits and vegetables and improved longer term mental health.*
-研究人员此前发现，多吃水果和蔬菜与改善长期心理健康之间存在联系。
-《2023年12月（第1套）》
+*[B] has helped explain certain prevalent trends.*
+[B]有助于解释某些流行趋势。
+《2010年英语一Test3》
 
 #word
-#### prime
+#### primarily
 #anki
-n. 初期；青年；全盛时期；精华
-v. 装填；（使）准备好；事先指点
-adj. 最初的；主要的，首要的；最好的
+adv. 首先；起初，原来；首要地，主要地；根本上
 **Sentences**:
-*When he returned in 1977 to try again, he was largely regarded as past his prime.*
-当他1977年重返政坛再次尝试时，人们普遍认为他已经过了黄金时期。
-《Text 5》
+*The researchers' argument stems from a simple observation about social influence: With the exception of a few celebrities like Oprah Winfrey - whose outsize presence is primarily a function of media, not interpersonal, influence - even the most influential members of a population simply don't interact with that many others.*
+研究人员的论点源于对社会影响力的一个简单观察：除了像奥普拉·温弗瑞这样的少数名人——她的巨大影响力主要是媒体的作用，而不是人际关系的影响——即使是最具影响力的成员也不会与那么多其他人互动。
+《2010年英语一Test3》
 
 #word
-#### prior
+#### profit-making
 #anki
-adj. 先前的，事先的；<正式>优先的，更重要的；
+获利的
 **Sentences**:
-*Prior research on negative reciprocity among workers found that it can result in lower employee motivation, business performance and workplace morale(士气)and culture.*
-先前对员工之间负互惠的研究发现，它会导致员工动机、业务绩效和工作场所士气(士气)和文化的降低。
-《Text 2》
+*[C] It upsets profit-making journal publishers.*
+[C]它使盈利的期刊出版商感到不安。
+《2008年英语一》
 
 #word
-#### prioritize
+#### protein
 #anki
-v. 划分优先顺序
+n. 蛋白质； adj. （含）蛋白质的
 **Sentences**:
-*B)Prioritize reaping immediate benefits.*
-B)优先考虑获得直接利益。
-《Text 3》
+*Growth, which rarely continues beyond the age of 20, demands calories and nutrients — notably, protein — to feed expanding tissues.*
+在20岁以后很少会继续生长，需要卡路里和营养，特别是蛋白质来喂养扩张的组织。
+《2008年英语一》
 
 #word
-#### probably
+#### prudent
 #anki
-adv. 大概，或许
+adj. 谨慎的，稳健的；精明的；节俭的
 **Sentences**:
-*After all, if it wasn't for cousin marriage, you probably wouldn't be here.*
-毕竟，如果不是表亲结婚，你可能就不会在这里了。
-《Is it really that bad to marry my cousin？》
+*With the risks obvious and growing, a prudent people would take out an insurance policy now.*
+随着风险的明显和不断增长，谨慎的人现在就会采取保险措施。
+《2005年英语Text2》
 
 #word
-#### process
+#### publication
 #anki
-n. 过程，进程；步骤，工序；程序；进行，推移
-v. 处理；加工；列队行进
+n. 出版物；出版；公布
 **Sentences**:
-*"Taking that time to process and understand it is actually a much quicker way to heal than ignoring it."*
-“花时间去处理和理解它，实际上比忽视它更快地治愈它。
-《How long does it take to get over a breakup》
+*Depending on the comments received, the editor would accept the paper for publication or decline it.*
+根据收到的评论，编辑会接受或拒绝发表这篇论文。
+《2008年英语一》
+*All this could change the traditional form of the peer-review process, at least for the publication of papers.*
+所有这些都可能改变同行评审过程的传统形式，至少在论文发表方面是这样。
+《2008年英语一》
+*[B] A new mode of publication is emerging.*
+[B]一种新的出版模式正在出现。
+《2008年英语一》
 
 #word
-#### professional
+#### quarters
 #anki
-adj. 职业的，专业的；
-n. 专业人员，专业人士；内行，专家；职业选手；
+n. 方面，团体，四分之一
 **Sentences**:
-*So with no adequate data, I decided to seek professional help.*
-《How long does it take to get over a breakup》
+*Just as on smoking, voices now come from many quarters insisting that the science about global warming is incomplete, that it's OK to keep pouring fumes into the air until we know for sure.*
+就像吸烟一样，现在来自许多方面的声音坚持认为，关于全球变暖的科学是不完整的，在我们确定之前，可以继续向空气中排放烟雾。
+《2005年英语Text2》
 
 #word
-#### progress
+#### radical
 #anki
-n. 进步，进展；前进；增长；进化
-v. 发展；促进；前进；进行
+n. 激进分子; adj. 根本的，全新的，激进的，很好
 **Sentences**:
-*To really answer that question of how long it takes to get over a breakup, you would need to do a longitudinal study, a study that would basically follow a ton of people from the moment of their breakup and track their progress year after year after year.*
-要真正回答从分手中恢复需要多长时间这个问题，你需要做一个纵向研究，这个研究基本上会跟踪大量的人，从他们分手的那一刻开始，年复一年地跟踪他们的进展。
-《How long does it take to get over a breakup》
-
-#word
-#### promote
-#anki
-v. 提升；促进；发起；宣传
-**Sentences**:
-*That's what people who get promoted say.*
-升职的人都这么说。
-《TEXT1》
-
-#word
-#### promoted
-#anki
-v. 提升；促进；发起；宣传
-**Sentences**:
-*That's what people who get promoted say.*
-升职的人都这么说。
-《TEXT1》
-
-#word
-#### promotion
-#anki
-n. 提升；晋级；促进；发扬；推销
-**Sentences**:
-*Never taking a vacation won't lead to a promotion.*
-从不休假不会给你带来升职。
-《TEXT1》
-
-#word
-#### property
-#anki
-n. 所有物，财产；地产，房地产；房地产股票（或投资）（properties）；<法律> 所有权，处置权；特性，性质
-**Sentences**:
-*The anti-pollution message of the reverse graffiti artists confuses city authorities since the main argument against graffiti is that it spoils the appearance of both types of property: public and private.*
-反涂鸦艺术家的反污染信息让城市当局感到困惑，因为反对涂鸦的主要理由是它破坏了公共和私人财产的外观。
-《2020年9月（第2套）》
-
-#word
-#### provoke
-#anki
-v. 激起，引起；驱使，煽动；挑衅，激怒
-**Sentences**:
-*Researchers and the university _of California_ _scanned_ the brains of 42 classmates _while they watched_ videos, intended to _provoke_ varying responses.*
-加州大学的研究人员在42名同学观看视频时扫描了他们的大脑，目的是激发不同的反应。
-《2023年12月（第2套）》
-
-#word
-#### publications
-#anki
-n. 出版物（publication 的复数）
-**Sentences**:
-*See, a few years back, a number of publications were touting a study telling their readers that it takes 11 weeks to get over a breakup.*
-几年前，许多出版物都在宣传一项研究，告诉他们的读者，人们需要11周才能从分手中恢复过来。
-《How long does it take to get over a breakup》
-
-#word
-#### publicise
-#anki
-vt. 宣传，宣扬；公布，颂
-**Sentences**:
-*A) Publicise their artistic pursuit.*
-A)宣传他们的艺术追求。
-《2020年9月（第2套）》
-
-#word
-#### purchase
-#anki
-v. 购买；赢得
-n. 购买；紧握
-**Sentences**:
-*Red Rum was passed around to several owners before being purchased for Noel Le Mar. The agent who made the purchase was the now-legendary horse trainer Donald “Ginger”McCain.*
-在被诺埃尔·勒·马尔买下之前，“红朗姆酒”曾被几个主人转手。买下这瓶酒的经纪人是现在传奇的驯马师唐纳德·金格·麦凯恩(Donald Ginger McCain)。
-《Text 5》
-
-#word
-#### purchased
-#anki
-adj. 购买的
-v. 购买（purchase的过去式及过去分词形式
-**Sentences**:
-*Red Rum was passed around to several owners before being purchased for Noel Le Mar. The agent who made the purchase was the now-legendary horse trainer Donald “Ginger”McCain.*
-在被诺埃尔·勒·马尔买下之前，“红朗姆酒”曾被几个主人转手。买下这瓶酒的经纪人是现在传奇的驯马师唐纳德·金格·麦凯恩(Donald Ginger McCain)。
-《Text 5》
-
-#word
-#### purchases
-#anki
-v. 购买；赢得
-n. 购买；紧握
-**Sentences**:
-*Suggesting new friends recommending purchases beginning to drive our cars.*
-向新朋友推荐购买，开始开我们的车。
-《2023年12月（第1套）》
-
-#word
-#### pursuit
-#anki
-n. 追求，寻找；继续；追逐，追捕；实行，贯彻；
-**Sentences**:
-*A) Publicise their artistic pursuit.*
-A)宣传他们的艺术追求。
-《2020年9月（第2套）》
-
-#word
-#### quality
-#anki
-n. 特性；品德；质量；优质；身份；贵族；能力；素养；优点；音色；色品
-adj. 优质的；上流社会的；（报刊）内容严肃的
-**Sentences**:
-*C)It is an essential quality many employees lack.*
-C)这是许多员工缺乏的基本素质。
-《Text 4》
-
-#word
-#### quantity
-#anki
-n. 量，数量，许多，大量
-**Sentences**:
-*In the past, due to the left-behind economy, food variety was limited and the quantity wasn't enough.*
-过去，由于经济落后，食品种类有限，数量不足。
-《中国饮食变迁：从温饱到健康》
-
-#word
-#### racial
-#anki
-adj. 人种的，种族的
-
-#word
-#### rapid
-#anki
-n. 急流
-adj. 快速的，急促的
-**Sentences**:
-*Nowadays, with the rapid development of Chinese economy, food has not only become more various, the quality has improved greatly as well.*
-如今，随着中国经济的快速发展，食品不仅变得更加多样化，质量也有了很大的提高。
-《中国饮食变迁：从温饱到健康》
-
-#word
-#### rational
-#anki
-adj. 理性的；明事理的；合理的
-**Sentences**:
-*On the other hand, there is a more rational approach to making decisions.*
-另一方面，有一种更理性的决策方法。
-《Text 6》
-
-#word
-#### raw
-#anki
-adj. 生的，原始的；（感情，品质）强烈的
-n. 擦伤处
-**Sentences**:
-*And you notice that the feelings that you have are not as raw.*
-你注意到你的感觉没有那么原始了。
-《How long does it take to get over a breakup》
+*[A] is inevitable in radical education reforms.*
+在激进的教育改革中是不可避免的。
+《2005年英语一Text4》
 
 #word
 #### readiness
 #anki
-n. 准备就绪状态；愿意，乐意；快，迅捷
+n. 敏捷；愿意，乐意；准备就绪
 **Sentences**:
-*C)It is mainly accounted for by male employees' readiness to pay more.*
-C)这主要是由于男性员工愿意付更多的钱。
-《Text 2》
+*[C] The readiness to be influenced.*
+[C]易受影响。
+《2010年英语一Test3》
 
 #word
-#### realms
+#### recruiting
 #anki
-n. 领域（realm 的复数）
+n. 招聘；招募； v. 招募；聘请（recruit 的 ing 形式）
 **Sentences**:
-*The concept does indeed come from the realms of technology, where it is used to refer to an operating system that can execute multiple tasks at the same time.*
-这个概念确实来自技术领域，它被用来指可以同时执行多个任务的操作系统。
-《Text 4》
-
-#word
-#### reaping
-#anki
-v. 收割，获得（reap的ing形式）
-**Sentences**:
-*B)Prioritize reaping immediate benefits.*
-B)优先考虑获得直接利益。
-《Text 3》
-
-#word
-#### reappraisal
-#anki
-n. 重新评估
-**Sentences**:
-*The study also found that a negative reappraisal strategy, essentially remembering all of the shit things your ex said and did, does decrease love feelings for your ex.*
-研究还发现，消极的重新评价策略，本质上是记住你前任说过和做过的所有糟糕的事情，确实会降低你对前任的爱的感觉。
-《How long does it take to get over a breakup》
-
-#word
-#### recent
-#anki
-adj. 最近的；近来的；近代的
-**Sentences**:
-*48.What do we learn about the culture of busyness from a recent study?*
-48.从最近的一项研究中，我们对忙碌文化有什么了解
-《TEXT1》
-
-#word
-#### reciprocity
-#anki
-n. 相互作用；互给，互惠
-**Sentences**:
-*53.What happened when the negative reciprocity variable was taken into account?*
-53.当考虑到负互惠变量时会发生什么
-《Text 2》
-
-#word
-#### recommend
-#anki
-v. 推荐；举荐；介绍；劝告；建议
-**Sentences**:
-*We have bunches of brochures here, I would recommend getting out on a boat trip.*
-我们这里有很多小册子，我建议你乘船出游。
-《2023年12月（第1套）》
-
-#word
-#### reconnecting
-#anki
-v. 再接合
-**Sentences**:
-*But more importantly, I’ve learned that instead of counting down the days, we're much better off reconnecting with the things we love to do.*
-但更重要的是，我学会了与其倒计时，不如和我们喜欢做的事情重新联系起来。
-《How long does it take to get over a breakup》
-
-#word
-#### reflect
-#anki
-v. 反射（光、热或声音）；反映，照出（影像）；显示，表明；深思，反省；深思后认为，深思后说；引起（某种）看法，带来影响
-**Sentences**:
-*One way to avoid this trap is to stop and reflect on what's important.*
-避免这个陷阱的一个方法是停下来思考什么是重要的。
-《Text 3》
-
-#word
-#### reflected
-#anki
-adj. 反射的；得自他人的，间接得来的
-v. 反射（reflect的过去式和过去分词）
-**Sentences**:
-*Since the reform and opening up, Living standard of Chinese people has been improved continuously, which has reflected in the changes of people's diet.*
-改革开放以来，中国人民的生活水平不断提高，这体现在人们饮食的变化上。
-《中国饮食变迁：从温饱到健康》
-
-#word
-#### refraining
-#anki
-n. 叠句；副歌
-v. 忍住；节制；戒除；克制，抑制
-**Sentences**:
-*D)By refraining from being too excited about their successes.*
-D)避免对他们的成功过于兴奋。
-《Text 3》
-
-#word
-#### refraining from
-#anki
-避免
-**Sentences**:
-*D)Refraining from trusting instincts arbitrarily.*
-D)不轻易相信直觉。
-《Text 6》
-
-#word
-#### region
-#anki
-n. 地区，行政区，领域，范围
-**Sentences**:
-*This month as temperatures in northwestern Greenland approach all time high, researchers are encountering an unusual surprising levels of melting ice in the region.*
-本月，随着格陵兰岛西北部的气温接近历史最高水平，研究人员在该地区遇到了不同寻常的惊人融冰水平。
-《2022年12月（第2套）》
-
-#word
-#### regulation
-#anki
-n. 规章，规则；管理
-**Sentences**:
-*One study looked at different strategies for love regulation.*
-一项研究考察了调节爱情的不同策略。
-《How long does it take to get over a breakup》
-
-#word
-#### reimagining
-#anki
-vt. 重新想象，重新设想（事件、艺术品等）（reimagine 的现在分词）
-**Sentences**:
-*Politicians, policymakers, commissioners and school leaders must be brave enough to make the leap towards reimagining schools as providers of health as well as education services.*
-政治家、政策制定者、委员和学校领导必须有足够的勇气迈出这一步，将学校重塑为健康和教育服务的提供者。
-《2020年12月（第1套）》
-
-#word
-#### relationship
-#anki
-n. 关系；人际关系；恋爱关系；血缘关系
-**Sentences**:
-*It only focused on the aftereffects of ending a relationship, specifically among undergrads, which is a whole other can of worms.*
-它只关注结束一段关系的后果，尤其是对大学生的影响，这是另一回事。
-《How long does it take to get over a breakup》
-
-#word
-#### relationships
-#anki
-n. 关系；人际关系；恋爱关系；血缘关系
-**Sentences**:
-*He has anecdotal experience with countless people in relationships and, full disclosure, he was my couple’s therapist, too.*
-《How long does it take to get over a breakup》
-*But such behavior may stain your reputation and strain relationships important to your success.*
-但这样的行为可能会损害你的声誉，使对你的成功至关重要的人际关系变得紧张。
-《Text 3》
-
-#word
-#### reorganize
-#anki
-vi. 改组,再编制,改造
+*In the case of NBA players, their increase in height appears to result from the increasingly common practice of recruiting players from all over the world.*
+以NBA球员为例，他们身高的增加似乎是由于从世界各地招募球员的做法越来越普遍。
+《2008年英语一Text3》
 
 #word
 #### reproductive
 #anki
 adj. 生殖的；再生的，复制的
 **Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
+*In several of the studies, when stressed-out female rats had their ovaries (the female reproductive organs) removed,their chemical responses became equal to those of the males.*
+在几项研究中，当压力过大的雌性老鼠的卵巢（雌性生殖器官）被切除后，它们的化学反应变得和雄性老鼠一样。
+《2008年英语一》
 
 #word
 #### reputation
 #anki
-n. 名誉，名声
+n. 名声，名誉
 **Sentences**:
-*But such behavior may stain your reputation and strain relationships important to your success.*
-但这样的行为可能会损害你的声誉，使对你的成功至关重要的人际关系变得紧张。
-《Text 3》
+*Indeed, if he has a reputation forslacking, you might even be outraged.*
+事实上，如果他有懈怠的名声，你甚至可能会感到愤怒。
+《2005年英语Text1》
 
 #word
-#### reservation
+#### required
 #anki
-n. 保留；预订，预约；保留地，专用地
+adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）
 **Sentences**:
-*Do you have a reservation with us already?*
-您已经在我们这里预订了吗
-《2023年12月（第1套）》
+*In fact, they don't seem to be required at all.*
+事实上，它们似乎根本不需要。
+《2010年英语一Test3》
 
 #word
-#### reserved
+#### resentment
 #anki
-adj. 缄默的；矜持的；保留的；预订的
+n. 怨恨
 **Sentences**:
-*Good afternoon, yes, we reserved our room yesterday in the morning on your website for 3 nights.*
-下午好，是的，我们昨天早上在你们的网站上预订了三个晚上的房间。
-《2023年12月（第1套）》
+*Indeed, the mere presence of a grape in the other chamber (without an actual monkey to eat it) was enough to induce resentment in a female capuchin.*
+事实上，仅仅是在另一个房间里有一颗葡萄（没有一只真正的猴子吃它）就足以引起雌性卷尾猴的怨恨。
+《2005年英语Text1》
 
 #word
-#### resort
+#### responsible
 #anki
-n. 旅游胜地，度假胜地；求助的方法，采用的手段；采用，诉诸，求助
-v. 诉诸，求助于；<正式>常去，（成群结队地）去
+adj. 负有责任的；尽责的，负责的
 **Sentences**:
-*B)They may resort to unethical means to outperform their rivals.*
-B)他们可能会采取不道德的手段来超越竞争对手。
-《Text 3》
+*To serve as responsible stewards of the planet, we must press forward on deeper atmospheric and oceanic research.*
+作为地球的负责任的管理者，我们必须推进更深层次的大气和海洋研究。
+《2005年英语Text2》
 
 #word
-#### restrict
+#### reveal
 #anki
-v. 限制，限定，约束，阻碍
+v. 使显露；揭露；暴露；泄露；透露
+**Sentences**:
+*[D] reveal some unknown aspect of his life.*
+[D]揭示他生活中一些不为人知的方面。
+《2008年英语一Text4》
+
+#word
+#### review
+#anki
+v. 审查
+**Sentences**:
+*A journal editor would then remove the authors' names and affiliations from the paper and send it to their peers for review.*
+然后，期刊编辑会从论文中删除作者的姓名和所属单位，并将其发送给同行进行评审。
+《2008年英语一》
+
+#word
+#### reward
+#anki
+n. 报答，报酬；酬金；奖赏； v. 报答；酬谢；奖励
+**Sentences**:
+*Refusing a lesser reward completely makes these feelings abundantly clear to other members of the group.*
+拒绝较低的奖励会让群体中的其他成员清楚地感受到这种感觉。
+《2005年英语Text1》
+
+#word
+#### righteous
+#anki
+adj. 正直的，正义的；道貌岸然的
+**Sentences**:
+*Feelings of righteous indignation, it seems, are not the preserve of people alone.*
+这种义愤填膺的感觉，似乎不只是人们的专利。
+《2005年英语Text1》
+
+#word
+#### rise
+#anki
+n. 薪水
 **Notes**:
-re-再
-strict-严格的
-非常严格，故四处 限制 你 约束 你
+n. 上升，升起；出现，兴起；增加；增长；高地
+v. 上升；增强，增加；起立；起床；高耸；使…飞起；使…浮上水面；复活；发酵
 **Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
+*Everybody loves a fat pay rise.*
+人人都喜欢大幅加薪。
+《2005年英语Text1》
 
 #word
-#### reverse
+#### role
 #anki
-adj. 相反的；反面的；颠倒的
-n. 相反；反面；失败；倒挡；回动
-v. 颠倒，倒转；倒退；逆转；调换
+n. 作用；角色
 **Sentences**:
-*A number of street artists around the world have started expressing themselves through a practice known as reverse graffiti (涂鸦).*
-世界各地的许多街头艺术家已经开始通过一种被称为反向涂鸦的做法来表达自己(涂鸦)。
-《2020年9月（第2套）》
-
-#word
-#### reviews
-#anki
-n. 复查，重新考虑；回顾；检讨；书评，影评；检阅，阅兵式
-v. 思考；回顾；写（书、影片等）的评论文章；复习
-**Sentences**:
-*No I haven't but I've notived that it has great reviews on the Internet.*
-没有，但我注意到网上对它的评价很好。
-《2023年12月（第1套）》
-
-#word
-#### revolution
-#anki
-n. 革命，旋转，变革
-**Sentences**:
-*But even with the onset of the railroad and the industrial revolution, it still took another 50 years for cousin marriage to go out of style in Western society.*
-但即使随着铁路和工业革命的出现，表亲结婚在西方社会仍然花了50年的时间才过时。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### ridicule
-#anki
-n. 嘲笑，奚落，愚弄
-
-v. 嘲笑，奚落，愚弄
-
-#word
-#### ridiculous
-#anki
-adj. 荒唐的，可笑的
-**Sentences**:
-*It's a tough decision: The small size may not last you through the whole movie, but $5.50 for some sugary drink seems ridiculous.*
-这是一个艰难的决定:小杯的可能不会让你坚持看完整部电影，但5.50美元的含糖饮料似乎很荒谬。
-《2020年12月（第1套）》
-
-#word
-#### rival
-#anki
-n. 竞争对手
-v. 与……相匹敌；比得上
-**Sentences**:
-*Having a rival can keep you committed to achieving your goals and enhance your overall performance.*
-有一个对手可以让你致力于实现你的目标，提高你的整体表现。
-《Text 3》
-
-#word
-#### rivalry
-#anki
-n. 创业者，企业家
-**Sentences**:
-*46.How can competitive rivalry benefit entrepreneurs according to the passage?*
-46.根据文章，竞争性竞争如何使企业家受益
-《Text 3》
+*[C] stress the role of slaves in the U.S. history.*
+[C]强调奴隶在美国历史上的作用。
+《2008年英语一Text4》
 
 #word
 #### routine
 #anki
-n. 例行公事；日常工作；惯例，常规
-adj. 例行的；日常的；惯例的；用常规的
+n. 例行公事；日常工作；惯例，常规；adj. 例行的；日常的；惯例的；用常规的
 **Sentences**:
-*D)When they engage in some routine activities.*
-D)当他们从事一些日常活动时。
-《2020年12月（第2套）》
+*[B] the publication routine  of laboratory reports.*
+[B]实验室报告的出版程序。
+《2008年英语一》
 
 #word
-#### rubbing
+#### ruling
 #anki
-n. 拓本，拓印；摩擦
-v. rub的ing形式；摩擦
+n. 裁定，判决；统治，支配； adj. 统治的，支配的；主要的；流行的
 **Sentences**:
-*This process can beware compared to the way the skin hardens in response to constant rubbing or pressure.*
-这个过程要小心，因为皮肤在不断的摩擦或压力下会变硬。
-《2023年12月（第1套）》
+*That ruling produced an explosion in business-method patent filings, initially by emerging Internet companies trying to stake out exclusive rights to specific types of online transactions.*
+这一裁决导致商业方法专利申请激增，最初是新兴互联网公司试图在特定类型的在线交易中获得专有权。
+《2010年英语一Test2》
 
 #word
-#### ruin
+#### scale
 #anki
-n. 毁坏，毁灭；破产，身败名裂；
-v. 毁坏，破坏；
+n. 天平；磅秤； v. 衡量；测量；
 **Sentences**:
-*A)They may adopt strategies that are bound to ruin their venture.*
-A)他们可能会采取注定会毁掉他们的冒险的策略。
-《Text 3》
+*Now the nation's top patent court appears completely ready to scale back on business-method patents, which have been controversial ever since they were first authorized 10 years ago.*
+现在，美国最高专利法院似乎完全准备好缩减商业方法专利的规模。自从10年前首次获得授权以来，商业方法专利一直存在争议。
+《2010年英语一Test2》
 
 #word
-#### sample
+#### scope
 #anki
-n. 样本，样品；例子
-v. 尝试；取样
-adj. 样品的；作为例子的
+n. 机会，余地；范围，领域；眼界，见识；望远镜
+**Notes**:
+范围
 **Sentences**:
-*The development of logistics industry has made it easy for people to taste(sample) the specialties all over the country.*
-物流业的发展使人们可以方便地品尝(品尝)全国各地的特产。
-《中国饮食变迁：从温饱到健康》
+*The Federal Circuit's action comes in the wake of a series of recent decisions by the Supreme Court that has narrowed the scope of protections for patent holders.*
+联邦巡回法院的行动是在最高法院最近做出一系列缩小专利持有人保护范围的决定之后进行的。
+《2010年英语一Test2》
 
 #word
-#### scattered
+#### serve as
 #anki
-adj. 分散的；散乱的；零散的
+phr. 担任，充当，起…作用
 **Sentences**:
-*And 13 since 2014, the bundles are usually left in plain site and have been scattered across the small costal village.*
-自2014年以来，这些包裹通常被留在平原上，散落在这个沿海小村庄。
-《2022年12月（第2套）》
-
-#word
-#### sensible
-#anki
-adj. 理智的，合理的； 朴素而实用的；<正式>可感觉到的，明显的
-n. 可感觉到的东西
-**Sentences**:
-*D) It is quite sensible.*
-D)这是非常明智的。
-《2020年9月（第2套）》
+*To serve as responsible stewards of the planet, we must press forward on deeper atmospheric and oceanic research.*
+作为地球的负责任的管理者，我们必须推进更深层次的大气和海洋研究。
+《2005年英语Text2》
 
 #word
 #### severe
 #anki
 adj. 严重的；严厉的；严格的；严峻的；严肃的，纯洁的
 **Sentences**:
-*A)He suffered from severe pain in a heel.*
-A)他的脚后跟剧烈疼痛。
-《Text 5》
+*Not everyone experiences the kinds of severe chronic stresses Alvarez describes.*
+并不是每个人都经历过阿尔瓦雷斯描述的那种严重的慢性压力。
+《2008年英语一》
 
 #word
-#### sheets
+#### signaled
 #anki
-n. [材]片材，板片（sheet 复数）；[纺]被单
-v. 覆盖（sheet 的第三人称单数形式）；使成大片；铺床单
+n. 暗号；预兆；信号；导火线； v. 发信号；用信号通知，示意；标志
+**Notes**:
+词形变化： [signaled]是[signal]的过去时形式、过去分词形式
 **Sentences**:
-*The vast island usually locks away enough freshwater in its ice sheets which if melted can raise global sea level by 7 meters and research shows that in recent years its ice has melted faster than ever before.*
-这个巨大的岛屿通常在其冰盖中封存足够的淡水，如果融化，可以使全球海平面上升7米。研究表明，近年来，该岛的冰融化速度比以往任何时候都要快。
-《2022年12月（第2套）》
-
-#word
-#### shuttle
-#anki
-n. 梭子；短程穿梭运输
-v. 穿梭般来回移动；短程穿梭般输送
-**Sentences**:
-*A free shuttle bus will run between the even car parks and competition site.*
-免费班车往返于停车场和比赛场地之间。
-《2022年12月（第2套）》
-
-#word
-#### site
-#anki
-n. 地点，场所；遗址；网站
-v. 为……选址；设置
-**Sentences**:
-*A free shuttle bus will run between the even car parks and competition site.*
-免费班车往返于停车场和比赛场地之间。
-《2022年12月（第2套）》
+*Last April, for example, the justices signaled that too many patents were being upheld for "inventions" that are obvious.*
+例如，去年4月，大法官们表示，太多显而易见的“发明”专利得到了维护。
+《2010年英语一Test2》
 
 #word
 #### situations
 #anki
 n. 情况；状况；局面；处境，境遇；位置；地点
 **Sentences**:
-*So much so that, according to experts in neuroscience (神经系统科学), our brains do not handle multitasking situations well.*
-因此，根据神经科学专家(神经系统科学)的说法，我们的大脑不能很好地处理多任务情况。
-《Text 4》
+*The kinds of interpersonal violence that women are exposed to tend to be in domestic situations, by, unfortunately, parents or other family members, and they tend not to be one-shot deals.*
+不幸的是，女性所遭受的人际暴力往往发生在家庭环境中，是由父母或其他家庭成员造成的，而且往往不是一次性的。
+《2008年英语一》
 
 #word
-#### skeletons
+#### slacking
 #anki
-n. 骨骼；骨瘦如柴的人；框架，梗概；基干人员
-adj. 基干的
+v. 偷懒；（使）松弛；放慢；（slack 的现在分词）； n. 偷懒，懈怠
 **Sentences**:
-*But we already know this what we have not yet understood is the way that the tinny machine in front of us are changing our skeletons.*
-但我们已经知道我们还不知道的是我们面前的小机器是如何改变我们的骨骼的。
-《2023年12月（第1套）》
+*Indeed, if he has a reputation for slacking, you might even be outraged.*
+事实上，如果他有懈怠的名声，你甚至可能会感到愤怒。
+《2005年英语Text1》
 
 #word
-#### sophisticated
+#### slavery
 #anki
-adj. 老练的；富有经验的；有教养的；复杂的；精密的
+n. 奴隶身份；奴隶制；苦役；奴役
 **Sentences**:
-*C)A sophisticated technology doing several tasks effectively at once.*
-C)一次有效地完成多项任务的复杂技术。
-《Text 4》
+*[B] demonstrate the cruelty of slavery in his days.*
+[B]证明他那个时代奴隶制的残酷。
+《2008年英语一Text4》
 
 #word
-#### span
+#### slices
 #anki
-n. 跨度；范围；一段时间
-v. 以指测量；以掌测量；跨越；持续
+n. 切片，切割（slice 的复数）； v. 切成薄片（slice 的第三人称单数）
 **Sentences**:
-*D)Their attention span cannot be expanded.*
-D)他们的注意力持续时间无法扩大。
-《Text 4》
+*Normally, the monkeys were happy enough to exchange pieces of rock for slices of cucumber.*
+通常情况下，猴子们很乐意用石头换黄瓜片。
+《2005年英语Text1》
 
 #word
-#### specifically
+#### somehow
 #anki
-adv. 明确地，具体地；特意地，专门地
+adv. 以某种方式；莫明其妙地；不知怎么地
 **Sentences**:
-*It only focused on the aftereffects of ending a relationship, specifically among undergrads, which is a whole other can of worms.*
-它只关注结束一段关系的后果，尤其是对大学生的影响，这是另一回事。
-《How long does it take to get over a breakup》
+*Studies of both animals and humans have shown that sex hormones somehow affect the stress response, causing females under stress to produce more of the trigger chemicals than do males under the same conditions.*
+对动物和人类的研究表明，性激素在某种程度上影响压力反应，使处于压力下的雌性比在相同条件下的雄性产生更多的触发化学物质。
+《2008年英语一》
 
 #word
-#### spouse
+#### spheres
 #anki
-n. 配偶
-v. 和……结婚
+n. 领域
 **Sentences**:
-*One study looking at millions of genealogy profiles concluded that between 1650 and 1850, the average person was fourth cousins with their spouse.*
-一项调查了数百万份家谱资料的研究得出结论，在1650年至1850年间，人们与配偶的平均关系是第四代表亲。
-《Is it really that bad to marry my cousin？》
+*While still catching up to men in some spheres of modem life, women appear to be way ahead in at least one undesirable category.*
+虽然在现代生活的某些领域，女性仍在追赶男性，但至少在一个不受欢迎的领域，女性似乎遥遥领先。
+《2008年英语一》
+
+#word
+#### spurred
+#anki
+v.鼓动; 激励
+**Sentences**:
+*They have been spurred in part by DNA evidence made available in 1998, which almost certainly proved Thomas Jefferson had fathered at least one child with his slave Sally Hemings.*
+1998年获得的DNA证据几乎可以肯定地证明托马斯·杰斐逊与他的奴隶莎莉·海明斯至少生了一个孩子。
+《2008年英语一Text4》
+
+#word
+#### stable
+#anki
+adj. 稳定的；固定的；不动摇的
+**Sentences**:
+*Such co­operation is likely to be stable only when each animal feels it is not being cheated.*
+只有当每只动物都感到自己没有被欺骗时，这种合作才可能是稳定的。
+《2005年英语Text1》
+
+#word
+#### stake
+#anki
+n. 桩；棍子；火刑柱；股份；赌注；奖金； v. 打赌；系...于桩上；用桩区分
+**Sentences**:
+*That ruling produced an explosion in business-method patent filings, initially by emerging Internet companies trying to stake out exclusive rights to specific types of online transactions.*
+这一裁决导致商业方法专利申请激增，最初是新兴互联网公司试图在特定类型的在线交易中获得专有权。
+《2010年英语一Test2》
 
 #word
 #### statements
 #anki
 n. 陈述；声明；供述；表达；报表，结算单
 **Sentences**:
-*For this, participants had to muse over statements like "Love is part of life" and "It's OK to love someone I'm no longer with."*
-为此，参与者必须思考诸如“爱是生活的一部分”和“爱一个我不再在一起的人是可以的”之类的陈述。
-《How long does it take to get over a breakup》
+*33. On which of the following statements would the author most probably agree?*
+33. 作者最可能同意下列哪一种说法
+《2008年英语一》
 
 #word
-#### statistical
+#### stay out of
 #anki
-adj. 统计的，统计学的
+phr. 不参与…，不插手，置身于…之外
 **Sentences**:
-*We compared the airfare paid by employees in the same position within a company for the same class of travel and used a common statistical technique to account for other factors that might affect differences in airfares.*
-我们比较了公司内相同职位的员工在相同级别的旅行中所支付的机票价格，并使用一种常见的统计技术来考虑可能影响机票价格差异的其他因素。
-《Text 2》
+*That the antismoking lobby was out to destroy our way of life and the government should stay out of the way?*
+反对吸烟的游说团体企图破坏我们的生活方式，政府应该置身事外
+《2005年英语Text2》
 
 #word
-#### status
+#### stems from
 #anki
-n. 情形，状况，状态；地位，身份
+源于，来自于
 **Sentences**:
-*47.Why do we tend to think that busy people are of high status?*
-47.为什么我们倾向于认为忙碌的人地位高
-《TEXT1》
+*However, whether such a sense of fairness evolved independently in capuchins and humans, or whether it stems from the common ancestor that the species had 35 million years ago, is, as yet, an unanswered question.*
+然而，这种公平感是在卷尾猴和人类身上独立进化而来，还是源于3500万年前这两个物种的共同祖先，至今仍是一个没有答案的问题。
+《2005年英语Text1》
 
 #word
-#### sterile
+#### stewards
 #anki
-adj. 无菌的；不育的；贫瘠的，不毛的；枯燥乏味的；无效果的
+n. 乘务员；膳务员；负责人，管事；管家； v. 当管事；当服务员
 **Sentences**:
-*Today, 32 states either outright ban the practice or restrict it to those who seek genetic counseling, are beyond reproductive age or are sterile.*
-如今，32个州要么完全禁止这种做法，要么将其限制在寻求遗传咨询、超过生育年龄或不育的人身上。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### sticks
-#anki
-n. 棍；树枝；麻骨（stick 复数形式）
-v. 用杆支撑；刺死；插入（stick 的第三人称单数）
-**Sentences**:
-*The result is a piece of bone like a horn that sticks out from the head by the neck.*
-结果是一块像角一样的骨头从脖子处伸出来。
-《2023年12月（第1套）》
-
-#word
-#### stigma
-#anki
-n. 耻辱；烙印；特征；柱头
-**Sentences**:
-*But the widespread illegality, not to mention the social stigma, makes quantifying it quite difficult.*
-但是，广泛存在的非法行为，更不用说社会上的耻辱，使得量化它变得相当困难。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### stimulates
-#anki
-v. 刺激；激励；使兴奋；促使
-**Sentences**:
-*A) It stimulates memorization.*
-A)刺激记忆。
-《2020年12月（第2套）》
-
-#word
-#### stimulation
-#anki
-n. 刺激；激励；激发
-**Sentences**:
-*C) Look around oneself for stimulation.*
-C)环顾四周寻找刺激。
-《2020年12月（第2套）》
+*To serve as responsible stewards of the planet, we must press forward on deeper atmospheric and oceanic research.*
+作为地球的负责任的管理者，我们必须推进更深层次的大气和海洋研究。
+《2005年英语Text2》
 
 #word
 #### straightforward
 #anki
-adj. 简单的，易懂的；（人）诚实的，坦率的
-adv. 直截了当地，坦率地
+ adj. 简单的，易懂的；（人）诚实的，坦率的；adv. 直截了当地，坦率地
 **Sentences**:
-*Well, unfortunately, it's not so straightforward.*
-不幸的是，事情没这么简单。
-《How long does it take to get over a breakup》
+*It used to be so straightforward.*
+它曾经是如此简单。
+《2008年英语一》
 
 #word
 #### strain
 #anki
-n. 焦虑，紧张；负担，紧张；张力，压力；
-v. 拉伤，扭伤；绷紧，用力拉；竭力，使劲；
+n. 焦虑，紧张；负担，紧张| v. 拉伤，扭伤；绷紧，用力拉；
 **Sentences**:
-*But such behavior may stain your reputation and strain relationships important to your success.*
-但这样的行为可能会损害你的声誉，使对你的成功至关重要的人际关系变得紧张。
-《Text 3》
-
-#word
-#### strategies
-#anki
-n. 策略，战略（strategy 的复数）
-**Sentences**:
-*One study looked at different strategies for love regulation.*
-一项研究考察了调节爱情的不同策略。
-《How long does it take to get over a breakup》
-*D)Personal feelings and business strategies.*
-D)个人感受和商业策略。
-《Text 6》
+*But most women today are coping with a lot of obligations, with few breaks, and feeling the strain.*
+但如今大多数女性都要承担很多责任，很少有休息时间，感到压力很大。
+《2008年英语一》
+*Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.*
+此外，尽管人类已经直立行走了数百万年，但我们的脚和背部仍在努力适应两足行走的姿势，无法轻易承受超大四肢带来的反复压力。
+《2008年英语一》
 
 #word
 #### strategy
 #anki
 n. 战略学；战略，策略
 **Sentences**:
-*The study also found that a negative reappraisal strategy, essentially remembering all of the shit things your ex said and did, does decrease love feelings for your ex.*
-研究还发现，消极的重新评价策略，本质上是记住你前任说过和做过的所有糟糕的事情，确实会降低你对前任的爱的感觉。
-《How long does it take to get over a breakup》
+*Merrill Lynch got legal protection for an asset allocation strategy.*
+美林的资产配置策略得到了法律保护。
+《2010年英语一Test2》
 
 #word
-#### strive
+#### stressed-out
 #anki
-v. 努力，力争；斗争，反抗
+压力极大的
 **Sentences**:
-*A)Strive to make sense of some unknown forces.*
-A)努力理解一些未知的力量。
-《Text 6》
+*In several of the studies, when stressed-out female rats had their ovaries (the female reproductive organs) removed,their chemical responses became equal to those of the males.*
+在几项研究中，当压力过大的雌性老鼠的卵巢（雌性生殖器官）被切除后，它们的化学反应变得和雄性老鼠一样。
+《2008年英语一》
 
 #word
-#### subjective
+#### struggle
 #anki
-adj. 主观的，个人的
+n. 斗争，竞争；奋斗； v. 奋斗，努力
 **Sentences**:
-*Simply "feeling"that something is right or should be done is highly subjective and can drown you.*
-简单地“感觉”某事是对的或应该做的是非常主观的，可能会淹死你。
-《Text 6》
+*Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.*
+此外，尽管人类已经直立行走了数百万年，但我们的脚和背部仍在努力适应两足行走的姿势，无法轻易承受超大四肢带来的反复压力。
+《2008年英语一》
+
+#word
+#### struggled
+#anki
+n. 斗争，竞争 | v. 奋斗，努力；
+**Sentences**:
+*"I struggled a lot to get the college degree.*
+“为了拿到大学学位，我付出了很多努力。
+《2008年英语一》
+
+#word
+#### subject
+#anki
+n. 主题；话题；学科；主语；国民；  v. 使…隶属；使屈从于；提供； adj. 易遭受…的；服从的；受制于…的；统治下的
+**Sentences**:
+*30. Which of the following would be the subject of the text?*
+30.。以下哪项是这篇文章的主题
+《2010年英语一Test2》
 
 #word
 #### subjects
 #anki
-n. 主题；话题；学科；主语；国民
-v. 使…隶属；使屈从于；提供
-adj. 易遭受…的；服从的；受制于…的；统治下的
+n. 主题；话题；学科；主语；国民 ；v. 使…隶属；使屈从于；提供 ；adj. 易遭受…的；服从的；受制于…的；统治下的
 **Sentences**:
-*While distracting yourself with other subjects, as my therapist suggested, can actually make you feel better.*
-正如我的治疗师建议的那样，用其他话题分散注意力实际上可以让你感觉更好。
-《How long does it take to get over a breakup》
+*The International Association of Scientific, Technical and Medical Publishers says that there are more than 2,000 publishers worldwide specializing in these subjects.*
+国际科学、技术和医学出版商协会表示，全世界有2000多家出版商专门从事这些主题。
+《2008年英语一》
 
 #word
-#### subscription
+#### submit
 #anki
-n. 会员费，用户费，订阅费；捐助款
-adj. 收费的
+v. （使）服从；忍受；提交；主张
 **Sentences**:
-*The digital subscription was $59, the print subscription was $125, and the print plus digital subscription was also $125. No one in their right mind would buy the print subscription when you could get digital as well for the same price, so why was it even an option?*
-电子版订阅是59美元，印刷版订阅是125美元，印刷版加电子版订阅也是125美元。当你可以以同样的价格买到电子版的时候，没有一个头脑正常的人会去买纸质版的，所以为什么它会成为一个选择呢
-《2020年12月（第1套）》
+*A team of researchers working together in the laboratory would submit the results of their research to a journal.*
+在实验室里一起工作的一组研究人员将把他们的研究结果提交给期刊。
+《2008年英语一》
 
 #word
-#### sufficiently
+#### subscribe
 #anki
-adv. 足够地，充分地
+ v. 订阅；捐款；认购；申请；签署
 **Sentences**:
-*A)They are not sufficiently exposed to multitasking situations.*
-A)他们没有充分接触到多任务处理的情况。
-《Text 4》
+*Copyright rested with the journal publisher,and researchers seeking knowledge of the results would have to subscribe to the journal.*
+版权归期刊出版商所有，想要了解研究结果的研究人员必须订阅该期刊。
+《2008年英语一》
+*[B] subscribe to the journal publishing it.*
+[B]订阅出版它的期刊。
+《2008年英语一》
 
 #word
-#### swipe
+#### substantial
 #anki
-n. 猛击；尖锐的评论
-v. 猛击；偷窃；刷（卡）
+adj. 大量的；实质的；充实的；结实的；牢固的
 **Sentences**:
-**
+*Genetically speaking, there are advantages to avoiding substantial height.*
+从基因上讲，避免过高的身高是有好处的。
+《2008年英语一Text3》
 
 #word
-#### swipes
+#### supposed
 #anki
-n. 味道平淡的廉价啤酒
+adj. 假定的；被信以为真的； v. 假设（suppose的过去式和过去分词
 **Sentences**:
-*It might feel longer than it is, but it's only a few swipes on the calendar app.*
-它可能感觉比实际时间长，但它只需要在日历应用程序上滑动几下。
-《How long does it take to get over a breakup》
+*The supposed importance of influentials derives from a plausible-sounding but largely untested theory called the "two-step flow of communication": Information flows from the media to the influentials and from them to everyone else.*
+有影响力的人之所以重要，是因为一个听起来似乎很有道理，但在很大程度上未经验证的理论——“两步传播”：信息从媒体流向有影响力的人，再从他们流向其他人。
+《2010年英语一Test3》
 
 #word
-#### taboo
+#### susceptible
 #anki
-n. 禁忌，忌讳；禁止，禁止使用
+adj. 易受影响的；易感动的，感情丰富的；容许…的，可能…的
 **Sentences**:
-*Whether you fancy your cousin or not, depending on where you're from, this can still be a bit of a taboo subject.*
-不管你喜不喜欢你的表亲，这取决于你来自哪里，这仍然是一个有点禁忌的话题。
-《Is it really that bad to marry my cousin？》
+*"Women are particularly susceptible to developing depression and anxiety disorders in response to stress compared to men," according to Dr. Yehuda, chief psychiatrist at New York's Veteran's Administration Hospital.*
+纽约退伍军人管理医院的首席精神病学家耶胡达博士说：“与男性相比，女性在面对压力时特别容易患上抑郁症和焦虑症。”
+《2008年英语一》
 
 #word
-#### take into account
+#### take out
 #anki
-考虑，顾及：在做决定或评估时
+phr. 带...出去；杀死；切除；获得；发泄；使摆脱苦恼
 **Sentences**:
-*52.What should we take into account in order to make informed decisions?*
-52.为了做出明智的决定，我们应该考虑什么
-《Text 6》
+*With the risks obvious and growing, a prudent people would take out an insurance policy now.*
+随着风险的明显和不断增长，谨慎的人现在就会采取保险措施。
+《2005年英语Text2》
 
 #word
-#### take over
+#### the scope of
 #anki
-phr. 接管，接替；占领，控制，取代
+…的范围
 **Sentences**:
-*Another role they're expecting to take over, is negotiating on our behalf commercial transaction or legal disputes.*
-他们期望接手的另一个角色是代表我们谈判商业交易或法律纠纷。
-《2023年12月（第1套）》
+*The Federal Circuit's action comes in the wake of a series of recent decisions by the Supreme Court that has narrowed the scope of protections for patent holders.*
+联邦巡回法院的行动是在最高法院最近做出一系列缩小专利持有人保护范围的决定之后进行的。
+《2010年英语一Test2》
 
 #word
-#### taught
+#### threat
 #anki
-v. 教授（teach 的过去分词）
+n. 恐吓，威胁；凶兆；祸根
 **Sentences**:
-*From this different perspective, you can not only be multitasking but this ability can also be taught: something that is easier in fluid organisations, which favour flexibility in their working practices.*
-从这个不同的角度来看，你不仅可以同时处理多项任务，而且这种能力还可以被教授:在流动性强的组织中，这种能力更容易获得，因为这些组织喜欢在工作实践中具有灵活性。
-《Text 4》
+*There are upsetting parallels today, as scientists in one wave after another try to awaken us to the growing threat of global warming.*
+如今，科学家们一波接一波地试图唤醒我们，让我们意识到全球变暖日益严重的威胁。
+《2005年英语Text2》
+*[A] A looming threat to business-method patents.*
+[A]对商业方法专利的潜在威胁。
+《2010年英语一Test2》
 
 #word
-#### technique
+#### threatens
 #anki
-n. 技巧，工艺；（尤指体育或艺术方面的）技巧，技术
+v. 威胁，恐吓
 **Sentences**:
-*We compared the airfare paid by employees in the same position within a company for the same class of travel and used a common statistical technique to account for other factors that might affect differences in airfares.*
-我们比较了公司内相同职位的员工在相同级别的旅行中所支付的机票价格，并使用一种常见的统计技术来考虑可能影响机票价格差异的其他因素。
-《Text 2》
+*Alvarez's experience demonstrates the importance of finding ways to diffuse stress before it threatens your health and your ability to function.*
+阿尔瓦雷斯的经历证明了在压力威胁到你的健康和工作能力之前找到缓解压力的方法的重要性。
+《2008年英语一》
 
 #word
-#### teens
+#### tissues
 #anki
-n. 十多岁，十几岁；青少年
+n. [组织]组织，薄的纱织品；面巾纸（tissue 的复数）
 **Sentences**:
-*We began to develop our individual sense of personal space around age 3 or 4. The sizes of our bubble are fixed by our teens.*
-我们在三四岁左右开始发展个人空间感。我们泡泡的大小是由我们的青少年决定的。
-《2023年12月（第1套）》
+*Growth, which rarely continues beyond the age of 20, demands calories and nutrients — notably, protein — to feed expanding tissues.*
+在20岁以后很少会继续生长，需要卡路里和营养，特别是蛋白质来喂养扩张的组织。
+《2008年英语一》
 
 #word
-#### term
+#### tolerating
 #anki
-n. 期，期限；学期；任期；条款；项；条；术语
-v. 把…称为，把…叫做
+v. 容许；忍受；宽恕
 **Sentences**:
-*However, the research and Dr. Tamir would both tell you that while distraction is good in the short term, it is not a long-term solution.*
-然而，研究和塔米尔博士都会告诉你，虽然分心在短期内是好的，但它不是一个长期的解决方案。
-《How long does it take to get over a breakup》
+*"Their capacity for tolerating stress may even be greater than men's," she observes, "it's just that they're dealing with so many more things that they become worn out from it more visibly and sooner."*
+“她们承受压力的能力甚至可能比男性更强，”她观察到，“只是她们要处理的事情太多了，所以她们很快就会明显地感到疲惫。”
+《2008年英语一》
 
 #word
-#### theory
+#### tossed
 #anki
-n. 原理，理论，学说；观点，推测
+v. 抛，扔； n. 扔，抛，掷
 **Sentences**:
-*And the data supports Dr. Tamir's theory.*
-数据支持塔米尔博士的理论。
-《How long does it take to get over a breakup》
+*And if one received a grape without having to provide her token in exchange at all, the other either tossed her own token at the researcher or out of the chamber, or refused to accept the slice of cucumber.*
+如果其中一只没有提供代币就得到了一颗葡萄，另一只要么把自己的代币扔向研究人员或扔出房间，要么拒绝接受那片黄瓜。
+《2005年英语Text1》
 
 #word
-#### therapist
+#### transaction
 #anki
-n. 治疗专家
+n. 交易；事务；办理；会报，学报
 **Sentences**:
-*He has anecdotal experience with countless people in relationships and, full disclosure, he was my couple’s therapist, too.*
-《How long does it take to get over a breakup》
+*[B] It involves a very big business transaction.*
+[B]它涉及一笔非常大的商业交易。
+《2010年英语一Test2》
 
 #word
-#### therapists
+#### trigger
 #anki
-n. 治疗专家
+n. 扳机；触发器； v. 扣扳机开（枪）；引起；触发
 **Sentences**:
-*I went to couples therapists, Dr. Hod Tamir.*
-《How long does it take to get over a breakup》
+*Studies of both animals and humans have shown that sex hormones somehow affect the stress response, causing females under stress to produce more of the trigger chemicals than do males under the same conditions.*
+对动物和人类的研究表明，性激素在某种程度上影响压力反应，使处于压力下的雌性比在相同条件下的雄性产生更多的触发化学物质。
+《2008年英语一》
 
 #word
-#### tinny
+#### trivial
 #anki
-adj. 锡的,锡多的,象锡的
+adj. 不重要的，琐碎的；琐细的，微不足道的
 **Sentences**:
-*But we already know this what we have not yet understood is the way that the tinny machine in front of us are changing our skeletons.*
-但我们已经知道我们还不知道的是我们面前的小机器是如何改变我们的骨骼的。
-《2023年12月（第1套）》
+*[D] trivial and random.*
+[D]琐碎的和随机的。
+《2008年英语一》
 
 #word
-#### tone
+#### under-nutrition
 #anki
-n. 语气，腔调，口吻；气氛，基调，风格；
-v. 使强健，使结实；与……协调，与……相配；
+营养不良
 **Sentences**:
-*It sounds self-righteous(自以为是的) and sets the wrong tone.*
-这听起来很自以为是(自以为是的)，而且定下了错误的基调。
-《TEXT1》
+*At the start of the 20th century,under-nutrition and childhood infections got in the way.*
+20世纪初，营养不良和儿童感染阻碍了这一进程。
+《2008年英语一》
 
 #word
-#### totally
+#### underlying
 #anki
-adv. 完全地，整个地；对极了，太对了
+adj. 潜在的；根本的；在下面的；优先的
 **Sentences**:
-*Look, I totally get it.*
-我完全理解。
-《Is it really that bad to marry my cousin？》
+*Such behaviour is regarded as "all too human",with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.*
+这种行为被认为是“人之常情”，潜在的假设是，其他动物不可能有这种高度发达的委屈感。
+《2005年英语Text1》
 
 #word
-#### tough
+#### undesirable
 #anki
-n. 暴徒，恶棍
-adv. 强硬地，顽强地
-v. 坚持；忍受，忍耐
-adj. 难办的，棘手的；坚强的；牢固的；强壮的；困难的；粗暴的
+adj. 不受欢迎的，不良的，不想要的； n. 不良分子，不受欢迎的人
 **Sentences**:
-*It's a tough decision: The small size may not last you through the whole movie, but $5.50 for some sugary drink seems ridiculous.*
-这是一个艰难的决定:小杯的可能不会让你坚持看完整部电影，但5.50美元的含糖饮料似乎很荒谬。
-《2020年12月（第1套）》
+*While still catching up to men in some spheres of modem life, women appear to be way ahead in at least one undesirable category.*
+虽然在现代生活的某些领域，女性仍在追赶男性，但至少在一个不受欢迎的领域，女性似乎遥遥领先。
+《2008年英语一》
 
 #word
-#### towards
+#### unknown aspect of
 #anki
-prep. 向，朝着；接近达到（目的）；接近，将近（某一时间）；接近，靠近（某地）；对，关于；（钱）用于
+不为人知的一面
 **Sentences**:
-*Politicians, policymakers, commissioners and school leaders must be brave enough to make the leap towards reimagining schools as providers of health as well as education services.*
-政治家、政策制定者、委员和学校领导必须有足够的勇气迈出这一步，将学校重塑为健康和教育服务的提供者。
-《2020年12月（第1套）》
+*[D] reveal some unknown aspect of his life.*
+[D]揭示他生活中一些不为人知的方面。
+《2008年英语一Text4》
 
 #word
-#### town
+#### upheld
 #anki
-n. 城镇，市镇；市民；市内商业区
+v. [uphold] 的过去式和过去分词；维持，赞成，支撑
 **Sentences**:
-*It supposed to be the best Italian in town.*
-那应该是镇上最好的意大利餐厅。
-《2023年12月（第1套）》
+*Last April, for example, the justices signaled that too many patents were being upheld for "inventions" that are obvious.*
+例如，去年4月，大法官们表示，太多显而易见的“发明”专利得到了维护。
+《2010年英语一Test2》
 
 #word
-#### track
+#### upright
 #anki
-n. 足迹；踪迹；小道，小径；生活方式；（电影胶片上的）声迹
-v. 跟踪；追踪；按预期的（或合理的）样式进行（或行进）
+n. 直柱； adv. 垂直（竖立）地； adj. 笔直的；正直的
 **Sentences**:
-*To really answer that question of how long it takes to get over a breakup, you would need to do a longitudinal study, a study that would basically follow a ton of people from the moment of their breakup and track their progress year after year after year.*
-要真正回答从分手中恢复需要多长时间这个问题，你需要做一个纵向研究，这个研究基本上会跟踪大量的人，从他们分手的那一刻开始，年复一年地跟踪他们的进展。
-《How long does it take to get over a breakup》
+*Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.*
+此外，尽管人类已经直立行走了数百万年，但我们的脚和背部仍在努力适应两足行走的姿势，无法轻易承受超大四肢带来的反复压力。
+《2008年英语一》
 
 #word
-#### traps
+#### upsets
 #anki
-n. [计]陷阱；圈套（trap 的复数形式）；手提行李；随身用物品
+v. 使心烦意乱；使难过；使生气（upset 的第三人称单数）；n. 挫折
 **Sentences**:
-*47.What is one of the traps entrepreneurs may often fall into when competing with rivals?*
-47.在与对手竞争时，企业家可能经常陷入的陷阱之一是什么
-《Text 3》
+*[C] It upsets profit-making journal publishers.*
+[C]它使盈利的期刊出版商感到不安。
+《2008年英语一》
 
 #word
-#### tunnel
+#### upsetting
 #anki
-n. 隧道，地道；
+adj. 令人苦恼的；n. 镦锻；v. 使苦恼（upset的现在分词）
 **Sentences**:
-*They had no other option but to clean the tunnel—but only the parts Alexandra had already cleaned.*
-他们别无选择，只能清理隧道，但只清理亚历山德拉已经清理过的部分。
-《2020年9月（第2套）》
+*There are upsetting parallels today, as scientists in one wave after another try to awaken us to the growing threat of global warming.*
+如今，科学家们一波接一波地试图唤醒我们，让我们意识到全球变暖日益严重的威胁。
+《2005年英语Text2》
 
 #word
-#### tunnels
+#### used to
 #anki
-n. 地下通道；洞穴
-v. 挖掘隧道；打开通道
+过去常常
 **Sentences**:
-*Brazilian artist, Alexandra Orion, turned one of Sao Paulo's transport tunnels into an amazing wall painting in 2006 by getting rid of the dirt.*
-2006年，巴西艺术家亚历山德拉·奥里翁(Alexandra Orion)通过清除污垢，将圣保罗的一条交通隧道变成了一幅令人惊叹的壁画。
-《2020年9月（第2套）》
+*It used to be so straightforward.*
+它曾经是如此简单。
+《2008年英语一》
 
 #word
-#### ultimately
+#### validity
 #anki
-adv. 最终，最后；根本上，最重要地
+n. 合法性;正确，符合逻辑； 有效性
 **Sentences**:
-*After all, competitive rivalry can also hinder effective decision-making and increase your willingness to take risks, behaviors that can ultimately hurt your venture's success.*
-毕竟，竞争性竞争也会阻碍有效的决策，增加你承担风险的意愿，这些行为最终会损害你的企业的成功。
-《Text 3》
+*[D] requires solid evidence for its validity*
+[D]需要确凿的证据来证明其有效性
+《2010年英语一Test3》
 
 #word
-#### undergrads
+#### violence
 #anki
-n. 大学肄业生
-adj. 大学生的（等于 undergraduate）
-[ 复数 undergrads ]
+n. 暴力行为；猛烈，猛然；冒犯；破坏
 **Sentences**:
-*It only focused on the aftereffects of ending a relationship, specifically among undergrads, which is a whole other can of worms.*
-它只关注结束一段关系的后果，尤其是对大学生的影响，这是另一回事。
-《How long does it take to get over a breakup》
+*The kinds of interpersonal violence that women are exposed to tend to be in domestic situations, by, unfortunately, parents or other family members, and they tend not to be one-shot deals.*
+不幸的是，女性所遭受的人际暴力往往发生在家庭环境中，是由父母或其他家庭成员造成的，而且往往不是一次性的。
+《2008年英语一》
 
 #word
-#### undertake
+#### violent
 #anki
-v. 承担，从事；承诺，答应；<英>在内侧行驶时赶上并超越（另一辆车）
+adj. 暴力的，感情强烈的，猛烈的，强烈的
 **Sentences**:
-*The business perspective offers a different view: multitasking is understood as the ability to adapt to all  types of environment within a company and effectively undertake different activities within a set time frame.*
-商业角度提供了不同的观点:多任务被理解为适应公司内所有类型环境的能力，并在规定的时间框架内有效地进行不同的活动。
-《Text 4》
+*[B] irregular and violent.*
+[B]不规则的和暴力的。
+《2008年英语一》
 
 #word
-#### unethical
+#### vulnerable
 #anki
-adj. 不道德的，不合乎道德标准的（尤指职业道德）
+adj. 易受伤的，脆弱的；易受攻击的
 **Sentences**:
-*B)They may resort to unethical means to outperform their rivals.*
-B)他们可能会采取不道德的手段来超越竞争对手。
-《Text 3》
+*[A] Women are biologically more vulnerable to stress.*
+[A]女性在生理上更容易受到压力的影响。
+《2008年英语一》
 
 #word
-#### unexpected
+#### way ahead
 #anki
-adj. 想不到的，意外的
+遥遥领先
 **Sentences**:
-*C) It is rather unexpected*
-C)非常出乎意料
-《2020年9月（第2套）》
+*While still catching up to men in some spheres of modem life, women appear to be way ahead in at least one undesirable category.*
+虽然在现代生活的某些领域，女性仍在追赶男性，但至少在一个不受欢迎的领域，女性似乎遥遥领先。
+《2008年英语一》
 
 #word
-#### unpacking
+#### withstand
 #anki
-n. 开包；取出货物
-v. 开箱；取出（unpack 的 ing 形式）
+v. 承受；抵住；顶住；经受住
 **Sentences**:
-*Finding something to distract us and unpacking our feelings when we're ready.*
-找一些事情来分散我们的注意力，准备好了就把自己的感受宣泄出来。
-《How long does it take to get over a breakup》
+*Moreover, even though humans have been upright for millions of years, our feet and back continue to struggle with bipedal posture and cannot easily withstand repeated strain imposed by oversize limbs.*
+此外，尽管人类已经直立行走了数百万年，但我们的脚和背部仍在努力适应两足行走的姿势，无法轻易承受超大四肢带来的反复压力。
+《2008年英语一》
 
 #word
-#### usability
+#### worn out
 #anki
-n. 可用性
+phr. 破旧不堪；精疲力尽
 **Sentences**:
-*But with its extreme usability comes a complication: what do you do if you strongly feel something should not be done, even if the data insists that it should?*
-但它的极端可用性带来了一个复杂的问题:如果你强烈认为某些事情不应该做，即使数据坚持认为应该做，你该怎么办
-《Text 6》
-
-#word
-#### utterances
-#anki
-n. 表达；言论
-**Sentences**:
-*49.What do such utterances as “I have limited access to email”sound like according to the author?*
-49.根据作者的说法，“我无法使用电子邮件”这样的话语听起来像什么
-《TEXT1》
-
-#word
-#### variable
-#anki
-n. 可变的事物，可变的量
-adj. 可变的，不定的；亮度变化的
-**Sentences**:
-*53.What happened when the negative reciprocity variable was taken into account?*
-53.当考虑到负互惠变量时会发生什么
-《Text 2》
-
-#word
-#### vast
-#anki
-adj. 巨大的，广大的
-n. <古>广阔空间
-**Sentences**:
-*C)Draw on a vast wealth of past experience.*
-C)吸取大量过去的经验。
-《Text 6》
-
-#word
-#### venture
-#anki
-n. 风险项目，冒险事业；冒险旅行，冒险行动
-v. 敢于去（未知或危险等地方）；冒险；小心地说，谨慎地做；敢说，大胆表示
-**Sentences**:
-*B)By enabling them to make their venture a success.*
-B)使他们的创业成功。
-《Text 3》
-
-#word
-#### view
-#anki
-n. 观点，看法；（理解或思维的）方法，方式；
-v. 看待，考虑；观看；查看，观察；（在计算机屏幕上）阅读，看；
-**Sentences**:
-*The business perspective offers a different view: multitasking is understood as the ability to adapt to all  types of environment within a company and effectively undertake different activities within a set time frame.*
-商业角度提供了不同的观点:多任务被理解为适应公司内所有类型环境的能力，并在规定的时间框架内有效地进行不同的活动。
-《Text 4》
-*We view this kind of advertising as environmental damage and will take strong action against it."*
-我们认为这种广告是对环境的破坏，并将对其采取强有力的行动。
-《2020年9月（第2套）》
-
-#word
-#### whole
-#anki
-n. 全部，整体，完全的自我
-adj. 全部的，整个的，健全的，完全的
-**Sentences**:
-*It only focused on the aftereffects of ending a relationship, specifically among undergrads, which is a whole other can of worms.*
-它只关注结束一段关系的后果，尤其是对大学生的影响，这是另一回事。
-《How long does it take to get over a breakup》
-
-#word
-#### widespread
-#anki
-adj. 普遍的；广泛的
-**Sentences**:
-*But the widespread illegality, not to mention the social stigma, makes quantifying it quite difficult.*
-但是，广泛存在的非法行为，更不用说社会上的耻辱，使得量化它变得相当困难。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### with the onset of
-#anki
-随着......的开始：表示某个事件或现象开始发生时。
-**Sentences**:
-*But even with the onset of the railroad and the industrial revolution, it still took another 50 years for cousin marriage to go out of style in Western society.*
-但即使随着铁路和工业革命的出现，表亲结婚在西方社会仍然花了50年的时间才过时。
-《Is it really that bad to marry my cousin？》
-
-#word
-#### zen
-#anki
-n. 禅宗,佛系
-**Sentences**:
-*Finally, a third, more zen strategy known as reappraisal of love feelings.*
-最后，第三种更禅宗的策略被称为重新评估爱的感觉。
-《How long does it take to get over a breakup》
-
-#word
-#### zone
-#anki
-n. 地区；气候带；（使）分成区（或带）
-v. （使）分成区（或带）;（为特定目的）划出...为区
-**Sentences**:
-*The smallest zone is called intimate space.*
-最小的区域被称为亲密空间。
-《2023年12月（第1套）》
+*"Their capacity for tolerating stress may even be greater than men's," she observes, "it's just that they're dealing with so many more things that they become worn out from it more visibly and sooner."*
+“她们承受压力的能力甚至可能比男性更强，”她观察到，“只是她们要处理的事情太多了，所以她们很快就会明显地感到疲惫。”
+《2008年英语一》
 

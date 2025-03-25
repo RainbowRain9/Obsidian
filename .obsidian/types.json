@@ -16,6 +16,7 @@
     "dg-home": "checkbox",
     "date": "datetime",
     "created time": "datetime",
-    "updated time": "datetime"
+    "updated time": "datetime",
+    "time": "datetime"
   }
 }

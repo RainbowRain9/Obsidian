@@ -12,6 +12,7 @@
   "parseMindMap": true,
   "annotateTop": 0,
   "annotateBottom": 0,
+  "showNodeBoard": true,
   "useCustomShortcut": true,
   "highlightFormat": "\nPage:{{page}}\n<span style=\"color:rgb({{color}})\">■</span>:{{highlightText}}\nComment:{{comment}}\n[📌]({{link}})\n^{{id}}\n",
   "setup": 1699619543704,
@@ -22,5 +23,6 @@
   "useTranslate": false,
   "strokeArray": "",
   "scaleSpeed": 10,
-  "addCollapseNodeMark": true
+  "addCollapseNodeMark": true,
+  "useHistory": true
 }

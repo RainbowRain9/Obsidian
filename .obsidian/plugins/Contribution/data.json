@@ -1,31 +1,4 @@
 {
-  "confirmDeletion": true,
-  "showAddCommand": true,
-  "debug": false,
-  "editorMenu": [],
-  "fileMenu": [],
-  "leftRibbon": [],
-  "rightRibbon": [],
-  "titleBar": [],
-  "statusBar": [],
-  "pageHeader": [],
-  "macros": [],
-  "explorer": [],
-  "hide": {
-    "statusbar": [],
-    "leftRibbon": []
-  },
-  "spacing": 8,
-  "advancedToolbar": {
-    "rowHeight": 48,
-    "rowCount": 1,
-    "spacing": 0,
-    "buttonWidth": 48,
-    "columnLayout": false,
-    "mappedIcons": [],
-    "tooltips": false,
-    "heightOffset": 0
-  },
   "widgets": [
     {
       "id": "8abedadd-59be-489f-a2bc-7a405090612a",
@@ -1349,14 +1322,14 @@
             "backgroundStyle": "card",
             "repeatType": "none",
             "showEndDateTime": true,
-            "endHour": 0,
+            "endHour": 9,
             "endMinute": 0,
             "endSecond": 0,
             "timeTextPattern": "dHms",
-            "title": "四六级考试",
-            "endYear": 2024,
-            "endMonth": 5,
-            "endDayOfMonth": 15,
+            "title": "蓝桥杯",
+            "endYear": 2025,
+            "endMonth": 3,
+            "endDayOfMonth": 12,
             "picture": "",
             "backgroundColor": "#3e0e0e43",
             "fontColor": "#ff7777ff"
@@ -1370,14 +1343,14 @@
             "backgroundStyle": "card",
             "repeatType": "weekly",
             "showEndDateTime": false,
-            "endHour": 0,
-            "endMinute": 0,
-            "endSecond": 0,
+            "endHour": 23,
+            "endMinute": 59,
+            "endSecond": 59,
             "endYear": 2024,
             "endMonth": 3,
             "endDayOfMonth": 15,
             "timeTextPattern": "dHm",
-            "endDayOfWeek": 1,
+            "endDayOfWeek": 0,
             "backgroundColor": "#5555a42b",
             "fontColor": "#aebdffff",
             "title": "这周要结束咯！"
@@ -1386,7 +1359,7 @@
         "layoutType": "column"
       },
       "createAt": "2024-04-09T15:10:09.570Z",
-      "updateAt": "2024-04-13T06:53:37.630Z"
+      "updateAt": "2025-03-24T14:50:39.209Z"
     },
     {
       "id": "65363fc0-3b78-497e-9566-ecef98957d6d",
@@ -1431,13 +1404,13 @@
             "endDateTime": "2024-06-15 00:00:00",
             "backgroundColor": "#67674573",
             "fontColor": "#f4f39aff",
-            "title": "四六级考试"
+            "title": "蓝桥杯"
           }
         ],
         "layoutType": "column"
       },
       "createAt": "2024-04-09T15:19:47.763Z",
-      "updateAt": "2024-04-10T06:35:33.410Z"
+      "updateAt": "2025-03-24T14:50:11.323Z"
     },
     {
       "id": "5a6efec6-f1ad-4cbd-9046-f5c761bbb37f",
@@ -1474,5 +1447,32 @@
       "createAt": "2024-04-10T06:35:44.025Z",
       "updateAt": "2024-04-10T06:38:22.417Z"
     }
-  ]
+  ],
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
 }
