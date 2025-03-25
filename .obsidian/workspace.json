@@ -112,8 +112,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -237,19 +236,9 @@
               "icon": "checkmark",
               "title": "Todo List"
             }
-          },
-          {
-            "id": "bf5a1c364bad612a",
-            "type": "leaf",
-            "state": {
-              "type": "planner-timeline",
-              "state": {},
-              "icon": "checkmark",
-              "title": "Timeline"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       },
       {
         "id": "72a4b91604aed60d",
@@ -262,8 +251,8 @@
             "state": {
               "type": "quiet-outline",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
             }
           },
           {
@@ -301,10 +290,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md"
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md"
               },
               "icon": "lucide-info",
-              "title": "第一章 行列式的笔记属性"
+              "title": "2005-02的笔记属性"
             }
           },
           {
@@ -316,9 +305,19 @@
               "icon": "reading-glasses",
               "title": "学习新单词"
             }
+          },
+          {
+            "id": "bf5a1c364bad612a",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Timeline"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -371,7 +370,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9bd71ae87dadd5d5",
+  "active": "c8f493acf1e3c447",
   "lastOpenFiles": [
     "未命名看板.md",
     "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
