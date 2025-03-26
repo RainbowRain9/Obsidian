@@ -42,8 +42,33 @@
               "icon": "lucide-search",
               "title": "搜索"
             }
+          },
+          {
+            "id": "0751966ada7b5612",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-03.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2005-03"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -124,7 +149,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🏡Home.md",
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-03.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -147,12 +172,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.25062435000264666,
+                  "scale": 0.3513710524699628,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "🏡Home 的关系图"
+              "title": "2005-03 的关系图"
             }
           },
           {
@@ -171,12 +196,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🏡Home.md",
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "🏡Home 的出链列表"
+              "title": "2005-03 的出链列表"
             }
           },
           {
@@ -185,7 +210,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🏡Home.md",
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,7 +220,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "🏡Home 的反向链接列表"
+              "title": "2005-03 的反向链接列表"
             }
           },
           {
@@ -233,21 +258,6 @@
             }
           },
           {
-            "id": "6f4659d6168a56bc",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "标签"
-            }
-          },
-          {
             "id": "c8f493acf1e3c447",
             "type": "leaf",
             "state": {
@@ -267,10 +277,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "🏡Home.md"
+                "file": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-03.md"
               },
               "icon": "lucide-info",
-              "title": "🏡Home的笔记属性"
+              "title": "2005-03的笔记属性"
             }
           },
           {
@@ -292,13 +302,38 @@
               "icon": "reading-glasses",
               "title": "学习新单词"
             }
+          },
+          {
+            "id": "902c4a5923927790",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "6f4659d6168a56bc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 312
+    "width": 290
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -344,6 +379,13 @@
   },
   "active": "1bb352666307d0c2",
   "lastOpenFiles": [
+    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-04.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-03.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题 1/2005-01.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题 1/2005-04.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题 1/2005-02.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题 1",
     "🏡Home.md",
     "学习区/_Templates/startup/插件ID.md",
     "学习区/_Templates/startup/FastStart-StartupScript.md",
@@ -374,17 +416,10 @@
     "个人区/2-weread/我的26岁女房客-超级大坦克科比.md",
     "个人区/2-weread/我的26岁女房客.md",
     "个人区/2-weread/宿命之环.md",
-    "个人区/2-weread/诡秘之主.md",
-    "个人区/2-weread/人祖传.md",
-    "个人区/2-weread/神秘复苏.md",
-    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
     "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.html",
-    "学习区/07-线性代数/笔记库/第一章 行列式/01-行列式的定义.md",
-    "学习区/07-线性代数/笔记库/第一章 行列式/未命名思维导图.md",
     "学习区/07-线性代数/笔记库/第一章 行列式",
     "学习区/02-大学英语/考研真题/阅读/2010年真题",
     "References",
-    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-01",
     "个人区/7-程序夹/心语精灵/开发路径.canvas",
     "学习区/11-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202194945932.jpg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT37M25.529S.jpeg",

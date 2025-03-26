@@ -1,6 +1,6 @@
 ---
-created: 2023-11-22T15:57
-updated: 2025-03-25T14:00
+created: 2025-03-25T16:46
+updated: 2025-03-26T13:01
 ---
 #### 新学
 catching up	    phr. 赶上，追上；把…缠住
@@ -42,6 +42,7 @@ severe	    adj. 严重的；严厉的；严格的；严峻的；严肃的，纯�
 strain	    n. 焦虑，紧张；负担，紧张| v. 拉伤，扭伤；绷紧，用力拉；
 demonstrates	    v. 论述，证明；演示；显示；示威游行
 threatens	    v. 威胁，恐吓
+administration	    n. 管理；实施；行政；政府
 affiliations	     n. 附属机构
 agencies	     n. 代理；代理处；政府机构（agency 的复数）
 benefits	    n. 利益，好处；福利政策；救济金；福利；义演，义卖（benefit 的复数）
@@ -92,6 +93,7 @@ under-nutrition	    营养不良
 in the way	    阻碍，妨碍：阻止或干扰某人或某事物的移动或进展。
 adolescents	    n. 青少年（adolescent 的复数）
 dramatically	    adv. 剧烈地，明显地；戏剧性地，夸张地
+especially	    adv. 尤其；特别
 generations	    n. 世代
 recruiting	    n. 招聘；招募； v. 招募；聘请（recruit 的 ing 形式）
 substantial	    adj. 大量的；实质的；充实的；结实的；牢固的
@@ -240,6 +242,7 @@ patents	    n. 专利；专利品；专利权； v. 取得专利；取得专利�
 aroused	    唤醒
 subject	    n. 主题；话题；学科；主语；国民；  v. 使…隶属；使屈从于；提供； adj. 易遭受…的；服从的；受制于…的；统治下的
 looming	    adj. 隐隐约约的； n. 上现蜃景； v. 逼近；隐约出现（loom的现在分词形式）
+financial	    adj. 财政的，金融的
 epidemics	    n. 流行病；风尚等的流行； adj. 流行的；传染性的
 intuitively	    adv. 直觉地;直观地
 compelling	    adj. 引人入胜的；不可抗拒的，强制的；有说服力的； v. 强迫，强制（compel的现在分词）
@@ -271,6 +274,36 @@ readiness	    n. 敏捷；愿意，乐意；准备就绪
 inclination	    n. 倾向；意愿；倾斜度
 press forward on	    继续前进
 inadequate	    adj. 不充足的，不适当的；不够格的；不能胜任的
+legislative	    n. 立法权；立法机构； adj. 立法的，有立法权的，立法机构的
+initiative	    n. 措施，倡议；主动性，积极性；主动权
+congress	    n. 国会，议会；代表大会；美国国会
+conservation	    n. 保存，保持；保护
+fashioning	    n. 精加工； v. 加工，造就（fashion的现在分词形式）
+incentives	    n. [incentive] 的复数形式；激励，奖励，诱因
+promising	    adj. 有希望的，前途有望的，有出息的
+bill	    n. 帐单；广告；法案；钞票；清单；喙； v. 宣布；用海报宣传；开账单
+power plants	    发电厂；动力装置
+sound	    adj. 健全的，完好的；明智的，合理的；
+components	    n. 部件；组件；成分；分力（component 的复数）
+opens into	    phr. 通向
+suspended	    adj. 暂停的，缓期的；悬浮的； v. 悬挂；悬浮；暂停
+formulated	    v. 使公式化；阐述；规划；配制；制定...的配方
+revolutionary	    n. 革命者； adj. 革命的；革命性的，创新的
+disguised	    adj. 伪装的；乔装的；掩饰的
+v. 伪装；乔装；掩饰；掩盖
+unconscious	    n. 无意识，潜意识; adj. 失去知觉的，不省人事的；未发觉的；无意识的，潜意识的
+neurologists	    n. 神经学者,神经科专门医师
+byproducts	    n. 副产品
+thermostat	    n. 恒温（调节）器
+regulating	    v. 控制，管理；调节，校准
+off-line	    adj. 离线的；[计] 脱机的；不连结到线上的; adv. 脱机地；脱线地；不实时地
+authority	    n. 权力；行政管理机构；当局；当权者；权威；权威人士；威信；许可；授权书
+harnessed	    v. 控制，驾驭
+conscious	    adj. 意识到的；有意识的，神志清醒的；自觉的，有意的；故意的
+equally	    adv. 相等地；相当地，同样地；公正地
+limbic	    adj. 边的，缘的
+cortex	    n. 皮层；树皮；果皮
+prefrontal	    adj. 前头叶的
 
 #### 眼熟
 required	    adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）
@@ -279,8 +312,10 @@ responsible	    adj. 负有责任的；尽责的，负责的
 potential	    adj. 潜在的；电势的； n. 潜在性，可能性；
 interact	    v. 互相影响，交互作用；互动
 eagerness	    n. 渴望，热心
+intensely	    adv. 极度，强烈地；紧张地，激烈地，热情地
 
 #### 掌握
+crucial	    adj. 至关重要的，关键性的；十字形的
 reward	    n. 报答，报酬；酬金；奖赏； v. 报答；酬谢；奖励
 presence	    n. 出席；风度；鬼怪；存在
 transaction	    n. 交易；事务；办理；会报，学报
@@ -289,6 +324,8 @@ in large part	    在很大程度上
 persuasive	    adj. 有说服力的，能使人信服的
 primarily	    adv. 首先；起初，原来；首要地，主要地；根本上
 outsize	    adj. 特大的； n. 特大号
+vivid	    adj. 生动的；鲜明的；鲜艳的
+view	    n. 看法，观点；观看；看；视野；风景； v. 把...视为；看待；看；观看；察看
 
 #### 会了
 role	    n. 作用；角色
@@ -335,6 +372,7 @@ adj. 严重的；严厉的；严格的；严峻的；严肃的，纯洁的  	  s
 n. 焦虑，紧张；负担，紧张| v. 拉伤，扭伤；绷紧，用力拉；  	  strain
 v. 论述，证明；演示；显示；示威游行  	  demonstrates
 v. 威胁，恐吓  	  threatens
+n. 管理；实施；行政；政府  	  administration
  n. 附属机构  	  affiliations
  n. 代理；代理处；政府机构（agency 的复数）  	  agencies
 n. 利益，好处；福利政策；救济金；福利；义演，义卖（benefit 的复数）  	  benefits
@@ -385,6 +423,7 @@ n. [组织]组织，薄的纱织品；面巾纸（tissue 的复数）  	  tissue
 阻碍，妨碍：阻止或干扰某人或某事物的移动或进展。  	  in the way
 n. 青少年（adolescent 的复数）  	  adolescents
 adv. 剧烈地，明显地；戏剧性地，夸张地  	  dramatically
+adv. 尤其；特别  	  especially
 n. 世代  	  generations
 n. 招聘；招募； v. 招募；聘请（recruit 的 ing 形式）  	  recruiting
 adj. 大量的；实质的；充实的；结实的；牢固的  	  substantial
@@ -533,6 +572,7 @@ n. 专利；专利品；专利权； v. 取得专利；取得专利； adj. 专�
 唤醒  	  aroused
 n. 主题；话题；学科；主语；国民；  v. 使…隶属；使屈从于；提供； adj. 易遭受…的；服从的；受制于…的；统治下的  	  subject
 adj. 隐隐约约的； n. 上现蜃景； v. 逼近；隐约出现（loom的现在分词形式）  	  looming
+adj. 财政的，金融的  	  financial
 n. 流行病；风尚等的流行； adj. 流行的；传染性的  	  epidemics
 adv. 直觉地;直观地  	  intuitively
 adj. 引人入胜的；不可抗拒的，强制的；有说服力的； v. 强迫，强制（compel的现在分词）  	  compelling
@@ -564,12 +604,44 @@ n. 敏捷；愿意，乐意；准备就绪  	  readiness
 n. 倾向；意愿；倾斜度  	  inclination
 继续前进  	  press forward on
 adj. 不充足的，不适当的；不够格的；不能胜任的  	  inadequate
+n. 立法权；立法机构； adj. 立法的，有立法权的，立法机构的  	  legislative
+n. 措施，倡议；主动性，积极性；主动权  	  initiative
+n. 国会，议会；代表大会；美国国会  	  congress
+n. 保存，保持；保护  	  conservation
+n. 精加工； v. 加工，造就（fashion的现在分词形式）  	  fashioning
+n. [incentive] 的复数形式；激励，奖励，诱因  	  incentives
+adj. 有希望的，前途有望的，有出息的  	  promising
+n. 帐单；广告；法案；钞票；清单；喙； v. 宣布；用海报宣传；开账单  	  bill
+发电厂；动力装置  	  power plants
+adj. 健全的，完好的；明智的，合理的；  	  sound
+n. 部件；组件；成分；分力（component 的复数）  	  components
+phr. 通向  	  opens into
+adj. 暂停的，缓期的；悬浮的； v. 悬挂；悬浮；暂停  	  suspended
+v. 使公式化；阐述；规划；配制；制定...的配方  	  formulated
+n. 革命者； adj. 革命的；革命性的，创新的  	  revolutionary
+adj. 伪装的；乔装的；掩饰的
+v. 伪装；乔装；掩饰；掩盖  	  disguised
+n. 无意识，潜意识; adj. 失去知觉的，不省人事的；未发觉的；无意识的，潜意识的  	  unconscious
+n. 神经学者,神经科专门医师  	  neurologists
+n. 副产品  	  byproducts
+n. 恒温（调节）器  	  thermostat
+v. 控制，管理；调节，校准  	  regulating
+adj. 离线的；[计] 脱机的；不连结到线上的; adv. 脱机地；脱线地；不实时地  	  off-line
+n. 权力；行政管理机构；当局；当权者；权威；权威人士；威信；许可；授权书  	  authority
+v. 控制，驾驭  	  harnessed
+adj. 意识到的；有意识的，神志清醒的；自觉的，有意的；故意的  	  conscious
+adv. 相等地；相当地，同样地；公正地  	  equally
+adj. 边的，缘的  	  limbic
+n. 皮层；树皮；果皮  	  cortex
+adj. 前头叶的  	  prefrontal
 adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）  	  required
 adv. 完全地，彻底地，完整地  	  completely
 adj. 负有责任的；尽责的，负责的  	  responsible
 adj. 潜在的；电势的； n. 潜在性，可能性；  	  potential
 v. 互相影响，交互作用；互动  	  interact
 n. 渴望，热心  	  eagerness
+adv. 极度，强烈地；紧张地，激烈地，热情地  	  intensely
+adj. 至关重要的，关键性的；十字形的  	  crucial
 n. 报答，报酬；酬金；奖赏； v. 报答；酬谢；奖励  	  reward
 n. 出席；风度；鬼怪；存在  	  presence
 n. 交易；事务；办理；会报，学报  	  transaction
@@ -578,5 +650,7 @@ n. 律师，法学家  	  lawyers
 adj. 有说服力的，能使人信服的  	  persuasive
 adv. 首先；起初，原来；首要地，主要地；根本上  	  primarily
 adj. 特大的； n. 特大号  	  outsize
+adj. 生动的；鲜明的；鲜艳的  	  vivid
+n. 看法，观点；观看；看；视野；风景； v. 把...视为；看待；看；观看；察看  	  view
 n. 作用；角色  	  role
 n. 决定，决心；作决定；决议；判决；决断（力）  	  decision

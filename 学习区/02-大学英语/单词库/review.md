@@ -1,6 +1,6 @@
 ---
-created: 2023-11-22T15:58
-updated: 2025-03-25T14:00
+created: 2025-03-25T16:46
+updated: 2025-03-26T13:01
 ---
 #flashcards
 
@@ -48,6 +48,15 @@ adj. 邻近的； v. 邻近（adjoin的现在分词）
 *However, when two monkeys were placed in separate but adjoining chambers, so that each could observe what the other was getting in return for its rock, their behaviour became markedly different.*
 然而，当两只猴子被放在分开但相邻的房间里，以便每只猴子都能看到对方用石头得到什么回报时，它们的行为就明显不同了。
 《2005年英语Text1》
+
+#word
+#### administration
+#anki
+n. 管理；实施；行政；政府
+**Sentences**:
+*If the Administration won't take the legislative initiative, Congress should help to begin fashioning conservation measures.*
+如果政府不采取立法行动，国会应该帮助制定保护措施。
+《2005年英语Text2》
 
 #word
 #### adolescents
@@ -220,6 +229,15 @@ n. 律师；代理人
 《2010年英语一Test2》
 
 #word
+#### authority
+#anki
+n. 权力；行政管理机构；当局；当权者；权威；权威人士；威信；许可；授权书
+**Sentences**:
+*And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better.*
+一位权威人士说，这些强烈的心理活动不仅可以被利用，而且实际上可以被有意识地控制，以帮助我们睡眠和感觉更好。
+《2005年英语一Text3》
+
+#word
 #### authorized
 #anki
 v. 授权，委托； adj. 权威认可的
@@ -252,6 +270,15 @@ n. 大人物
 《2008年英语一》
 
 #word
+#### bill
+#anki
+n. 帐单；广告；法案；钞票；清单；喙； v. 宣布；用海报宣传；开账单
+**Sentences**:
+*A bill by Democratic Senator Robert Byrd of West Virginia, which would offer financial incentives for private industry, is a promising start.*
+西弗吉尼亚州民主党参议员罗伯特·伯德（Robert Byrd）提出的一项为私营企业提供财政激励的法案是一个有希望的开端。
+《2005年英语Text2》
+
+#word
 #### bipedal
 #anki
 adj. 两足动物
@@ -264,6 +291,15 @@ adj. 两足动物
 #### birth canal
 #anki
 产道
+
+#word
+#### byproducts
+#anki
+n. 副产品
+**Sentences**:
+*A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s,neurologists had switched to thinking of them as just "mental noise" - the random byproducts of the neural-repair work that goes on during sleep.*
+一个世纪前，弗洛伊德提出了他的革命性理论，认为梦是我们无意识的欲望和恐惧的伪装阴影；到20世纪70年代末，神经科医生转而认为它们只是“精神噪音”——睡眠期间进行的神经修复工作的随机副产品。
+《2005年英语一Text3》
 
 #word
 #### calories
@@ -430,6 +466,15 @@ v. 遵从，服从；（商品）符合特定标准（comply 的第三人称单�
 《2010年英语一Test2》
 
 #word
+#### components
+#anki
+n. 部件；组件；成分；分力（component 的复数）
+**Sentences**:
+*Of all the components of a good night's sleep, dreams seem to be least within our control.*
+在一夜好眠的所有组成部分中，梦似乎是我们最无法控制的。
+《2005年英语一Text3》
+
+#word
 #### compromises
 #anki
 n. 妥协；折衷; v. 妥协；违背；危害
@@ -457,12 +502,39 @@ v. 使面对，遇到；与…对抗；比较
 《2008年英语一》
 
 #word
+#### congress
+#anki
+n. 国会，议会；代表大会；美国国会
+**Sentences**:
+*If the Administration won't take the legislative initiative, Congress should help to begin fashioning conservation measures.*
+如果政府不采取立法行动，国会应该帮助制定保护措施。
+《2005年英语Text2》
+
+#word
+#### conscious
+#anki
+adj. 意识到的；有意识的，神志清醒的；自觉的，有意的；故意的
+**Sentences**:
+*And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better.*
+一位权威人士说，这些强烈的心理活动不仅可以被利用，而且实际上可以被有意识地控制，以帮助我们睡眠和感觉更好。
+《2005年英语一Text3》
+
+#word
 #### consequences
 #anki
 n. 后果，结果；影响
 **Sentences**:
 *But science does provide us with the best available guide to the future, and it is critical that our nation and the world base important policies on the best judgments that science can provide concerning the future consequences of present actions."*
 但科学确实为我们提供了最好的未来指南，至关重要的是，我们的国家和世界要根据科学对当前行动的未来后果所能提供的最佳判断来制定重要的政策。
+《2005年英语Text2》
+
+#word
+#### conservation
+#anki
+n. 保存，保持；保护
+**Sentences**:
+*If the Administration won't take the legislative initiative, Congress should help to begin fashioning conservation measures.*
+如果政府不采取立法行动，国会应该帮助制定保护措施。
 《2005年英语Text2》
 
 #word
@@ -505,6 +577,15 @@ v. 对付，处理； n. 长袍，法衣
 #### copyright
 #anki
 n. 版权
+
+#word
+#### cortex
+#anki
+n. 皮层；树皮；果皮
+**Sentences**:
+*But not all parts of the brain are equally involved; the limbic system (the "emotional brain") is especially active, while the prefrontal cortex (the center of intellect and reasoning) is relatively quiet.*
+但并不是大脑的所有部分都参与其中；大脑边缘系统（“情感大脑”）特别活跃，而前额皮质（智力和推理的中心）相对平静。
+《2005年英语一Text3》
 
 #word
 #### counterparts
@@ -559,6 +640,15 @@ v. 批评，评论
 *[A] It criticizes government-funded research.*
 [A]它批评政府资助的研究。
 《2008年英语一》
+
+#word
+#### crucial
+#anki
+adj. 至关重要的，关键性的；十字形的
+**Sentences**:
+*If we are ever going to protect the atmosphere, it is crucial that those new plants be environmentally sound.*
+如果我们想要保护大气，这些新工厂必须对环境无害，这一点至关重要。
+《2005年英语Text2》
 
 #word
 #### cruelty
@@ -698,6 +788,18 @@ n. 尊严；庄严；尊贵；高尚
 *[D] enhancement of dignity.*
 [D]提高尊严。
 《2010年英语一Test2》
+
+#word
+#### disguised
+#anki
+adj. 伪装的；乔装的；掩饰的
+v. 伪装；乔装；掩饰；掩盖
+**Notes**:
+（disguise 的过去式和过去分词）
+**Sentences**:
+*A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s,neurologists had switched to thinking of them as just "mental noise" - the random byproducts of the neural-repair work that goes on during sleep.*
+一个世纪前，弗洛伊德提出了他的革命性理论，认为梦是我们无意识的欲望和恐惧的伪装阴影；到20世纪70年代末，神经科医生转而认为它们只是“精神噪音”——睡眠期间进行的神经修复工作的随机副产品。
+《2005年英语一Text3》
 
 #word
 #### disorders
@@ -849,6 +951,15 @@ n. 同辈；相等的事物；对手，匹敌者； v. 等于；比得上； adj
 《2008年英语一》
 
 #word
+#### equally
+#anki
+adv. 相等地；相当地，同样地；公正地
+**Sentences**:
+*But not all parts of the brain are equally involved; the limbic system (the "emotional brain") is especially active, while the prefrontal cortex (the center of intellect and reasoning) is relatively quiet.*
+但并不是大脑的所有部分都参与其中；大脑边缘系统（“情感大脑”）特别活跃，而前额皮质（智力和推理的中心）相对平静。
+《2005年英语一Text3》
+
+#word
 #### escape
 #anki
 v. 逃跑；避免；逃避| n. 逃跑；避免；逃避
@@ -856,6 +967,15 @@ v. 逃跑；避免；逃避| n. 逃跑；避免；逃避
 *I was living in so much frustration that that was my escape, to go to school, and get ahead and do better."*
 我生活在如此多的挫折中，这是我的逃避，去上学，出人头地，做得更好。
 《2008年英语一》
+
+#word
+#### especially
+#anki
+adv. 尤其；特别
+**Sentences**:
+*But not all parts of the brain are equally involved; the limbic system (the "emotional brain") is especially active, while the prefrontal cortex (the center of intellect and reasoning) is relatively quiet.*
+但并不是大脑的所有部分都参与其中；大脑边缘系统（“情感大脑”）特别活跃，而前额皮质（智力和推理的中心）相对平静。
+《2005年英语一Text3》
 
 #word
 #### esteem
@@ -937,6 +1057,15 @@ adj. 深远的,广泛的
 《2008年英语一》
 
 #word
+#### fashioning
+#anki
+n. 精加工； v. 加工，造就（fashion的现在分词形式）
+**Sentences**:
+*If the Administration won't take the legislative initiative, Congress should help to begin fashioning conservation measures.*
+如果政府不采取立法行动，国会应该帮助制定保护措施。
+《2005年英语Text2》
+
+#word
 #### fat
 #anki
 adj. 大量的，丰富的
@@ -944,6 +1073,26 @@ adj. 大量的，丰富的
 *Everybody loves a fat pay rise.*
 人人都喜欢大幅加薪。
 《2005年英语Text1》
+
+#word
+#### financial
+#anki
+adj. 财政的，金融的
+**Sentences**:
+*A bill by Democratic Senator Robert Byrd of West Virginia, which would offer financial incentives for private industry, is a promising start.*
+西弗吉尼亚州民主党参议员罗伯特·伯德（Robert Byrd）提出的一项为私营企业提供财政激励的法案是一个有希望的开端。
+《2005年英语Text2》
+
+#word
+#### formulated
+#anki
+v. 使公式化；阐述；规划；配制；制定...的配方
+**Notes**:
+词形变化： [formulated]是[formulate]的过去分词形式、过去时形式
+**Sentences**:
+*A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s,neurologists had switched to thinking of them as just "mental noise" - the random byproducts of the neural-repair work that goes on during sleep.*
+一个世纪前，弗洛伊德提出了他的革命性理论，认为梦是我们无意识的欲望和恐惧的伪装阴影；到20世纪70年代末，神经科医生转而认为它们只是“精神噪音”——睡眠期间进行的神经修复工作的随机副产品。
+《2005年英语一Text3》
 
 #word
 #### founding generation
@@ -1109,6 +1258,15 @@ n. 柄，把手；把柄；手感| v. 触摸，举起；搬动；操作，操控
 《2008年英语一》
 
 #word
+#### harnessed
+#anki
+v. 控制，驾驭
+**Sentences**:
+*And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better.*
+一位权威人士说，这些强烈的心理活动不仅可以被利用，而且实际上可以被有意识地控制，以帮助我们睡眠和感觉更好。
+《2005年英语一Text3》
+
+#word
 #### hedging
 #anki
 抛买; 套购保值; 包围
@@ -1207,6 +1365,15 @@ adj. 不充足的，不适当的；不够格的；不能胜任的
 **Sentences**:
 *But research alone is inadequate.*
 但仅靠研究是不够的。
+《2005年英语Text2》
+
+#word
+#### incentives
+#anki
+n. [incentive] 的复数形式；激励，奖励，诱因
+**Sentences**:
+*A bill by Democratic Senator Robert Byrd of West Virginia, which would offer financial incentives for private industry, is a promising start.*
+西弗吉尼亚州民主党参议员罗伯特·伯德（Robert Byrd）提出的一项为私营企业提供财政激励的法案是一个有希望的开端。
 《2005年英语Text2》
 
 #word
@@ -1345,6 +1512,15 @@ adv. 开始，最初
 《2010年英语一Test2》
 
 #word
+#### initiative
+#anki
+n. 措施，倡议；主动性，积极性；主动权
+**Sentences**:
+*If the Administration won't take the legislative initiative, Congress should help to begin fashioning conservation measures.*
+如果政府不采取立法行动，国会应该帮助制定保护措施。
+《2005年英语Text2》
+
+#word
 #### insisted
 #anki
 v. 坚决要求，坚持；坚持说，固执己见
@@ -1381,6 +1557,15 @@ n. 保险；保险费；预防措施
 *In a move that has intellectual-property lawyers abuzz, the U.S. Court of Appeals for the Federal Circuit said it would use a particular case to conduct a broad review of business-method patents.*
 美国联邦巡回上诉法院（U.S. Court of Appeals for the Federal Circuit）说，它将利用一个特殊案件对商业方法专利进行广泛审查，此举令知识产权律师们议论纷纷。
 《2010年英语一Test2》
+
+#word
+#### intensely
+#anki
+adv. 极度，强烈地；紧张地，激烈地，热情地
+**Sentences**:
+*And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better.*
+一位权威人士说，这些强烈的心理活动不仅可以被利用，而且实际上可以被有意识地控制，以帮助我们睡眠和感觉更好。
+《2005年英语一Text3》
 
 #word
 #### interact
@@ -1485,6 +1670,24 @@ n. 律师，法学家
 《2010年英语一Test2》
 
 #word
+#### legislative
+#anki
+n. 立法权；立法机构； adj. 立法的，有立法权的，立法机构的
+**Sentences**:
+*If the Administration won't take the legislative initiative, Congress should help to begin fashioning conservation measures.*
+如果政府不采取立法行动，国会应该帮助制定保护措施。
+《2005年英语Text2》
+
+#word
+#### limbic
+#anki
+adj. 边的，缘的
+**Sentences**:
+*But not all parts of the brain are equally involved; the limbic system (the "emotional brain") is especially active, while the prefrontal cortex (the center of intellect and reasoning) is relatively quiet.*
+但并不是大脑的所有部分都参与其中；大脑边缘系统（“情感大脑”）特别活跃，而前额皮质（智力和推理的中心）相对平静。
+《2005年英语一Text3》
+
+#word
 #### lobby
 #anki
 n. 门厅，大厅；休息室；会客室；游说团； v. 游说；对……进行游说
@@ -1548,6 +1751,17 @@ n. 邻居，近邻；附近；邻里情谊
 《2010年英语一Test3》
 
 #word
+#### neurologists
+#anki
+n. 神经学者,神经科专门医师
+**Notes**:
+
+**Sentences**:
+*A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s,neurologists had switched to thinking of them as just "mental noise" - the random byproducts of the neural-repair work that goes on during sleep.*
+一个世纪前，弗洛伊德提出了他的革命性理论，认为梦是我们无意识的欲望和恐惧的伪装阴影；到20世纪70年代末，神经科医生转而认为它们只是“精神噪音”——睡眠期间进行的神经修复工作的随机副产品。
+《2005年英语一Text3》
+
+#word
 #### non-celebrity
 #anki
 n. 非名人
@@ -1602,6 +1816,15 @@ adj. 海洋的，与海洋有关的；（
 《2005年英语Text2》
 
 #word
+#### off-line
+#anki
+adj. 离线的；[计] 脱机的；不连结到线上的; adv. 脱机地；脱线地；不实时地
+**Sentences**:
+*Now researchers suspect that dreams are part of the mind's emotional thermostat, regulating moods while the brain is "off-line."*
+现在研究人员怀疑梦是大脑情绪恒温器的一部分，在大脑“离线”时调节情绪。
+《2005年英语一Text3》
+
+#word
 #### one-shot
 #anki
 adj. 只有一次的
@@ -1621,6 +1844,17 @@ adj. 开放式的；开放使得可以接入的
 *Finally, there are open-access archives, where organizations such as universities or international laboratories support institutional repositories.*
 最后，还有开放存取档案，大学或国际实验室等组织支持机构存储库。
 《2008年英语一》
+
+#word
+#### opens into
+#anki
+phr. 通向
+**Notes**:
+词形变化： [open into]是[opens into]的原形形式
+**Sentences**:
+*In dreams, a window opens into a world where logic is suspended and dead people speak.*
+在梦中，一扇窗户打开，进入一个逻辑被搁置，死人说话的世界。
+《2005年英语一Text3》
 
 #word
 #### outraged
@@ -1805,6 +2039,15 @@ adj. 潜在的；电势的； n. 潜在性，可能性；
 《2010年英语一Test2》
 
 #word
+#### power plants
+#anki
+发电厂；动力装置
+**Sentences**:
+*Many see that the country is getting ready to build lots of new power plants to meet our energy needs.*
+许多人看到这个国家正准备建造许多新的发电厂来满足我们的能源需求。
+《2005年英语Text2》
+
+#word
 #### preface
 #anki
 n. 前言，引语； v. 作序，以…开始
@@ -1812,6 +2055,15 @@ n. 前言，引语； v. 作序，以…开始
 *The president of the National Academy, Bruce Alberts, added this key point in the preface to the panel's report: "Science never has all the answers.*
 美国国家科学院院长布鲁斯·阿尔伯茨（Bruce Alberts）在专家组报告的序言中补充了这一关键点：“科学永远不会有所有的答案。
 《2005年英语Text2》
+
+#word
+#### prefrontal
+#anki
+adj. 前头叶的
+**Sentences**:
+*But not all parts of the brain are equally involved; the limbic system (the "emotional brain") is especially active, while the prefrontal cortex (the center of intellect and reasoning) is relatively quiet.*
+但并不是大脑的所有部分都参与其中；大脑边缘系统（“情感大脑”）特别活跃，而前额皮质（智力和推理的中心）相对平静。
+《2005年英语一Text3》
 
 #word
 #### presence
@@ -1888,6 +2140,15 @@ adv. 首先；起初，原来；首要地，主要地；根本上
 《2008年英语一》
 
 #word
+#### promising
+#anki
+adj. 有希望的，前途有望的，有出息的
+**Sentences**:
+*A bill by Democratic Senator Robert Byrd of West Virginia, which would offer financial incentives for private industry, is a promising start.*
+西弗吉尼亚州民主党参议员罗伯特·伯德（Robert Byrd）提出的一项为私营企业提供财政激励的法案是一个有希望的开端。
+《2005年英语Text2》
+
+#word
 #### protein
 #anki
 n. 蛋白质； adj. （含）蛋白质的
@@ -1957,6 +2218,17 @@ n. 招聘；招募； v. 招募；聘请（recruit 的 ing 形式）
 《2008年英语一Text3》
 
 #word
+#### regulating
+#anki
+v. 控制，管理；调节，校准
+**Notes**:
+词形变化： [regulate]是[regulating]的原形形式
+**Sentences**:
+*Now researchers suspect that dreams are part of the mind's emotional thermostat, regulating moods while the brain is "off-line."*
+现在研究人员怀疑梦是大脑情绪恒温器的一部分，在大脑“离线”时调节情绪。
+《2005年英语一Text3》
+
+#word
 #### reproductive
 #anki
 adj. 生殖的；再生的，复制的
@@ -2018,6 +2290,15 @@ v. 审查
 *A journal editor would then remove the authors' names and affiliations from the paper and send it to their peers for review.*
 然后，期刊编辑会从论文中删除作者的姓名和所属单位，并将其发送给同行进行评审。
 《2008年英语一》
+
+#word
+#### revolutionary
+#anki
+n. 革命者； adj. 革命的；革命性的，创新的
+**Sentences**:
+*A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s,neurologists had switched to thinking of them as just "mental noise" - the random byproducts of the neural-repair work that goes on during sleep.*
+一个世纪前，弗洛伊德提出了他的革命性理论，认为梦是我们无意识的欲望和恐惧的伪装阴影；到20世纪70年代末，神经科医生转而认为它们只是“精神噪音”——睡眠期间进行的神经修复工作的随机副产品。
+《2005年英语一Text3》
 
 #word
 #### reward
@@ -2169,6 +2450,15 @@ adv. 以某种方式；莫明其妙地；不知怎么地
 *Studies of both animals and humans have shown that sex hormones somehow affect the stress response, causing females under stress to produce more of the trigger chemicals than do males under the same conditions.*
 对动物和人类的研究表明，性激素在某种程度上影响压力反应，使处于压力下的雌性比在相同条件下的雄性产生更多的触发化学物质。
 《2008年英语一》
+
+#word
+#### sound
+#anki
+adj. 健全的，完好的；明智的，合理的；
+**Sentences**:
+*If we are ever going to protect the atmosphere, it is crucial that those new plants be environmentally sound.*
+如果我们想要保护大气，这些新工厂必须对环境无害，这一点至关重要。
+《2005年英语Text2》
 
 #word
 #### spheres
@@ -2366,6 +2656,17 @@ adj. 易受影响的；易感动的，感情丰富的；容许…的，可能…
 《2008年英语一》
 
 #word
+#### suspended
+#anki
+adj. 暂停的，缓期的；悬浮的； v. 悬挂；悬浮；暂停
+**Notes**:
+（suspend的过去式和过去分词）
+**Sentences**:
+*In dreams, a window opens into a world where logic is suspended and dead people speak.*
+在梦中，一扇窗户打开，进入一个逻辑被搁置，死人说话的世界。
+《2005年英语一Text3》
+
+#word
 #### take out
 #anki
 phr. 带...出去；杀死；切除；获得；发泄；使摆脱苦恼
@@ -2382,6 +2683,15 @@ phr. 带...出去；杀死；切除；获得；发泄；使摆脱苦恼
 *The Federal Circuit's action comes in the wake of a series of recent decisions by the Supreme Court that has narrowed the scope of protections for patent holders.*
 联邦巡回法院的行动是在最高法院最近做出一系列缩小专利持有人保护范围的决定之后进行的。
 《2010年英语一Test2》
+
+#word
+#### thermostat
+#anki
+n. 恒温（调节）器
+**Sentences**:
+*Now researchers suspect that dreams are part of the mind's emotional thermostat, regulating moods while the brain is "off-line."*
+现在研究人员怀疑梦是大脑情绪恒温器的一部分，在大脑“离线”时调节情绪。
+《2005年英语一Text3》
 
 #word
 #### threat
@@ -2457,6 +2767,15 @@ adj. 不重要的，琐碎的；琐细的，微不足道的
 *[D] trivial and random.*
 [D]琐碎的和随机的。
 《2008年英语一》
+
+#word
+#### unconscious
+#anki
+n. 无意识，潜意识; adj. 失去知觉的，不省人事的；未发觉的；无意识的，潜意识的
+**Sentences**:
+*A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s,neurologists had switched to thinking of them as just "mental noise" - the random byproducts of the neural-repair work that goes on during sleep.*
+一个世纪前，弗洛伊德提出了他的革命性理论，认为梦是我们无意识的欲望和恐惧的伪装阴影；到20世纪70年代末，神经科医生转而认为它们只是“精神噪音”——睡眠期间进行的神经修复工作的随机副产品。
+《2005年英语一Text3》
 
 #word
 #### under-nutrition
@@ -2549,6 +2868,15 @@ n. 合法性;正确，符合逻辑； 有效性
 《2010年英语一Test3》
 
 #word
+#### view
+#anki
+n. 看法，观点；观看；看；视野；风景； v. 把...视为；看待；看；观看；察看
+**Sentences**:
+*Evidence from brain imaging supports this view.*
+来自脑成像的证据支持这一观点。
+《2005年英语一Text3》
+
+#word
 #### violence
 #anki
 n. 暴力行为；猛烈，猛然；冒犯；破坏
@@ -2565,6 +2893,15 @@ adj. 暴力的，感情强烈的，猛烈的，强烈的
 *[B] irregular and violent.*
 [B]不规则的和暴力的。
 《2008年英语一》
+
+#word
+#### vivid
+#anki
+adj. 生动的；鲜明的；鲜艳的
+**Sentences**:
+*The brain is as active during REM (rapid eye movement) sleep - when most vivid dreams occur - as it is when fully awake, says Dr. Eric Nofzinger at the University of Pittsburgh.*
+匹兹堡大学的Eric Nofzinger博士说，大脑在REM（快速眼动）睡眠期间——最生动的梦发生的时候——和完全清醒时一样活跃。
+《2005年英语一Text3》
 
 #word
 #### vulnerable
