@@ -69,7 +69,7 @@ class ViewModeByFrontmatterPlugin extends obsidian.Plugin {
                 let folderOrFileModeState = null;
                 const setFolderOrFileModeState = (viewMode) => {
                     const [key, mode] = viewMode.split(":").map((s) => s.trim());
-                    if (key === "default") {
+                    if (key === "默认") {
                         folderOrFileModeState = null; // ensures that no state is set
                         return;
                     }
@@ -232,11 +232,11 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
         containerEl.empty();
         const createHeader = (text) => containerEl.createEl("h2", { text });
         const desc = document.createDocumentFragment();
-        desc.append("Changing the view mode can be done through the key ", desc.createEl("code", { text: "obsidianUIMode" }), ", which can have the value ", desc.createEl("code", { text: "source" }), " or ", desc.createEl("code", { text: "preview" }), ".", desc.createEl("br"), "Changing the editing mode happens by declaring the key ", desc.createEl("code", { text: "obsidianEditingMode" }), "; it takes ", desc.createEl("code", { text: "live" }), " or ", desc.createEl("code", { text: "source" }), " as value.");
+        desc.append("更改视图模式可通过属性 ", desc.createEl("code", { text: "obsidianUIMode" }), " ，其值可以是 ", desc.createEl("code", { text: "source" }), " or ", desc.createEl("code", { text: "preview" }), ".（分别代表“编辑模式”和“阅读模式”）", desc.createEl("br"), "更改编辑模式可通过属性 ", desc.createEl("code", { text: "obsidianEditingMode" }), " ，其值可以是 ", desc.createEl("code", { text: "live" }), " or ", desc.createEl("code", { text: "source" }), ".（分别代表“实时预览”和“源码模式”）");
         new obsidian.Setting(this.containerEl).setDesc(desc);
         new obsidian.Setting(containerEl)
-            .setName("Ignore opened files")
-            .setDesc("Never change the view mode on a note which was already open.")
+            .setName("忽略打开的文件")
+            .setDesc("永不更改已打开的笔记的视图模式。")
             .addToggle((checkbox) => checkbox
             .setValue(this.plugin.settings.ignoreOpenFiles)
             .onChange((value) => __awaiter(this, void 0, void 0, function* () {
@@ -244,8 +244,8 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
             yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(containerEl)
-            .setName("Ignore force view when not in frontmatter")
-            .setDesc("Never change the view mode on a note that was opened from another one in a certain view mode")
+            .setName("不在属性中时，忽略强制视图")
+            .setDesc("永不更改在特定视图模式下从另一个笔记打开的笔记的视图模式")
             .addToggle((checkbox) => {
             checkbox
                 .setValue(this.plugin.settings.ignoreForceViewAll)
@@ -255,8 +255,8 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Debounce timeout in milliseconds")
-            .setDesc(`Debounce timeout is the time in milliseconds after which the view mode is set. Set "0" to disable debouncing (default value is "300"). If you experience issues with the plugin, try increasing this value.`)
+            .setName("防抖超时（以毫秒为单位）")
+            .setDesc(`防抖超时是设置视图模式的时间（以毫秒为单位）。设置 “0” 以禁用防抖动 （默认值为 “300”）。如果您在使用插件时遇到问题，请尝试增加此值。`)
             .addText((cb) => {
             cb.setValue(String(this.plugin.settings.debounceTimeout)).onChange((value) => __awaiter(this, void 0, void 0, function* () {
                 this.plugin.settings.debounceTimeout = Number(value);
@@ -264,21 +264,21 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         const modes = [
-            "default",
-            "obsidianUIMode: preview",
-            "obsidianUIMode: source",
-            "obsidianEditingMode: live",
-            "obsidianEditingMode: source",
+            "默认",
+            "obsidian视图模式：阅读模式",
+            "obsidian视图模式：编辑模式",
+            "obsidian编辑模式：实时预览",
+            "obsidian编辑模式：源码模式",
         ];
-        createHeader("Folders");
+        createHeader("文件夹");
         const folderDesc = document.createDocumentFragment();
-        folderDesc.append("Specify a view mode for notes in a given folder.", folderDesc.createEl("br"), "Note that this will force the view mode on all the notes in the folder, even if they have a different view mode set in their frontmatter.", folderDesc.createEl("br"), "Precedence is from bottom (highest) to top (lowest), so if you have child folders specified, make sure to put them below their parent folder.");
+        folderDesc.append("为指定文件夹中的笔记指定一种视图模式。", folderDesc.createEl("br"), "请注意，这将在文件夹中的所有笔记上强制使用该视图模式，即使这些笔记的属性中设置了不同的视图模式也是如此。", folderDesc.createEl("br"), "优先级从下（最高）到上（最低），因此如果指定了子文件夹，请确保将它们放在父文件夹的下面。");
         new obsidian.Setting(this.containerEl).setDesc(folderDesc);
         new obsidian.Setting(this.containerEl)
-            .setDesc("Add new folder")
+            .setDesc("添加新文件夹")
             .addButton((button) => {
             button
-                .setTooltip("Add another folder to the list")
+                .setTooltip("向列表添加其他文件夹")
                 .setButtonText("+")
                 .setCta()
                 .onClick(() => __awaiter(this, void 0, void 0, function* () {
@@ -296,12 +296,12 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
             div.addClass("force-view-mode-folder");
             const s = new obsidian.Setting(this.containerEl)
                 .addSearch((cb) => {
-                cb.setPlaceholder("Example: folder1/templates")
+                cb.setPlaceholder("例如： folder1/templates")
                     .setValue(folderMode.folder)
                     .onChange((newFolder) => __awaiter(this, void 0, void 0, function* () {
                     if (newFolder &&
                         this.plugin.settings.folders.some((e) => e.folder == newFolder)) {
-                        console.error("ForceViewMode: This folder already has a template associated with", newFolder);
+                        console.error("ForceViewMode: 该文件夹已关联了一个模板", newFolder);
                         return;
                     }
                     this.plugin.settings.folders[index].folder = newFolder;
@@ -312,7 +312,7 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
                 modes.forEach(mode => {
                     cb.addOption(mode, mode);
                 });
-                cb.setValue(folderMode.viewMode || "default")
+                cb.setValue(folderMode.viewMode || "默认")
                     .onChange((value) => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.folders[index].viewMode = value;
                     yield this.plugin.saveSettings();
@@ -320,7 +320,7 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
             })
                 .addExtraButton((cb) => {
                 cb.setIcon("cross")
-                    .setTooltip("Delete")
+                    .setTooltip("删除")
                     .onClick(() => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.folders.splice(index, 1);
                     yield this.plugin.saveSettings();
@@ -330,15 +330,15 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
             s.infoEl.remove();
             div.appendChild(containerEl.lastChild);
         });
-        createHeader("Files");
+        createHeader("文件");
         const filesDesc = document.createDocumentFragment();
-        filesDesc.append("Specify a view mode for notes with specific patterns (regular expression; example \" - All$\" for all notes ending with \" - All\" or \"1900-01\" for all daily notes starting with \"1900-01\"", filesDesc.createEl("br"), "Note that this will force the view mode, even if it have a different view mode set in its frontmatter.", filesDesc.createEl("br"), "Precedence is from bottom (highest) to top (lowest).", filesDesc.createEl("br"), "Notice that configuring a file pattern will override the folder configuration for the same file.");
+        filesDesc.append("为具有特定样式的笔记指定视图模式（正则表达式；例如 \" - All$\" 是所有结尾带有 \" - All\" 的笔记；以及 \"1900-01\" 是所有开头带有 \"1900-01\" 的日记", filesDesc.createEl("br"), "请注意，这将强制使用视图模式，即使其属性中设置了不同的视图模式也是如此。", filesDesc.createEl("br"), "优先级从下（最高）到上（最低）。", filesDesc.createEl("br"), "请注意，配置文件模式将覆盖同一文件的文件夹配置。");
         new obsidian.Setting(this.containerEl).setDesc(filesDesc);
         new obsidian.Setting(this.containerEl)
-            .setDesc("Add new file")
+            .setDesc("添加新文件")
             .addButton((button) => {
             button
-                .setTooltip("Add another file to the list")
+                .setTooltip("将其他文件添加到列表中")
                 .setButtonText("+")
                 .setCta()
                 .onClick(() => __awaiter(this, void 0, void 0, function* () {
@@ -356,12 +356,12 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
             div.addClass("force-view-mode-folder");
             const s = new obsidian.Setting(this.containerEl)
                 .addSearch((cb) => {
-                cb.setPlaceholder(`Example: " - All$" or "1900-01")`)
+                cb.setPlaceholder(`例如： " - All$" or "1900-01")`)
                     .setValue(file.filePattern)
                     .onChange((value) => __awaiter(this, void 0, void 0, function* () {
                     if (value &&
                         this.plugin.settings.files.some((e) => e.filePattern == value)) {
-                        console.error("ForceViewMode: Pattern already exists", value);
+                        console.error("ForceViewMode: 模式已经存在", value);
                         return;
                     }
                     this.plugin.settings.files[index].filePattern = value;
@@ -372,14 +372,14 @@ class ViewModeByFrontmatterSettingTab extends obsidian.PluginSettingTab {
                 modes.forEach((mode) => {
                     cb.addOption(mode, mode);
                 });
-                cb.setValue(file.viewMode || "default").onChange((value) => __awaiter(this, void 0, void 0, function* () {
+                cb.setValue(file.viewMode || "默认").onChange((value) => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.files[index].viewMode = value;
                     yield this.plugin.saveSettings();
                 }));
             })
                 .addExtraButton((cb) => {
                 cb.setIcon("cross")
-                    .setTooltip("Delete")
+                    .setTooltip("删除")
                     .onClick(() => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.files.splice(index, 1);
                     yield this.plugin.saveSettings();

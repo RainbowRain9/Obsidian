@@ -1,10 +1,10 @@
 {
-  "id": "obsidian-zoom",
-  "name": "Zoom",
-  "version": "1.1.2",
-  "minAppVersion": "1.1.16",
-  "description": "Zoom into heading and lists.",
-  "author": "Viacheslav Slinko",
-  "authorUrl": "https://github.com/vslinko",
-  "isDesktopOnly": false
+    "id": "obsidian-zoom",
+    "name": "Zoom",
+    "version": "1.1.2",
+    "minAppVersion": "1.1.16",
+    "description": "放大标题和列表。",
+    "author": "Viacheslav Slinko",
+    "authorUrl": "https://github.com/vslinko",
+    "isDesktopOnly": false
 }

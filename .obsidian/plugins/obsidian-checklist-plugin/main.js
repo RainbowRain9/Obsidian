@@ -5726,24 +5726,24 @@ var TodoSettingTab = class extends import_obsidian.PluginSettingTab {
   display() {
     this.containerEl.empty();
     this.containerEl.createEl("h3", {
-      text: "General Settings"
+      text: "通用设置"
     });
     this.buildSettings();
   }
   buildSettings() {
-    new import_obsidian.Setting(this.containerEl).setName("General");
-    new import_obsidian.Setting(this.containerEl).setName("Tag name").setDesc('e.g. "todo" will match #todo. You may add mutliple tags separated by a newline. Leave empty to capture all').addTextArea((text2) => text2.setPlaceholder("todo").setValue(this.plugin.getSettingValue("todoPageName")).onChange((value) => __async(this, null, function* () {
+    new import_obsidian.Setting(this.containerEl).setName("通用设置");
+    new import_obsidian.Setting(this.containerEl).setName("标签名称").setDesc('例如 "todo" 将匹配 #todo。您可以添加多个标签，并以换行符分隔。留空则捕获所有').addTextArea((text2) => text2.setPlaceholder("待办").setValue(this.plugin.getSettingValue("todoPageName")).onChange((value) => __async(this, null, function* () {
       yield this.plugin.updateSettings({
         todoPageName: value
       });
     })));
-    new import_obsidian.Setting(this.containerEl).setName("Show Completed?").addToggle((toggle) => {
+    new import_obsidian.Setting(this.containerEl).setName("显示已完成项？").addToggle((toggle) => {
       toggle.setValue(this.plugin.getSettingValue("showChecked"));
       toggle.onChange((value) => __async(this, null, function* () {
         yield this.plugin.updateSettings({ showChecked: value });
       }));
     });
-    new import_obsidian.Setting(this.containerEl).setName("Show All Todos In File?").setDesc("Show all items in file if tag is present, or only items attached to the block where the tag is located. Only has an effect if Tag Name is not empty").addToggle((toggle) => {
+    new import_obsidian.Setting(this.containerEl).setName("显示文件中的所有待办项？").setDesc("如果标签存在，则显示文件中的所有项目，或仅显示附加到标签所在块的项目。仅在标签名称不为空时有效").addToggle((toggle) => {
       toggle.setValue(this.plugin.getSettingValue("showAllTodos"));
       toggle.onChange((value) => __async(this, null, function* () {
         yield this.plugin.updateSettings({ showAllTodos: value });
@@ -5755,8 +5755,8 @@ var TodoSettingTab = class extends import_obsidian.PluginSettingTab {
         yield this.plugin.updateSettings({ showOnlyActiveFile: value });
       }));
     });
-    new import_obsidian.Setting(this.containerEl).setName("Grouping & Sorting");
-    new import_obsidian.Setting(this.containerEl).setName("Group By").addDropdown((dropdown) => {
+    new import_obsidian.Setting(this.containerEl).setName("分组与排序");
+    new import_obsidian.Setting(this.containerEl).setName("分组依据").addDropdown((dropdown) => {
       dropdown.addOption("page", "Page");
       dropdown.addOption("tag", "Tag");
       dropdown.setValue(this.plugin.getSettingValue("groupBy"));
@@ -5764,7 +5764,7 @@ var TodoSettingTab = class extends import_obsidian.PluginSettingTab {
         yield this.plugin.updateSettings({ groupBy: value });
       }));
     });
-    new import_obsidian.Setting(this.containerEl).setName("Item Sort").addDropdown((dropdown) => {
+    new import_obsidian.Setting(this.containerEl).setName("项目排序").addDropdown((dropdown) => {
       dropdown.addOption("a->z", "A -> Z");
       dropdown.addOption("z->a", "Z -> A");
       dropdown.addOption("new->old", "New -> Old");
@@ -5775,8 +5775,8 @@ var TodoSettingTab = class extends import_obsidian.PluginSettingTab {
           sortDirectionItems: value
         });
       }));
-    }).setDesc("Time sorts are based on last time the file for a particular item was edited");
-    new import_obsidian.Setting(this.containerEl).setName("Group Sort").addDropdown((dropdown) => {
+    }).setDesc("时间排序基于特定项目的文件最后编辑时间");
+    new import_obsidian.Setting(this.containerEl).setName("分组排序").addDropdown((dropdown) => {
       dropdown.addOption("a->z", "A -> Z");
       dropdown.addOption("z->a", "Z -> A");
       dropdown.addOption("new->old", "New -> Old");
@@ -5787,9 +5787,9 @@ var TodoSettingTab = class extends import_obsidian.PluginSettingTab {
           sortDirectionGroups: value
         });
       }));
-    }).setDesc("Time sorts are based on last time the file for the newest or oldest item in a group was edited");
-    new import_obsidian.Setting(this.containerEl).setName("Styling");
-    new import_obsidian.Setting(this.containerEl).setName("Look and Feel").addDropdown((dropdown) => {
+    }).setDesc("时间排序基于分组中最新或最旧项目的文件最后编辑时间");
+    new import_obsidian.Setting(this.containerEl).setName("样式");
+    new import_obsidian.Setting(this.containerEl).setName("外观与体验").addDropdown((dropdown) => {
       dropdown.addOption("classic", "Classic");
       dropdown.addOption("compact", "Compact");
       dropdown.setValue(this.plugin.getSettingValue("lookAndFeel"));
@@ -5797,18 +5797,18 @@ var TodoSettingTab = class extends import_obsidian.PluginSettingTab {
         yield this.plugin.updateSettings({ lookAndFeel: value });
       }));
     });
-    new import_obsidian.Setting(this.containerEl).setName("Advanced");
-    new import_obsidian.Setting(this.containerEl).setName("Include Files").setDesc("Include all files that match this glob pattern. Examples on plugin page/github readme. Leave empty to check all files.").setTooltip("**/*").addText((text2) => text2.setValue(this.plugin.getSettingValue("includeFiles")).onChange((value) => __async(this, null, function* () {
+    new import_obsidian.Setting(this.containerEl).setName("高级设置");
+    new import_obsidian.Setting(this.containerEl).setName("包含的文件").setDesc("包含所有匹配此全局模式的文件。插件页面或GitHub自述文件中有示例。留空则检查所有文件。").setTooltip("**/*").addText((text2) => text2.setValue(this.plugin.getSettingValue("includeFiles")).onChange((value) => __async(this, null, function* () {
       yield this.plugin.updateSettings({
         includeFiles: value
       });
     })));
-    new import_obsidian.Setting(this.containerEl).setName("Auto Refresh List?").addToggle((toggle) => {
+    new import_obsidian.Setting(this.containerEl).setName("自动刷新列表？").addToggle((toggle) => {
       toggle.setValue(this.plugin.getSettingValue("autoRefresh"));
       toggle.onChange((value) => __async(this, null, function* () {
         yield this.plugin.updateSettings({ autoRefresh: value });
       }));
-    }).setDesc(`It's recommended to leave this on unless you are expereince performance issues due to a large vault. You can then reload manually using the "Checklist: refresh" command`);
+    }).setDesc(`建议保持此项开启，除非您因存储库较大而遇到性能问题。您可以使用 "Checklist: refresh" 命令手动重新加载。`);
   }
 };
 

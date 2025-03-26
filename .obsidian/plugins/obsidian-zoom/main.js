@@ -479,7 +479,7 @@ class ObsidianZoomPluginSettingTab extends obsidian.PluginSettingTab {
         const { containerEl } = this;
         containerEl.empty();
         new obsidian.Setting(containerEl)
-            .setName("Zooming in when clicking on the bullet")
+            .setName("单击项目符号时放大")
             .addToggle((toggle) => {
             toggle.setValue(this.settings.zoomOnClick).onChange((value) => __awaiter(this, void 0, void 0, function* () {
                 this.settings.zoomOnClick = value;
@@ -487,8 +487,8 @@ class ObsidianZoomPluginSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Debug mode")
-            .setDesc("Open DevTools (Command+Option+I or Control+Shift+I) to copy the debug logs.")
+            .setName("调试模式")
+            .setDesc("打开调试工具(DevTools)(Command+Option+I 或 Ctrl+Shift+I)复制调试日志。")
             .addToggle((toggle) => {
             toggle.setValue(this.settings.debug).onChange((value) => __awaiter(this, void 0, void 0, function* () {
                 this.settings.debug = value;
@@ -694,7 +694,7 @@ class ZoomFeature {
             this.plugin.registerEditorExtension(this.keepOnlyZoomedContentVisible.getExtension());
             this.plugin.addCommand({
                 id: "zoom-in",
-                name: "Zoom in",
+                name: "进入子标题",
                 icon: "zoom-in",
                 editorCallback: (editor) => {
                     const view = getEditorViewFromEditor(editor);
@@ -709,7 +709,7 @@ class ZoomFeature {
             });
             this.plugin.addCommand({
                 id: "zoom-out",
-                name: "Zoom out the entire document",
+                name: "返回全文",
                 icon: "zoom-out",
                 editorCallback: (editor) => this.zoomOut(getEditorViewFromEditor(editor)),
                 hotkeys: [

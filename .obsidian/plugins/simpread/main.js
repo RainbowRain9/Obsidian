@@ -176,11 +176,11 @@ class SearchModal extends obsidian.Modal {
 
     SearchKeywordsDesc() {
         const descEl = document.createDocumentFragment();
-        descEl.appendText( 'Support placeholders:' );
+        descEl.appendText( '支持占位符：' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( '{{title}} {{desc}} {{note}} {{tags}} {{annote}} ...' );
+        descEl.appendText( '{title}{desc}{note}{tags}{annote}}。。。' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'For more syntax, refer to ' );
+        descEl.appendText( '有关更多语法，请参阅' );
         const a = document.createElement( 'a' );
         a.href = 'https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-1420517';
         a.text = 'format reference';
@@ -196,7 +196,7 @@ class SearchModal extends obsidian.Modal {
         contentEl.createEl( 'h2', { text: 'Advanced search' });
 
         new obsidian.Setting( contentEl )
-            .setName( 'Search Keywords' )
+            .setName( '搜索关键词' )
             .setDesc( this.SearchKeywordsDesc() )
             .addText( text =>
                 text.onChange( value => {
@@ -206,7 +206,7 @@ class SearchModal extends obsidian.Modal {
         new obsidian.Setting( contentEl )
             .addButton( btn =>
                 btn
-                .setButtonText( 'Search' )
+                .setButtonText( '搜索' )
                 .setCta()
                 .onClick(() => {
                     let arr = this.filter( this.result.includes( ':' ) ? this.result : 'any', this.unrdist, this.result );
@@ -751,7 +751,7 @@ class OpenUnreadModal extends obsidian.Modal {
         new obsidian.Setting( contentEl )
             .addButton( btn =>
                 btn
-                .setButtonText( 'Open' )
+                .setButtonText( '正常开放' )
                 .setCta()
                 .onClick(() => {
                     const preview  = this.app.workspace.getLeavesOfType( 'simpread-unreader' )[0],
@@ -776,11 +776,11 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
 
     titleDesc() {
         const descEl = document.createDocumentFragment();
-        descEl.appendText( 'By default is {{title}}, support placeholders:' );
+        descEl.appendText( '默认情况下为{{title}}，支持占位符：' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( '{{url}} {{title}} {{timestamp}}' );
+        descEl.appendText( '{{url}{{title}{{timestamp}}' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'For more syntax, refer to ' );
+        descEl.appendText( '有关更多语法，请参阅' );
         const a = document.createElement( 'a' );
         a.href = 'https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-2831868';
         a.text = 'format reference';
@@ -792,11 +792,11 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
 
     extLinkDesc() {
         const descEl = document.createDocumentFragment();
-        descEl.appendText( 'Support placeholders:' );
+        descEl.appendText( '支持占位符：' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( '{{url}} {{title}} {{timestamp}}' );
+        descEl.appendText( '{{url}{{title}{{timestamp}}' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'For more syntax, refer to ' );
+        descEl.appendText( '有关更多语法，请参阅' );
         const a = document.createElement( 'a' );
         a.href = 'https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-2831869';
         a.text = 'format reference';
@@ -808,15 +808,15 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
 
     templateDesc() {
         const descEl = document.createDocumentFragment();
-        descEl.appendText( 'Unread Markdown Template date support:' );
+        descEl.appendText( '未读Markdown模板日期支持：' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'Date formats are supported {{create|yyyy/dd/mm HH:MM:ss|zh}}' );
+        descEl.appendText( '支持日期格式｛｛create | yyyy/dd/mm HH:mm:ss | zh｝｝' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'Unread Markdown Template placeholders:' );
+        descEl.appendText( '未读Markdown模板占位符：' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( '{{url}} {{title}} {{desc}} {{note}} {{tags}} ...' );
+        descEl.appendText( '{url}{{title}{{desc}{{note}{tags}}。。。' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'For more syntax, refer to ' );
+        descEl.appendText( '有关更多语法，请参阅' );
         const a = document.createElement( 'a' );
         a.href = 'https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-2831866';
         a.text = 'format reference';
@@ -828,11 +828,11 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
 
     annotationDesc() {
         const descEl = document.createDocumentFragment();
-        descEl.appendText( 'Annotation Markdown Template placeholders:' );
+        descEl.appendText( '注释Markdown模板占位符：' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( '{{an_html}} {{an_note}} {{an_int_uri}} {{an_tags}} {{> |an_note}} ...' );
+        descEl.appendText( '{{an_html}{an_note}{an_int_uri}{an_tags}{{>.an_note}}。。。' );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'For more syntax, refer to ' );
+        descEl.appendText( '有关更多语法，请参阅' );
         const a = document.createElement( 'a' );
         a.href = 'https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-2831866';
         a.text = 'format reference';
@@ -846,7 +846,7 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
         const descEl = document.createDocumentFragment();
         descEl.appendText( value );
         descEl.appendChild( document.createElement( 'br' ));
-        descEl.appendText( 'For more syntax, refer to ' );
+        descEl.appendText( '有关更多语法，请参阅' );
         const a = document.createElement( 'a' );
         a.href = 'https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-2831866';
         a.text = 'format reference';
@@ -858,7 +858,7 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
 
     markdownOptionsDesc() {
         const descEl = document.createDocumentFragment();
-        descEl.appendText( 'For more syntax, refer to ' );
+        descEl.appendText( '有关更多语法，请参阅' );
         const a = document.createElement( 'a' );
         a.href = 'https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-2831870';
         a.text = 'format reference';
@@ -874,16 +874,16 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
         containerEl.empty();
         containerEl.createEl( 'h1', { text: 'SimpRead Unreader Sync' });
         containerEl.createEl( 'p', { text: 'Created by ' }).createEl( 'a', { text: 'SimpRead', href: 'https://simpread.pro' });
-        containerEl.getElementsByTagName( 'p' )[0].appendText(' 📚' );
+        containerEl.getElementsByTagName( 'p' )[0].appendText('📚' );
 
         containerEl.createEl( 'h3', { text: 'Sync Server Settings' });
         containerEl.createEl( 'p' ).innerHTML = `Sync Server Settings <a target="_blank" href='https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-1388527'>reference</a>.`;
 
         new obsidian.Setting( containerEl )
-            .setName( 'Server Host' )
-            .setDesc( 'By default localhost' )
+            .setName( '服务器主机' )
+            .setDesc( '默认情况下为localhost' )
             .addText( text => text
-                .setPlaceholder( 'Defaults to: localhost' )
+                .setPlaceholder( '默认值为：localhost' )
                 .setValue( this.plugin.settings.host + '' )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.host = obsidian.normalizePath( value || DEFAULT_SETTINGS.host );
@@ -892,10 +892,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Server port' )
-            .setDesc( 'By default 7027' )
+            .setName( '服务器端口' )
+            .setDesc( '默认情况下为7027' )
             .addText( text => text
-                .setPlaceholder( 'Defaults to: 7027' )
+                .setPlaceholder( '默认值为：7027' )
                 .setValue( this.plugin.settings.port + '' )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.port = obsidian.normalizePath( value || DEFAULT_SETTINGS.port );
@@ -907,10 +907,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
         containerEl.createEl( 'p' ).innerHTML = `Config Settings <a target="_blank" href='https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-1389535'>reference</a>.`;
 
         new obsidian.Setting( containerEl )
-            .setName( 'Customize base folder' )
-            .setDesc( 'By default, the plugin will save all your highlights into a folder named SimpRead' )
+            .setName( '自定义基本文件夹' )
+            .setDesc( '默认情况下，插件会将您的所有亮点保存到名为SimpRead的文件夹中' )
             .addText( text => text
-                .setPlaceholder( 'Defaults to: SimpRead' )
+                .setPlaceholder( '默认值为：SimpRead' )
                 .setValue( this.plugin.settings.folder )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.folder = obsidian.normalizePath( value || DEFAULT_SETTINGS.folder );
@@ -919,10 +919,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             );
 
         new obsidian.Setting( containerEl )
-            .setName( 'SimpRead config path' )
-            .setDesc( 'Same as SimpRead Sync path' )
+            .setName( 'SimpRead配置路径' )
+            .setDesc( '与SimpRead同步路径相同' )
             .addText( text => text
-                .setPlaceholder( 'Required, do\'nt empty' )
+                .setPlaceholder( '必填，不要为空' )
                 .setValue( this.plugin.settings.path )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.path = obsidian.normalizePath( value );
@@ -934,12 +934,12 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
         containerEl.createEl( 'p' ).innerHTML = `Sync Settings <a target="_blank" href='https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-1393730'>reference</a>.`;
 
         new obsidian.Setting( containerEl )
-            .setName( 'Sync your SimpRead unread data with Obsidian' )
-            .setDesc( 'On first sync, the SimpRead plugin will create a new folder containing all your highlights' )
+            .setName( '将SimpRead未读数据与Obsidian同步' )
+            .setDesc( '首次同步时，SimpRead插件将创建一个新文件夹，其中包含您的所有亮点' )
             .setClass( 'rw-setting-sync' )
             .addButton( button => {
-                button.setCta().setTooltip( 'Once the sync begins, default synchronise up to 10 unread' )
-                    .setButtonText( 'Manual Sync' )
+                button.setCta().setTooltip( '同步开始后，默认同步最多10个未读' )
+                    .setButtonText( '手动同步' )
                     .onClick(() => {
                         this.plugin.notify = true;
                         this.plugin.sync();
@@ -947,10 +947,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             });
 
         new obsidian.Setting( containerEl )
-            .setName( 'Maximum number of Synchronize' )
-            .setDesc( 'By default, Maximum number is 10, All will be saved when you set 0' )
+            .setName( '最大同步次数' )
+            .setDesc( '默认情况下，最大数量为10，设置0时将保存所有' )
             .addText( text => text
-                .setPlaceholder( 'Defaults to: 10' )
+                .setPlaceholder( '默认值为：10' )
                 .setValue( this.plugin.settings.count + '' )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.count = obsidian.normalizePath( value || DEFAULT_SETTINGS.count );
@@ -959,7 +959,7 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Configure resync frequency' )
+            .setName( '配置重新同步频率' )
             .addDropdown( dropdown => {
                 dropdown.addOption( '-1', 'Do not monitor files' );
                 dropdown.addOption( '0', 'Monitor file changes' );
@@ -975,7 +975,7 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             });
 
         new obsidian.Setting( containerEl )
-            .setName( 'Do you want to overwrite existing files?' )
+            .setName( '是否要覆盖现有文件？' )
             .addToggle( toggle => {
                 toggle.setValue( this.plugin.settings.override );
                 toggle.onChange( value => {
@@ -985,8 +985,8 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             });
 
         new obsidian.Setting( containerEl )
-            .setName( 'Write only exist annotations with unread' )
-            .setDesc( 'When unread not exist annotations, not saved to Obsidian.' )
+            .setName( '只写存在未读注释' )
+            .setDesc( '未读时不存在注释，不保存到黑曜石。' )
             .addToggle( toggle => {
                 toggle.setValue( this.plugin.settings.annote );
                 toggle.onChange( value => {
@@ -999,10 +999,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
         containerEl.createEl( 'p' ).innerHTML = `Markdown Template Settings <a target="_blank" href='https://github.com/Kenshin/simpread/discussions/2889#discussioncomment-1420516'>reference</a>.`;
 
         new obsidian.Setting( containerEl )
-            .setName( 'Customize Title' )
+            .setName( '自定义标题' )
             .setDesc( this.titleDesc() )
             .addText( text => text
-                .setPlaceholder( 'Defaults to: {{title}}' )
+                .setPlaceholder( '默认值为：｛｛title｝｝' )
                 .setValue( this.plugin.settings.title )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.title = obsidian.normalizePath( value || DEFAULT_SETTINGS.title );
@@ -1011,10 +1011,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Customize External link' )
+            .setName( '自定义外部链接' )
             .setDesc( this.extLinkDesc() )
             .addText( text => text
-                .setPlaceholder( 'Defaults to: empty' )
+                .setPlaceholder( '默认值为：空' )
                 .setValue( this.plugin.settings.ext_uri )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.ext_uri = obsidian.normalizePath( value || DEFAULT_SETTINGS.ext_uri );
@@ -1023,10 +1023,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Unread Markdown Template' )
+            .setName( '未读Markdown模板' )
             .addTextArea( text => {
                 text
-                    .setPlaceholder( 'When empty, use the default template' )
+                    .setPlaceholder( '为空时，使用默认模板' )
                     .setValue( this.plugin.settings.template )
                     .onChange( value => {
                         if ( value.trim() == '' ) value = DEFAULT_SETTINGS.template;
@@ -1039,10 +1039,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             .setDesc( this.templateDesc() );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Annotation Markdown Template' )
+            .setName( '注释Markdown模板' )
             .addTextArea( text => {
                 text
-                    .setPlaceholder( 'When empty, use the default annotation template' )
+                    .setPlaceholder( '为空时，使用默认注释模板' )
                     .setValue( this.plugin.settings.annotation )
                     .onChange( value => {
                         if ( value.trim() == '' ) value = DEFAULT_SETTINGS.annotation;
@@ -1055,7 +1055,7 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             .setDesc( this.annotationDesc() );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Customize Tag Prefix' )
+            .setName( '自定义标记前缀' )
             .setDesc( this.tagsDesc( 'For example: when value is #, show as #tag1 #tag2' ))
             .addText( text => text
                 .setPlaceholder( 'Defaults to: #' )
@@ -1067,10 +1067,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Customize Tag Suffix' )
+            .setName( '自定义标签后缀' )
             .setDesc( this.tagsDesc( 'For example: when value is , show as #tag1, #tag2' ))
             .addText( text => text
-                .setPlaceholder( 'Defaults to: space' )
+                .setPlaceholder( '默认值为：空格' )
                 .setValue( this.plugin.settings.tag_suffix )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.tag_suffix = value;
@@ -1079,10 +1079,10 @@ class SimpReadSettingTab extends obsidian.PluginSettingTab {
             );
 
         new obsidian.Setting( containerEl )
-            .setName( 'Customize Markdown Options' )
+            .setName( '自定义Markdown选项' )
             .setDesc( this.markdownOptionsDesc() )
             .addText( text => text
-                .setPlaceholder( 'Defaults to: empty' )
+                .setPlaceholder( '默认值为：空' )
                 .setValue( this.plugin.settings.format )
                 .onChange( value => __awaiter(this, void 0, void 0, function* () {
                     this.plugin.settings.format = value;

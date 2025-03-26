@@ -1,7 +1,7 @@
 {
     "id": "obsidian-advanced-uri",
     "name": "Advanced URI",
-    "description": "Advanced modes for Obsidian URI",
+    "description": "Obsidian URI 的高级模式",
     "isDesktopOnly": false,
     "js": "main.js",
     "fundingUrl": "https://ko-fi.com/vinzent",

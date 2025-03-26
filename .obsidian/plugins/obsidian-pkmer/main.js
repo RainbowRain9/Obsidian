@@ -11775,17 +11775,17 @@ class PkmerSettingTab extends obsidian.PluginSettingTab {
         this.showLoginOut();
       }
     }
-    new obsidian.Setting(containerEl).setName("Token").setDesc("Default token for pkmer downloader").addText(
+    new obsidian.Setting(containerEl).setName("Token").setDesc("pkmer下载器的默认令牌").addText(
       (text) => text.setPlaceholder("登录获取token").setValue(this.plugin.settings.token).setDisabled(false).onChange(async (value) => {
         this.plugin.settings.token = value;
         await this.plugin.saveSettings();
       })
     );
     if (obsidian.Platform.isDesktopApp) {
-      new obsidian.Setting(containerEl).setName("Tips").setDesc("如果登录后，仍然提示登录，请退出重新登录PKMER ");
+      new obsidian.Setting(containerEl).setName("提示").setDesc("如果登录后，仍然提示登录，请退出重新登录PKMER ");
     }
     if (obsidian.Platform.isMobileApp) {
-      new obsidian.Setting(containerEl).setName("Tips").setDesc("移动端需要您手动在电脑端登录获取token后复制到输入框中 ");
+      new obsidian.Setting(containerEl).setName("提示").setDesc("移动端需要您手动在电脑端登录获取token后复制到输入框中 ");
     }
     containerEl.createEl("hr", { cls: "mt-2" });
     const div = containerEl.createEl("div", {
@@ -11897,7 +11897,7 @@ class PkmerPlugin extends obsidian.Plugin {
     });
   }
   registerCustomRibbon() {
-    this.addRibbonIcon("download", "Open Pkmer Market", () => {
+    this.addRibbonIcon("download", "打开 Pkmer 插件市场", () => {
       this.app.workspace.getLeaf().setViewState({ active: true, type: DEFAULT_VIEW_TYPE });
     });
   }

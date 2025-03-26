@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "插件ID",
+      "path": "学习区/_Templates/startup/插件ID.md"
+    },
+    {
+      "basename": "FastStart-StartupScript",
+      "path": "学习区/_Templates/startup/FastStart-StartupScript.md"
+    },
+    {
+      "basename": "FastStart-Plugins-ShortDelay",
+      "path": "学习区/_Templates/startup/FastStart-Plugins-ShortDelay.md"
+    },
+    {
+      "basename": "FastStart-Plugins-mobile",
+      "path": "学习区/_Templates/startup/FastStart-Plugins-mobile.md"
+    },
+    {
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "学习区/_Templates/startup/FastStart-Plugins-LongDelay.md"
+    },
+    {
+      "basename": "FastStart-GenerateListOfInstalledPlugins",
+      "path": "学习区/_Templates/startup/FastStart-GenerateListOfInstalledPlugins.md"
+    },
+    {
+      "basename": "🏡Home",
+      "path": "🏡Home.md"
+    },
+    {
+      "basename": "计算机网络",
+      "path": "学习区/10-计算机网络/计算机网络.md"
+    },
+    {
+      "basename": "5 个 Obsidian 命名方法，告别杂乱笔记，提高效率 200%！",
+      "path": "个人区/6-SimpRead/5 个 Obsidian 命名方法，告别杂乱笔记，提高效率 200%！.md"
+    },
+    {
+      "basename": "Viewer",
+      "path": "个人区/1-生活/Viewer.md"
+    },
+    {
+      "basename": "03-行列式的按行按列展开定理",
+      "path": "学习区/07-线性代数/笔记库/第一章 行列式/03-行列式的按行按列展开定理.md"
+    },
+    {
+      "basename": "第一章 行列式",
+      "path": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md"
+    },
+    {
       "basename": "04-经典永恒类别行列式计算",
       "path": "学习区/07-线性代数/笔记库/第一章 行列式/04-经典永恒类别行列式计算.md"
     },
@@ -9,16 +57,8 @@
       "path": "学习区/07-线性代数/笔记库/第一章 行列式/05-克拉默法则.md"
     },
     {
-      "basename": "第一章 行列式",
-      "path": "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md"
-    },
-    {
       "basename": "2.1  矩阵的运算-Xmind",
       "path": "学习区/07-线性代数/笔记库/2.1  矩阵的运算-Xmind.md"
-    },
-    {
-      "basename": "🏡Home",
-      "path": "🏡Home.md"
     },
     {
       "basename": "我的26岁女房客-超级大坦克科比",
@@ -45,20 +85,12 @@
       "path": "个人区/2-weread/神秘复苏.md"
     },
     {
-      "basename": "03-行列式的按行按列展开定理",
-      "path": "学习区/07-线性代数/笔记库/第一章 行列式/03-行列式的按行按列展开定理.md"
-    },
-    {
       "basename": "2005-02",
       "path": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md"
     },
     {
       "basename": "01-行列式的定义",
       "path": "学习区/07-线性代数/笔记库/第一章 行列式/01-行列式的定义.md"
-    },
-    {
-      "basename": "Viewer",
-      "path": "个人区/1-生活/Viewer.md"
     },
     {
       "basename": "Obsidian 插件：Zoom 通过快捷键，快速聚焦到大纲",
@@ -165,24 +197,8 @@
       "path": "学习区/01-高等数学/问题库/1.6 极限存在准则-QA.md"
     },
     {
-      "basename": "计算机网络",
-      "path": "学习区/10-计算机网络/计算机网络.md"
-    },
-    {
       "basename": "QA笔记",
       "path": "学习区/_Templates/tp/QA笔记.md"
-    },
-    {
-      "basename": "思维导图模板",
-      "path": "学习区/_Templates/tp/思维导图模板.md"
-    },
-    {
-      "basename": "闪念笔记",
-      "path": "学习区/_Templates/tp/闪念笔记.md"
-    },
-    {
-      "basename": "例题卡",
-      "path": "学习区/_Templates/tp/例题卡.md"
     }
   ],
   "omittedPaths": [

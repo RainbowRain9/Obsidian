@@ -262,20 +262,21 @@ class SettingTab extends obsidian.PluginSettingTab {
     display() {
         let { containerEl } = this;
         containerEl.empty();
-        containerEl.createEl('h2', { text: 'Remember cursor position - Settings' });
+        containerEl.createEl('h2', { text: '记住光标位置 - 设置' });
         new obsidian.Setting(containerEl)
-            .setName('Data file name')
-            .setDesc('Save positions to this file')
+            .setName('数据文件名称')
+            .setDesc('保存位置到此文件')
             .addText((text) => text
-            .setPlaceholder('Example: cursor-positions.json')
+            .setPlaceholder('示例：光标位置.json')
             .setValue(this.plugin.settings.dbFileName)
             .onChange((value) => __awaiter(this, void 0, void 0, function* () {
             this.plugin.settings.dbFileName = value;
             yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(containerEl)
-            .setName('Delay after opening a new note')
-            .setDesc("This plugin shouldn't scroll if you used a link to the note header like [link](note.md#header). If it did, then increase the delay until everything works. If you are not using links to page sections, set the delay to zero (slider to the left). Slider values: 0-300 ms (default value: 100 ms).")
+            .setName('打开新笔记后的延迟')
+           .setDesc("如果您通过链接跳转到笔记标题（如 [link](note.md#header)），此插件不应滚动。如果仍然发生滚动，请增加延迟值直到问题解决。如果您不使用页面段落链接，请将延迟设置为零（滑块向左）。滑块取值范围：0-300 毫秒（默认值：100 毫秒）。")
+
             .addSlider((text) => text
             .setLimits(0, 300, 10)
             .setValue(this.plugin.settings.delayAfterFileOpening)
@@ -284,8 +285,8 @@ class SettingTab extends obsidian.PluginSettingTab {
             yield this.plugin.saveSettings();
         })));
         new obsidian.Setting(containerEl)
-            .setName('Delay between saving the cursor position to file')
-            .setDesc("Useful for multi-device users. If you don't want to wait until closing Obsidian to the cursor position been saved.")
+            .setName('保存光标位置到文件的延迟时间')
+            .setDesc("适用于多设备用户。如果你不想等到关闭Obsidian后才保存光标位置，可以使用此功能")
             .addSlider((text) => text
             .setLimits(SAFE_DB_FLUSH_INTERVAL, SAFE_DB_FLUSH_INTERVAL * 10, 10)
             .setValue(this.plugin.settings.saveTimer)

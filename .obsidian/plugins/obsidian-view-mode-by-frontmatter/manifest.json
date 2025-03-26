@@ -1,10 +1,10 @@
 {
-	"id": "obsidian-view-mode-by-frontmatter",
-	"name": "Force note view mode",
-	"version": "1.2.2",
-	"minAppVersion": "0.9.12",
-	"description": "This plugin allows to force the view mode and editing mode for a note by using front matter",
-	"author": "Benny Wydooghe",
-	"authorUrl": "https://i-net.be",
-	"isDesktopOnly": false
+    "id": "obsidian-view-mode-by-frontmatter",
+    "name": "Force note view mode",
+    "version": "1.2.2",
+    "minAppVersion": "0.9.12",
+    "description": "该插件可通过添加属性元数据来强制设置笔记的阅读模式和编辑模式。",
+    "author": "Benny Wydooghe",
+    "authorUrl": "https://i-net.be",
+    "isDesktopOnly": false
 }

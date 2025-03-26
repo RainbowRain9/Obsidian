@@ -31,7 +31,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "zoom",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -42,33 +42,8 @@
               "icon": "lucide-search",
               "title": "搜索"
             }
-          },
-          {
-            "id": "9d3a106417e7f7f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "学习区/07-线性代数/笔记库/第一章 行列式/04-经典永恒类别行列式计算.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04-经典永恒类别行列式计算"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -80,6 +55,7 @@
       {
         "id": "0aeb886c48fcaa26",
         "type": "tabs",
+        "dimension": 63.03448275862069,
         "children": [
           {
             "id": "3a6ee1ee9eaa7a9d",
@@ -105,40 +81,42 @@
             }
           },
           {
-            "id": "29b72c5eba9d9838",
-            "type": "leaf",
-            "state": {
-              "type": "langr-search-panel",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
-            }
-          },
-          {
             "id": "1bb352666307d0c2",
             "type": "leaf",
             "state": {
               "type": "git-view",
               "state": {},
               "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "源代码管理"
+            }
+          },
+          {
+            "id": "29b72c5eba9d9838",
+            "type": "leaf",
+            "state": {
+              "type": "langr-search-panel",
+              "state": {},
+              "icon": "book",
+              "title": "查词面板"
+            }
+          },
+          {
+            "id": "8379472b8dad45a2",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ],
-        "currentTab": 3
-      }
-    ],
-    "direction": "horizontal",
-    "width": 291.5024719238281
-  },
-  "right": {
-    "id": "34fb4efa27cf970d",
-    "type": "split",
-    "children": [
+        "currentTab": 2
+      },
       {
-        "id": "d4a138574bae43c9",
+        "id": "3fe62dcf76ed4e68",
         "type": "tabs",
-        "dimension": 35.82443653618031,
+        "dimension": 36.96551724137931,
         "children": [
           {
             "id": "d5875a4ebf9ee3f8",
@@ -146,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "个人区/2-weread/我的26岁女房客-超级大坦克科比.md",
+                "file": "🏡Home.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -169,12 +147,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.6906394964510819,
+                  "scale": 0.25062435000264666,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "我的26岁女房客-超级大坦克科比 的关系图"
+              "title": "🏡Home 的关系图"
             }
           },
           {
@@ -193,12 +171,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "个人区/2-weread/我的26岁女房客-超级大坦克科比.md",
+                "file": "🏡Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "我的26岁女房客-超级大坦克科比 的出链列表"
+              "title": "🏡Home 的出链列表"
             }
           },
           {
@@ -207,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人区/2-weread/我的26岁女房客-超级大坦克科比.md",
+                "file": "🏡Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,7 +195,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "我的26岁女房客-超级大坦克科比 的反向链接列表"
+              "title": "🏡Home 的反向链接列表"
             }
           },
           {
@@ -229,34 +207,20 @@
               "icon": "cloud",
               "title": "QuickShare"
             }
-          },
-          {
-            "id": "6cf7bf9e9348e0fb",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "102fbb55eb62d1d0",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {},
-              "icon": "checkmark",
-              "title": "Todo List"
-            }
           }
-        ],
-        "currentTab": 5
-      },
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 240
+  },
+  "right": {
+    "id": "34fb4efa27cf970d",
+    "type": "split",
+    "children": [
       {
         "id": "72a4b91604aed60d",
         "type": "tabs",
-        "dimension": 64.1755634638197,
         "children": [
           {
             "id": "b7f62067e71f949d",
@@ -303,10 +267,20 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "个人区/2-weread/我的26岁女房客-超级大坦克科比.md"
+                "file": "🏡Home.md"
               },
               "icon": "lucide-info",
-              "title": "我的26岁女房客-超级大坦克科比的笔记属性"
+              "title": "🏡Home的笔记属性"
+            }
+          },
+          {
+            "id": "a2c706e428fc3a91",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Timeline"
             }
           },
           {
@@ -315,26 +289,16 @@
             "state": {
               "type": "langr-learn-panel",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
-            }
-          },
-          {
-            "id": "bf5a1c364bad612a",
-            "type": "leaf",
-            "state": {
-              "type": "planner-timeline",
-              "state": {},
-              "icon": "checkmark",
-              "title": "Timeline"
+              "icon": "reading-glasses",
+              "title": "学习新单词"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 366.5
+    "width": 312
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -348,11 +312,8 @@
       "templates:插入模板": true,
       "command-palette:打开命令面板": true,
       "switcher:打开快速切换": true,
-      "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-kanban:创建新看板": true,
       "remotely-save:Remotely Save": false,
-      "obsidian-day-planner:Open Timeline": false,
-      "obsidian-day-planner:Open Multi-Day View": false,
       "obsidian-regex-pipeline:Regex Rulesets": false,
       "templater-obsidian:Templater": false,
       "obsidian-spaced-repetition-recall:复习卡片": false,
@@ -361,70 +322,69 @@
       "obsidian-memos:Thino": false,
       "fuzzy-chinese-pinyin:FuzzySearch": false,
       "obsidian-daily-notes-viewer:打开 Viewer": false,
-      "improved-random-note:Open improved random note": false,
       "float-search:Search obsidian in modal view": false,
       "obsidian-importer:Open Importer": false,
       "obsidian-to-notion:Share to notion": false,
       "copilot:Open Copilot Chat": false,
       "flashcards-obsidian:Generate flashcards": false,
       "obsidian42-brat:BRAT": false,
-      "cmdr:显示当前文件": true,
-      "obsidian-git:Open Git source control": false,
       "share-to-notionnext:分享到 NotionNext": false,
-      "extract-highlights-plugin:Extract Highlights": false,
-      "big-calendar:Big Calendar": false,
-      "media-extended:Open media": false,
-      "obsidian-projects:打开项目": false,
+      "i18n:I18N": false,
+      "cmdr:显示当前文件": false,
+      "obsidian-git:打开Git源代码管理": false,
+      "improved-random-note:打开一篇随机笔记": false,
+      "oz-clear-unused-images:清除未使用的图像": false,
+      "obsidian-day-planner:开放性时间线": false,
+      "obsidian-day-planner:打开多日视图": false,
       "obsidian-language-learner:打开查词面板": false,
       "obsidian-language-learner:打开新词面板": false,
       "obsidian-language-learner:打开统计": false,
-      "obsidian-language-learner:单词列表": false,
-      "omnisearch:Omnisearch": false
+      "obsidian-language-learner:单词列表": false
     }
   },
   "active": "1bb352666307d0c2",
   "lastOpenFiles": [
-    "学习区/04-C 1/C  基础入门.md",
+    "🏡Home.md",
+    "学习区/_Templates/startup/插件ID.md",
+    "学习区/_Templates/startup/FastStart-StartupScript.md",
+    "学习区/_Templates/startup/FastStart-Plugins-ShortDelay.md",
+    "学习区/_Templates/startup/FastStart-Plugins-mobile.md",
+    "学习区/_Templates/startup/FastStart-Plugins-LongDelay.md",
+    "学习区/_Templates/startup/FastStart-GenerateListOfInstalledPlugins.md",
+    "学习区/07-Java/day01-Java入门/资料/资料/JDK9_API帮助文档.CHM.baiduyun.p.downloading",
+    "学习区/07-Java/day01-Java入门/资料/资料",
+    "学习区/07-Java/day01-Java入门/资料",
+    "学习区/07-Java/day01-Java入门",
+    "学习区/10-计算机网络/计算机网络.md",
+    "学习区/07-Java",
+    "个人区/6-SimpRead/5 个 Obsidian 命名方法，告别杂乱笔记，提高效率 200%！.md",
+    "个人区/1-生活/Viewer.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/03-行列式的按行按列展开定理.md",
+    "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md",
     "学习区/07-线性代数/笔记库/第一章 行列式/04-经典永恒类别行列式计算.md",
+    "学习区/04-C 1/C  基础入门.md",
     "学习区/04-C++/概念库/作文.md",
     "学习区/07-线性代数/笔记库/第一章 行列式/05-克拉默法则.md",
-    "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.md",
     "学习区/07-线性代数/笔记库/2.1  矩阵的运算-Xmind.md",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT33M51.703S.jpeg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT34M32.228S.jpeg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT1M11.228S.jpeg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT38M54.16S.jpeg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT57.964S.jpeg",
-    "🏡Home.md",
     "个人区/2-weread/我的26岁女房客-超级大坦克科比.md",
     "个人区/2-weread/我的26岁女房客.md",
     "个人区/2-weread/宿命之环.md",
     "个人区/2-weread/诡秘之主.md",
     "个人区/2-weread/人祖传.md",
     "个人区/2-weread/神秘复苏.md",
-    "学习区/07-线性代数/笔记库/第一章 行列式/03-行列式的按行按列展开定理.md",
     "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-02.md",
     "学习区/07-线性代数/笔记库/第一章 行列式/第一章 行列式.html",
     "学习区/07-线性代数/笔记库/第一章 行列式/01-行列式的定义.md",
     "学习区/07-线性代数/笔记库/第一章 行列式/未命名思维导图.md",
-    "未命名看板.md",
-    "个人区/1-生活/课程表.md",
-    "个人区/1-生活/📖学习安排.md",
-    "个人区/1-生活/🏠个人备忘.md",
-    "个人区/1-生活/日记.md",
-    "个人区/1-生活/💼工作任务.md",
-    "个人区/1-生活/Viewer.md",
-    "个人区/6-SimpRead/A 兴趣/A1 Obsidian-Use/Plugin/Obsidian 插件：Zoom 通过快捷键，快速聚焦到大纲.md",
-    "个人区/4-领域夹/Area-Obsidian.md",
     "学习区/07-线性代数/笔记库/第一章 行列式",
     "学习区/02-大学英语/考研真题/阅读/2010年真题",
     "References",
     "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-01",
-    "学习区/02-大学英语/考研真题/阅读/2005年真题",
-    "学习区/10-计算机网络",
-    "学习区/09-马克思主义基本原理/未命名",
-    "学习区/02-大学英语/考研真题/阅读/2008年真题",
-    "未命名",
     "个人区/7-程序夹/心语精灵/开发路径.canvas",
     "学习区/11-Java/day13-面向对象进阶（static&继承）/笔记/imgs/360截图20181202194945932.jpg",
     "学习区/00-临时文件/【一高数·Kira老师】4小时期末_考研突击通关！考点公式梳理+押题 _ 概率论与梳理统计PT37M25.529S.jpeg",

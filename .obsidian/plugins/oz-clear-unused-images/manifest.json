@@ -3,7 +3,7 @@
     "name": "Clear Unused Images",
     "version": "1.1.1",
     "minAppVersion": "0.11.13",
-    "description": "Clear the images that you are not using anymore in your markdown notes to save space.",
+    "description": "清除标记笔记中不再使用的图像以节省空间。",
     "author": "Ozan",
     "authorUrl": "https://www.ozan.pl",
     "fundingUrl": "https://ko-fi.com/ozante",

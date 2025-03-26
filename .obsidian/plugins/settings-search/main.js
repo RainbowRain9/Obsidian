@@ -103,7 +103,7 @@ var SettingsSearch = class extends import_obsidian.Plugin {
     }) && this.register(() => delete window["SettingsSearch"]);
     this.app.workspace.onLayoutReady(async () => {
       this.settingsResultsContainerEl.createEl("h3", {
-        text: "Settings Search Results"
+        text: "搜索结果"
       });
       this.settingsResultsEl = this.settingsResultsContainerEl.createDiv("settings-search-results");
       this.buildScope();
@@ -159,7 +159,7 @@ var SettingsSearch = class extends import_obsidian.Plugin {
       let plugin = this.manifests.find((p) => p.name == resource.text);
       if (plugin && this.app.plugins.getPlugin(plugin.id)?._loaded && this.app.setting.pluginTabs.find((t) => t.id == plugin.id)) {
         setting.addExtraButton((b) => {
-          b.setTooltip(`Open ${resource.text} Settings`).onClick(() => {
+          b.setTooltip(`打开${resource.text}设置`).onClick(() => {
             this.app.setting.openTabById(plugin.id);
           });
         });
@@ -170,7 +170,7 @@ var SettingsSearch = class extends import_obsidian.Plugin {
       const plugin = plugins.find((p) => p._loaded && p.instance.name == resource.text);
       if (plugin && this.app.setting.pluginTabs.find((t) => t.id == plugin.instance.id)) {
         setting.addExtraButton((b) => {
-          b.setTooltip(`Open ${resource.text} Settings`).onClick(() => {
+          b.setTooltip(`打开${resource.text}设置`).onClick(() => {
             this.app.setting.openTabById(plugin.instance.id);
           });
         });
@@ -314,7 +314,7 @@ var SettingsSearch = class extends import_obsidian.Plugin {
     this.search.onChange((v) => {
       this.onChange(v);
     });
-    this.search.setPlaceholder("Search settings...");
+    this.search.setPlaceholder("搜索设置……");
     this.app.setting.tabHeadersEl.prepend(this.settingsSearchEl);
   }
   buildScope() {
@@ -443,7 +443,7 @@ var SettingsSearch = class extends import_obsidian.Plugin {
         headers[resource.tab].append(setting.settingEl);
       }
     } else {
-      this.settingsResultsEl.setText("No results found :(");
+      this.settingsResultsEl.setText("未找到结果 :(");
     }
   }
   showResult(result) {

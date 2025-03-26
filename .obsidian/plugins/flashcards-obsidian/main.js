@@ -581,44 +581,44 @@ var SettingsTab = /** @class */ (function (_super) {
         var containerEl = this.containerEl;
         var plugin = this.plugin;
         containerEl.empty();
-        containerEl.createEl("h1", { text: "Flashcards - Settings" });
+        containerEl.createEl("h1", { text: "闪卡-设置" });
         var description = createFragment();
         description.append("This needs to be done only one time. Open Anki and click the button to grant permission.", createEl('br'), 'Be aware that AnkiConnect must be installed.');
         new obsidian.Setting(containerEl)
-            .setName("Give Permission")
+            .setName("给予权限")
             .setDesc(description)
             .addButton(function (button) {
-            button.setButtonText("Grant Permission").onClick(function () {
+            button.setButtonText("授予权限").onClick(function () {
                 new Anki().requestPermission().then(function (result) {
                     if (result.permission === "granted") {
                         plugin.settings.ankiConnectPermission = true;
                         plugin.saveData(plugin.settings);
-                        new obsidian.Notice("Anki Connect permission granted");
+                        new obsidian.Notice("授予Anki Connect权限");
                     }
                     else {
-                        new obsidian.Notice("AnkiConnect permission not granted");
+                        new obsidian.Notice("未授予AnkiConnect权限");
                     }
                 }).catch(function (error) {
-                    new obsidian.Notice("Something went wrong, is Anki open?");
+                    new obsidian.Notice("出了点问题，Anki 打开了吗？");
                     console.error(error);
                 });
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Test Anki")
-            .setDesc("Test that connection between Anki and Obsidian actually works.")
+            .setName("测试Anki")
+            .setDesc("测试 Anki 和 Obsidian 之间的连接是否确实有效。")
             .addButton(function (text) {
-            text.setButtonText("Test").onClick(function () {
+            text.setButtonText("测试").onClick(function () {
                 new Anki()
                     .ping()
-                    .then(function () { return new obsidian.Notice("Anki works"); })
-                    .catch(function () { return new obsidian.Notice("Anki is not connected"); });
+                    .then(function () { return new obsidian.Notice("Anki作品"); })
+                    .catch(function () { return new obsidian.Notice("Anki未连接"); });
             });
         });
-        containerEl.createEl("h2", { text: "General" });
+        containerEl.createEl("h2", { text: "一般" });
         new obsidian.Setting(containerEl)
-            .setName("Context-aware mode")
-            .setDesc("Add the ancestor headings to the question of the flashcard.")
+            .setName("上下文感知模式")
+            .setDesc("将祖先标题添加到抽认卡的问题中。")
             .addToggle(function (toggle) {
             return toggle.setValue(plugin.settings.contextAwareMode).onChange(function (value) {
                 plugin.settings.contextAwareMode = value;
@@ -626,8 +626,8 @@ var SettingsTab = /** @class */ (function (_super) {
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Source support")
-            .setDesc("Add to every card the source, i.e. the link to the original card. NOTE: Old cards made without source support cannot be updated.")
+            .setName("来源支持")
+            .setDesc("在每张卡片上添加来源，即原始卡片的链接。注意：没有源代码支持的旧卡无法更新。")
             .addToggle(function (toggle) {
             return toggle.setValue(plugin.settings.sourceSupport).onChange(function (value) {
                 plugin.settings.sourceSupport = value;
@@ -635,8 +635,8 @@ var SettingsTab = /** @class */ (function (_super) {
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Code highlight support")
-            .setDesc("Add highlight of the code in Anki.")
+            .setName("代码高亮显示支持")
+            .setDesc("在Anki中添加代码的高亮显示。")
             .addToggle(function (toggle) {
             return toggle
                 .setValue(plugin.settings.codeHighlightSupport)
@@ -646,8 +646,8 @@ var SettingsTab = /** @class */ (function (_super) {
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Inline ID support")
-            .setDesc("Add ID to end of line for inline cards.")
+            .setName("内联ID支持")
+            .setDesc("将ID添加到内联卡的行尾。")
             .addToggle(function (toggle) {
             return toggle.setValue(plugin.settings.inlineID).onChange(function (value) {
                 plugin.settings.inlineID = value;
@@ -655,8 +655,8 @@ var SettingsTab = /** @class */ (function (_super) {
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Folder-based deck name")
-            .setDesc("Add ID to end of line for inline cards.")
+            .setName("基于文件夹的文件组名称")
+            .setDesc("将ID添加到内联卡的行尾。")
             .addToggle(function (toggle) {
             return toggle.setValue(plugin.settings.folderBasedDeck).onChange(function (value) {
                 plugin.settings.folderBasedDeck = value;
@@ -664,57 +664,57 @@ var SettingsTab = /** @class */ (function (_super) {
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Default deck name")
-            .setDesc("The name of the default deck where the cards will be added when not specified.")
+            .setName("默认套牌名称")
+            .setDesc("未指定时将添加卡片的默认卡片组的名称。")
             .addText(function (text) {
             text
                 .setValue(plugin.settings.deck)
-                .setPlaceholder("Deck::sub-deck")
+                .setPlaceholder("牌组::子牌组")
                 .onChange(function (value) {
                 if (value.length) {
                     plugin.settings.deck = value;
                     plugin.saveData(plugin.settings);
                 }
                 else {
-                    new obsidian.Notice("The deck name must be at least 1 character long");
+                    new obsidian.Notice("牌组名称必须至少为一个字符长。");
                 }
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Default Anki tag")
-            .setDesc("This tag will be added to each generated card on Anki")
+            .setName("默认Anki标签")
+            .setDesc("此标签将添加到Anki上生成的每张卡上")
             .addText(function (text) {
             text
                 .setValue(plugin.settings.defaultAnkiTag)
                 .setPlaceholder("Anki tag")
                 .onChange(function (value) {
                 if (!value)
-                    new obsidian.Notice("No default tags will be added");
+                    new obsidian.Notice("不会添加默认标签");
                 plugin.settings.defaultAnkiTag = value.toLowerCase();
                 plugin.saveData(plugin.settings);
             });
         });
-        containerEl.createEl("h2", { text: "Cards Identification" });
+        containerEl.createEl("h2", { text: "卡片识别" });
         new obsidian.Setting(containerEl)
-            .setName("Flashcards #tag")
-            .setDesc("The tag to identify the flashcards in the notes (case-insensitive).")
+            .setName("抽认卡 #标签")
+            .setDesc("用于识别笔记中抽认卡的标签（不区分大小写）。")
             .addText(function (text) {
             text
                 .setValue(plugin.settings.flashcardsTag)
-                .setPlaceholder("Card")
+                .setPlaceholder("卡片")
                 .onChange(function (value) {
                 if (value) {
                     plugin.settings.flashcardsTag = value.toLowerCase();
                     plugin.saveData(plugin.settings);
                 }
                 else {
-                    new obsidian.Notice("The tag must be at least 1 character long");
+                    new obsidian.Notice("标记的长度必须至少为1个字符");
                 }
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Inline card separator")
-            .setDesc("The separator to identifty the inline cards in the notes.")
+            .setName("内联卡片分隔符")
+            .setDesc("笔记中用于识别内嵌卡片的分隔符。")
             .addText(function (text) {
             text
                 .setValue(plugin.settings.inlineSeparator)
@@ -724,22 +724,22 @@ var SettingsTab = /** @class */ (function (_super) {
                 if (value.trim().length === 0 || value === plugin.settings.inlineSeparatorReverse) {
                     plugin.settings.inlineSeparator = "::";
                     if (value.trim().length === 0) {
-                        new obsidian.Notice("The separator must be at least 1 character long");
+                        new obsidian.Notice("分隔符的长度必须至少为1个字符");
                     }
                     else if (value === plugin.settings.inlineSeparatorReverse) {
-                        new obsidian.Notice("The separator must be different from the inline reverse separator");
+                        new obsidian.Notice("分隔符必须与内联反向分隔符不同。");
                     }
                 }
                 else {
                     plugin.settings.inlineSeparator = escapeRegExp(value.trim());
-                    new obsidian.Notice("The separator has been changed");
+                    new obsidian.Notice("分隔符已被更改");
                 }
                 plugin.saveData(plugin.settings);
             });
         });
         new obsidian.Setting(containerEl)
-            .setName("Inline reverse card separator")
-            .setDesc("The separator to identifty the inline revese cards in the notes.")
+            .setName("内联反转卡分离器")
+            .setDesc("用于识别笔记中内联反向卡片的分隔符。")
             .addText(function (text) {
             text
                 .setValue(plugin.settings.inlineSeparatorReverse)
@@ -749,15 +749,15 @@ var SettingsTab = /** @class */ (function (_super) {
                 if (value.trim().length === 0 || value === plugin.settings.inlineSeparator) {
                     plugin.settings.inlineSeparatorReverse = ":::";
                     if (value.trim().length === 0) {
-                        new obsidian.Notice("The separator must be at least 1 character long");
+                        new obsidian.Notice("分隔符的长度必须至少为1个字符");
                     }
                     else if (value === plugin.settings.inlineSeparator) {
-                        new obsidian.Notice("The separator must be different from the inline separator");
+                        new obsidian.Notice("分隔符必须与行内分隔符不同。");
                     }
                 }
                 else {
                     plugin.settings.inlineSeparatorReverse = escapeRegExp(value.trim());
-                    new obsidian.Notice("The separator has been changed");
+                    new obsidian.Notice("分隔符已被更改");
                 }
                 plugin.saveData(plugin.settings);
             });
@@ -883,72 +883,72 @@ function getDefaultOpts (simple) {
     },
     smartIndentationFix: {
       defaultValue: false,
-      description: 'Tries to smartly fix indentation in es6 strings',
+      description: '尝试巧妙地修复es6字符串中的缩进',
       type: 'boolean'
     },
     disableForced4SpacesIndentedSublists: {
       defaultValue: false,
-      description: 'Disables the requirement of indenting nested sublists by 4 spaces',
+      description: '禁用嵌套子列表缩进4个空格的要求',
       type: 'boolean'
     },
     simpleLineBreaks: {
       defaultValue: false,
-      description: 'Parses simple line breaks as <br> (GFM Style)',
+      description: '将简单换行符解析为<br>（GFM样式）',
       type: 'boolean'
     },
     requireSpaceBeforeHeadingText: {
       defaultValue: false,
-      description: 'Makes adding a space between `#` and the header text mandatory (GFM Style)',
+      description: '强制在“#”和标题文本之间添加空格（GFM样式）”',
       type: 'boolean'
     },
     ghMentions: {
       defaultValue: false,
-      description: 'Enables github @mentions',
+      description: '启用github@提及',
       type: 'boolean'
     },
     ghMentionsLink: {
       defaultValue: 'https://github.com/{u}',
-      description: 'Changes the link generated by @mentions. Only applies if ghMentions option is enabled.',
+      description: '更改@mentions生成的链接。仅在启用ghMentions选项时适用。',
       type: 'string'
     },
     encodeEmails: {
       defaultValue: true,
-      description: 'Encode e-mail addresses through the use of Character Entities, transforming ASCII e-mail addresses into its equivalent decimal entities',
+      description: '通过使用字符实体对电子邮件地址进行编码，将ASCII电子邮件地址转换为等效的十进制实体',
       type: 'boolean'
     },
     openLinksInNewWindow: {
       defaultValue: false,
-      description: 'Open all links in new windows',
+      description: '在新窗口中打开所有链接',
       type: 'boolean'
     },
     backslashEscapesHTMLTags: {
       defaultValue: false,
-      description: 'Support for HTML Tag escaping. ex: \<div>foo\</div>',
+      description: '支持HTML标签转义。例如：\<div>foo\</div>',
       type: 'boolean'
     },
     emoji: {
       defaultValue: false,
-      description: 'Enable emoji support. Ex: `this is a :smile: emoji`',
+      description: '启用表情符号支持。例如：`这是一个：微笑：表情符号`',
       type: 'boolean'
     },
     underline: {
       defaultValue: false,
-      description: 'Enable support for underline. Syntax is double or triple underscores: `__underline word__`. With this option enabled, underscores no longer parses into `<em>` and `<strong>`',
+      description: '启用下划线支持。语法是双下划线或三下划线：`__underline word__`。启用此选项后，下划线不再解析为“<em>”和“<strong>”`',
       type: 'boolean'
     },
     completeHTMLDocument: {
       defaultValue: false,
-      description: 'Outputs a complete html document, including `<html>`, `<head>` and `<body>` tags',
+      description: '输出一个完整的html文档，包括“<html>”、“<head>”和“<body>”标签',
       type: 'boolean'
     },
     metadata: {
       defaultValue: false,
-      description: 'Enable support for document metadata (defined at the top of the document between `«««` and `»»»` or between `---` and `---`).',
+      description: '启用对文档元数据的支持（定义在文档顶部“«««”和“»»»”之间或“---”和“---”之间）。',
       type: 'boolean'
     },
     splitAdjacentBlockquotes: {
       defaultValue: false,
-      description: 'Split adjacent blockquote blocks',
+      description: '拆分相邻的区块',
       type: 'boolean'
     }
   };
@@ -4328,7 +4328,7 @@ showdown.subParser('unhashHTMLSpans', function (text, options, globals) {
       var num = RegExp.$1;
       repText = repText.replace('¨C' + num + 'C', globals.gHtmlSpans[num]);
       if (limit === 10) {
-        console.error('maximum nesting of 10 spans reached!!!');
+        console.error('已达到 10 个跨度的最大嵌套级别！！！');
         break;
       }
       ++limit;
@@ -6560,7 +6560,7 @@ var Parser = /** @class */ (function () {
             var embedValue = _this.htmlConverter.makeMarkdown(_this.htmlConverter.makeHtml(el.outerHTML).toString());
             var embedKey = el.getAttribute("src");
             embedMap.set(embedKey, embedValue);
-            // console.log("embedKey: \n" + embedKey);
+            // console.log("embedKey:\n" + embedKey);
             // console.log("embedValue: \n" + embedValue);
         });
         return embedMap;
@@ -6906,7 +6906,7 @@ var CardsService = /** @class */ (function () {
                         total_1 = 0;
                         cardsToCreate.forEach(function (card) {
                             if (card.id === null) {
-                                new obsidian.Notice("Error, could not add: '".concat(card.initialContent, "'"), noticeTimeout);
+                                new obsidian.Notice("错误，无法添加: '".concat(card.initialContent, "'"), noticeTimeout);
                             }
                             else {
                                 card.reversed ? (insertedCards_1 += 2) : insertedCards_1++;
@@ -7113,7 +7113,7 @@ var CardsService = /** @class */ (function () {
                     case 0: return [4 /*yield*/, this.anki.cardsInfo(cardsIds)];
                     case 1:
                         cardsInfo = _a.sent();
-                        console.log("Flashcards: Cards info");
+                        console.log("抽认卡：卡片信息");
                         console.log(cardsInfo);
                         if (cardsInfo.length !== 0) {
                             return [2 /*return*/, cardsInfo[0].deckName !== deckName];
@@ -7193,7 +7193,7 @@ var ObsidianFlashcard = /** @class */ (function (_super) {
                         statusBar = this.addStatusBarItem();
                         this.addCommand({
                             id: 'generate-flashcard-current-file',
-                            name: 'Generate for the current file',
+                            name: '为当前文件生成',
                             checkCallback: function (checking) {
                                 var activeFile = _this.app.workspace.getActiveFile();
                                 if (activeFile) {
@@ -7211,12 +7211,12 @@ var ObsidianFlashcard = /** @class */ (function (_super) {
                                 _this.generateCards(activeFile);
                             }
                             else {
-                                new obsidian.Notice("Open a file before");
+                                new obsidian.Notice("打开文件之前");
                             }
                         });
                         this.addSettingTab(new SettingsTab(this.app, this));
                         this.registerInterval(window.setInterval(function () {
-                            return anki.ping().then(function () { return statusBar.setText('Anki ⚡️'); }).catch(function () { return statusBar.setText(''); });
+                            return anki.ping().then(function () { return statusBar.setText('Anki⚡️'); }).catch(function () { return statusBar.setText(''); });
                         }, 15 * 1000));
                         return [2 /*return*/];
                 }

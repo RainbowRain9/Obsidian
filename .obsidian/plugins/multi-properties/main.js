@@ -243,7 +243,7 @@ function set_current_component(component) {
 }
 function get_current_component() {
   if (!current_component)
-    throw new Error("Function called outside component initialization");
+    throw new Error("函数在组件初始化之外被调用");
   return current_component;
 }
 function onMount(fn) {
@@ -1536,7 +1536,7 @@ function create_fragment2(ctx) {
   let form;
   let label;
   let input_1;
-  let t12_value = "Overwrite existing properties";
+  let t12_value = "覆盖已有属性";
   let t12;
   let t13;
   let div3;
@@ -1578,10 +1578,10 @@ function create_fragment2(ctx) {
       );
       t3 = space();
       p0 = element("p");
-      p0.textContent = "Type in a property name, then value. Use the dropbox to choose what type of\r\n    data you wish to store.";
+      p0.textContent = "输入属性名称和值。使用下拉框选择您希望存储的\r\n    数据类型。";
       t5 = space();
       p1 = element("p");
-      t6 = text('If you want to make a List property, use the Text data type and separate\r\n    each value with a "');
+      t6 = text('如需创建列表属性，请使用文本数据类型并用符号分隔\r\n    每个值。 "');
       t7 = text(
         /*delimiter*/
         ctx[1]
@@ -1589,7 +1589,7 @@ function create_fragment2(ctx) {
       t8 = text('".');
       t9 = space();
       p2 = element("p");
-      p2.textContent = 'If you want to add Tags, use the name "tags".';
+      p2.textContent = '如需添加标签，请使用属性名 "tags"。';
       t11 = space();
       form = element("form");
       label = element("label");
@@ -2021,7 +2021,7 @@ function create_fragment3(ctx) {
       ctx[4]}`;
       t1 = space();
       p1 = element("p");
-      p1.textContent = "The following props will be added:";
+      p1.textContent = "以下属性将被添加：";
       t3 = space();
       ul = element("ul");
       for (let i = 0; i < each_blocks.length; i += 1) {
@@ -2029,7 +2029,7 @@ function create_fragment3(ctx) {
       }
       t4 = space();
       p2 = element("p");
-      p2.textContent = "Are you sure you wish to proceed?";
+      p2.textContent = "确认要继续执行吗？";
       t6 = space();
       button0 = element("button");
       button0.textContent = "Confirm";
@@ -2182,7 +2182,7 @@ var AddConfirmModal = class extends import_obsidian.Modal {
     this.close();
   }
   onOpen() {
-    this.titleEl.createEl("h2", { text: "Add Properties" });
+    this.titleEl.createEl("h2", { text: "添加属性" });
     this.component = new AddConfirmForm_default({
       target: this.contentEl,
       props: {
@@ -2227,7 +2227,7 @@ var PropModal = class extends import_obsidian2.Modal {
     ).open();
   }
   onOpen() {
-    this.titleEl.createEl("h2", { text: "Add Properties" });
+    this.titleEl.createEl("h2", { text: "添加属性" });
     this.component = new AddPropForm_default({
       target: this.contentEl,
       props: {
@@ -2251,8 +2251,8 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
   display() {
     let { containerEl } = this;
     containerEl.empty();
-    new import_obsidian3.Setting(containerEl).setName("Overwrite existing text").setDesc(
-      "When adding a property with a name that already exists, the text will overwrite the prop's existing value.  If left disabled, the new value will be appended to the old as a List."
+    new import_obsidian3.Setting(containerEl).setName("覆盖现有文本").setDesc(
+      "添加名称已经存在的属性时，文本将覆盖该属性的现有值。 如果保持禁用状态，新值将作为列表添加到旧值。 "
     ).addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.overwrite);
       toggle.onChange(async (value) => {
@@ -2260,8 +2260,8 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian3.Setting(containerEl).setName("Recursive Iteration").setDesc(
-      "When toggled on, while looping through all files in a folder, you will also loop through any sub-folders."
+    new import_obsidian3.Setting(containerEl).setName("递归迭代").setDesc(
+      "启用后，在循环遍历文件夹中的所有文件时，还将循环遍历任何子文件夹。 "
     ).addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.recursive);
       toggle.onChange(async (value) => {
@@ -2269,22 +2269,22 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian3.Setting(containerEl).setName("List Delimiter").setDesc(
-      "Set delimiter to use when creating a list.  Commas(,) are used by default."
+    new import_obsidian3.Setting(containerEl).setName("列表分隔符").setDesc(
+      "设置要在创建列表时使用的分隔符。 默认使用逗号（,）。 "
     ).addText((text2) => {
       text2.setValue(this.plugin.settings.delimiter);
       text2.onChange(async (value) => {
         if (value.length > 1) {
           text2.setValue(value[0]);
-          new import_obsidian3.Notice("Delimiter must be a single character.");
+          new import_obsidian3.Notice("分隔符必须是单个字符。");
           return;
         }
         this.plugin.settings.delimiter = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian3.Setting(containerEl).setName("Default Props File").setDesc(
-      "Select a file with properties that you want to load into the Multi Properties form by default.  Type in the full path of the desired file.(ex. Templates/PropFile 1)"
+    new import_obsidian3.Setting(containerEl).setName("默认属性文件").setDesc(
+      "选择一个包含属性的文件，该文件将默认载入多属性表单。请输入目标文件的完整路径。(例如：Templates/PropFile 1)"
     ).addText((text2) => {
       text2.setValue(this.plugin.settings.defaultPropPath);
       text2.onChange(async (value) => {
@@ -2440,7 +2440,7 @@ function create_fragment4(ctx) {
       );
       t3 = space();
       p = element("p");
-      p.textContent = "Select the properties you wish to remove from the file selection.";
+      p.textContent = "从文件选择中勾选您希望移除的属性。";
       t5 = space();
       form = element("form");
       div3 = element("div");
@@ -2582,7 +2582,7 @@ function instance4($$self, $$props, $$invalidate) {
   }
   function onSubmit() {
     if (checkCount === 0) {
-      $$invalidate(2, alertText = "Please select at least one property to remove.");
+      $$invalidate(2, alertText = "请至少选择一个要移除的属性。");
       errorEl.classList.remove("hidden");
       return;
     }
@@ -2715,8 +2715,8 @@ function create_fragment5(ctx) {
       div = element("div");
       form = element("form");
       p0 = element("p");
-      p0.textContent = `The following ${/*word*/
-      ctx[4]} will be removed:`;
+      p0.textContent = `下列 ${/*word*/
+      ctx[4]} 将被移除:`;
       t3 = space();
       ul = element("ul");
       for (let i = 0; i < each_blocks.length; i += 1) {
@@ -2724,10 +2724,10 @@ function create_fragment5(ctx) {
       }
       t4 = space();
       p1 = element("p");
-      p1.textContent = "Are you sure you wish to proceed?";
+      p1.textContent = "确认要继续执行吗？";
       t6 = space();
       button0 = element("button");
-      button0.textContent = "Delete";
+      button0.textContent = "删除";
       t8 = space();
       button1 = element("button");
       button1.textContent = "Cancel";
@@ -2860,10 +2860,10 @@ var RemoveConfirmModal = class extends import_obsidian4.Modal {
   }
   onOpen() {
     if (!this.names || this.names.length === 0) {
-      new import_obsidian4.Notice("Please check at least one property to remove.");
+      new import_obsidian4.Notice("请检查至少一个要删除的属性。");
       this.close();
     }
-    this.titleEl.createEl("h2", { text: "Remove Properties" });
+    this.titleEl.createEl("h2", { text: "移除属性" });
     this.component = new RemoveConfirmForm_default({
       target: this.contentEl,
       props: {
@@ -2879,7 +2879,7 @@ var RemoveConfirmModal = class extends import_obsidian4.Modal {
 var RemoveModal = class extends import_obsidian5.Modal {
   constructor(app, names, submission) {
     if (!names || names.length === 0) {
-      new import_obsidian5.Notice("No properties to remove");
+      new import_obsidian5.Notice("没有要删除的属性");
       return;
     }
     super(app);
@@ -2901,7 +2901,7 @@ var RemoveModal = class extends import_obsidian5.Modal {
     ).open();
   }
   onOpen() {
-    this.titleEl.createEl("h2", { text: "Remove Properties" });
+    this.titleEl.createEl("h2", { text: "移除属性" });
     this.component = new RemovePropForm_default({
       target: this.contentEl,
       props: {
@@ -2993,7 +2993,7 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
       this.app.workspace.on("file-menu", (menu, folder) => {
         if (folder instanceof import_obsidian6.TFolder) {
           menu.addItem((item) => {
-            item.setIcon("archive").setTitle("Add props to folder's notes").onClick(() => this.createPropModal(folder));
+            item.setIcon("archive").setTitle("在文件夹的注释中添加props").onClick(() => this.createPropModal(folder));
           });
         }
       })
@@ -3002,7 +3002,7 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
       this.app.workspace.on("file-menu", (menu, folder) => {
         if (folder instanceof import_obsidian6.TFolder) {
           menu.addItem((item) => {
-            item.setIcon("archive").setTitle("Remove props from folder's notes").onClick(async () => this.createRemoveModal(folder));
+            item.setIcon("archive").setTitle("从文件夹的笔记中删除props").onClick(async () => this.createRemoveModal(folder));
           });
         }
       })
@@ -3010,24 +3010,24 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
     this.registerEvent(
       this.app.workspace.on("files-menu", (menu, files) => {
         menu.addItem((item) => {
-          item.setIcon("archive").setTitle("Add props to selected files").onClick(() => this.createPropModal(files));
+          item.setIcon("archive").setTitle("向所选文件添加props").onClick(() => this.createPropModal(files));
         });
       })
     );
     this.registerEvent(
       this.app.workspace.on("files-menu", (menu, files) => {
         menu.addItem((item) => {
-          item.setIcon("archive").setTitle("Remove props from selected files").onClick(async () => this.createRemoveModal(files));
+          item.setIcon("archive").setTitle("从选定的文件中删除props").onClick(async () => this.createRemoveModal(files));
         });
       })
     );
     this.registerEvent(
       this.app.workspace.on("search:results-menu", (menu, leaf) => {
         menu.addItem((item) => {
-          item.setIcon("archive").setTitle("Add props to search results").onClick(() => {
+          item.setIcon("archive").setTitle("在搜索结果中添加props").onClick(() => {
             let files = this.getFilesFromSearch(leaf);
             if (!files.length) {
-              new import_obsidian6.Notice("No files to add properties to.", 4e3);
+              new import_obsidian6.Notice("没有要添加属性的文件。", 4e3);
               return;
             }
             this.createPropModal(files);
@@ -3038,10 +3038,10 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
     this.registerEvent(
       this.app.workspace.on("search:results-menu", (menu, leaf) => {
         menu.addItem((item) => {
-          item.setIcon("archive").setTitle("Remove props from search results").onClick(async () => {
+          item.setIcon("archive").setTitle("在搜索结果中移除props").onClick(async () => {
             let files = this.getFilesFromSearch(leaf);
             if (!files.length) {
-              new import_obsidian6.Notice("No files to remove properties from.", 4e3);
+              new import_obsidian6.Notice("没有要从中删除属性的文件。", 4e3);
               return;
             }
             this.createRemoveModal(files);
@@ -3124,7 +3124,7 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
         defaultProps = tmp;
       } catch (e) {
         new import_obsidian6.Notice(
-          `${e}.  Check if you entered a valid path in the Default Props File setting.`,
+          `${e}.  请检查默认属性文件设置中输入的路径是否有效。`,
           1e4
         );
         defaultProps = [];
@@ -3152,7 +3152,7 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
       iterateFunc = (props) => this.searchFiles(iterable, this.removePropsCallback(props));
     }
     if (names.length === 0) {
-      new import_obsidian6.Notice("No properties to remove", 4e3);
+      new import_obsidian6.Notice("无属性可移除", 4e3);
       return;
     }
     const sortedNames = [...names].sort(
@@ -3168,7 +3168,7 @@ var MultiPropPlugin = class extends import_obsidian6.Plugin {
     const frontmatter = metadata == null ? void 0 : metadata.frontmatter;
     console.log({ frontmatter });
     if (!frontmatter) {
-      new import_obsidian6.Notice("Not a valid Props template.", 4e3);
+      new import_obsidian6.Notice("无效的属性模板。", 4e3);
       return;
     }
     const allPropsWithType = this.app.metadataCache.getAllPropertyInfos();

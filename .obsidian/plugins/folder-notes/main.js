@@ -179,13 +179,13 @@ var ExistingFolderNoteModal = class extends import_obsidian.Modal {
   onOpen() {
     var _a;
     const { contentEl } = this;
-    contentEl.createEl("h2", { text: "A folder note for this folder already exists" });
+    contentEl.createEl("h2", { text: "此文件夹的文件夹笔记已存在" });
     const setting = new import_obsidian.Setting(contentEl);
-    setting.infoEl.createEl("p", { text: "Are you sure you want to turn the note into a folder note and rename the existing folder note?" });
+    setting.infoEl.createEl("p", { text: "您确定要将笔记转换为文件夹笔记并重命名现有文件夹笔记吗？" });
     (_a = setting.infoEl.parentElement) == null ? void 0 : _a.classList.add("fn-delete-confirmation-modal");
     const buttonContainer = setting.infoEl.createEl("div", { cls: "fn-delete-confirmation-modal-buttons" });
     if (import_obsidian.Platform.isMobileApp) {
-      const confirmButton = buttonContainer.createEl("button", { text: "Rename and don't ask again" });
+      const confirmButton = buttonContainer.createEl("button", { text: "重命名并不再询问" });
       confirmButton.classList.add("mod-warning", "fn-confirmation-modal-button");
       confirmButton.addEventListener("click", async () => {
         this.plugin.settings.showRenameConfirmation = false;
@@ -203,12 +203,12 @@ var ExistingFolderNoteModal = class extends import_obsidian.Modal {
           this.plugin.settings.showRenameConfirmation = true;
         }
       });
-      const checkBoxText = buttonContainer.createEl("span", { text: "Don't ask again" });
+      const checkBoxText = buttonContainer.createEl("span", { text: "不再询问" });
       checkBoxText.addEventListener("click", () => {
         checkbox.click();
       });
     }
-    const button = buttonContainer.createEl("button", { text: "Rename" });
+    const button = buttonContainer.createEl("button", { text: "重命名" });
     button.classList.add("mod-warning", "fn-confirmation-modal-button");
     button.addEventListener("click", async () => {
       this.plugin.saveSettings();
@@ -216,7 +216,7 @@ var ExistingFolderNoteModal = class extends import_obsidian.Modal {
       turnIntoFolderNote(this.plugin, this.file, this.folder, this.folderNote, true);
     });
     button.focus();
-    const cancelButton = buttonContainer.createEl("button", { text: "Cancel" });
+    const cancelButton = buttonContainer.createEl("button", { text: "取消" });
     cancelButton.addEventListener("click", async () => {
       this.close();
     });
@@ -302,17 +302,17 @@ var DeleteConfirmationModal = class extends import_obsidian3.Modal {
     const { contentEl, plugin } = this;
     const modalTitle = contentEl.createDiv({ cls: "fn-modal-title" });
     const modalContent = contentEl.createDiv({ cls: "fn-modal-content" });
-    modalTitle.createEl("h2", { text: "Delete folder note" });
-    modalContent.createEl("p", { text: `Are you sure you want to delete the folder note "${this.file.name}" ?` });
+    modalTitle.createEl("h2", { text: "删除文件夹笔记" });
+    modalContent.createEl("p", { text: `您确定要删除文件夹笔记 "${this.file.name}" 吗？` });
     switch (plugin.settings.deleteFilesAction) {
       case "trash":
-        modalContent.createEl("p", { text: "It will be moved to your system trash." });
+        modalContent.createEl("p", { text: "它将被移动到您的系统回收站。" });
         break;
       case "obsidianTrash":
-        modalContent.createEl("p", { text: 'It will be moved to your Obsidian trash, which is located in the ".trash" hidden folder in your vault.' });
+        modalContent.createEl("p", { text: '它将被移动到您的 Obsidian 回收站，该回收站位于您保险库中的 ".trash" 隐藏文件夹中。' });
         break;
       case "delete":
-        modalContent.createEl("p", { text: "It will be permanently deleted." }).setCssStyles({ color: "red" });
+        modalContent.createEl("p", { text: "它将被永久删除。" }).setCssStyles({ color: "red" });
         break;
     }
     const buttonContainer = contentEl.createEl("div", { cls: "modal-button-container" });
@@ -320,7 +320,7 @@ var DeleteConfirmationModal = class extends import_obsidian3.Modal {
       const checkbox = buttonContainer.createEl("label", { cls: "mod-checkbox" });
       checkbox.tabIndex = -1;
       const input = checkbox.createEl("input", { type: "checkbox" });
-      checkbox.appendText("Don't ask again");
+      checkbox.appendText("不要再问");
       input.addEventListener("change", (e) => {
         const target = e.target;
         if (target.checked) {
@@ -331,7 +331,7 @@ var DeleteConfirmationModal = class extends import_obsidian3.Modal {
         plugin.saveSettings();
       });
     } else {
-      const confirmButton = buttonContainer.createEl("button", { text: "Delete and don't ask again", cls: "mod-destructive" });
+      const confirmButton = buttonContainer.createEl("button", { text: "删除并不再询问", cls: "mod-destructive" });
       confirmButton.addEventListener("click", async () => {
         plugin.settings.showDeleteConfirmation = false;
         plugin.saveSettings();
@@ -339,13 +339,13 @@ var DeleteConfirmationModal = class extends import_obsidian3.Modal {
         deleteFolderNote(plugin, this.file, false);
       });
     }
-    const deleteButton = buttonContainer.createEl("button", { text: "Delete", cls: "mod-warning" });
+    const deleteButton = buttonContainer.createEl("button", { text: "删除", cls: "mod-warning" });
     deleteButton.addEventListener("click", async () => {
       this.close();
       deleteFolderNote(plugin, this.file, false);
     });
     deleteButton.focus();
-    const cancelButton = buttonContainer.createEl("button", { text: "Cancel", cls: "mod-cancel" });
+    const cancelButton = buttonContainer.createEl("button", { text: "取消", cls: "mod-cancel" });
     cancelButton.addEventListener("click", async () => {
       this.close();
     });
@@ -1382,7 +1382,7 @@ function hide(_ref) {
   var popperRect = state.rects.popper;
   var preventedOffsets = state.modifiersData.preventOverflow;
   var referenceOverflow = detectOverflow(state, {
-    elementContext: "reference"
+    elementContext: "引用"
   });
   var popperAltOverflow = detectOverflow(state, {
     altBoundary: true
@@ -2019,30 +2019,30 @@ var ExcludedFolderSettings = class extends import_obsidian6.Modal {
   display() {
     const { contentEl } = this;
     contentEl.empty();
-    contentEl.createEl("h2", { text: "Excluded folder settings" });
-    new import_obsidian6.Setting(contentEl).setName("Include subfolders").setDesc("Choose if the subfolders of the folder should also be excluded").addToggle((toggle) => toggle.setValue(this.excludedFolder.subFolders).onChange(async (value) => {
+    contentEl.createEl("h2", { text: "排除的文件夹设置" });
+    new import_obsidian6.Setting(contentEl).setName("包含子文件夹").setDesc("选择是否也排除文件夹的子文件夹").addToggle((toggle) => toggle.setValue(this.excludedFolder.subFolders).onChange(async (value) => {
       this.excludedFolder.subFolders = value;
       await this.plugin.saveSettings(true);
     }));
-    new import_obsidian6.Setting(contentEl).setName("Disable folder name sync").setDesc("Choose if the folder note should be renamed when the folder name is changed").addToggle((toggle) => toggle.setValue(this.excludedFolder.disableSync).onChange(async (value) => {
+    new import_obsidian6.Setting(contentEl).setName("禁用文件夹名称同步").setDesc("选择是否在文件夹名称更改时重命名文件夹笔记").addToggle((toggle) => toggle.setValue(this.excludedFolder.disableSync).onChange(async (value) => {
       this.excludedFolder.disableSync = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian6.Setting(contentEl).setName("Don't show folder in folder overview").setDesc("Choose if the folder should be shown in the folder overview").addToggle((toggle) => toggle.setValue(this.excludedFolder.excludeFromFolderOverview).onChange(async (value) => {
+    new import_obsidian6.Setting(contentEl).setName("在文件夹概览中不显示文件夹").setDesc("选择是否在文件夹概览中显示该文件夹").addToggle((toggle) => toggle.setValue(this.excludedFolder.excludeFromFolderOverview).onChange(async (value) => {
       this.excludedFolder.excludeFromFolderOverview = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian6.Setting(contentEl).setName("Disable auto creation of folder notes in this folder").setDesc("Choose if a folder note should be created when a new folder is created").addToggle((toggle) => toggle.setValue(this.excludedFolder.disableAutoCreate).onChange(async (value) => {
+    new import_obsidian6.Setting(contentEl).setName("禁用在此文件夹中自动创建文件夹笔记").setDesc("选择在创建新文件夹时是否创建文件夹笔记").addToggle((toggle) => toggle.setValue(this.excludedFolder.disableAutoCreate).onChange(async (value) => {
       this.excludedFolder.disableAutoCreate = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian6.Setting(contentEl).setName("Disable open folder note").setDesc("Choose if the folder note should be opened when the folder is opened").addToggle((toggle) => toggle.setValue(this.excludedFolder.disableFolderNote).onChange(async (value) => {
+    new import_obsidian6.Setting(contentEl).setName("禁用打开文件夹笔记").setDesc("选择在打开文件夹时是否打开文件夹笔记").addToggle((toggle) => toggle.setValue(this.excludedFolder.disableFolderNote).onChange(async (value) => {
       this.excludedFolder.disableFolderNote = value;
       await this.plugin.saveSettings(true);
       this.display();
     }));
     if (!this.excludedFolder.disableFolderNote) {
-      new import_obsidian6.Setting(contentEl).setName("Collapse folder when opening folder note").setDesc("Choose if the folder should be collapsed when the folder note is opened").addToggle((toggle) => toggle.setValue(this.excludedFolder.enableCollapsing).onChange(async (value) => {
+      new import_obsidian6.Setting(contentEl).setName("打开文件夹笔记时折叠文件夹").setDesc("选择在打开文件夹笔记时是否折叠文件夹").addToggle((toggle) => toggle.setValue(this.excludedFolder.enableCollapsing).onChange(async (value) => {
         this.excludedFolder.enableCollapsing = value;
         await this.plugin.saveSettings();
       }));
@@ -2072,26 +2072,26 @@ var PatternSettings = class extends import_obsidian7.Modal {
   display() {
     const { contentEl } = this;
     contentEl.empty();
-    contentEl.createEl("h2", { text: "Pattern settings" });
-    new import_obsidian7.Setting(contentEl).setName("Disable folder name sync").setDesc("Choose if the folder name should be renamed when the file name has been changed").addToggle((toggle) => toggle.setValue(this.pattern.disableSync).onChange(async (value) => {
+    contentEl.createEl("h2", { text: "模式设置" });
+    new import_obsidian7.Setting(contentEl).setName("禁用文件夹名称同步").setDesc("选择在文件名更改时是否重命名文件夹名称").addToggle((toggle) => toggle.setValue(this.pattern.disableSync).onChange(async (value) => {
       this.pattern.disableSync = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian7.Setting(contentEl).setName("Disable auto creation of folder notes in this folder").setDesc("Choose if a folder note should be created when a new folder is created that matches this pattern").addToggle((toggle) => toggle.setValue(this.pattern.disableAutoCreate).onChange(async (value) => {
+    new import_obsidian7.Setting(contentEl).setName("禁用在此文件夹中自动创建文件夹笔记").setDesc("选择在创建新文件夹时，如果符合此模式，是否创建文件夹笔记").addToggle((toggle) => toggle.setValue(this.pattern.disableAutoCreate).onChange(async (value) => {
       this.pattern.disableAutoCreate = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian7.Setting(contentEl).setName("Don't show folder in folder overview").setDesc("Choose if the folder should be shown in the folder overview").addToggle((toggle) => toggle.setValue(this.pattern.excludeFromFolderOverview).onChange(async (value) => {
+    new import_obsidian7.Setting(contentEl).setName("在文件夹概览中不显示文件夹").setDesc("选择是否在文件夹概览中显示该文件夹").addToggle((toggle) => toggle.setValue(this.pattern.excludeFromFolderOverview).onChange(async (value) => {
       this.pattern.excludeFromFolderOverview = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian7.Setting(contentEl).setName("Disable open folder note").setDesc("Choose if the folder note should be opened when the folder is opened").addToggle((toggle) => toggle.setValue(this.pattern.disableFolderNote).onChange(async (value) => {
+    new import_obsidian7.Setting(contentEl).setName("禁用打开文件夹笔记").setDesc("选择在打开文件夹时是否打开文件夹笔记").addToggle((toggle) => toggle.setValue(this.pattern.disableFolderNote).onChange(async (value) => {
       this.pattern.disableFolderNote = value;
       await this.plugin.saveSettings();
       this.display();
     }));
     if (!this.pattern.disableFolderNote) {
-      new import_obsidian7.Setting(contentEl).setName("Collapse folder when opening folder note").setDesc("Choose if the folder should be collapsed when the folder note is opened").addToggle((toggle) => toggle.setValue(this.pattern.enableCollapsing).onChange(async (value) => {
+      new import_obsidian7.Setting(contentEl).setName("打开文件夹笔记时折叠文件夹").setDesc("选择在打开文件夹笔记时是否折叠文件夹").addToggle((toggle) => toggle.setValue(this.pattern.enableCollapsing).onChange(async (value) => {
         this.pattern.enableCollapsing = value;
         await this.plugin.saveSettings();
       }));
@@ -2152,7 +2152,7 @@ function addExcludePatternListItem(settings, containerEl, pattern) {
   setting.setClass("fn-exclude-folder-list");
   setting.addSearch((cb) => {
     cb.containerEl.addClass("fn-exclude-folder-path");
-    cb.setPlaceholder("Pattern");
+    cb.setPlaceholder("模式");
     cb.setValue(pattern.string);
     cb.onChange((value) => {
       if (plugin.settings.excludeFolders.find((folder) => folder.string === value)) {
@@ -2164,14 +2164,14 @@ function addExcludePatternListItem(settings, containerEl, pattern) {
   });
   setting.addButton((cb) => {
     cb.setIcon("edit");
-    cb.setTooltip("Edit pattern");
+    cb.setTooltip("编辑模式");
     cb.onClick(() => {
       new PatternSettings(plugin.app, plugin, pattern).open();
     });
   });
   setting.addButton((cb) => {
     cb.setIcon("up-chevron-glyph");
-    cb.setTooltip("Move up");
+    cb.setTooltip("向上移动");
     cb.onClick(() => {
       if (pattern.position === 0) {
         return;
@@ -2192,7 +2192,7 @@ function addExcludePatternListItem(settings, containerEl, pattern) {
   });
   setting.addButton((cb) => {
     cb.setIcon("down-chevron-glyph");
-    cb.setTooltip("Move down");
+    cb.setTooltip("向下移动");
     cb.onClick(() => {
       if (pattern.position === plugin.settings.excludeFolders.length - 1) {
         return;
@@ -2213,7 +2213,7 @@ function addExcludePatternListItem(settings, containerEl, pattern) {
   });
   setting.addButton((cb) => {
     cb.setIcon("trash-2");
-    cb.setTooltip("Delete pattern");
+    cb.setTooltip("删除模式");
     cb.onClick(() => {
       deletePattern(plugin, pattern);
       setting.clear();
@@ -2280,7 +2280,7 @@ function addExcludeFolderListItem(settings, containerEl, excludedFolder) {
   setting.addSearch((cb) => {
     new FolderSuggest(cb.inputEl, plugin);
     cb.containerEl.addClass("fn-exclude-folder-path");
-    cb.setPlaceholder("Folder path");
+    cb.setPlaceholder("文件夹路径");
     cb.setValue(excludedFolder.path);
     cb.onChange((value) => {
       if (value.startsWith("{regex}") || value.includes("*")) {
@@ -2299,14 +2299,14 @@ function addExcludeFolderListItem(settings, containerEl, excludedFolder) {
   });
   setting.addButton((cb) => {
     cb.setIcon("edit");
-    cb.setTooltip("Edit folder note");
+    cb.setTooltip("编辑文件夹笔记");
     cb.onClick(() => {
       new ExcludedFolderSettings(plugin.app, plugin, excludedFolder).open();
     });
   });
   setting.addButton((cb) => {
     cb.setIcon("up-chevron-glyph");
-    cb.setTooltip("Move up");
+    cb.setTooltip("向上移动");
     cb.onClick(() => {
       if (excludedFolder.position === 0) {
         return;
@@ -2327,7 +2327,7 @@ function addExcludeFolderListItem(settings, containerEl, excludedFolder) {
   });
   setting.addButton((cb) => {
     cb.setIcon("down-chevron-glyph");
-    cb.setTooltip("Move down");
+    cb.setTooltip("向下移动");
     cb.onClick(() => {
       if (excludedFolder.position === plugin.settings.excludeFolders.length - 1) {
         return;
@@ -2348,7 +2348,7 @@ function addExcludeFolderListItem(settings, containerEl, excludedFolder) {
   });
   setting.addButton((cb) => {
     cb.setIcon("trash-2");
-    cb.setTooltip("Delete excluded folder");
+    cb.setTooltip("删除排除的文件夹");
     cb.onClick(() => {
       deleteExcludedFolder(plugin, excludedFolder);
       setting.clear();
@@ -2843,8 +2843,8 @@ var AddSupportedFileModal = class extends import_obsidian13.Modal {
         this.close();
       }
     });
-    contentEl.createEl("h2", { text: "Extension name" });
-    new import_obsidian13.Setting(contentEl).setName('Enter the name of the extension (only the short form, e.g. "md")').addText((text) => text.setValue("").onChange(async (value) => {
+    contentEl.createEl("h2", { text: "扩展名" });
+    new import_obsidian13.Setting(contentEl).setName('输入扩展名（仅短形式，如 "md"）').addText((text) => text.setValue("").onChange(async (value) => {
       if (value.trim() !== "") {
         this.name = value.trim();
       }
@@ -2859,7 +2859,7 @@ var AddSupportedFileModal = class extends import_obsidian13.Modal {
       contentEl.empty();
       this.settingsTab.display();
     } else if (this.plugin.settings.supportedFileTypes.includes(this.name.toLowerCase())) {
-      return new import_obsidian13.Notice("This extension is already supported");
+      return new import_obsidian13.Notice("此扩展已被支持");
     } else {
       await this.list.addValue(this.name.toLowerCase());
       this.settingsTab.display();
@@ -2896,7 +2896,7 @@ var FrontMatterTitlePluginHandler = class {
         this.dispatcher = dispatcher;
       }
       const event = {
-        name: "manager:update",
+        name: "管理器: 更新",
         cb: (data) => {
           this.handleRename(data, true);
         }
@@ -2975,14 +2975,14 @@ var ConfirmationModal = class extends import_obsidian15.Modal {
       templateFolderPath = templateFolder;
     }
     const { contentEl } = this;
-    contentEl.createEl("h2", { text: "Create folder note for every folder" });
+    contentEl.createEl("h2", { text: "为每个文件夹创建文件夹笔记" });
     const setting = new import_obsidian15.Setting(contentEl);
-    setting.infoEl.createEl("p", { text: "Make sure to backup your vault before using this feature." }).style.color = "#fb464c";
-    setting.infoEl.createEl("p", { text: "This feature will create a folder note for every folder in your vault." });
-    setting.infoEl.createEl("p", { text: "Every folder that already has a folder note will be ignored." });
-    setting.infoEl.createEl("p", { text: "Every excluded folder will be ignored." });
+    setting.infoEl.createEl("p", { text: "使用此功能之前，请确保备份您的保险库。" }).style.color = "#fb464c";
+    setting.infoEl.createEl("p", { text: "此功能将为您保险库中的每个文件夹创建文件夹笔记。" });
+    setting.infoEl.createEl("p", { text: "每个已存在文件夹笔记的文件夹将被忽略。" });
+    setting.infoEl.createEl("p", { text: "每个排除的文件夹将被忽略。" });
     if (!this.plugin.settings.templatePath || ((_c = this.plugin.settings.templatePath) == null ? void 0 : _c.trim()) === "") {
-      new import_obsidian15.Setting(contentEl).setName("Folder note file extension").setDesc("Choose the file extension for the folder notes.").addDropdown((cb) => {
+      new import_obsidian15.Setting(contentEl).setName("文件夹笔记文件扩展名").setDesc("选择文件夹笔记的文件扩展名。").addDropdown((cb) => {
         this.plugin.settings.supportedFileTypes.forEach((extension) => {
           cb.addOption("." + extension, extension);
         });
@@ -2993,7 +2993,7 @@ var ConfirmationModal = class extends import_obsidian15.Modal {
       });
     }
     new import_obsidian15.Setting(contentEl).addButton((cb) => {
-      cb.setButtonText("Create");
+      cb.setButtonText("创建");
       cb.setCta();
       cb.buttonEl.focus();
       cb.onClick(async () => {
@@ -3001,7 +3001,7 @@ var ConfirmationModal = class extends import_obsidian15.Modal {
           this.extension = "." + this.plugin.settings.templatePath.split(".").pop();
         }
         if (this.extension === ".ask") {
-          return new import_obsidian15.Notice("Please choose a file extension");
+          return new import_obsidian15.Notice("请选择文件扩展名");
         }
         this.close();
         const folders = this.app.vault.getAllLoadedFiles().filter((file) => file.parent instanceof import_obsidian15.TFolder);
@@ -3020,7 +3020,7 @@ var ConfirmationModal = class extends import_obsidian15.Modal {
         }
       });
     }).addButton((cb) => {
-      cb.setButtonText("Cancel");
+      cb.setButtonText("取消");
       cb.onClick(async () => {
         this.close();
       });
@@ -3085,20 +3085,20 @@ var TemplateSuggest = class extends TextInputSuggest {
 // src/settings/GeneralSettings.ts
 async function renderGeneral(settingsTab) {
   const containerEl = settingsTab.settingsPage;
-  const nameSetting = new import_obsidian17.Setting(containerEl).setName("Folder note name").setDesc("{{folder_name}} will be replaced with the name of the folder").addText((text) => text.setValue(settingsTab.plugin.settings.newFolderNoteName).onChange(async (value) => {
+  const nameSetting = new import_obsidian17.Setting(containerEl).setName("文件夹笔记名称").setDesc("{{folder_name}} 将替换为文件夹的名称").addText((text) => text.setValue(settingsTab.plugin.settings.newFolderNoteName).onChange(async (value) => {
     if (value.trim() === "") {
       return;
     }
     settingsTab.plugin.settings.newFolderNoteName = value;
     await settingsTab.plugin.saveSettings();
-  })).addButton((button) => button.setButtonText("Rename existing folder notes").setCta().onClick(async () => {
+  })).addButton((button) => button.setButtonText("重命名现有文件夹笔记").setCta().onClick(async () => {
     settingsTab.updateFolderNotes(settingsTab.plugin.settings.newFolderNoteName);
     settingsTab.display();
   }));
-  nameSetting.infoEl.appendText("Requires a restart to take effect");
+  nameSetting.infoEl.appendText("需要重启才能生效");
   nameSetting.infoEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
   if (settingsTab.plugin.settings.newFolderNoteName !== "{{folder_name}}") {
-    new import_obsidian17.Setting(containerEl).setName("Use folder name instead of folder note name in the tab title").setDesc(`When you're using a folder note name like "folder note" and have multiple folder notes open you can't separate them anymore by their name. This setting uses the folder name instead and allows you to indentify the different files.`).addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.tabManagerEnabled).onChange(async (value) => {
+    new import_obsidian17.Setting(containerEl).setName("在标签标题中使用文件夹名称而不是文件夹笔记名称").setDesc(`当您使用诸如 "文件夹笔记" 的文件夹笔记名称且打开多个文件夹笔记时，无法通过名称区分它们。此设置使用文件夹名称来代替，并允许您识别不同的文件。`).addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.tabManagerEnabled).onChange(async (value) => {
       if (!value) {
         settingsTab.plugin.tabManager.resetTabs();
       } else {
@@ -3110,8 +3110,8 @@ async function renderGeneral(settingsTab) {
       settingsTab.display();
     }));
   }
-  new import_obsidian17.Setting(containerEl).setName("Default folder note type for new folder notes").setDesc("Choose the default file type for new folder notes. (canvas, markdown, ...)").addDropdown((dropdown) => {
-    dropdown.addOption(".ask", "ask for file type");
+  new import_obsidian17.Setting(containerEl).setName("新文件夹笔记的默认文件夹笔记类型").setDesc("选择新文件夹笔记的默认文件类型。（画布、Markdown 等）").addDropdown((dropdown) => {
+    dropdown.addOption(".ask", "询问文件类型");
     settingsTab.plugin.settings.supportedFileTypes.forEach((type) => {
       if (type === ".md" || type === "md") {
         dropdown.addOption(".md", "markdown");
@@ -3131,9 +3131,9 @@ async function renderGeneral(settingsTab) {
     });
   });
   const setting0 = new import_obsidian17.Setting(containerEl);
-  setting0.setName("Supported file types for folder notes");
+  setting0.setName("文件夹笔记支持的文件类型");
   const desc0 = document.createDocumentFragment();
-  desc0.append("Choose the file types that should be supported for folder notes. (e.g. if you click on a folder name it searches for all file extensions that are supported)", desc0.createEl("br"), "Adding more file types may cause performance issues becareful when adding more file types and don't add too many.");
+  desc0.append("选择应支持的文件夹笔记文件类型。 (例如，如果您点击文件夹名称，它将搜索所有支持的文件扩展名)", desc0.createEl("br"), "添加更多文件类型可能会导致性能问题，添加时要小心，不要添加太多。");
   setting0.setDesc(desc0);
   const list = setting0.createList((list2) => {
     list2.addSettings(settingsTab);
@@ -3166,19 +3166,19 @@ async function renderGeneral(settingsTab) {
       });
     });
   } else {
-    setting0.addButton((button) => button.setButtonText("Add custom file type").setCta().onClick(async () => {
+    setting0.addButton((button) => button.setButtonText("添加自定义文件类型").setCta().onClick(async () => {
       new AddSupportedFileModal(settingsTab.app, settingsTab.plugin, settingsTab, list).open();
     }));
   }
   const setting = new import_obsidian17.Setting(containerEl);
   const desc = document.createDocumentFragment();
   desc.append("Restart after changing the template path");
-  setting.setName("Template path");
+  setting.setName("模板路径");
   setting.setDesc(desc).descEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
   setting.addSearch((cb) => {
     var _a;
     new TemplateSuggest(cb.inputEl, settingsTab.plugin);
-    cb.setPlaceholder("Template path");
+    cb.setPlaceholder("模板路径");
     cb.setValue(((_a = settingsTab.plugin.app.vault.getAbstractFileByPath(settingsTab.plugin.settings.templatePath)) == null ? void 0 : _a.name.replace(".md", "")) || "");
     cb.onChange(async (value) => {
       if (value.trim() === "") {
@@ -3189,15 +3189,15 @@ async function renderGeneral(settingsTab) {
       }
     });
   });
-  const storageLocation = new import_obsidian17.Setting(containerEl).setName("Storage location").setDesc("Choose where to store the folder notes").addDropdown((dropdown) => dropdown.addOption("insideFolder", "Inside the folder").addOption("parentFolder", "In the parent folder").setValue(settingsTab.plugin.settings.storageLocation).onChange(async (value) => {
+  const storageLocation = new import_obsidian17.Setting(containerEl).setName("存储位置").setDesc("选择存储文件夹笔记的位置").addDropdown((dropdown) => dropdown.addOption("insideFolder", "在文件夹内").addOption("parentFolder", "在父文件夹中").setValue(settingsTab.plugin.settings.storageLocation).onChange(async (value) => {
     settingsTab.plugin.settings.storageLocation = value;
     await settingsTab.plugin.saveSettings();
     settingsTab.display();
     loadFileClasses(void 0, settingsTab.plugin);
   }));
-  storageLocation.infoEl.appendText("Requires a restart to take effect");
+  storageLocation.infoEl.appendText("需要重启才能生效");
   storageLocation.infoEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
-  const switchLocation = new import_obsidian17.Setting(containerEl).setName("Switch to new storage location").setDesc("Move all folder notes to the new storage location").addButton((button) => button.setButtonText("Switch").setCta().onClick(async () => {
+  const switchLocation = new import_obsidian17.Setting(containerEl).setName("切换到新存储位置").setDesc("将所有文件夹笔记移动到新的存储位置").addButton((button) => button.setButtonText("切换").setCta().onClick(async () => {
     let oldStorageLocation = settingsTab.plugin.settings.storageLocation;
     if (settingsTab.plugin.settings.storageLocation === "parentFolder") {
       oldStorageLocation = "insideFolder";
@@ -3206,26 +3206,26 @@ async function renderGeneral(settingsTab) {
     }
     settingsTab.switchStorageLocation(oldStorageLocation);
   }));
-  switchLocation.infoEl.appendText("Requires a restart to take effect");
+  switchLocation.infoEl.appendText("需要重启才能生效");
   switchLocation.infoEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
   if (settingsTab.plugin.settings.storageLocation === "parentFolder") {
-    new import_obsidian17.Setting(containerEl).setName("Delete folder notes when deleting the folder").setDesc("Delete the folder note when deleting the folder").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.syncDelete).onChange(async (value) => {
+    new import_obsidian17.Setting(containerEl).setName("删除文件夹时删除文件夹笔记").setDesc("删除文件夹时删除文件夹笔记").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.syncDelete).onChange(async (value) => {
       settingsTab.plugin.settings.syncDelete = value;
       await settingsTab.plugin.saveSettings();
     }));
-    new import_obsidian17.Setting(containerEl).setName("Move folder notes when moving the folder").setDesc("Move the folder note when moving the folder").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.syncMove).onChange(async (value) => {
+    new import_obsidian17.Setting(containerEl).setName("移动文件夹时移动文件夹笔记").setDesc("移动文件夹时移动文件夹笔记").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.syncMove).onChange(async (value) => {
       settingsTab.plugin.settings.syncMove = value;
       await settingsTab.plugin.saveSettings();
     }));
   }
   if (import_obsidian17.Platform.isDesktopApp) {
-    new import_obsidian17.Setting(containerEl).setName("Key for creating folder note").setDesc("The key combination to create a folder note").addDropdown((dropdown) => {
+    new import_obsidian17.Setting(containerEl).setName("创建文件夹笔记的键").setDesc("创建文件夹笔记的快捷键组合").addDropdown((dropdown) => {
       if (!import_obsidian17.Platform.isMacOS) {
-        dropdown.addOption("ctrl", "Ctrl + Click");
+        dropdown.addOption("ctrl", "Ctrl + 点击");
       } else {
-        dropdown.addOption("ctrl", "Cmd + Click");
+        dropdown.addOption("ctrl", "Cmd + 点击");
       }
-      dropdown.addOption("alt", "Alt + Click");
+      dropdown.addOption("alt", "Alt + 点击");
       dropdown.setValue(settingsTab.plugin.settings.ctrlKey ? "ctrl" : "alt");
       dropdown.onChange(async (value) => {
         settingsTab.plugin.settings.ctrlKey = value === "ctrl";
@@ -3234,14 +3234,14 @@ async function renderGeneral(settingsTab) {
         settingsTab.display();
       });
     });
-    new import_obsidian17.Setting(containerEl).setName("Key for opening folder note").setDesc("Select the combination to open a folder note").addDropdown((dropdown) => {
-      dropdown.addOption("click", "Mouse Click");
+    new import_obsidian17.Setting(containerEl).setName("打开文件夹笔记的键").setDesc("选择打开文件夹笔记的组合键").addDropdown((dropdown) => {
+      dropdown.addOption("click", "鼠标点击");
       if (!import_obsidian17.Platform.isMacOS) {
-        dropdown.addOption("ctrl", "Ctrl + Click");
+        dropdown.addOption("ctrl", "Ctrl + 点击");
       } else {
-        dropdown.addOption("ctrl", "Cmd + Click");
+        dropdown.addOption("ctrl", "Cmd + 点击");
       }
-      dropdown.addOption("alt", "Alt + Click");
+      dropdown.addOption("alt", "Alt + 点击");
       if (settingsTab.plugin.settings.openByClick) {
         dropdown.setValue("click");
       } else if (settingsTab.plugin.settings.openWithCtrl) {
@@ -3258,20 +3258,20 @@ async function renderGeneral(settingsTab) {
       });
     });
   }
-  new import_obsidian17.Setting(containerEl).setName("Sync folder name").setDesc("Automatically rename the folder note when the folder name is changed").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.syncFolderName).onChange(async (value) => {
+  new import_obsidian17.Setting(containerEl).setName("同步文件夹名称").setDesc("当文件夹名称更改时自动重命名文件夹笔记").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.syncFolderName).onChange(async (value) => {
     settingsTab.plugin.settings.syncFolderName = value;
     await settingsTab.plugin.saveSettings();
     settingsTab.display();
   }));
-  new import_obsidian17.Setting(containerEl).setName("Confirm folder note deletion").setDesc("Ask for confirmation before deleting a folder note").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.showDeleteConfirmation).onChange(async (value) => {
+  new import_obsidian17.Setting(containerEl).setName("确认删除文件夹笔记").setDesc("删除文件夹笔记前询问确认").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.showDeleteConfirmation).onChange(async (value) => {
     settingsTab.plugin.settings.showDeleteConfirmation = value;
     await settingsTab.plugin.saveSettings();
     settingsTab.display();
   }));
-  new import_obsidian17.Setting(containerEl).setName("Deleted folder notes").setDesc("What happens to the folder note after you delete it").addDropdown((dropdown) => {
-    dropdown.addOption("trash", "Move to system trash");
-    dropdown.addOption("obsidianTrash", "Move to Obsidian trash (.trash folder)");
-    dropdown.addOption("delete", "Delete permanently");
+  new import_obsidian17.Setting(containerEl).setName("已删除的文件夹笔记").setDesc("删除后文件夹笔记会发生什么").addDropdown((dropdown) => {
+    dropdown.addOption("trash", "移动到系统垃圾桶");
+    dropdown.addOption("obsidianTrash", "移动到 Obsidian 垃圾桶 (.trash 文件夹)");
+    dropdown.addOption("delete", "永久删除");
     dropdown.setValue(settingsTab.plugin.settings.deleteFilesAction);
     dropdown.onChange(async (value) => {
       settingsTab.plugin.settings.deleteFilesAction = value;
@@ -3281,22 +3281,22 @@ async function renderGeneral(settingsTab) {
   });
   if (import_obsidian17.Platform.isDesktop) {
     const setting3 = new import_obsidian17.Setting(containerEl);
-    setting3.setName("Open folder note in a new tab by default");
-    setting3.setDesc("Always open folder notes in a new tab (except when you try to open the same note) instead of having to use ctrl/cmd + click to open in a new tab");
+    setting3.setName("默认在新标签页中打开文件夹笔记");
+    setting3.setDesc("始终在新标签页中打开文件夹笔记（除非您尝试打开同一笔记），而不必使用 ctrl/cmd + 点击在新标签页中打开");
     setting3.addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.openInNewTab).onChange(async (value) => {
       settingsTab.plugin.settings.openInNewTab = value;
       await settingsTab.plugin.saveSettings();
       settingsTab.display();
     }));
-    setting3.infoEl.appendText("Requires a restart to take effect");
+    setting3.infoEl.appendText("需要重启才能生效");
     setting3.infoEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
   }
-  new import_obsidian17.Setting(containerEl).setName("Automatically create folder notes").setDesc("Automatically create a folder note when a new folder is created").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.autoCreate).onChange(async (value) => {
+  new import_obsidian17.Setting(containerEl).setName("自动创建文件夹笔记").setDesc("创建新文件夹时自动创建文件夹笔记").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.autoCreate).onChange(async (value) => {
     settingsTab.plugin.settings.autoCreate = value;
     await settingsTab.plugin.saveSettings();
     settingsTab.display();
   }));
-  new import_obsidian17.Setting(containerEl).setName("Enable front matter title plugin integration").setDesc("Automatically rename a folder name when the folder note is renamed").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.frontMatterTitle.enabled).onChange(async (value) => {
+  new import_obsidian17.Setting(containerEl).setName("启用前置内容标题插件集成").setDesc("当文件夹笔记重命名时自动重命名文件夹名称").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.frontMatterTitle.enabled).onChange(async (value) => {
     var _a;
     settingsTab.plugin.settings.frontMatterTitle.enabled = value;
     await settingsTab.plugin.saveSettings();
@@ -3315,9 +3315,9 @@ async function renderGeneral(settingsTab) {
     }
     settingsTab.display();
   }));
-  new import_obsidian17.Setting(containerEl).setName("Create folder note for every folder").setDesc("Create a folder note for every folder in the vault").addButton((cb) => {
+  new import_obsidian17.Setting(containerEl).setName("为每个文件夹创建文件夹笔记").setDesc("为保管库中的每个文件夹创建文件夹笔记").addButton((cb) => {
     cb.setIcon("plus");
-    cb.setTooltip("Create folder notes");
+    cb.setTooltip("创建文件夹笔记");
     cb.onClick(async () => {
       new ConfirmationModal(settingsTab.app, settingsTab.plugin).open();
     });
@@ -3328,7 +3328,7 @@ async function renderGeneral(settingsTab) {
 var import_obsidian18 = require("obsidian");
 async function renderFileExplorer(settingsTab) {
   const containerEl = settingsTab.settingsPage;
-  new import_obsidian18.Setting(containerEl).setName("Hide folder note").setDesc("Hide the folder note in the file explorer").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.hideFolderNote).onChange(async (value) => {
+  new import_obsidian18.Setting(containerEl).setName("隐藏文件夹笔记").setDesc("在文件资源管理器中隐藏文件夹笔记").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.hideFolderNote).onChange(async (value) => {
     settingsTab.plugin.settings.hideFolderNote = value;
     await settingsTab.plugin.saveSettings();
     if (value) {
@@ -3338,13 +3338,13 @@ async function renderFileExplorer(settingsTab) {
     }
     settingsTab.display();
   }));
-  const setting2 = new import_obsidian18.Setting(containerEl).setName("Don't open folder notes by clicking on the name (on mobile)").setDesc("Folder notes don't open when clicking on the name of the folder (on mobile)").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.disableOpenFolderNoteOnClick).onChange(async (value) => {
+  const setting2 = new import_obsidian18.Setting(containerEl).setName("在手机上点击名称时不打开文件夹笔记").setDesc("在手机上点击文件夹名称时文件夹笔记不会打开").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.disableOpenFolderNoteOnClick).onChange(async (value) => {
     settingsTab.plugin.settings.disableOpenFolderNoteOnClick = value;
     await settingsTab.plugin.saveSettings();
   }));
-  setting2.infoEl.appendText("Requires a restart to take effect");
+  setting2.infoEl.appendText("需要重启才能生效");
   setting2.infoEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
-  new import_obsidian18.Setting(containerEl).setName("Only open folder notes through the name").setDesc("Only open folder notes in the file explorer by clicking on the folder name").addToggle((toggle) => toggle.setValue(!settingsTab.plugin.settings.stopWhitespaceCollapsing).onChange(async (value) => {
+  new import_obsidian18.Setting(containerEl).setName("仅通过名称打开文件夹笔记").setDesc("仅通过点击文件夹名称在文件资源管理器中打开文件夹笔记").addToggle((toggle) => toggle.setValue(!settingsTab.plugin.settings.stopWhitespaceCollapsing).onChange(async (value) => {
     if (!value) {
       document.body.classList.add("fn-whitespace-stop-collapsing");
     } else {
@@ -3354,21 +3354,21 @@ async function renderFileExplorer(settingsTab) {
     await settingsTab.plugin.saveSettings();
   }));
   const disableSetting = new import_obsidian18.Setting(containerEl);
-  disableSetting.setName("Disable folder collapsing");
-  disableSetting.setDesc("Disable the ability to collapse folders by clicking exactly on the folder name");
+  disableSetting.setName("禁用文件夹折叠");
+  disableSetting.setDesc("禁用通过准确点击文件夹名称来折叠文件夹的功能");
   disableSetting.addToggle((toggle) => toggle.setValue(!settingsTab.plugin.settings.enableCollapsing).onChange(async (value) => {
     settingsTab.plugin.settings.enableCollapsing = !value;
     await settingsTab.plugin.saveSettings();
   }));
-  disableSetting.infoEl.appendText("Requires a restart to take effect");
+  disableSetting.infoEl.appendText("需要重启才能生效");
   disableSetting.infoEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
-  new import_obsidian18.Setting(containerEl).setName("Use submenus").setDesc("Use submenus for file/folder commands").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.useSubmenus).onChange(async (value) => {
+  new import_obsidian18.Setting(containerEl).setName("使用子菜单").setDesc("为文件/文件夹命令使用子菜单").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.useSubmenus).onChange(async (value) => {
     settingsTab.plugin.settings.useSubmenus = value;
     await settingsTab.plugin.saveSettings();
     settingsTab.display();
   }));
   if (settingsTab.plugin.settings.frontMatterTitle.enabled) {
-    new import_obsidian18.Setting(containerEl).setName("Change folder name in the file explorer").setDesc("Automatically rename a folder name in the file explorer when the folder note is renamed").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.frontMatterTitle.explorer).onChange(async (value) => {
+    new import_obsidian18.Setting(containerEl).setName("在文件资源管理器中更改文件夹名称").setDesc("当文件夹笔记重命名时，自动重命名文件资源管理器中的文件夹名称").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.frontMatterTitle.explorer).onChange(async (value) => {
       settingsTab.plugin.settings.frontMatterTitle.explorer = value;
       await settingsTab.plugin.saveSettings();
       settingsTab.plugin.app.vault.getFiles().forEach((file) => {
@@ -3377,8 +3377,8 @@ async function renderFileExplorer(settingsTab) {
       });
     }));
   }
-  settingsTab.settingsPage.createEl("h3", { text: "Style settings" });
-  new import_obsidian18.Setting(containerEl).setName("Hide collapse icon").setDesc("Hide the collapse icon in the file explorer next to the name of a folder when a folder only contains a folder note").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.hideCollapsingIcon).onChange(async (value) => {
+  settingsTab.settingsPage.createEl("h3", { text: "样式设置" });
+  new import_obsidian18.Setting(containerEl).setName("隐藏折叠图标").setDesc("当文件夹仅包含文件夹笔记时，在文件资源管理器中隐藏文件夹名称旁的折叠图标").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.hideCollapsingIcon).onChange(async (value) => {
     settingsTab.plugin.settings.hideCollapsingIcon = value;
     await settingsTab.plugin.saveSettings();
     if (value) {
@@ -3389,12 +3389,12 @@ async function renderFileExplorer(settingsTab) {
     settingsTab.display();
   }));
   if (settingsTab.plugin.settings.hideCollapsingIcon) {
-    new import_obsidian18.Setting(containerEl).setName("Hide collapse icon also when the attachment folder is in the same folder").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.ignoreAttachmentFolder).onChange(async (value) => {
+    new import_obsidian18.Setting(containerEl).setName("当附件文件夹在同一文件夹中时也隐藏折叠图标").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.ignoreAttachmentFolder).onChange(async (value) => {
       settingsTab.plugin.settings.ignoreAttachmentFolder = value;
       await settingsTab.plugin.saveSettings();
     }));
   }
-  new import_obsidian18.Setting(containerEl).setName("Underline the name of folder notes").setDesc("Add an underline to folders that have a folder note in the file explorer").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.underlineFolder).onChange(async (value) => {
+  new import_obsidian18.Setting(containerEl).setName("为文件夹笔记的名称添加下划线").setDesc("为在文件资源管理器中有文件夹笔记的文件夹添加下划线").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.underlineFolder).onChange(async (value) => {
     settingsTab.plugin.settings.underlineFolder = value;
     if (value) {
       document.body.classList.add("folder-note-underline");
@@ -3403,7 +3403,7 @@ async function renderFileExplorer(settingsTab) {
     }
     await settingsTab.plugin.saveSettings();
   }));
-  new import_obsidian18.Setting(containerEl).setName("Bold the name of folder notes").setDesc("Make the folder name bold in the file explorer").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.boldName).onChange(async (value) => {
+  new import_obsidian18.Setting(containerEl).setName("将文件夹笔记的名称加粗").setDesc("在文件资源管理器中使文件夹名称加粗").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.boldName).onChange(async (value) => {
     settingsTab.plugin.settings.boldName = value;
     if (value) {
       document.body.classList.add("folder-note-bold");
@@ -3412,7 +3412,7 @@ async function renderFileExplorer(settingsTab) {
     }
     await settingsTab.plugin.saveSettings();
   }));
-  new import_obsidian18.Setting(containerEl).setName("Cursive the name of folder notes").setDesc("Make the folder name cursive in the file explorer").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.cursiveName).onChange(async (value) => {
+  new import_obsidian18.Setting(containerEl).setName("将文件夹笔记的名称斜体").setDesc("在文件资源管理器中使文件夹名称斜体").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.cursiveName).onChange(async (value) => {
     settingsTab.plugin.settings.cursiveName = value;
     if (value) {
       document.body.classList.add("folder-note-cursive");
@@ -3427,12 +3427,12 @@ async function renderFileExplorer(settingsTab) {
 var import_obsidian19 = require("obsidian");
 async function renderPath(settingsTab) {
   const containerEl = settingsTab.settingsPage;
-  new import_obsidian19.Setting(containerEl).setName("Open folder note through path").setDesc("Open a folder note when clicking on a folder name in the path if it is a folder note").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.openFolderNoteOnClickInPath).onChange(async (value) => {
+  new import_obsidian19.Setting(containerEl).setName("通过路径打开文件夹笔记").setDesc("在路径中点击文件夹名称时，如果它是文件夹笔记，则打开文件夹笔记").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.openFolderNoteOnClickInPath).onChange(async (value) => {
     settingsTab.plugin.settings.openFolderNoteOnClickInPath = value;
     await settingsTab.plugin.saveSettings();
     settingsTab.display();
   }));
-  new import_obsidian19.Setting(containerEl).setName("Change folder name in the path").setDesc("Automatically rename a folder name in the path above a note when the folder note is renamed").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.frontMatterTitle.path).onChange(async (value) => {
+  new import_obsidian19.Setting(containerEl).setName("在路径中更改文件夹名称").setDesc("当文件夹笔记重命名时，自动重命名笔记上方路径中的文件夹名称").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.frontMatterTitle.path).onChange(async (value) => {
     settingsTab.plugin.settings.frontMatterTitle.path = value;
     await settingsTab.plugin.saveSettings();
     if (value) {
@@ -3441,8 +3441,8 @@ async function renderPath(settingsTab) {
       settingsTab.plugin.updateBreadcrumbs(true);
     }
   }));
-  settingsTab.settingsPage.createEl("h3", { text: "Style settings" });
-  new import_obsidian19.Setting(containerEl).setName("Underline folders in the path").setDesc("Add an underline to folders that have a folder note in the path above a note").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.underlineFolderInPath).onChange(async (value) => {
+  settingsTab.settingsPage.createEl("h3", { text: "样式设置" });
+  new import_obsidian19.Setting(containerEl).setName("为路径中的文件夹添加下划线").setDesc("为在笔记上方路径中有文件夹笔记的文件夹添加下划线").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.underlineFolderInPath).onChange(async (value) => {
     settingsTab.plugin.settings.underlineFolderInPath = value;
     if (value) {
       document.body.classList.add("folder-note-underline-path");
@@ -3451,7 +3451,7 @@ async function renderPath(settingsTab) {
     }
     await settingsTab.plugin.saveSettings();
   }));
-  new import_obsidian19.Setting(containerEl).setName("Bold folders in the path").setDesc("Make the folder name bold in the path above a note").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.boldNameInPath).onChange(async (value) => {
+  new import_obsidian19.Setting(containerEl).setName("将路径中的文件夹名称加粗").setDesc("在笔记上方路径中使文件夹名称加粗").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.boldNameInPath).onChange(async (value) => {
     settingsTab.plugin.settings.boldNameInPath = value;
     if (value) {
       document.body.classList.add("folder-note-bold-path");
@@ -3460,7 +3460,7 @@ async function renderPath(settingsTab) {
     }
     await settingsTab.plugin.saveSettings();
   }));
-  new import_obsidian19.Setting(containerEl).setName("Cursive the name of folder notes in the path").setDesc("Make the folder name cursive in the path above a note").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.cursiveNameInPath).onChange(async (value) => {
+  new import_obsidian19.Setting(containerEl).setName("在路径中将文件夹笔记的名称斜体").setDesc("在笔记上方路径中使文件夹名称斜体").addToggle((toggle) => toggle.setValue(settingsTab.plugin.settings.cursiveNameInPath).onChange(async (value) => {
     settingsTab.plugin.settings.cursiveNameInPath = value;
     if (value) {
       document.body.classList.add("folder-note-cursive-path");
@@ -3544,7 +3544,7 @@ var FolderOverview = class {
       }
     }
     if (!sourceFolder && (sourceFolderPath !== "/" && sourceFolderPath !== "")) {
-      return new import_obsidian20.Notice("Folder overview: Couldn't find the folder");
+      return new import_obsidian20.Notice("文件夹概览：无法找到文件夹");
     }
     if (!sourceFolder && sourceFolderPath == "") {
       sourceFolderPath = "/";
@@ -3641,7 +3641,7 @@ var FolderOverview = class {
   }
   addEditButton(root) {
     const editButton = root.createEl("button", { cls: "folder-overview-edit-button" });
-    editButton.innerText = "Edit overview";
+    editButton.innerText = "编辑概览";
     editButton.addEventListener("click", (e) => {
       e.stopImmediatePropagation();
       e.preventDefault();
@@ -4112,11 +4112,11 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       }
     });
     if (!this.defaultSettings) {
-      contentEl.createEl("h2", { text: "Folder overview settings" });
+      contentEl.createEl("h2", { text: "文件夹概览设置" });
     } else {
-      contentEl.createEl("h2", { text: "Default folder overview settings" });
+      contentEl.createEl("h2", { text: "默认文件夹概览设置" });
     }
-    new import_obsidian21.Setting(contentEl).setName("Show the title").setDesc("Choose if the title should be shown").addToggle((toggle) => toggle.setValue(this.yaml.showTitle).onChange(async (value) => {
+    new import_obsidian21.Setting(contentEl).setName("显示标题").setDesc("选择是否显示标题").addToggle((toggle) => toggle.setValue(this.yaml.showTitle).onChange(async (value) => {
       this.yaml.showTitle = value;
       this.display();
       if (this.defaultSettings) {
@@ -4126,7 +4126,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       ;
     }));
     if (this.yaml.showTitle) {
-      new import_obsidian21.Setting(contentEl).setName("Title").setDesc("Choose the title of the folder overview").addText((text) => {
+      new import_obsidian21.Setting(contentEl).setName("标题").setDesc("选择文件夹概览的标题").addText((text) => {
         var _a2;
         return text.setValue(((_a2 = this.yaml) == null ? void 0 : _a2.title) || "{{folderName}} overview").onChange(async (value) => {
           this.yaml.title = value;
@@ -4138,10 +4138,10 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
         });
       });
     }
-    new import_obsidian21.Setting(contentEl).setName("Folder path for the overview").setDesc("Choose the folder path for the overview").addSearch((search) => {
+    new import_obsidian21.Setting(contentEl).setName("概览的文件夹路径").setDesc("选择概览的文件夹路径").addSearch((search) => {
       var _a2;
       new FolderSuggest(search.inputEl, this.plugin);
-      search.setPlaceholder("Folder path").setValue(((_a2 = this.yaml) == null ? void 0 : _a2.folderPath) || "").onChange(async (value) => {
+      search.setPlaceholder("文件夹路径").setValue(((_a2 = this.yaml) == null ? void 0 : _a2.folderPath) || "").onChange(async (value) => {
         if (!(this.app.vault.getAbstractFileByPath(value) instanceof import_obsidian21.TFolder) && value !== "")
           return;
         this.yaml.folderPath = value;
@@ -4152,9 +4152,9 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
         ;
       });
     });
-    new import_obsidian21.Setting(contentEl).setName("Overview style").setDesc("Choose the style of the overview (grid style soon)").addDropdown((dropdown) => {
+    new import_obsidian21.Setting(contentEl).setName("概览样式").setDesc("选择概览的样式（网格样式即将推出）").addDropdown((dropdown) => {
       var _a2;
-      return dropdown.addOption("list", "List").addOption("explorer", "Explorer").setValue(((_a2 = this.yaml) == null ? void 0 : _a2.style) || "list").onChange(async (value) => {
+      return dropdown.addOption("list", "列表").addOption("explorer", "资源管理器").setValue(((_a2 = this.yaml) == null ? void 0 : _a2.style) || "list").onChange(async (value) => {
         this.yaml.style = value;
         this.display();
         if (this.defaultSettings) {
@@ -4164,7 +4164,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       });
     });
     if (this.yaml.style === "explorer") {
-      new import_obsidian21.Setting(contentEl).setName("Store collapsed condition").setDesc("Choose if the collapsed condition should be stored stored until you restart Obsidian").addToggle((toggle) => toggle.setValue(this.yaml.storeFolderCondition).onChange(async (value) => {
+      new import_obsidian21.Setting(contentEl).setName("存储折叠状态").setDesc("选择折叠条件是否应存储直到您重启 Obsidian").addToggle((toggle) => toggle.setValue(this.yaml.storeFolderCondition).onChange(async (value) => {
         this.yaml.storeFolderCondition = value;
         if (this.defaultSettings) {
           return this.plugin.saveSettings();
@@ -4174,7 +4174,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       }));
     }
     const setting = new import_obsidian21.Setting(contentEl);
-    setting.setName("Include types");
+    setting.setName("包含类型");
     const list = setting.createList((list2) => {
       var _a2;
       return list2.addModal(this).setValues(((_a2 = this.yaml) == null ? void 0 : _a2.includeTypes) || this.plugin.settings.defaultOverview.includeTypes || []).addResetButton();
@@ -4223,7 +4223,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       type === "folder" || type === "markdown" ? disableFileTag = true : null;
     });
     if (disableFileTag) {
-      new import_obsidian21.Setting(contentEl).setName("Disable file tag").setDesc("Choose if the file tag should be shown after the file name").addToggle((toggle) => {
+      new import_obsidian21.Setting(contentEl).setName("禁用文件标签").setDesc("选择文件名后是否显示文件标签").addToggle((toggle) => {
         toggle.setValue(this.yaml.disableFileTag).onChange(async (value) => {
           this.yaml.disableFileTag = value;
           if (this.defaultSettings) {
@@ -4233,7 +4233,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
         });
       });
     }
-    new import_obsidian21.Setting(contentEl).setName("Show folder notes").setDesc("Choose if folder notes (the note itself and not the folder name) should be shown in the overview").addToggle((toggle) => toggle.setValue(this.yaml.showFolderNotes).onChange(async (value) => {
+    new import_obsidian21.Setting(contentEl).setName("显示文件夹笔记").setDesc("选择文件夹笔记（笔记本身而不是文件夹名称）是否应显示在概览中").addToggle((toggle) => toggle.setValue(this.yaml.showFolderNotes).onChange(async (value) => {
       this.yaml.showFolderNotes = value;
       if (this.defaultSettings) {
         return this.plugin.saveSettings();
@@ -4241,7 +4241,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       await updateYaml(this.plugin, this.ctx, this.el, this.yaml);
     }));
     if (this.yaml.style !== "explorer") {
-      new import_obsidian21.Setting(contentEl).setName("File depth").setDesc("File & folder = +1 depth").addSlider((slider) => {
+      new import_obsidian21.Setting(contentEl).setName("文件深度").setDesc("文件与文件夹 = +1 深度").addSlider((slider) => {
         var _a2;
         return slider.setValue(((_a2 = this.yaml) == null ? void 0 : _a2.depth) || 2).setLimits(1, 10, 1).onChange(async (value) => {
           this.yaml.depth = value;
@@ -4252,9 +4252,9 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
         });
       });
     }
-    new import_obsidian21.Setting(contentEl).setName("Sort files by").setDesc("Choose how the files should be sorted").addDropdown((dropdown) => {
+    new import_obsidian21.Setting(contentEl).setName("按以下方式排序文件").setDesc("选择文件的排序方式").addDropdown((dropdown) => {
       var _a2;
-      return dropdown.addOption("name", "Name").addOption("created", "Created").addOption("modified", "Modified").setValue(((_a2 = this.yaml) == null ? void 0 : _a2.sortBy) || "name").onChange(async (value) => {
+      return dropdown.addOption("name", "名称").addOption("created", "创建").addOption("modified", "修改").setValue(((_a2 = this.yaml) == null ? void 0 : _a2.sortBy) || "name").onChange(async (value) => {
         this.yaml.sortBy = value;
         if (this.defaultSettings) {
           return this.plugin.saveSettings();
@@ -4262,7 +4262,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
         await updateYaml(this.plugin, this.ctx, this.el, this.yaml);
       });
     }).addDropdown((dropdown) => {
-      dropdown.addOption("desc", "Descending").addOption("asc", "Ascending");
+      dropdown.addOption("desc", "降序").addOption("asc", "升序");
       if (this.yaml.sortByAsc) {
         dropdown.setValue("asc");
       } else {
@@ -4281,7 +4281,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       });
     });
     if (this.yaml.style === "list") {
-      new import_obsidian21.Setting(contentEl).setName("Show folder names of folders that appear empty in the folder overview").setDesc("Show the names of folders that appear to have no files/folders in the folder overview. That's mostly the case when you set the file depth to 1.").addToggle((toggle) => {
+      new import_obsidian21.Setting(contentEl).setName("显示在文件夹概览中似乎为空的文件夹的名称").setDesc("显示在文件夹概览中似乎没有文件/文件夹的文件夹名称。这通常发生在您将文件深度设置为 1 时。").addToggle((toggle) => {
         toggle.setValue(this.yaml.showEmptyFolders).onChange(async (value) => {
           this.yaml.showEmptyFolders = value;
           this.yaml.onlyIncludeSubfolders = false;
@@ -4293,7 +4293,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
         });
       });
       if (this.yaml.showEmptyFolders) {
-        new import_obsidian21.Setting(contentEl).setName("Only show first empty subfolders of current folder").addToggle((toggle) => {
+        new import_obsidian21.Setting(contentEl).setName("仅显示当前文件夹的第一个空子文件夹").addToggle((toggle) => {
           toggle.setValue(this.yaml.onlyIncludeSubfolders).onChange(async (value) => {
             this.yaml.onlyIncludeSubfolders = value;
             if (this.defaultSettings) {
@@ -4305,7 +4305,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
       }
     }
     if (this.yaml.style === "explorer") {
-      new import_obsidian21.Setting(contentEl).setName("Disable collapse icon for folder notes").setDesc("Remove the collapse icon next to the folder name for folder notes when they only contain the folder note itself").addToggle((toggle) => {
+      new import_obsidian21.Setting(contentEl).setName("禁用文件夹笔记的折叠图标").setDesc("当文件夹仅包含文件夹笔记本身时，移除文件夹名称旁的折叠图标").addToggle((toggle) => {
         toggle.setValue(this.yaml.disableCollapseIcon).onChange(async (value) => {
           this.yaml.disableCollapseIcon = value;
           if (this.defaultSettings) {
@@ -4325,7 +4325,7 @@ var FolderOverviewSettings = class extends import_obsidian21.Modal {
 // src/settings/FolderOverviewSettings.ts
 async function renderFolderOverview(settingsTab) {
   const containerEl = settingsTab.settingsPage;
-  new import_obsidian22.Setting(containerEl).setName("Manage folder overview defaults").setDesc("Manage the default settings for the folder overview plugin").addButton((button) => button.setButtonText("Manage").setCta().onClick(async () => {
+  new import_obsidian22.Setting(containerEl).setName("管理文件夹概览默认设置").setDesc("管理文件夹概览插件的默认设置").addButton((button) => button.setButtonText("管理").setCta().onClick(async () => {
     new FolderOverviewSettings(settingsTab.plugin.app, settingsTab.plugin, settingsTab.plugin.settings.defaultOverview, null, null, true).open();
   }));
 }
@@ -4334,32 +4334,32 @@ async function renderFolderOverview(settingsTab) {
 var import_obsidian23 = require("obsidian");
 async function renderExcludeFolders(settingsTab) {
   const containerEl = settingsTab.settingsPage;
-  const manageExcluded = new import_obsidian23.Setting(containerEl).setHeading().setClass("fn-excluded-folder-heading").setName("Manage excluded folders");
+  const manageExcluded = new import_obsidian23.Setting(containerEl).setHeading().setClass("fn-excluded-folder-heading").setName("管理排除的文件夹");
   const desc3 = document.createDocumentFragment();
-  desc3.append("Add {regex} at the beginning of the folder name to use a regex pattern.", desc3.createEl("br"), "Use * before and after to exclude folders that include the name between the *s.", desc3.createEl("br"), "Use * before the folder name to exclude folders that end with the folder name.", desc3.createEl("br"), "Use * after the folder name to exclude folders that start with the folder name.");
+  desc3.append("在文件夹名称开头添加 {regex} 以使用正则表达式模式。", desc3.createEl("br"), "在前后使用 * 来排除包含 *s 之间名称的文件夹。", desc3.createEl("br"), "在文件夹名称前使用 * 来排除以文件夹名称结尾的文件夹。", desc3.createEl("br"), "在文件夹名称后使用 * 来排除以文件夹名称开头的文件夹。");
   manageExcluded.setDesc(desc3);
-  manageExcluded.infoEl.appendText("The regexes and wildcards are only for the folder name, not the path.");
+  manageExcluded.infoEl.appendText("正则表达式和通配符仅适用于文件夹名称，而不是路径。");
   manageExcluded.infoEl.createEl("br");
-  manageExcluded.infoEl.appendText("If you want to switch to a folder path delete the pattern first.");
+  manageExcluded.infoEl.appendText("如果您想切换到文件夹路径，请先删除模式。");
   manageExcluded.infoEl.style.color = settingsTab.app.vault.getConfig("accentColor") || "#7d5bed";
-  new import_obsidian23.Setting(containerEl).setName("Exclude folder default settings").addButton((cb) => {
-    cb.setButtonText("Manage");
+  new import_obsidian23.Setting(containerEl).setName("排除文件夹默认设置").addButton((cb) => {
+    cb.setButtonText("管理");
     cb.setCta();
     cb.onClick(async () => {
       new ExcludedFolderSettings(settingsTab.app, settingsTab.plugin, settingsTab.plugin.settings.excludeFolderDefaultSettings).open();
     });
   });
-  new import_obsidian23.Setting(containerEl).setName("Exclude pattern default settings").addButton((cb) => {
-    cb.setButtonText("Manage");
+  new import_obsidian23.Setting(containerEl).setName("排除模式默认设置").addButton((cb) => {
+    cb.setButtonText("管理");
     cb.setCta();
     cb.onClick(async () => {
       new PatternSettings(settingsTab.app, settingsTab.plugin, settingsTab.plugin.settings.excludePatternDefaultSettings).open();
     });
   });
-  new import_obsidian23.Setting(containerEl).setName("Add excluded folder").setClass("add-exclude-folder-item").addButton((cb) => {
+  new import_obsidian23.Setting(containerEl).setName("添加排除的文件夹").setClass("add-exclude-folder-item").addButton((cb) => {
     cb.setIcon("plus");
     cb.setClass("add-exclude-folder");
-    cb.setTooltip("Add excluded folder");
+    cb.setTooltip("添加排除的文件夹");
     cb.onClick(() => {
       const excludedFolder = new ExcludedFolder("", settingsTab.plugin.settings.excludeFolders.length, settingsTab.plugin);
       addExcludeFolderListItem(settingsTab, containerEl, excludedFolder);
@@ -4471,23 +4471,23 @@ var SettingsTab = class extends import_obsidian24.PluginSettingTab {
     super(app2, plugin);
     this.TABS = {
       GENERAL: {
-        name: "General",
+        name: "通用",
         id: "general"
       },
       FOLDER_OVERVIEW: {
-        name: "Folder overview",
+        name: "文件夹概览",
         id: "folder_overview"
       },
       EXCLUDE_FOLDERS: {
-        name: "Exclude folders",
+        name: "排除文件夹",
         id: "exclude_folders"
       },
       FILE_EXPLORER: {
-        name: "File explorer",
+        name: "文件资源管理器",
         id: "file_explorer"
       },
       PATH: {
-        name: "Path",
+        name: "路径",
         id: "path"
       }
     };
@@ -4537,7 +4537,7 @@ var SettingsTab = class extends import_obsidian24.PluginSettingTab {
     this.renderSettingsPage(this.plugin.settings.settingsTab);
   }
   updateFolderNotes(newTemplate) {
-    new import_obsidian24.Notice("Starting to update folder notes...");
+    new import_obsidian24.Notice("开始更新文件夹笔记...");
     for (const folder of this.app.vault.getAllLoadedFiles()) {
       if (folder instanceof import_obsidian24.TFolder) {
         const folderNote = getFolderNote(this.plugin, folder.path);
@@ -4554,10 +4554,10 @@ var SettingsTab = class extends import_obsidian24.PluginSettingTab {
     }
     this.plugin.settings.folderNoteName = newTemplate;
     this.plugin.saveSettings();
-    new import_obsidian24.Notice("Finished updating folder notes");
+    new import_obsidian24.Notice("已完成更新文件夹笔记");
   }
   switchStorageLocation(oldMethod) {
-    new import_obsidian24.Notice("Starting to switch storage location...");
+    new import_obsidian24.Notice("开始切换存储位置...");
     this.app.vault.getAllLoadedFiles().forEach((file) => {
       if (file instanceof import_obsidian24.TFolder) {
         const folderNote = getFolderNote(this.plugin, file.path, oldMethod);
@@ -4581,7 +4581,7 @@ var SettingsTab = class extends import_obsidian24.PluginSettingTab {
         }
       }
     });
-    new import_obsidian24.Notice("Finished switching storage location");
+    new import_obsidian24.Notice("已完成切换存储位置");
   }
   onClose() {
     this.plugin.settingsOpened = false;
@@ -4603,7 +4603,7 @@ var Commands = class {
   regularCommands() {
     this.plugin.addCommand({
       id: "turn-into-folder-note",
-      name: "Make current active note a folder note for the folder of the active note",
+      name: "将当前活动笔记作为活动笔记所在文件夹的文件夹笔记",
       callback: () => {
         const file = this.app.workspace.getActiveFile();
         if (!(file instanceof import_obsidian25.TFile))
@@ -4617,7 +4617,7 @@ var Commands = class {
     });
     this.plugin.addCommand({
       id: "create-folder-note",
-      name: "Create folder note with a new folder for the active note in the current folder",
+      name: "在当前文件夹中为活动笔记创建新的文件夹笔记",
       callback: async () => {
         var _a, _b, _c;
         const file = this.app.workspace.getActiveFile();
@@ -4628,7 +4628,7 @@ var Commands = class {
           newPath = file.basename;
         }
         if (this.plugin.app.vault.getAbstractFileByPath(newPath)) {
-          return new import_obsidian25.Notice("Folder already exists");
+          return new import_obsidian25.Notice("文件夹已存在");
         }
         const automaticallyCreateFolderNote = this.plugin.settings.autoCreate;
         this.plugin.settings.autoCreate = false;
@@ -4644,7 +4644,7 @@ var Commands = class {
     });
     this.plugin.addCommand({
       id: "create-folder-note-for-current-folder",
-      name: "Create markdown folder note for current folder of active note",
+      name: "为活动笔记的当前文件夹创建Markdown文件夹笔记",
       callback: () => {
         const file = this.app.workspace.getActiveFile();
         if (!(file instanceof import_obsidian25.TFile))
@@ -4660,7 +4660,7 @@ var Commands = class {
         return;
       this.plugin.addCommand({
         id: `create-${fileType}-folder-note-for-current-folder`,
-        name: `Create ${fileType} folder note for current folder of active note`,
+        name: `为活动笔记的当前文件夹创建 ${fileType} 文件夹笔记`,
         callback: () => {
           const file = this.app.workspace.getActiveFile();
           if (!(file instanceof import_obsidian25.TFile))
@@ -4674,7 +4674,7 @@ var Commands = class {
     });
     this.plugin.addCommand({
       id: "delete-folder-note-for-current-folder",
-      name: "Delete folder note of current folder of active note",
+      name: "删除活动笔记当前文件夹的文件夹笔记",
       callback: () => {
         const file = this.app.workspace.getActiveFile();
         if (!(file instanceof import_obsidian25.TFile))
@@ -4690,7 +4690,7 @@ var Commands = class {
     });
     this.plugin.addCommand({
       id: "open-folder-note-for-current-folder",
-      name: "Open folder note of current folder of active note",
+      name: "打开活动笔记当前文件夹的文件夹笔记",
       callback: () => {
         const file = this.app.workspace.getActiveFile();
         if (!(file instanceof import_obsidian25.TFile))
@@ -4706,7 +4706,7 @@ var Commands = class {
     });
     this.plugin.addCommand({
       id: "insert-folder-overview-fn",
-      name: "Insert folder overview",
+      name: "插入文件夹概览",
       editorCheckCallback: (checking, editor) => {
         const line = editor.getCursor().line;
         const lineText = editor.getLine(line);
@@ -4736,7 +4736,7 @@ ${newLines.join("\n")}\`\`\`
     });
     this.plugin.addCommand({
       id: "create-folder-note-from-selected-text",
-      name: "Create folder note from selected text",
+      name: "从选定文本创建文件夹笔记",
       editorCheckCallback: (checking, editor, view) => {
         const text = editor.getSelection().trim();
         const line = editor.getCursor().line;
@@ -4750,12 +4750,12 @@ ${newLines.join("\n")}\`\`\`
           const blacklist = ["*", "\\", '"', "/", "<", ">", "?", "|", ":"];
           for (const char of blacklist) {
             if (text.includes(char)) {
-              new import_obsidian25.Notice('File name cannot contain any of the following characters: * " \\ / < > : | ?');
+              new import_obsidian25.Notice('文件名不能包含以下字符：* " \\ / < > : | ?');
               return false;
             }
           }
           if (text.endsWith(".")) {
-            new import_obsidian25.Notice("File name cannot end with a dot");
+            new import_obsidian25.Notice("文件名不能以点结束");
             return;
           }
           let folder;
@@ -4763,7 +4763,7 @@ ${newLines.join("\n")}\`\`\`
           if (folderPath === "") {
             folder = this.plugin.app.vault.getAbstractFileByPath(text);
             if (folder instanceof import_obsidian25.TFolder) {
-              new import_obsidian25.Notice("Folder note already exists");
+              new import_obsidian25.Notice("文件夹笔记已存在");
               return false;
             } else {
               this.plugin.app.vault.createFolder(text);
@@ -4772,12 +4772,12 @@ ${newLines.join("\n")}\`\`\`
           } else {
             folder = this.plugin.app.vault.getAbstractFileByPath(folderPath + "/" + text);
             if (folder instanceof import_obsidian25.TFolder) {
-              new import_obsidian25.Notice("Folder note already exists");
+              new import_obsidian25.Notice("文件夹笔记已存在");
               return false;
             }
             if (this.plugin.settings.storageLocation === "parentFolder") {
               if (this.app.vault.getAbstractFileByPath(folderPath + "/" + text + this.plugin.settings.folderNoteType)) {
-                new import_obsidian25.Notice("File already exists");
+                new import_obsidian25.Notice("文件已存在");
                 return false;
               }
             }
@@ -4824,7 +4824,7 @@ ${newLines.join("\n")}\`\`\`
       }
       menu.addItem((item) => {
         if (import_obsidian25.Platform.isDesktop && !import_obsidian25.Platform.isTablet && this.plugin.settings.useSubmenus) {
-          item.setTitle("Folder Note Commands").setIcon("folder-edit");
+          item.setTitle("文件夹笔记命令").setIcon("folder-edit");
         }
         let subMenu;
         if (!import_obsidian25.Platform.isDesktopApp || !import_obsidian25.Platform.isDesktop || import_obsidian25.Platform.isTablet || !this.plugin.settings.useSubmenus) {
@@ -4835,7 +4835,7 @@ ${newLines.join("\n")}\`\`\`
         }
         if (file instanceof import_obsidian25.TFile) {
           subMenu.addItem((item2) => {
-            item2.setTitle("Create folder note").setIcon("edit").onClick(async () => {
+            item2.setTitle("创建文件夹笔记").setIcon("edit").onClick(async () => {
               if (!folder)
                 return;
               let newPath = folder.path + "/" + file.basename;
@@ -4843,7 +4843,7 @@ ${newLines.join("\n")}\`\`\`
                 newPath = file.basename;
               }
               if (this.plugin.app.vault.getAbstractFileByPath(newPath)) {
-                return new import_obsidian25.Notice("Folder already exists");
+                return new import_obsidian25.Notice("文件夹已存在");
               }
               const automaticallyCreateFolderNote = this.plugin.settings.autoCreate;
               this.plugin.settings.autoCreate = false;
@@ -4862,7 +4862,7 @@ ${newLines.join("\n")}\`\`\`
           if (!(folder instanceof import_obsidian25.TFolder))
             return;
           subMenu.addItem((item2) => {
-            item2.setTitle(`Turn into folder note for ${folder == null ? void 0 : folder.name}`).setIcon("edit").onClick(() => {
+            item2.setTitle(`转换为文件夹笔记 ${folder == null ? void 0 : folder.name}`).setIcon("edit").onClick(() => {
               if (!folder || !(folder instanceof import_obsidian25.TFolder))
                 return;
               const folderNote2 = getFolderNote(this.plugin, folder.path);
@@ -4874,20 +4874,20 @@ ${newLines.join("\n")}\`\`\`
           return;
         if (this.plugin.settings.excludeFolders.find((folder2) => folder2.path === file.path)) {
           subMenu.addItem((item2) => {
-            item2.setTitle("Remove folder from excluded folders").setIcon("trash").onClick(() => {
+            item2.setTitle("从排除的文件夹中移除文件夹").setIcon("trash").onClick(() => {
               this.plugin.settings.excludeFolders = this.plugin.settings.excludeFolders.filter((folder2) => folder2.path !== file.path);
               this.plugin.saveSettings();
-              new import_obsidian25.Notice("Successfully removed folder from excluded folders");
+              new import_obsidian25.Notice("成功从排除的文件夹中移除文件夹");
             });
           });
           return;
         }
         subMenu.addItem((item2) => {
-          item2.setTitle("Exclude folder from folder notes").setIcon("x-circle").onClick(() => {
+          item2.setTitle("将文件夹排除在文件夹笔记之外").setIcon("x-circle").onClick(() => {
             const excludedFolder = new ExcludedFolder(file.path, this.plugin.settings.excludeFolders.length, this.plugin);
             this.plugin.settings.excludeFolders.push(excludedFolder);
             this.plugin.saveSettings();
-            new import_obsidian25.Notice("Successfully excluded folder from folder notes");
+            new import_obsidian25.Notice("成功从文件夹笔记中排除文件夹");
           });
         });
         if (!(file instanceof import_obsidian25.TFolder))
@@ -4895,23 +4895,23 @@ ${newLines.join("\n")}\`\`\`
         const folderNote = getFolderNote(this.plugin, file.path);
         if (folderNote instanceof import_obsidian25.TFile) {
           subMenu.addItem((item2) => {
-            item2.setTitle("Delete folder note").setIcon("trash").onClick(() => {
+            item2.setTitle("删除文件夹笔记").setIcon("trash").onClick(() => {
               deleteFolderNote(this.plugin, folderNote, true);
             });
           });
           subMenu.addItem((item2) => {
-            item2.setTitle("Open folder note").setIcon("chevron-right-square").onClick(() => {
+            item2.setTitle("打开文件夹笔记").setIcon("chevron-right-square").onClick(() => {
               openFolderNote(this.plugin, folderNote);
             });
           });
           subMenu.addItem((item2) => {
-            item2.setTitle("Copy Obsidian URL").setIcon("link").onClick(() => {
+            item2.setTitle("复制 Obsidian URL").setIcon("link").onClick(() => {
               this.app.copyObsidianUrl(folderNote);
             });
           });
         } else {
           subMenu.addItem((item2) => {
-            item2.setTitle("Create markdown folder note").setIcon("edit").onClick(() => {
+            item2.setTitle("创建 markdown 文件夹笔记").setIcon("edit").onClick(() => {
               createFolderNote(this.plugin, file.path, true, ".md");
             });
           });
@@ -4919,7 +4919,7 @@ ${newLines.join("\n")}\`\`\`
             if (fileType === "md")
               return;
             subMenu.addItem((item2) => {
-              item2.setTitle(`Create ${fileType} folder note`).setIcon("edit").onClick(() => {
+              item2.setTitle(`创建 ${fileType} 文件夹笔记`) .setIcon("edit").onClick(() => {
                 createFolderNote(this.plugin, file.path, true, "." + fileType);
               });
             });
@@ -4935,7 +4935,7 @@ ${newLines.join("\n")}\`\`\`
       const lineText = editor.getLine(line);
       if (lineText.trim() === "" || lineText.trim() === ">") {
         menu.addItem((item) => {
-          item.setTitle("Create folder overview").setIcon("edit").onClick(() => {
+          item.setTitle("创建文件夹概览").setIcon("edit").onClick(() => {
             let json = Object.assign({}, this.plugin.settings.defaultOverview);
             json.id = crypto.randomUUID();
             const yaml = (0, import_obsidian25.stringifyYaml)(json);
@@ -4958,19 +4958,19 @@ ${newLines.join("\n")}\`\`\`
       if (!text || text.trim() === "")
         return;
       menu.addItem((item) => {
-        item.setTitle("Create folder note").setIcon("edit").onClick(() => {
+        item.setTitle("创建文件夹笔记").setIcon("edit").onClick(() => {
           const file = view.file;
           if (!(file instanceof import_obsidian25.TFile))
             return;
           const blacklist = ["*", "\\", '"', "/", "<", ">", "?", "|", ":"];
           for (const char of blacklist) {
             if (text.includes(char)) {
-              new import_obsidian25.Notice('File name cannot contain any of the following characters: * " \\ / < > : | ?');
+              new import_obsidian25.Notice('文件名不能包含以下字符：* " \\ / < > : | ?');
               return;
             }
           }
           if (text.endsWith(".")) {
-            new import_obsidian25.Notice("File name cannot end with a dot");
+            new import_obsidian25.Notice("文件名不能以点结束");
             return;
           }
           let folder;
@@ -4979,7 +4979,7 @@ ${newLines.join("\n")}\`\`\`
           if (folderPath === "") {
             folder = this.plugin.app.vault.getAbstractFileByPath(text);
             if (folder instanceof import_obsidian25.TFolder) {
-              return new import_obsidian25.Notice("Folder note already exists");
+              return new import_obsidian25.Notice("文件夹笔记已存在");
             } else {
               this.plugin.app.vault.createFolder(text);
               createFolderNote(this.plugin, text, false);
@@ -4987,11 +4987,11 @@ ${newLines.join("\n")}\`\`\`
           } else {
             folder = this.plugin.app.vault.getAbstractFileByPath(folderPath + "/" + text);
             if (folder instanceof import_obsidian25.TFolder) {
-              return new import_obsidian25.Notice("Folder note already exists");
+              return new import_obsidian25.Notice("文件夹笔记已存在");
             }
             if (this.plugin.settings.storageLocation === "parentFolder") {
               if (this.app.vault.getAbstractFileByPath(folderPath + "/" + fileName + this.plugin.settings.folderNoteType)) {
-                return new import_obsidian25.Notice("File already exists");
+                return new import_obsidian25.Notice("文件已存在");
               }
             }
             this.plugin.app.vault.createFolder(folderPath + "/" + text);
@@ -5281,7 +5281,7 @@ function handleFileRename(file, oldPath, plugin) {
     return;
   }
   if (folderName === (newFolder == null ? void 0 : newFolder.name) && folderNote) {
-    new import_obsidian28.Notice("Folder with same name already exists!");
+    new import_obsidian28.Notice("已存在同名文件夹！");
     let excludedFolderExisted = true;
     let disabledSync = false;
     if (!excludedFolder) {
@@ -5353,7 +5353,7 @@ async function renameFolderOnFileRename(file, oldPath, oldFolder, plugin) {
   }
   if (plugin.app.vault.getAbstractFileByPath(newFolderPath)) {
     await plugin.app.fileManager.renameFile(file, oldPath);
-    return new import_obsidian28.Notice("A folder with the same name already exists");
+    return new import_obsidian28.Notice("已存在同名文件夹");
   }
   plugin.app.fileManager.renameFile(oldFolder, newFolderPath);
 }
@@ -5625,7 +5625,7 @@ var FolderNotesPlugin = class extends import_obsidian33.Plugin {
     this.settingsOpened = false;
   }
   async onload() {
-    console.log("loading folder notes plugin");
+    console.log("加载文件夹笔记插件");
     await this.loadSettings();
     this.settingsTab = new SettingsTab(this.app, this);
     this.addSettingTab(this.settingsTab);
@@ -5866,7 +5866,7 @@ var FolderNotesPlugin = class extends import_obsidian33.Plugin {
     });
   }
   onunload() {
-    console.log("unloading folder notes plugin");
+    console.log("卸载文件夹笔记插件");
     this.observer.disconnect();
     document.body.classList.remove("folder-notes-plugin");
     document.body.classList.remove("folder-note-underline");

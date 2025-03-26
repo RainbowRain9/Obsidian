@@ -3,7 +3,7 @@
     "name": "SimpRead Sync",
     "version": "2.1.1",
     "minAppVersion": "0.12.10",
-    "description": "Auto sync SimpRead unreader",
+    "description": "自动同步SimpRead读卡器",
     "author": "Kenshin",
     "authorUrl": "http://simpread.pro/",
     "isDesktopOnly": true

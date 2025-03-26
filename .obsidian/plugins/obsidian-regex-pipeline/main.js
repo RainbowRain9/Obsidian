@@ -38,13 +38,13 @@ class RegexPipeline extends obsidian.Plugin {
         this.pathToRulesets = this.app.vault.configDir + "/regex-rulesets";
         this.indexFile = "/index.txt";
     }
-    log(message, ...optionalParams) {
+   log(message, ...optionalParams) {
         // comment this to disable logging
-        console.log("[regex-pipeline] " + message);
+        console.log("[正则表达式管道] " + message);
     }
     onload() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.log('loading');
+            this.log('加载中');
             this.addSettingTab(new ORPSettings(this.app, this));
             this.configs = yield this.loadData();
             if (this.configs == null)
@@ -59,9 +59,9 @@ class RegexPipeline extends obsidian.Plugin {
             });
             this.addCommand({
                 id: 'apply-ruleset',
-                name: 'Apply Ruleset',
+                name: '应用规则集',
                 // callback: () => {
-                // 	this.log('Simple Callback');
+                // 	this.log('简单回调');
                 // },
                 checkCallback: (checking) => {
                     let leaf = this.app.workspace.activeLeaf;
@@ -75,12 +75,12 @@ class RegexPipeline extends obsidian.Plugin {
                 }
             });
             this.reloadRulesets();
-            this.log("Rulesets: " + this.pathToRulesets);
-            this.log("Index: " + this.pathToRulesets + this.indexFile);
+            this.log("规则集: " + this.pathToRulesets);
+            this.log("索引: " + this.pathToRulesets + this.indexFile);
         });
     }
     onunload() {
-        this.log('unloading');
+        this.log('卸载中');
         if (this.rightClickEventRef != null)
             this.app.workspace.offref(this.rightClickEventRef);
     }
@@ -90,7 +90,7 @@ class RegexPipeline extends obsidian.Plugin {
                 yield this.app.vault.createFolder(this.pathToRulesets);
             if (!(yield this.app.vault.adapter.exists(this.pathToRulesets + this.indexFile)))
                 yield this.app.vault.adapter.write(this.pathToRulesets + this.indexFile, "").catch((r) => {
-                    new obsidian.Notice("Failed to write to index file: " + r);
+                    new obsidian.通知("无法写入索引文件: " + r);
                 });
             let p = this.app.vault.adapter.read(this.pathToRulesets + this.indexFile);
             p.then(s => {
@@ -109,7 +109,7 @@ class RegexPipeline extends obsidian.Plugin {
             if (this.quickCommands == null)
                 this.quickCommands = new Array();
             let expectedCommands = Math.min(this.configs.quickCommands, this.rules.length);
-            this.log(`setting up ${expectedCommands} commands...`);
+            this.log(`正在设置 ${expectedCommands} 个命令...`);
             for (let i = 0; i < expectedCommands; i++) {
                 let r = this.rules[i];
                 let c = this.addCommand({
@@ -121,7 +121,7 @@ class RegexPipeline extends obsidian.Plugin {
                         this.applyRuleset(this.pathToRulesets + "/" + r);
                     },
                 });
-                this.log(`pusing ${r} command...`);
+                this.log(`正在推送 ${r} 命令...`);
                 this.quickCommands.push(c);
                 this.log(this.quickCommands);
             }
@@ -154,7 +154,7 @@ class RegexPipeline extends obsidian.Plugin {
                 newIndexValue += v + "\n";
             });
             yield this.app.vault.adapter.write(this.pathToRulesets + this.indexFile, newIndexValue).catch((r) => {
-                new obsidian.Notice("Failed to write to index file: " + r);
+                new obsidian.通知("无法写入索引文件: " + r);
                 result = false;
             });
             return result;
@@ -162,14 +162,14 @@ class RegexPipeline extends obsidian.Plugin {
     }
     createRuleset(name, content) {
         return __awaiter(this, void 0, void 0, function* () {
-            this.log("createRuleset: " + name);
+            this.log("创建规则集: " + name);
             var path = this.pathToRulesets + "/" + name;
             if (yield this.app.vault.adapter.exists(path)) {
-                this.log("file existed: " + path);
+                this.log("文件已存在: " + path);
                 return false;
             }
             yield this.app.vault.adapter.write(path, content).catch((r) => {
-                new obsidian.Notice("Failed to write the ruleset file: " + r);
+                new obsidian.通知("无法写入规则集文件: " + r);
             });
             yield this.appendRulesetsToIndex(name);
             return true;
@@ -178,14 +178,14 @@ class RegexPipeline extends obsidian.Plugin {
     applyRuleset(ruleset) {
         return __awaiter(this, void 0, void 0, function* () {
             if (!(yield this.app.vault.adapter.exists(ruleset))) {
-                new obsidian.Notice(ruleset + " not found!");
+                new obsidian.通知(ruleset + " 未找到!");
                 return;
             }
             let ruleParser = /^"(.+?)"([a-z]*?)(?:\r\n|\r|\n)?->(?:\r\n|\r|\n)?"(.*?)"([a-z]*?)(?:\r\n|\r|\n)?$/gmus;
             let ruleText = yield this.app.vault.adapter.read(ruleset);
             let activeMarkdownView = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView);
             if (activeMarkdownView == null) {
-                new obsidian.Notice("No active Markdown file!");
+                new obsidian.通知("没有活动的Markdown文件!");
                 return;
             }
             let subject;
@@ -218,7 +218,7 @@ class RegexPipeline extends obsidian.Plugin {
                 activeMarkdownView.editor.setValue(subject);
             activeMarkdownView.requestSave();
             activeMarkdownView.editor.scrollTo(0, pos.top);
-            new obsidian.Notice("Executed ruleset '" + ruleset + "' which contains " + count + " regex replacements!");
+            new obsidian.通知("执行了规则集 '" + ruleset + "'，其中包含 " + count + " 个正则表达式替换!");
         });
     }
 }
@@ -236,8 +236,8 @@ class ORPSettings extends obsidian.PluginSettingTab {
     display() {
         this.containerEl.empty();
         new obsidian.Setting(this.containerEl)
-            .setName("Quick Rules")
-            .setDesc("The first N rulesets in your index file will be available in right click menu and as commands.")
+            .setName("快速规则")
+            .setDesc("索引文件中的前N个规则集将在右键菜单中作为命令可用。")
             .addSlider(c => {
             c.setValue(this.plugin.configs.quickRules);
             c.setLimits(0, 10, 1);
@@ -250,8 +250,8 @@ class ORPSettings extends obsidian.PluginSettingTab {
             });
         });
         new obsidian.Setting(this.containerEl)
-            .setName("Quick Rule Commands")
-            .setDesc("The first N rulesets in your index file will be available as Obsidian commands. If decreasing, the existing commands will not be removed until next reload (You can also manually re-enabled the plugin).")
+            .setName("快速规则命令")
+            .setDesc("索引文件中的前N个规则集将作为Obsidian命令可用。如果减少，则现有命令将在下次重新加载之前不会被移除（您也可以手动重新启用插件）。")
             .addSlider(c => {
             c.setValue(this.plugin.configs.quickCommands);
             c.setLimits(0, 10, 1);
@@ -263,8 +263,8 @@ class ORPSettings extends obsidian.PluginSettingTab {
             });
         });
         new obsidian.Setting(this.containerEl)
-            .setName("Save Rules In Vault")
-            .setDesc("Reads rulesets from \".obsidian/regex-rulesets\" when off, \"./regex-ruleset\" when on (useful if you are user of ObsidianSync). ")
+            .setName("在保险库中保存规则")
+            .setDesc("关闭时从\".obsidian/regex-rulesets\"读取规则集，开启时从\"./regex-ruleset\"读取（如果您是ObsidianSync的用户，这很有用）。")
             .addToggle(c => {
             c.setValue(this.plugin.configs.rulesInVault);
             c.onChange(v => {
@@ -297,7 +297,7 @@ class ApplyRuleSetMenu extends obsidian.Modal {
         });
         this.titleEl.createEl("h1", null, el => { el.style.setProperty("flex-grow", "1"); });
         var reloadButton = new obsidian.ButtonComponent(this.titleEl)
-            .setButtonText("RELOAD")
+            .setButtonText("重新加载")
             .onClick((evt) => __awaiter(this, void 0, void 0, function* () {
             yield this.plugin.reloadRulesets();
             this.onClose();
@@ -314,7 +314,7 @@ class ApplyRuleSetMenu extends obsidian.Modal {
             // 	.addButton(btn => btn.onClick(async () => {
             // 		this.plugin.applyRuleset(this.plugin.pathToRulesets + "/" + this.plugin.rules[i])
             // 		this.close();
-            // 	}).setButtonText("Apply"));
+            // 	}).setButtonText("应用"));
             var ruleset = new obsidian.ButtonComponent(this.contentEl)
                 .setButtonText(this.plugin.rules[i])
                 .onClick((evt) => __awaiter(this, void 0, void 0, function* () {
@@ -361,10 +361,10 @@ class NewRulesetPanel extends obsidian.Modal {
         contentInput.style.setProperty("height", "300px");
         this.contentEl.append(contentInput);
         new obsidian.ButtonComponent(this.contentEl)
-            .setButtonText("Save")
+            .setButtonText("保存")
             .onClick((evt) => __awaiter(this, void 0, void 0, function* () {
             if (!(yield this.plugin.createRuleset(nameInput.value, contentInput.value))) {
-                new obsidian.Notice("Failed to create the ruleset! Please check if the file already exist.");
+                new obsidian.通知("无法创建规则集！请检查文件是否已存在。");
                 return;
             }
             this.plugin.menu.onClose();

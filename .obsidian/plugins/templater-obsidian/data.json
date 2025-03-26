@@ -32,7 +32,7 @@
     ""
   ],
   "startup_templates": [
-    "学习区/_Templates/startup/FastStart-StartupScript.md",
+    "",
     ""
   ],
   "enable_ribbon_icon": true

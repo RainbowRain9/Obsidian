@@ -1844,7 +1844,7 @@ class ListsFoldingCommands {
             this.plugin.addCommand({
                 id: "fold",
                 icon: "chevrons-down-up",
-                name: "Fold the list",
+                name: "折叠列表",
                 editorCallback: createEditorCallback(this.fold),
                 hotkeys: [
                     {
@@ -1856,7 +1856,7 @@ class ListsFoldingCommands {
             this.plugin.addCommand({
                 id: "unfold",
                 icon: "chevrons-up-down",
-                name: "Unfold the list",
+                name: "展开列表",
                 editorCallback: createEditorCallback(this.unfold),
                 hotkeys: [
                     {
@@ -2073,7 +2073,7 @@ class ListsMovementCommands {
             this.plugin.addCommand({
                 id: "move-list-item-up",
                 icon: "arrow-up",
-                name: "Move list and sublists up",
+                name: "向上移动列表和子列表",
                 editorCallback: createEditorCallback(this.moveListUp),
                 hotkeys: [
                     {
@@ -2085,7 +2085,7 @@ class ListsMovementCommands {
             this.plugin.addCommand({
                 id: "move-list-item-down",
                 icon: "arrow-down",
-                name: "Move list and sublists down",
+                name: "向下移动列表和子列表",
                 editorCallback: createEditorCallback(this.moveListDown),
                 hotkeys: [
                     {
@@ -2097,14 +2097,14 @@ class ListsMovementCommands {
             this.plugin.addCommand({
                 id: "indent-list",
                 icon: "indent",
-                name: "Indent the list and sublists",
+                name: "缩进列表和子列表",
                 editorCallback: createEditorCallback(this.indentList),
                 hotkeys: [],
             });
             this.plugin.addCommand({
                 id: "outdent-list",
                 icon: "outdent",
-                name: "Outdent the list and sublists",
+                name: "删除列表和子列表",
                 editorCallback: createEditorCallback(this.outdentList),
                 hotkeys: [],
             });
@@ -2185,14 +2185,14 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
         const { containerEl } = this;
         containerEl.empty();
         new obsidian.Setting(containerEl)
-            .setName("Stick the cursor to the content")
-            .setDesc("Don't let the cursor move to the bullet position.")
+            .setName("将光标固定到内容上")
+            .setDesc("不要让光标移动到项目符号的位置。")
             .addDropdown((dropdown) => {
             dropdown
                 .addOptions({
-                never: "Never",
-                "bullet-only": "Stick cursor out of bullets",
-                "bullet-and-checkbox": "Stick cursor out of bullets and checkboxes",
+                never: "从不",
+                "bullet-only": "将光标放在项目符号之外",
+                "bullet-and-checkbox": "将光标放在项目符号和复选框之外",
             })
                 .setValue(this.settings.keepCursorWithinContent)
                 .onChange((value) => __awaiter(this, void 0, void 0, function* () {
@@ -2201,8 +2201,8 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Enhance the Tab key")
-            .setDesc("Make Tab and Shift-Tab behave the same as other outliners.")
+            .setName("增强 Tab 键")
+            .setDesc("使 Tab 和 Shift-Tab 的行为与其他大纲工具一致。")
             .addToggle((toggle) => {
             toggle
                 .setValue(this.settings.overrideTabBehaviour)
@@ -2212,8 +2212,8 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Enhance the Enter key")
-            .setDesc("Make the Enter key behave the same as other outliners.")
+            .setName("增强 Enter 键")
+            .setDesc("使 Enter 键的行为与其他大纲工具一致。")
             .addToggle((toggle) => {
             toggle
                 .setValue(this.settings.overrideEnterBehaviour)
@@ -2223,8 +2223,8 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Enhance the Ctrl+A or Cmd+A behavior")
-            .setDesc("Press the hotkey once to select the current list item. Press the hotkey twice to select the entire list.")
+            .setName("增强 Ctrl+A 或 Cmd+A 的行为")
+            .setDesc("按下快捷键一次以选择当前列表项。按下快捷键两次以选择整个列表。")
             .addToggle((toggle) => {
             toggle
                 .setValue(this.settings.overrideSelectAllBehaviour)
@@ -2234,8 +2234,8 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Improve the style of your lists")
-            .setDesc("Styles are only compatible with built-in Obsidian themes and may not be compatible with other themes.")
+            .setName("改进你的列表样式")
+            .setDesc("样式仅与内置的 Obsidian 主题兼容，可能与其他主题不兼容。")
             .addToggle((toggle) => {
             toggle
                 .setValue(this.settings.betterListsStyles)
@@ -2245,7 +2245,7 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Draw vertical indentation lines")
+            .setName("绘制垂直缩进线")
             .addToggle((toggle) => {
             toggle.setValue(this.settings.verticalLines).onChange((value) => __awaiter(this, void 0, void 0, function* () {
                 this.settings.verticalLines = value;
@@ -2253,13 +2253,13 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Vertical indentation line click action")
+            .setName("垂直缩进线单击操作")
             .addDropdown((dropdown) => {
             dropdown
                 .addOptions({
-                none: "None",
-                "zoom-in": "Zoom In",
-                "toggle-folding": "Toggle Folding",
+                none: "无",
+                "zoom-in": "放大",
+                "toggle-folding": "切换折叠",
             })
                 .setValue(this.settings.verticalLinesAction)
                 .onChange((value) => __awaiter(this, void 0, void 0, function* () {
@@ -2267,15 +2267,15 @@ class ObsidianOutlinerPluginSettingTab extends obsidian.PluginSettingTab {
                 yield this.settings.save();
             }));
         });
-        new obsidian.Setting(containerEl).setName("Drag-and-Drop").addToggle((toggle) => {
+        new obsidian.Setting(containerEl).setName("拖放").addToggle((toggle) => {
             toggle.setValue(this.settings.dragAndDrop).onChange((value) => __awaiter(this, void 0, void 0, function* () {
                 this.settings.dragAndDrop = value;
                 yield this.settings.save();
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Debug mode")
-            .setDesc("Open DevTools (Command+Option+I or Control+Shift+I) to copy the debug logs.")
+            .setName("调试模式")
+            .setDesc("打开开发者工具（Command+Option+I 或 Control+Shift+I）以复制调试日志。")
             .addToggle((toggle) => {
             toggle.setValue(this.settings.debug).onChange((value) => __awaiter(this, void 0, void 0, function* () {
                 this.settings.debug = value;
@@ -2337,7 +2337,7 @@ class SystemInfoModal extends obsidian.Modal {
     }
     onOpen() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.titleEl.setText("System Information");
+            this.titleEl.setText("系统信息");
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const app = this.app;
             const data = {
@@ -2375,7 +2375,7 @@ class SystemInfoModal extends obsidian.Modal {
                 maxHeight: "300px",
             });
             const button = this.contentEl.createEl("button");
-            button.setText("Copy and Close");
+            button.setText("复制并关闭");
             button.onClickEvent(() => {
                 navigator.clipboard.writeText("```json\n" + text + "\n```");
                 this.close();
@@ -2396,7 +2396,7 @@ class SystemInfo {
         return __awaiter(this, void 0, void 0, function* () {
             this.plugin.addCommand({
                 id: "system-info",
-                name: "Show System Info",
+                name: "显示系统信息",
                 callback: this.callback,
                 hotkeys: [
                     {

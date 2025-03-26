@@ -180,7 +180,7 @@ function effect$2(_ref2) {
 
 
 var applyStyles$1 = {
-  name: 'applyStyles',
+  name: '应用样式',
   enabled: true,
   phase: 'write',
   fn: applyStyles,
@@ -505,7 +505,7 @@ function effect$1(_ref2) {
 
 
 var arrow$1 = {
-  name: 'arrow',
+  name: '箭头',
   enabled: true,
   phase: 'main',
   fn: arrow,
@@ -684,7 +684,7 @@ function computeStyles(_ref5) {
 
 
 var computeStyles$1 = {
-  name: 'computeStyles',
+  name: '计算样式',
   enabled: true,
   phase: 'beforeWrite',
   fn: computeStyles,
@@ -731,7 +731,7 @@ function effect(_ref) {
 
 
 var eventListeners = {
-  name: 'eventListeners',
+  name: '事件监听器',
   enabled: true,
   phase: 'write',
   fn: function fn() {},
@@ -1241,7 +1241,7 @@ function flip(_ref) {
 
 
 var flip$1 = {
-  name: 'flip',
+  name: '翻转',
   enabled: true,
   phase: 'main',
   fn: flip,
@@ -1280,7 +1280,7 @@ function hide(_ref) {
   var popperRect = state.rects.popper;
   var preventedOffsets = state.modifiersData.preventOverflow;
   var referenceOverflow = detectOverflow(state, {
-    elementContext: 'reference'
+    elementContext: '参考'
   });
   var popperAltOverflow = detectOverflow(state, {
     altBoundary: true
@@ -1303,7 +1303,7 @@ function hide(_ref) {
 
 
 var hide$1 = {
-  name: 'hide',
+  name: '隐藏',
   enabled: true,
   phase: 'main',
   requiresIfExists: ['preventOverflow'],
@@ -1355,7 +1355,7 @@ function offset(_ref2) {
 
 
 var offset$1 = {
-  name: 'offset',
+  name: '偏移',
   enabled: true,
   phase: 'main',
   requires: ['popperOffsets'],
@@ -1379,7 +1379,7 @@ function popperOffsets(_ref) {
 
 
 var popperOffsets$1 = {
-  name: 'popperOffsets',
+  name: '弹出偏移量',
   enabled: true,
   phase: 'read',
   fn: popperOffsets,
@@ -1514,7 +1514,7 @@ function preventOverflow(_ref) {
 
 
 var preventOverflow$1 = {
-  name: 'preventOverflow',
+  name: '避免溢出',
   enabled: true,
   phase: 'main',
   fn: preventOverflow,
@@ -2111,7 +2111,7 @@ class TextInputSuggest {
             placement: "bottom-start",
             modifiers: [
                 {
-                    name: "sameWidth",
+                    name: "同宽",
                     enabled: true,
                     fn: ({ state, instance }) => {
                         // Note: positioning needs to be calculated twice -
@@ -2202,30 +2202,30 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
         containerEl.empty();
         if (!this.plugin.utils.isNativePluginEnabled) {
             containerEl.createEl("h2", {
-                text: "Please enable the Workspaces plugin under Core Plugins before using this plugin",
+                text: "在使用此插件之前，请在核心插件中启用工作区插件。",
             });
             return;
         }
-        // containerEl.createEl("h2", { text: "Workspaces Plus" });
+        // containerEl.createEl("h2", { text: "工作空间增强" });
         containerEl.createEl("h2", {
-            text: "Quick Switcher Settings",
+            text: "快速切换器设置",
         });
         new obsidian.Setting(containerEl)
-            .setName("Show instructions")
-            .setDesc(`Show available keyboard shortcuts at the bottom of the workspace quick switcher`)
+            .setName("显示说明")
+            .setDesc(`在工作区快速切换器底部显示可用的键盘快捷键`)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.showInstructions).onChange(value => {
             this.plugin.settings.showInstructions = value;
             this.plugin.saveData(this.plugin.settings);
         }));
         new obsidian.Setting(containerEl)
-            .setName("Show workspace delete confirmation")
-            .setDesc(`Show a confirmation prompt on workspace deletion`)
+            .setName("显示工作区删除确认")
+            .setDesc(`在删除工作区时显示确认提示`)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.showDeletePrompt).onChange(value => {
             this.plugin.settings.showDeletePrompt = value;
             this.plugin.saveData(this.plugin.settings);
         }));
         new obsidian.Setting(containerEl)
-            .setName("Show Workspace Sidebar Ribbon Icon")
+            .setName("显示工作区侧边栏功能图标")
             // .setDesc(``)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.workspaceSwitcherRibbon).onChange(value => {
             this.plugin.settings.workspaceSwitcherRibbon = value;
@@ -2233,7 +2233,7 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
             this.plugin.toggleWorkspaceRibbonButton();
         }));
         new obsidian.Setting(containerEl)
-            .setName("Hide the native Workspace Sidebar Ribbon Icon")
+            .setName("隐藏原生工作区侧边栏的功能图标")
             // .setDesc(``)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.replaceNativeRibbon).onChange(value => {
             this.plugin.settings.replaceNativeRibbon = value;
@@ -2241,7 +2241,7 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
             this.plugin.toggleNativeWorkspaceRibbon();
         }));
         new obsidian.Setting(containerEl)
-            .setName("Show Workspace Mode Sidebar Ribbon Icon")
+            .setName("显示工作区模式侧边栏功能图标")
             // .setDesc(``)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.modeSwitcherRibbon).onChange(value => {
             this.plugin.settings.modeSwitcherRibbon = value;
@@ -2249,14 +2249,14 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
             this.plugin.toggleModeRibbonButton();
         }));
         containerEl.createEl("h2", {
-            text: "Workspace Enhancements",
+            text: "工作空间增强",
         });
         new obsidian.Setting(containerEl)
             .setName(createFragment(function (e) {
-            e.appendText("Workspace Modes"),
+            e.appendText("工作区模式"),
                 e.createSpan({
                     cls: "flair mod-pop",
-                    text: "beta",
+                    text: "测试版",
                 });
         }))
             .setDesc(`Modes are a new type of Workspace that store all of the native Obsidian Editor, Files & Links, 
@@ -2282,32 +2282,31 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Auto save the current workspace on layout change")
-            .setDesc(`This option will auto save your current workspace on any layout change.
-         Leave this disabled if you want full control over when your workspace is saved.`)
+            .setName("布局更改时自动保存当前工作区")
+            .setDesc(`此选项将在任何布局更改时自动保存您的当前工作空间。
+如果您想完全控制何时保存工作空间，请禁用此选项。`)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.saveOnChange).onChange(value => {
             this.plugin.settings.saveOnChange = value;
             this.plugin.saveData(this.plugin.settings);
         }));
         new obsidian.Setting(containerEl)
-            .setName("Respect system dark mode setting")
+            .setName("尊重系统深色模式设置")
             .setClass("requires-workspace-modes")
-            .setDesc(`Let the OS determine the light/dark mode setting when switching modes. This setting can only be used if Workspace Modes is enabled.`)
+            .setDesc(`在切换模式时，让操作系统确定光亮/暗黑模式设置。仅当启用工作区模式时才可使用此设置。`)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.systemDarkMode).onChange(value => {
             this.plugin.settings.systemDarkMode = value;
             this.plugin.saveData(this.plugin.settings);
         }));
         new obsidian.Setting(containerEl)
-            .setName("Automatically reload Obsidian on Live Preview setting change")
+            .setName("在Live Preview设置更改时自动重新加载Obsidian")
             .setClass("requires-workspace-modes")
-            .setDesc(`When switching between Modes with different Experimental Live Preview settings, reload Obsidian in order for the setting
-                change to take effect. ⚠️Note: Obsidian will reload automatically after changing workspaces, if needed, without any prompts.`)
+            .setDesc(`当在不同的实验性实时预览设置之间切换时，请重新加载Obsidian，以便设置更改生效。⚠️注意：如果需要更改工作空间，Obsidian会自动重新加载，无需任何提示。`)
             .addToggle(toggle => toggle.setValue(this.plugin.settings.reloadLivePreview).onChange(value => {
             this.plugin.settings.reloadLivePreview = value;
             this.plugin.saveData(this.plugin.settings);
         }));
         containerEl.createEl("h2", {
-            text: "Per Workspace Settings",
+            text: "工作空间设置",
         });
         let { workspaces } = this.plugin.workspacePlugin;
         Object.entries(workspaces).forEach(entry => {
@@ -2334,7 +2333,7 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
                 });
             });
             const subContainerEL = containerEl.createDiv({ cls: "settings-container" });
-            new obsidian.Setting(subContainerEL).setName("Workspace Description").addText(textfield => {
+            new obsidian.Setting(subContainerEL).setName("工作区描述").addText(textfield => {
                 var _a;
                 textfield.inputEl.type = "text";
                 (_a = textfield.inputEl.parentElement) === null || _a === void 0 ? void 0 : _a.addClass("search-input-container");
@@ -2345,7 +2344,7 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
                 });
             });
             // new Setting(containerEl)
-            //   .setName(`Auto save workspace on changes (not yet implemented)`)
+            //   .setName(`在更改时自动保存工作区（尚未实现）`)
             //   // .setDesc(``)
             //   .addToggle(toggle =>
             //     toggle.setValue(workspaceSettings?.autoSave).onChange(value => {
@@ -2353,7 +2352,7 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
             //       this.plugin.workspacePlugin.saveData();
             //     })
             //   );
-            new obsidian.Setting(subContainerEL).setHeading().setName("File Overrides");
+            new obsidian.Setting(subContainerEL).setHeading().setName("文件覆盖");
             getChildIds(workspace.main).forEach((leaf) => {
                 let currentFile;
                 if (workspaceSettings.fileOverrides && workspaceSettings.fileOverrides[leaf.id]) {
@@ -2387,7 +2386,7 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
         });
         containerEl
             .createEl("h2", {
-            text: "Per Mode Settings",
+            text: "每个模式设置",
         })
             .addClass("requires-workspace-modes");
         Object.entries(workspaces).forEach(entry => {
@@ -2413,7 +2412,7 @@ class WorkspacesPlusSettingsTab extends obsidian.PluginSettingTab {
             });
             const subContainerEL = containerEl.createDiv({ cls: "settings-container" });
             new obsidian.Setting(subContainerEL)
-                .setName(`Save and load left/right sidebar state`)
+                .setName(`保存和加载左/右侧边栏状态`)
                 .setClass("requires-workspace-modes")
                 // .setDesc(``)
                 .addToggle(toggle => toggle.setValue(modeSettings === null || modeSettings === void 0 ? void 0 : modeSettings.saveSidebar).onChange(value => {
@@ -2439,7 +2438,7 @@ class ConfirmationModal extends obsidian.Modal {
         let e = this.contentEl.createEl("p", { text });
         e.id = "workspace-delete-confirm-dialog";
         this.contentEl.createDiv("modal-button-container", buttonsEl => {
-            buttonsEl.createEl("button", { text: "Cancel" }).addEventListener("click", () => this.close());
+            buttonsEl.createEl("button", { text: "取消" }).addEventListener("click", () => this.close());
             const btnSumbit = buttonsEl.createEl("button", {
                 attr: { type: "submit" },
                 cls: "mod-cta",
@@ -2528,7 +2527,7 @@ class WorkspacesPlusPluginWorkspaceModal extends obsidian.FuzzySuggestModal {
         this.settings = settings;
         this.invokedViaHotkey = hotkey;
         this.workspacePlugin = this.app.internalPlugins.getPluginById("workspaces").instance;
-        this.setPlaceholder("Type workspace name...");
+        this.setPlaceholder("输入工作区名称...");
         this.buildInstructions();
         // temporary styling to force a transparent modal background to address certain themes
         // that apply a background to the modal container instead of the modal-bg
@@ -2557,7 +2556,7 @@ class WorkspacesPlusPluginWorkspaceModal extends obsidian.FuzzySuggestModal {
         const el = this.chooser.containerEl.querySelector(".suggestion-empty");
         el.createEl("button", {
             cls: "list-item-part",
-            text: "Save as new workspace",
+            text: "另存为新工作区",
         }).addEventListener("click", this.saveAndStay.bind(this));
     }
     setupScope() {
@@ -2632,7 +2631,7 @@ class WorkspacesPlusPluginWorkspaceModal extends obsidian.FuzzySuggestModal {
         if (!this.invokedViaHotkey) {
             this.popper = createPopper(document.body.querySelector(".plugin-workspaces-plus"), this.modalEl, {
                 placement: "top-start",
-                modifiers: [{ name: "offset", options: { offset: [0, 10] } }],
+                modifiers: [{ name: "偏移", options: { offset: [0, 10] } }],
             });
         }
         this.onOpen();
@@ -2672,13 +2671,13 @@ class WorkspacesPlusPluginWorkspaceModal extends obsidian.FuzzySuggestModal {
         this.chooser.chooser.updateSuggestions();
         if (!/^mode:/i.test(workspaceName))
             this.setWorkspace(workspaceName);
-        new obsidian.Notice("Successfully saved workspace: " + workspaceName);
+        new obsidian.Notice("成功保存工作区:" + workspaceName);
         this.close();
     }
     saveAndSwitch() {
         this.workspacePlugin.saveWorkspace(this.activeWorkspace);
         this.plugin.registerWorkspaceHotkeys();
-        new obsidian.Notice("Successfully saved workspace: " + this.activeWorkspace);
+        new obsidian.Notice("成功保存工作区：" + this.activeWorkspace);
     }
     deleteWorkspace(workspaceName = null) {
         if (!workspaceName) {
@@ -2691,7 +2690,7 @@ class WorkspacesPlusPluginWorkspaceModal extends obsidian.FuzzySuggestModal {
                 onAccept: () => __awaiter(this, void 0, void 0, function* () {
                     this.doDelete(workspaceName);
                 }),
-                text: `Do you really want to delete the '` + workspaceName + `' workspace?`,
+                text: `您真的要删除 '` + workspaceName + `' workspace?`,
                 title: "Workspace Delete Confirmation",
             });
         }
@@ -2882,7 +2881,7 @@ class WorkspacesPlusPluginModeModal extends obsidian.FuzzySuggestModal {
         this.settings = settings;
         this.invokedViaHotkey = hotkey;
         this.workspacePlugin = this.app.internalPlugins.getPluginById("workspaces").instance;
-        this.setPlaceholder("Type mode name...");
+        this.setPlaceholder("请输入模式名称...");
         this.buildInstructions();
         // temporary styling to force a transparent modal background to address certain themes
         // that apply a background to the modal container instead of the modal-bg
@@ -2911,7 +2910,7 @@ class WorkspacesPlusPluginModeModal extends obsidian.FuzzySuggestModal {
         const el = this.chooser.containerEl.querySelector(".suggestion-empty");
         el.createEl("button", {
             cls: "list-item-part",
-            text: "Save as new mode",
+            text: "另存为新模式",
         }).addEventListener("click", this.saveAndStay.bind(this));
     }
     setupScope() {
@@ -2974,7 +2973,7 @@ class WorkspacesPlusPluginModeModal extends obsidian.FuzzySuggestModal {
         if (!this.invokedViaHotkey) {
             this.popper = createPopper(document.body.querySelector(".plugin-workspaces-plus.mode-switcher"), this.modalEl, {
                 placement: "top-start",
-                modifiers: [{ name: "offset", options: { offset: [0, 10] } }],
+                modifiers: [{ name: "偏移", options: { offset: [0, 10] } }],
             });
         }
         this.onOpen();
@@ -3022,7 +3021,7 @@ class WorkspacesPlusPluginModeModal extends obsidian.FuzzySuggestModal {
         let workspaceName = this.inputEl.value ? this.inputEl.value : this.chooser.values[this.chooser.selectedItem].item;
         this.workspacePlugin.saveWorkspace("Mode: " + workspaceName);
         this.chooser.chooser.updateSuggestions();
-        new obsidian.Notice("Successfully saved mode: " + workspaceName);
+        new obsidian.Notice("成功保存模式:" + workspaceName);
     }
     deleteWorkspace(workspaceName = null) {
         if (!workspaceName) {
@@ -3035,7 +3034,7 @@ class WorkspacesPlusPluginModeModal extends obsidian.FuzzySuggestModal {
                 onAccept: () => __awaiter(this, void 0, void 0, function* () {
                     this.doDelete("Mode: " + workspaceName);
                 }),
-                text: `Do you really want to delete the '` + workspaceName + `' mode?`,
+                text: `您真的要删除 '` + workspaceName + `' mode?`,
                 title: "Mode Delete Confirmation",
             });
         }
@@ -3367,7 +3366,7 @@ async function getTemplateInfo(template) {
     }
     catch (err) {
         console.error(`Failed to read the daily note template '${templatePath}'`, err);
-        new obsidian__default["default"].Notice("Failed to read the daily note template");
+        new obsidian__default["default"].Notice("无法读取每日笔记模板");
         return ["", null];
     }
 }
@@ -3473,7 +3472,7 @@ async function createDailyNote(date) {
     }
     catch (err) {
         console.error(`Failed to create file: '${normalizedPath}'`, err);
-        new obsidian__default["default"].Notice("Unable to create new file.");
+        new obsidian__default["default"].Notice("无法创建新文件。");
     }
 }
 function getDailyNote(date, dailyNotes) {
@@ -3561,7 +3560,7 @@ async function createWeeklyNote(date) {
     }
     catch (err) {
         console.error(`Failed to create file: '${normalizedPath}'`, err);
-        new obsidian__default["default"].Notice("Unable to create new file.");
+        new obsidian__default["default"].Notice("无法创建新文件。");
     }
 }
 function getWeeklyNote(date, weeklyNotes) {
@@ -3631,7 +3630,7 @@ async function createMonthlyNote(date) {
     }
     catch (err) {
         console.error(`Failed to create file: '${normalizedPath}'`, err);
-        new obsidian__default["default"].Notice("Unable to create new file.");
+        new obsidian__default["default"].Notice("无法创建新文件。");
     }
 }
 function getMonthlyNote(date, monthlyNotes) {
@@ -3701,7 +3700,7 @@ async function createQuarterlyNote(date) {
     }
     catch (err) {
         console.error(`Failed to create file: '${normalizedPath}'`, err);
-        new obsidian__default["default"].Notice("Unable to create new file.");
+        new obsidian__default["default"].Notice("无法创建新文件。");
     }
 }
 function getQuarterlyNote(date, quarterly) {
@@ -3771,7 +3770,7 @@ async function createYearlyNote(date) {
     }
     catch (err) {
         console.error(`Failed to create file: '${normalizedPath}'`, err);
-        new obsidian__default["default"].Notice("Unable to create new file.");
+        new obsidian__default["default"].Notice("无法创建新文件。");
     }
 }
 function getYearlyNote(date, yearlyNotes) {
@@ -4097,7 +4096,7 @@ class WorkspacesPlus extends obsidian.Plugin {
         this.setWorkspaceName = obsidian.debounce(() => {
             var _a, _b, _c;
             if (!this.isNativePluginEnabled) {
-                (_a = this.changeWorkspaceButton) === null || _a === void 0 ? void 0 : _a.setText("Error: The Workspaces core plugin is disabled");
+                (_a = this.changeWorkspaceButton) === null || _a === void 0 ? void 0 : _a.setText("错误：工作区核心插件已禁用");
             }
             else {
                 (_b = this.changeWorkspaceButton) === null || _b === void 0 ? void 0 : _b.setText(this.utils.activeWorkspace);
@@ -4333,15 +4332,15 @@ class WorkspacesPlus extends obsidian.Plugin {
     registerCommands() {
         this.addCommand({
             id: "open-workspaces-plus",
-            name: "Open Workspaces Plus",
+            name: "打开工作区增强版",
             callback: () => new WorkspacesPlusPluginWorkspaceModal(this, this.settings, true).open(),
         });
         this.addCommand({
             id: "save-workspace",
-            name: `Save current workspace`,
+            name: `保存当前工作区`,
             callback: () => {
                 this.workspacePlugin.saveWorkspace(this.workspacePlugin.activeWorkspace);
-                new obsidian.Notice("Successfully saved workspace: " + this.workspacePlugin.activeWorkspace);
+                new obsidian.Notice("工作空间保存成功。" + this.workspacePlugin.activeWorkspace);
             },
         });
     }
@@ -4414,7 +4413,7 @@ class WorkspacesPlus extends obsidian.Plugin {
             this.addStatusBarIndicator("mode");
             this.addCommand({
                 id: "open-workspaces-plus-modes",
-                name: "Open Workspaces Plus Modes",
+                name: "打开工作空间增强模式",
                 callback: () => new WorkspacesPlusPluginModeModal(this, this.settings, true).open(),
             });
             if (this.debug)
@@ -4468,7 +4467,7 @@ class WorkspacesPlus extends obsidian.Plugin {
             // why trigger here?
             // this.app.workspace.trigger("layout-change");
             this.registerWorkspaceHotkeys();
-            new obsidian.Notice("Successfully saved " + (modalType == "mode" ? "mode" : "workspace"));
+            new obsidian.Notice("成功保存 "${plugin}" 插件。"));
         }
         else {
             if (modalType === "workspace")
@@ -4535,7 +4534,7 @@ class WorkspacesPlus extends obsidian.Plugin {
         for (const workspaceName of workspaceNames) {
             this.addCommand({
                 id: workspaceName,
-                name: `Load: ${workspaceName}`,
+                name: `加载：${workspaceName}`,
                 callback: () => {
                     this.workspacePlugin.loadWorkspace(workspaceName);
                 },
