@@ -1,6 +1,5 @@
 {
   "pluginList": [
-    "0011000000110010/obsidian-i18n",
     "zigholding/obsidian-notechain-plugin",
     "nothingislost/obsidian-bartender",
     "Kenshin/simpread-obsidian-plugin"
@@ -17,13 +16,12 @@
   ],
   "themesList": [],
   "updateAtStartup": false,
-  "updateThemesAtStartup": true,
+  "updateThemesAtStartup": false,
   "enableAfterInstall": true,
   "loggingEnabled": false,
   "loggingPath": "BRAT-log",
   "loggingVerboseEnabled": false,
   "debuggingMode": true,
   "notificationsEnabled": true,
-  "personalAccessToken": "",
   "ribbonIconEnabled": true
 }

@@ -32,7 +32,7 @@ var OptimizeCanvasConnectionsPlugin = class extends import_obsidian.Plugin {
   async onload() {
     this.addCommand({
       id: "optimize-preserve-axes-selection",
-      name: "保持轴",
+      name: "Optimize selection (preserve axes)",
       checkCallback: (checking) => {
         const canvasView = app.workspace.getActiveViewOfType(import_obsidian.ItemView);
         if ((canvasView == null ? void 0 : canvasView.getViewType()) == "canvas") {
@@ -46,7 +46,7 @@ var OptimizeCanvasConnectionsPlugin = class extends import_obsidian.Plugin {
     });
     this.addCommand({
       id: "optimize-shortest-path-selection",
-      name: "最短线",
+      name: "Optimize selection (shortest path)",
       checkCallback: (checking) => {
         const canvasView = app.workspace.getActiveViewOfType(import_obsidian.ItemView);
         if ((canvasView == null ? void 0 : canvasView.getViewType()) == "canvas") {

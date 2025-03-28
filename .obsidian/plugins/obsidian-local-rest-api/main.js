@@ -58485,13 +58485,13 @@ var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
     const shouldRegenerateCertificate = !getCertificateIsUptoStandards(parsedCertificate);
     containerEl.empty();
     containerEl.classList.add("obsidian-local-rest-api-settings");
-    containerEl.createEl("h2", { text: "本地 REST API" });
-    containerEl.createEl("h3", { text: "如何访问" });
+    containerEl.createEl("h2", { text: "Local REST API" });
+    containerEl.createEl("h3", { text: "How to Access" });
     const apiKeyDiv = containerEl.createEl("div");
     apiKeyDiv.classList.add("api-key-display");
     const availableApis = apiKeyDiv.createEl("p");
     availableApis.innerHTML = `
-      您可以通过以下URL访问Obsidian本地REST API：
+      You can access Obsidian Local REST API via the following URLs:
     `;
     const connectionUrls = apiKeyDiv.createEl("table", { cls: "api-urls" });
     const connectionUrlsTbody = connectionUrls.createEl("tbody");
@@ -58507,24 +58507,24 @@ var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
             ${this.plugin.settings.enableSecureServer === false ? "\u274C" : "\u2705"}
           </td>
           <td class="name">
-            加密（HTTPS）API URL<br /><br />
+            Encrypted (HTTPS) API URL<br /><br />
             <i>
-              要求 <a href="https://127.0.0.1:${this.plugin.settings.port}/${CERT_NAME}">这个证书</a> be
-              配置为受信任的证书颁发机构
-              您的浏览器。请参阅 <a href="https://github.com/coddingtonbear/obsidian-web/wiki/How-do-I-get-my-browser-trust-my-Obsidian-Local-REST-API-certificate%3F">wiki</a> 详情.
+              Requires that <a href="https://127.0.0.1:${this.plugin.settings.port}/${CERT_NAME}">this certificate</a> be
+              configured as a trusted certificate authority for
+              your browser.  See <a href="https://github.com/coddingtonbear/obsidian-web/wiki/How-do-I-get-my-browser-trust-my-Obsidian-Local-REST-API-certificate%3F">wiki</a> for more information.
             </i>
           </td>
       `;
     const secureUrlsTd = secureTr.createEl("td", { cls: "url" });
     secureUrlsTd.innerHTML = `
-      ${secureUrl} <a href="javascript:navigator.clipboard.writeText('${secureUrl}')">(复制)</a><br />
+      ${secureUrl} <a href="javascript:navigator.clipboard.writeText('${secureUrl}')">(copy)</a><br />
     `;
     if (this.plugin.settings.subjectAltNames) {
       for (const name of this.plugin.settings.subjectAltNames.split("\n")) {
         if (name.trim()) {
           const altSecureUrl = `https://${name.trim()}:${this.plugin.settings.port}/`;
           secureUrlsTd.innerHTML += `
-            ${altSecureUrl} <a href="javascript:navigator.clipboard.writeText('${altSecureUrl}')">(复制)</a><br />
+            ${altSecureUrl} <a href="javascript:navigator.clipboard.writeText('${altSecureUrl}')">(copy)</a><br />
           `;
         }
       }
@@ -58541,31 +58541,31 @@ var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
           ${this.plugin.settings.enableInsecureServer === false ? "\u274C" : "\u2705"}
         </td>
         <td class="name">
-          未加密（HTTP）API URL
+          Non-encrypted (HTTP) API URL
         </td>
     `;
     const insecureUrlsTd = insecureTr.createEl("td", { cls: "url" });
     insecureUrlsTd.innerHTML = `
-      ${insecureUrl} <a href="javascript:navigator.clipboard.writeText('${insecureUrl}')">(复制)</a><br />
+      ${insecureUrl} <a href="javascript:navigator.clipboard.writeText('${insecureUrl}')">(copy)</a><br />
     `;
     if (this.plugin.settings.subjectAltNames) {
       for (const name of this.plugin.settings.subjectAltNames.split("\n")) {
         if (name.trim()) {
           const altSecureUrl = `http://${name.trim()}:${this.plugin.settings.insecurePort}/`;
           insecureUrlsTd.innerHTML += `
-            ${altSecureUrl} <a href="javascript:navigator.clipboard.writeText('${altSecureUrl}')">(复制)</a><br />
+            ${altSecureUrl} <a href="javascript:navigator.clipboard.writeText('${altSecureUrl}')">(copy)</a><br />
           `;
         }
       }
     }
     const inOrderToAccess = apiKeyDiv.createEl("p");
     inOrderToAccess.innerHTML = `
-      您的API密钥必须通过授权头传入请求
-      <a href="javascript:navigator.clipboard.writeText('${this.plugin.settings.apiKey}')">(复制)</a>:
+      Your API Key must be passed in requests via an authorization header
+      <a href="javascript:navigator.clipboard.writeText('${this.plugin.settings.apiKey}')">(copy)</a>:
     `;
     apiKeyDiv.createEl("pre", { text: this.plugin.settings.apiKey });
     apiKeyDiv.createEl("p", {
-      text: "例如，以下请求将返回vault根目录中的所有笔记："
+      text: "For example, the following request will return all notes in the root directory of your vault:"
     });
     apiKeyDiv.createEl("pre", {
       text: `GET /vault/ HTTP/1.1
@@ -58573,11 +58573,11 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
     });
     const seeMore = apiKeyDiv.createEl("p");
     seeMore.innerHTML = `
-      API 端点可用的全面文档可以
-      参阅
-      <a href="https://coddingtonbear.github.io/obsidian-local-rest-api/">在线文档</a>.
+      Comprehensive documentation of what API endpoints are available can
+      be found in
+      <a href="https://coddingtonbear.github.io/obsidian-local-rest-api/">the online docs</a>.
     `;
-    containerEl.createEl("h3", { text: "设置" });
+    containerEl.createEl("h3", { text: "Settings" });
     if (remainingCertificateValidityDays < 0) {
       const expiredCertDiv = apiKeyDiv.createEl("div");
       expiredCertDiv.classList.add("certificate-expired");
@@ -58611,7 +58611,7 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
         below.
       `;
     }
-    new import_obsidian2.Setting(containerEl).setName("启用非加密(HTTP)服务器").setDesc("在下面指定的端口上启用非加密(HTTP)服务器。默认情况下，此插件需要安全的 HTTPS 连接，但在安全环境中，您可以打开非加密服务器，以简化与 API 的交互。与 API 的交互仍然需要上面显示的 API 密钥。在任何情况下，都不建议您将此服务暴露在互联网上，尤其是当您打开此功能时！").addToggle((cb) => cb.onChange((value) => {
+    new import_obsidian2.Setting(containerEl).setName("Enable Non-encrypted (HTTP) Server").setDesc("Enables a non-encrypted (HTTP) server on the port designated below.  By default this plugin requires a secure HTTPS connection, but in safe environments you may turn on the non-encrypted server to simplify interacting with the API. Interactions with the API will still require the API Key shown above.  Under no circumstances is it recommended that you expose this service to the internet, especially if you turn on this feature!").addToggle((cb) => cb.onChange((value) => {
       const originalValue = this.plugin.settings.enableInsecureServer;
       this.plugin.settings.enableInsecureServer = value;
       this.plugin.saveSettings();
@@ -58620,10 +58620,10 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
         this.display();
       }
     }).setValue(this.plugin.settings.enableInsecureServer));
-    new import_obsidian2.Setting(containerEl).setName("重置所有 Cryptography").setDesc(`按下此按钮将导致您的证书,
-        要重新生成的私钥、公钥和API密钥。
-        按下此按钮时，此设置面板将关闭。`).addButton((cb) => {
-      cb.setWarning().setButtonText("重置所有 Crypto").onClick(() => {
+    new import_obsidian2.Setting(containerEl).setName("Reset All Cryptography").setDesc(`Pressing this button will cause your certificate,
+        private key, public key, and API key to be regenerated.
+        This settings panel will be closed when you press this.`).addButton((cb) => {
+      cb.setWarning().setButtonText("Reset All Crypto").onClick(() => {
         delete this.plugin.settings.apiKey;
         delete this.plugin.settings.crypto;
         this.plugin.saveSettings();
@@ -58631,27 +58631,27 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
         this.plugin.load();
       });
     });
-    new import_obsidian2.Setting(containerEl).setName("重新生成证书").setDesc(`按下此按钮将导致您的证书,
-        私钥和公钥，但您的 API 密钥将保持不变。 
-        按下此按钮时，此设置面板将关闭。`).addButton((cb) => {
-      cb.setWarning().setButtonText("重新生成证书").onClick(() => {
+    new import_obsidian2.Setting(containerEl).setName("Re-generate Certificates").setDesc(`Pressing this button will cause your certificate,
+        private key,  and public key to be re-generated, but your API key will remain unchanged. 
+        This settings panel will be closed when you press this.`).addButton((cb) => {
+      cb.setWarning().setButtonText("Re-generate Certificates").onClick(() => {
         delete this.plugin.settings.crypto;
         this.plugin.saveSettings();
         this.plugin.unload();
         this.plugin.load();
       });
     });
-    new import_obsidian2.Setting(containerEl).setName("恢复默认设置").setDesc(`按下此按钮将重置此插件的
-        设置为默认值。
-        按下此按钮时，此设置面板将关闭。`).addButton((cb) => {
-      cb.setWarning().setButtonText("恢复默认值").onClick(() => {
+    new import_obsidian2.Setting(containerEl).setName("Restore Default Settings").setDesc(`Pressing this button will reset this plugin's
+        settings to defaults.
+        This settings panel will be closed when you press this.`).addButton((cb) => {
+      cb.setWarning().setButtonText("Restore Defaults").onClick(() => {
         this.plugin.settings = Object.assign({}, DEFAULT_SETTINGS);
         this.plugin.saveSettings();
         this.plugin.unload();
         this.plugin.load();
       });
     });
-    new import_obsidian2.Setting(containerEl).setName("显示高级设置").setDesc(`高级设置很危险，可能会降低环境的安全性。`).addToggle((cb) => {
+    new import_obsidian2.Setting(containerEl).setName("Show advanced settings").setDesc(`Advanced settings are dangerous and may make your environment less secure.`).addToggle((cb) => {
       cb.onChange((value) => {
         if (this.showAdvancedSettings !== value) {
           this.showAdvancedSettings = value;
@@ -58662,24 +58662,24 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
     if (this.showAdvancedSettings) {
       containerEl.createEl("hr");
       containerEl.createEl("h3", {
-        text: "高级设置"
+        text: "Advanced Settings"
       });
       containerEl.createEl("p", {
         text: `
-          以下设置具有潜在危险
-          只供知道什么的人使用
-          他们正在做。如果
-          你不明白那个设置是用来做什么的
-          以及更改该设置将产生什么安全影响。
+          The settings below are potentially dangerous and
+          are intended for use only by people who know what
+          they are doing. Do not change any of these settings if
+          you do not understand what that setting is used for
+          and what security impacts changing that setting will have.
         `
       });
       const noWarrantee = containerEl.createEl("p");
       noWarrantee.createEl("span", {
         text: `
-          本软件的使用许可给您
-          麻省理工学院执照，重要的是你要明白 
-          此许可证不为您提供任何担保。
-          有关完整的许可文本，请参阅
+          Use of this software is licensed to you under the
+          MIT license, and it is important that you understand that 
+          this license provides you with no warranty.
+          For the complete license text please see
         `
       });
       noWarrantee.createEl("a", {
@@ -58687,10 +58687,10 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
         text: LicenseUrl
       });
       noWarrantee.createEl("span", { text: "." });
-      new import_obsidian2.Setting(containerEl).setName("启用加密（HTTP）服务器").setDesc(`
-          这控制是否启用HTTPs服务器。您几乎肯定希望将此开关保持在默认状态（'开'）,
-          但可能会发现关闭此开关对
-          故障排除。
+      new import_obsidian2.Setting(containerEl).setName("Enable Encrypted (HTTPs) Server").setDesc(`
+          This controls whether the HTTPs server is enabled.  You almost certainly want to leave this switch in its default state ('on'),
+          but may find it useful to turn this switch off for
+          troubleshooting.
         `).addToggle((cb) => {
         var _a2;
         return cb.onChange((value) => {
@@ -58703,17 +58703,17 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
           }
         }).setValue((_a2 = this.plugin.settings.enableSecureServer) != null ? _a2 : true);
       });
-      new import_obsidian2.Setting(containerEl).setName("加密(HTTPS)服务器端口").setDesc("这将配置 REST API 将在其上侦听 HTTPS 连接的端口。建议您保留此端口的默认设置，因为与此 API 集成的工具可能会期望使用默认端口。在任何情况下，都不建议您将此服务直接暴露在互联网上。").addText((cb) => cb.onChange((value) => {
+      new import_obsidian2.Setting(containerEl).setName("Encrypted (HTTPS) Server Port").setDesc("This configures the port on which your REST API will listen for HTTPS connections.  It is recommended that you leave this port with its default setting as tools integrating with this API may expect the default port to be in use.  Under no circumstances is it recommended that you expose this service directly to the internet.").addText((cb) => cb.onChange((value) => {
         this.plugin.settings.port = parseInt(value, 10);
         this.plugin.saveSettings();
         this.plugin.refreshServerState();
       }).setValue(this.plugin.settings.port.toString()));
-      new import_obsidian2.Setting(containerEl).setName("非加密(HTTP)服务器端口").addText((cb) => cb.onChange((value) => {
+      new import_obsidian2.Setting(containerEl).setName("Non-encrypted (HTTP) Server Port").addText((cb) => cb.onChange((value) => {
         this.plugin.settings.insecurePort = parseInt(value, 10);
         this.plugin.saveSettings();
         this.plugin.refreshServerState();
       }).setValue(this.plugin.settings.insecurePort.toString()));
-      new import_obsidian2.Setting(containerEl).setName("API 密钥").addText((cb) => {
+      new import_obsidian2.Setting(containerEl).setName("API Key").addText((cb) => {
         cb.onChange((value) => {
           this.plugin.settings.apiKey = value;
           this.plugin.saveSettings();
@@ -58733,22 +58733,22 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
         this.plugin.settings.subjectAltNames = value;
         this.plugin.saveSettings();
       }).setValue(this.plugin.settings.subjectAltNames));
-      new import_obsidian2.Setting(containerEl).setName("证明书").addTextArea((cb) => cb.onChange((value) => {
+      new import_obsidian2.Setting(containerEl).setName("Certificate").addTextArea((cb) => cb.onChange((value) => {
         this.plugin.settings.crypto.cert = value;
         this.plugin.saveSettings();
         this.plugin.refreshServerState();
       }).setValue(this.plugin.settings.crypto.cert));
-      new import_obsidian2.Setting(containerEl).setName("公钥").addTextArea((cb) => cb.onChange((value) => {
+      new import_obsidian2.Setting(containerEl).setName("Public Key").addTextArea((cb) => cb.onChange((value) => {
         this.plugin.settings.crypto.publicKey = value;
         this.plugin.saveSettings();
         this.plugin.refreshServerState();
       }).setValue(this.plugin.settings.crypto.publicKey));
-      new import_obsidian2.Setting(containerEl).setName("私钥").addTextArea((cb) => cb.onChange((value) => {
+      new import_obsidian2.Setting(containerEl).setName("Private Key").addTextArea((cb) => cb.onChange((value) => {
         this.plugin.settings.crypto.privateKey = value;
         this.plugin.saveSettings();
         this.plugin.refreshServerState();
       }).setValue(this.plugin.settings.crypto.privateKey));
-      new import_obsidian2.Setting(containerEl).setName("授权标头").addText((cb) => {
+      new import_obsidian2.Setting(containerEl).setName("Authorization Header").addText((cb) => {
         var _a2;
         cb.onChange((value) => {
           if (value !== DefaultBearerTokenHeaderName) {
@@ -58760,7 +58760,7 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
           this.plugin.refreshServerState();
         }).setValue((_a2 = this.plugin.settings.authorizationHeaderName) != null ? _a2 : DefaultBearerTokenHeaderName);
       });
-      new import_obsidian2.Setting(containerEl).setName("绑定主机").addText((cb) => {
+      new import_obsidian2.Setting(containerEl).setName("Binding Host").addText((cb) => {
         var _a2;
         cb.onChange((value) => {
           if (value !== DefaultBindingHost) {

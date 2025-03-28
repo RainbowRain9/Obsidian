@@ -7,6 +7,9 @@
   "enabledCssSnippets": [
     "【自定义】数字时钟",
     "【日记】periodic日历",
+    "【自定义】多彩进度条",
+    "【日记】timeline",
+    "【日记】Time",
     "custom-admonitions.c9c6cb"
   ],
   "baseFontSize": 20,

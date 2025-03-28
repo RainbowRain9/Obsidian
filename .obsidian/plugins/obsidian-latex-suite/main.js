@@ -12566,13 +12566,13 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
   displaySnippetSettings() {
     const containerEl = this.containerEl;
     this.addHeading(containerEl, "Snippets", "ballpen");
-    new import_obsidian4.Setting(containerEl).setName("开启").setDesc("是否开启代码片段功能").addToggle((toggle) => toggle.setValue(this.plugin.settings.snippetsEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Enabled").setDesc("Whether snippets are enabled.").addToggle((toggle) => toggle.setValue(this.plugin.settings.snippetsEnabled).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.snippetsEnabled = value;
       yield this.plugin.saveSettings();
     })));
-    const snippetsSetting = new import_obsidian4.Setting(containerEl).setName("代码片段").setDesc('在此输入代码片段。记得在每个片段后添加逗号，并用额外的反斜杠转义所有 \\。 以 "//" 开始的行将会被视为注释而被忽略').setClass("snippets-text-area");
+    const snippetsSetting = new import_obsidian4.Setting(containerEl).setName("Snippets").setDesc('Enter snippets here.  Remember to add a comma after each snippet, and escape all backslashes with an extra \\. Lines starting with "//" will be treated as comments and ignored.').setClass("snippets-text-area");
     this.createSnippetsEditor(snippetsSetting);
-    new import_obsidian4.Setting(containerEl).setName("从文件或文件夹中加载代码片段").setDesc("是否从一个指定的文件加载代码片段，或者从一个文件夹中的所有文件加载代码片段（而不是从插件设置中加载）").addToggle((toggle) => toggle.setValue(this.plugin.settings.loadSnippetsFromFile).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Load snippets from file or folder").setDesc("Whether to load snippets from a specified file, or from all files within a folder (instead of from the plugin settings).").addToggle((toggle) => toggle.setValue(this.plugin.settings.loadSnippetsFromFile).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.loadSnippetsFromFile = value;
       snippetsSetting.settingEl.toggleClass("hidden", value);
       if (this.snippetsFileLocEl != void 0)
@@ -12584,7 +12584,7 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
       div.innerHTML = `
 			The file or folder to load snippets from. The file or folder must be within your vault, and not within a hidden folder (such as <code>.obsidian/</code>).`;
     });
-    const snippetsFileLoc = new import_obsidian4.Setting(containerEl).setName("代码片段文件或文件夹位置").setDesc(snippetsFileLocDesc);
+    const snippetsFileLoc = new import_obsidian4.Setting(containerEl).setName("Snippets file or folder location").setDesc(snippetsFileLocDesc);
     let inputEl;
     snippetsFileLoc.addSearch((component) => {
       component.setPlaceholder(DEFAULT_SETTINGS.snippetsFileLocation).setValue(this.plugin.settings.snippetsFileLocation).onChange((0, import_obsidian4.debounce)((value) => __async(this, null, function* () {
@@ -12599,7 +12599,7 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
     const loadSnippetsFromFile = this.plugin.settings.loadSnippetsFromFile;
     snippetsSetting.settingEl.toggleClass("hidden", loadSnippetsFromFile);
     this.snippetsFileLocEl.toggleClass("hidden", !loadSnippetsFromFile);
-    new import_obsidian4.Setting(containerEl).setName("非自动代码片段的触发按键").setDesc("按下哪个键来触发扩展非自动代码片段").addDropdown(
+    new import_obsidian4.Setting(containerEl).setName("Key trigger for non-auto snippets").setDesc("What key to press to expand non-auto snippets.").addDropdown(
       (dropdown) => dropdown.addOption("Tab", "Tab").addOption(" ", "Space").setValue(this.plugin.settings.snippetsTrigger).onChange((value) => __async(this, null, function* () {
         this.plugin.settings.snippetsTrigger = value;
         yield this.plugin.saveSettings();
@@ -12614,10 +12614,10 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
     fragment.createDiv({}, (div) => div.innerHTML = `
 			e.g. <code>\\dot{x}^{2} + \\dot{y}^{2}</code> will display as \u1E8B\xB2 + \u1E8F\xB2, and <code>\\sqrt{ 1-\\beta^{2} }</code> will display as \u221A{ 1-\u03B2\xB2 }.
 		`);
-    fragment.createDiv({}, (div) => div.setText("光标下的LaTeX将被显示"));
+    fragment.createDiv({}, (div) => div.setText("LaTeX beneath the cursor will be revealed."));
     fragment.createEl("br");
-    fragment.createDiv({}, (div) => div.setText("默认情况下禁用，以免困扰新用户。不过，我建议一旦您熟悉了这个插件，就开启这个功能！"));
-    new import_obsidian4.Setting(containerEl).setName("开启").setDesc(fragment).addToggle(
+    fragment.createDiv({}, (div) => div.setText("Disabled by default to not confuse new users. However, I recommend turning this on once you are comfortable with the plugin!"));
+    new import_obsidian4.Setting(containerEl).setName("Enabled").setDesc(fragment).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.concealEnabled).onChange((value) => __async(this, null, function* () {
         this.plugin.settings.concealEnabled = value;
         yield this.plugin.saveSettings();
@@ -12642,11 +12642,11 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
   displayColorHighlightBracketsSettings() {
     const containerEl = this.containerEl;
     this.addHeading(containerEl, "Highlight and color brackets", "parentheses");
-    new import_obsidian4.Setting(containerEl).setName("彩色配对括号").setDesc("是否以彩色显示配对括号").addToggle((toggle) => toggle.setValue(this.plugin.settings.colorPairedBracketsEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Color paired brackets").setDesc("Whether to colorize matching brackets.").addToggle((toggle) => toggle.setValue(this.plugin.settings.colorPairedBracketsEnabled).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.colorPairedBracketsEnabled = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("高亮光标下的配对括号").setDesc("当光标紧邻一个括号时，高亮显示配对的括号").addToggle((toggle) => toggle.setValue(this.plugin.settings.highlightCursorBracketsEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Highlight matching bracket beneath cursor").setDesc("When the cursor is adjacent to a bracket, highlight the matching bracket.").addToggle((toggle) => toggle.setValue(this.plugin.settings.highlightCursorBracketsEnabled).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.highlightCursorBracketsEnabled = value;
       yield this.plugin.saveSettings();
     })));
@@ -12656,16 +12656,16 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
     this.addHeading(containerEl, "Math popup preview", "superscript");
     const popup_fragment = document.createDocumentFragment();
     const popup_line1 = document.createElement("div");
-    popup_line1.setText("在方程内部时，显示渲染后的数学的弹出式预览窗口。");
+    popup_line1.setText("When inside an equation, show a popup preview window of the rendered math.");
     const popup_space = document.createElement("br");
     const popup_line2 = document.createElement("div");
-    popup_line2.setText("弹出预览将显示所有内联数学方程，以及在源代码模式下的块数学方程");
+    popup_line2.setText("The popup preview will be shown for all inline math equations, as well as for block math equations in Source mode.");
     popup_fragment.append(popup_line1, popup_space, popup_line2);
-    new import_obsidian4.Setting(containerEl).setName("开启").setDesc(popup_fragment).addToggle((toggle) => toggle.setValue(this.plugin.settings.mathPreviewEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Enabled").setDesc(popup_fragment).addToggle((toggle) => toggle.setValue(this.plugin.settings.mathPreviewEnabled).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.mathPreviewEnabled = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("显示位置").setDesc("显示相对于数学公式源码的弹出预览位置").addDropdown(
+    new import_obsidian4.Setting(containerEl).setName("Position").setDesc("Where to display the popup preview relative to the equation source.").addDropdown(
       (dropdown) => dropdown.addOption("Above", "Above").addOption("Below", "Below").setValue(this.plugin.settings.mathPreviewPositionIsAbove ? "Above" : "Below").onChange((value) => __async(this, null, function* () {
         this.plugin.settings.mathPreviewPositionIsAbove = value === "Above";
         yield this.plugin.saveSettings();
@@ -12675,19 +12675,19 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
   displayAutofractionSettings() {
     const containerEl = this.containerEl;
     this.addHeading(containerEl, "Auto-fraction", "math-x-divide-y-2");
-    new import_obsidian4.Setting(containerEl).setName("开启").setDesc("是否启用自动分数功能（auto-fraction）.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autofractionEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Enabled").setDesc("Whether auto-fraction is enabled.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autofractionEnabled).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.autofractionEnabled = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("分数符号").setDesc("在替换操作时使用的分数符号  例如 \\frac, \\dfrac, \\tfrac").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.autofractionSymbol).setValue(this.plugin.settings.autofractionSymbol).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Fraction symbol").setDesc("The fraction symbol to use in the replacement. e.g. \\frac, \\dfrac, \\tfrac").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.autofractionSymbol).setValue(this.plugin.settings.autofractionSymbol).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.autofractionSymbol = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("排除的环境").setDesc('一个不运行自动分数功能的环境列表。例如，在指数内不运行自动分数，例如 e^{...}，使用  ["^{", "}"]').addTextArea((text) => text.setPlaceholder('[ ["^{", "}] ]').setValue(this.plugin.settings.autofractionExcludedEnvs).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Excluded environments").setDesc('A list of environments to exclude auto-fraction from running in. For example, to exclude auto-fraction from running while inside an exponent, such as e^{...}, use  ["^{", "}"]').addTextArea((text) => text.setPlaceholder('[ ["^{", "}] ]').setValue(this.plugin.settings.autofractionExcludedEnvs).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.autofractionExcludedEnvs = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("打断符号").setDesc('表示分数开始/结束的字符列表。例如：如果 + 在此列表中，"a+b/c" 将会扩展为 "a+\\frac{b}{c}"；如果 + 不在此列表中，则扩展为 "\\frac{a+b}{c}"').addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.autofractionBreakingChars).setValue(this.plugin.settings.autofractionBreakingChars).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Breaking characters").setDesc('A list of characters that denote the start/end of a fraction. e.g. if + is included in the list, "a+b/c" will expand to "a+\\frac{b}{c}". If + is not in the list, it will expand to "\\frac{a+b}{c}".').addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.autofractionBreakingChars).setValue(this.plugin.settings.autofractionBreakingChars).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.autofractionBreakingChars = value;
       yield this.plugin.saveSettings();
     })));
@@ -12695,11 +12695,11 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
   displayMatrixShortcutsSettings() {
     const containerEl = this.containerEl;
     this.addHeading(containerEl, "Matrix shortcuts", "brackets-contain");
-    new import_obsidian4.Setting(containerEl).setName("开启").setDesc("是否启用矩阵快捷方式").addToggle((toggle) => toggle.setValue(this.plugin.settings.matrixShortcutsEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Enabled").setDesc("Whether matrix shortcuts are enabled.").addToggle((toggle) => toggle.setValue(this.plugin.settings.matrixShortcutsEnabled).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.matrixShortcutsEnabled = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("环境").setDesc("一个环境名称列表，用逗号分隔，在这些环境中快捷运行矩阵").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.matrixShortcutsEnvNames).setValue(this.plugin.settings.matrixShortcutsEnvNames).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Environments").setDesc("A list of environment names to run the matrix shortcuts in, separated by commas.").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.matrixShortcutsEnvNames).setValue(this.plugin.settings.matrixShortcutsEnvNames).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.matrixShortcutsEnvNames = value;
       yield this.plugin.saveSettings();
     })));
@@ -12707,7 +12707,7 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
   displayTaboutSettings() {
     const containerEl = this.containerEl;
     this.addHeading(containerEl, "Tabout", "tabout");
-    new import_obsidian4.Setting(containerEl).setName("开启").setDesc("是否启用制表符对齐功能").addToggle((toggle) => toggle.setValue(this.plugin.settings.taboutEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Enabled").setDesc("Whether tabout is enabled.").addToggle((toggle) => toggle.setValue(this.plugin.settings.taboutEnabled).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.taboutEnabled = value;
       yield this.plugin.saveSettings();
     })));
@@ -12715,11 +12715,11 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
   displayAutoEnlargeBracketsSettings() {
     const containerEl = this.containerEl;
     this.addHeading(containerEl, "Auto-enlarge brackets", "parentheses");
-    new import_obsidian4.Setting(containerEl).setName("开启").setDesc("是否自动放大包含sum、int、frac等的括号").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoEnlargeBrackets).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Enabled").setDesc("Whether to automatically enlarge brackets containing e.g. sum, int, frac.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoEnlargeBrackets).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.autoEnlargeBrackets = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("触发符号").setDesc("一个符号列表，用逗号分隔，这些符号应该触发自动放大括号").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.autoEnlargeBracketsTriggers).setValue(this.plugin.settings.autoEnlargeBracketsTriggers).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Triggers").setDesc("A list of symbols that should trigger auto-enlarge brackets, separated by commas.").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.autoEnlargeBracketsTriggers).setValue(this.plugin.settings.autoEnlargeBracketsTriggers).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.autoEnlargeBracketsTriggers = value;
       yield this.plugin.saveSettings();
     })));
@@ -12727,11 +12727,11 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
   displayAdvancedSnippetSettings() {
     const containerEl = this.containerEl;
     this.addHeading(containerEl, "Advanced snippet settings");
-    const snippetVariablesSetting = new import_obsidian4.Setting(containerEl).setName("代码片段变量").setDesc("分配代码片段变量，这些变量在编写片段时可以用作快捷方式").addTextArea((text) => text.setValue(this.plugin.settings.snippetVariables).onChange((value) => __async(this, null, function* () {
+    const snippetVariablesSetting = new import_obsidian4.Setting(containerEl).setName("Snippet variables").setDesc("Assign snippet variables that can be used as shortcuts when writing snippets.").addTextArea((text) => text.setValue(this.plugin.settings.snippetVariables).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.snippetVariables = value;
       yield this.plugin.saveSettings();
     })).setPlaceholder(DEFAULT_SETTINGS.snippetVariables)).setClass("latex-suite-snippet-variables-setting");
-    new import_obsidian4.Setting(containerEl).setName("从文件或文件夹中加载代码片段变量").setDesc("是否从某指定的文件加载代码片段变量，或者从某文件夹中的所有文件加载代码片段变量（而不是从插件设置中加载）").addToggle((toggle) => toggle.setValue(this.plugin.settings.loadSnippetVariablesFromFile).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Load snippet variables from file or folder").setDesc("Whether to load snippet variables from a specified file, or from all files within a folder (instead of from the plugin settings).").addToggle((toggle) => toggle.setValue(this.plugin.settings.loadSnippetVariablesFromFile).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.loadSnippetVariablesFromFile = value;
       snippetVariablesSetting.settingEl.toggleClass("hidden", value);
       if (this.snippetVariablesFileLocEl != void 0)
@@ -12743,7 +12743,7 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
       div.innerHTML = `
 			The file or folder to load snippet variables from. The file or folder must be within your vault, and not within a hidden folder (such as <code>.obsidian/</code>).`;
     });
-    const snippetVariablesFileLoc = new import_obsidian4.Setting(containerEl).setName("代码片段变量文件或文件夹的位置").setDesc(snippetVariablesFileLocDesc);
+    const snippetVariablesFileLoc = new import_obsidian4.Setting(containerEl).setName("Snippet variables file or folder location").setDesc(snippetVariablesFileLocDesc);
     let inputVariablesEl;
     snippetVariablesFileLoc.addSearch(
       (component) => {
@@ -12760,25 +12760,25 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
     const loadSnippetVariablesFromFile = this.plugin.settings.loadSnippetVariablesFromFile;
     snippetVariablesSetting.settingEl.toggleClass("hidden", loadSnippetVariablesFromFile);
     this.snippetVariablesFileLocEl.toggleClass("hidden", !loadSnippetVariablesFromFile);
-    new import_obsidian4.Setting(containerEl).setName("单词分隔符").setDesc('将被视为单词分隔符的符号，用于与“w”片段选项一起使用').addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.wordDelimiters).setValue(this.plugin.settings.wordDelimiters).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Word delimiters").setDesc('Symbols that will be treated as word delimiters, for use with the "w" snippet option.').addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.wordDelimiters).setValue(this.plugin.settings.wordDelimiters).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.wordDelimiters = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("在内联数学公式中的片段移除尾随空格").setDesc("在展开内联数学块末尾的片段时是否移除尾随空格").addToggle((toggle) => toggle.setValue(this.plugin.settings.removeSnippetWhitespace).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Remove trailing whitespaces in snippets in inline math").setDesc("Whether to remove trailing whitespaces when expanding snippets at the end of inline math blocks.").addToggle((toggle) => toggle.setValue(this.plugin.settings.removeSnippetWhitespace).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.removeSnippetWhitespace = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("在内联数学公式的空白处退格时移除闭合的 $").setDesc("当您在空白内联数学中删除不闭合的 $ 时，是否也移除闭合的 $").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoDelete$).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Remove closing $ when backspacing inside blank inline math").setDesc("Whether to also remove the closing $ when you delete the opening $ symbol inside blank inline math.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoDelete$).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.autoDelete$ = value;
       yield this.plugin.saveSettings();
     })));
-    new import_obsidian4.Setting(containerEl).setName("当输入法编辑器（IME）处于活动状态时不触发片段").setDesc("是否在输入法编辑器（IME）处于活动状态时禁止触发片段").addToggle(
+    new import_obsidian4.Setting(containerEl).setName("Don't trigger snippets when IME is active").setDesc("Whether to suppress snippets triggering when an IME is active.").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.suppressSnippetTriggerOnIME).onChange((value) => __async(this, null, function* () {
         this.plugin.settings.suppressSnippetTriggerOnIME = value;
         yield this.plugin.saveSettings();
       }))
     );
-    new import_obsidian4.Setting(containerEl).setName("将以下代码语言解释为数学模式").setDesc("代码块语言，整个代码块应被视为数学块，用逗号分隔").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.forceMathLanguages).setValue(this.plugin.settings.forceMathLanguages).onChange((value) => __async(this, null, function* () {
+    new import_obsidian4.Setting(containerEl).setName("Code languages to interpret as math mode").setDesc("Codeblock languages where the whole code block should be treated like a math block, separated by commas.").addText((text) => text.setPlaceholder(DEFAULT_SETTINGS.forceMathLanguages).setValue(this.plugin.settings.forceMathLanguages).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.forceMathLanguages = value;
       yield this.plugin.saveSettings();
     })));
@@ -12822,11 +12822,11 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
     customCSSWrapper.appendChild(this.snippetsEditor.dom);
     const buttonsDiv = snippetsFooter.createDiv("snippets-editor-buttons");
     const reset = new import_obsidian4.ButtonComponent(buttonsDiv);
-    reset.setIcon("switch").setTooltip("将代码片段重设为默认值").onClick(() => __async(this, null, function* () {
+    reset.setIcon("switch").setTooltip("Reset to default snippets").onClick(() => __async(this, null, function* () {
       new ConfirmationModal(
         this.plugin.app,
         "Are you sure? This will delete any custom snippets you have written.",
-        (button) => button.setButtonText("将代码片段重设为默认值").setWarning(),
+        (button) => button.setButtonText("Reset to default snippets").setWarning(),
         () => __async(this, null, function* () {
           this.snippetsEditor.setState(import_state3.EditorState.create({ doc: DEFAULT_SNIPPETS, extensions }));
           updateValidityIndicator(true);
@@ -12836,11 +12836,11 @@ var LatexSuiteSettingTab = class extends import_obsidian4.PluginSettingTab {
       ).open();
     }));
     const remove = new import_obsidian4.ButtonComponent(buttonsDiv);
-    remove.setIcon("trash").setTooltip("移除所有的代码片段").onClick(() => __async(this, null, function* () {
+    remove.setIcon("trash").setTooltip("Remove all snippets").onClick(() => __async(this, null, function* () {
       new ConfirmationModal(
         this.plugin.app,
         "Are you sure? This will delete any custom snippets you have written.",
-        (button) => button.setButtonText("移除所有的代码片段").setWarning(),
+        (button) => button.setButtonText("Remove all snippets").setWarning(),
         () => __async(this, null, function* () {
           const value = `[
 
@@ -12865,7 +12865,7 @@ var ConfirmationModal = class extends import_obsidian4.Modal {
         yield clickCallback();
         this.close();
       }));
-    }).addButton((button) => button.setButtonText("取消").onClick(() => this.close()));
+    }).addButton((button) => button.setButtonText("Cancel").onClick(() => this.close()));
   }
 };
 function createCMEditor(content, extensions) {

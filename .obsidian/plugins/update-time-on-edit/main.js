@@ -1445,18 +1445,18 @@ var formatters2 = {
       case "QQQ":
         return localize2.quarter(quarter, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "QQQQQ":
         return localize2.quarter(quarter, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "QQQQ":
       default:
         return localize2.quarter(quarter, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -1475,18 +1475,18 @@ var formatters2 = {
       case "qqq":
         return localize2.quarter(quarter, {
           width: "abbreviated",
-          context: "独立、单机"
+          context: "standalone"
         });
       case "qqqqq":
         return localize2.quarter(quarter, {
           width: "narrow",
-          context: "独立、单机"
+          context: "standalone"
         });
       case "qqqq":
       default:
         return localize2.quarter(quarter, {
           width: "wide",
-          context: "独立、单机"
+          context: "standalone"
         });
     }
   },
@@ -1504,18 +1504,18 @@ var formatters2 = {
       case "MMM":
         return localize2.month(month, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "MMMMM":
         return localize2.month(month, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "MMMM":
       default:
         return localize2.month(month, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -1534,18 +1534,18 @@ var formatters2 = {
       case "LLL":
         return localize2.month(month, {
           width: "abbreviated",
-          context: "独立、单机"
+          context: "standalone"
         });
       case "LLLLL":
         return localize2.month(month, {
           width: "narrow",
-          context: "独立、单机"
+          context: "standalone"
         });
       case "LLLL":
       default:
         return localize2.month(month, {
           width: "wide",
-          context: "独立、单机"
+          context: "standalone"
         });
     }
   },
@@ -1597,23 +1597,23 @@ var formatters2 = {
       case "EEE":
         return localize2.day(dayOfWeek, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "EEEEE":
         return localize2.day(dayOfWeek, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "EEEEEE":
         return localize2.day(dayOfWeek, {
           width: "short",
-          context: "格式化"
+          context: "formatting"
         });
       case "EEEE":
       default:
         return localize2.day(dayOfWeek, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -1633,23 +1633,23 @@ var formatters2 = {
       case "eee":
         return localize2.day(dayOfWeek, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "eeeee":
         return localize2.day(dayOfWeek, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "eeeeee":
         return localize2.day(dayOfWeek, {
           width: "short",
-          context: "格式化"
+          context: "formatting"
         });
       case "eeee":
       default:
         return localize2.day(dayOfWeek, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -1669,23 +1669,23 @@ var formatters2 = {
       case "ccc":
         return localize2.day(dayOfWeek, {
           width: "abbreviated",
-          context: "独立、单机"
+          context: "standalone"
         });
       case "ccccc":
         return localize2.day(dayOfWeek, {
           width: "narrow",
-          context: "独立、单机"
+          context: "standalone"
         });
       case "cccccc":
         return localize2.day(dayOfWeek, {
           width: "short",
-          context: "独立、单机"
+          context: "standalone"
         });
       case "cccc":
       default:
         return localize2.day(dayOfWeek, {
           width: "wide",
-          context: "独立、单机"
+          context: "standalone"
         });
     }
   },
@@ -1705,23 +1705,23 @@ var formatters2 = {
       case "iii":
         return localize2.day(dayOfWeek, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "iiiii":
         return localize2.day(dayOfWeek, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "iiiiii":
         return localize2.day(dayOfWeek, {
           width: "short",
-          context: "格式化"
+          context: "formatting"
         });
       case "iiii":
       default:
         return localize2.day(dayOfWeek, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -1734,23 +1734,23 @@ var formatters2 = {
       case "aa":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "aaa":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         }).toLowerCase();
       case "aaaaa":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "aaaa":
       default:
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -1770,23 +1770,23 @@ var formatters2 = {
       case "bb":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "bbb":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         }).toLowerCase();
       case "bbbbb":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "bbbb":
       default:
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -1809,18 +1809,18 @@ var formatters2 = {
       case "BBB":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "abbreviated",
-          context: "格式化"
+          context: "formatting"
         });
       case "BBBBB":
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "narrow",
-          context: "格式化"
+          context: "formatting"
         });
       case "BBBB":
       default:
         return localize2.dayPeriod(dayPeriodEnumValue, {
           width: "wide",
-          context: "格式化"
+          context: "formatting"
         });
     }
   },
@@ -2573,27 +2573,27 @@ var parsers = {
         case "QQQ":
           return match2.quarter(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.quarter(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "QQQQQ":
           return match2.quarter(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "QQQQ":
         default:
           return match2.quarter(string, {
             width: "wide",
-            context: "格式化"
+            context: "formatting"
           }) || match2.quarter(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.quarter(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
       }
     },
@@ -2622,27 +2622,27 @@ var parsers = {
         case "qqq":
           return match2.quarter(string, {
             width: "abbreviated",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.quarter(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
         case "qqqqq":
           return match2.quarter(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
         case "qqqq":
         default:
           return match2.quarter(string, {
             width: "wide",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.quarter(string, {
             width: "abbreviated",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.quarter(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
       }
     },
@@ -2676,27 +2676,27 @@ var parsers = {
         case "MMM":
           return match2.month(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.month(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "MMMMM":
           return match2.month(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "MMMM":
         default:
           return match2.month(string, {
             width: "wide",
-            context: "格式化"
+            context: "formatting"
           }) || match2.month(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.month(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
       }
     },
@@ -2730,27 +2730,27 @@ var parsers = {
         case "LLL":
           return match2.month(string, {
             width: "abbreviated",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.month(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
         case "LLLLL":
           return match2.month(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
         case "LLLL":
         default:
           return match2.month(string, {
             width: "wide",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.month(string, {
             width: "abbreviated",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.month(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
       }
     },
@@ -2886,41 +2886,41 @@ var parsers = {
         case "EEE":
           return match2.day(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "short",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "EEEEE":
           return match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "EEEEEE":
           return match2.day(string, {
             width: "short",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "EEEE":
         default:
           return match2.day(string, {
             width: "wide",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "short",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
       }
     },
@@ -2954,41 +2954,41 @@ var parsers = {
         case "eee":
           return match2.day(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "short",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "eeeee":
           return match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "eeeeee":
           return match2.day(string, {
             width: "short",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "eeee":
         default:
           return match2.day(string, {
             width: "wide",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "short",
-            context: "格式化"
+            context: "formatting"
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
       }
     },
@@ -3022,41 +3022,41 @@ var parsers = {
         case "ccc":
           return match2.day(string, {
             width: "abbreviated",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.day(string, {
             width: "short",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.day(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
         case "ccccc":
           return match2.day(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
         case "cccccc":
           return match2.day(string, {
             width: "short",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.day(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
         case "cccc":
         default:
           return match2.day(string, {
             width: "wide",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.day(string, {
             width: "abbreviated",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.day(string, {
             width: "short",
-            context: "独立、单机"
+            context: "standalone"
           }) || match2.day(string, {
             width: "narrow",
-            context: "独立、单机"
+            context: "standalone"
           });
       }
     },
@@ -3091,50 +3091,50 @@ var parsers = {
         case "iii":
           return match2.day(string, {
             width: "abbreviated",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           }) || match2.day(string, {
             width: "short",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           });
         case "iiiii":
           return match2.day(string, {
             width: "narrow",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           });
         case "iiiiii":
           return match2.day(string, {
             width: "short",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           });
         case "iiii":
         default:
           return match2.day(string, {
             width: "wide",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           }) || match2.day(string, {
             width: "abbreviated",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           }) || match2.day(string, {
             width: "short",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           }) || match2.day(string, {
             width: "narrow",
-            context: "格式化",
+            context: "formatting",
             valueCallback
           });
       }
@@ -3159,27 +3159,27 @@ var parsers = {
         case "aaa":
           return match2.dayPeriod(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "aaaaa":
           return match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "aaaa":
         default:
           return match2.dayPeriod(string, {
             width: "wide",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
       }
     },
@@ -3199,27 +3199,27 @@ var parsers = {
         case "bbb":
           return match2.dayPeriod(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "bbbbb":
           return match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "bbbb":
         default:
           return match2.dayPeriod(string, {
             width: "wide",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
       }
     },
@@ -3239,27 +3239,27 @@ var parsers = {
         case "BBB":
           return match2.dayPeriod(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "BBBBB":
           return match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
         case "BBBB":
         default:
           return match2.dayPeriod(string, {
             width: "wide",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "abbreviated",
-            context: "格式化"
+            context: "formatting"
           }) || match2.dayPeriod(string, {
             width: "narrow",
-            context: "格式化"
+            context: "formatting"
           });
       }
     },
@@ -3825,7 +3825,7 @@ function effect(_ref2) {
   };
 }
 var applyStyles_default = {
-  name: "应用程序样式",
+  name: "applyStyles",
   enabled: true,
   phase: "write",
   fn: applyStyles,
@@ -4068,7 +4068,7 @@ function effect2(_ref2) {
   state.elements.arrow = arrowElement;
 }
 var arrow_default = {
-  name: "箭头",
+  name: "arrow",
   enabled: true,
   phase: "main",
   fn: arrow,
@@ -4178,7 +4178,7 @@ function computeStyles(_ref4) {
   });
 }
 var computeStyles_default = {
-  name: "计算机样式",
+  name: "computeStyles",
   enabled: true,
   phase: "beforeWrite",
   fn: computeStyles,
@@ -4214,7 +4214,7 @@ function effect3(_ref) {
   };
 }
 var eventListeners_default = {
-  name: "事件监听器",
+  name: "eventListeners",
   enabled: true,
   phase: "write",
   fn: function fn() {
@@ -4621,7 +4621,7 @@ function flip(_ref) {
   }
 }
 var flip_default = {
-  name: "轻弹",
+  name: "flip",
   enabled: true,
   phase: "main",
   fn: flip,
@@ -4657,7 +4657,7 @@ function hide(_ref) {
   var popperRect = state.rects.popper;
   var preventedOffsets = state.modifiersData.preventOverflow;
   var referenceOverflow = detectOverflow(state, {
-    elementContext: "参考"
+    elementContext: "reference"
   });
   var popperAltOverflow = detectOverflow(state, {
     altBoundary: true
@@ -4678,7 +4678,7 @@ function hide(_ref) {
   });
 }
 var hide_default = {
-  name: "隐藏",
+  name: "hide",
   enabled: true,
   phase: "main",
   requiresIfExists: ["preventOverflow"],
@@ -4717,7 +4717,7 @@ function offset(_ref2) {
   state.modifiersData[name] = data;
 }
 var offset_default = {
-  name: "抵消",
+  name: "offset",
   enabled: true,
   phase: "main",
   requires: ["popperOffsets"],
@@ -4735,7 +4735,7 @@ function popperOffsets(_ref) {
   });
 }
 var popperOffsets_default = {
-  name: "定位器偏移量",
+  name: "popperOffsets",
   enabled: true,
   phase: "read",
   fn: popperOffsets,
@@ -4820,7 +4820,7 @@ function preventOverflow(_ref) {
   state.modifiersData[name] = data;
 }
 var preventOverflow_default = {
-  name: "防止溢出",
+  name: "preventOverflow",
   enabled: true,
   phase: "main",
   fn: preventOverflow,
@@ -5349,7 +5349,7 @@ var TextInputSuggest = class {
       placement: "bottom-start",
       modifiers: [
         {
-          name: "相同宽度",
+          name: "sameWidth",
           enabled: true,
           fn: ({ state, instance }) => {
             const targetWidth = `${state.rects.reference.width}px`;
@@ -5511,7 +5511,7 @@ var UpdateAllModal = class extends import_obsidian3.Modal {
     }
     for (let i = 0; i < allMdFiles.length; i++) {
       if (!this.isOpened) {
-        new import_obsidian3.Notice("批量更新标题已停止。", 2e3);
+        new import_obsidian3.Notice("Bulk update for header stopped.", 2e3);
         return;
       }
       updateCount(i + 1);
@@ -5521,7 +5521,7 @@ var UpdateAllModal = class extends import_obsidian3.Modal {
       "Done ! You can safely close this modal."
     );
     const el = new import_obsidian3.Setting(this.containerEl).addButton((btn) => {
-      btn.setButtonText("关闭").onClick(() => {
+      btn.setButtonText("Close").onClick(() => {
         this.close();
       });
     }).settingEl;
@@ -5532,33 +5532,33 @@ var UpdateAllModal = class extends import_obsidian3.Modal {
     let { contentEl } = this;
     contentEl.addClass("update-time-on-edit--bulk-modal");
     const header = contentEl.createEl("h2", {
-      text: `正在保险库中查找符合条件的文件……`
+      text: `Finding eligible files in the vault...`
     });
     const allMdFiles = await this.plugin.getAllFilesPossiblyAffected();
-    header.setText(`更新保险库中的所有 ${allMdFiles.length} 文件`);
+    header.setText(`Update all ${allMdFiles.length} files in the vault`);
     const div = contentEl.createDiv();
     this.divContainer = div;
     div.append(
       div.createSpan({
-        text: "这将更新受此插件影响的文件的所有创建时间和更新时间"
+        text: "This will update all created and updated time on files affected by this plugin"
       }),
       createBr(),
       createBr(),
       div.createSpan({
-        text: `警告：此操作将影响你的保险库中的${allMdFiles.length}个文件。请确保你正确调整了设置，并进行备份。`,
+        text: `WARNING: this action will affect ${allMdFiles.length} in your vault. Make sure you tuned the settings correctly, and make a backup.`,
         cls: "update-time-on-edit--settings--warn"
       }),
       createBr(),
       createBr()
     );
     this.settingsSection = new import_obsidian3.Setting(contentEl).addButton((btn) => {
-      btn.setButtonText("运行").setCta().onClick(() => {
+      btn.setButtonText("Run").setCta().onClick(() => {
         this.onRun();
       });
       this.runButton = btn;
     }).addButton((btn) => {
       this.cancelButton = btn;
-      btn.setButtonText("取消").onClick(() => {
+      btn.setButtonText("Cancel").onClick(() => {
         this.close();
       });
     });
@@ -5608,7 +5608,7 @@ var UpdateAllCacheData = class extends import_obsidian4.Modal {
     }
     for (let i = 0; i < allMdFiles.length; i++) {
       if (!this.isOpened) {
-        new import_obsidian4.Notice("批量更新标题已停止。", 2e3);
+        new import_obsidian4.Notice("Bulk update for header stopped.", 2e3);
         return;
       }
       updateCount(i + 1);
@@ -5618,7 +5618,7 @@ var UpdateAllCacheData = class extends import_obsidian4.Modal {
       "Done ! You can safely close this modal."
     );
     const el = new import_obsidian4.Setting(this.containerEl).addButton((btn) => {
-      btn.setButtonText("关闭").onClick(() => {
+      btn.setButtonText("Close").onClick(() => {
         this.close();
       });
     }).settingEl;
@@ -5629,27 +5629,27 @@ var UpdateAllCacheData = class extends import_obsidian4.Modal {
     let { contentEl } = this;
     contentEl.addClass("update-time-on-edit--bulk-modal");
     const header = contentEl.createEl("h2", {
-      text: `正在保险库中查找符合条件的文件……`
+      text: `Finding eligible files in the vault...`
     });
     const allMdFiles = await this.plugin.getAllFilesPossiblyAffected();
-    header.setText(`在哈希缓存中创建所有${allMdFiles.length}文件`);
+    header.setText(`Create all ${allMdFiles.length} files in the hash cache`);
     const div = contentEl.createDiv();
     this.divContainer = div;
     div.append(
       div.createSpan({
-        text: "这将更新受此插件影响的文件上的所有缓存数据"
+        text: "This will update all cache data on files affected by this plugin"
       }),
       createBr2(),
       createBr2()
     );
     this.settingsSection = new import_obsidian4.Setting(contentEl).addButton((btn) => {
-      btn.setButtonText("运行").setCta().onClick(() => {
+      btn.setButtonText("Run").setCta().onClick(() => {
         this.onRun();
       });
       this.runButton = btn;
     }).addButton((btn) => {
       this.cancelButton = btn;
-      btn.setButtonText("取消").onClick(() => {
+      btn.setButtonText("Cancel").onClick(() => {
         this.close();
       });
     });
@@ -5681,26 +5681,26 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
   display() {
     let { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "全局设置" });
+    containerEl.createEl("h2", { text: "Global settings" });
     this.addExcludedFoldersSetting();
     this.addTimeBetweenUpdates();
     this.addDateFormat();
-    new import_obsidian5.Setting(this.containerEl).setName("更新所有文件").setDesc(
-      "这个插件仅对新文件起作用，但如果你想一次性更新保险库中的所有文件，可以在这里进行操作。"
+    new import_obsidian5.Setting(this.containerEl).setName("Update all files").setDesc(
+      "This plugin will only work on new files, but if you want to update all files in your vault at once, you can do it here."
     ).addButton((cb) => {
-      cb.setButtonText("更新所有文件").onClick(() => {
+      cb.setButtonText("Update all files").onClick(() => {
         new UpdateAllModal(this.app, this.plugin).open();
       });
     });
-    containerEl.createEl("h2", { text: "更新于" });
+    containerEl.createEl("h2", { text: "Updated at" });
     this.addFrontMatterUpdated();
-    containerEl.createEl("h2", { text: "创建于" });
+    containerEl.createEl("h2", { text: "Created at" });
     this.addEnableCreated();
     this.addFrontMatterCreated();
     this.addExcludedCreatedFoldersSetting();
-    containerEl.createEl("h2", { text: "实验性设置" });
-    new import_obsidian5.Setting(this.containerEl).setName("启用哈希匹配器").setDesc(
-      "使用哈希系统以防止过多的更新发生，特别是在同步时。"
+    containerEl.createEl("h2", { text: "Experimental settings" });
+    new import_obsidian5.Setting(this.containerEl).setName("Enable hash matcher").setDesc(
+      "Using a hash system to prevent too many updates happening, especially with sync."
     ).addToggle(
       (cb) => {
         var _a;
@@ -5710,7 +5710,7 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
         });
       }
     ).addButton(
-      (cb) => cb.setButtonText("填充初始缓存").onClick(() => {
+      (cb) => cb.setButtonText("Fill initial cache").onClick(() => {
         new UpdateAllCacheData(this.app, this.plugin).open();
       })
     );
@@ -5721,8 +5721,8 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
   addDateFormat() {
     this.createDateFormatEditor({
       getValue: () => this.plugin.settings.dateFormat,
-      name: "日期格式",
-      description: "用于读取和写入的日期格式",
+      name: "Date format",
+      description: "The date format for read and write",
       setValue: (newValue) => this.plugin.settings.dateFormat = newValue
     });
   }
@@ -5740,7 +5740,7 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
         "Check ",
         descr.createEl("a", {
           href: "https://date-fns.org/v2.25.0/docs/format",
-          text: "date-fns 文档"
+          text: "date-fns documentation"
         }),
         descr.createEl("br"),
         `Currently: ${format(new Date(), getValue())}`,
@@ -5758,7 +5758,7 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
     );
   }
   addTimeBetweenUpdates() {
-    new import_obsidian5.Setting(this.containerEl).setName("两次更新之间的最小分钟数").setDesc("如果你的文件更新得太频繁，可以增加这个值。").addSlider(
+    new import_obsidian5.Setting(this.containerEl).setName("Minimum number of minutes between update").setDesc("If your files are updating too often, increase this.").addSlider(
       (slider) => slider.setLimits(1, 30, 1).setValue(this.plugin.settings.minMinutesBetweenSaves).onChange(async (value) => {
         this.plugin.settings.minMinutesBetweenSaves = value;
         await this.saveSettings();
@@ -5766,7 +5766,7 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
     );
   }
   addEnableCreated() {
-    new import_obsidian5.Setting(this.containerEl).setName("启用创建的 Front matter 元数据键更新").setDesc("当前，如果不存在则设置为现在").addToggle(
+    new import_obsidian5.Setting(this.containerEl).setName("Enable the created front matter key update").setDesc("Currently, it is set to now if not present").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.enableCreateTime).onChange(async (newValue) => {
         this.plugin.settings.enableCreateTime = newValue;
         await this.saveSettings();
@@ -5775,10 +5775,10 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
     );
   }
   addFrontMatterUpdated() {
-    new import_obsidian5.Setting(this.containerEl).setName("Front matter 更新名称").setDesc("前置元数据 YAML 中的更新时间键。").addText(
+    new import_obsidian5.Setting(this.containerEl).setName("Front matter updated name").setDesc("The key in the front matter yaml for the update time.").addText(
       (text) => {
         var _a;
-        return text.setPlaceholder("已更新").setValue((_a = this.plugin.settings.headerUpdated) != null ? _a : "").onChange(async (value) => {
+        return text.setPlaceholder("updated").setValue((_a = this.plugin.settings.headerUpdated) != null ? _a : "").onChange(async (value) => {
           this.plugin.settings.headerUpdated = value;
           await this.saveSettings();
         });
@@ -5789,10 +5789,10 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
     if (!this.plugin.settings.enableCreateTime) {
       return;
     }
-    new import_obsidian5.Setting(this.containerEl).setName("Front matter 创建名称").setDesc("前置元数据 YAML 中的创建时间键").addText(
+    new import_obsidian5.Setting(this.containerEl).setName("Front matter created name").setDesc("The key in the front matter yaml for the creation time").addText(
       (text) => {
         var _a;
-        return text.setPlaceholder("已更新").setValue((_a = this.plugin.settings.headerCreated) != null ? _a : "").onChange(async (value) => {
+        return text.setPlaceholder("updated").setValue((_a = this.plugin.settings.headerCreated) != null ? _a : "").onChange(async (value) => {
           this.plugin.settings.headerCreated = value;
           await this.saveSettings();
         });
@@ -5809,8 +5809,8 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
       setValue: async (newValue) => {
         this.plugin.settings.ignoreCreatedFolder = newValue;
       },
-      name: "在更新创建属性时要排除的文件夹",
-      description: "此文件夹中的任何文件被更新都不会触发创建时间的更新。"
+      name: "Folder(s) to exclude for updating the created property",
+      description: "Any file updated in this folder will not trigger a created update."
     });
   }
   addExcludedFoldersSetting() {
@@ -5819,8 +5819,8 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
       setValue: async (newValue) => {
         this.plugin.settings.ignoreGlobalFolder = newValue;
       },
-      name: "要排除所有更新的文件夹",
-      description: "此文件夹中的任何文件被更新都不会触发更新时间和创建时间的更新。"
+      name: "Folder to exclude of all updates",
+      description: "Any file updated in this folder will not trigger an updated and created update."
     });
   }
   doSearchAndRemoveList({
@@ -5833,11 +5833,11 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
     new import_obsidian5.Setting(this.containerEl).setName(name).setDesc(description).addSearch((cb) => {
       searchInput = cb;
       new FolderSuggest(this.app, cb.inputEl);
-      cb.setPlaceholder("示例：文件夹1/文件夹2");
+      cb.setPlaceholder("Example: folder1/folder2");
       cb.containerEl.addClass("time_search");
     }).addButton((cb) => {
       cb.setIcon("plus");
-      cb.setTooltip("添加文件夹");
+      cb.setTooltip("Add folder");
       cb.onClick(async () => {
         if (!searchInput) {
           return;
@@ -5851,7 +5851,7 @@ var UpdateTimeOnEditSettingsTab = class extends import_obsidian5.PluginSettingTa
     });
     currentList.forEach(
       (ignoreFolder) => new import_obsidian5.Setting(this.containerEl).setName(ignoreFolder).addButton(
-        (button) => button.setButtonText("删除").onClick(async () => {
+        (button) => button.setButtonText("Remove").onClick(async () => {
           await setValue(currentList.filter((value) => value !== ignoreFolder));
           await this.saveSettings();
           this.display();
@@ -5869,7 +5869,7 @@ var UpdateTimeOnSavePlugin = class extends import_obsidian6.Plugin {
       try {
         const parsedDate = parse(input, this.settings.dateFormat, new Date());
         if (isNaN(parsedDate.getTime())) {
-          this.log("无效日期", parsedDate);
+          this.log("NAN DATE", parsedDate);
           return void 0;
         }
         return parsedDate;
@@ -5884,7 +5884,7 @@ var UpdateTimeOnSavePlugin = class extends import_obsidian6.Plugin {
     return format(input, this.settings.dateFormat);
   }
   async onload() {
-    this.log("正在加载开发中的插件");
+    this.log("loading plugin IN DEV");
     await this.loadSettings();
     this.setupOnEditHandler();
     this.addSettingTab(new UpdateTimeOnEditSettingsTab(this.app, this));
@@ -5918,7 +5918,7 @@ var UpdateTimeOnSavePlugin = class extends import_obsidian6.Plugin {
       if (maybeHash) {
         const sha2 = this.hashString(fileContent);
         if (sha2 === maybeHash) {
-          this.log("忽略该文件，因为哈希值相同");
+          this.log("Ignoring file because, sha same");
           return true;
         }
       }
@@ -5984,14 +5984,14 @@ var UpdateTimeOnSavePlugin = class extends import_obsidian6.Plugin {
       await this.app.fileManager.processFrontMatter(
         file,
         (frontmatter) => {
-          this.log("当前元数据：", frontmatter);
-          this.log("当前状态：", file.stat);
+          this.log("current metadata: ", frontmatter);
+          this.log("current stat: ", file.stat);
           const updatedKey = this.settings.headerUpdated;
           const createdKey = this.settings.headerCreated;
           const mTime = this.parseDate(file.stat.mtime);
           const cTime = this.parseDate(file.stat.ctime);
           if (!mTime || !cTime) {
-            this.log("出现错误，跳过");
+            this.log("Something wrong happen, skipping");
             return;
           }
           if (!frontmatter[createdKey]) {
@@ -6001,16 +6001,16 @@ var UpdateTimeOnSavePlugin = class extends import_obsidian6.Plugin {
           }
           const currentMTimeOnFile = this.parseDate(frontmatter[updatedKey]);
           if (!frontmatter[updatedKey] || !currentMTimeOnFile) {
-            this.log("更新 updatedKey");
+            this.log("Update updatedKey");
             frontmatter[updatedKey] = this.formatDate(mTime);
             return;
           }
           if (this.shouldUpdateValue(mTime, currentMTimeOnFile)) {
             frontmatter[updatedKey] = this.formatDate(mTime);
-            this.log("更新 updatedKey");
+            this.log("Update updatedKey");
             return;
           }
-          this.log("跳过 updateKey");
+          this.log("Skipping updateKey");
         },
         { ctime: file.stat.ctime, mtime: file.stat.mtime }
       );
@@ -6034,10 +6034,10 @@ ${e.message}`;
     };
   }
   setupOnEditHandler() {
-    this.log("更新了所有字段");
+    this.log("Setup handler");
     this.registerEvent(
       this.app.vault.on("modify", (file) => {
-        this.log("从修改中触发");
+        this.log("TRIGGER FROM MODIFY");
         return this.handleFileChange(file, "modify");
       })
     );
@@ -6064,7 +6064,7 @@ ${e.message}`;
     );
   }
   onunload() {
-    this.log("卸载 Update time on edit 插件");
+    this.log("unloading Update time on edit plugin");
   }
   log(...data) {
     if (true) {

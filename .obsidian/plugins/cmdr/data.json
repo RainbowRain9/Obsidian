@@ -79,12 +79,6 @@
       "icon": "activity",
       "name": "Digital Garden: Publish Single Note",
       "mode": "7712896608861b4d"
-    },
-    {
-      "id": "obsidian-markmind:Toggle to markdown or mindmap",
-      "icon": "lucide-aperture",
-      "name": "Markmind: 切换为Markdown或思维导图模式",
-      "mode": "any"
     }
   ],
   "macros": [

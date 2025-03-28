@@ -1785,7 +1785,7 @@ var InternalLinkWordProvider = class {
           emoji: option.makeSynonymAboutEmoji,
           accentsDiacritics: option.makeSynonymAboutAccentsDiacritics
         }),
-        description: `出现在 -> ${path}`,
+        description: `Appeared in -> ${path}`,
         phantom: true
       };
     });
@@ -3844,7 +3844,7 @@ function open(popup) {
   }
   const markdownFile = popup.appHelper.getMarkdownFileByPath(item.createdPath);
   if (!markdownFile) {
-    new import_obsidian4.Notice(`无法打开 ${item.createdPath}`);
+    new import_obsidian4.Notice(`Can't open ${item.createdPath}`);
     return false;
   }
   popup.appHelper.openMarkdownFile(markdownFile, true);
@@ -4855,7 +4855,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   async display() {
     let { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "各种补语-设置" });
+    containerEl.createEl("h2", { text: "Various Complements - Settings" });
     await this.addMainSettings(containerEl);
     this.addAppearanceSettings(containerEl);
     this.addKeyCustomizationSettings(containerEl);
@@ -4870,10 +4870,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   async addMainSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "主要",
+      text: "Main",
       cls: "various-complements__settings__header various-complements__settings__header__main"
     });
-    new import_obsidian7.Setting(containerEl).setName("策略").addDropdown(
+    new import_obsidian7.Setting(containerEl).setName("Strategy").addDropdown(
       (tc) => tc.addOptions(mirrorMap(TokenizeStrategy.values(), (x) => x.name)).setValue(this.plugin.settings.strategy).onChange(async (value) => {
         this.plugin.settings.strategy = value;
         this.display();
@@ -4887,14 +4887,14 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       const df = document.createDocumentFragment();
       df.append(
         createSpan({
-          text: "这个地址为 `cedict_ts.u8`.你可以从这下载 "
+          text: "The path to `cedict_ts.u8`. You can download it from "
         }),
         createEl("a", {
           href: "https://www.mdbg.net/chinese/dictionary?page=cc-cedict",
-          text: "这个网站"
+          text: " the site "
         })
       );
-      new import_obsidian7.Setting(containerEl).setName("CC-CEDICT路径").setDesc(df).setClass("various-complements__settings__nested").addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName("CC-CEDICT path").setDesc(df).setClass("various-complements__settings__nested").addText((cb) => {
         TextComponentEvent.onChange(cb, async (value) => {
           this.plugin.settings.cedictPath = value;
           await this.plugin.saveSettings();
@@ -4906,12 +4906,12 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       );
       if (!hasCedict) {
         containerEl.createEl("div", {
-          text: `\u26A0 cedict_ts.u8 不存在于 ${this.plugin.settings.cedictPath}.`,
+          text: `\u26A0 cedict_ts.u8 doesn't exist in ${this.plugin.settings.cedictPath}.`,
           cls: "various-complements__settings__warning"
         });
       }
     }
-    new import_obsidian7.Setting(containerEl).setName("匹配策略").addDropdown(
+    new import_obsidian7.Setting(containerEl).setName("Match strategy").addDropdown(
       (tc) => tc.addOptions(mirrorMap(MatchStrategy.values(), (x) => x.name)).setValue(this.plugin.settings.matchStrategy).onChange(async (value) => {
         this.plugin.settings.matchStrategy = value;
         await this.plugin.saveSettings();
@@ -4920,23 +4920,25 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
     );
     if (this.plugin.settings.matchStrategy === MatchStrategy.PARTIAL.name) {
       containerEl.createEl("div", {
-        text: "\u26A0 `partial` 比 `prefix`慢10倍以上",
+        text: "\u26A0 `partial` is more than 10 times slower than `prefix`",
         cls: "various-complements__settings__warning"
       });
     }
-    new import_obsidian7.Setting(containerEl).setName("模糊匹配").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Fuzzy match").addToggle((tc) => {
       tc.setValue(this.plugin.settings.fuzzyMatch).onChange(async (value) => {
         this.plugin.settings.fuzzyMatch = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian7.Setting(containerEl).setName("最小模糊匹配分数").setDesc("仅显示模糊匹配分数高于特定值的建议。").addSlider(
+    new import_obsidian7.Setting(containerEl).setName("Min fuzzy match score").setDesc(
+      "It only shows suggestions whose fuzzy matched score is more than the specific value."
+    ).addSlider(
       (sc) => sc.setLimits(0, 5, 0.1).setValue(this.plugin.settings.minFuzzyMatchScore).setDynamicTooltip().onChange(async (value) => {
         this.plugin.settings.minFuzzyMatchScore = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian7.Setting(containerEl).setName("将重音符号视为字母字符。").setDesc("例：如果启用，'aaa'会匹配'áäā'").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Treat accent diacritics as alphabetic characters.").setDesc("Ex: If enabled, 'aaa' matches with '\xE1\xE4\u0101'").addToggle((tc) => {
       tc.setValue(
         this.plugin.settings.treatAccentDiacriticsAsAlphabeticCharacters
       ).onChange(async (value) => {
@@ -4950,8 +4952,8 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       });
     });
     if (TokenizeStrategy.fromName(this.plugin.settings.strategy).canTreatUnderscoreAsPartOfWord) {
-      new import_obsidian7.Setting(containerEl).setName("将下划线视为单词的一部分。").setDesc(
-        "如果此设置已启用，aaa_bbb 将被标记为单个标记 aaa_bbb，而不是被拆分为 aaa 和 bbb。"
+      new import_obsidian7.Setting(containerEl).setName("Treat an underscore as a part of a word.").setDesc(
+        "If this setting is enabled, aaa_bbb will be tokenized as a single token aaa_bbb, rather than being split into aaa and bbb."
       ).addToggle((tc) => {
         tc.setValue(
           this.plugin.settings.treatUnderscoreAsPartOfWord
@@ -4966,7 +4968,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         });
       });
     }
-    new import_obsidian7.Setting(containerEl).setName("不含表情符号的匹配").setDesc("例：如果启用，'aaa'会匹配'😀aaa'").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Matching without emoji").setDesc("Ex: If enabled, 'aaa' matches with '\u{1F600}aaa'").addToggle((tc) => {
       tc.setValue(this.plugin.settings.matchingWithoutEmoji).onChange(
         async (value) => {
           this.plugin.settings.matchingWithoutEmoji = value;
@@ -4979,31 +4981,33 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         }
       );
     });
-    new import_obsidian7.Setting(containerEl).setName("最大建议数量").addSlider(
+    new import_obsidian7.Setting(containerEl).setName("Max number of suggestions").addSlider(
       (sc) => sc.setLimits(1, 255, 1).setValue(this.plugin.settings.maxNumberOfSuggestions).setDynamicTooltip().onChange(async (value) => {
         this.plugin.settings.maxNumberOfSuggestions = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian7.Setting(containerEl).setName("作为短语的最大单词数").setDesc(`[⚠警告] 它会使速度变慢N倍以上（N是设置值）`).addSlider(
+    new import_obsidian7.Setting(containerEl).setName("Max number of words as a phrase").setDesc(`[\u26A0Warning] It makes slower more than N times (N is set value)`).addSlider(
       (sc) => sc.setLimits(1, 10, 1).setValue(this.plugin.settings.maxNumberOfWordsAsPhrase).setDynamicTooltip().onChange(async (value) => {
         this.plugin.settings.maxNumberOfWordsAsPhrase = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian7.Setting(containerEl).setName("触发的最小字符数").setDesc("将值设为0并不意味着无需输入任何字符就会触发建议。相反，会根据您选择的策略使用指定的值。").addSlider(
+    new import_obsidian7.Setting(containerEl).setName("Min number of characters for trigger").setDesc(
+      "Setting the value to 0 does not mean the suggestion will be triggered without any inputted character. Instead, a designated value will be used depending on the Strategy you choose."
+    ).addSlider(
       (sc) => sc.setLimits(0, 10, 1).setValue(this.plugin.settings.minNumberOfCharactersTriggered).setDynamicTooltip().onChange(async (value) => {
         this.plugin.settings.minNumberOfCharactersTriggered = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian7.Setting(containerEl).setName("触发的最小单词数").addSlider(
+    new import_obsidian7.Setting(containerEl).setName("Min number of words for trigger").addSlider(
       (sc) => sc.setLimits(1, 10, 1).setValue(this.plugin.settings.minNumberOfWordsTriggeredPhrase).setDynamicTooltip().onChange(async (value) => {
         this.plugin.settings.minNumberOfWordsTriggeredPhrase = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian7.Setting(containerEl).setName("自动补全").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Complement automatically").addToggle((tc) => {
       tc.setValue(this.plugin.settings.complementAutomatically).onChange(
         async (value) => {
           this.plugin.settings.complementAutomatically = value;
@@ -5011,13 +5015,13 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         }
       );
     });
-    new import_obsidian7.Setting(containerEl).setName("触发延迟毫秒数").addSlider(
+    new import_obsidian7.Setting(containerEl).setName("Delay milli-seconds for trigger").addSlider(
       (sc) => sc.setLimits(0, 1e3, 10).setValue(this.plugin.settings.delayMilliSeconds).setDynamicTooltip().onChange(async (value) => {
         this.plugin.settings.delayMilliSeconds = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian7.Setting(containerEl).setName("在IME开启时禁用建议").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Disable suggestions during IME on").addToggle((tc) => {
       tc.setValue(
         this.plugin.settings.disableSuggestionsDuringImeOn
       ).onChange(async (value) => {
@@ -5025,7 +5029,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian7.Setting(containerEl).setName("禁用数学块中的建议").setDesc("它不支持内联数学块。").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Disable suggestions in the Math block").setDesc("It doesn't support the inline Math block.").addToggle((tc) => {
       tc.setValue(
         this.plugin.settings.disableSuggestionsInMathBlock
       ).onChange(async (value) => {
@@ -5033,7 +5037,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian7.Setting(containerEl).setName("补全后插入空格").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Insert space after completion").addToggle((tc) => {
       tc.setValue(this.plugin.settings.insertSpaceAfterCompletion).onChange(
         async (value) => {
           this.plugin.settings.insertSpaceAfterCompletion = value;
@@ -5041,7 +5045,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         }
       );
     });
-    new import_obsidian7.Setting(containerEl).setName("禁用建议的首字符").addText((cb) => {
+    new import_obsidian7.Setting(containerEl).setName("First characters to disable suggestions").addText((cb) => {
       cb.setValue(
         this.plugin.settings.firstCharactersDisableSuggestions
       ).onChange(async (value) => {
@@ -5049,7 +5053,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian7.Setting(containerEl).setName("抑制触发的行模式").setDesc("抑制自动完成激活的正则表达式行模式（部分匹配）直到光标位置。可以用换行定义多个模式。").addTextArea((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Line patterns to suppress trigger").setDesc(
+      "Regular expression line patterns (partial match) until the cursor, that suppresses the activation of autocomplete. Multiple patterns can be defined with line breaks."
+    ).addTextArea((tc) => {
       const el = tc.setValue(this.plugin.settings.patternsToSuppressTrigger.join("\n")).onChange(async (value) => {
         this.plugin.settings.patternsToSuppressTrigger = smartLineBreakSplit(value);
         await this.plugin.saveSettings();
@@ -5057,7 +5063,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       el.inputEl.className = "various-complements__settings__text-area-path-dense";
       return el;
     });
-    new import_obsidian7.Setting(containerEl).setName("抑制触发的短语模式").setDesc("抑制自动完成激活的正则表达式模式（精确匹配）。可以用换行定义多个模式。").addTextArea((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Phrase patterns to suppress trigger").setDesc(
+      "Regular expression patterns (exact match) that suppress the activation of autocomplete. Multiple patterns can be defined with line breaks."
+    ).addTextArea((tc) => {
       const el = tc.setValue(
         this.plugin.settings.phrasePatternsToSuppressTrigger.join("\n")
       ).onChange(async (value) => {
@@ -5067,7 +5075,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       el.inputEl.className = "various-complements__settings__text-area-path-dense";
       return el;
     });
-    new import_obsidian7.Setting(containerEl).setName("循环前不自动聚焦").setDesc("在按下循环键之前不聚焦于建议。").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("No auto-focus until the cycle").setDesc("No focus on the suggestions until the cycle key is pressed.").addToggle((tc) => {
       tc.setValue(this.plugin.settings.noAutoFocusUntilCycle).onChange(
         async (value) => {
           this.plugin.settings.noAutoFocusUntilCycle = value;
@@ -5078,10 +5086,12 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addAppearanceSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "外观",
+      text: "Appearance",
       cls: "various-complements__settings__header various-complements__settings__header__appearance"
     });
-    new import_obsidian7.Setting(containerEl).setName("显示匹配策略").setDesc("在状态栏显示匹配策略。更改此选项需要重启才能生效。").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Show Match strategy").setDesc(
+      "Show Match strategy at the status bar. Changing this option requires a restart to take effect."
+    ).addToggle((tc) => {
       tc.setValue(this.plugin.settings.showMatchStrategy).onChange(
         async (value) => {
           this.plugin.settings.showMatchStrategy = value;
@@ -5089,7 +5099,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         }
       );
     });
-    new import_obsidian7.Setting(containerEl).setName("显示自动补全").setDesc("在状态栏自动显示补全。更改此选项需要重启才能生效。").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Show Complement automatically").setDesc(
+      "Show complement automatically at the status bar. Changing this option requires a restart to take effect."
+    ).addToggle((tc) => {
       tc.setValue(this.plugin.settings.showComplementAutomatically).onChange(
         async (value) => {
           this.plugin.settings.showComplementAutomatically = value;
@@ -5097,7 +5109,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         }
       );
     });
-    new import_obsidian7.Setting(containerEl).setName("显示索引状态").setDesc("在状态栏显示索引状态。更改此选项需要重启才能生效。").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Show Indexing status").setDesc(
+      "Show indexing status at the status bar. Changing this option requires a restart to take effect."
+    ).addToggle((tc) => {
       tc.setValue(this.plugin.settings.showIndexingStatus).onChange(
         async (value) => {
           this.plugin.settings.showIndexingStatus = value;
@@ -5105,7 +5119,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         }
       );
     });
-    new import_obsidian7.Setting(containerEl).setName("建议的描述").addDropdown(
+    new import_obsidian7.Setting(containerEl).setName("Description on a suggestion").addDropdown(
       (tc) => tc.addOptions(
         mirrorMap(DescriptionOnSuggestion.values(), (x) => x.name)
       ).setValue(this.plugin.settings.descriptionOnSuggestion).onChange(async (value) => {
@@ -5116,7 +5130,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addKeyCustomizationSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "按键定制",
+      text: "Key customization",
       cls: "various-complements__settings__header various-complements__settings__header__key-customization"
     });
     const div = createDiv({
@@ -5134,18 +5148,18 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
     );
     const ul = createEl("ul");
     ul.createEl("li", {
-      text: "'Ctrl a' 表示按Ctrl键和A键。"
+      text: "'Ctrl a' means pressing the Ctrl key and the A key."
     });
     ul.createEl("li", {
-      text: "'Enter|Tab' 表示按Enter键或Tab键。"
+      text: "'Enter|Tab' means pressing the Enter key or the Tab key."
     });
     ul.createEl("li", {
-      text: "在 Windows 系统中使用 'Mod'来替代 'Ctrl' 键；在 macOS 系统中使用 'Mod'来替代 'Cmd' 键。"
+      text: "Use 'Mod' instead of 'Ctrl' on Windows or 'Cmd' on macOS."
     });
     ul.append(li);
     const df = document.createDocumentFragment();
     df.append(ul);
-    new import_obsidian7.Setting(div).setHeading().setName("热键").setDesc(df);
+    new import_obsidian7.Setting(div).setHeading().setName("Hotkeys").setDesc(df);
     const hotkeys = this.plugin.settings.hotkeys;
     Object.keys(hotkeys).forEach((k) => {
       const key = k;
@@ -5156,7 +5170,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         });
       });
     });
-    new import_obsidian7.Setting(containerEl).setName("传播ESC").setDesc("如果您使用Vim模式，这很方便，因为无论是否显示建议，您都可以通过一次ESC切换到普通模式。").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Propagate ESC").setDesc(
+      "It is handy if you use Vim mode because you can switch to Normal mode by one ESC, whether it shows suggestions or not."
+    ).addToggle((tc) => {
       tc.setValue(this.plugin.settings.propagateEsc).onChange(
         async (value) => {
           this.plugin.settings.propagateEsc = value;
@@ -5167,10 +5183,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addCurrentFileComplementSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "根据当前文件建议",
+      text: "Current file complement",
       cls: "various-complements__settings__header various-complements__settings__header__current-file"
     });
-    new import_obsidian7.Setting(containerEl).setName("启用当前文件补全").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Enable Current file complement").addToggle((tc) => {
       tc.setValue(this.plugin.settings.enableCurrentFileComplement).onChange(
         async (value) => {
           this.plugin.settings.enableCurrentFileComplement = value;
@@ -5180,13 +5196,13 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       );
     });
     if (this.plugin.settings.enableCurrentFileComplement) {
-      new import_obsidian7.Setting(containerEl).setName("索引的最小字符数").setDesc("如果设置为0，则使用策略的默认值。").addSlider(
+      new import_obsidian7.Setting(containerEl).setName("Min number of characters for indexing").setDesc("It uses a default value of Strategy if set 0.").addSlider(
         (sc) => sc.setLimits(0, 15, 1).setValue(this.plugin.settings.currentFileMinNumberOfCharacters).setDynamicTooltip().onChange(async (value) => {
           this.plugin.settings.currentFileMinNumberOfCharacters = value;
           await this.plugin.saveSettings({ currentFile: true });
         })
       );
-      new import_obsidian7.Setting(containerEl).setName("当前文件补全仅补全英文").addToggle((tc) => {
+      new import_obsidian7.Setting(containerEl).setName("Only complement English on current file complement").addToggle((tc) => {
         tc.setValue(
           this.plugin.settings.onlyComplementEnglishOnCurrentFileComplement
         ).onChange(async (value) => {
@@ -5194,8 +5210,8 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings({ currentFile: true });
         });
       });
-      new import_obsidian7.Setting(containerEl).setName("排除用于索引的单词模式").setDesc(
-        "用于从建议中排除的单词的正则表达式模式，以换行符分隔。"
+      new import_obsidian7.Setting(containerEl).setName("Exclude word patterns for indexing").setDesc(
+        "Regexp patterns for words to be excluded from the suggestions, separated by line breaks."
       ).addTextArea((tc) => {
         const el = tc.setValue(
           this.plugin.settings.excludeCurrentFileWordPatterns.join("\n")
@@ -5210,10 +5226,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addCurrentVaultComplementSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "根据当前保险库建议",
+      text: "Current vault complement",
       cls: "various-complements__settings__header various-complements__settings__header__current-vault"
     });
-    new import_obsidian7.Setting(containerEl).setName("启用当前保险库补全").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Enable Current vault complement").addToggle((tc) => {
       tc.setValue(this.plugin.settings.enableCurrentVaultComplement).onChange(
         async (value) => {
           this.plugin.settings.enableCurrentVaultComplement = value;
@@ -5223,33 +5239,33 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       );
     });
     if (this.plugin.settings.enableCurrentVaultComplement) {
-      new import_obsidian7.Setting(containerEl).setName("索引的最小字符数").setDesc("如果设置为0，则使用策略的默认值。").addSlider(
+      new import_obsidian7.Setting(containerEl).setName("Min number of characters for indexing").setDesc("It uses a default value of Strategy if set 0.").addSlider(
         (sc) => sc.setLimits(0, 15, 1).setValue(this.plugin.settings.currentVaultMinNumberOfCharacters).setDynamicTooltip().onChange(async (value) => {
           this.plugin.settings.currentVaultMinNumberOfCharacters = value;
           await this.plugin.saveSettings();
         })
       );
-      new import_obsidian7.Setting(containerEl).setName("包含前缀路径模式").setDesc("用于包含文件的前缀匹配路径模式。").addTextArea((tac) => {
+      new import_obsidian7.Setting(containerEl).setName("Include prefix path patterns").setDesc("Prefix match path patterns to include files.").addTextArea((tac) => {
         const el = tac.setValue(
           this.plugin.settings.includeCurrentVaultPathPrefixPatterns
-        ).setPlaceholder("私人/").onChange(async (value) => {
+        ).setPlaceholder("Private/").onChange(async (value) => {
           this.plugin.settings.includeCurrentVaultPathPrefixPatterns = value;
           await this.plugin.saveSettings();
         });
         el.inputEl.className = "various-complements__settings__text-area-path";
         return el;
       });
-      new import_obsidian7.Setting(containerEl).setName("排除前缀路径模式").setDesc("用于排除文件的前缀匹配路径模式。").addTextArea((tac) => {
+      new import_obsidian7.Setting(containerEl).setName("Exclude prefix path patterns").setDesc("Prefix match path patterns to exclude files.").addTextArea((tac) => {
         const el = tac.setValue(
           this.plugin.settings.excludeCurrentVaultPathPrefixPatterns
-        ).setPlaceholder("私人/").onChange(async (value) => {
+        ).setPlaceholder("Private/").onChange(async (value) => {
           this.plugin.settings.excludeCurrentVaultPathPrefixPatterns = value;
           await this.plugin.saveSettings();
         });
         el.inputEl.className = "various-complements__settings__text-area-path";
         return el;
       });
-      new import_obsidian7.Setting(containerEl).setName("仅包含当前目录下的文件").addToggle((tc) => {
+      new import_obsidian7.Setting(containerEl).setName("Include only files under current directory").addToggle((tc) => {
         tc.setValue(
           this.plugin.settings.includeCurrentVaultOnlyFilesUnderCurrentDirectory
         ).onChange(async (value) => {
@@ -5257,8 +5273,8 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings();
         });
       });
-      new import_obsidian7.Setting(containerEl).setName("排除用于索引的单词模式").setDesc(
-        "用于从建议中排除的单词的正则表达式模式，以换行符分隔。"
+      new import_obsidian7.Setting(containerEl).setName("Exclude word patterns for indexing").setDesc(
+        "Regexp patterns for words to be excluded from the suggestions, separated by line breaks."
       ).addTextArea((tc) => {
         const el = tc.setValue(
           this.plugin.settings.excludeCurrentVaultWordPatterns.join("\n")
@@ -5273,10 +5289,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addCustomDictionaryComplementSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "根据自定义词典建议",
+      text: "Custom dictionary complement",
       cls: "various-complements__settings__header various-complements__settings__header__custom-dictionary"
     });
-    new import_obsidian7.Setting(containerEl).setName("启用自定义词典补全").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Enable Custom dictionary complement").addToggle((tc) => {
       tc.setValue(
         this.plugin.settings.enableCustomDictionaryComplement
       ).onChange(async (value) => {
@@ -5286,7 +5302,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       });
     });
     if (this.plugin.settings.enableCustomDictionaryComplement) {
-      new import_obsidian7.Setting(containerEl).setName("自定义词典路径").setDesc("为每行指定从保险库根目录的相对路径或URL。" ).addTextArea((tac) => {
+      new import_obsidian7.Setting(containerEl).setName("Custom dictionary paths").setDesc(
+        "Specify either a relative path from Vault root or URL for each line."
+      ).addTextArea((tac) => {
         const el = tac.setValue(this.plugin.settings.customDictionaryPaths).setPlaceholder("dictionary.md").onChange(async (value) => {
           this.plugin.settings.customDictionaryPaths = value;
           await this.plugin.saveSettings();
@@ -5294,13 +5312,13 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         el.inputEl.className = "various-complements__settings__text-area-path";
         return el;
       });
-      new import_obsidian7.Setting(containerEl).setName("列分隔符").addDropdown(
+      new import_obsidian7.Setting(containerEl).setName("Column delimiter").addDropdown(
         (tc) => tc.addOptions(mirrorMap(ColumnDelimiter.values(), (x) => x.name)).setValue(this.plugin.settings.columnDelimiter).onChange(async (value) => {
           this.plugin.settings.columnDelimiter = value;
           await this.plugin.saveSettings();
         })
       );
-      new import_obsidian7.Setting(containerEl).setName("单词正则表达式模式").setDesc("只加载匹配正则表达式模式的单词。").addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName("Word regex pattern").setDesc("Only load words that match the regular expression pattern.").addText((cb) => {
         cb.setValue(
           this.plugin.settings.customDictionaryWordRegexPattern
         ).onChange(async (value) => {
@@ -5308,7 +5326,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings();
         });
       });
-      new import_obsidian7.Setting(containerEl).setName("隐藏建议的分隔符").setDesc("如果设置为';;;'，'abcd;;;efg'在建议中显示为'abcd'，但补全为'abcdefg'。").addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName("Delimiter to hide a suggestion").setDesc(
+        "If set ';;;', 'abcd;;;efg' is shown as 'abcd' on suggestions, but completes to 'abcdefg'."
+      ).addText((cb) => {
         cb.setValue(this.plugin.settings.delimiterToHideSuggestion).onChange(
           async (value) => {
             this.plugin.settings.delimiterToHideSuggestion = value;
@@ -5316,7 +5336,11 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           }
         );
       });
-      new import_obsidian7.Setting(containerEl).setName("用于分隔显示建议和插入建议的分隔符").setDesc("如果设置为' >>> '，'displayed >>> inserted'在建议中显示为'displayed'，但补全为'inserted'。").addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName(
+        "Delimiter to divide suggestions for display from ones for insertion"
+      ).setDesc(
+        "If set ' >>> ', 'displayed >>> inserted' is shown as 'displayed' on suggestions, but completes to 'inserted'."
+      ).addText((cb) => {
         cb.setValue(
           this.plugin.settings.delimiterToDivideSuggestionsForDisplayFromInsertion
         ).onChange(async (value) => {
@@ -5324,7 +5348,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings();
         });
       });
-      new import_obsidian7.Setting(containerEl).setName("补全后的插入符号位置").setDesc("如果设置为'<CARET>'，且自定义词典中有'<li><CARET></li>'，它会补全为'<li></li>'并将光标移动到'<li>'和'</li>'之间。").addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName("Caret location symbol after complement").setDesc(
+        "If set '<CARET>' and there is '<li><CARET></li>' in custom dictionary, it complements '<li></li>' and move a caret where between '<li>' and `</li>`."
+      ).addText((cb) => {
         cb.setValue(
           this.plugin.settings.caretLocationSymbolAfterComplement
         ).onChange(async (value) => {
@@ -5332,7 +5358,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings();
         });
       });
-      new import_obsidian7.Setting(containerEl).setName("显示文本后缀").setDesc("如果显示的文本和插入的文本有差异，它会作为显示文本的后缀显示").addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName("Displayed text suffix").setDesc(
+        "It shows as a suffix of displayed text if there is a difference between displayed and inserted"
+      ).addText((cb) => {
         cb.setValue(this.plugin.settings.displayedTextSuffix).onChange(
           async (value) => {
             this.plugin.settings.displayedTextSuffix = value;
@@ -5344,10 +5372,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addInternalLinkComplementSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "根据内部链接建议",
+      text: "Internal link complement",
       cls: "various-complements__settings__header various-complements__settings__header__internal-link"
     });
-    new import_obsidian7.Setting(containerEl).setName("启用内部链接补全").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Enable Internal link complement").addToggle((tc) => {
       tc.setValue(this.plugin.settings.enableInternalLinkComplement).onChange(
         async (value) => {
           this.plugin.settings.enableInternalLinkComplement = value;
@@ -5357,7 +5385,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       );
     });
     if (this.plugin.settings.enableInternalLinkComplement) {
-      new import_obsidian7.Setting(containerEl).setName("使用别名建议").addToggle((tc) => {
+      new import_obsidian7.Setting(containerEl).setName("Suggest with an alias").addToggle((tc) => {
         tc.setValue(
           this.plugin.settings.suggestInternalLinkWithAlias
         ).onChange(async (value) => {
@@ -5365,7 +5393,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings({ internalLink: true });
         });
       });
-      new import_obsidian7.Setting(containerEl).setName("保存时更新内部链接").addToggle((tc) => {
+      new import_obsidian7.Setting(containerEl).setName("Update internal links on save").addToggle((tc) => {
         tc.setValue(this.plugin.settings.updateInternalLinksOnSave).onChange(
           async (value) => {
             this.plugin.settings.updateInternalLinksOnSave = value;
@@ -5373,7 +5401,9 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           }
         );
       });
-      new import_obsidian7.Setting(containerEl).setName("插入从显示的内部链接转换而来的别名").addToggle((tc) => {
+      new import_obsidian7.Setting(containerEl).setName(
+        "Insert an alias that is transformed from the displayed internal link"
+      ).addToggle((tc) => {
         tc.setValue(
           this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.enabled
         ).onChange(async (value) => {
@@ -5383,7 +5413,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
         });
       });
       if (this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.enabled) {
-        new import_obsidian7.Setting(containerEl).setName("之前：带捕获的正则表达式模式").setDesc(String.raw`Ex: (?<name>.+) \(.+\)$`).setClass("various-complements__settings__nested").addText((cb) => {
+        new import_obsidian7.Setting(containerEl).setName("Before: regular expression pattern with captures").setDesc(String.raw`Ex: (?<name>.+) \(.+\)$`).setClass("various-complements__settings__nested").addText((cb) => {
           cb.setValue(
             this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.beforeRegExp
           ).onChange(async (value) => {
@@ -5391,7 +5421,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
             await this.plugin.saveSettings();
           });
         });
-        new import_obsidian7.Setting(containerEl).setName("之后").setDesc("例：$<name>").setClass("various-complements__settings__nested").addText((cb) => {
+        new import_obsidian7.Setting(containerEl).setName("After").setDesc("Ex: $<name>").setClass("various-complements__settings__nested").addText((cb) => {
           cb.setValue(
             this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.after
           ).onChange(async (value) => {
@@ -5400,17 +5430,19 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           });
         });
       }
-      new import_obsidian7.Setting(containerEl).setName("排除前缀路径模式").setDesc("用于排除文件的前缀匹配路径模式。").addTextArea((tac) => {
+      new import_obsidian7.Setting(containerEl).setName("Exclude prefix path patterns").setDesc("Prefix match path patterns to exclude files.").addTextArea((tac) => {
         const el = tac.setValue(
           this.plugin.settings.excludeInternalLinkPathPrefixPatterns
-        ).setPlaceholder("私人/").onChange(async (value) => {
+        ).setPlaceholder("Private/").onChange(async (value) => {
           this.plugin.settings.excludeInternalLinkPathPrefixPatterns = value;
           await this.plugin.saveSettings();
         });
         el.inputEl.className = "various-complements__settings__text-area-path";
         return el;
       });
-      new import_obsidian7.Setting(containerEl).setName("用于排除的前置元数据键").setDesc("如果前置元数据中有与此设置同名的键，且值为'true'，则从建议中排除内部链接").addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName("Front matter key for exclusion").setDesc(
+        "Exclude internal links from the suggestions if whose front matters have the key whose name is same as this setting, and the value is 'true'"
+      ).addText((cb) => {
         TextComponentEvent.onChange(cb, async (value) => {
           this.plugin.settings.frontMatterKeyForExclusionInternalLink = value;
           await this.plugin.saveSettings({ internalLink: true });
@@ -5422,10 +5454,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addFrontMatterComplementSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "根据文档属性建议",
+      text: "Front matter complement",
       cls: "various-complements__settings__header various-complements__settings__header__front-matter"
     });
-    new import_obsidian7.Setting(containerEl).setName("启用前置元数据补全").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Enable Front matter complement").addToggle((tc) => {
       tc.setValue(this.plugin.settings.enableFrontMatterComplement).onChange(
         async (value) => {
           this.plugin.settings.enableFrontMatterComplement = value;
@@ -5435,7 +5467,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       );
     });
     if (this.plugin.settings.enableFrontMatterComplement) {
-      new import_obsidian7.Setting(containerEl).setName("前置元数据中的匹配策略").addDropdown(
+      new import_obsidian7.Setting(containerEl).setName("Match strategy in the front matter").addDropdown(
         (tc) => tc.addOptions(
           mirrorMap(SpecificMatchStrategy.values(), (x) => x.name)
         ).setValue(this.plugin.settings.frontMatterComplementMatchStrategy).onChange(async (value) => {
@@ -5443,7 +5475,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings();
         })
       );
-      new import_obsidian7.Setting(containerEl).setName("补全后插入逗号").addToggle((tc) => {
+      new import_obsidian7.Setting(containerEl).setName("Insert comma after completion").addToggle((tc) => {
         tc.setValue(
           this.plugin.settings.insertCommaAfterFrontMatterCompletion
         ).onChange(async (value) => {
@@ -5455,10 +5487,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addIntelligentSuggestionPrioritizationSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "智能的建议优先级",
+      text: "Intelligent suggestion prioritization",
       cls: "various-complements__settings__header various-complements__settings__header__intelligent-suggestion-prioritization"
     });
-    new import_obsidian7.Setting(containerEl).setName("启用智能建议优先级").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Enable Intelligent Suggestion Prioritization").addToggle((tc) => {
       tc.setValue(
         this.plugin.settings.intelligentSuggestionPrioritization.enabled
       ).onChange(async (value) => {
@@ -5470,7 +5502,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
       });
     });
     if (this.plugin.settings.intelligentSuggestionPrioritization.enabled) {
-      new import_obsidian7.Setting(containerEl).setName("历史文件路径").setDesc(`默认：${DEFAULT_HISTORIES_PATH}`).addText((cb) => {
+      new import_obsidian7.Setting(containerEl).setName("history file path").setDesc(`Default: ${DEFAULT_HISTORIES_PATH}`).addText((cb) => {
         TextComponentEvent.onChange(cb, async (value) => {
           this.plugin.settings.intelligentSuggestionPrioritization.historyFilePath = value;
           await this.plugin.saveSettings({
@@ -5480,7 +5512,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           this.plugin.settings.intelligentSuggestionPrioritization.historyFilePath
         );
       });
-      new import_obsidian7.Setting(containerEl).setName("保留历史的最大天数").setDesc("如果设置为0，将永不删除").addSlider(
+      new import_obsidian7.Setting(containerEl).setName("Max days to keep history").setDesc("If set 0, it will never remove").addSlider(
         (sc) => sc.setLimits(0, 365, 1).setValue(
           this.plugin.settings.intelligentSuggestionPrioritization.maxDaysToKeepHistory
         ).setDynamicTooltip().onChange(async (value) => {
@@ -5488,7 +5520,7 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
           await this.plugin.saveSettings();
         })
       );
-      new import_obsidian7.Setting(containerEl).setName("保留的最大历史数量").setDesc("如果设置为0，将永不删除").addSlider(
+      new import_obsidian7.Setting(containerEl).setName("Max number of history to keep").setDesc("If set 0, it will never remove").addSlider(
         (sc) => sc.setLimits(0, 1e4, 1).setValue(
           this.plugin.settings.intelligentSuggestionPrioritization.maxNumberOfHistoryToKeep
         ).setDynamicTooltip().onChange(async (value) => {
@@ -5500,10 +5532,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addMobileSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "手机",
+      text: "Mobile",
       cls: "various-complements__settings__header various-complements__settings__header__mobile"
     });
-    new import_obsidian7.Setting(containerEl).setName("在移动设备上禁用").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Disable on mobile").addToggle((tc) => {
       tc.setValue(this.plugin.settings.disableOnMobile).onChange(
         async (value) => {
           this.plugin.settings.disableOnMobile = value;
@@ -5514,10 +5546,10 @@ var VariousComplementsSettingTab = class extends import_obsidian7.PluginSettingT
   }
   addDebugSettings(containerEl) {
     containerEl.createEl("h3", {
-      text: "调试",
+      text: "Debug",
       cls: "various-complements__settings__header various-complements__settings__header__debug"
     });
-    new import_obsidian7.Setting(containerEl).setName("在控制台中显示性能日志").addToggle((tc) => {
+    new import_obsidian7.Setting(containerEl).setName("Show log about performance in a console").addToggle((tc) => {
       tc.setValue(
         this.plugin.settings.showLogAboutPerformanceInConsole
       ).onChange(async (value) => {
@@ -5647,23 +5679,23 @@ var ProviderStatusBar = class _ProviderStatusBar {
   }
   setCurrentFileIndexing() {
     var _a;
-    (_a = this.currentFile) == null ? void 0 : _a.setText("索引中...");
+    (_a = this.currentFile) == null ? void 0 : _a.setText("indexing...");
   }
   setCurrentVaultIndexing() {
     var _a;
-    (_a = this.currentVault) == null ? void 0 : _a.setText("索引中...");
+    (_a = this.currentVault) == null ? void 0 : _a.setText("indexing...");
   }
   setCustomDictionaryIndexing() {
     var _a;
-    (_a = this.customDictionary) == null ? void 0 : _a.setText("索引中...");
+    (_a = this.customDictionary) == null ? void 0 : _a.setText("indexing...");
   }
   setInternalLinkIndexing() {
     var _a;
-    (_a = this.internalLink) == null ? void 0 : _a.setText("索引中...");
+    (_a = this.internalLink) == null ? void 0 : _a.setText("indexing...");
   }
   setFrontMatterIndexing() {
     var _a;
-    (_a = this.frontMatter) == null ? void 0 : _a.setText("索引中...");
+    (_a = this.frontMatter) == null ? void 0 : _a.setText("indexing...");
   }
   setCurrentFileIndexed(count) {
     var _a;
@@ -7665,7 +7697,7 @@ var CustomDictionaryWordAddModal = class extends import_obsidian8.Modal {
         onClickFileIcon: (dictionaryPath) => {
           const markdownFile = appHelper.getMarkdownFileByPath(dictionaryPath);
           if (!markdownFile) {
-            new import_obsidian8.Notice(`无法打开 ${dictionaryPath}`);
+            new import_obsidian8.Notice(`Can't open ${dictionaryPath}`);
             return;
           }
           this.close();
@@ -7742,7 +7774,7 @@ var VariousComponents = class extends import_obsidian9.Plugin {
           return;
         }
         menu.addItem(
-          (item) => item.setTitle("添加到自定义词典").setIcon("stacked-levels").onClick(() => {
+          (item) => item.setTitle("Add to custom dictionary").setIcon("stacked-levels").onClick(() => {
             this.addWordToCustomDictionary();
           })
         );
@@ -7778,7 +7810,7 @@ var VariousComponents = class extends import_obsidian9.Plugin {
     this.registerEditorSuggest(this.suggester);
     this.addCommand({
       id: "reload-custom-dictionaries",
-      name: "重新加载自定义字典",
+      name: "Reload custom dictionaries",
       hotkeys: [{ modifiers: ["Mod", "Shift"], key: "r" }],
       callback: async () => {
         await this.suggester.refreshCustomDictionaryTokens();
@@ -7786,28 +7818,28 @@ var VariousComponents = class extends import_obsidian9.Plugin {
     });
     this.addCommand({
       id: "reload-current-vault",
-      name: "重新加载当前保险库",
+      name: "Reload current vault",
       callback: async () => {
         await this.suggester.refreshCurrentVaultTokens();
       }
     });
     this.addCommand({
       id: "toggle-match-strategy",
-      name: "切换匹配策略",
+      name: "Toggle Match strategy",
       callback: async () => {
         await this.settingTab.toggleMatchStrategy();
       }
     });
     this.addCommand({
       id: "toggle-complement-automatically",
-      name: "自动切建议",
+      name: "Toggle Complement automatically",
       callback: async () => {
         await this.settingTab.toggleComplementAutomatically();
       }
     });
     this.addCommand({
       id: "show-suggestions",
-      name: "显示建议",
+      name: "Show suggestions",
       hotkeys: [{ modifiers: ["Mod"], key: " " }],
       callback: async () => {
         this.suggester.triggerComplete();
@@ -7815,21 +7847,21 @@ var VariousComponents = class extends import_obsidian9.Plugin {
     });
     this.addCommand({
       id: "hide-suggestions",
-      name: "隐藏建议",
+      name: "Hide suggestions",
       callback: async () => {
         this.suggester.hideCompletion();
       }
     });
     this.addCommand({
       id: "fallback-linkify",
-      name: "备用的链接化处理",
+      name: "Fallback linkify",
       callback: async () => {
         this.suggester.triggerComplete({ fallbackLinkify: true });
       }
     });
     this.addCommand({
       id: "add-word-custom-dictionary",
-      name: "将单词添加到自定义词典",
+      name: "Add a word to a custom dictionary",
       hotkeys: [{ modifiers: ["Mod", "Shift"], key: " " }],
       callback: async () => {
         this.addWordToCustomDictionary();
@@ -7837,19 +7869,19 @@ var VariousComponents = class extends import_obsidian9.Plugin {
     });
     this.addCommand({
       id: "predictable-complements",
-      name: "可预测的建议",
+      name: "Predictable complement",
       callback: async () => {
         this.suggester.predictableComplete();
       }
     });
     this.addCommand({
       id: "copy-plugin-settings",
-      name: "复制插件设置",
+      name: "Copy plugin settings",
       callback: async () => {
         await navigator.clipboard.writeText(
           this.settingTab.getPluginSettingsAsJsonString()
         );
-        new import_obsidian9.Notice("复制各种补语的设置");
+        new import_obsidian9.Notice("Copy settings of Various Complements");
       }
     });
   }
@@ -7897,14 +7929,14 @@ var VariousComponents = class extends import_obsidian9.Plugin {
           caretSymbol: this.settings.caretLocationSymbolAfterComplement
         };
         if (provider.wordByValue[word.value]) {
-          new import_obsidian9.Notice(`\u26A0 ${word.value} 已存在`, 0);
+          new import_obsidian9.Notice(`\u26A0 ${word.value} already exists`, 0);
           return;
         }
         await provider.addWordWithDictionary(word, dictionaryPath, {
           emoji: this.settings.matchingWithoutEmoji,
           accentsDiacritics: this.settings.treatAccentDiacriticsAsAlphabeticCharacters
         });
-        new import_obsidian9.Notice(`添加 ${word.value}`);
+        new import_obsidian9.Notice(`Added ${word.value}`);
         modal.close();
       }
     );

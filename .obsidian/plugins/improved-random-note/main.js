@@ -2052,15 +2052,15 @@ class ImprovedRandomNoteSettingTab extends obsidian.PluginSettingTab {
         const { containerEl } = this;
         containerEl.empty();
         new obsidian.Setting(containerEl)
-            .setName('在新页中打开')
-            .setDesc('打开随机笔记的默认设置')
+            .setName('Open in New Leaf')
+            .setDesc('Default setting for opening random notes')
             .addToggle((toggle) => {
             toggle.setValue(this.plugin.settings.openInNewLeaf);
             toggle.onChange(this.plugin.setOpenInNewLeaf);
         });
         new obsidian.Setting(containerEl)
-            .setName("选择要排除的文件夹")
-            .setDesc("按命令拆分文件夹 ','")
+            .setName("Select folders to exclude")
+            .setDesc("Folders splits by comma ','")
             .addText(cb => {
             new FolderSuggest(this.app, cb.inputEl);
             if (!this.plugin.settings.excludedFolders)
@@ -2073,8 +2073,8 @@ class ImprovedRandomNoteSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("选择要包含的文件夹")
-            .setDesc("按命令拆分文件夹 ','")
+            .setName("Select folders to include")
+            .setDesc("Folders splits by comma ','")
             .addText(cb => {
             new FolderSuggest(this.app, cb.inputEl);
             if (!this.plugin.settings.includedFolders)
@@ -2087,8 +2087,8 @@ class ImprovedRandomNoteSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName('按标签筛选')
-            .setDesc('输入一个标签进行过滤')
+            .setName('Filter by tag')
+            .setDesc('Enter one tag to filter')
             .addText((text) => {
             if (!this.plugin.settings.selectedTag)
                 text.setPlaceholder('#tag');
@@ -2100,8 +2100,8 @@ class ImprovedRandomNoteSettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName('排除标签')
-            .setDesc('输入要排除的标签，以逗号分隔')
+            .setName('Exclude tags')
+            .setDesc('Enter tags to exclude, separated by comma')
             .addText((text) => {
             var _a, _b;
             if (!((_a = this.plugin.settings.excludedTags) === null || _a === void 0 ? void 0 : _a.length))
@@ -2179,7 +2179,7 @@ class ImprovedRandomNotePlugin extends obsidian.Plugin {
             var _a;
             (_a = this.ribbonIconEl) === null || _a === void 0 ? void 0 : _a.remove();
             if (this.settings.enableRibbonIcon) {
-                this.ribbonIconEl = this.addRibbonIcon('dice', '打开一篇随机笔记', this.handleOpenRandomNote);
+                this.ribbonIconEl = this.addRibbonIcon('dice', 'Open improved random note', this.handleOpenRandomNote);
             }
         };
     }
@@ -2189,7 +2189,7 @@ class ImprovedRandomNotePlugin extends obsidian.Plugin {
             this.addSettingTab(new ImprovedRandomNoteSettingTab(this));
             this.addCommand({
                 id: 'open-random-note',
-                name: '打开一篇随机笔记',
+                name: 'Open improved random note',
                 callback: this.handleOpenRandomNote,
             });
         });

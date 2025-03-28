@@ -15997,9 +15997,9 @@ var OCRLatexSettings = class extends import_obsidian.PluginSettingTab {
   }
   renderSelfHostedOptions(obj, containerEl, endWithSlash) {
     new import_obsidian.Setting(containerEl).setName("URL").setDesc(
-      "API 端点的 URL 仅在启用自托管时才处于活动状态。"
+      "The URL for the API endpoint, only active when self-hosted is enabled."
     ).addText(
-      (text) => text.setPlaceholder("请输入您的 URL").setValue(obj.url).onChange(async (value) => {
+      (text) => text.setPlaceholder("Enter your URL").setValue(obj.url).onChange(async (value) => {
         if (!value.endsWith("/") && endWithSlash)
           value += "/";
         if (value.endsWith("/") && !endWithSlash)
@@ -16008,18 +16008,18 @@ var OCRLatexSettings = class extends import_obsidian.PluginSettingTab {
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian.Setting(containerEl).setName("用户名（自托管可选）").setDesc(
-      "用于身份验证的用户名。如果您在容器之前使用自托管和基本身份验证代理。"
+    new import_obsidian.Setting(containerEl).setName("Username (self-hosted optional)").setDesc(
+      "Your username for authentication. If you use self-hosted and a basic auth proxy before the container."
     ).addText(
-      (text) => text.setPlaceholder("请输入您的用户名").setValue(obj.username).onChange(async (value) => {
+      (text) => text.setPlaceholder("Enter your username").setValue(obj.username).onChange(async (value) => {
         obj.username = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian.Setting(containerEl).setName("密码（自托管可选）").setDesc(
-      "用于身份验证的密码。如果您在容器之前使用自托管和基本身份验证代理。"
+    new import_obsidian.Setting(containerEl).setName("Password (self-hosted optional)").setDesc(
+      "Your password for authentication. If you use self-hosted and a basic auth proxy before the container."
     ).addText(
-      (text) => text.setPlaceholder("请输入您的密码").setValue(obj.password).onChange(async (value) => {
+      (text) => text.setPlaceholder("Enter your password").setValue(obj.password).onChange(async (value) => {
         obj.password = value;
         await this.plugin.saveSettings();
       })
@@ -16029,11 +16029,11 @@ var OCRLatexSettings = class extends import_obsidian.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     const readmeURL = "https://github.com/Hugo-Persson/obsidian-ocrlatex/blob/master/README.md";
-    containerEl.createEl("h1", { text: "Image2Latex " });
-    containerEl.createEl("div", { text: "有关如何配置扩展的信息，请参阅 README.md" });
+    containerEl.createEl("h1", { text: "Image2Latex" });
+    containerEl.createEl("div", { text: "Please see the README.md for info on how to configure the extension" });
     containerEl.createEl("a", { href: readmeURL, text: readmeURL });
-    containerEl.createEl("h2", { text: "通用" });
-    new import_obsidian.Setting(containerEl).setName("Latex 识别服务提供商").setDesc("选择 OCR 和 Latex 转换的服务提供商").addDropdown((dropdown) => {
+    containerEl.createEl("h2", { text: "General" });
+    new import_obsidian.Setting(containerEl).setName("Latex provider").setDesc("Choose which provider to use for OCR and Latex conversion").addDropdown((dropdown) => {
       dropdown.addOptions({
         "SimpleTex": "SimpleTex",
         "Pix2Tex": "Pix2Tex"
@@ -16048,9 +16048,9 @@ var OCRLatexSettings = class extends import_obsidian.PluginSettingTab {
     this.renderSelfHostedOptions(this.plugin.settings.pix2tex, containerEl, true);
     containerEl.createEl("h2", { text: "SimpleTex" });
     new import_obsidian.Setting(containerEl).setName("Token").setDesc(
-      "您的 SimpleTexToken，详见 README.md"
+      "Your SimpleTexToken, see README.md for more info."
     ).addText(
-      (text) => text.setPlaceholder("输入 token...").setValue(this.plugin.settings.simpleTexToken).onChange(async (value) => {
+      (text) => text.setPlaceholder("Enter token...").setValue(this.plugin.settings.simpleTexToken).onChange(async (value) => {
         this.plugin.settings.simpleTexToken = value;
         await this.plugin.saveSettings();
       })

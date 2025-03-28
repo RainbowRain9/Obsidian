@@ -1,10 +1,1 @@
-{
-    "id": "mysnippets-plugin",
-    "name": "MySnippets",
-    "version": "1.2.3",
-    "minAppVersion": "0.15.3",
-    "description": "MySnippets是一个插件，它添加了一个状态栏菜单，允许用户快速打开和关闭他们的代码片段🖌.",
-    "author": "chetachi",
-    "authorUrl": "https://github.com/chetachiezikeuzor",
-    "isDesktopOnly": true
-}
+{"id":"mysnippets-plugin","name":"MySnippets","version":"1.2.3","minAppVersion":"0.15.3","description":"MySnippets is a plugin that adds a status bar menu allowing the user to quickly toggle their snippets on and off 🖌.","author":"chetachi","authorUrl":"https://github.com/chetachiezikeuzor","isDesktopOnly":true}
