@@ -3,7 +3,7 @@
     "name": "Canvas Mindmap",
     "version": "1.0.2",
     "minAppVersion": "1.4.0",
-    "description": "让你的画布像思维导图一样工作的插件。",
+    "description": "A plugin to make your canvas work like a mindmap.",
     "author": "Boninall",
     "authorUrl": "https://github.com/quorafind",
     "fundingUrl": {

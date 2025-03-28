@@ -21,15 +21,15 @@ settings:
 
   -
     id: anp-colors-section-header
-    title: 颜色
-    description: 主题强调色与风格、颜色覆盖、扩展配色方案
+    title: Colors
+    description: Theme Accent and Flavors, Color Overrides, Extended Color Schemes
     type: heading
     level: 1
     collapsed: true
   -
     id: anuppuccin-theme-light
-    title: 浅色主题风格
-    description: 选择您偏好的浅色模式风格
+    title: Light Theme Flavor
+    description: Select your preferred light mode flavor
     type: class-select
     allowEmpty: false
     default: ctp-latte
@@ -42,8 +42,8 @@ settings:
         value: ctp-rosepine-light
   -
     id: anuppuccin-theme-dark
-    title: 深色主题风格
-    description: 选择您偏好的深色模式风格
+    title: Dark Theme Flavor
+    description: Select your preferred dark mode flavor
     type: class-select
     allowEmpty: false
     default: ctp-mocha
@@ -62,114 +62,114 @@ settings:
         value: ctp-mocha-old
   -
     id: anuppuccin-light-theme-accents
-    title: 浅色主题强调色
-    description: 选择浅色主题强调色（留空则默认使用深色主题强调色）
+    title: Light Theme Accent
+    description: Select your preferred light theme accent (Defaults to dark theme accent if left empty)
     type: class-select
     allowEmpty: true
     default: none
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: ctp-accent-light-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: ctp-accent-light-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: ctp-accent-light-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: ctp-accent-light-mauve
       - 
-        label: 赤红色
+        label: Red
         value: ctp-accent-light-red
       - 
-        label: 栗红色
+        label: Maroon
         value: ctp-accent-light-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: ctp-accent-light-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: ctp-accent-light-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: ctp-accent-light-green
       - 
-        label: 水鸭青
+        label: Teal
         value: ctp-accent-light-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: ctp-accent-light-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: ctp-accent-light-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: ctp-accent-light-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: ctp-accent-light-lavender
   -
     id: anuppuccin-theme-accents
-    title: 深色主题强调色
-    description: 选择您偏好的强调色
+    title: Dark Theme Accent
+    description: Select your preferred accent
     type: class-select
     allowEmpty: false
     default: ctp-accent-rosewater
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: ctp-accent-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: ctp-accent-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: ctp-accent-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: ctp-accent-mauve
       - 
-        label: 赤红色
+        label: Red
         value: ctp-accent-red
       - 
-        label: 栗红色
+        label: Maroon
         value: ctp-accent-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: ctp-accent-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: ctp-accent-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: ctp-accent-green
       - 
-        label: 水鸭青
+        label: Teal
         value: ctp-accent-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: ctp-accent-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: ctp-accent-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: ctp-accent-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: ctp-accent-lavender
   -
     id: anuppuccin-accent-toggle
-    title: 强制使用自定义强调色
-    description: 强制使用特定配色方案的自定义强调色（替代Obsidian默认强调色）
+    title: Force Custom Accents
+    description: Forces colorscheme-specific custom accents to be utilised instead of default obsidian accent
     type: class-toggle
     default: true
   -
     id: anuppuccin-url-extended-colorschemes
-    title: 扩展配色方案代码片段
-    description: "点击[此链接](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css)下载代码片段"
+    title: Extended Color Schemes Snippet
+    description: "Download the snippet by clicking on [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css)."
     type: info-text
     markdown: true
 
@@ -177,189 +177,189 @@ settings:
 
   -
     id: anp-color-overrides-header
-    title: 颜色覆盖
+    title: Color Overrides
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: ctp-custom-rosewater
-    title: 玫瑰水色
+    title: Rosewater
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-flamingo
-    title: 火烈鸟粉
+    title: Flamingo
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-pink
-    title: 樱粉色
+    title: Pink
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-mauve
-    title: 木槿紫
+    title: Mauve
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-red
-    title: 红色
+    title: Red
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-maroon
-    title: 栗红色
+    title: Maroon
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-peach
-    title: 蜜桃色
+    title: Peach
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-yellow
-    title: 琥珀黄
+    title: Yellow
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-green
-    title: 绿色
+    title: Green
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-teal
-    title: 水鸭青
+    title: Teal
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-sky
-    title: 天穹蓝
+    title: Sky
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-sapphire
-    title: 蓝宝石
+    title: Sapphire
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-blue
-    title: 蓝色
+    title: Blue
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-lavender
-    title: 薰衣草
+    title: Lavender
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-text
-    title: 文本
+    title: Text
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-subtext1
-    title: 子文本1
+    title: Subtext 1
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-subtext0
-    title: 子文本0
+    title: Subtext0
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-overlay2
-    title: 覆盖层2
+    title: Overlay 2
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-overlay1
-    title: 覆盖层1
+    title: Overlay 1
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-overlay0
-    title: 覆盖层0
+    title: Overlay 0
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-surface2
-    title: 表面2
+    title: Surface 2
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-surface1
-    title: 表面1
+    title: Surface 1
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-surface0
-    title: 表面0
+    title: Surface 0
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-base
-    title: 基础背景
+    title: Base
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-mantle
-    title: 次级背景
+    title: Mantle
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
   -
     id: ctp-custom-crust
-    title: 三级背景
+    title: Crust
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
@@ -369,48 +369,48 @@ settings:
 
   -
     id: anp-editor-header
-    title: 文件编辑器和Markdown元素
-    description: 标注框、复选框、代码块、列表、表格、标签等
+    title: File Editor & Markdown Elements
+    description: Callouts, Checkboxes, Codeblocks, Lists, Tables, Tags, etc.
     type: heading
     level: 1
     collapsed: true
   -
     id: anp-active-line
-    title: 当前行高亮显示
+    title: Active line highlight
     type: class-select
     allowEmpty: false
     default: anp-no-highlight
     options:
       -
-        label: 无
+        label: None
         value: anp-no-highlight
       -
-        label: 高亮
+        label: Highlight
         value: anp-current-line
       -
-        label: 高亮 + Border
+        label: Highlight + Border
         value: anp-current-line-border
       -
-        label: 仅边框
+        label: Border Only
         value: anp-current-line-border-only
 
 # File Editor & Markdown Elements :: Callouts
   -
     id: anp-callout-header
-    title: 标注框样式
-    description: 标注框样式、圆角半径、自定义颜色
+    title: Callouts
+    description: Callout styles, border radius, custom colors
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-callout-select
-    title: 标注样式
+    title: Callout Style
     type: class-select
     default: none
     allowEmpty: false
     options:
       - 
-        label: 默认
+        label: Default
         value: none
       - 
         label: Sleek
@@ -426,23 +426,23 @@ settings:
         value: anp-callout-vanilla-plus
   -
     id: anp-callout-color-toggle
-    title: 启用自定义标注颜色
+    title: Enable Custom Callout Colors
     type: class-toggle
   -
     id: callout-radius
-    title: 标注半径
+    title: Callout Radius
     type: variable-number
     default: 4
     format: px
   -
     id: callout-title-padding
-    title: 标注框标题内边距
+    title: Callout Title Padding
     type: variable-text
     default: 8px
   -
     id: callout-title-opacity
-    title: 标注标题背景不透明度
-    description: 适用于Sleek、Vanilla和Vanilla Plus样式标注框
+    title: Callout Title Background Opacity
+    description: Applies to Sleek, Vanilla and Vanilla Plus callouts
     type: variable-number-slider
     default: 0.1
     min: 0
@@ -450,12 +450,12 @@ settings:
     step: 0.05
   -
     id: callout-content-padding
-    title: 标注框内容内边距
+    title: Callout Content Padding
     type: variable-text
     default: 8px
   -
     id: anp-callout-fold-position
-    title: 标注折叠位置
+    title: Callout Fold Position
     type: variable-select
     default: '0'
     options:
@@ -470,74 +470,74 @@ settings:
 
   -
     id: anp-custom-checkboxes-header
-    title: 复选框
-    description: 自定义复选框与对话气泡
+    title: Checkboxes
+    description: Custom checkboxes and speech bubbles
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-custom-checkboxes
-    title: 启用自定义复选框
+    title: Enable Custom Checkboxes
     type: class-toggle
   -
     id: anp-speech-bubble
-    title: 启用对话气泡样式
+    title: Enable Speech Bubbles
     type: class-toggle
 
 # File Editor & Markdown Elements :: Codeblocks
 
   -
     id: anp-codeblock-header
-    title: 代码块
-    description: 代码块换行与行号显示
+    title: Codeblocks
+    description: Codeblock wrapping, line numbering
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-codeblock-numbers
-    title: 启用代码块行号
+    title: Enable Codeblock Numbering
     type: class-toggle
   -
     id: anp-codeblock-wrap-edit
-    title: 代码块自动换行（编辑模式）
-    description: 不适用于带语法高亮的代码块
+    title: Codeblock Line Wrap (Edit Mode)
+    description: Does not work for codeblocks with syntax highlighting
     type: class-select
     default: none
     options:
       -
-        label: 自动换行
+        label: Wrap
         value: none
       -
-        label: 禁止换行
+        label: No Wrap
         value: anp-codeblock-edit-nowrap
   -
     id: anp-codeblock-wrap-preview
-    title: 代码块自动换行（预览模式）
-    description: 不适用于带语法高亮的代码块
+    title: Codeblock Line Wrap (Preview Mode)
+    description: Does not work for codeblocks with syntax highlighting
     type: class-select
     default: none
     options:
       -
-        label: 自动换行
+        label: Wrap
         value: none
       -
-        label: 禁止换行
+        label: No Wrap
         value: anp-codeblock-preview-nowrap
   -
     id: anp-codeblock-wrap-hl-preview
-    title: 语法高亮代码块自动换行（预览模式）
+    title: Syntax Highlighted Codeblock Line Wrap (Preview Mode)
     type: class-select
     default: none
     options:
       -
-        label: 自动换行
+        label: Wrap
         value: none
       -
-        label: 禁止换行
+        label: No Wrap
         value: anp-codeblock-preview-hl-nowrap
   -
     id: anp-code-bg-color
-    title: 代码块背景颜色
+    title: Codeblock Background Color
     type: variable-themed-color
     allowEmpty: true
     format: hex
@@ -546,9 +546,9 @@ settings:
     default-dark: '#'
   -
     id: anp-code-text-color
-    title: 代码块文本颜色
+    title: Codeblock Text Color
     type: variable-themed-color
-    description: 仅适用于无语法高亮的代码块
+    description: Applies to codeblocks without syntax highlighting
     allowEmpty: true
     format: hex
     opacity: false
@@ -558,14 +558,14 @@ settings:
 # File Editor & Markdown Elements :: Embeds
   -
     id: anp-embed-header
-    title: 嵌入
-    description: 最大嵌入高度
+    title: Embeds
+    description: Maximum embed height
     type: heading
     level: 2
     collapsed: true
   -
     id: embed-max-height
-    title: 最大嵌入高度（像素）
+    title: Maximum embed height in px
     type: variable-number
     default: 200
 
@@ -573,15 +573,15 @@ settings:
 
   -
     id: anp-latex-header
-    title: LaTeX
+    title: LaTex
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-latex-color
-    title: LaTeX颜色
+    title: LaTeX Color
     type: variable-themed-color
-    description: 适用于LaTeX公式块
+    description: Applies to LaTeX blocks
     allowEmpty: true
     format: hex
     opacity: false
@@ -592,144 +592,144 @@ settings:
 
   -
     id: anp-list-header
-    title: 列表
-    description: 样式、缩进与间距
+    title: Lists
+    description: Styling, indent, spacing
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-list-toggle
-    title: 启用列表样式
+    title: Enable List Styling
     type: class-toggle
   -
     id: list-indent
-    title: 列表缩进
+    title: List Indent
     type: variable-number
     default: 2
     format: em
   -
     id: list-spacing
-    title: 列表间距
+    title: List Spacing
     type: variable-number
     default: 0.075
     format: em
   -
     id: list-marker-color
-    title: 无序列表项目符号颜色
+    title: Unordered list bullet color
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'hex'
   -
     id: list-numbered-style
-    title: 有序列表样式
+    title: Ordered list style
     type: variable-select
     default: decimal
     options:
       -
-        label: "十进制"
+        label: "Decimal"
         value: decimal
       -
-        label: "前导零十进制"
+        label: "Decimal with leading zeroes"
         value: decimal-leading-zero
       -
-        label: "小写字母"
+        label: "Lowercase alphabetical"
         value: lower-alpha
       -
-        label: "大写字母"
+        label: "Uppercase alphabetical"
         value: upper-alpha
       -
-        label: "小写罗马数字"
+        label: "Lowercase Roman Numerals"
         value: lower-roman
       -
-        label: "大写罗马数字"
+        label: "Uppercase Roman Numerals"
         value: upper-roman
       -
-        label: "小写拉丁字母"
+        label: "Lowercase Latin"
         value: lower-latin
       -
-        label: "大写拉丁字母"
+        label: "Uppercase Latin"
         value: upper-latin
       -
-        label: "小写希腊字母"
+        label: "Lowercase Greek"
         value: lower-greek
       -
-        label: "大写希腊字母"
+        label: "Uppercase Greek"
         value: upper-greek
       -
-        label: "平假名"
+        label: "Hiragana"
         value: hiragana
       -
-        label: "伊吕波平假名"
+        label: "Hiragana Iroha"
         value: hiragana-iroha
       -
-        label: "片假名"
+        label: "Katakana"
         value: armenian
       -
-        label: "伊吕波片假名"
+        label: "Katakana Iroha"
         value: katakana-iroha
       -
-        label: "亚美尼亚数字"
+        label: "Armenian"
         value: armenian
       -
-        label: "中日韩表意文字"
+        label: "CJK Ideographic"
         value: cjk-ideographic
       -
-        label: "希伯来数字"
+        label: "Hebrew"
         value: hebrew
 
 # File Editor & Markdown Elements :: Tables
 
   -
     id: anp-table-header
-    title: 表格样式
-    description: 表格宽度、对齐方式、元素高亮与边框宽度
+    title: Tables
+    description: Table width, alignment, table element highlight and alignment, border width
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-table-toggle
-    title: 启用表格样式
+    title: Enable Table Styling
     type: class-toggle
   -
     id: anp-table-width
-    title: 启用自定义表格宽度
-    description: 在YAML语法中使用anp-table-width属性
+    title: Enable Custom Table Width
+    description: Use anp-table-width for yaml syntax
     type: class-toggle
   -
     id: anp-table-auto
-    title: 表格居中显示
-    description: 在YAML语法中使用anp-table-auto属性
+    title: Center Tables
+    description: Use anp-table-auto for yaml syntax
     type: class-toggle
   -
     id: anp-table-th-highlight
-    title: <th>元素高亮
+    title: <th> Highlight
     type: class-toggle
   -
     id: anp-td-highlight
-    title: <td>元素高亮
+    title: <td> Highlight
     type: class-select
     default: anp-td-none
     allowEmpty: false
     options:
       -
-        label: 无
+        label: None
         value: none
       -
-        label: 交替行
+        label: Alternate Rows
         value: anp-table-row-alt
       -
-        label: 交替列
+        label: Alternate Columns
         value: anp-table-col-alt
       -
-        label: 棋盘格
+        label: Checkered
         value: anp-table-checkered
       -
-        label: 完全显示
+        label: Full
         value: anp-table-full
   -
     id: anp-table-highlight-opacity
-    title: 高亮透明度
+    title: Highlight Opacity
     default: 0.5
     type: variable-number-slider
     min: 0
@@ -737,7 +737,7 @@ settings:
     step: 0.1
   -
     id: anp-table-align-th
-    title: <th>文本对齐
+    title: <th> Text Align
     type: variable-select
     default: center
     options:
@@ -752,7 +752,7 @@ settings:
         value: right
   -
     id: anp-table-align-td
-    title: <td>文本对齐
+    title: <td> Text Align
     type: variable-select
     default: center
     options:
@@ -767,13 +767,13 @@ settings:
         value: right
   -
     id: anp-table-thickness
-    title: 自定义表格边框宽度
+    title: Custom Table Border Width
     type: variable-number
     default: 2
     format: px
   -
     id: anp-table-width-pct
-    title: 自定义表格宽度
+    title: Custom Table Width
     type: variable-number
     default: 100
     format: "%"
@@ -782,20 +782,20 @@ settings:
 
   -
     id: anp-tags-header
-    title: 标签
-    description: 标签的边框宽度与圆角半径
+    title: Tags
+    description: Border Width and Border Radius of Tags
     type: heading
     level: 2
     collapsed: true
   -
     id: tag-border-width
-    title: 标签边框宽度
+    title: Tag Border Width
     type: variable-number
     default: 0
     format: px
   -
     id: tag-radius
-    title: 标签半径
+    title: Tag Radius
     type: variable-number-slider
     default: 2
     max: 2
@@ -807,30 +807,30 @@ settings:
 
   -
     id: anp-preview-header
-    title: 文件预览
-    description: 文件预览边距与自动换行宽度
+    title: File Preview
+    description: File Preview Margins and Word-Wrap Width
     type: heading
     level: 1
     collapsed: true
   -
     id: anp-toggle-preview
-    title: 启用自定义预览边距
+    title: Enable Custom Preview Margins
     type: class-toggle
   -
     id: file-margins
-    title: 文件边距
+    title: File Margins
     type: variable-number
     default: 32
     format: px
   -
     id: anp-preview-width-pct
-    title: 预览宽度
+    title: Preview Width
     type: variable-number
     default: 80
     format: "%"
   -
     id: file-line-width
-    title: 最大预览宽度
+    title: Maximum Preview Width
     type: variable-number
     default: 700
     format: px
@@ -839,8 +839,8 @@ settings:
 
   -
     id: anp-plugin-header
-    title: 集成
-    description: 看板、MAKE.md、极简卡片片段等
+    title: Integrations
+    description: Kanban, MAKE.md, Minimal Cards Snippet, etc.
     type: heading
     level: 1
     collapsed: true
@@ -849,7 +849,7 @@ settings:
 
   -
     id: anp-plugin-kanban
-    title: 看板
+    title: Kanban
     description: 
     type: heading
     level: 2
@@ -859,26 +859,26 @@ settings:
 
   -
     id: anp-plugin-card-settings
-    title: 卡片设置
+    title: Card Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-kanban-hide-card-menus
-    title: 隐藏卡片菜单按钮
+    title: Hide the Card Menu Button
     type: class-toggle
   -
     id: anp-kanban-hide-archive-btn
-    title: 隐藏归档卡片按钮
+    title: Hide the Archive Card Button
     type: class-toggle
   -
     id: anp-kanban-hide-card-border
-    title: 禁用卡片边框
+    title: Disable Card Borders
     type: class-toggle
   -
     id: anp-kanban-card-opacity
-    title: 卡片透明度
+    title: Card Opacity
     type: variable-number-slider
     default: 1
     min: 0
@@ -886,7 +886,7 @@ settings:
     step: 0.05
   -
     id: anp-kanban-card-radius
-    title: 卡片圆角半径
+    title: Card Radius
     type: variable-number-slider
     default: 6
     format: px
@@ -895,7 +895,7 @@ settings:
     step: 1
   -
     id: anp-kanban-card-spacing
-    title: 卡片间距
+    title: Card Spacing
     type: variable-number-slider
     default: 8
     format: px
@@ -907,23 +907,23 @@ settings:
 
   -
     id: anp-plugin-lane-settings
-    title: 看板列设置
+    title: Lane Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-kanban-lanes
-    title: 启用全高看板列
-    description: 控制看板列的最大高度
+    title: Enable Full Height Lanes
+    description: Toggles maximum height for Kanban lanes
     type: class-toggle
   -
     id: anp-kanban-hide-lane-border
-    title: 禁用看板列边框
+    title: Disable Lane Borders
     type: class-toggle
   -
     id: anp-kanban-lane-opacity
-    title: 看板列不透明度
+    title: Lane Opacity
     type: variable-number-slider
     default: 1
     min: 0
@@ -931,7 +931,7 @@ settings:
     step: 0.05
   -
     id: anp-kanban-lane-radius
-    title: 看板列圆角半径
+    title: Lane Radius
     type: variable-number-slider
     default: 6
     format: px
@@ -940,7 +940,7 @@ settings:
     step: 1
   -
     id: anp-kanban-lane-spacing
-    title: 看板列间距
+    title: Lane Spacing
     type: variable-number-slider
     default: 10
     format: px
@@ -952,34 +952,34 @@ settings:
 
   -
     id: anp-plugin-kanban-search-settings
-    title: 搜索设置
+    title: Search Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-kanban-search-full
-    title: 启用全宽度搜索栏
+    title: Enable Full Width Search Bar
     description: 
     type: class-toggle
   -
     id: anp-kanban-collapse-lanes
-    title: 折叠无搜索结果的列
+    title: Collapse Lanes With No Search Results
     description: 
     type: class-toggle
   -
     id: anp-kanban-hide-cards
-    title: 隐藏不含搜索关键词的卡片
+    title: Hide Cards That Don't Contain the Search Query
     description: 
     type: class-toggle
   -
     id: anp-kanban-hide-mark
-    title: 隐藏卡片内搜索结果高亮
+    title: Hide Search Result Highlight in Cards
     description: 
     type: class-toggle
   -
     id: anp-kanban-uncollapse-lanes
-    title: 排序时展开看板列并显示卡片
+    title: Uncollapse Lanes and Unhide Cards When Sorting
     description: 
     type: class-toggle
 
@@ -994,67 +994,67 @@ settings:
     collapsed: true
   -
     id: anp-inline-title-vis
-    title: 内联标题可见性
-    description: MAKE.md 需启用内联标题来显示文件夹标题，此开关用于在其他笔记中禁用该功能
+    title: Inline Title Visibility
+    description: Make.md requires inline titles to be enabled to show folder titles, hence this toggle exists to disable it on notes elsewhere.
     type: variable-select
     default: block
     options:
       -
-        label: 可见
+        label: Visible
         value: block
       -
-        label: 不可见
+        label: Invisible
         value: none
 
 # Integrations :: Minimal Cards
 
   -
     id: anp-snippet-minimal-cards
-    title: 极简卡片
+    title: Minimal Cards
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-snippet-minimal-cards-disc
-    title: 使用说明
-    description: "极简卡片是 [Minimal](https://github.com/kepano/obsidian-minimal) 插件功能。AnuPuccin 主题未内置该代码片段，但可通过此主题使用预编译版本"
+    title: Usage
+    description: "Minimal Cards is a feature of [Minimal](https://github.com/kepano/obsidian-minimal). AnuPpuccin does not come compiled with the snippet, however you can use a compiled version with this theme."
     type: info-text
     markdown: true
   -
     id: anuppuccin-url-minimal-cards-snippet
-    title: 极简卡片 Snippet
-    description: "通过 [此链接](https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss) 从 [kepano](https://github.com/kepano/) 的 GitHub 仓库下载代码片段"
+    title: Minimal Cards Snippet
+    description: "Download the snippet from [kepano](https://github.com/kepano/)'s github via [this link](https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss)."
     type: info-text
     markdown: true
   -
     id: cards-min-width
-    title: 卡片最小宽度
+    title: Card minimum width
     type: variable-text
     default: 180px
   -
     id: cards-max-width
-    title: 卡片最大宽度
-    description: 默认填充可用宽度，支持有效 CSS 单位
+    title: Card maximum width
+    description: Default fills the available width, accepts valid CSS units
     type: variable-text
     default: 1fr
   -
     id: cards-mobile-width
-    title: 卡片最小宽度 on mobile
+    title: Card minimum width on mobile
     type: variable-text
     default: 120px
   -
     id: cards-padding
-    title: 卡片内边距
+    title: Card padding
     type: variable-text
     default: 1.2em
   -
     id: cards-image-height
-    title: 卡片图片最大高度
+    title: Card maximum image height
     type: variable-text
     default: 400px
   -
     id: cards-border-width
-    title: 卡片边框宽度
+    title: Card border width
     type: variable-text
     default: 1px
 
@@ -1062,73 +1062,73 @@ settings:
 
   -
     id: anp-misc-element-header
-    title: 杂项设置
-    description: 调色板过渡动画、自定义元数据按钮
+    title: Miscellaneous
+    description: Color Palette Transition, Custom Metadata Button
     type: heading
     level: 1
     collapsed: true
   -
     id: anp-color-transition-toggle
-    title: 启用颜色过渡动画（开发中）
-    description: "切换配色方案时添加渐变过渡效果，视觉效果更流畅 :)"
+    title: Enable Color Transition (WIP)
+    description: "Adds a transition when switching palettes, looks really neat :)"
     type: class-toggle
   -
     id: anp-button-metadata-toggle
-    title: 启用自定义元数据按钮
+    title: Enable Custom Metadata Button
     type: class-toggle
   -
     id: anp-print
-    title: 启用打印样式优化
+    title: Enable Print Styling
     type: class-toggle
 
 # Show/Hide UI Elements
 
   -
     id: anp-show-hide-elements-header
-    title: 显示/隐藏界面元素
-    description: 切换界面元素可见性
+    title: Show/Hide UI Elements
+    description: Toggle Visibility of UI Elements
     type: heading
     level: 1
     collapsed: true
   -
     id: anp-autohide-titlebar
-    title: 自动隐藏标题栏
+    title: Autohide Title Bar
     type: class-toggle
   -
     id: anp-cursor
-    title: 指针光标
+    title: Pointer cursor
     type: variable-select
     default: pointer
     options:
       -
-        label: 指针光标
+        label: Pointer
         value: pointer
       -
-        label: 常规
+        label: Normal
         value: initial
   -
     id: anp-toggle-metadata
-    title: 隐藏元数据
+    title: Hide Metadata
     type: class-toggle
   -
     id: anp-toggle-scrollbars
-    title: 隐藏滚动条
+    title: Hide Scrollbars
     type: class-toggle
   -
     id: anp-hide-status-bar
-    title: 隐藏状态栏
+    title: Hide Status Bar
     type: class-toggle
   -
     id: anp-tooltip-toggle
-    title: 隐藏工具提示
+    title: Hide Tooltips
     type: class-toggle
 
 # Typography
 
   -
     id: anp-typography-header
-    title: 文字排版
-    description: 字体、标题、文本装饰等
+    title: Typography
+    description: Fonts, Headings, Text Decoration, etc.
     type: heading
     level: 1
     collapsed: true
@@ -1137,19 +1137,19 @@ settings:
 
   -
     id: anp-font-families-header
-    title: 字体系列
+    title: Font Families
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-editor-font-source
-    title: 源码编辑器字体
+    title: Source Editor Font
     type: variable-text
     default: Iosevka Comfy Duo
   -
     id: anp-editor-font-lp
-    title: 实时预览编辑器字体
+    title: Live Preview Editor Font
     type: variable-text
     default: Noto Sans
 
@@ -1157,172 +1157,172 @@ settings:
 
   -
     id: anp-font-weight-header
-    title: 字体字重
+    title: Font Weights
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: bold-weight
-    title: 加粗字重
+    title: Bold Weight
     type: variable-select
     default: '600'
     options:
       -
-        label: '特粗（相对）'
+        label: 'Bolder (Relative)'
         value: bolder
       -
-        label: 最细
+        label: Lightest
         value: 100
       -
-        label: 较细
+        label: Lighter
         value: 200
       -
-        label: 细体
+        label: Light
         value: 300
       -
-        label: 常规
+        label: Normal
         value: 400
       -
-        label: 粗体
+        label: Bold
         value: 500
       -
-        label: 粗体er
+        label: Bolder
         value: 600
       -
-        label: 超粗
+        label: Extrabold
         value: 700
       -
-        label: 极粗
+        label: Extra-extrabold
         value: 800
       -
-        label: 黑体
+        label: Black
         value: 900
   -
     id: anp-font-live-preview-wt
-    title: 实时预览模式字重
+    title: Live Preview Mode Weight
     type: variable-select
     default: '400'
     options:
       -
-        label: 最细
+        label: Lightest
         value: 100
       -
-        label: 较细
+        label: Lighter
         value: 200
       -
-        label: 细体
+        label: Light
         value: 300
       -
-        label: 常规
+        label: Normal
         value: 400
       -
-        label: 粗体
+        label: Bold
         value: 500
       -
-        label: 粗体er
+        label: Bolder
         value: 600
       -
-        label: 超粗
+        label: Extrabold
         value: 700
       -
-        label: 极粗
+        label: Extra-extrabold
         value: 800
       -
-        label: 黑体
+        label: Black
         value: 900
   -
     id: anp-font-preview-wt
-    title: 阅读模式字重
+    title: Reading Mode Weight
     type: variable-select
     default: '400'
     options:
       -
-        label: 最细
+        label: Lightest
         value: 100
       -
-        label: 较细
+        label: Lighter
         value: 200
       -
-        label: 细体
+        label: Light
         value: 300
       -
-        label: 常规
+        label: Normal
         value: 400
       -
-        label: 粗体
+        label: Bold
         value: 500
       -
-        label: 粗体er
+        label: Bolder
         value: 600
       -
-        label: 超粗
+        label: Extrabold
         value: 700
       -
-        label: 极粗
+        label: Extra-extrabold
         value: 800
       -
-        label: 黑体
+        label: Black
         value: 900
   -
     id: anp-font-editor-wt
-    title: 源码模式字重
+    title: Source Mode Weight
     type: variable-select
     default: '400'
     options:
       -
-        label: 最细
+        label: Lightest
         value: 100
       -
-        label: 较细
+        label: Lighter
         value: 200
       -
-        label: 细体
+        label: Light
         value: 300
       -
-        label: 常规
+        label: Normal
         value: 400
       -
-        label: 粗体
+        label: Bold
         value: 500
       -
-        label: 粗体er
+        label: Bolder
         value: 600
       -
-        label: 超粗
+        label: Extrabold
         value: 700
       -
-        label: 极粗
+        label: Extra-extrabold
         value: 800
       -
-        label: 黑体
+        label: Black
         value: 900
 
 # Typography :: Headings
 
   -
     id: anp-header-header
-    title: 标题样式
+    title: Headings
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-header-color-toggle
-    title: 启用自定义标题颜色
+    title: Enable Custom Heading Colors
     type: class-toggle
   -
     id: anp-header-margin-toggle
-    title: 启用自定义标题边距
+    title: Enable Custom Heading Margin
     type: class-toggle
   -
     id: anp-header-divider-color-toggle
-    title: 从标题颜色继承分隔线颜色
+    title: Inherit Divider Color from Heading Color
     type: class-toggle
   -
     id: anp-header-margin-value
-    title: 标题边距值
-    description: 尺寸单位为像素（px）
+    title: Heading margin value
+    description: Size unit is px
     type: variable-number-slider
     min: 0
     max: 30
@@ -1341,77 +1341,77 @@ settings:
     collapsed: true
   -
     id: h1-font
-    title: H1字体系列
+    title: H1 Font Family
     type: variable-text
     default: Noto Serif
   -
     id: h1-size
-    title: H1字体大小
+    title: H1 Font Size
     type: variable-number
     default: 2
     format: em
   -
     id: h1-weight
-    title: H1字体字重
+    title: H1 Font Weight
     type: variable-number
     default: 700
   -
     id: h1-line-height
-    title: H1行高
+    title: H1 Line Height
     type: variable-number
     default: 1.2
   -
     id: anp-h1-color-custom
-    title: H1颜色
+    title: H1 Color
     type: class-select
     allowEmpty: true
     default: anp-h1-red
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-h1-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-h1-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-h1-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-h1-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-h1-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-h1-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-h1-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-h1-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-h1-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-h1-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-h1-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-h1-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-h1-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-h1-lavender
   -
     id: anp-h1-divider
-    title: H1分隔线
+    title: H1 Divider
     type: class-toggle
 
 # Typography :: Headings :: H2
@@ -1425,77 +1425,77 @@ settings:
     collapsed: true
   -
     id: h2-font
-    title: H2字体系列
+    title: H2 Font Family
     type: variable-text
     default: Noto Serif
   -
     id: h2-size
-    title: H2字体大小
+    title: H2 Font Size
     type: variable-number
     default: 1.6
     format: em
   -
     id: h2-weight
-    title: H2字体字重
+    title: H2 Font Weight
     type: variable-number
     default: 600
   -
     id: h2-line-height
-    title: H2行高
+    title: H2 Line Height
     type: variable-number
     default: 1.2
   -
     id: anp-h2-color-custom
-    title: H2颜色
+    title: H2 Color
     type: class-select
     allowEmpty: true
     default: anp-h2-peach
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-h2-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-h2-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-h2-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-h2-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-h2-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-h2-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-h2-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-h2-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-h2-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-h2-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-h2-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-h2-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-h2-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-h2-lavender
   -
     id: anp-h2-divider
-    title: H2分隔线
+    title: H2 Divider
     type: class-toggle
 
 # Typography :: Headings :: H3
@@ -1509,77 +1509,77 @@ settings:
     collapsed: true
   -
     id: h3-font
-    title: H3字体系列
+    title: H3 Font Family
     type: variable-text
     default: Noto Serif
   -
     id: h3-size
-    title: H3字体大小
+    title: H3 Font Size
     type: variable-number
     default: 1.37
     format: em
   -
     id: h3-weight
-    title: H3字体字重
+    title: H3 Font Weight
     type: variable-number
     default: 600
   -
     id: h3-line-height
-    title: H3行高
+    title: H3 Line Height
     type: variable-number
     default: 1.3
   -
     id: anp-h3-color-custom
-    title: H3颜色
+    title: H3 Color
     type: class-select
     allowEmpty: true
     default: anp-h3-green
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-h3-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-h3-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-h3-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-h3-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-h3-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-h3-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-h3-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-h3-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-h3-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-h3-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-h3-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-h3-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-h3-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-h3-lavender
   -
     id: anp-h3-divider
-    title: H3分隔线
+    title: H3 Divider
     type: class-toggle
 
 # Typography :: Headings :: H4
@@ -1593,77 +1593,77 @@ settings:
     collapsed: true
   -
     id: h4-font
-    title: H4字体系列
+    title: H4 Font Family
     type: variable-text
     default: Noto Serif
   -
     id: h4-size
-    title: H4字体大小
+    title: H4 Font Size
     type: variable-number
     default: 1.25
     format: em
   -
     id: h4-weight
-    title: H4字体字重
+    title: H4 Font Weight
     type: variable-number
     default: 600
   -
     id: h4-line-height
-    title: H4行高
+    title: H4 Line Height
     type: variable-number
     default: 1.4
   -
     id: anp-h4-color-custom
-    title: H4颜色
+    title: H4 Color
     type: class-select
     allowEmpty: true
     default: anp-h4-teal
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-h4-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-h4-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-h4-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-h4-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-h4-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-h4-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-h4-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-h4-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-h4-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-h4-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-h4-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-h4-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-h4-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-h4-lavender
   -
     id: anp-h4-divider
-    title: H4分隔线
+    title: H4 Divider
     type: class-toggle
 
 # Typography :: Headings :: H5
@@ -1677,77 +1677,77 @@ settings:
     collapsed: true
   -
     id: h5-font
-    title: H5字体系列
+    title: H5 Font Family
     type: variable-text
     default: Noto Serif
   -
     id: h5-size
-    title: H5字体大小
+    title: H5 Font Size
     type: variable-number
     default: 1.12
     format: em
   -
     id: h5-weight
-    title: H5字体字重
+    title: H5 Font Weight
     type: variable-number
     default: 600
   -
     id: h5-line-height
-    title: H5行高
+    title: H5 Line Height
     type: variable-number
     default: 1.5
   -
     id: anp-h5-color-custom
-    title: H5颜色
+    title: H5 Color
     type: class-select
     allowEmpty: true
     default: anp-h5-lavender
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-h5-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-h5-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-h5-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-h5-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-h5-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-h5-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-h5-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-h5-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-h5-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-h5-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-h5-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-h5-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-h5-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-h5-lavender
   -
     id: anp-h5-divider
-    title: H5分隔线
+    title: H5 Divider
     type: class-toggle
 
 # Typography :: Headings :: H6
@@ -1761,246 +1761,246 @@ settings:
     collapsed: true
   -
     id: h6-font
-    title: H6字体系列
+    title: H6 Font Family
     type: variable-text
     default: Noto Serif
   -
     id: h6-size
-    title: H6字体大小
+    title: H6 Font Size
     type: variable-number
     default: 1.12
     format: em
   -
     id: h6-weight
-    title: H6字体字重
+    title: H6 Font Weight
     type: variable-number
     default: 600
   -
     id: h6-line-height
-    title: H6行高
+    title: H6 Line Height
     type: variable-number
     default: 1.5
   -
     id: anp-h6-color-custom
-    title: H6颜色
+    title: H6 Color
     type: class-select
     allowEmpty: true
     default: anp-h6-mauve
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-h6-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-h6-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-h6-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-h6-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-h6-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-h6-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-h6-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-h6-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-h6-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-h6-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-h6-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-h6-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-h6-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-h6-lavender
   -
     id: anp-h6-divider
-    title: H6分隔线
+    title: H6 Divider
     type: class-toggle
 
 # Typography :: Text Decoration
 
   -
     id: anp-decor-header
-    title: 文本 Decoration
+    title: Text Decoration
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-decoration-toggle
-    title: 启用装饰颜色
+    title: Enable Decoration Colors
     type: class-toggle
   -
     id: anp-bold-custom
-    title: 加粗颜色
+    title: Bold Color
     type: class-select
     allowEmpty: true
     default: anp-bold-red
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-bold-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-bold-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-bold-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-bold-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-bold-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-bold-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-bold-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-bold-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-bold-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-bold-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-bold-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-bold-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-bold-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-bold-lavender
   -
     id: anp-italic-custom
-    title: 斜体颜色
+    title: Italic Color
     type: class-select
     allowEmpty: true
     default: anp-italic-green
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-italic-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-italic-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-italic-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-italic-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-italic-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-italic-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-italic-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-italic-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-italic-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-italic-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-italic-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-italic-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-italic-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-italic-lavender
   -
     id: anp-highlight-custom
-    title: 高亮颜色
+    title: Highlight Color
     type: class-select
     allowEmpty: true
     default: anp-highlight-yellow
     options:
       - 
-        label: 玫瑰水色
+        label: Rosewater
         value: anp-highlight-rosewater
       - 
-        label: 火烈鸟粉
+        label: Flamingo
         value: anp-highlight-flamingo
       - 
-        label: 樱粉色
+        label: Pink
         value: anp-highlight-pink
       - 
-        label: 木槿紫
+        label: Mauve
         value: anp-highlight-mauve
       - 
-        label: 赤红色
+        label: Red
         value: anp-highlight-red
       - 
-        label: 栗红色
+        label: Maroon
         value: anp-highlight-maroon
       - 
-        label: 蜜桃色
+        label: Peach
         value: anp-highlight-peach
       - 
-        label: 琥珀黄
+        label: Yellow
         value: anp-highlight-yellow
       - 
-        label: 翡翠绿
+        label: Green
         value: anp-highlight-green
       - 
-        label: 水鸭青
+        label: Teal
         value: anp-highlight-teal
       - 
-        label: 天穹蓝
+        label: Sky
         value: anp-highlight-sky
       - 
-        label: 蓝宝石色
+        label: Sapphire
         value: anp-highlight-sapphire
       - 
-        label: 宝石蓝
+        label: Blue
         value: anp-highlight-blue
       - 
-        label: 薰衣草紫
+        label: Lavender
         value: anp-highlight-lavender
 
 # Workspace
 
   -
     id: anp-workspace-header
-    title: 工作区设置
-    description: 背景、彩色边框、布局、侧边栏、标签页、半透明等
+    title: Workspace
+    description: Background, Colorful Frame, Layout, Sidebar, Tabs, Translucency, etc.
     type: heading
     level: 1
     collapsed: true
@@ -2009,40 +2009,40 @@ settings:
 
   -
     id: anp-canvas-header
-    title: 画布
-    description: 深色画布背景
+    title: Canvas
+    description: Darken Canvas Background
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-canvas-dark-bg
-    title: 较暗的画布背景
+    title: Darker Canvas Background
     type: class-toggle
 
 # Workspace :: Colorful Frame
 
   -
     id: colorful-frame
-    title: 彩色边框
+    title: Colorful Frame
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-colorful-frame
-    title: "启用彩色边框（开发中）"
+    title: "Enable Colorful Frame (WIP)"
     type: class-toggle
   -
     id: anp-colorful-frame-icon-toggle-light
-    title: "反转图标颜色 - 浅色模式"
+    title: "Invert Icon Colors - Light"
     type: class-toggle
   -
     id: anp-colorful-frame-icon-toggle-dark
-    title: "反转图标颜色 - 深色模式"
+    title: "Invert Icon Colors - Dark"
     type: class-toggle
   -
     id: anp-colorful-frame-opacity
-    title: 彩色边框不透明度
+    title: Colorful Frame Opacity
     type: variable-number-slider
     default: 1
     min: 0
@@ -2050,7 +2050,7 @@ settings:
     step: 0.05
   -
     id: anp-colorful-frame-color
-    title: 自定义彩色边框颜色
+    title: Custom Colorful Frame Color
     type: variable-themed-color
     format: "rgb-values"
     opacity: false
@@ -2065,30 +2065,30 @@ settings:
 
   -
     id: anp-filebrowser-header
-    title: 文件浏览器
-    description: '启用/禁用文件浏览器元素'
+    title: File Browser
+    description: 'Enable/Disable File Browser elements'
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-custom-vault-toggle
-    title: 启用自定义库标题
+    title: Enable custom vault title
     type: class-toggle
   -
     id: anp-file-icons
-    title: 启用文件图标
+    title: Enable file icons
     type: class-toggle
   -
     id: anp-floating-header
-    title: 启用浮动库标题
+    title: Enable floating vault title
     type: class-toggle
   -
     id: anp-collapse-folders
-    title: 为折叠指示器启用文件夹图标
+    title: Enable folder icons for collapse indicators
     type: class-toggle
   -
     id: anp-file-label-align
-    title: 文件标签对齐方式
+    title: File label alignment
     type: variable-select
     default: "0"
     options:
@@ -2103,19 +2103,19 @@ settings:
 
   -
     id: anp-pdf-viewer-header
-    title: PDF 查看器
+    title: PDF Viewer
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-pdf-blend-toggle-dark
-    title: 切换PDF背景混合 - 深色模式
+    title: Toggle PDF background blending - Dark Mode
     desc: Blends PDF viewer background with obsidian background in dark mode
     type: class-toggle
   -
     id: anp-pdf-blend-toggle-light
-    title: 切换PDF背景混合 - 浅色模式
+    title: Toggle PDF background blending - Light Mode
     desc: Blends PDF viewer background with obsidian background in light mode
     type: class-toggle
 
@@ -2123,59 +2123,59 @@ settings:
 
   -
     id: anp-rainbow-section-header
-    title: 彩虹文件夹
+    title: Rainbow Folders
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anuppuccin-url-custom-rainbow-colors
-    title: 自定义彩虹文件夹颜色代码片段
-    description: "通过[此链接](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css)下载代码片段"
+    title: Custom rainbow folder colors snippet
+    description: "Download the snippet through [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css)."
     type: info-text
     markdown: true
   -
     id: anp-alt-rainbow-style
-    title: 彩虹样式
+    title: Rainbow style
     type: class-select
     allowEmpty: false
     default: anp-default-rainbow
     options:
       - 
-        label: 无
+        label: None
         value: anp-default-rainbow
       - 
-        label: 完全显示
+        label: Full
         value: anp-full-rainbow-color-toggle
       - 
-        label: 简洁模式
+        label: Simple
         value: anp-simple-rainbow-color-toggle
 
 # Workspace :: Rainbow Folders :: Full Folder Settings
 
   -
     id: anp-full-rainbow-folder-settings
-    title: 完整文件夹设置
+    title: Full Folder Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-rainbow-file-toggle
-    title: 文件颜色重设开关
+    title: File recolor toggle
     desc: Recolors files to match the folders
     type: class-toggle
   -
     id: anp-full-rainbow-text-color-toggle-light
-    title: 反转标题颜色（浅色模式）
+    title: Invert title colors (Light Mode)
     type: class-toggle
   -
     id: anp-full-rainbow-text-color-toggle-dark
-    title: 反转标题颜色（深色模式）
+    title: Invert title colors (Dark Mode)
     type: class-toggle
   -
     id: anp-rainbow-folder-bg-opacity
-    title: 文件夹背景颜色不透明度
+    title: Folder background color opacity
     type: variable-number
     default: 0.7
 
@@ -2183,51 +2183,51 @@ settings:
 
   -
     id: anp-simple-rainbow-folder-settings
-    title: 简易文件夹设置
+    title: Simple Folder Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-simple-rainbow-title-toggle
-    title: 启用标题重着色
+    title: Enable title recolor
     type: class-toggle
   -
     id: anp-simple-rainbow-collapse-icon-toggle
-    title: 启用折叠图标重着色
+    title: Enable collapse icon recolor
     type: class-toggle
   -
     id: anp-simple-rainbow-indentation-toggle
-    title: 启用折叠缩进重着色
+    title: Enable collapse indent recolor
     type: class-toggle
   -
     id: anp-simple-rainbow-icon-toggle
-    title: 启用圆形文件图标
+    title: Enable circular file
     type: class-toggle
   -
     id: anp-rainbow-subfolder-color-toggle
-    title: 启用子文件夹颜色继承
+    title: Enable subfolder color inheritance
     type: class-toggle
 
 # Workspace :: Stacked Tabs
 
   -
     id: anp-stacked-tabs-header
-    title: 堆叠式标签页
+    title: Stacked Tabs
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-stacked-header-width
-    title: 堆叠标签页标题宽度
+    title: Stacked tabs header width
     type: variable-number
     default: 40
     format: px
   -
     id: anp-tab-stacked-pane-width
-    title: 堆叠标签页窗格宽度倍数
-    description: 根据文件行宽调整堆叠标签页窗格倍数
+    title: Stacked tabs pane width multiplier
+    description: Multiplies the stack tab pane with which depends on file line width
     type: variable-number
     default: 1
 
@@ -2235,86 +2235,86 @@ settings:
 
   -
     id: anp-status-bar-header
-    title: 状态栏
-    description: 选择状态栏样式
+    title: Status Bar
+    description: Select status bar style
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-status-bar-select
-    title: 状态栏 Style
+    title: Status Bar Style
     type: class-select
     default: none
     options:
       -
-        label: 默认
+        label: Default
         value: none
       -
-        label: 浮动模式
+        label: Floating
         value: anp-floating-status-bar
       -
-        label: 固定模式
+        label: Fixed
         value: anp-fixed-status-bar
 
 # Workspace :: Tabs
 
   -
     id: anp-alt-tab-header
-    title: 标签页
+    title: Tabs
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-alt-tab-style
-    title: 标签页样式
+    title: Tab style
     type: class-select
     allowEmpty: false
     default: anp-default-tab
     options:
       - 
-        label: 默认
+        label: Default
         value: anp-default-tab
       - 
-        label: 深度模式
+        label: Depth
         value: anp-depth-tab-toggle
       - 
-        label: 极简模式
+        label: Minimalistic
         value: anp-mini-tab-toggle
       - 
-        label: Safari动画风格（动态效果）
+        label: Safari-style (Animated)
         value: anp-alternate-tab-toggle
       - 
-        label: Safari原生风格（经典版）
+        label: Safari-style (Vanilla)
         value: anp-safari-tab-toggle
   -
     id: anp-alt-tab-custom-height
-    title: 自定义标签页高度
+    title: Custom tab height
     type: variable-number
     allowEmpty: false
     default: 40
     format: px
   -
     id: anp-disable-newtab-align
-    title: 禁用新建标签页按钮右对齐
+    title: Disable new tab button right alignment
     type: class-toggle
 
 # Workspace :: Tabs :: Depth Tab Settings
 
   -
     id: anp-depth-tab-header
-    title: 深度标签页设置
-    description: 仅适用于非活动标签页
+    title: Depth Tab Settings
+    description: Only applies to inactive tabs
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-depth-tab-text-invert
-    title: 反转标签页文字颜色
+    title: Invert tab text color
     type: class-toggle
   -
     id: anp-depth-tab-opacity
-    title: 标签页不透明度
+    title: Tab opacity
     type: variable-number-slider
     default: 0.6
     max: 1
@@ -2322,7 +2322,7 @@ settings:
     step: 0.1
   -
     id: anp-depth-tab-gap
-    title: 标签页间距
+    title: Tab gap
     type: variable-number
     default: 10
     format: px
@@ -2331,26 +2331,26 @@ settings:
 
   -
     id: anp-safari-tab-header
-    title: Safari动画风格标签页设置
-    description: 改编自 github.com/chuckharmston 的代码片段
+    title: Animated Safari-style Tab Settings
+    description: Adapted from github.com/chuckharmston's snippets
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-safari-tab-radius
-    title: 标签页圆角半径
+    title: Tab radius
     type: variable-number
     default: 6
     format: px
   -
     id: anp-safari-tab-gap
-    title: 标签页间距
+    title: Tab gap
     type: variable-number
     default: 10
     format: px
   -
     id: anp-safari-border-width
-    title: 标签页边框宽度
+    title: Tab border width
     type: variable-number
     default: 1
     format: px
@@ -2359,29 +2359,29 @@ settings:
 
   -
     id: anp-safari-vanilla-tab-header
-    title: 原生Safari风格标签页设置
+    title: Vanilla Safari-style Tab Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-safari-tab-animated
-    title: 启用开发中动画Safari标签页
+    title: Enable WIP animated safari tabs
     type: class-toggle
 
 # Workspace :: Translucency
 
   -
     id: anp-translucency-header
-    title: 半透明效果
+    title: Translucency
     description: 
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-translucency-opacity
-    description: 拖拽调整背景不透明度
-    title: 窗口不透明度
+    description: Drag to change background opacity
+    title: Window opacity
     type: variable-number
     default: 0.15
 
@@ -2389,91 +2389,91 @@ settings:
 
   -
     id: anp-layout-header
-    title: 工作区布局
-    description: 工作区布局与排列
+    title: Workspace Layout
+    description: Workspace layout and arrangement
     type: heading
     level: 2
     collapsed: true
   -
     id: anp-layout-select
-    title: 工作区布局 variant
+    title: Workspace Layout variant
     type: class-select
     allowEmpty: false
     default: none
     options:
       -
-        label: 默认
+        label: Default
         value: none
       -
-        label: 边框模式
+        label: Border
         value: anp-border-layout
       -
-        label: 卡片模式
+        label: Cards
         value: anp-card-layout
   -
     id: anp-bg-fix
-    title: 颜色应用的背景修复
+    title: Background fix for applying colors
     type: class-toggle
   -
     id: anp-hide-borders
-    title: 隐藏边框
+    title: Hide borders
     type: class-toggle
 
 # Workspace :: Workspace Layout :: Card Layout
 
   -
     id: anp-layout-card
-    title: 卡片布局设置
+    title: Card Layout Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-card-radius
-    title: 卡片圆角半径
+    title: Card radius
     type: variable-number
     default: 16
     format: px
   -
     id: anp-card-layout-padding
-    title: 卡片内边距
+    title: Card padding
     type: variable-number
     default: 10
     format: px
   -
     id: anp-card-header-left-padding
-    title: 标签页左侧内边距
+    title: Tab left padding
     type: variable-number
     default: 20
     format: px
   -
     id: anp-card-shadows
-    title: 启用阴影效果
+    title: Enable shadows
     type: class-toggle
   -
     id: anp-card-layout-actions
-    title: 为操作启用卡片格式
+    title: Enable card format for actions
     type: class-toggle
   -
     id: anp-card-layout-filebrowser
-    title: 为文件浏览器启用卡片格式
+    title: Enable card format for file browser
     type: class-toggle
   -
     id: anp-layout-border
-    title: 边框布局设置
+    title: Border Layout Settings
     description: 
     type: heading
     level: 3
     collapsed: true
   -
     id: anp-border-radius
-    title: 边框布局圆角半径
+    title: Border Layout Radius
     type: variable-number
     default: 16
     format: px
   -
     id: anp-border-padding
-    title: 边框布局内边距
+    title: Border Layout Padding
     type: variable-number
     default: 20
     format: px
@@ -2482,26 +2482,26 @@ settings:
 
   -
     id: anuppuccin-support
-    title: 支持AnuPuccin
-    description: 如果您喜欢本主题，可通过以下方式支持开发：
+    title: Support AnuPpuccin
+    description: If you like the theme, here are some ways to support development
     type: heading
     level: 1
     collapsed: true
   -
     id: anuppuccin-url-donate
-    title: 请我喝杯咖啡
+    title: Buy Me a Coffee
     description: "[https://www.buymeacoffee.com/anubisnekhet](https://www.buymeacoffee.com/anubisnekhet)"
     type: info-text
     markdown: true
   -
     id: anuppuccin-url-star-repo
-    title: 在GitHub给主题点星
+    title: Star the Theme on GitHub
     description: "[https://github.com/anubisnekhet/anuppuccin](https://github.com/anubisnekhet/anuppuccin)"
     type: info-text
     markdown: true
   -
     id: anuppuccin-url-submit-issue
-    title: 在GitHub提交问题
+    title: Submit an Issue on GitHub
     description: "[https://github.com/anubisnekhet/anuppuccin/issues](https://github.com/anubisnekhet/anuppuccin/issues)"
     type: info-text
     markdown: true

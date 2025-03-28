@@ -611,7 +611,7 @@ var SettingsTab = /** @class */ (function (_super) {
             text.setButtonText("测试").onClick(function () {
                 new Anki()
                     .ping()
-                    .then(function () { return new obsidian.Notice("Anki作品"); })
+                    .then(function () { return new obsidian.Notice("Anki有效"); })
                     .catch(function () { return new obsidian.Notice("Anki未连接"); });
             });
         });

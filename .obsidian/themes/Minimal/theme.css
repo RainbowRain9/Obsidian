@@ -85,7 +85,7 @@ community:
 */
 /* @settings
 
-name: Minimal 主题
+name: Minimal
 id: minimal-style
 settings:
 	-
@@ -97,47 +97,38 @@ settings:
 		description: Use the Minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Visit minimal.guide for documentation.
 	-
 		id: interface
-		title: 界面颜色
-
+		title: Interface colors
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: base
-		title: 基础色
-
-		description: 定义所有背景色和边框颜色，除非在更详细的设置中被覆盖
-
+		title: Base color
+		description: Defines all background and border colors unless overridden in more granular settings
 		type: variable-themed-color
 		format: hsl-split
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: bg1
-		title: 主要背景
-
-		description: 主窗口的背景色
-
+		title: Primary background
+		description: Background color for the main window
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: bg2
-		title: 次级背景
-
-		description: 左侧边栏和菜单的背景色
-
+		title: Secondary background
+		description: Background color for left sidebar and menus
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: bg3
-		title: 活动背景
-
-		description: 悬停按钮和当前选中文件的背景色
-
+		title: Active background
+		description: Background color for hovered buttons and currently selected file
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -145,21 +136,17 @@ settings:
 		default-dark: '#'
 	-
 		id: ui1
-		title: 边框颜色
-
+		title: Border color
 		type: variable-themed-color
-		description: 用于按钮、分割线和轮廓元素
-
+		description: For buttons, divider lines, and outlined elements
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: ui2
-		title: 高亮边框颜色
-
-		description: 当悬停在按钮、分割线和轮廓元素上时使用
-
+		title: Highlighted border color
+		description: Used when hovering over buttons, dividers, and outlined elements
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -167,10 +154,8 @@ settings:
 		default-dark: '#'
 	-
 		id: ui3
-		title: 活动边框颜色
-
-		description: 单击按钮和轮廓元素时使用
-
+		title: Active border color
+		description: Used when clicking buttons and outlined elements
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -178,64 +163,52 @@ settings:
 		default-dark: '#'
 	-
 		id: accent-color
-		title: 强调色
-
+		title: Accent color
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: ax1
-		title: 强调色
-
+		title: Accent color
 		type: variable-themed-color
-		description: 主要用于链接
-
+		description: Used primarily for links
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: ax2
-		title: 强调色（悬停）
-
+		title: Accent color (hover)
 		type: variable-themed-color
-		description: 主要用于悬停链接
-
+		description: Used primarily for hovered links
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: ax3
-		title: 强调色互动
-
+		title: Accent color interactive
 		type: variable-themed-color
-		description: 用于按钮、复选框、切换开关
-
+		description: Used for buttons, checklists, toggles
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: sp1
-		title: 强调色上的文字
-
+		title: Text on accent
 		type: variable-themed-color
-		description: 主要用于强调色按钮上的文字
-
+		description: Used primarily for text on accented buttons
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: extended-palette
-		title: 扩展颜色
-
+		title: Extended colors
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: color-red
-		title: 红色
-
-		description: 扩展调色板颜色是进度条状态、语法高亮、多彩标题和图表节点的默认颜色
-
+		title: Red
+		description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -243,8 +216,7 @@ settings:
 		default-dark: '#'
 	-
 		id: color-orange
-		title: 橙色
-
+		title: Orange
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -252,8 +224,7 @@ settings:
 		default-dark: '#'
 	-
 		id: color-yellow
-		title: 黄色
-
+		title: Yellow
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -261,8 +232,7 @@ settings:
 		default-dark: '#'
 	-
 		id: color-green
-		title: 绿色
-
+		title: Green
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -270,8 +240,7 @@ settings:
 		default-dark: '#'
 	-
 		id: color-cyan
-		title: 青色
-
+		title: Cyan
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -279,8 +248,7 @@ settings:
 		default-dark: '#'
 	-
 		id: color-blue
-		title: 蓝色
-
+		title: Blue
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -288,8 +256,7 @@ settings:
 		default-dark: '#'
 	-
 		id: color-purple
-		title: 紫色
-
+		title: Purple
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -297,8 +264,7 @@ settings:
 		default-dark: '#'
 	-
 		id: color-pink
-		title: 粉色
-
+		title: Pink
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -312,18 +278,14 @@ settings:
 		collapsed: true
 	-
 		id: active-line-on
-		title: 高亮当前行
-
-		description: 在编辑器中为当前行添加背景色
-
+		title: Highlight active line
+		description: Adds a background to current line in editor
 		type: class-toggle
 		default: false
 	-
 		id: active-line-bg
-		title: 当前行背景
-
-		description: 推荐使用低透明度颜色以避免与高亮冲突
-
+		title: Active line background
+		description: Using a low opacity color is recommended to avoid conflicting with highlights
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -331,39 +293,34 @@ settings:
 		default-dark: '#'
 	-
 		id: blockquotes
-		title: 引用框
-
+		title: Blockquotes
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: blockquote-color
-		title: 引用框文字颜色
-
+		title: Blockquote text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: blockquote-background-color
-		title: 引用框背景颜色
-
+		title: Blockquote background color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: blockquote-border-color
-		title: 引用框边框颜色
-
+		title: Blockquote border color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: blockquote-border-thickness
-		title: 引用框边框厚度
-
+		title: Blockquote border thickness
 		type: variable-number-slider
 		format: px
 		default: 1
@@ -372,16 +329,13 @@ settings:
 		step: 1
 	-
 		id: blockquote-size
-		title: 引用框字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: Blockquote font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: ''
 	-
 		id: blockquote-font-style
-		title: 引用框字体样式
-
+		title: Blockquote font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -394,15 +348,13 @@ settings:
 				value: italic
 	-
 		id: callouts
-		title: 注释框
-
+		title: Callouts
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: callouts-style
-		title: 注释框样式
-
+		title: Callout style
 		type: class-select
 		allowEmpty: false
 		default: callouts-default
@@ -415,10 +367,8 @@ settings:
 				value: callouts-outlined
 	-
 		id: callout-blend-mode
-		title: 颜色混合
-
-		description: 混合嵌套注释框的颜色
-
+		title: Color blending
+		description: Blend the color of nested callouts
 		type: variable-select
 		allowEmpty: false
 		default: var(--highlight-mix-blend-mode)
@@ -431,231 +381,185 @@ settings:
 				value: normal
 	-
 		id: canvas
-		title: 画布
-
+		title: Canvas
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: canvas-dot-pattern
-		title: 画布点状图案
-
-		description: 背景点状图案的颜色
-
+		title: Canvas dot pattern
+		description: Color for background dot pattern
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-blocks
-		title: 代码块
-
+		title: Code blocks
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: code-size
-		title: 代码字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: Code font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 13px
 	-
 		id: minimal-code-scroll
-		title: 滚动长行
-
-		description: 关闭代码的自动换行
-
+		title: Scroll long lines
+		description: Turns off line wrap for code
 		type: class-toggle
 		default: false
 	-
 		id: code-background
-		title: 代码背景颜色
-
-		description: 代码块的背景
-
+		title: Code background color
+		description: Background for code blocks
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-normal
-		title: 代码文本颜色
-
-		description: 当没有语法高亮时代码的颜色
-
+		title: Code text color
+		description: Color of code when syntax highlighting is not present
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: syntax-highlighting
-		title: 语法高亮
-
+		title: Syntax highlighting
 		type: heading
 		level: 3
 		collapsed: false
 	-
 		id: code-comment
-		title: "语法：注释"
-
-		description: 注释的语法高亮
-
+		title: "Syntax: comments"
+		description: Syntax highlighting for comments
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-function
-		title: "语法：函数"
-
-		description: 函数的语法高亮
-
+		title: "Syntax: functions"
+		description: Syntax highlighting for functions
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-keyword
-		title: "语法：关键字"
-
-		description: 关键字的语法高亮
-
+		title: "Syntax: keywords"
+		description: Syntax highlighting for keywords
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-important
-		title: "语法：重要文本"
-
-		description: 重要文本的语法高亮
-
+		title: "Syntax: important"
+		description: Syntax highlighting for important text
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-operator
-		title: "语法：运算符"
-
-		description: 运算符的语法高亮
-
+		title: "Syntax: operators"
+		description: Syntax highlighting for operators
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-property
-		title: "语法：属性"
-
-		description: 属性的语法高亮
-
+		title: "Syntax: properties"
+		description: Syntax highlighting for properties
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-punctuation
-		title: "语法：标点符号"
-
-		description: 标点符号的语法高亮
-
+		title: "Syntax: punctuation"
+		description: Syntax highlighting for punctuation
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-string
-		title: "语法：字符串"
-
-		description: 字符串的语法高亮
-
+		title: "Syntax: strings"
+		description: Syntax highlighting for strings
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-tag
-		title: "语法：标签"
-
-		description: 标签的语法高亮
-
+		title: "Syntax: tags"
+		description: Syntax highlighting for tags
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: code-value
-		title: "语法：值"
-
-		description: 值的语法高亮
-
+		title: "Syntax: values"
+		description: Syntax highlighting for values
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: dataview
-		title: 数据视图
-
+		title: Dataview
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: trim-cols
-		title: 裁剪数据视图列
-
-		description: 在表格单元格中禁用单词换行，并裁剪长文本
-
+		title: Trim Dataview columns
+		description: Disables word wrapping in table cells, and trims long text
 		type: class-toggle
 		default: true
 	-
 		id: max-col-width
-		title: 数据视图最大列宽
-
-		description: 数据视图的最大列宽，接受任何CSS宽度值
-
+		title: Dataview maximum column width
+		description: Maximum width for Dataview columns, accepts any CSS width value
 		type: variable-text
 		default: 18em
 	-
 		id: embed-blocks
-		title: 嵌入和转录
-
+		title: Embeds and transclusions
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: embed-strict
-		title: 全局使用严格的嵌入样式
-
-		description: 转录无缝地融入文本流中。可以使用embed-strict辅助类按文件启用
-
+		title: Use strict embed style globally
+		description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
 		type: class-toggle
 		default: false
 	-
 		id: embed-hide-title
-		title: 隐藏嵌入标题
-
+		title: Hide embed titles
 		description: Hide title of the transcluded file
 		type: class-toggle
 		default: false
 	-
 		id: embed-underline
-		title: 下划线嵌入文本
-
-		description: 转录文本带下划线。可以使用embed-underline辅助类按文件启用
-
+		title: Underline embedded text
+		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class
 		type: class-toggle
 		default: false
 	-
 		id: embed-decoration-style
-		title: 嵌入文本下划线样式
-
+		title: Embedded text underline style
 		type: variable-select
-		description: 需要启用下划线
-
+		description: Requires underlines to be enabled
 		allowEmpty: true
 		default: solid
 		options:
@@ -676,105 +580,88 @@ settings:
 				value: wavy
 	-
 		id: embed-decoration-color
-		title: 嵌入文本下划线颜色
-
+		title: Embedded text underline color
 		type: variable-themed-color
-		description: 需要启用下划线
-
+		description: Requires underlines to be enabled
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: graphs
-		title: 图表
-
+		title: Graphs
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: graph-line
-		title: 线条颜色
-
-		description: 更改图表颜色需要关闭并重新打开图表窗格或重启Obsidian
-
+		title: Line color
+		description: Changing graph colors requires closing and reopening graph panes or restarting Obsidian
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: graph-node
-		title: 节点颜色
-
+		title: Node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: graph-node-focused
-		title: 活动节点颜色
-
+		title: Active node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-  
 		id: graph-node-tag
-		title: 标签节点颜色
-
+		title: Tag node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-  
 		id: graph-node-attachment
-		title: 附件节点颜色
-
+		title: Attachment node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-  
 		id: graph-node-unresolved
-		title: 未解析节点颜色
-
+		title: Unresolved node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: headings
-		title: 标题
-
+		title: Headings
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: level-1-headings
-		title: 一级标题
-
+		title: Level 1 Headings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: h1-font
-		title: H1字体
-
-		description: 字体名称，如在您的系统中显示的一样
-
+		title: H1 font
+		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	-
 		id: h1-size
-		title: H1字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: H1 font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 1.125em
 	-
 		id: h1-weight
-		title: H1 字重
-
+		title: H1 font weight
 		type: variable-number-slider
 		default: 600
 		min: 100
@@ -782,16 +669,14 @@ settings:
 		step: 100
 	-
 		id: h1-color
-		title: H1 文本颜色
-
+		title: H1 text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: h1-variant
-		title: H1 字体变体
-
+		title: H1 font variant
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -807,8 +692,7 @@ settings:
 				value: all-small-caps 
 	-
 		id: h1-style
-		title: H1 字体样式
-
+		title: H1 font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -821,39 +705,31 @@ settings:
 				value: italic
 	-
 		id: h1-l
-		title: H1 分割线
-
-		description: 在标题下方添加边框
-
+		title: H1 divider line
+		description: Adds a border below the heading
 		type: class-toggle
 		default: false
 	-
 		id: level-2-headings
-		title: 二级标题
-
+		title: Level 2 Headings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: h2-font
-		title: H2 字体
-
-		description: 字体名称，如在您的系统中显示的一样
-
+		title: H2 font
+		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	-
 		id: h2-size
-		title: H2 字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: H2 font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 1em
 	-
 		id: h2-weight
-		title: H2 字重
-
+		title: H2 font weight
 		type: variable-number-slider
 		default: 600
 		min: 100
@@ -861,16 +737,14 @@ settings:
 		step: 100
 	-
 		id: h2-color
-		title: H2 文本颜色
-
+		title: H2 text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: h2-variant
-		title: H2 字体变体
-
+		title: H2 font variant
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -886,8 +760,7 @@ settings:
 				value: all-small-caps
 	-
 		id: h2-style
-		title: H2 字体样式
-
+		title: H2 font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -900,39 +773,31 @@ settings:
 				value: italic
 	-
 		id: h2-l
-		title: H2 分割线
-
-		description: 在标题下方添加边框
-
+		title: H2 divider line
+		description: Adds a border below the heading
 		type: class-toggle
 		default: false
 	-
 		id: level-3-headings
-		title: 三级标题
-
+		title: Level 3 Headings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: h3-font
-		title: H3 字体
-
-		description: 字体名称，如在您的系统中显示的一样
-
+		title: H3 font
+		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	-
 		id: h3-size
-		title: H3 字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: H3 font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 1em
 	-
 		id: h3-weight
-		title: H3 字重
-
+		title: H3 font weight
 		type: variable-number-slider
 		default: 600
 		min: 100
@@ -940,16 +805,14 @@ settings:
 		step: 100
 	-
 		id: h3-color
-		title: H3 文本颜色
-
+		title: H3 text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: h3-variant
-		title: H3 字体变体
-
+		title: H3 font variant
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -965,8 +828,7 @@ settings:
 				value: all-small-caps
 	-
 		id: h3-style
-		title: H3 字体样式
-
+		title: H3 font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -979,39 +841,31 @@ settings:
 				value: italic
 	-
 		id: h3-l
-		title: H3 分割线
-
-		description: 在标题下方添加边框
-
+		title: H3 divider line
+		description: Adds a border below the heading
 		type: class-toggle
 		default: false
 	-
 		id: level-4-headings
-		title: 四级标题
-
+		title: Level 4 Headings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: h4-font
-		title: H4 字体
-
-		description: 字体名称，如在您的系统中显示的一样
-
+		title: H4 font
+		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	-
 		id: h4-size
-		title: H4 字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: H4 font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 0.9em
 	-
 		id: h4-weight
-		title: H4 字重
-
+		title: H4 font weight
 		type: variable-number-slider
 		default: 500
 		min: 100
@@ -1019,16 +873,14 @@ settings:
 		step: 100
 	-
 		id: h4-color
-		title: H4 文本颜色
-
+		title: H4 text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: h4-variant
-		title: H4 字体变体
-
+		title: H4 font variant
 		type: variable-select
 		allowEmpty: false
 		default: small-caps
@@ -1044,8 +896,7 @@ settings:
 				value: all-small-caps 
 	-
 		id: h4-style
-		title: H4 字体样式
-
+		title: H4 font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -1058,39 +909,31 @@ settings:
 				value: italic
 	-
 		id: h4-l
-		title: H4 分割线
-
-		description: 在标题下方添加边框
-
+		title: H4 divider line
+		description: Adds a border below the heading
 		type: class-toggle
 		default: false   
 	-
 		id: level-5-headings
-		title: 五级标题
-
+		title: Level 5 Headings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: h5-font
-		title: H5 字体
-
-		description: 字体名称，如在您的系统中显示的一样
-
+		title: H5 font
+		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	- 
 		id: h5-size
-		title: H5 字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: H5 font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 0.85em
 	-
 		id: h5-weight
-		title: H5 字重
-
+		title: H5 font weight
 		type: variable-number-slider
 		default: 500
 		min: 100
@@ -1098,16 +941,14 @@ settings:
 		step: 100
 	-
 		id: h5-color
-		title: H5 文本颜色
-
+		title: H5 text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: h5-variant
-		title: H5 字体变体
-
+		title: H5 font variant
 		type: variable-select
 		allowEmpty: false
 		default: small-caps
@@ -1123,8 +964,7 @@ settings:
 				value: all-small-caps 
 	-
 		id: h5-style
-		title: H5 字体样式
-
+		title: H5 font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -1137,39 +977,31 @@ settings:
 				value: italic
 	-
 		id: h5-l
-		title: H5 分割线
-
-		description: 在标题下方添加边框
-
+		title: H5 divider line
+		description: Adds a border below the heading
 		type: class-toggle
 		default: false
 	-
 		id: level-6-headings
-		title: 六级标题
-
+		title: Level 6 Headings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: h6-font
-		title: H6 字体
-
-		description: 字体名称，如在您的系统中显示的一样
-
+		title: H6 font
+		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	-
 		id: h6-size
-		title: H6 字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: H6 font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 0.85em
 	-
 		id: h6-weight
-		title: H6 字重
-
+		title: H6 font weight
 		type: variable-number-slider
 		default: 400
 		min: 100
@@ -1177,16 +1009,14 @@ settings:
 		step: 100
 	-
 		id: h6-color
-		title: H6 文本颜色
-
+		title: H6 text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: h6-variant
-		title: H6 字体变体
-
+		title: H6 font variant
 		type: variable-select
 		allowEmpty: false
 		default: small-caps
@@ -1202,8 +1032,7 @@ settings:
 				value: all-small-caps
 	-
 		id: h6-style
-		title: H6 字体样式
-
+		title: H6 font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -1216,23 +1045,19 @@ settings:
 				value: italic
 	-
 		id: h6-l
-		title: H6 分割线
-
+		title: H6 divider line
 		type: class-toggle
-		description: 在标题下方添加边框
-
+		description: Adds a border below the heading
 		default: false
 	-
 		id: icons
-		title: 图标
-
+		title: Icons
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: icon-muted
-		title: 图标透明度（非活动）
-
+		title: Icon opacity (inactive)
 		type: variable-number-slider
 		default: 0.5
 		min: 0.25
@@ -1240,8 +1065,7 @@ settings:
 		step: 0.05
 	-
 		id: icon-color
-		title: 图标颜色
-
+		title: Icon color
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1249,8 +1073,7 @@ settings:
 		default-dark: '#'
 	-
 		id: icon-color-hover
-		title: 图标颜色（悬停）
-
+		title: Icon color (hover)
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1258,8 +1081,7 @@ settings:
 		default-dark: '#'
 	-
 		id: icon-color-active
-		title: 图标颜色（活动）
-
+		title: Icon color (active)
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1267,8 +1089,7 @@ settings:
 		default-dark: '#'
 	-
 		id: icon-color-focused
-		title: 图标颜色（聚焦）
-
+		title: Icon color (focused)
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1276,17 +1097,14 @@ settings:
 		default-dark: '#'
 	-
 		id: images
-		title: 图像
-
+		title: Images
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: image-muted
-		title: 暗模式下的图像透明度
-
-		description: 暗模式下图像的淡化程度。将鼠标悬停在图像上以全亮度显示。
-
+		title: Image opacity in dark mode
+		description: Level of fading for images in dark mode. Hover over images to display at full brightness.
 		type: variable-number-slider
 		default: 0.7
 		min: 0.25
@@ -1294,17 +1112,13 @@ settings:
 		step: 0.05
 	-
 		id: zoom-off
-		title: 禁用图像缩放
-
-		description: 关闭点击+按住以放大图像的功能
-
+		title: Disable image zoom
+		description: Turns off click + hold to zoom images
 		type: class-toggle
 	-
 		id: image-grid-fit
-		title: 图像网格裁剪
-
-		description: 设置图像在网络中的裁剪方式
-
+		title: Image grid crop
+		description: Sets how images get cropped in a grid
 		type: variable-select
 		default: cover
 		options:
@@ -1316,10 +1130,8 @@ settings:
 				value: contain
 	-
 		id: image-grid-background
-		title: 图像网格背景
-
-		description: 单元格中图像的背景，当图像未裁剪以适应时非常有用
-
+		title: Image grid background
+		description: Background of images in cells, useful when images are not cropped to fit
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1327,8 +1139,7 @@ settings:
 		default-dark: '#'
 	-
 		id: indentation-guides
-		title: 缩进指南
-
+		title: Indentation guides
 		type: heading
 		level: 2
 		collapsed: true
@@ -1352,8 +1163,7 @@ settings:
 		format: px
 	-
 		id: indentation-guide-color
-		title: 缩进指南颜色
-
+		title: Indentation guide color
 		type: variable-themed-color
 		format: hex
 		opacity:  true
@@ -1361,8 +1171,7 @@ settings:
 		default-dark: '#'
 	-
 		id: indentation-guide-color-active
-		title: 缩进指南颜色（激活状态）
-
+		title: Indentation guide color (active)
 		type: variable-themed-color
 		format: hex
 		opacity:  true
@@ -1370,38 +1179,33 @@ settings:
 		default-dark: '#'
 	-
 		id: links
-		title: 链接
-
+		title: Links
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: links-internal
-		title: 内部链接
-
+		title: Internal links
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: link-color
-		title: 内部链接颜色
-
+		title: Internal link color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: link-color-hover
-		title: 内部链接颜色（悬停状态）
-
+		title: Internal link color (hover)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: link-unresolved-opacity
-		title: 未解决链接透明度
-
+		title: Unresolved link opacity
 		type: variable-number-slider
 		default: 0.7
 		min: 0.25
@@ -1409,16 +1213,14 @@ settings:
 		step: 0.05
 	-
 		id: link-unresolved-color
-		title: 未解决链接颜色
-
+		title: Unresolved link color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: link-unresolved-decoration-color
-		title: 未解决链接下划线颜色
-
+		title: Unresolved link underline color
 		type: variable-themed-color
 		format: hex
 		opacity:  true
@@ -1426,48 +1228,41 @@ settings:
 		default-dark: '#'
 	-
 		id: links-external
-		title: 外部链接
-
+		title: External links
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: link-external-color
-		title: 外部链接颜色
-
+		title: External link color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: link-external-color-hover
-		title: 外部链接颜色（悬停状态）
-
+		title: External link color (hover)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: lists
-		title: 列表和任务
-
+		title: Lists and tasks
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: checkbox-color
-		title: 复选框颜色
-
-		description: 已完成任务的背景颜色
-
+		title: Checkbox color
+		description: Background color for completed tasks
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: checkbox-shape
-		title: 复选框形状
-
+		title: Checkbox shape
 		type: class-select
 		allowEmpty: false
 		default: checkbox-circle
@@ -1480,18 +1275,14 @@ settings:
 				value: checkbox-square
 	-
 		id: minimal-strike-lists
-		title: 删除已完成的任务
-
-		description: 为已完成的任务添加删除线和灰色文本
-
+		title: Strike completed tasks
+		description: Adds strikethrough line and greyed text for completed tasks
 		type: class-toggle
 		default: false
 	-
 		id: list-spacing
-		title: 列表项间距
-
-		description: 列表项之间的垂直空间，单位为em
-
+		title: List item spacing
+		description: Vertical space between list items in em units
 		type: variable-number-slider
 		default: 0.075
 		min: 0
@@ -1500,10 +1291,8 @@ settings:
 		format: em
 	-
 		id: list-indent
-		title: 嵌套列表缩进
-
-		description: 从左侧开始的水平空间，单位为em
-
+		title: Nested list indentation
+		description: Horizontal space from left in em units
 		type: variable-number-slider
 		default: 2
 		min: 1
@@ -1512,8 +1301,7 @@ settings:
 		format: em
 	-
 		id: sidebars
-		title: 侧边栏
-
+		title: Sidebars
 		type: heading
 		level: 2
 		collapsed: true
@@ -1524,8 +1312,7 @@ settings:
 		type: class-toggle
 	-
 		id: sidebar-tabs-style
-		title: 侧边栏标签样式
-
+		title: Sidebar tab style
 		type: class-select
 		allowEmpty: false
 		default: sidebar-tabs-default
@@ -1547,35 +1334,28 @@ settings:
 				value: sidebar-tabs-underline
 	-
 		id: mobile-left-sidebar-width
-		title: 移动设备左侧边栏宽度
-
-		description: 移动设备上固定左侧边栏的最大宽度
-
+		title: Mobile left sidebar width
+		description: Maximum width for pinned left sidebar on mobile
 		type: variable-number
 		default: 280
 		format: pt
 	-
 		id: mobile-right-sidebar-width
-		title: 移动设备右侧边栏宽度
-
-		description: 移动设备上固定右侧边栏的最大宽度
-
+		title: Mobile right sidebar width
+		description: Maximum width for pinned right sidebar on mobile
 		type: variable-number
 		default: 240
 		format: pt
 	-
 		id: tables
-		title: 表格
-
+		title: Tables
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: table-text-size
-		title: 表格字体大小
-
-		description: 下列所有设置均适用于所有表格。要针对每个笔记开启这些功能，请使用辅助类。请参阅文档。
-
+		title: Table font size
+		description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
 		type: variable-text
 		default: 1em
 	-
@@ -1597,82 +1377,62 @@ settings:
 				value: maximize-tables-off
 	-
 		id: row-lines
-		title: 行线
-
-		description: 全局显示表格行间的边框
-
+		title: Row lines
+		description: Display borders between table rows globally
 		type: class-toggle
 		default: false
 	-
 		id: col-lines
-		title: 列线
-
-		description: 全局显示表格列间的边框
-
+		title: Column lines
+		description: Display borders between table columns globally
 		type: class-toggle
 		default: false
 	-
 		id: table-lines
-		title: 单元格线
-
-		description: 全局显示所有表格单元格周围的边框
-
+		title: Cell lines
+		description: Display borders around all table cells globally
 		type: class-toggle
 		default: false 
 	-
 		id: row-alt
-		title: 斑马条纹行
-
-		description: 全局在交替的表格行中显示条纹背景
-
+		title: Striped rows
+		description: Display striped background in alternating table rows globally
 		type: class-toggle
 		default: false
 	-
 		id: col-alt
-		title: 斑马条纹列
-
-		description: 全局在交替的表格列中显示条纹背景
-
+		title: Striped columns
+		description: Display striped background in alternating table columns globally
 		type: class-toggle
 		default: false
 	-
 		id: table-tabular
-		title: 表格式数字
-
-		description: 全局使用固定宽度数字
-
+		title: Tabular figures
+		description: Use fixed width numbers in tables globally
 		type: class-toggle
 		default: false
 	-
 		id: table-numbers
-		title: 行号
-
-		description: 全局显示表格行号
-
+		title: Row numbers
+		description: Display row numbers in tables globally
 		type: class-toggle
 		default: false
 	-
 		id: table-nowrap
-		title: 禁用换行
-
-		description: 全局关闭表格单元格内的换行
-
+		title: Disable line wrap
+		description: Turn off line wrapping in table cells globally
 		type: class-toggle
 		default: false
 	-
 		id: row-hover
-		title: 高亮当前行
-
-		description: 鼠标悬停时高亮行
-
+		title: Highlight active row
+		description: Highlight rows on hover
 		type: class-toggle
 		default: false
 	-
 		id: table-row-background-hover
-		title: 当前行背景
-
-		description: 被悬停表格行的背景颜色
-
+		title: Active row background
+		description: Background color for hovered tables rows
 		type: variable-themed-color
 		format: hex
 		opacity: true
@@ -1680,21 +1440,18 @@ settings:
 		default-dark: '#'
 	-
 		id: tabs
-		title: 标签页
-
+		title: Tabs
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: header-height
-		title: 标签栏高度
-
+		title: Tab bar height
 		type: variable-text
 		default: 40px
 	-
 		id: tabs-style
-		title: 标签样式
-
+		title: Tab style
 		type: class-select
 		allowEmpty: false
 		default: tabs-default
@@ -1713,8 +1470,7 @@ settings:
 				value: tabs-underline
 	-
 		id: minimal-tab-text-color
-		title: 标签文字颜色
-
+		title: Tab text color
 		type: variable-themed-color
 		format: hex
 		opacity: true
@@ -1722,8 +1478,7 @@ settings:
 		default-dark: '#'
 	-
 		id: minimal-tab-text-color-active
-		title: 标签文字颜色（激活状态）
-
+		title: Tab text color (active)
 		type: variable-themed-color
 		format: hex
 		opacity: true
@@ -1731,33 +1486,27 @@ settings:
 		default-dark: '#'
 	-
 		id: tab-stacks
-		title: 标签堆栈
-
+		title: Tab stacks
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: tab-stacked-pane-width
-		title: 堆栈宽度
-
+		title: Stacked width
 		type: variable-number
-		description: 堆栈标签的像素宽度
-
+		description: Width of a stacked tab in pixels
 		default: 700
 		format: px
 	-
 		id: tab-stacked-header-width
-		title: 中脊宽度
-
+		title: Spine width
 		type: variable-number
-		description: 中脊的像素宽度
-
+		description: Width of the spine in pixels
 		default: 40
 		format: px
 	-
 		id: tab-stacked-spine-orientation
-		title: 中脊文字方向
-
+		title: Spine text orientation
 		type: class-select
 		default: tab-stack-top
 		options:
@@ -1781,23 +1530,19 @@ settings:
 				value: tab-stack-center-flipped
 	-
 		id: tags
-		title: 标签
-
+		title: Tags
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: minimal-unstyled-tags
-		title: 平面标签
-
-		description: 标签将以普通文本形式呈现，覆盖以下设置
-
+		title: Plain tags
+		description: Tags will render as normal text, overrides settings below
 		type: class-toggle
 		default: false
 	-
 		id: tag-radius
-		title: 标签形状
-
+		title: Tag shape
 		type: variable-select
 		default: 14px
 		options:
@@ -1812,8 +1557,7 @@ settings:
 				value: 0px
 	-
 		id: tag-border-width
-		title: 标签边框宽度
-
+		title: Tag border width
 		type: variable-select
 		default: 1px
 		options:
@@ -1828,8 +1572,7 @@ settings:
 				value: 2px
 	-
 		id: tag-color
-		title: 标签文字颜色
-
+		title: Tag text color
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1837,8 +1580,7 @@ settings:
 		default-dark: '#'
 	-
 		id: tag-background
-		title: 标签背景颜色
-
+		title: Tag background color
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1846,8 +1588,7 @@ settings:
 		default-dark: '#'
 	-
 		id: tag-background-hover
-		title: 标签背景颜色（悬停状态）
-
+		title: Tag background color (hover)
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1855,26 +1596,22 @@ settings:
 		default-dark: '#'
 	-
 		id: text
-		title: 文本
-
+		title: Text
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: tx1
-		title: 正常文本颜色
-
+		title: Normal text color
 		type: variable-themed-color
-		description: 默认用于所有元素的主要文本颜色
-
+		description: Primary text color used by default across all elements
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: hl1
-		title: 选中文本背景
-
+		title: Selected text background
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1882,8 +1619,7 @@ settings:
 		default-dark: '#'
 	-
 		id: hl2
-		title: 高亮文本背景
-
+		title: Highlighted text background
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1891,10 +1627,8 @@ settings:
 		default-dark: '#'
 	-
 		id: tx2
-		title: 淡化文本颜色
-
-		description: 次要文本，如侧边栏笔记标题和表格标题
-
+		title: Muted text color
+		description: Secondary text such as sidebar note titles and table headings
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1902,10 +1636,8 @@ settings:
 		default-dark: '#'
 	-
 		id: tx3
-		title: 微弱文本颜色
-
-		description: 三级文本，如输入占位符、空复选框和禁用状态
-
+		title: Faint text color
+		description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1913,24 +1645,21 @@ settings:
 		default-dark: '#'
 	-
 		id: italic-color
-		title: 斜体文本颜色
-
+		title: Italic text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: bold-color
-		title: 加粗文本颜色
-
+		title: Bold text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: bold-weight
-		title: 加粗文本字重
-
+		title: Bold text weight
 		type: variable-number-slider
 		default: 600
 		min: 100
@@ -1938,33 +1667,27 @@ settings:
 		step: 100
 	-
 		id: spacing-p
-		title: 段落间距
-
+		title: Paragraph spacing
 		description: Space between paragraphs in reading mode
 		type: variable-text
 		default: 0.75em
 	-
 		id: titles
-		title: 标题
-
+		title: Titles
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: tab-title-bar
-		title: 标签标题栏
-
-		description: 必须在外观设置中启用标签标题栏
-
+		title: Tab title bar
+		description: Tab title bar must be turned on in Appearance settings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: file-header-visibility
-		title: 标签标题可见性
-
-		description: 标签标题文本的可见性
-
+		title: Tab title visibility
+		description: Visibility of the tab title text
 		type: class-select
 		default: minimal-tab-title-hover
 		options:
@@ -1979,16 +1702,13 @@ settings:
 				value: minimal-tab-title-visible
 	-
 		id: file-header-font-size
-		title: 标签标题字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: Tab title font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 0.9em
 	-
 		id: file-header-font-weight
-		title: 标签标题字体粗细
-
+		title: Tab title font weight
 		type: variable-number-slider
 		default: 400
 		min: 100
@@ -1996,8 +1716,7 @@ settings:
 		step: 100
 	-
 		id: file-header-justify
-		title: 标签标题对齐方式
-
+		title: Tab title alignment
 		type: variable-select
 		default: center
 		options:
@@ -2009,49 +1728,40 @@ settings:
 				value: left
 	-
 		id: title-color
-		title: 标签标题文本颜色（激活状态）
-
+		title: Tab title text color (active)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: title-color-inactive
-		title: 标签标题文本颜色（非激活状态）
-
+		title: Tab title text color (inactive)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: inline-title
-		title: 行内标题
-
-		description: 必须在外观设置中启用行内标题
-
+		title: Inline title
+		description: Inline titles must be turned on in Appearance settings
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: inline-title-font
-		title: 行内标题字体
-
-		description: 字体名称，如在您的系统中显示的一样
-
+		title: Inline title font
+		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	-
 		id: inline-title-size
-		title: 行内标题字体大小
-
-		description: 接受任何CSS字体大小值
-
+		title: Inline title font size
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 1.125em
 	-
 		id: inline-title-weight
-		title: 行内标题字体粗细
-
+		title: Inline title font weight
 		type: variable-number-slider
 		default: 600
 		min: 100
@@ -2059,23 +1769,20 @@ settings:
 		step: 100
 	-
 		id: inline-title-color
-		title: 行内标题文本颜色（激活状态）
-
+		title: Inline title text color (active)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: translucency
-		title: 半透明
-
+		title: Translucency
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: workspace-background-translucent
-		title: 半透明背景颜色
-
+		title: Translucent background color
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -2083,24 +1790,19 @@ settings:
 		default-dark: '#'
 	-
 		id: window-frame
-		title: 窗口框架
-
+		title: Window frame
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: window-title-off
-		title: 隐藏窗口框架标题
-
-		description: 在自定义标题栏中隐藏标题
-
+		title: Hide window frame title
+		description: Hide title in the custom title bar
 		type: class-toggle
 	-
 		id: frame-background
-		title: 框架背景
-
-		description: 需要多彩窗口框架
-
+		title: Frame background
+		description: Requires colorful window frame
 		type: variable-themed-color
 		opacity: true
 		format: hsl-split
@@ -2108,40 +1810,32 @@ settings:
 		default-dark: '#'
 	-
 		id: frame-icon-color
-		title: 框架图标颜色
-
-		description: 需要多彩框架
-
+		title: Frame icon color
+		description: Requires colorful frame
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: titlebar-text-color-focused
-		title: 框架标题颜色（聚焦状态）
-
-		description: 需要自定义标题栏
-
+		title: Frame title color (focused)
+		description: Requires custom title bar
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: titlebar-text-color
-		title: 框架标题颜色（非激活状态）
-
-		description: 需要自定义标题栏
-
+		title: Frame title color (inactive)
+		description: Requires custom title bar
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: titlebar-text-weight
-		title: 框架标题字体粗细
-
-		description: 需要自定义标题栏
-
+		title: Frame title font weight
+		description: Requires custom title bar
 		type: variable-number-slider
 		default: 600
 		min: 100
@@ -2150,43 +1844,43 @@ settings:
 */
 
 /* @settings
-name: Minimal 主题 卡片
+name: Minimal Cards
 id: minimal-cards-style
 settings:
 	-
 		id: cards-min-width
-		title: 卡片最小宽度
+		title: Card minimum width
 		type: variable-text
 		default: 180px
 	-
 		id: cards-max-width
-		title: 卡片最大宽度
-		description: 默认填充可用宽度，接受 valid CSS units
+		title: Card maximum width
+		description: Default fills the available width, accepts valid CSS units
 		type: variable-text
 		default: 1fr
 	-
 		id: cards-mobile-width
-		title: 卡片最小宽度 on mobile
+		title: Card minimum width on mobile
 		type: variable-text
 		default: 120px
 	-
 		id: cards-padding
-		title: 卡片内边距
+		title: Card padding
 		type: variable-text
 		default: 1.2em
 	-
 		id: cards-image-height
-		title: 卡片最大图片高度
+		title: Card maximum image height
 		type: variable-text
 		default: 400px
 	-
 		id: cards-border-width
-		title: 卡片边框宽度
+		title: Card border width
 		type: variable-text
 		default: 1px
 	- 
 		id: cards-background
-		title: 卡片背景颜色
+		title: Card background color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -2195,7 +1889,7 @@ settings:
 */
 
 /* @settings
-name: Minimal 主题 Mobile
+name: Minimal Mobile
 id: minimal-mobile
 settings:
 	-
@@ -2206,18 +1900,18 @@ settings:
 */
 
 /* @settings
-name: Minimal 主题 高级设置
+name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
 	-
 		id: styled-scrollbars
-		title: 自定义滚动条
-		description: 使用自定义滚动条（替换原生滚动条）
+		title: Styled scrollbars
+		description: Use styled scrollbars (replaces native scrollbars)
 		type: class-toggle
 	-
 		id: cursor
-		title: 光标样式
-		description: 用户界面元素的光标样式
+		title: Cursor style
+		description: The cursor style for UI elements
 		type: variable-select
 		default: default
 		options:
@@ -2232,15 +1926,15 @@ settings:
 				value: crosshair
 	-
 		id: font-ui-small
-		title: 较小字体大小
-		description: 较小文本的字体大小（px）
+		title: Small font size
+		description: Font size in px of smaller text
 		type: variable-number
 		default: 13
 		format: px
 	-
 		id: font-ui-smaller
-		title: 更小字体大小
-		description: 最小文本的字体大小（px）
+		title: Smaller font size
+		description: Font size in px of smallest text
 		type: variable-number
 		default: 11
 		format: px

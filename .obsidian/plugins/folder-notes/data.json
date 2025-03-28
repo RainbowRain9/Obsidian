@@ -11,7 +11,7 @@
   "showDeleteConfirmation": true,
   "underlineFolder": true,
   "stopWhitespaceCollapsing": true,
-  "underlineFolderInPath": true,
+  "underlineFolderInPath": false,
   "openFolderNoteOnClickInPath": true,
   "openInNewTab": false,
   "folderNoteName": "{{folder_name}}",
@@ -54,7 +54,7 @@
     "canvas"
   ],
   "boldName": false,
-  "boldNameInPath": false,
+  "boldNameInPath": true,
   "cursiveName": false,
   "cursiveNameInPath": false,
   "disableOpenFolderNoteOnClick": false,
