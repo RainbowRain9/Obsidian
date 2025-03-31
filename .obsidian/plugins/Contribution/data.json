@@ -1400,8 +1400,8 @@
             "startDateTimeType": "$specifiedDateTime",
             "endDateTimeType": "$specifiedDateTime",
             "uiType": "bar",
-            "startDateTime": "2024-02-25 00:00:00",
-            "endDateTime": "2024-06-15 00:00:00",
+            "startDateTime": "2025-03-31 00:00:00",
+            "endDateTime": "2025-04-12 09:00:00",
             "backgroundColor": "#67674573",
             "fontColor": "#f4f39aff",
             "title": "蓝桥杯"
@@ -1410,7 +1410,7 @@
         "layoutType": "column"
       },
       "createAt": "2024-04-09T15:19:47.763Z",
-      "updateAt": "2025-03-24T14:50:11.323Z"
+      "updateAt": "2025-03-31T03:38:42.770Z"
     },
     {
       "id": "5a6efec6-f1ad-4cbd-9046-f5c761bbb37f",
