@@ -1446,6 +1446,22 @@
       },
       "createAt": "2024-04-10T06:35:44.025Z",
       "updateAt": "2024-04-10T06:38:22.417Z"
+    },
+    {
+      "id": "c3726985-efee-4414-bc9e-cf61ceadcd20",
+      "name": "",
+      "widget": {
+        "id": "415cad3b-52ca-4c09-b243-777628e2e722",
+        "type": "multi",
+        "titleAlign": "center",
+        "tabTitle": "",
+        "maxWidthRatio": -1,
+        "backgroundStyle": "none",
+        "widgets": [],
+        "layoutType": "column"
+      },
+      "createAt": "2025-03-28T03:19:13.765Z",
+      "updateAt": "2025-03-28T03:19:13.765Z"
     }
   ],
   "confirmDeletion": true,

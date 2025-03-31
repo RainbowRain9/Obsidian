@@ -13,7 +13,7 @@
   "azureOpenAIApiEmbeddingDeploymentName": "",
   "googleApiKey": "",
   "openRouterAiApiKey": "",
-  "defaultChainType": "vault_qa",
+  "defaultChainType": "llm_chain",
   "defaultModelKey": "copilot-plus-flash|copilot-plus",
   "embeddingModelKey": "BAAI/bge-m3|3rd party (openai-format)",
   "temperature": 0.1,
@@ -46,6 +46,7 @@
       "enabled": false,
       "isBuiltIn": true,
       "core": true,
+      "plusExclusive": true,
       "capabilities": [
         "vision"
       ]
@@ -77,8 +78,8 @@
       "isBuiltIn": true,
       "core": true,
       "capabilities": [
-        "vision",
-        "reasoning"
+        "reasoning",
+        "vision"
       ]
     },
     {
@@ -93,6 +94,18 @@
       "stream": true,
       "displayName": "DeepSeek-V3",
       "openAIOrgId": ""
+    },
+    {
+      "name": "deepseek/deepseek-chat-v3-0324:free",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "",
+      "apiKey": "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",
+      "isEmbeddingModel": false,
+      "capabilities": [],
+      "stream": true,
+      "displayName": "V3-0324"
     }
   ],
   "activeEmbeddingModels": [
@@ -102,7 +115,8 @@
       "enabled": true,
       "isBuiltIn": true,
       "isEmbeddingModel": true,
-      "core": true
+      "core": true,
+      "plusExclusive": true
     },
     {
       "name": "copilot-plus-large",
@@ -111,6 +125,7 @@
       "isBuiltIn": true,
       "isEmbeddingModel": true,
       "core": true,
+      "plusExclusive": true,
       "believerExclusive": true,
       "dimensions": 1024
     },
@@ -121,6 +136,7 @@
       "isBuiltIn": true,
       "isEmbeddingModel": true,
       "core": true,
+      "plusExclusive": true,
       "dimensions": 512
     },
     {
@@ -140,7 +156,8 @@
       "apiKey": "sk-agglfjhzahpqjetfbjrcveegjegqeatgcosollxokezrjqfq",
       "isEmbeddingModel": true,
       "capabilities": [],
-      "displayName": "bge-m3"
+      "displayName": "bge-m3",
+      "enableCors": false
     }
   ],
   "embeddingRequestsPerMin": 90,

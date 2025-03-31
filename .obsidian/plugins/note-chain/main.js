@@ -3640,9 +3640,7 @@ ${tpl}
   async set_frontmatter_align_file(src, dst, field) {
     if (field) {
       let value = this.get_frontmatter(src, field);
-      if (value) {
-        await this.set_frontmatter(dst, field, value, 1);
-      }
+      await this.set_frontmatter(dst, field, value, 1);
     }
   }
 };
@@ -3869,7 +3867,7 @@ var NoteChain = class {
     }
     return true;
   }
-  async sugguster_note(notes = null, slice = 0) {
+  async sugguster_note(notes = null, slice = 0, onlyname = false) {
     if (notes == null) {
       notes = this.sort_tfiles(
         this.app.vault.getFiles(),
@@ -3877,7 +3875,13 @@ var NoteChain = class {
       ).filter((f) => this.filter_user_ignore(f));
     }
     try {
-      let msg = this.plugin.utils.array_prefix_id(notes.map((f) => f.path.slice(slice)));
+      let items;
+      if (onlyname) {
+        items = notes.map((f) => f.basename);
+      } else {
+        items = notes.map((f) => f.path.slice(slice));
+      }
+      let msg = this.plugin.utils.array_prefix_id(items);
       let note = await this.plugin.dialog_suggest(msg, notes);
       return note;
     } catch (error) {
@@ -4509,6 +4513,50 @@ var NoteChain = class {
       new import_obsidian4.Notice(msg, 5e3);
     }
   }
+  // 将 tfiles 移动为 anchor 的后置笔记
+  async chain_set_next_files(tfiles, anchor, same_folder = true) {
+    var _a, _b;
+    if (!tfiles) {
+      return;
+    }
+    tfiles = tfiles.filter((x) => (x == null ? void 0 : x.extension) == "md");
+    if (tfiles.length == 0) {
+      return;
+    }
+    if (!anchor) {
+      return;
+    }
+    ;
+    if (tfiles.contains(anchor)) {
+      return;
+    }
+    let xtfiles = this.sort_tfiles_by_chain(tfiles);
+    for (let tfile of xtfiles) {
+      if (anchor.parent) {
+        if (same_folder && ((_a = tfile.parent) == null ? void 0 : _a.path) != ((_b = anchor.parent) == null ? void 0 : _b.path)) {
+          let dst = anchor.parent.path + "/" + tfile.name;
+          try {
+            await this.app.fileManager.renameFile(tfile, dst);
+          } catch (error) {
+          }
+        }
+        await this.chain_pop_node(tfile);
+      }
+    }
+    tfiles.unshift(anchor);
+    let anchor_next = this.get_next_note(anchor);
+    if (anchor_next) {
+      tfiles.push(anchor_next);
+    }
+    await this.chain_concat_tfiles(tfiles);
+    for (let dst of tfiles.slice(1, tfiles.length - 1)) {
+      await this.editor.set_frontmatter_align_file(
+        anchor,
+        dst,
+        this.plugin.settings.field_of_confluence_tab_format
+      );
+    }
+  }
   async chain_set_prev_next(tfile, prev, next) {
     if (tfile == null || prev == next || tfile == prev || tfile == next) {
       return;
@@ -5022,42 +5070,47 @@ var NCTextarea = class {
 
 // src/NCFileExplorer.ts
 var import_obsidian5 = require("obsidian");
-var getSortedFolderItems = function(org_sort) {
-  let plugin = this.app.plugins.getPlugin("note-chain");
-  return function(e) {
-    if (plugin) {
-      try {
-        let res = org_sort.call(this, e);
-        let tfiles = plugin.chain.children[e.path];
-        if (tfiles) {
-          res = res.sort((a, b) => tfiles.indexOf(a.file) - tfiles.indexOf(b.file));
-        }
-        return res;
-      } catch (e2) {
-        return org_sort.call(this, e2);
-      }
-    } else {
-      return org_sort.call(this, e);
-    }
+
+// node_modules/monkey-around/dist/index.mjs
+function around(obj, factories) {
+  const removers = Object.keys(factories).map((key) => around1(obj, key, factories[key]));
+  return removers.length === 1 ? removers[0] : function() {
+    removers.forEach((r) => r());
   };
-};
-var getTtitle = function(org_getTtile) {
-  let plugin = this.app.plugins.getPlugin("note-chain");
-  return function(e) {
-    if (plugin) {
-      try {
-        let res = plugin.explorer.get_display_text(this.file);
-        return res;
-      } catch (e2) {
-        return org_getTtile.call(this);
-      }
-    } else {
-      return org_getTtile.call(this);
-    }
+}
+function around1(obj, method, createWrapper) {
+  const inherited = obj[method], hadOwn = obj.hasOwnProperty(method), original = hadOwn ? inherited : function() {
+    return Object.getPrototypeOf(obj)[method].apply(this, arguments);
   };
-};
+  let current = createWrapper(original);
+  if (inherited)
+    Object.setPrototypeOf(current, inherited);
+  Object.setPrototypeOf(wrapper, current);
+  obj[method] = wrapper;
+  return remove;
+  function wrapper(...args) {
+    if (current === original && obj[method] === wrapper)
+      remove();
+    return current.apply(this, args);
+  }
+  function remove() {
+    if (obj[method] === wrapper) {
+      if (hadOwn)
+        obj[method] = original;
+      else
+        delete obj[method];
+    }
+    if (current === original)
+      return;
+    current = original;
+    Object.setPrototypeOf(wrapper, inherited || Function);
+  }
+}
+
+// src/NCFileExplorer.ts
 var NCFileExplorer = class {
   constructor(plugin) {
+    this.explorerPatches = [];
     this.plugin = plugin;
     this.chain = plugin.chain;
     this.app = plugin.app;
@@ -5065,26 +5118,125 @@ var NCFileExplorer = class {
   }
   async register() {
     await this.waitForFileExplorer();
-    this.getSortedFolderItems = this.file_explorer.constructor.prototype.getSortedFolderItems;
-    this.getSortedFolderItems_new = getSortedFolderItems(this.getSortedFolderItems);
-    this.file_explorer.constructor.prototype.getSortedFolderItems = this.getSortedFolderItems_new;
+    await this.patchFileExplorer();
     try {
-      let item = this.file_explorer.fileItems[this.plugin.chain.get_all_tfiles()[0].path];
-      if (item) {
-        this.getTitle = item.constructor.prototype.getTitle;
-        this.getTitle_new = getTtitle(this.getTitle);
-        item.constructor.prototype.getTitle = this.getTitle_new;
-      }
       this.sort(0, true);
       this.set_display_text();
       this.set_fileitem_style();
     } catch (error) {
     }
   }
-  async unregister() {
-    if (this.getSortedFolderItems) {
-      this.file_explorer.constructor.prototype.getSortedFolderItems = this.getSortedFolderItems;
+  async patchFileExplorer() {
+    let explorerView = this.file_explorer;
+    this.explorerPatches.push(
+      around(Object.getPrototypeOf(this.plugin.app.dragManager), {
+        onDragEnd: (original) => function(...args) {
+          let dragManager = this;
+          let nc = dragManager.app.plugins.plugins["note-chain"];
+          async function move_file(dragManager2) {
+            try {
+              let hoverEl = dragManager2.hoverEl;
+              if (hoverEl && (hoverEl.classList.contains("tree-item") && hoverEl.classList.contains("nav-folder") || hoverEl.classList.contains("nav-files-container"))) {
+                let ghostEl = dragManager2.ghostEl;
+                if (!ghostEl) {
+                  return;
+                }
+                let x = parseInt(ghostEl.style.left, 10);
+                let y = parseInt(ghostEl.style.top, 10);
+                let element = document.elementFromPoint(x, y);
+                if (!element) {
+                  return;
+                }
+                let path;
+                if (element.classList.contains("nav-file-title-content")) {
+                  element = element.closest(".nav-file-title");
+                  if (!element) {
+                    return;
+                  }
+                }
+                path = element.getAttribute("data-path");
+                let target = dragManager2.app.vault.getAbstractFileByPath(path);
+                if (target instanceof import_obsidian5.TFolder || target.extension != "md") {
+                  return;
+                }
+                let sourceEls = dragManager2.sourceEls;
+                if (!sourceEls || sourceEls.length == 0) {
+                  return;
+                }
+                let tfiles;
+                if (sourceEls.length == 1) {
+                  tfiles = sourceEls.map((x2) => {
+                    var _a;
+                    return dragManager2.app.vault.getAbstractFileByPath((_a = x2 == null ? void 0 : x2.dataset) == null ? void 0 : _a.path);
+                  });
+                } else {
+                  tfiles = nc.chain.get_selected_files(false);
+                }
+                setTimeout(() => {
+                  nc.chain.chain_set_next_files(tfiles, target, true);
+                  ;
+                }, 100);
+              }
+            } catch (error) {
+            }
+          }
+          if (nc.settings.isdraged) {
+            move_file(dragManager);
+          }
+          original.call(this, ...args);
+        }
+      })
+    );
+    this.explorerPatches.push(
+      around(Object.getPrototypeOf(explorerView), {
+        getSortedFolderItems: (original) => function(e) {
+          let plugin = this.app.plugins.getPlugin("note-chain");
+          if (plugin) {
+            try {
+              let res = original.call(this, e);
+              let tfiles = plugin.chain.children[e.path];
+              if (tfiles) {
+                res = res.sort((a, b) => tfiles.indexOf(a.file) - tfiles.indexOf(b.file));
+              }
+              return res;
+            } catch (e2) {
+              return original.call(this, e2);
+            }
+          } else {
+            return original.call(this, e);
+          }
+        }
+        // dragFiles:(original) => function(...args) {
+        // 	let nc = this.app.plugins.plugins['note-chain'];
+        // 	if(nc.settings.isdraged){
+        // 	}else{
+        // 		return original.call(this, ...args);
+        // 	}
+        // }
+      })
+    );
+    let item = Object.values(this.file_explorer.fileItems)[0];
+    if (item) {
+      around(Object.getPrototypeOf(item), {
+        getTtitle: (original) => function(e) {
+          let plugin = this.app.plugins.getPlugin("note-chain");
+          return function(e2) {
+            if (plugin) {
+              try {
+                let res = plugin.explorer.get_display_text(this.file);
+                return res;
+              } catch (e3) {
+                return original.call(this);
+              }
+            } else {
+              return original.call(this);
+            }
+          };
+        }
+      });
     }
+  }
+  async unregister() {
     let items = this.file_explorer.fileItems;
     for (let key in items) {
       let item = items[key];
@@ -5092,6 +5244,7 @@ var NCFileExplorer = class {
       item.el.style.background = null;
       item.el.style.border = null;
     }
+    this.explorerPatches.forEach((unpatch) => unpatch());
   }
   async waitForFileExplorer() {
     while (!this.file_explorer.fileItems) {
@@ -5533,6 +5686,13 @@ var Strings = class {
       return "\u6392\u5E8F\u65F6\u76EE\u5F55\u65F6\u6587\u4EF6\u5939\u4F18\u5148\uFF1F";
     } else {
       return "Sort folder first in file explorer?";
+    }
+  }
+  get setting_isdraged() {
+    if (this.language == "zh") {
+      return "\u62D6\u52A8\u6392\u5E8F";
+    } else {
+      return "Sort files by drag & drop?";
     }
   }
   get setting_PrevChain() {
@@ -6661,6 +6821,7 @@ var DEFAULT_SETTINGS = {
   refreshTasks: true,
   isSortFileExplorer: true,
   isFolderFirst: true,
+  isdraged: true,
   suggesterNotesMode: "",
   wordcout: true,
   wordcountxfolder: "",
@@ -6686,6 +6847,13 @@ var NCSettingTab = class extends import_obsidian8.PluginSettingTab {
     new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_isFolderFirst).addToggle(
       (text) => text.setValue(this.plugin.settings.isFolderFirst).onChange(async (value) => {
         this.plugin.settings.isFolderFirst = value;
+        await this.plugin.saveSettings();
+        this.plugin.explorer.sort();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_isdraged).addToggle(
+      (text) => text.setValue(this.plugin.settings.isdraged).onChange(async (value) => {
+        this.plugin.settings.isdraged = value;
         await this.plugin.saveSettings();
         this.plugin.explorer.sort();
       })
@@ -7231,16 +7399,21 @@ var cmd_execute_template_modal = (plugin) => ({
       return;
     }
     let folder = plugin.app.vault.getFolderByPath(tpl.settings.templates_folder);
-    let slice = 0;
     let tfiles;
     if (folder) {
-      slice = folder.path.length + 1;
       tfiles = plugin.chain.get_tfiles_of_folder(folder, true);
+      let tfile2 = plugin.chain.get_tfile(folder.path + "/" + folder.name + ".md");
+      let infiles = plugin.chain.get_links(tfile2);
+      for (let f of infiles) {
+        if (!tfiles.contains(f)) {
+          tfiles.push(f);
+        }
+      }
       tfiles = plugin.chain.sort_tfiles_by_chain(tfiles);
     } else {
       tfiles = plugin.chain.get_all_tfiles();
     }
-    let tfile = await plugin.chain.sugguster_note(tfiles, slice);
+    let tfile = await plugin.chain.sugguster_note(tfiles, 0, true);
     if (tfile) {
       let res = await plugin.utils.parse_templater(plugin.app, tfile.basename);
       let txt = res.join("\n").trim();

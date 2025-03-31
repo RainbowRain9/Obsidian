@@ -1,0 +1,81 @@
+{
+  "id": "f86cc91b-aa41-4e18-b9d9-c732a4f83354",
+  "title": "总结",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "总结",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n总结\n\n"
+        }
+      ],
+      "id": "be3cc5c4-d7f8-4daf-9d2e-9f5a83aeb6ba",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "🏡Home.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "这是一个Obsidian的首页文件（🏡Home.md），主要包含以下元素：\n\n1. **YAML Frontmatter**：\n   - 设置了banner图片、发布状态等元数据\n   - 启用了预览模式\n\n2. **DataviewJS脚本**：\n   - 计算使用Obsidian的天数\n   - 统计笔记数量、标签数量和待办事项数量\n   - 排除特定文件夹（模板、网络摘录等）\n\n3. **贡献组件**：\n   - 3个`contributionWidget`（具体功能需查看插件文档）\n   - 1个`contributionGraph`显示180天内的创建贡献热力图\n   - 热力图使用GitHub风格的颜色梯度\n\n文件整体功能是展示个人知识库的使用统计和活跃度可视化。需要任何具体修改或优化吗？",
+      "id": "8b43af68-ad20-48b9-b860-c7cb6317d0b2",
+      "metadata": {
+        "usage": {
+          "prompt_tokens": 1698,
+          "completion_tokens": 178,
+          "total_tokens": 1876,
+          "cost": 0,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "model": {
+          "providerId": "openrouter",
+          "providerType": "openrouter",
+          "id": "deepseek-chat-v3-0324",
+          "model": "deepseek/deepseek-chat-v3-0324:free"
+        }
+      }
+    }
+  ],
+  "createdAt": 1743388468529,
+  "updatedAt": 1743388478670,
+  "schemaVersion": 1
+}

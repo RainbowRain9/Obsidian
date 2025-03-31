@@ -156,8 +156,6 @@
   "blue-topaz-theme@@bg-markdown-page-opacity-cp": 1,
   "blue-topaz-theme@@toggle-nonoverlapping-bg": false,
   "blue-topaz-theme@@colorful-link-animation": true,
-  "floating-toc-styles@@enable-bar-icon": true,
-  "floating-toc-styles@@enable-heading-nowrap": true,
   "Components@@extra-anim-remove": true,
   "floating-toc-styles@@enable-background-blur-dept": false,
   "blue-topaz-theme@@highlight-style": "all-rounded-corners-highlight",
