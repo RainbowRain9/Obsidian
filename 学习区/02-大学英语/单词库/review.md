@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-03-26T13:01
+updated: 2025-03-31T11:54
 ---
 #flashcards
 
@@ -209,6 +209,15 @@ n. 假定，假设，设想；承担，担任；夺取；假装
 *Such behaviour is regarded as "all too human",with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.*
 这种行为被认为是“人之常情”，潜在的假设是，其他动物不可能有这种高度发达的委屈感。
 《2005年英语Text1》
+
+#word
+#### at the end of the day
+#anki
+归根结底，最终； 总而言之
+**Sentences**:
+*At the end of the day, there's probably little reason to pay attention to our dreams at all unless they keep us from sleeping or "we wake up in a panic," Cartwright says.*
+在一天结束的时候，可能根本没有什么理由去关注我们的梦，除非它们让我们无法入睡，或者“我们在恐慌中醒来，”卡特赖特说。
+《2005年英语一Text3》
 
 #word
 #### atmosphere
@@ -421,6 +430,15 @@ adv. 清晰地；完全地； v. 变清澈；使清楚； adj. 清澈的；清�
 《2005年英语Text2》
 
 #word
+#### clinic
+#anki
+n. 诊所；临床
+**Sentences**:
+*The link between dreams and emotions shows up among the patients in Cartwright's clinic.*
+梦和情绪之间的联系在卡特赖特诊所的病人身上得到了体现。
+《2005年英语一Text3》
+
+#word
 #### come up
 #anki
 phr. 发生，升起，审理，中奖，被提及，即将发生
@@ -595,6 +613,15 @@ n. （职位或作用）相当的人；相对应的事物；（法律文件）�
 *Above all, like their female human counterparts, they tend to pay much closer attention to the value of "goods and services" than males.*
 最重要的是，就像她们的女性同伴一样，她们往往比男性更关注“商品和服务”的价值。
 《2005年英语Text1》
+
+#word
+#### course
+#anki
+n. 进程；一道菜；课程；比赛场地；行为方式；路线； v. 奔流；快跑，追赶；沿…前进
+**Sentences**:
+*Visualize how you would like it to end instead; the next time it occurs, try to wake up just enough to control its course.*
+想象一下你希望它如何结束；下次再发生的时候，试着醒来来控制它的进程。
+《2005年英语一Text3》
 
 #word
 #### court
@@ -1084,6 +1111,15 @@ adj. 财政的，金融的
 《2005年英语Text2》
 
 #word
+#### for the rest of us
+#anki
+至于我们其他人
+**Sentences**:
+*For the rest of us, the brain has its ways of working through bad feelings.*
+对于我们其他人来说，大脑有它处理不良情绪的方式。
+《2005年英语一Text3》
+
+#word
 #### formulated
 #anki
 v. 使公式化；阐述；规划；配制；制定...的配方
@@ -1152,6 +1188,17 @@ n. （一件）衣服
 *"In the general population today, at this genetic, envirornnental level, we've pretty much gone as far as we can go," says anthropologist William Cameron Chumlea of Wright State University.*
 赖特州立大学的人类学家威廉·卡梅伦·查姆利说：“在今天的普通人群中，在基因和环境层面上，我们已经尽了最大努力。”
 《2008年英语一》
+
+#word
+#### generated
+#anki
+v. 产生；形成，引起
+**Notes**:
+词形变化： [generated]是[generate]的过去时形式、过去分词形式
+**Sentences**:
+*Most people seem to have more bad dreams early in the night,progressing toward happier ones before awakening, suggesting that they are working through negative feelings generated during the day.*
+大多数人似乎在夜晚的早些时候做更多的噩梦，在醒来之前逐渐走向更快乐的梦，这表明他们正在克服白天产生的负面情绪。
+《2005年英语一Text3》
 
 #word
 #### generations
@@ -1303,6 +1350,15 @@ n. 敌意；反对
 *[B] increase of hostility.*
 [B]增加敌意。
 《2010年英语一Test2》
+
+#word
+#### identify
+#anki
+v. 确定；识别，认出；使参与；把…看成一样；认同；一致
+**Sentences**:
+*As soon as you awaken,identify what is upsetting about the dream.*
+一旦你醒来，找出梦中困扰你的地方。
+《2005年英语一Text3》
 
 #word
 #### illustrate
@@ -1616,6 +1672,15 @@ n. 投资（额）；投入；可投资的东西
 《2008年英语一》
 
 #word
+#### is occupied with
+#anki
+phr. 忙于…，专注于…
+**Sentences**:
+*Because our conscious mind is occupied with daily life we don't always think about the emotional significance of the day's events - until, it appears, we begin to dream.*
+因为我们的意识被日常生活所占据，所以我们并不总是思考一天中事件的情感意义——直到我们开始做梦。
+《2005年英语一Text3》
+
+#word
 #### is regarded as
 #anki
 被认为是，被当做是
@@ -1685,6 +1750,15 @@ adj. 边的，缘的
 **Sentences**:
 *But not all parts of the brain are equally involved; the limbic system (the "emotional brain") is especially active, while the prefrontal cortex (the center of intellect and reasoning) is relatively quiet.*
 但并不是大脑的所有部分都参与其中；大脑边缘系统（“情感大脑”）特别活跃，而前额皮质（智力和推理的中心）相对平静。
+《2005年英语一Text3》
+
+#word
+#### literally
+#anki
+adv. 逐字地；照着原文；确实地，真正地；简直
+**Sentences**:
+*With much practice people can learn to, literally, do it in their sleep.*
+经过大量的练习，人们可以学会在睡梦中做这件事。
 《2005年英语一Text3》
 
 #word
@@ -1857,6 +1931,15 @@ phr. 通向
 《2005年英语一Text3》
 
 #word
+#### or rather
+#anki
+phr. 更确切地说，说得更确切点
+**Sentences**:
+*Sleep- or rather dream - on it and you'll feel better in the morning.*
+睡一觉，或者更确切地说做梦，这样你早上就会感觉好一些。
+《2005年英语一Text3》
+
+#word
 #### outraged
 #anki
 adj. 义愤填膺的；愤慨的，气愤的； v. 使愤怒（outrage 的过去式，过去分词）
@@ -1900,6 +1983,15 @@ n. 专家小组
 *The latest was a panel from the National Academy of Sciences, enlisted by the White House, to tell us that the Earth's atmosphere is definitely warming and that the problem is largely man-made.*
 美国国家科学院（National Academy of Sciences）的一个专家小组受白宫邀请，告诉我们地球大气确实在变暖，而这个问题主要是人为造成的。
 《2005年英语Text2》
+
+#word
+#### panic
+#anki
+n. 惶恐，惊恐；人心惶惶的局面，惶恐不安； v. （使）惊恐，感到恐慌； adj. 恐慌的，惊慌失措的
+**Sentences**:
+*At the end of the day, there's probably little reason to pay attention to our dreams at all unless they keep us from sleeping or "we wake up in a panic," Cartwright says.*
+在一天结束的时候，可能根本没有什么理由去关注我们的梦，除非它们让我们无法入睡，或者“我们在恐慌中醒来，”卡特赖特说。
+《2005年英语一Text3》
 
 #word
 #### parallels
@@ -1965,6 +2057,15 @@ n. 专利；专利品；专利权； v. 取得专利；取得专利； adj. 专�
 *26. Business-method patents have recently aroused concern because of*
 26. 商业方法专利最近引起了人们的关注，因为
 《2010年英语一Test2》
+
+#word
+#### patients
+#anki
+n. 1.[C]病人； adj. 1.有耐心的，能忍受的，能容忍的(+with/of) 2.（人）勤奋的；（工作等）需要耐性的
+**Sentences**:
+*The link between dreams and emotions shows up among the patients in Cartwright's clinic.*
+梦和情绪之间的联系在卡特赖特诊所的病人身上得到了体现。
+《2005年英语一Text3》
 
 #word
 #### paycheck
@@ -2138,6 +2239,17 @@ adv. 首先；起初，原来；首要地，主要地；根本上
 *[C] It upsets profit-making journal publishers.*
 [C]它使盈利的期刊出版商感到不安。
 《2008年英语一》
+
+#word
+#### progressing
+#anki
+n. 进步，进展；前进；增长；进化； v. 发展；促进；前进；进行
+**Notes**:
+词形变化： [progressing]是[progress]的现在分词形式
+**Sentences**:
+*Most people seem to have more bad dreams early in the night,progressing toward happier ones before awakening, suggesting that they are working through negative feelings generated during the day.*
+大多数人似乎在夜晚的早些时候做更多的噩梦，在醒来之前逐渐走向更快乐的梦，这表明他们正在克服白天产生的负面情绪。
+《2005年英语一Text3》
 
 #word
 #### promising
@@ -2394,6 +2506,15 @@ adj. 严重的；严厉的；严格的；严峻的；严肃的，纯洁的
 *Not everyone experiences the kinds of severe chronic stresses Alvarez describes.*
 并不是每个人都经历过阿尔瓦雷斯描述的那种严重的慢性压力。
 《2008年英语一》
+
+#word
+#### shows up
+#anki
+phr. 出现；显现出来；使人尴尬，使人丢脸
+**Sentences**:
+*The link between dreams and emotions shows up among the patients in Cartwright's clinic.*
+梦和情绪之间的联系在卡特赖特诊所的病人身上得到了体现。
+《2005年英语一Text3》
 
 #word
 #### signaled
@@ -2676,6 +2797,15 @@ phr. 带...出去；杀死；切除；获得；发泄；使摆脱苦恼
 《2005年英语Text2》
 
 #word
+#### terrorism
+#anki
+n. 恐怖主义；恐怖行动
+**Sentences**:
+*Terrorism, economic uncertainties and general feelings of insecurity have increased people's anxiety.*
+恐怖主义、经济不确定性和普遍的不安全感增加了人们的焦虑。
+《2005年英语一Text3》
+
+#word
 #### the scope of
 #anki
 …的范围
@@ -2683,6 +2813,15 @@ phr. 带...出去；杀死；切除；获得；发泄；使摆脱苦恼
 *The Federal Circuit's action comes in the wake of a series of recent decisions by the Supreme Court that has narrowed the scope of protections for patent holders.*
 联邦巡回法院的行动是在最高法院最近做出一系列缩小专利持有人保护范围的决定之后进行的。
 《2010年英语一Test2》
+
+#word
+#### therapist
+#anki
+n. 治疗专家
+**Sentences**:
+*Those suffering from persistent nightmares should seek help from a therapist.*
+那些持续做噩梦的人应该寻求治疗师的帮助。
+《2005年英语一Text3》
 
 #word
 #### thermostat
@@ -2767,6 +2906,15 @@ adj. 不重要的，琐碎的；琐细的，微不足道的
 *[D] trivial and random.*
 [D]琐碎的和随机的。
 《2008年英语一》
+
+#word
+#### uncertainties
+#anki
+n. [数]不确定性；不确定因素（uncertainty 的复数）
+**Sentences**:
+*Terrorism, economic uncertainties and general feelings of insecurity have increased people's anxiety.*
+恐怖主义、经济不确定性和普遍的不安全感增加了人们的焦虑。
+《2005年英语一Text3》
 
 #word
 #### unconscious
@@ -2893,6 +3041,15 @@ adj. 暴力的，感情强烈的，猛烈的，强烈的
 *[B] irregular and violent.*
 [B]不规则的和暴力的。
 《2008年英语一》
+
+#word
+#### visualize
+#anki
+v. 想像；设想；形象化；显现
+**Sentences**:
+*Visualize how you would like it to end instead; the next time it occurs, try to wake up just enough to control its course.*
+想象一下你希望它如何结束；下次再发生的时候，试着醒来来控制它的进程。
+《2005年英语一Text3》
 
 #word
 #### vivid

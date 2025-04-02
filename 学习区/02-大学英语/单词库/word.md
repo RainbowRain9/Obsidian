@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-03-26T13:01
+updated: 2025-03-31T11:54
 ---
 #### 新学
 catching up	    phr. 赶上，追上；把…缠住
@@ -304,6 +304,23 @@ equally	    adv. 相等地；相当地，同样地；公正地
 limbic	    adj. 边的，缘的
 cortex	    n. 皮层；树皮；果皮
 prefrontal	    adj. 前头叶的
+shows up	    phr. 出现；显现出来；使人尴尬，使人丢脸
+patients	    n. 1.[C]病人； adj. 1.有耐心的，能忍受的，能容忍的(+with/of) 2.（人）勤奋的；（工作等）需要耐性的
+clinic	    n. 诊所；临床
+progressing	    n. 进步，进展；前进；增长；进化； v. 发展；促进；前进；进行
+generated	    v. 产生；形成，引起
+is occupied with	    phr. 忙于…，专注于…
+uncertainties	    n. [数]不确定性；不确定因素（uncertainty 的复数）
+identify	    v. 确定；识别，认出；使参与；把…看成一样；认同；一致
+visualize	    v. 想像；设想；形象化；显现
+course	    n. 进程；一道菜；课程；比赛场地；行为方式；路线； v. 奔流；快跑，追赶；沿…前进
+literally	    adv. 逐字地；照着原文；确实地，真正地；简直
+at the end of the day	    归根结底，最终； 总而言之
+panic	    n. 惶恐，惊恐；人心惶惶的局面，惶恐不安； v. （使）惊恐，感到恐慌； adj. 恐慌的，惊慌失措的
+terrorism	    n. 恐怖主义；恐怖行动
+therapist	    n. 治疗专家
+for the rest of us	    至于我们其他人
+or rather	    phr. 更确切地说，说得更确切点
 
 #### 眼熟
 required	    adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）
@@ -634,6 +651,23 @@ adv. 相等地；相当地，同样地；公正地  	  equally
 adj. 边的，缘的  	  limbic
 n. 皮层；树皮；果皮  	  cortex
 adj. 前头叶的  	  prefrontal
+phr. 出现；显现出来；使人尴尬，使人丢脸  	  shows up
+n. 1.[C]病人； adj. 1.有耐心的，能忍受的，能容忍的(+with/of) 2.（人）勤奋的；（工作等）需要耐性的  	  patients
+n. 诊所；临床  	  clinic
+n. 进步，进展；前进；增长；进化； v. 发展；促进；前进；进行  	  progressing
+v. 产生；形成，引起  	  generated
+phr. 忙于…，专注于…  	  is occupied with
+n. [数]不确定性；不确定因素（uncertainty 的复数）  	  uncertainties
+v. 确定；识别，认出；使参与；把…看成一样；认同；一致  	  identify
+v. 想像；设想；形象化；显现  	  visualize
+n. 进程；一道菜；课程；比赛场地；行为方式；路线； v. 奔流；快跑，追赶；沿…前进  	  course
+adv. 逐字地；照着原文；确实地，真正地；简直  	  literally
+归根结底，最终； 总而言之  	  at the end of the day
+n. 惶恐，惊恐；人心惶惶的局面，惶恐不安； v. （使）惊恐，感到恐慌； adj. 恐慌的，惊慌失措的  	  panic
+n. 恐怖主义；恐怖行动  	  terrorism
+n. 治疗专家  	  therapist
+至于我们其他人  	  for the rest of us
+phr. 更确切地说，说得更确切点  	  or rather
 adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）  	  required
 adv. 完全地，彻底地，完整地  	  completely
 adj. 负有责任的；尽责的，负责的  	  responsible
