@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-03-31T11:54
+updated: 2025-04-02T15:02
 ---
 #### 新学
 catching up	    phr. 赶上，追上；把…缠住
@@ -321,6 +321,22 @@ terrorism	    n. 恐怖主义；恐怖行动
 therapist	    n. 治疗专家
 for the rest of us	    至于我们其他人
 or rather	    phr. 更确切地说，说得更确切点
+command	    n. 命令；指挥（权）；控制，掌握；部队；指挥部；指令； v. 控制；命令；指挥；博得；俯瞰； adj. 指挥的
+aspire	    v. 渴望；追求；立志
+degradation	    n. 降格，降级；堕落；退化
+linguist	    n. 通晓数国语言的人；语言学家
+controversialist	    n. 争论者
+mixed	    adj. 混合的，混杂的，形形色色的；头脑混乱的； v. 混合（mix的过去式和过去分词）
+conservative	    n. 保守者；保守党党员； adj. 保守的；传统的；稳妥的；保守党的
+triumph	    n. 凯旋，胜利；成功，业绩；胜利的喜悦，欢欣； v. 打胜仗，获得胜利，庆祝胜利
+blaming	    n. 责备；责任
+
+v. 归咎于；责怪
+permissive	    adj. 许可的，获准的，自由的，宽容的，放任的，（尤指两性关系）放纵的
+criticism	    n. 批评，指责；评论，评论文章；考证
+speciality	    n. 专业，特长；特产，特色菜；特性
+gradual	    adj. 渐渐的；平缓的
+regrettable	    adj. 可叹的,可惜的,抱歉的
 
 #### 眼熟
 required	    adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）
@@ -343,6 +359,7 @@ primarily	    adv. 首先；起初，原来；首要地，主要地；根本上
 outsize	    adj. 特大的； n. 特大号
 vivid	    adj. 生动的；鲜明的；鲜艳的
 view	    n. 看法，观点；观看；看；视野；风景； v. 把...视为；看待；看；观看；察看
+gift	    n. 礼物，赠品；天赋； v. 赋予；向…赠送
 
 #### 会了
 role	    n. 作用；角色
@@ -668,6 +685,22 @@ n. 恐怖主义；恐怖行动  	  terrorism
 n. 治疗专家  	  therapist
 至于我们其他人  	  for the rest of us
 phr. 更确切地说，说得更确切点  	  or rather
+n. 命令；指挥（权）；控制，掌握；部队；指挥部；指令； v. 控制；命令；指挥；博得；俯瞰； adj. 指挥的  	  command
+v. 渴望；追求；立志  	  aspire
+n. 降格，降级；堕落；退化  	  degradation
+n. 通晓数国语言的人；语言学家  	  linguist
+n. 争论者  	  controversialist
+adj. 混合的，混杂的，形形色色的；头脑混乱的； v. 混合（mix的过去式和过去分词）  	  mixed
+n. 保守者；保守党党员； adj. 保守的；传统的；稳妥的；保守党的  	  conservative
+n. 凯旋，胜利；成功，业绩；胜利的喜悦，欢欣； v. 打胜仗，获得胜利，庆祝胜利  	  triumph
+n. 责备；责任
+
+v. 归咎于；责怪  	  blaming
+adj. 许可的，获准的，自由的，宽容的，放任的，（尤指两性关系）放纵的  	  permissive
+n. 批评，指责；评论，评论文章；考证  	  criticism
+n. 专业，特长；特产，特色菜；特性  	  speciality
+adj. 渐渐的；平缓的  	  gradual
+adj. 可叹的,可惜的,抱歉的  	  regrettable
 adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）  	  required
 adv. 完全地，彻底地，完整地  	  completely
 adj. 负有责任的；尽责的，负责的  	  responsible
@@ -686,5 +719,6 @@ adv. 首先；起初，原来；首要地，主要地；根本上  	  primarily
 adj. 特大的； n. 特大号  	  outsize
 adj. 生动的；鲜明的；鲜艳的  	  vivid
 n. 看法，观点；观看；看；视野；风景； v. 把...视为；看待；看；观看；察看  	  view
+n. 礼物，赠品；天赋； v. 赋予；向…赠送  	  gift
 n. 作用；角色  	  role
 n. 决定，决心；作决定；决议；判决；决断（力）  	  decision

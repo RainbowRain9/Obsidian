@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-03-31T11:54
+updated: 2025-04-02T15:02
 ---
 #flashcards
 
@@ -184,6 +184,15 @@ phr. 同样，也，还
 《2005年英语Text1》
 
 #word
+#### aspire
+#anki
+v. 渴望；追求；立志
+**Sentences**:
+*Nor do they aspire to such command themselves.*
+他们自己也不渴望这样的指挥。
+《2005年英语一Text4》
+
+#word
 #### assess
 #anki
  v. 估价；对…征税；确定…的金额；评价
@@ -300,6 +309,19 @@ adj. 两足动物
 #### birth canal
 #anki
 产道
+
+#word
+#### blaming
+#anki
+n. 责备；责任
+
+v. 归咎于；责怪
+**Notes**:
+词形变化： [Blaming]是[blame]的现在分词形式
+**Sentences**:
+*Blaming the permissive 1960s is nothing new, but this is not yet another criticism against the decline in education.*
+指责放纵的20世纪60年代并不是什么新鲜事，但这并不是对教育衰退的又一次批评。
+《2005年英语一Text4》
 
 #word
 #### byproducts
@@ -448,6 +470,15 @@ phr. 发生，升起，审理，中奖，被提及，即将发生
 《2010年英语一Test3》
 
 #word
+#### command
+#anki
+n. 命令；指挥（权）；控制，掌握；部队；指挥部；指令； v. 控制；命令；指挥；博得；俯瞰； adj. 指挥的
+**Sentences**:
+*Nor do they aspire to such command themselves.*
+他们自己也不渴望这样的指挥。
+《2005年英语一Text4》
+
+#word
 #### commercial
 #anki
 n. 商业广告| adj. 商业的；商业性的
@@ -556,6 +587,15 @@ n. 保存，保持；保护
 《2005年英语Text2》
 
 #word
+#### conservative
+#anki
+n. 保守者；保守党党员； adj. 保守的；传统的；稳妥的；保守党的
+**Sentences**:
+*In his latest book, Doing Our Own Thing: The Degradation of Language and Music and Why We Should Like, Care, John McWhorter, a linguist and controversialist of mixed liberal and conservative views, sees the triumph of 1960s counter-culture as responsible for the decline of formal English.*
+John McWhorter是一位混合了自由和保守观点的语言学家和争论家，在他的新书《做我们自己的事：语言和音乐的退化以及为什么我们应该喜欢、关心》中，他认为20世纪60年代反主流文化的胜利是正式英语衰落的原因。
+《2005年英语一Text4》
+
+#word
 #### constraints
 #anki
 n. 限制（constraint 的复数）
@@ -572,6 +612,15 @@ adj. 有争议的；引起争论的
 *Now the nation's top patent court appears completely ready to scale back on business-method patents, which have been controversial ever since they were first authorized 10 years ago.*
 现在，美国最高专利法院似乎完全准备好缩减商业方法专利的规模。自从10年前首次获得授权以来，商业方法专利一直存在争议。
 《2010年英语一Test2》
+
+#word
+#### controversialist
+#anki
+n. 争论者
+**Sentences**:
+*In his latest book, Doing Our Own Thing: The Degradation of Language and Music and Why We Should Like, Care, John McWhorter, a linguist and controversialist of mixed liberal and conservative views, sees the triumph of 1960s counter-culture as responsible for the decline of formal English.*
+John McWhorter是一位混合了自由和保守观点的语言学家和争论家，在他的新书《做我们自己的事：语言和音乐的退化以及为什么我们应该喜欢、关心》中，他认为20世纪60年代反主流文化的胜利是正式英语衰落的原因。
+《2005年英语一Text4》
 
 #word
 #### controversy
@@ -660,6 +709,15 @@ adj. 紧要的，关键性的；评判性的；批评的；危急的；
 《2005年英语Text2》
 
 #word
+#### criticism
+#anki
+n. 批评，指责；评论，评论文章；考证
+**Sentences**:
+*Blaming the permissive 1960s is nothing new, but this is not yet another criticism against the decline in education.*
+指责放纵的20世纪60年代并不是什么新鲜事，但这并不是对教育衰退的又一次批评。
+《2005年英语一Text4》
+
+#word
 #### criticizes
 #anki
 v. 批评，评论
@@ -729,6 +787,15 @@ v. 下降，衰退；拒绝，谢绝；变格，词形变化； n. 减少，衰�
 **Sentences**:
 *36. According to Mc Whorter, the decline of formal English*
 36. 根据Whorter的说法，正式英语的衰落
+《2005年英语一Text4》
+
+#word
+#### degradation
+#anki
+n. 降格，降级；堕落；退化
+**Sentences**:
+*In his latest book, Doing Our Own Thing: The Degradation of Language and Music and Why We Should Like, Care, John McWhorter, a linguist and controversialist of mixed liberal and conservative views, sees the triumph of 1960s counter-culture as responsible for the decline of formal English.*
+John McWhorter是一位混合了自由和保守观点的语言学家和争论家，在他的新书《做我们自己的事：语言和音乐的退化以及为什么我们应该喜欢、关心》中，他认为20世纪60年代反主流文化的胜利是正式英语衰落的原因。
 《2005年英语一Text4》
 
 #word
@@ -1231,6 +1298,17 @@ adj. 遗传的；基因的
 《2005年英语Text2》
 
 #word
+#### gift
+#anki
+n. 礼物，赠品；天赋； v. 赋予；向…赠送
+**Notes**:
+天赋
+**Sentences**:
+*Americans no longer expect public figures, whether in speech or in writing, to command the English language with skill and gift.*
+美国人不再期望公众人物，无论是在演讲还是写作中，都能娴熟而有天赋地掌握英语。
+《2005年英语一Text4》
+
+#word
 #### goes with
 #anki
 与...成正比
@@ -1256,6 +1334,15 @@ n. 友好，好意；商誉
 *[A] loss of goodwill.*
 [A]商誉损失。
 《2010年英语一Test2》
+
+#word
+#### gradual
+#anki
+adj. 渐渐的；平缓的
+**Sentences**:
+*Mr. McWhorter's academic speciality is language history and change, and he sees the gradual disappearance of "whom", for example,to be natural and no more regrettable than the loss of the case-endings of Old English.*
+McWhorter先生的学术专长是语言的历史和变化，他认为“whom”的逐渐消失是很自然的，并不比古英语中大小写结尾的消失更令人遗憾。
+《2005年英语一Text4》
 
 #word
 #### granted
@@ -1753,6 +1840,15 @@ adj. 边的，缘的
 《2005年英语一Text3》
 
 #word
+#### linguist
+#anki
+n. 通晓数国语言的人；语言学家
+**Sentences**:
+*In his latest book, Doing Our Own Thing: The Degradation of Language and Music and Why We Should Like, Care, John McWhorter, a linguist and controversialist of mixed liberal and conservative views, sees the triumph of 1960s counter-culture as responsible for the decline of formal English.*
+John McWhorter是一位混合了自由和保守观点的语言学家和争论家，在他的新书《做我们自己的事：语言和音乐的退化以及为什么我们应该喜欢、关心》中，他认为20世纪60年代反主流文化的胜利是正式英语衰落的原因。
+《2005年英语一Text4》
+
+#word
 #### literally
 #anki
 adv. 逐字地；照着原文；确实地，真正地；简直
@@ -1814,6 +1910,15 @@ n. 大多数，大部分；多数票
 *[B] It introduces an effective means of publication.*
 [B]它引入了一种有效的出版方式。
 《2008年英语一》
+
+#word
+#### mixed
+#anki
+adj. 混合的，混杂的，形形色色的；头脑混乱的； v. 混合（mix的过去式和过去分词）
+**Sentences**:
+*In his latest book, Doing Our Own Thing: The Degradation of Language and Music and Why We Should Like, Care, John McWhorter, a linguist and controversialist of mixed liberal and conservative views, sees the triumph of 1960s counter-culture as responsible for the decline of formal English.*
+John McWhorter是一位混合了自由和保守观点的语言学家和争论家，在他的新书《做我们自己的事：语言和音乐的退化以及为什么我们应该喜欢、关心》中，他认为20世纪60年代反主流文化的胜利是正式英语衰落的原因。
+《2005年英语一Text4》
 
 #word
 #### neighborhoods
@@ -2086,6 +2191,15 @@ n. 各领域专家互相评阅，同行评审；同业监督小组
 《2008年英语一》
 
 #word
+#### permissive
+#anki
+adj. 许可的，获准的，自由的，宽容的，放任的，（尤指两性关系）放纵的
+**Sentences**:
+*Blaming the permissive 1960s is nothing new, but this is not yet another criticism against the decline in education.*
+指责放纵的20世纪60年代并不是什么新鲜事，但这并不是对教育衰退的又一次批评。
+《2005年英语一Text4》
+
+#word
 #### persuasive
 #anki
 adj. 有说服力的，能使人信服的
@@ -2328,6 +2442,15 @@ n. 招聘；招募； v. 招募；聘请（recruit 的 ing 形式）
 *In the case of NBA players, their increase in height appears to result from the increasingly common practice of recruiting players from all over the world.*
 以NBA球员为例，他们身高的增加似乎是由于从世界各地招募球员的做法越来越普遍。
 《2008年英语一Text3》
+
+#word
+#### regrettable
+#anki
+adj. 可叹的,可惜的,抱歉的
+**Sentences**:
+*Mr. McWhorter's academic speciality is language history and change, and he sees the gradual disappearance of "whom", for example,to be natural and no more regrettable than the loss of the case-endings of Old English.*
+McWhorter先生的学术专长是语言的历史和变化，他认为“whom”的逐渐消失是很自然的，并不比古英语中大小写结尾的消失更令人遗憾。
+《2005年英语一Text4》
 
 #word
 #### regulating
@@ -2580,6 +2703,15 @@ adj. 健全的，完好的；明智的，合理的；
 *If we are ever going to protect the atmosphere, it is crucial that those new plants be environmentally sound.*
 如果我们想要保护大气，这些新工厂必须对环境无害，这一点至关重要。
 《2005年英语Text2》
+
+#word
+#### speciality
+#anki
+n. 专业，特长；特产，特色菜；特性
+**Sentences**:
+*Mr. McWhorter's academic speciality is language history and change, and he sees the gradual disappearance of "whom", for example,to be natural and no more regrettable than the loss of the case-endings of Old English.*
+McWhorter先生的学术专长是语言的历史和变化，他认为“whom”的逐渐消失是很自然的，并不比古英语中大小写结尾的消失更令人遗憾。
+《2005年英语一Text4》
 
 #word
 #### spheres
@@ -2897,6 +3029,15 @@ n. 扳机；触发器； v. 扣扳机开（枪）；引起；触发
 *Studies of both animals and humans have shown that sex hormones somehow affect the stress response, causing females under stress to produce more of the trigger chemicals than do males under the same conditions.*
 对动物和人类的研究表明，性激素在某种程度上影响压力反应，使处于压力下的雌性比在相同条件下的雄性产生更多的触发化学物质。
 《2008年英语一》
+
+#word
+#### triumph
+#anki
+n. 凯旋，胜利；成功，业绩；胜利的喜悦，欢欣； v. 打胜仗，获得胜利，庆祝胜利
+**Sentences**:
+*In his latest book, Doing Our Own Thing: The Degradation of Language and Music and Why We Should Like, Care, John McWhorter, a linguist and controversialist of mixed liberal and conservative views, sees the triumph of 1960s counter-culture as responsible for the decline of formal English.*
+John McWhorter是一位混合了自由和保守观点的语言学家和争论家，在他的新书《做我们自己的事：语言和音乐的退化以及为什么我们应该喜欢、关心》中，他认为20世纪60年代反主流文化的胜利是正式英语衰落的原因。
+《2005年英语一Text4》
 
 #word
 #### trivial
