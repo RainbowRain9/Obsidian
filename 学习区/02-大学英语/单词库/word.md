@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-04-02T15:02
+updated: 2025-05-11T10:04
 ---
 #### 新学
 catching up	    phr. 赶上，追上；把…缠住
@@ -337,6 +337,11 @@ criticism	    n. 批评，指责；评论，评论文章；考证
 speciality	    n. 专业，特长；特产，特色菜；特性
 gradual	    adj. 渐渐的；平缓的
 regrettable	    adj. 可叹的,可惜的,抱歉的
+schooling	    n. 学校教育；训练；学费
+restrict	    v. 限制，限定，约束，阻碍
+undermine	    v. 渐渐破坏；从根基破坏，挖墙脚；逐渐削弱
+scorned	    n. 轻蔑；藐视；嘲笑；奚落； v. （表示）轻蔑，藐视；不屑做
+ritual	    n. 宗教仪式；例行公事，老规矩； adj. 仪式上的，庆典的；习惯的，老套的，例行公事的
 
 #### 眼熟
 required	    adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）
@@ -701,6 +706,11 @@ n. 批评，指责；评论，评论文章；考证  	  criticism
 n. 专业，特长；特产，特色菜；特性  	  speciality
 adj. 渐渐的；平缓的  	  gradual
 adj. 可叹的,可惜的,抱歉的  	  regrettable
+n. 学校教育；训练；学费  	  schooling
+v. 限制，限定，约束，阻碍  	  restrict
+v. 渐渐破坏；从根基破坏，挖墙脚；逐渐削弱  	  undermine
+n. 轻蔑；藐视；嘲笑；奚落； v. （表示）轻蔑，藐视；不屑做  	  scorned
+n. 宗教仪式；例行公事，老规矩； adj. 仪式上的，庆典的；习惯的，老套的，例行公事的  	  ritual
 adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）  	  required
 adv. 完全地，彻底地，完整地  	  completely
 adj. 负有责任的；尽责的，负责的  	  responsible

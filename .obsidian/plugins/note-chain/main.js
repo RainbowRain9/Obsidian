@@ -3815,6 +3815,27 @@ var NoteChain = class {
     }
     return files;
   }
+  get_all_tfiles_tags(tags, sort_mode = "") {
+    if (!Array.isArray(tags)) {
+      tags = [tags];
+    }
+    tags = tags.map((x) => {
+      if (x.startsWith("#")) {
+        return x;
+      } else {
+        return "#" + x;
+      }
+    });
+    let tfiles = this.get_all_tfiles(sort_mode).filter((x) => {
+      let ttags = this.get_tags(x);
+      for (let tag of tags) {
+        if (ttags.contains(tag)) {
+          return true;
+        }
+      }
+    });
+    return tfiles;
+  }
   sort_folders_by_mtime(folders, reverse = true) {
     function ufunc(f) {
       return Math.max(
@@ -4102,6 +4123,41 @@ var NoteChain = class {
       }
     }
     return res;
+  }
+  get_tfolders(name) {
+    let folder = this.app.vault.getFolderByPath(name);
+    if (folder) {
+      return [folder];
+    }
+    return this.get_all_folders().filter((x) => x.name == name);
+  }
+  get_group(group) {
+    let tfiles = [];
+    let tags = this.get_all_tfiles_tags(group);
+    for (let f of tags) {
+      if (!tfiles.contains(f)) {
+        tfiles.push(f);
+      }
+    }
+    let folders = this.get_tfolders(group);
+    for (let folder of folders) {
+      let xfiles = this.get_tfiles_of_folder(folder, true);
+      for (let f of xfiles) {
+        if (!tfiles.contains(f)) {
+          tfiles.push(f);
+        }
+      }
+    }
+    let tfile = this.get_tfile(group);
+    if (tfile) {
+      let xfiles = this.get_links(tfile, true);
+      for (let f of xfiles) {
+        if (!tfiles.contains(f)) {
+          tfiles.push(f);
+        }
+      }
+    }
+    return tfiles;
   }
   get_outlinks(tfile = this.current_note, only_md = true) {
     if (tfile == null) {
@@ -4468,6 +4524,15 @@ var NoteChain = class {
       return;
     }
     if (this.get_prev_note(tfile) == prev) {
+      if (prev == null) {
+        if (this.editor.get_frontmatter(tfile, this.prev) != null) {
+          await this.editor.set_frontmatter(
+            tfile,
+            this.prev,
+            null
+          );
+        }
+      }
       return;
     }
     let msg = `Note Chain: ${prev == null ? void 0 : prev.basename} --> \u{1F3E0}${tfile.basename}`;
@@ -4493,6 +4558,15 @@ var NoteChain = class {
       return;
     }
     if (this.get_next_note(tfile) == next) {
+      if (next == null) {
+        if (this.editor.get_frontmatter(tfile, this.next) != null) {
+          await this.editor.set_frontmatter(
+            tfile,
+            this.next,
+            null
+          );
+        }
+      }
       return;
     }
     let msg = `Note Chain: \u{1F3E0}${tfile == null ? void 0 : tfile.basename} <-- ${next == null ? void 0 : next.basename}`;
@@ -5751,6 +5825,13 @@ var Strings = class {
       return "Avata";
     }
   }
+  get setting_templater_tag() {
+    if (this.language == "zh") {
+      return "\u811A\u672C\u7B14\u8BB0\u6807\u7B7E\u6216\u76EE\u5F55";
+    } else {
+      return "Tags or folder of script note";
+    }
+  }
   get setting_wordcout_xfolder() {
     if (this.language == "zh") {
       return "\u8DF3\u8FC7\u4EE5\u4E0B\u76EE\u5F55";
@@ -6827,7 +6908,8 @@ var DEFAULT_SETTINGS = {
   wordcountxfolder: "",
   modal_default_width: 800,
   modal_default_height: 600,
-  avata: "avata"
+  avata: "avata",
+  tpl_tags_folder: "\u811A\u672C\u7B14\u8BB0\nScriptNote"
 };
 var NCSettingTab = class extends import_obsidian8.PluginSettingTab {
   constructor(app, plugin) {
@@ -6925,6 +7007,12 @@ var NCSettingTab = class extends import_obsidian8.PluginSettingTab {
     new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_avata).addTextArea(
       (text) => text.setValue(this.plugin.settings.avata).onChange(async (value) => {
         this.plugin.settings.avata = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian8.Setting(containerEl).setName(this.plugin.strings.setting_templater_tag).addTextArea(
+      (text) => text.setValue(this.plugin.settings.tpl_tags_folder).onChange(async (value) => {
+        this.plugin.settings.tpl_tags_folder = value;
         await this.plugin.saveSettings();
       })
     );
@@ -7398,20 +7486,32 @@ var cmd_execute_template_modal = (plugin) => ({
     if (!tpl) {
       return;
     }
+    let tfiles = [];
     let folder = plugin.app.vault.getFolderByPath(tpl.settings.templates_folder);
-    let tfiles;
     if (folder) {
-      tfiles = plugin.chain.get_tfiles_of_folder(folder, true);
+      let xfiles = plugin.chain.get_tfiles_of_folder(folder, true);
       let tfile2 = plugin.chain.get_tfile(folder.path + "/" + folder.name + ".md");
       let infiles = plugin.chain.get_links(tfile2);
       for (let f of infiles) {
-        if (!tfiles.contains(f)) {
-          tfiles.push(f);
+        if (!xfiles.contains(f)) {
+          xfiles.push(f);
         }
       }
-      tfiles = plugin.chain.sort_tfiles_by_chain(tfiles);
-    } else {
-      tfiles = plugin.chain.get_all_tfiles();
+      xfiles = plugin.chain.sort_tfiles_by_chain(xfiles);
+      for (let f of xfiles) {
+        tfiles.push(f);
+      }
+    }
+    let items = plugin.settings.tpl_tags_folder.trim().split("\n");
+    if (items.length > 0) {
+      for (let item of items) {
+        let xfiles = plugin.chain.get_group(item);
+        for (let f of xfiles) {
+          if (!tfiles.contains(f)) {
+            tfiles.push(f);
+          }
+        }
+      }
     }
     let tfile = await plugin.chain.sugguster_note(tfiles, 0, true);
     if (tfile) {
@@ -7930,10 +8030,14 @@ var NoteChainPlugin = class extends import_obsidian12.Plugin {
               var _a;
               let notes = (_a = file.parent) == null ? void 0 : _a.children;
               if (notes) {
+                notes = notes.filter((x) => x instanceof import_obsidian12.TFile);
                 let anchor = await this.dialog_suggest(
-                  (f) => f.name,
-                  notes.filter((x) => x instanceof import_obsidian12.TFile)
+                  notes.map((x) => x.basename),
+                  notes
                 );
+                if (!anchor) {
+                  return;
+                }
                 let note = this.chain.get_tfile(file.path + "/" + file.name + ".md");
                 if (!note) {
                   note = await this.app.vault.create(

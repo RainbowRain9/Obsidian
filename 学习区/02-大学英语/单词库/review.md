@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-04-02T15:02
+updated: 2025-05-11T10:04
 ---
 #flashcards
 
@@ -254,6 +254,9 @@ n. 权力；行政管理机构；当局；当权者；权威；权威人士；�
 *And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better.*
 一位权威人士说，这些强烈的心理活动不仅可以被利用，而且实际上可以被有意识地控制，以帮助我们睡眠和感觉更好。
 《2005年英语一Text3》
+*[B] undermine the authority of state tests*
+[B]破坏国家考试的权威
+《2012年真题（英语二）》
 
 #word
 #### authorized
@@ -2509,6 +2512,15 @@ adj. 负有责任的；尽责的，负责的
 《2005年英语Text2》
 
 #word
+#### restrict
+#anki
+v. 限制，限定，约束，阻碍
+**Sentences**:
+*[C] restrict teachers'power in education*
+[C]限制教师在教育中的权力
+《2012年真题（英语二）》
+
+#word
 #### reveal
 #anki
 v. 使显露；揭露；暴露；泄露；透露
@@ -2566,6 +2578,15 @@ v. 上升；增强，增加；起立；起床；高耸；使…飞起；使…�
 《2005年英语Text1》
 
 #word
+#### ritual
+#anki
+n. 宗教仪式；例行公事，老规矩； adj. 仪式上的，庆典的；习惯的，老套的，例行公事的
+**Sentences**:
+*School districts across the country,most recently Los Angeles Unified, are revising their thinking on this educational ritual.*
+全国各地的学区，最近的洛杉矶联合学区，都在修改他们对这一教育仪式的看法。
+《2012年真题（英语二）》
+
+#word
 #### role
 #anki
 n. 作用；角色
@@ -2602,6 +2623,15 @@ n. 天平；磅秤； v. 衡量；测量；
 《2010年英语一Test2》
 
 #word
+#### schooling
+#anki
+n. 学校教育；训练；学费
+**Sentences**:
+*District administrators say that homework will still be a part of schooling;teachers are allowed to assign as much of it as they want.*
+学区管理人员表示，家庭作业仍将是学校教育的一部分；教师可以根据自己的需要布置多少作业。
+《2012年真题（英语二）》
+
+#word
 #### scope
 #anki
 n. 机会，余地；范围，领域；眼界，见识；望远镜
@@ -2611,6 +2641,15 @@ n. 机会，余地；范围，领域；眼界，见识；望远镜
 *The Federal Circuit's action comes in the wake of a series of recent decisions by the Supreme Court that has narrowed the scope of protections for patent holders.*
 联邦巡回法院的行动是在最高法院最近做出一系列缩小专利持有人保护范围的决定之后进行的。
 《2010年英语一Test2》
+
+#word
+#### scorned
+#anki
+n. 轻蔑；藐视；嘲笑；奚落； v. （表示）轻蔑，藐视；不屑做
+**Sentences**:
+*Homework has never been terribly popular with students and even many parents,but in recent years it has been particularly scorned.*
+家庭作业从来都不受学生甚至许多家长的欢迎，但近年来它却受到了特别的嘲笑。
+《2012年真题（英语二）》
 
 #word
 #### serve as
@@ -3083,6 +3122,15 @@ adj. 潜在的；根本的；在下面的；优先的
 *Such behaviour is regarded as "all too human",with the underlying assumption that other animals would not be capable of this finely developed sense of grievance.*
 这种行为被认为是“人之常情”，潜在的假设是，其他动物不可能有这种高度发达的委屈感。
 《2005年英语Text1》
+
+#word
+#### undermine
+#anki
+v. 渐渐破坏；从根基破坏，挖墙脚；逐渐削弱
+**Sentences**:
+*[B] undermine the authority of state tests*
+[B]破坏国家考试的权威
+《2012年真题（英语二）》
 
 #word
 #### undesirable
