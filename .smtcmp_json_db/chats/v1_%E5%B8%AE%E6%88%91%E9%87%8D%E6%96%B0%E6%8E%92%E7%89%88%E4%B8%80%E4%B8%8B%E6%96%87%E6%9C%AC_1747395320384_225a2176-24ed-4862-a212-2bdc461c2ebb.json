@@ -1,0 +1,56 @@
+{
+  "id": "225a2176-24ed-4862-a212-2bdc461c2ebb",
+  "title": "帮我重新排版一下文本",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "帮我重新排版一下文本",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n帮我重新排版一下文本\n\n"
+        }
+      ],
+      "id": "a248ed01-4b31-472b-9dd0-345e153d48be",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone 1f4095a9c68680e4910beace7822b93b.md"
+        }
+      ]
+    }
+  ],
+  "createdAt": 1747395296436,
+  "updatedAt": 1747395320384,
+  "schemaVersion": 1
+}

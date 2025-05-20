@@ -1,24 +1,108 @@
 {
   "recentFiles": [
     {
+      "basename": "5.1 CPU的功能与组成",
+      "path": "学习区/11-计算机组成原理/第5章 中央处理器/5.1 CPU的功能与组成.md"
+    },
+    {
+      "basename": "YOLO 小目标检测_ 更新不同数据集涨点情况 - CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YOLO 小目标检测_ 更新不同数据集涨点情况 - CSDN 博客.md"
+    },
+    {
+      "basename": "YoloV8 目标检测与实例分割——目标检测 onnx 模型推理_yolov8 onnx-CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YoloV8 目标检测与实例分割——目标检测 onnx 模型推理_yolov8 onnx-CSDN 博客.md"
+    },
+    {
+      "basename": "一文搞懂 YOLO 系列目标检测！万字长文（附 YOLOv8 实操教程）_yolo 目标检测 - CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/一文搞懂 YOLO 系列目标检测！万字长文（附 YOLOv8 实操教程）_yolo 目标检测 - CSDN 博客.md"
+    },
+    {
+      "basename": "基于深度学习 YOLOv8 的小目标车辆检测系统（YOLOv8+YOLO 数据集 + UI 界面 + Python 项目源码 + 模型）_基于 yolov8 的车牌识别_ 用 python 编程实现_ 提供数据集、可运行的源代码和运行结果截 - CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/基于深度学习 YOLOv8 的小目标车辆检测系统（YOLOv8+YOLO 数据集 + UI 界面 + Python 项目源码 + 模型）_基于 yolov8 的车牌识别_ 用 python 编程实现_ 提供数据集、可运行的源代码和运行结果截 - CSDN 博客.md"
+    },
+    {
+      "basename": "基于 YOLOv8n 的无人机小目标检测算法 _ 激光与光电子学进展 -- 中国光学期刊网",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/基于 YOLOv8n 的无人机小目标检测算法 _ 激光与光电子学进展 -- 中国光学期刊网.md"
+    },
+    {
+      "basename": "(最新)ubuntu 搭建 PX4 无人机仿真环境 (1) —— 概念介绍及环境建议_ubuntu px4-CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (1) —— 概念介绍及环境建议_ubuntu px4-CSDN 博客.md"
+    },
+    {
+      "basename": "(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客.md"
+    },
+    {
+      "basename": "ubuntu 安装 ROS(1) —— 以 ROS1 melodic 为例 (最新、超详细图文教程，包含配置 rosdep)_小鱼一键安装 ros-CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/ubuntu 安装 ROS(1) —— 以 ROS1 melodic 为例 (最新、超详细图文教程，包含配置 rosdep)_小鱼一键安装 ros-CSDN 博客.md"
+    },
+    {
+      "basename": "VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客.md"
+    },
+    {
+      "basename": "Windows 使用 venv 部署 Ultralytics YOLOv8 教程",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Windows 使用 venv 部署 Ultralytics YOLOv8 教程.md"
+    },
+    {
+      "basename": "YOLOV8 目标识别——详细记录从环境配置、自定义数据、模型训练到模型推理部署",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/YOLOV8 目标识别——详细记录从环境配置、自定义数据、模型训练到模型推理部署.md"
+    },
+    {
+      "basename": "Drone_FasterRCNN-从无人机视角图像中检测物体",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Drone_FasterRCNN-从无人机视角图像中检测物体.md"
+    },
+    {
+      "basename": "5.1 进程到进程的通信",
+      "path": "学习区/10-计算机网络/笔记库/第5章 传输层/5.1 进程到进程的通信.md"
+    },
+    {
+      "basename": "4.7 虚拟专用网和网络地址转换",
+      "path": "学习区/10-计算机网络/笔记库/第4章 网络层/4.7 虚拟专用网和网络地址转换.md"
+    },
+    {
+      "basename": "4.6 IP多播",
+      "path": "学习区/10-计算机网络/笔记库/第4章 网络层/4.6 IP多播.md"
+    },
+    {
+      "basename": "4.5 路由选择协议",
+      "path": "学习区/10-计算机网络/笔记库/第4章 网络层/4.5 路由选择协议.md"
+    },
+    {
+      "basename": "VisDrone-dataset-python-toolkit 完整实操指南",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone-dataset-python-toolkit 完整实操指南.md"
+    },
+    {
+      "basename": "用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词",
+      "path": "个人区/6-SimpRead/用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词.md"
+    },
+    {
+      "basename": "VisDrone",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone.md"
+    },
+    {
+      "basename": "3.4 只读存储器",
+      "path": "学习区/11-计算机组成原理/第3章 存储系统/3.4 只读存储器.md"
+    },
+    {
+      "basename": "2.1 数据与文字的表示方法",
+      "path": "学习区/11-计算机组成原理/第2章  运算方法与运算器/2.1 数据与文字的表示方法.md"
+    },
+    {
+      "basename": "image",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/image.png"
+    },
+    {
       "basename": "4.3 指令和数据的寻址方式",
       "path": "学习区/11-计算机组成原理/第4章 指令系统/4.3 指令和数据的寻址方式.md"
     },
     {
       "basename": "(最新)ubuntu 搭建 PX4 无人机仿真环境 (3) —— ubuntu 安装 QGC 地面站 - CSDN 博客",
-      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (3) —— ubuntu 安装 QGC 地面站 - CSDN 博客.md"
-    },
-    {
-      "basename": "(最新)ubuntu 搭建 PX4 无人机仿真环境 (1) —— 概念介绍及环境建议_ubuntu px4-CSDN 博客",
-      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (1) —— 概念介绍及环境建议_ubuntu px4-CSDN 博客.md"
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (3) —— ubuntu 安装 QGC 地面站 - CSDN 博客.md"
     },
     {
       "basename": "(最新)ubuntu 搭建 PX4 无人机仿真环境 (2) —— MAVROS 安装 (适用于 ROS1、ROS2)_ubuntu 安装 px4-CSDN 博客",
-      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (2) —— MAVROS 安装 (适用于 ROS1、ROS2)_ubuntu 安装 px4-CSDN 博客.md"
-    },
-    {
-      "basename": "(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客",
-      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客.md"
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (2) —— MAVROS 安装 (适用于 ROS1、ROS2)_ubuntu 安装 px4-CSDN 博客.md"
     },
     {
       "basename": "Area-编程项目",
@@ -33,20 +117,12 @@
       "path": "个人区/5-项目夹/心语精灵.md"
     },
     {
-      "basename": "VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客",
-      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客.md"
-    },
-    {
       "basename": "5 个 Obsidian 命名方法，告别杂乱笔记，提高效率 200%！",
       "path": "个人区/6-SimpRead/5 个 Obsidian 命名方法，告别杂乱笔记，提高效率 200%！.md"
     },
     {
       "basename": "剪藏微信推文到obsidian",
       "path": "个人区/6-SimpRead/剪藏微信推文到obsidian.md"
-    },
-    {
-      "basename": "用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词",
-      "path": "个人区/6-SimpRead/用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词.md"
     },
     {
       "basename": "4.1 指令系统发展与性能要求",
@@ -119,86 +195,6 @@
     {
       "basename": "3.8 数据链路层交换",
       "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.8 数据链路层交换.md"
-    },
-    {
-      "basename": "3.7 以太网的发展",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.7 以太网的发展.md"
-    },
-    {
-      "basename": "3.6 以太网",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.6 以太网.md"
-    },
-    {
-      "basename": "3.5 使用广播信道的数据链路层",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.5 使用广播信道的数据链路层.md"
-    },
-    {
-      "basename": "3.4 点对点协议PPP",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.4 点对点协议PPP.md"
-    },
-    {
-      "basename": "3.3 窗口协议",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.3 窗口协议.md"
-    },
-    {
-      "basename": "3.2 差错检测和纠正",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.2 差错检测和纠正.md"
-    },
-    {
-      "basename": "3.1 数据链路层的基本功能",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/3.1 数据链路层的基本功能.md"
-    },
-    {
-      "basename": "第3章 数据链路层",
-      "path": "学习区/10-计算机网络/笔记库/第3章 数据链路层/第3章 数据链路层.md"
-    },
-    {
-      "basename": "HeartChat心语精灵项目演示讲稿",
-      "path": "个人区/7-程序夹/心语精灵/HeartChat心语精灵项目演示讲稿.md"
-    },
-    {
-      "basename": "2.1 数据与文字的表示方法",
-      "path": "学习区/11-计算机组成原理/第2章  运算方法与运算器/2.1 数据与文字的表示方法.md"
-    },
-    {
-      "basename": "1.6 计算机系统的层次结构",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.6 计算机系统的层次结构.md"
-    },
-    {
-      "basename": "1.5 计算机的性能指标",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.5 计算机的性能指标.md"
-    },
-    {
-      "basename": "1.4 计算机的软件",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.4 计算机的软件.md"
-    },
-    {
-      "basename": "1.1 计算机的分类",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.1 计算机的分类.md"
-    },
-    {
-      "basename": "1.3 计算机的硬件组成",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.3 计算机的硬件组成/1.3 计算机的硬件组成.md"
-    },
-    {
-      "basename": "1.2 计算机的发展简史",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.2 计算机的发展简史/1.2 计算机的发展简史.md"
-    },
-    {
-      "basename": "05-条件查询",
-      "path": "学习区/12-数据库系统原理/01-初级/05-条件查询.md"
-    },
-    {
-      "basename": "04-基础查询",
-      "path": "学习区/12-数据库系统原理/01-初级/04-基础查询.md"
-    },
-    {
-      "basename": "03-修改和删除数据",
-      "path": "学习区/12-数据库系统原理/01-初级/03-修改和删除数据.md"
-    },
-    {
-      "basename": "02-插入数据",
-      "path": "学习区/12-数据库系统原理/01-初级/02-插入数据.md"
     }
   ],
   "omittedPaths": [

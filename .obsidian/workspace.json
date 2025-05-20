@@ -44,12 +44,12 @@
             }
           },
           {
-            "id": "7e5774ea7cbc5859",
+            "id": "1f5937754929ff7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习区/11-计算机组成原理/第3章 存储系统/3.4 只读存储器.md",
+                "file": "学习区/11-计算机组成原理/第5章 中央处理器/5.1 CPU的功能与组成.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,107 +64,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "3.4 只读存储器"
-            }
-          },
-          {
-            "id": "88e6ce5b244a277b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "学习区/11-计算机组成原理/第2章  运算方法与运算器/2.1 数据与文字的表示方法.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2.1 数据与文字的表示方法"
-            }
-          },
-          {
-            "id": "4aa9fbf7b8208312",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客"
-            }
-          },
-          {
-            "id": "a075dd151a272a76",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客"
-            }
-          },
-          {
-            "id": "af5a0e45775b209c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "学习区/11-计算机组成原理/第4章 指令系统/4.3 指令和数据的寻址方式.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "4.3 指令和数据的寻址方式"
+              "title": "5.1 CPU的功能与组成"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -314,7 +218,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习区/11-计算机组成原理/第4章 指令系统/4.3 指令和数据的寻址方式.md",
+                "file": "学习区/11-计算机组成原理/第5章 中央处理器/5.1 CPU的功能与组成.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -324,7 +228,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "4.3 指令和数据的寻址方式 的反向链接列表"
+              "title": "5.1 CPU的功能与组成 的反向链接列表"
             }
           }
         ],
@@ -332,7 +236,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294
+    "width": 281.0024719238281
   },
   "right": {
     "id": "34fb4efa27cf970d",
@@ -348,8 +252,8 @@
             "state": {
               "type": "quiet-outline",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
             }
           },
           {
@@ -432,11 +336,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 399
+    "width": 335
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -471,11 +375,11 @@
       "obsidian-weread-plugin:同步微信读书笔记": false,
       "obsidian-memos:Thino": false,
       "share-to-notionnext:分享到 NotionNext": false,
-      "obsidian-git:打开Git源代码管理": true,
       "obsidian-day-planner:开放性时间线": false,
       "obsidian-day-planner:打开多日视图": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "smart-composer:Open smart composer": false,
+      "obsidian-git:Open Git source control": false,
       "extract-highlights-plugin:Extract Highlights": false,
       "big-calendar:Big Calendar": false,
       "media-extended:Open media": false,
@@ -484,47 +388,48 @@
       "obsidian-language-learner:打开新词面板": false,
       "obsidian-language-learner:打开统计": false,
       "obsidian-language-learner:单词列表": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "af5a0e45775b209c",
+  "active": "1f5937754929ff7b",
   "lastOpenFiles": [
-    "个人区/3-知识宝箱/J 艺术/大学故事.md",
+    "学习区/_附件/jpg",
+    "学习区/11-计算机组成原理/第5章 中央处理器/().md",
+    "学习区/11-计算机组成原理/第5章 中央处理器/5.1 CPU的功能与组成.md",
+    "🏡Home.md",
+    "学习区/11-计算机组成原理/第5章 中央处理器",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YOLO 小目标检测_ 更新不同数据集涨点情况 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YoloV8 目标检测与实例分割——目标检测 onnx 模型推理_yolov8 onnx-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/一文搞懂 YOLO 系列目标检测！万字长文（附 YOLOv8 实操教程）_yolo 目标检测 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/基于深度学习 YOLOv8 的小目标车辆检测系统（YOLOv8+YOLO 数据集 + UI 界面 + Python 项目源码 + 模型）_基于 yolov8 的车牌识别_ 用 python 编程实现_ 提供数据集、可运行的源代码和运行结果截 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/基于 YOLOv8n 的无人机小目标检测算法 _ 激光与光电子学进展 -- 中国光学期刊网.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (1) —— 概念介绍及环境建议_ubuntu px4-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/ubuntu 安装 ROS(1) —— 以 ROS1 melodic 为例 (最新、超详细图文教程，包含配置 rosdep)_小鱼一键安装 ros-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Windows 使用 venv 部署 Ultralytics YOLOv8 教程.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/YOLOV8 目标识别——详细记录从环境配置、自定义数据、模型训练到模型推理部署.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Drone_FasterRCNN-从无人机视角图像中检测物体.md",
+    "学习区/10-计算机网络/笔记库/第5章 传输层/5.1 进程到进程的通信.md",
+    "学习区/10-计算机网络/笔记库/第4章 网络层/4.7 虚拟专用网和网络地址转换.md",
+    "学习区/10-计算机网络/笔记库/第5章 传输层",
+    "学习区/10-计算机网络/笔记库/第4章 网络层/4.6 IP多播.md",
+    "学习区/10-计算机网络/笔记库/第4章 网络层/4.5 路由选择协议.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone-dataset-python-toolkit 完整实操指南.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Drone_FasterRCNN 从无人机视角图像中检测物体.md",
+    "个人区/6-SimpRead/用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone教程.md",
+    "学习区/11-计算机组成原理/第3章 存储系统/3.4 只读存储器.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/image.png",
     "个人区/3-知识宝箱/A 兴趣/提示词",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (3) —— ubuntu 安装 QGC 地面站 - CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (1) —— 概念介绍及环境建议_ubuntu px4-CSDN 博客.md",
-    "个人区/6-SimpRead/ubuntu 安装 ROS(1) —— 以 ROS1 melodic 为例 (最新、超详细图文教程，包含配置 rosdep)_小鱼一键安装 ros-CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (2) —— MAVROS 安装 (适用于 ROS1、ROS2)_ubuntu 安装 px4-CSDN 博客.md",
     "个人区/6-SimpRead/backup/simpread_config@20250514110515.json",
     "个人区/6-SimpRead/backup",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客.md",
     "个人区/6-SimpRead/backup/simpread_config@20250514110001.json",
     "个人区/6-SimpRead/backup/simpread_config@20250514105904.json",
-    "个人区/6-SimpRead/backup/simpread_config@20250514105902.json",
-    "个人区/6-SimpRead/output/(最新)ubuntu 搭建 PX4 无人机仿真环境 (2) —— MAVROS 安装 (适用于 ROS1、ROS2)_ubuntu 安装 px4-CSDN 博客.html",
-    "个人区/6-SimpRead/output",
-    "个人区/6-SimpRead/backup/simpread_config@20250514105830.json",
-    "个人区/6-SimpRead/backup/simpread_config@20250514105515.json",
-    "个人区/4-领域夹/Area-编程项目.md",
-    "个人区/5-项目夹/无人机.md",
-    "个人区/5-项目夹/心语精灵.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客.md",
-    "个人区/6-SimpRead/5 个 Obsidian 命名方法，告别杂乱笔记，提高效率 200%！.md",
-    "个人区/6-SimpRead/剪藏微信推文到obsidian.md",
-    "个人区/6-SimpRead/用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词.md",
-    "学习区/11-计算机组成原理/第4章 指令系统/4.3 指令和数据的寻址方式.md",
-    "学习区/11-计算机组成原理/第4章 指令系统/4.1 指令系统发展与性能要求.md",
-    "学习区/11-计算机组成原理/第4章 指令系统/4.2 指令格式.md",
-    "学习区/11-计算机组成原理/11-计算机组成原理.md",
-    "学习区/11-计算机组成原理/第3章 存储系统/3.6 高速缓冲存储器.md",
-    "学习区/02-大学英语/考研真题/作文模版/图表作文模板.md",
-    "学习区/02-大学英语/考研真题/新题型/未命名.md",
-    "学习区/02-大学英语/考研真题/新题型/2012年真题.md",
-    "学习区/02-大学英语/考研真题/新题型/2011年真题.md",
-    "学习区/02-大学英语/考研真题/新题型/2010年真题.md",
-    "学习区/02-大学英语/考研真题/新题型/2009年真题.md",
-    "学习区/02-大学英语/考研真题/新题型/2008年真题.md",
     "学习区/12-数据库系统原理/01-初级/img/001.PNG",
     "学习区/15-算法设计与应用/Notes/第3章 蛮力法/第3章 蛮力法.canvas",
     "学习区/12-数据库系统原理/第3章 关系数据库标准语言SQL/3.2 学生-课程数据库/img/image.png",
@@ -535,7 +440,6 @@
     "Notion/Share Web/考研规划/图片展示/img/1000125940.jpg",
     "Notion/Share Web/考研规划/图片展示/img/1000125946.jpg",
     "Notion/Share Web/考研规划/图片展示/img/1000125934.jpg",
-    "Notion/Share Web/考研规划/图片展示/img/1000125943.jpg",
     "个人区/7-程序夹/心语精灵/开发路径.canvas",
     "学习区/_Canvas/大学物理.canvas",
     "学习区/_Canvas/高等数学.canvas",
