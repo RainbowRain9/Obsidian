@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-05-11T10:04
+updated: 2025-05-25T09:28
 ---
 #### 新学
 catching up	    phr. 赶上，追上；把…缠住
@@ -342,6 +342,11 @@ restrict	    v. 限制，限定，约束，阻碍
 undermine	    v. 渐渐破坏；从根基破坏，挖墙脚；逐渐削弱
 scorned	    n. 轻蔑；藐视；嘲笑；奚落； v. （表示）轻蔑，藐视；不屑做
 ritual	    n. 宗教仪式；例行公事，老规矩； adj. 仪式上的，庆典的；习惯的，老套的，例行公事的
+authentic	    adj. 真实的，真正的；可信的；可靠的
+role models	    n. 榜样
+as opposed to	    phr. 完全不同，截然相反，反对，对照
+clique	    n. 小集团，派系； v. 结派
+vaunted	    adj. 自夸的；大肆吹嘘的； v. 夸耀；吹牛（vaunt 的过去分词）
 
 #### 眼熟
 required	    adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）
@@ -711,6 +716,11 @@ v. 限制，限定，约束，阻碍  	  restrict
 v. 渐渐破坏；从根基破坏，挖墙脚；逐渐削弱  	  undermine
 n. 轻蔑；藐视；嘲笑；奚落； v. （表示）轻蔑，藐视；不屑做  	  scorned
 n. 宗教仪式；例行公事，老规矩； adj. 仪式上的，庆典的；习惯的，老套的，例行公事的  	  ritual
+adj. 真实的，真正的；可信的；可靠的  	  authentic
+n. 榜样  	  role models
+phr. 完全不同，截然相反，反对，对照  	  as opposed to
+n. 小集团，派系； v. 结派  	  clique
+adj. 自夸的；大肆吹嘘的； v. 夸耀；吹牛（vaunt 的过去分词）  	  vaunted
 adj. 必需的，规定的；理想的； v. 需要；要求做（某事），规定（require 的过去式和过去分词）  	  required
 adv. 完全地，彻底地，完整地  	  completely
 adj. 负有责任的；尽责的，负责的  	  responsible

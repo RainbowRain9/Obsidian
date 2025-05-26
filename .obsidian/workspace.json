@@ -44,12 +44,12 @@
             }
           },
           {
-            "id": "1f5937754929ff7b",
+            "id": "a1eb8950652ca89b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习区/11-计算机组成原理/第5章 中央处理器/5.2 指令周期.md",
+                "file": "学习区/10-计算机网络/笔记库/第5章 传输层/5.1 进程到进程的通信.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "5.2 指令周期"
+              "title": "5.1 进程到进程的通信"
             }
           }
         ],
@@ -194,9 +194,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "学习区/10-计算机网络/笔记库/第5章 传输层/5.1 进程到进程的通信.md"
+              },
               "icon": "lucide-info",
-              "title": "笔记属性"
+              "title": "5.1 进程到进程的通信的笔记属性"
             }
           },
           {
@@ -218,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习区/11-计算机组成原理/第5章 中央处理器/5.2 指令周期.md",
+                "file": "个人区/6-SimpRead/Ubuntu22_04 系统安装及配置 - CSDN 博客.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,11 +230,11 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "5.2 指令周期 的反向链接列表"
+              "title": "Ubuntu22_04 系统安装及配置 - CSDN 博客 的反向链接列表"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -335,11 +337,13 @@
               "title": "Todo List"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 335
+    "width": 335,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -386,44 +390,45 @@
       "obsidian-language-learner:打开查词面板": false,
       "obsidian-language-learner:打开新词面板": false,
       "obsidian-language-learner:打开统计": false,
-      "obsidian-language-learner:单词列表": false
+      "obsidian-language-learner:单词列表": false,
+      "omnisearch:Omnisearch": false
     }
   },
   "active": "1bb352666307d0c2",
   "lastOpenFiles": [
-    "学习区/11-计算机组成原理/第5章 中央处理器/5.1 CPU的功能与组成.md",
-    "学习区/11-计算机组成原理/第5章 中央处理器/5.2 指令周期.md",
-    "学习区/_附件/jpg",
-    "学习区/11-计算机组成原理/第5章 中央处理器/().md",
-    "🏡Home.md",
-    "学习区/11-计算机组成原理/第5章 中央处理器",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YOLO 小目标检测_ 更新不同数据集涨点情况 - CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YoloV8 目标检测与实例分割——目标检测 onnx 模型推理_yolov8 onnx-CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/一文搞懂 YOLO 系列目标检测！万字长文（附 YOLOv8 实操教程）_yolo 目标检测 - CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/基于深度学习 YOLOv8 的小目标车辆检测系统（YOLOv8+YOLO 数据集 + UI 界面 + Python 项目源码 + 模型）_基于 yolov8 的车牌识别_ 用 python 编程实现_ 提供数据集、可运行的源代码和运行结果截 - CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/基于 YOLOv8n 的无人机小目标检测算法 _ 激光与光电子学进展 -- 中国光学期刊网.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (1) —— 概念介绍及环境建议_ubuntu px4-CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4/(最新)ubuntu 搭建 PX4 无人机仿真环境 (4) ——仿真环境搭建 (以 Ubuntu 18_04_ROS1 Melodic 为例)_px4 仿真环境搭建 - CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/ubuntu 安装 ROS(1) —— 以 ROS1 melodic 为例 (最新、超详细图文教程，包含配置 rosdep)_小鱼一键安装 ros-CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/VMware 虚拟机安装 Ubuntu 与配置 Ubuntu（超详细教程）_vm 安装 ubuntu-CSDN 博客.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Windows 使用 venv 部署 Ultralytics YOLOv8 教程.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/YOLOV8 目标识别——详细记录从环境配置、自定义数据、模型训练到模型推理部署.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Drone_FasterRCNN-从无人机视角图像中检测物体.md",
-    "学习区/10-计算机网络/笔记库/第5章 传输层/5.1 进程到进程的通信.md",
-    "学习区/10-计算机网络/笔记库/第4章 网络层/4.7 虚拟专用网和网络地址转换.md",
-    "学习区/10-计算机网络/笔记库/第5章 传输层",
-    "学习区/10-计算机网络/笔记库/第4章 网络层/4.6 IP多播.md",
-    "学习区/10-计算机网络/笔记库/第4章 网络层/4.5 路由选择协议.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone-dataset-python-toolkit 完整实操指南.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Drone_FasterRCNN 从无人机视角图像中检测物体.md",
-    "个人区/6-SimpRead/用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词.md",
+    "学习区/11-计算机组成原理/11-计算机组成原理.md",
+    "学习区/02-大学英语/考研真题/新题型/2007年真题.md",
+    "学习区/02-大学英语/考研真题/新题型/2012年真题.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu22_04 系统安装及配置 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu22_04 常用软件安装新手向_ubuntu 安装 apifox-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu22_04 安装深度学习的 GPU 环境详细教程（小白图文，显卡驱动、CUDA、cuDNN、PyTorch 一步到位）-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/U 盘制作、安装 Ubuntu 系统 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu 22_04 安装指导手册_ubuntu22_04 安装教程 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/ubuntu 安装 Docker（超级详细，常见错误解决方案也有附上）（军师不上战场，上了就是小丑王，都是笔者自己踩过的坑，）-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/QGC发送数据到远端.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/Qgc  http通信.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/硬件间通信.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机软件.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机飞控硬件.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/飞控代码更新.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机长距离通信.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机小目标检测系统学习与部署计划 (Todo 清单).md",
     "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone教程.md",
-    "学习区/11-计算机组成原理/第3章 存储系统/3.4 只读存储器.md",
     "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/image.png",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/基于 YOLOv8 的交通摄像头下车辆检测算法（七）：HIC-YOLOv8 复现 HIC-YOLOv5，助力小目标检测，涨点明显_基于 yolov8 的红绿灯车辆检测 - CSDN 博客.md",
+    "个人区/6-SimpRead/Drone-YOLO：一种用于无人机图像目标检测的高效神经网络方法 --- Drone-YOLO： An Efficient Neural Network Method for Target Detection in Drone Images.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/【超详细】基于 YOLOv8 改进 1-Drone-YOLO 复现 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YOLOv8 源代码库的下载与使用指南.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOv8 及其改进模型源码学习与修改计划.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/YOLOv8 及其改进模型源码学习与修改计划.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机小目标检测系统学习流程.md",
+    "个人区/5-项目夹/无人机.md",
+    "学习区/_附件/jpg",
+    "学习区/11-计算机组成原理/第5章 中央处理器",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu",
+    "学习区/10-计算机网络/笔记库/第5章 传输层",
     "个人区/3-知识宝箱/A 兴趣/提示词",
     "个人区/6-SimpRead/backup/simpread_config@20250514110515.json",
     "个人区/6-SimpRead/backup",

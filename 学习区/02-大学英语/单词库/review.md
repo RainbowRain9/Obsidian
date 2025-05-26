@@ -1,6 +1,6 @@
 ---
 created: 2025-03-25T16:46
-updated: 2025-05-11T10:04
+updated: 2025-05-25T09:28
 ---
 #flashcards
 
@@ -175,6 +175,15 @@ v. 争论；论证，说服；支持/反对；不承认
 《2010年英语一Test2》
 
 #word
+#### as opposed to
+#anki
+phr. 完全不同，截然相反，反对，对照
+**Sentences**:
+*Kids need a range of authentic role models – as opposed to members of their clique, pop stars and vaunted athletes.*
+孩子们需要一系列真实的榜样，而不是他们的小圈子成员、流行歌星和自吹自擂的运动员。
+《》
+
+#word
 #### as well
 #anki
 phr. 同样，也，还
@@ -245,6 +254,15 @@ n. 律师；代理人
 *The judges on the Federal Circuit are "reacting to the anti-patent trend at the Supreme Court," says Harold C. Wegner, a patent attorney and professor at George Washington University Law School.*
 乔治·华盛顿大学法学院的专利律师哈罗德·c·韦格纳教授说，联邦巡回法院的法官们正在“对最高法院的反专利趋势做出反应”。
 《2010年英语一Test2》
+
+#word
+#### authentic
+#anki
+adj. 真实的，真正的；可信的；可靠的
+**Sentences**:
+*Kids need a range of authentic role models – as opposed to members of their clique, pop stars and vaunted athletes.*
+孩子们需要一系列真实的榜样，而不是他们的小圈子成员、流行歌星和自吹自擂的运动员。
+《》
 
 #word
 #### authority
@@ -462,6 +480,15 @@ n. 诊所；临床
 *The link between dreams and emotions shows up among the patients in Cartwright's clinic.*
 梦和情绪之间的联系在卡特赖特诊所的病人身上得到了体现。
 《2005年英语一Text3》
+
+#word
+#### clique
+#anki
+n. 小集团，派系； v. 结派
+**Sentences**:
+*Kids need a range of authentic role models – as opposed to members of their clique, pop stars and vaunted athletes.*
+孩子们需要一系列真实的榜样，而不是他们的小圈子成员、流行歌星和自吹自擂的运动员。
+《》
 
 #word
 #### come up
@@ -2596,6 +2623,15 @@ n. 作用；角色
 《2008年英语一Text4》
 
 #word
+#### role models
+#anki
+n. 榜样
+**Sentences**:
+*Kids need a range of authentic role models – as opposed to members of their clique, pop stars and vaunted athletes.*
+孩子们需要一系列真实的榜样，而不是他们的小圈子成员、流行歌星和自吹自擂的运动员。
+《》
+
+#word
 #### routine
 #anki
 n. 例行公事；日常工作；惯例，常规；adj. 例行的；日常的；惯例的；用常规的
@@ -3203,6 +3239,15 @@ n. 合法性;正确，符合逻辑； 有效性
 *[D] requires solid evidence for its validity*
 [D]需要确凿的证据来证明其有效性
 《2010年英语一Test3》
+
+#word
+#### vaunted
+#anki
+adj. 自夸的；大肆吹嘘的； v. 夸耀；吹牛（vaunt 的过去分词）
+**Sentences**:
+*Kids need a range of authentic role models – as opposed to members of their clique, pop stars and vaunted athletes.*
+孩子们需要一系列真实的榜样，而不是他们的小圈子成员、流行歌星和自吹自擂的运动员。
+《》
 
 #word
 #### view
