@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl).md"
+    },
+    {
       "basename": "HeartChat心语精灵项目演示讲稿",
       "path": "个人区/7-程序夹/心语精灵/HeartChat心语精灵项目演示讲稿.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "! GCD, LCM 与分数运算",
       "path": "学习区/04-C++/LeetCode/! GCD, LCM 与分数运算.md"
-    },
-    {
-      "basename": "4.2 逻辑寻址IPv4地址",
-      "path": "学习区/10-计算机网络/笔记库/第4章 网络层/4.2 逻辑寻址IPv4地址.md"
     }
   ],
   "omittedPaths": [
