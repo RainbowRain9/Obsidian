@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "telem",
+      "type": "com.uav.telem.communication.conf.TelemCommunicationConfig",
+      "sourceType": "com.uav.telem.communication.conf.TelemCommunicationConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "telem.fc-rxtx",
+      "type": "java.lang.String",
+      "sourceType": "com.uav.telem.communication.conf.TelemCommunicationConfig"
+    },
+    {
+      "name": "telem.fifth-rxtx",
+      "type": "java.lang.String",
+      "sourceType": "com.uav.telem.communication.conf.TelemCommunicationConfig"
+    },
+    {
+      "name": "telem.fifth-transparent-mode",
+      "type": "java.lang.String",
+      "sourceType": "com.uav.telem.communication.conf.TelemCommunicationConfig"
+    }
+  ],
+  "hints": []
+}

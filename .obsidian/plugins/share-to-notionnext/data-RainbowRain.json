@@ -1,0 +1,44 @@
+{
+  "NextButton": true,
+  "notionAPINext": "",
+  "databaseIDNext": "",
+  "bannerUrl": "",
+  "notionUser": "tarry-hour-fda",
+  "NotionLinkDisplay": true,
+  "proxy": "",
+  "GeneralButton": true,
+  "tagButton": true,
+  "customTitleButton": false,
+  "customTitleName": "",
+  "notionAPIGeneral": "",
+  "databaseIDGeneral": "",
+  "CustomButton": false,
+  "CustomValues": "",
+  "notionAPICustom": "",
+  "databaseIDCustom": "",
+  "databaseDetails": {
+    "笔记": {
+      "format": "custom",
+      "fullName": "笔记",
+      "abName": "笔记",
+      "notionAPI": "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",
+      "databaseID": "1a8b334fd7668121acdbfb5fff34634d",
+      "tagButton": true,
+      "customTitleButton": false,
+      "customTitleName": "",
+      "customProperties": [
+        {
+          "customName": "笔记名称",
+          "customType": "title",
+          "index": 0
+        },
+        {
+          "customName": "状态",
+          "customType": "select",
+          "index": 1
+        }
+      ],
+      "saved": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "出生年月": "text",
+    "性别": "text",
+    "state": "checkbox",
+    "source": "text",
+    "banner": "text",
+    "dtype": "text",
+    "status": "text",
+    "UID": "datetime",
+    "subject": "text",
+    "dg-publish": "checkbox",
+    "dg-home": "checkbox",
+    "date": "datetime",
+    "created time": "datetime",
+    "updated time": "datetime",
+    "time": "datetime",
+    "状态": "text",
+    "课程": "text"
+  }
+}

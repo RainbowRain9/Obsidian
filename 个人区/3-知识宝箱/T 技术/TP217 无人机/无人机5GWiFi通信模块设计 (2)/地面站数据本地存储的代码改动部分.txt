@@ -1,0 +1,47 @@
+vehicle.h  :  
+文件创建句柄
+  QFile *m_txtFile=nullptr;
+    QString logsDirPath ;
+
+vehicle.cc  第264行创建log文件夹
+
+    // 创建logs文件夹的完整路径
+     logsDirPath = appPath + "/logs";
+
+    // 创建logs文件夹
+    QDir logsDir(logsDirPath);
+    if (!logsDir.exists()) {
+        if (!logsDir.mkpath(logsDirPath)) {
+            qDebug() << "Failed to create logs directory.";
+            return;
+        }
+    }
+
+第3889行代码：
+    QTextStream eee(m_txtFile);
+
+
+    // Write timestamp to csv file
+    www << QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd hh:mm:ss.zzz"));
+    www <<  QString::number(altitudeRelative()->rawValue().toFloat(),'f',1);//_activeVehicle.gps.lock.enumStringValue;
+    www << QString::number(distanceToHome()->rawValue().toFloat(),'f',1);
+    www << QString::number(climbRate()->rawValue().toFloat(),'f',1);
+    www << QString::number(groundSpeed()->rawValue().toFloat(),'f',1);
+    www << _flightTimeFact.rawValueString(); //QString::number(_flightTimeFact()->rawValue().toFloat(),'f',1);
+    www << QString::number(flightDistance()->rawValue().toFloat(),'f',1);
+    www <<  QString::number(roll()->rawValue().toFloat(),'f',1);
+     www <<  QString::number(pitch()->rawValue().toFloat(),'f',1);
+      www <<  QString::number(heading()->rawValue().toFloat(),'f',1);
+   eee << www.join(",") << "\n";
+
+      m_txtFile->flush();
+
+
+第506行：析构函数删除句柄
+
+    if(m_txtFile !=nullptr)
+    {
+        if(m_txtFile->isOpen())
+            m_txtFile->close();
+        return;
+    }

@@ -1,0 +1,451 @@
+{
+  "main": {
+    "id": "79cd4fa874558d1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d43df43c324a175",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "02218b4749029dae",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🏡Home.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "🏡Home"
+            }
+          },
+          {
+            "id": "cff6ac00960a1e32",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "pinned": true,
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "a1eb8950652ca89b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "个人区/3-知识宝箱/T 技术/TP317 计算机/Windows远程桌面连接Ubuntu16.04服务器配置指南.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Windows远程桌面连接Ubuntu16.04服务器配置指南"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "85f50e3e31872042",
+    "type": "split",
+    "children": [
+      {
+        "id": "0aeb886c48fcaa26",
+        "type": "tabs",
+        "dimension": 61.87845303867403,
+        "children": [
+          {
+            "id": "3a6ee1ee9eaa7a9d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "85ba6d4e94954e39",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "142f1bcac20f7ffb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "1bb352666307d0c2",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "29b72c5eba9d9838",
+            "type": "leaf",
+            "state": {
+              "type": "langr-search-panel",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3fe62dcf76ed4e68",
+        "type": "tabs",
+        "dimension": 38.12154696132597,
+        "children": [
+          {
+            "id": "d5875a4ebf9ee3f8",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": true,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": false,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.2506243500026474,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "2c10a3b5e1baab1f",
+            "type": "leaf",
+            "state": {
+              "type": "QUICKSHARE_SIDE_VIEW",
+              "state": {},
+              "icon": "cloud",
+              "title": "QuickShare"
+            }
+          },
+          {
+            "id": "a6687704af4f2030",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "个人区/3-知识宝箱/T 技术/TP317 计算机/Windows远程桌面连接Ubuntu16.04服务器配置指南.md"
+              },
+              "icon": "lucide-info",
+              "title": "Windows远程桌面连接Ubuntu16.04服务器配置指南的笔记属性"
+            }
+          },
+          {
+            "id": "9bd71ae87dadd5d5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "8a016bce3f412052",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "个人区/6-SimpRead/Ubuntu22_04 系统安装及配置 - CSDN 博客.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Ubuntu22_04 系统安装及配置 - CSDN 博客 的反向链接列表"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 281.0024719238281
+  },
+  "right": {
+    "id": "34fb4efa27cf970d",
+    "type": "split",
+    "children": [
+      {
+        "id": "72a4b91604aed60d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7f62067e71f949d",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
+            }
+          },
+          {
+            "id": "c8f493acf1e3c447",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "d3d01cb8b0e02a79",
+            "type": "leaf",
+            "state": {
+              "type": "langr-learn-panel",
+              "state": {},
+              "icon": "reading-glasses",
+              "title": "学习新单词"
+            }
+          },
+          {
+            "id": "902c4a5923927790",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "40597a3c8f0240f1",
+            "type": "leaf",
+            "state": {
+              "type": "smtcmp-chat-view",
+              "state": {},
+              "icon": "wand-sparkles",
+              "title": "Smart composer chat"
+            }
+          },
+          {
+            "id": "6f4659d6168a56bc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d832c25e8ac44a89",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Timeline"
+            }
+          },
+          {
+            "id": "647dd03da29bb77a",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Todo List"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 335
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "i18n:I18N": false,
+      "random-note:开始漫游笔记": true,
+      "canvas:新建白板": true,
+      "graph:查看关系图谱": false,
+      "markdown-importer:打开 Markdown 格式转换器": true,
+      "audio-recorder:开始/结束录音": true,
+      "workspaces:管理工作区布局": true,
+      "daily-notes:打开/创建今天的日记": true,
+      "templates:插入模板": true,
+      "command-palette:打开命令面板": true,
+      "switcher:打开快速切换": true,
+      "obsidian-kanban:创建新看板": true,
+      "remotely-save:Remotely Save": false,
+      "obsidian-regex-pipeline:Regex Rulesets": false,
+      "templater-obsidian:Templater": true,
+      "obsidian-spaced-repetition-recall:复习卡片": false,
+      "fuzzy-chinese-pinyin:FuzzySearch": false,
+      "improved-random-note:Open improved random note": true,
+      "float-search:Search obsidian in modal view": true,
+      "obsidian-importer:Open Importer": false,
+      "flashcards-obsidian:Generate flashcards": false,
+      "obsidian42-brat:BRAT": true,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "cloze:显/隐所有填空": false,
+      "cmdr:显示当前文件": false,
+      "copilot:Open Copilot Chat": true,
+      "obsidian-daily-notes-viewer:打开 Viewer": false,
+      "obsidian-weread-plugin:同步微信读书笔记": false,
+      "obsidian-memos:Thino": false,
+      "share-to-notionnext:分享到 NotionNext": false,
+      "obsidian-day-planner:开放性时间线": false,
+      "obsidian-day-planner:打开多日视图": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "smart-composer:Open smart composer": false,
+      "obsidian-git:Open Git source control": false,
+      "extract-highlights-plugin:Extract Highlights": false,
+      "big-calendar:Big Calendar": false,
+      "media-extended:Open media": false,
+      "obsidian-projects:打开项目": false,
+      "obsidian-language-learner:打开查词面板": false,
+      "obsidian-language-learner:打开新词面板": false,
+      "obsidian-language-learner:打开统计": false,
+      "obsidian-language-learner:单词列表": false,
+      "omnisearch:Omnisearch": false
+    }
+  },
+  "active": "a1eb8950652ca89b",
+  "lastOpenFiles": [
+    "个人区/6-SimpRead/用 Cursor 开发 10+ 项目后，我整理了10 条经验60条提示词.md",
+    "个人区/3-知识宝箱/T 技术/TP317 计算机/Windows远程桌面连接Ubuntu16.04服务器配置指南.md",
+    "个人区/3-知识宝箱/T 技术/TP317 计算机/计算机科学与技术.md",
+    "学习区/10-计算机网络/笔记库/第5章 传输层/5.3 TCP协议.md",
+    "学习区/_Templates/tp/概念卡.md",
+    "学习区/_Templates/tp/课堂笔记.md",
+    "学习区/_Templates/ReactJS/slidegallery.md",
+    "学习区/_Templates/ReactJS/ReactJS.md",
+    "学习区/10-计算机网络/笔记库/第5章 传输层/5.2 UDP协议.md",
+    "学习区/10-计算机网络/笔记库/第5章 传输层/5.1 进程到进程的通信.md",
+    "学习区/02-大学英语/考研真题/作文/漫画作文模版.md",
+    "学习区/02-大学英语/考研真题/作文/图表作文模板.md",
+    "学习区/11-计算机组成原理/11-计算机组成原理.md",
+    "学习区/02-大学英语/考研真题/新题型/2007年真题.md",
+    "学习区/02-大学英语/考研真题/新题型/2012年真题.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu22_04 系统安装及配置 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu22_04 常用软件安装新手向_ubuntu 安装 apifox-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu22_04 安装深度学习的 GPU 环境详细教程（小白图文，显卡驱动、CUDA、cuDNN、PyTorch 一步到位）-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/U 盘制作、安装 Ubuntu 系统 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/Ubuntu 22_04 安装指导手册_ubuntu22_04 安装教程 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/ubuntu 安装 Docker（超级详细，常见错误解决方案也有附上）（军师不上战场，上了就是小丑王，都是笔者自己踩过的坑，）-CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/QGC发送数据到远端.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/Qgc  http通信.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/硬件间通信.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机软件.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机飞控硬件.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/image.png",
+    "学习区/_附件/jpg",
+    "学习区/11-计算机组成原理/第5章 中央处理器",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/PX4",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu",
+    "学习区/10-计算机网络/笔记库/第5章 传输层",
+    "个人区/3-知识宝箱/A 兴趣/提示词",
+    "个人区/6-SimpRead/backup/simpread_config@20250514110515.json",
+    "个人区/6-SimpRead/backup",
+    "个人区/6-SimpRead/backup/simpread_config@20250514110001.json",
+    "学习区/12-数据库系统原理/01-初级/img/001.PNG",
+    "学习区/15-算法设计与应用/Notes/第3章 蛮力法/第3章 蛮力法.canvas",
+    "学习区/12-数据库系统原理/第3章 关系数据库标准语言SQL/3.2 学生-课程数据库/img/image.png",
+    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.3 计算机的硬件组成/img/image.png",
+    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.2 计算机的发展简史/img/IMG_5306.png",
+    "Notion/Integrated Learning Area/词库/Excruciating/img/image.png",
+    "Notion/Share Web/考研规划/图片展示/img/1000125931.jpg",
+    "Notion/Share Web/考研规划/图片展示/img/1000125940.jpg",
+    "Notion/Share Web/考研规划/图片展示/img/1000125946.jpg",
+    "Notion/Share Web/考研规划/图片展示/img/1000125934.jpg",
+    "个人区/7-程序夹/心语精灵/开发路径.canvas",
+    "学习区/_Canvas/大学物理.canvas",
+    "学习区/_Canvas/高等数学.canvas",
+    "flomo/Flomo Canvas.canvas",
+    "学习区/_Canvas/环境科学导论.canvas",
+    "未命名 1.canvas",
+    "未命名.canvas"
+  ]
+}

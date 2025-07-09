@@ -1,0 +1,22 @@
+{
+  "promptDelete": false,
+  "newFileLocation": "current",
+  "showInlineTitle": true,
+  "attachmentFolderPath": "./img",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showLineNumber": false,
+  "rightToLeft": false,
+  "userIgnoreFilters": [
+    "学习区/_Templates/",
+    "个人区/_Templates/",
+    "个人区/00-MOC/"
+  ],
+  "readableLineLength": true
+}

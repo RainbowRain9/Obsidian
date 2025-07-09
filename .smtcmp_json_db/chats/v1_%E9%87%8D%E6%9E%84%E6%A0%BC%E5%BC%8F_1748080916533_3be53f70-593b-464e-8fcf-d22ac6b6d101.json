@@ -1,0 +1,465 @@
+{
+  "id": "3be53f70-593b-464e-8fcf-d22ac6b6d101",
+  "title": "重构格式",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "重构格式",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n重构格式\n\n"
+        }
+      ],
+      "id": "483c7b2b-64d4-4fc3-9289-26ced32fa3b2",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机长距离通信.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "# 无人机长距离通信格式重构\n\n我将为您重构无人机长距离通信笔记的格式，使其更加清晰和结构化。\n\n<smtcmp_block filename=\"个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机长距离通信.md\" language=\"markdown\">\n---\ncreated: 2025-05-24T17:19\nupdated: 2025-05-24T17:37\n---\n# 无人机长距离通信\n\n地面站与无人机的通信是无人机系统中的关键环节，尤其在长距离飞行时，需要可靠且稳定的通信链路来确保数据传输和控制命令的执行。以下是几种长距离通信的解决方案：\n\n## 1. 卫星通信\n- **原理**：卫星通信利用卫星作为中继站，将无人机与地面站连接起来。无人机通过卫星将数据传输到地面站，地面站也可以通过卫星向无人机发送控制指令。\n- **优势**：卫星通信能够提供全球范围内的通信覆盖，适用于长距离、高海拔以及偏远地区的无人机任务。\n- **应用场景**：适用于跨境飞行、海上巡航、应急救援等场景。\n\n## 2. 5G蜂窝通信\n- **原理**：5G网络凭借其高速率、低延迟和大连接数的特性，为无人机的实时数据传输和控制提供了支持。无人机通过5G基站连接到地面站。\n- **优势**：5G的低延迟和高带宽特性显著提升了无人机与地面站之间的响应速度，特别适合需要实时反馈的场景。\n- **应用场景**：城市空中交通、物流配送等对高效数据传输需求较高的场景。\n\n## 3. 专网通信\n- **原理**：利用专用的长距离无线电通信技术，如超高频（UHF）或甚高频（VHF）频段，实现无人机与地面站之间的通信。\n- **优势**：这些频段通常具有较好的传输距离和抗干扰能力，适用于多种应用场景。\n- **应用场景**：军事、农业和环境监测等需要高可靠性和抗干扰能力的场景。\n\n## 4. 光纤通信\n- **原理**：通过光纤传输技术，将数据通过光纤连接到地面站。这种方式需要在无人机和地面站之间铺设光纤。\n- **优势**：光纤通信可以实现高带宽和低延迟的通信，适合需要高速数据传输的场景。\n- **应用场景**：信号干扰严重的区域或安全性要求较高的场合。\n\n## 5. 中继通信\n- **原理**：当无人机超出无线电视距范围时，可以利用多个中继节点（如其他无人机或地面中继站）来扩大传输距离。\n- **优势**：中继通信能够有效解决超视距通信问题，提高通信的可靠性和覆盖范围。\n- **应用场景**：广域监测、灾害救援等需要长距离通信的场景。\n\n## 6. LoRa/LoRaWAN技术\n- **原理**：LoRa/LoRaWAN是一种低功耗广域网技术，能够实现超远距离（30公里以上）的低功耗传输。\n- **优势**：适合偏远地区监测，具有低功耗和远距离传输的特点。\n- **应用场景**：偏远地区的农业监测、环境监测等。\n\n## 7. 抗干扰及加密技术\n- **原理**：通过抗干扰技术（如扩频通信、跳频通信）和加密算法，确保数据传输的安全性和完整性。\n- **优势**：提高通信的可靠性和安全性，防止数据被窃取或篡改。\n- **应用场景**：复杂电磁环境下的无人机任务。\n\n## 8. 高增益天线\n- **原理**：使用高增益定向天线和智能跟踪天线，可以提高信号强度和稳定性。\n- **优势**：增强信号覆盖范围，提升通信质量。\n- **应用场景**：长距离任务中需要稳定信号的场景。\n</smtcmp_block>\n\n重构说明：我将每种通信方式组织为独立的子标题部分，并为每种方式添加了\"原理\"、\"优势\"和\"应用场景\"三个子项，确保内容结构一致且易于阅读。对于\"高增益天线\"部分，我补充了\"优势\"和\"应用场景\"以保持格式统一。",
+      "id": "cf659904-28c1-4c15-a066-1c2ed17aeef3",
+      "metadata": {
+        "model": {
+          "providerId": "Grok",
+          "providerType": "openai-compatible",
+          "id": "grok-3",
+          "model": "grok-3",
+          "promptLevel": 1
+        },
+        "usage": {
+          "prompt_tokens": 1689,
+          "completion_tokens": 909,
+          "total_tokens": 2598,
+          "prompt_tokens_details": {
+            "text_tokens": 1689,
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "number_searches": 0
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "重构格式",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n重构格式\n\n"
+        }
+      ],
+      "id": "88d918ac-4f73-48fd-bdf4-365d6633aae1",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机软件.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "# 无人机软件格式重构\n\n我将为您重构无人机软件笔记的格式，使其更加清晰和结构化。\n\n<smtcmp_block filename=\"个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机软件.md\" language=\"markdown\">\n---\ncreated: 2025-05-24T17:19\nupdated: 2025-05-24T17:38\n---\n# 无人机软件 - 地面站\n\n**无人机软件**地面站是无人机系统的重要组成部分，主要有以下作用：\n\n## 1. 飞行监控\n- **实时状态监测**：接收和显示无人机的飞行状态数据，如位置、速度、高度、姿态等信息，帮助操作人员实时了解无人机的运行情况。\n- **飞行参数调整**：根据飞行情况，操作人员通过地面站发送指令，实时调整无人机的飞行参数，如速度、高度、航线等。\n- **故障诊断与处理**：监测无人机的系统状态，及时发现故障并提供报警提示，同时辅助操作人员进行故障处理。\n\n## 2. 任务规划\n- **飞行任务制定**：根据任务需求，制定无人机的飞行任务，包括起飞、航线规划、目标区域、飞行高度和速度等。\n- **飞行路径规划**：结合地图数据和地理信息，规划无人机的飞行路径，避开障碍物和禁飞区域，优化飞行路线。\n- **任务调整与更新**：在飞行过程中，根据实际情况对任务进行动态调整和更新，如改变目标区域或飞行路径。\n\n## 3. 数据处理与分析\n- **数据采集与记录**：接收和存储无人机采集的各类数据，如图像、视频、传感器数据等。\n- **数据分析与处理**：对采集到的数据进行分析和处理，提取有用信息，为任务决策提供支持。\n- **生成报告**：根据任务需求和数据分析结果，生成任务报告，总结无人机的飞行情况和任务执行结果。\n\n## 4. 通信中继\n- **数据传输中继**：作为无人机与操作人员或其他系统之间的通信中继，传输控制指令和数据信息。\n- **通信范围扩展**：在需要时，通过地面站扩展无人机的通信范围，确保远距离通信的稳定性和可靠性。\n\n## 5. 飞行安全保障\n- **安全策略执行**：执行飞行安全策略，如自动返航、低电量报警、失控保护等，保障飞行安全。\n- **飞行权限管理**：管理无人机的飞行权限，确保无人机在合法和安全的范围内飞行。\n\n## 6. 人机交互\n- **操作界面提供**：为操作人员提供直观的操作界面，方便对无人机进行控制和管理。\n- **操作指导与提示**：提供操作指导和提示信息，帮助操作人员正确操作无人机，减少误操作。\n\n地面站通过这些功能，为无人机的飞行提供了全面的控制、管理和支持，是无人机系统中不可或缺的部分。\n</smtcmp_block>\n\n重构说明：我将每个主要功能组织为独立的子标题部分，并为每个功能下的子项添加了粗体标记，以突出重点内容。同时调整了标题结构，添加了“无人机软件 - 地面站”作为主标题，使内容层次更加清晰。",
+      "id": "da136bd8-760f-4a6d-babb-5576dbab1c82",
+      "metadata": {
+        "model": {
+          "providerId": "Grok",
+          "providerType": "openai-compatible",
+          "id": "grok-3",
+          "model": "grok-3",
+          "promptLevel": 1
+        },
+        "usage": {
+          "prompt_tokens": 2418,
+          "completion_tokens": 679,
+          "total_tokens": 3097,
+          "prompt_tokens_details": {
+            "text_tokens": 2418,
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "number_searches": 0
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "1",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n1\n\n"
+        }
+      ],
+      "id": "1c11351c-5016-400b-bbb5-2c9233619b36",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/飞控代码更新.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "# 飞控代码更新格式重构\n\n我将为您重构飞控代码更新笔记的格式，使其更加清晰和结构化。\n\n<smtcmp_block filename=\"个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/飞控代码更新.md\" language=\"markdown\">\n---\ncreated: 2025-05-24T17:19\nupdated: 2025-05-24T17:34\n---\n# 飞控代码更新\n\n在将算法写入飞控系统时，是否会覆盖之前的算法，取决于具体的写入方式和开发环境。以下是三种常见的更新方式：\n\n## 1. 固件更新（覆盖写入）\n- **情况描述**：如果你是通过标准的固件更新流程将新的算法写入飞控硬件，那么通常会覆盖之前的所有代码。\n- **适用场景**：当你对飞控的核心功能进行了修改（如姿态控制算法、导航算法等），或者对飞控固件进行了较大的更新时，通常需要通过固件更新的方式写入代码。\n- **操作过程**：\n  - 将包含新算法的完整固件编译成二进制文件（如`.bin`或`.elf`文件）。\n  - 使用飞控硬件配套的写入工具（如`Mission Planner`、`QGroundControl`或`STM32CubeProgrammer`等）将固件写入飞控硬件。\n- **影响**：这种方式会完全覆盖之前的代码和配置，因此在写入之前最好备份重要的参数和配置。\n\n## 2. 模块化更新（部分覆盖）\n- **情况描述**：如果你的飞控系统支持模块化开发或分层架构，则可以在不完全覆盖原有代码的情况下更新特定的算法模块。\n- **适用场景**：当你只对某个特定功能模块（如图像识别算法）进行了更新，而飞控的核心功能未发生变化时，可以采用这种方式。\n- **操作过程**：\n  - 将新算法编译为一个独立的模块或库文件（如`.so`文件或Python包）。\n  - 将新模块上传到飞控系统的文件系统中，替换旧的模块文件。\n- **影响**：这种方式只会更新特定模块，不会影响其他部分的代码和配置。\n\n## 3. 脚本式更新（非覆盖写入）\n- **情况描述**：如果你是通过脚本的方式运行算法（如在地面站或机载计算模块上运行Python脚本），则不会覆盖飞控固件中的代码。\n- **适用场景**：当你在飞控外部运行算法（如在树莓派上运行图像识别算法），而飞控的核心功能由固件控制时，可以采用这种方式。\n- **操作过程**：\n  - 将新算法的脚本文件（如`.py`文件）上传到运行环境（如树莓派）中。\n  - 修改启动脚本或任务调度程序，以运行新的算法脚本。\n- **影响**：这种方法不会影响飞控固件中的代码，可以保留原有的功能和配置。\n\n在实际操作中，你需要根据具体的飞控系统架构和开发需求选择合适的代码更新方式。如果不确定写入方式对系统的影响，建议先在模拟环境中进行测试，确保新算法的正确性和系统的稳定性。\n</smtcmp_block>\n\n重构说明：我将三种更新方式组织为独立的子标题部分，并为每个方式添加了“情况描述”、“适用场景”、“操作过程”和“影响”四个子项，确保内容结构一致且易于阅读。同时，将主标题调整为“飞控代码更新”，并在开头添加了简短的介绍性段落，提升内容整体逻辑性。",
+      "id": "0c3255e9-ba28-4f03-97ea-45e74063616a",
+      "metadata": {
+        "model": {
+          "providerId": "Grok",
+          "providerType": "openai-compatible",
+          "id": "grok-3",
+          "model": "grok-3",
+          "promptLevel": 1
+        },
+        "usage": {
+          "prompt_tokens": 3169,
+          "completion_tokens": 745,
+          "total_tokens": 3914,
+          "prompt_tokens_details": {
+            "text_tokens": 3169,
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "number_searches": 0
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "1",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n1\n\n"
+        }
+      ],
+      "id": "99d41ab7-5f39-482f-85c1-a886eaaf7258",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机飞控硬件.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "# 无人机飞控硬件格式重构\n\n我将为您重构无人机飞控硬件笔记的格式，使其更加清晰和结构化。\n\n<smtcmp_block filename=\"个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/无人机飞控硬件.md\" language=\"markdown\">\n---\ncreated: 2025-05-24T17:19\nupdated: 2025-05-24T17:35\n---\n# 无人机飞控硬件\n\n无人机飞控系统硬件主要包含以下部分：\n\n## 1. 主控制器\n- **功能**：作为系统\"大脑\"，负责实时处理传感器数据、执行控制算法并生成控制指令，确保飞行姿态、导航和任务的精确执行。\n- **组成**：采用嵌入式处理器，如 STM32 系列、PixHawk、NVIDIA Jetson 等，具备毫秒级实时响应能力，支持多接口兼容。部分高端系统采用双余度架构，主备系统无缝切换以提高可靠性。\n\n## 2. 传感器系统\n- **功能**：采集飞行器状态参数，为控制算法提供数据基础。\n- **类型**：包括陀螺仪、加速度计、磁力计、GPS 模块、气压计等核心传感器，以及空速传感器、超声波测距传感器、发动机转速传感器等辅助传感器。\n\n## 3. 执行机构\n- **功能**：将控制指令转化为物理动作，调整飞行姿态与轨迹。\n- **组成**：包括舵机、电子调速器、电机等。舵机由直流电机、减速齿轮、反馈电位器、控制电路构成，接收 PWM 信号实现舵面偏转；电子调速器将飞控输出的 PWM 信号转换为电机转速，调节螺旋桨推力。\n\n## 4. 通信模块\n- **功能**：实现无人机与地面站、遥控器或其他设备的数据交互。\n- **组成**：包含遥控信号接收机、无线数传模块等，频段有 2.4GHz、5.8GHz 等，用于实时手动操控，还采用无线电、Wi-Fi、4G/5G 等无线数传技术，以及 MAVLink、ROS 等标准化协议确保设备兼容性。\n\n## 5. 电源管理模块\n- **功能**：为全系统提供稳定电力，并监控电池状态。\n- **设计**：支持多电压输出，满足不同组件的电压需求，实时采集电压、电流、剩余电量，触发低压保护以延长续航，采用 DC-DC 转换器、高电压母线设计等减少功耗。\n\n## 6. 地面设备\n- **功能**：用于对无人机进行远程操控和监测。\n- **组成**：包括控制站软件，如 Mission Planner，用于任务规划、数据监控及指令下发；人机界面，如操作手柄、显示屏等，提供直观的交互体验。\n\n## 7. 辅助模块\n- **功能**：对飞控系统进行信号调理、数据采集和任务扩展等辅助工作。\n- **组成**：包括信号调理模块，将传感器模拟信号转换为数字信号，消除噪声干扰；数据采集模块，整合多传感器数据，支持滤波与融合处理；任务设备接口，如云台控制、载荷管理，扩展无人机应用场景。\n</smtcmp_block>\n\n重构说明：我将每个硬件部分组织为独立的子标题部分，并为每个部分添加了编号以增强结构感。同时，对于每个部分的内容，我使用了更一致的子项标题（如“功能”、“组成”、“类型”、“设计”），确保格式统一且易于阅读。主标题调整为“无人机飞控硬件”，以更准确地反映内容主题。",
+      "id": "95186f08-eb99-4924-9ba2-3a2c1b5ec9b7",
+      "metadata": {
+        "model": {
+          "providerId": "Grok",
+          "providerType": "openai-compatible",
+          "id": "grok-3",
+          "model": "grok-3",
+          "promptLevel": 1
+        },
+        "usage": {
+          "prompt_tokens": 3942,
+          "completion_tokens": 787,
+          "total_tokens": 4729,
+          "prompt_tokens_details": {
+            "text_tokens": 3942,
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "number_searches": 0
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "1",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n1\n\n"
+        }
+      ],
+      "id": "0b003aac-787f-44c3-86c8-1ed0e0217792",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/硬件间通信.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "# 硬件间通信格式重构\n\n我将为您重构硬件间通信笔记的格式，使其更加清晰和结构化。\n\n<smtcmp_block filename=\"个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/硬件间通信.md\" language=\"markdown\">\n---\ncreated: 2025-05-24T17:19\nupdated: 2025-05-24T17:39\n---\n# 硬件间通信\n\n飞控与树莓派的通信主要有以下几种方式：\n\n## 1. 基于串口通信\n- **硬件连接**：将树莓派的 UART 接口与飞控的串口相连，如树莓派的 TX 引脚接飞控的 RX 引脚，RX 引脚接飞控的 TX 引脚，同时确保电源和地线连接正确。\n- **软件配置**：在树莓派上启用串口，并配置波特率等参数，使其与飞控的串口设置一致。例如，使用命令 `sudo raspi-config` 启用串口，并在 `/boot/config.txt` 文件中添加 `enable_uart=1`。\n- **通信实现**：通过串口通信协议（如 MAVLink）进行数据传输，可以使用 `pymavlink` 库实现通信。例如，在树莓派上运行以下 Python 代码，通过串口向飞控发送指令并接收反馈：\n  ```python\n  from pymavlink import mavutil\n  \n  # 连接到飞控\n  master = mavutil.mavlink_connection('/dev/ttyS0', baud=115200)\n  \n  # 发送指令\n  master.arducopter_arm()\n  master.motors_armed_wait()\n  \n  # 读取飞控状态\n  while True:\n      msg = master.recv_match(type='HEARTBEAT', blocking=True)\n      print(msg)\n  ```\n\n## 2. 基于 USB 连接\n- **硬件连接**：通过 USB 线将树莓派的 USB 接口与飞控的 USB 接口相连。\n- **软件配置**：安装 `dronekit` 等库，在代码中指定连接参数，如端口和波特率。例如：\n  ```python\n  from dronekit import connect\n  \n  # 连接到飞控\n  vehicle = connect('usb:0.0', wait_ready=True)\n  ```\n- **通信实现**：使用 `dronekit` 等库提供的 API 进行通信。例如，获取飞控状态信息并打印：\n  ```python\n  print(\"Autopilot Firmware version: %s\" % vehicle.version)\n  ```\n\n## 3. 基于网络通信\n- **硬件连接**：将树莓派和飞控连接到同一网络，可以通过 Wi-Fi 或有线网络实现。\n- **软件配置**：在树莓派和飞控上配置网络参数，确保双方能够互相通信。例如，使用 `QGroundControl` 等地面站软件配置飞控的网络连接。\n- **通信实现**：通过网络协议（如 UDP 或 TCP）进行数据传输，可以使用 Python 的 `socket` 库实现。例如，在树莓派上运行以下代码，通过 UDP 向飞控发送指令：\n  ```python\n  import socket\n  \n  # 创建 UDP 套接字\n  sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n  \n  # 发送指令\n  sock.sendto(b'COMMAND', ('飞控 IP 地址', 14550))\n  \n  # 接收反馈\n  data, addr = sock.recvfrom(1024)\n  print(data)\n  ```\n\n## 4. 基于 MAVROS 通信\n- **环境搭建**：在树莓派上安装 ROS 和 `mavros` 包等。例如，在 Ubuntu 系统下，可以使用命令 `sudo apt install mavros` 安装 `mavros`。\n- **配置 MAVROS 节点**：配置 `mavros` 节点，使其与飞控建立连接。例如，执行命令 `rosrun mavros mavros_node` 启动 `mavros` 节点。\n- **通信实现**：通过 ROS 话题和服务进行通信。例如，在树莓派上运行以下 Python 代码，发送起飞指令：\n  ```python\n  #!/usr/bin/env python\n  import rospy\n  from mavros_msgs.srv import CommandTOL\n  \n  def arm_and_takeoff():\n      rospy.wait_for_service('mavros/cmd/takeoff')\n      try:\n          takeoff = rospy.ServiceProxy('mavros/cmd/takeoff', CommandTOL)\n          takeoff(0.0, 0.0, 0.0, 1.0)\n      except rospy.ServiceException as e:\n          print(\"Service call failed: %s\" % e)\n  \n  rospy.init_node('mavros_test_node')\n  rospy.sleep(5)\n  arm_and_takeoff()\n  ```\n\n在实际应用中，需要根据具体的硬件和软件环境选择合适的通信方式，确保飞控与树莓派之间能够稳定、可靠地进行数据传输。\n</smtcmp_block>\n\n重构说明：我将每种通信方式组织为独立的子标题部分，并为每个方式添加了编号以增强结构感。同时，对于每个通信方式的内容，我使用了更一致的子项标题（如“硬件连接”、“软件配置”、“通信实现”、“环境搭建”、“配置 MAVROS 节点”），确保格式统一且易于阅读。代码块的格式也进行了调整，使其更加清晰。主标题调整为“硬件间通信”，以更准确地反映内容主题。",
+      "id": "57ffd8d2-9ffd-4069-9a48-5de0a85795a3",
+      "metadata": {
+        "model": {
+          "providerId": "Grok",
+          "providerType": "openai-compatible",
+          "id": "grok-3",
+          "model": "grok-3",
+          "promptLevel": 1
+        },
+        "usage": {
+          "prompt_tokens": 5010,
+          "completion_tokens": 1162,
+          "total_tokens": 6172,
+          "prompt_tokens_details": {
+            "text_tokens": 5010,
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "number_searches": 0
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "1",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n1\n\n"
+        }
+      ],
+      "id": "218a7a2d-4f17-43a2-8d72-1fb5f7ed0efc",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/Qgc  http通信.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "# QGC HTTP通信格式重构\n\n我将为您重构QGC HTTP通信笔记的格式，使其更加清晰和结构化。\n\n<smtcmp_block filename=\"个人区/3-知识宝箱/T 技术/TP217 无人机/无人机全流程-硬件/Qgc http通信.md\" language=\"markdown\">\n---\ncreated: 2025-05-24T17:19\nupdated: 2025-05-24T17:40\n---\n# QGC HTTP通信\n\n使用HTTP方式实现QGroundControl（QGC）与Web服务器通信的具体步骤如下：\n\n## 在QGroundControl端（通常是树莓派或其他机载计算机）\n\n### 1. 安装环境\n- **安装Python**：确保机载计算机上安装了Python。\n- **安装HTTP客户端库**：使用如`requests`库发送HTTP请求。\n  ```bash\n  pip install requests\n  ```\n\n### 2. 编写Python脚本发送数据\n- **创建脚本文件**：在机载计算机上创建一个Python脚本文件。\n- **编写发送数据的代码**：使用`requests`库向Web服务器发送HTTP请求。\n  ```python\n  import requests\n  import time\n  \n  # Web服务器的URL\n  url = \"http://your-web-server.com/drone_data\"\n  \n  while True:\n      # 获取数据（示例中模拟数据获取）\n      data = {\n          \"latitude\": 37.7749,\n          \"longitude\": -122.4194,\n          \"altitude\": 100,\n          \"battery_level\": 85\n      }\n      # 发送POST请求\n      response = requests.post(url, json=data)\n      # 检查响应\n      if response.status_code == 200:\n          print(\"Data sent successfully\")\n      else:\n          print(\"Error sending data:\", response.status_code)\n      # 定时发送数据\n      time.sleep(5",
+      "id": "ceddab32-84a9-4bf1-9a9a-522413b8fbd6",
+      "metadata": {
+        "model": {
+          "providerId": "Grok",
+          "providerType": "openai-compatible",
+          "id": "grok-3",
+          "model": "grok-3",
+          "promptLevel": 1
+        }
+      }
+    }
+  ],
+  "createdAt": 1748079541136,
+  "updatedAt": 1748080916533,
+  "schemaVersion": 1
+}
