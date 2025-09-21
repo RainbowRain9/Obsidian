@@ -1,0 +1,131 @@
+# Obsidian 相关文件和目录
+# ==========================
+
+# Obsidian 缓存和索引文件
+.obsidian/workspace*
+.obsidian/cache/
+.obsidian/graph.json
+.obsidian/backlink.json
+.obsidian/command-palette.json
+.obsidian/hotkeys.json
+.obsidian/page-preview.json
+.obsidian/query.json
+.obsidian/quickshare.json
+.obsidian/surfing-bookmark.json
+.obsidian/webviewer.json
+.obsidian/types.json
+.obsidian/daily-notes.json
+.obsidian/templates.json
+.obsidian/bookmarks.json
+
+# Obsidian 搜索索引
+.obsidian/search.json
+.obsidian/obsidian-search-index.json
+.obsidian/copilot-index*.json
+obsidian-index.json
+
+# Obsidian 插件缓存和数据
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*/cache/
+.obsidian/plugins/*/logs/
+.obsidian/plugins/*.log
+.obsidian/plugins/debug.json
+
+# Obsidian 插件特定文件
+.obsidian/plugins/obsidian-git/.obsidian/
+.obsidian/plugins/obsidian-git/.git/
+.obsidian/plugins/obsidian-git/logs/
+.obsidian/plugins/obsidian-git/backups/
+.obsidian/plugins/obsidian-git/mergetool/
+
+# AI 和机器学习相关文件
+.smtcmp_*
+.claude/
+.copilot/
+smart-env/
+
+# 临时文件和缓存
+.tmp/
+*.tmp
+*.temp
+*.cache
+*.log
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+*.bak
+*.backup
+
+# 同步和备份文件
+*.sync
+*.backup*
+*~
+
+# 编辑器临时文件
+*~
+.#*
+#*#
+*.orig
+*.rej
+
+# 压缩文件（如果只是临时存储）
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# 其他可能的敏感文件
+.env
+.env.local
+.env.development
+.env.production
+config.local.json
+settings.local.json
+
+# 避免包含大型二进制文件
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+
+# 如果有子项目，可能需要忽略它们的构建文件
+**/node_modules/
+**/dist/
+**/build/
+**/out/
+
+# 保留用户特定的配置文件（如 workspace.json，但提交基础配置）
+# .obsidian/workspace-RainbowRain.json
+# .obsidian/workspace-OtherUser.json
+
+# 注释：根据您的需求调整以下文件
+# 如果您想跟踪插件配置，请不要取消注释这些行
+# .obsidian/plugins/
+# .obsidian/community-plugins.json
+# .obsidian/core-plugins.json
+
+# 如果您想跟踪主题，请不要取消注释这些行
+# .obsidian/themes/
+
+# 如果您想跟踪代码片段，请不要取消注释这些行
+# .obsidian/snippets/
+
+# 如果您想跟踪外观设置，请不要取消注释这些行
+# .obsidian/appearance.json
+
+# 基础配置文件通常应该被跟踪
+!.obsidian/app.json
+!.obsidian/core-plugins.json
+!.obsidian/community-plugins.json
+!.obsidian/appearance.json
+.claude/settings.local.json
