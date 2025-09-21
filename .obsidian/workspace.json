@@ -44,12 +44,12 @@
             }
           },
           {
-            "id": "093989885147667a",
+            "id": "f80e57a51b6e7aaf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md",
+                "file": "学习区/09-马克思主义基本原理/期末复习.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "(RES23050) 蔡鸿宇_oracle_homework_02"
+              "title": "期末复习"
             }
           }
         ],
@@ -135,8 +135,7 @@
               "title": "langr-search-panel"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "3fe62dcf76ed4e68",
@@ -149,7 +148,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md",
+                "file": "学习区/09-马克思主义基本原理/期末复习.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -177,7 +176,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "(RES23050) 蔡鸿宇_oracle_homework_02 的关系图"
+              "title": "期末复习 的关系图"
             }
           },
           {
@@ -420,13 +419,20 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "40597a3c8f0240f1",
+  "active": "f80e57a51b6e7aaf",
   "lastOpenFiles": [
+    "学习区/13-软件工程导论/13-软件工程导论.md",
     "学习区/02-大学英语/考研语法/六大基本句型.md",
+    "🏡Home.md",
+    "学习区/08-概率统计/01-Movie.md",
+    "copilot-custom-prompts/Translate to Chinese.md",
+    "copilot-custom-prompts/Summarize.md",
+    "copilot-custom-prompts/Explain like I am 5.md",
+    "copilot-custom-prompts/Generate glossary.md",
+    "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md",
     "学习区/02-大学英语/考研语法",
     "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.zip",
     "学习区/16-C/01-学生信息管理系统.md",
-    "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md",
     "学习区/17-Oracle数据库",
     "Dify工作流系统概述.md",
     "HeartChat AI功能Dify重构方案.md",
@@ -436,24 +442,17 @@
     "copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot-custom-prompts/Rewrite as tweet.md",
     "copilot-custom-prompts/Remove URLs.md",
-    "copilot-custom-prompts/Generate glossary.md",
     "copilot-custom-prompts/Generate table of contents.md",
     "copilot-custom-prompts/Make longer.md",
     "copilot-custom-prompts/Make shorter.md",
     "copilot-custom-prompts/Emojify.md",
-    "copilot-custom-prompts/Explain like I am 5.md",
     "copilot-custom-prompts/Simplify.md",
-    "copilot-custom-prompts/Summarize.md",
-    "copilot-custom-prompts/Translate to Chinese.md",
     "copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot-custom-prompts",
     "学习区/02-大学英语/考研真题/阅读/暑假课程/真题片段 2.md",
     "学习区/16-C",
     "学习区/02-大学英语/考研真题/阅读/暑假课程/真题片段 1.md",
-    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-01.md",
     "学习区/02-大学英语/考研真题/阅读/暑假课程",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/Supervision/Supervision.md",
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/U 盘制作、安装 Ubuntu 系统 - CSDN 博客.md",
     "个人区/3-知识宝箱/T 技术/TP217 无人机/未命名.base",
     "个人区/3-知识宝箱/T 技术/TP217 无人机/Supervision",
     "个人区/3-知识宝箱/T 技术/TP217 无人机/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)",
