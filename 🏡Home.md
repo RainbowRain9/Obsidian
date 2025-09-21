@@ -1,12 +1,7 @@
 ---
-banner: https://raw.githubusercontent.com/RainbowRain9/PicGo/master/202403261729468.jpg
-dg-home: true
-dg-publish: true
-obsidianUIMode: preview
-banner_lock: true
-created: 2023-11-28T00:27
-updated: 2025-02-28T16:46
----
+
+## banner: https://raw.githubusercontent.com/RainbowRain9/PicGo/master/202403261729468.jpg dg-home: true dg-publish: true obsidianUIMode: preview banner\_lock: true created: 2023-11-28T00:27 updated: 2025-02-28T16:46
+
 ```dataviewjs
 // 把下面的日期改成你自己开始用的那天
 let total = moment().diff(moment("2023-11-12"), "days")
@@ -20,12 +15,14 @@ dv.paragraph(
     "<summary>" + totalDays + totalMd + "、" + totalTag + "、" + totalTask + "</summary>"
 )
 ```
+
 ```contributionWidget
 id: 00f577ad-4359-4a8d-ba7c-7cd56ed38673
 type: ref
 refId: 4068a975-ca4b-4567-ba6c-689e982eb8b8
 
 ```
+
 ```contributionWidget
 id: 9875deed-8ab6-448b-b6e5-6ea01398e0d9
 type: ref
@@ -39,8 +36,6 @@ type: ref
 refId: 65363fc0-3b78-497e-9566-ecef98957d6d
 
 ```
-
-
 
 ```contributionGraph
 title: 创建贡献
@@ -83,6 +78,3 @@ cellStyleRules:
     min: 10
     max: 999
 ```
-
-
-

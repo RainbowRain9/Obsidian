@@ -44,12 +44,12 @@
             }
           },
           {
-            "id": "e826f169a2052a1e",
+            "id": "093989885147667a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl).md",
+                "file": "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)"
+              "title": "(RES23050) 蔡鸿宇_oracle_homework_02"
             }
           }
         ],
@@ -122,7 +122,7 @@
               "type": "git-view",
               "state": {},
               "icon": "git-pull-request",
-              "title": "源代码管理"
+              "title": "Source Control"
             }
           },
           {
@@ -131,8 +131,8 @@
             "state": {
               "type": "langr-search-panel",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lucide-ghost",
+              "title": "langr-search-panel"
             }
           }
         ],
@@ -149,6 +149,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -171,12 +172,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.2506243500026474,
+                  "scale": 0.009610331108791328,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "(RES23050) 蔡鸿宇_oracle_homework_02 的关系图"
             }
           },
           {
@@ -218,7 +219,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人区/3-知识宝箱/T 技术/TP217 无人机/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,15 +228,14 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl) 的反向链接列表"
+              "title": "反向链接"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 301
+    "width": 275
   },
   "right": {
     "id": "34fb4efa27cf970d",
@@ -276,8 +275,8 @@
             "state": {
               "type": "langr-learn-panel",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lucide-ghost",
+              "title": "langr-learn-panel"
             }
           },
           {
@@ -316,7 +315,37 @@
             }
           },
           {
-            "id": "d832c25e8ac44a89",
+            "id": "647dd03da29bb77a",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Todo List"
+            }
+          },
+          {
+            "id": "870970d86b73fb1b",
+            "type": "leaf",
+            "state": {
+              "type": "QUICKSHARE_SIDE_VIEW",
+              "state": {},
+              "icon": "cloud",
+              "title": "QuickShare"
+            }
+          },
+          {
+            "id": "2a959ecdba5822ec",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Todo List"
+            }
+          },
+          {
+            "id": "580d837833ce8f50",
             "type": "leaf",
             "state": {
               "type": "planner-timeline",
@@ -326,24 +355,26 @@
             }
           },
           {
-            "id": "647dd03da29bb77a",
+            "id": "4a48f1a1bf24d04d",
             "type": "leaf",
             "state": {
-              "type": "todo",
+              "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "checkmark",
-              "title": "Todo List"
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 253
+    "width": 584
   },
   "left-ribbon": {
     "hiddenItems": {
-      "i18n:I18N": false,
+      "cmdr:显示当前文件": false,
+      "bases:创建新数据库": false,
       "random-note:开始漫游笔记": true,
       "canvas:新建白板": true,
       "graph:查看关系图谱": false,
@@ -354,31 +385,30 @@
       "templates:插入模板": true,
       "command-palette:打开命令面板": true,
       "switcher:打开快速切换": true,
-      "obsidian-kanban:创建新看板": true,
+      "obsidian-kanban:创建新看板": false,
       "remotely-save:Remotely Save": false,
       "obsidian-regex-pipeline:Regex Rulesets": false,
-      "templater-obsidian:Templater": true,
+      "templater-obsidian:Templater": false,
       "obsidian-spaced-repetition-recall:复习卡片": false,
       "fuzzy-chinese-pinyin:FuzzySearch": false,
-      "improved-random-note:Open improved random note": true,
-      "float-search:Search obsidian in modal view": true,
+      "improved-random-note:Open improved random note": false,
+      "float-search:Search obsidian in modal view": false,
       "obsidian-importer:Open Importer": false,
-      "obsidian-to-notion:Share to notion": false,
       "flashcards-obsidian:Generate flashcards": false,
-      "obsidian42-brat:BRAT": true,
+      "obsidian42-brat:BRAT": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "cloze:显/隐所有填空": false,
-      "cmdr:显示当前文件": false,
-      "copilot:Open Copilot Chat": true,
+      "copilot:Open Copilot Chat": false,
       "obsidian-daily-notes-viewer:打开 Viewer": false,
       "obsidian-weread-plugin:同步微信读书笔记": false,
       "obsidian-memos:Thino": false,
+      "obsidian-git:Open Git source control": false,
       "share-to-notionnext:分享到 NotionNext": false,
-      "obsidian-git:打开Git源代码管理": true,
-      "obsidian-day-planner:开放性时间线": false,
-      "obsidian-day-planner:打开多日视图": false,
+      "i18n:I18N": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "smart-composer:Open smart composer": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
       "extract-highlights-plugin:Extract Highlights": false,
       "big-calendar:Big Calendar": false,
       "media-extended:Open media": false,
@@ -390,46 +420,46 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1bb352666307d0c2",
+  "active": "40597a3c8f0240f1",
   "lastOpenFiles": [
-    "个人区/3-知识宝箱/T 技术/TP217 无人机/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl).md",
+    "学习区/02-大学英语/考研语法/六大基本句型.md",
+    "学习区/02-大学英语/考研语法",
+    "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.zip",
+    "学习区/16-C/01-学生信息管理系统.md",
+    "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md",
+    "学习区/17-Oracle数据库",
+    "Dify工作流系统概述.md",
+    "HeartChat AI功能Dify重构方案.md",
+    "大学生心理健康智能助手系统.md",
+    "大学生心理健康智能助手系统：终极整合MAX方案.md",
+    "学习区/16-C/未命名.md",
+    "copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot-custom-prompts/Remove URLs.md",
+    "copilot-custom-prompts/Generate glossary.md",
+    "copilot-custom-prompts/Generate table of contents.md",
+    "copilot-custom-prompts/Make longer.md",
+    "copilot-custom-prompts/Make shorter.md",
+    "copilot-custom-prompts/Emojify.md",
+    "copilot-custom-prompts/Explain like I am 5.md",
+    "copilot-custom-prompts/Simplify.md",
+    "copilot-custom-prompts/Summarize.md",
+    "copilot-custom-prompts/Translate to Chinese.md",
+    "copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot-custom-prompts",
+    "学习区/02-大学英语/考研真题/阅读/暑假课程/真题片段 2.md",
+    "学习区/16-C",
+    "学习区/02-大学英语/考研真题/阅读/暑假课程/真题片段 1.md",
+    "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-01.md",
+    "学习区/02-大学英语/考研真题/阅读/暑假课程",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Supervision/Supervision.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/U 盘制作、安装 Ubuntu 系统 - CSDN 博客.md",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/未命名.base",
+    "个人区/3-知识宝箱/T 技术/TP217 无人机/Supervision",
     "个人区/3-知识宝箱/T 技术/TP217 无人机/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)",
-    "个人区/7-程序夹/心语精灵/HeartChat心语精灵项目演示讲稿.md",
-    "学习区/11-计算机组成原理/第2章  运算方法与运算器/2.1 数据与文字的表示方法.md",
-    "学习区/11-计算机组成原理/第3章 存储系统/3.4 只读存储器.md",
-    "个人区/5-项目夹/心语精灵.md",
-    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.6 计算机系统的层次结构.md",
-    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.5 计算机的性能指标.md",
-    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.4 计算机的软件.md",
-    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.1 计算机的分类.md",
-    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.3 计算机的硬件组成/1.3 计算机的硬件组成.md",
-    "学习区/11-计算机组成原理/第1章 计算机系统概述/1.2 计算机的发展简史/1.2 计算机的发展简史.md",
-    "学习区/12-数据库系统原理/01-初级/05-条件查询.md",
-    "学习区/12-数据库系统原理/01-初级/04-基础查询.md",
-    "学习区/12-数据库系统原理/01-初级/03-修改和删除数据.md",
-    "学习区/12-数据库系统原理/01-初级/02-插入数据.md",
-    "学习区/12-数据库系统原理/01-初级/01-建库建表.md",
-    "学习区/12-数据库系统原理/01-初级/00-sqlserver介绍.md",
     "学习区/12-数据库系统原理/01-初级/img/001.PNG",
-    "学习区/11-计算机组成原理/第3章 存储系统/3.6 高速缓冲存储器.md",
-    "学习区/04-C++/LeetCode/蓝桥杯/蓝桥杯CC++组一天速成攻略（附代码模板+真题解析）_c语言蓝桥杯算法模板-CSDN博客.md",
-    "学习区/04-C++/LeetCode/蓝桥杯/算法模板.md",
-    "学习区/04-C++/LeetCode/lq-密码脱落-dp.md",
-    "学习区/11-计算机组成原理/第3章 存储系统/3.5 并行存储器.md",
-    "🏡Home.md",
-    "学习区/11-计算机组成原理/第3章 存储系统/3.3 动态随机存取存储器 （DRAM）.md",
-    "学习区/04-C++/LeetCode/lq-包子凑数-dp.md",
-    "学习区/11-计算机组成原理/第3章 存储系统/3.2 静态随机存取存储器 （SRAM）.md",
     "学习区/04-C++/LeetCode/蓝桥杯",
-    "学习区/11-计算机组成原理/第3章 存储系统",
     "学习区/15-算法设计与应用/Notes/第3章 蛮力法/第3章 蛮力法.canvas",
-    "学习区/15-算法设计与应用/Problems",
-    "学习区/15-算法设计与应用/Notes",
-    "学习区/15-算法设计与应用/Notes/第3章 蛮力法",
-    "未命名",
-    "学习区/15-算法设计与应用",
-    "学习区/10-计算机网络/笔记库/第4章 网络层",
-    "学习区/10-计算机网络/问题库",
     "学习区/12-数据库系统原理/第3章 关系数据库标准语言SQL/3.2 学生-课程数据库/img/image.png",
     "学习区/11-计算机组成原理/第1章 计算机系统概述/1.3 计算机的硬件组成/img/image.png",
     "学习区/11-计算机组成原理/第1章 计算机系统概述/1.2 计算机的发展简史/img/IMG_5306.png",

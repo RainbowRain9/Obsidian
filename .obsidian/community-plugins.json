@@ -35,7 +35,6 @@
   "obsidian-style-settings",
   "obsidian-importer",
   "folder-notes",
-  "obsidian-to-notion",
   "flashcards-obsidian",
   "better-search-views",
   "obsidian-reveal-active-file",
@@ -47,7 +46,6 @@
   "canvas-presentation",
   "obsidian-checklist-plugin",
   "oz-clear-unused-images",
-  "obsidian-clipper",
   "cloze",
   "cmdr",
   "contribution-graph",
@@ -65,5 +63,6 @@
   "obsidian-markmind",
   "i18n",
   "table-editor-obsidian",
-  "smart-composer"
+  "smart-composer",
+  "simpread"
 ]

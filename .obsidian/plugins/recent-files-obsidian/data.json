@@ -1,212 +1,64 @@
 {
   "recentFiles": [
     {
-      "basename": "树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)",
-      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl)/树莓派无人机数传系统搭建终极教程 (MAVProxy + QGroundControl).md"
+      "basename": "(RES23050) 蔡鸿宇_oracle_homework_02",
+      "path": "学习区/17-Oracle数据库/(RES23050) 蔡鸿宇_oracle_homework_02.md"
     },
     {
-      "basename": "HeartChat心语精灵项目演示讲稿",
-      "path": "个人区/7-程序夹/心语精灵/HeartChat心语精灵项目演示讲稿.md"
+      "basename": "01-学生信息管理系统",
+      "path": "学习区/16-C/01-学生信息管理系统.md"
     },
     {
-      "basename": "心语精灵",
-      "path": "个人区/5-项目夹/心语精灵.md"
+      "basename": "真题片段 2",
+      "path": "学习区/02-大学英语/考研真题/阅读/暑假课程/真题片段 2.md"
     },
     {
-      "basename": "2.1 数据与文字的表示方法",
-      "path": "学习区/11-计算机组成原理/第2章  运算方法与运算器/2.1 数据与文字的表示方法.md"
+      "basename": "真题片段 1",
+      "path": "学习区/02-大学英语/考研真题/阅读/暑假课程/真题片段 1.md"
     },
     {
-      "basename": "1.6 计算机系统的层次结构",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.6 计算机系统的层次结构.md"
+      "basename": "2005-01",
+      "path": "学习区/02-大学英语/考研真题/阅读/2005年真题/2005-01.md"
     },
     {
-      "basename": "1.5 计算机的性能指标",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.5 计算机的性能指标.md"
+      "basename": "Supervision",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/Supervision/Supervision.md"
     },
     {
-      "basename": "1.4 计算机的软件",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.4 计算机的软件.md"
+      "basename": "U 盘制作、安装 Ubuntu 系统 - CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/Ubuntu/U 盘制作、安装 Ubuntu 系统 - CSDN 博客.md"
     },
     {
-      "basename": "1.1 计算机的分类",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.1 计算机的分类.md"
+      "basename": "无人机小目标检测系统学习流程",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/无人机小目标检测系统学习流程.md"
     },
     {
-      "basename": "1.3 计算机的硬件组成",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.3 计算机的硬件组成/1.3 计算机的硬件组成.md"
+      "basename": "Windows 使用 venv 部署 Ultralytics YOLOv8 教程",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/Windows 使用 venv 部署 Ultralytics YOLOv8 教程.md"
     },
     {
-      "basename": "1.2 计算机的发展简史",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/1.2 计算机的发展简史/1.2 计算机的发展简史.md"
+      "basename": "LabelMe 安装教程",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/LabelMe 安装教程.md"
     },
     {
-      "basename": "05-条件查询",
-      "path": "学习区/12-数据库系统原理/01-初级/05-条件查询.md"
+      "basename": "【超详细】基于 YOLOv8 改进 1-Drone-YOLO 复现 - CSDN 博客",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/YOLOV8/【超详细】基于 YOLOv8 改进 1-Drone-YOLO 复现 - CSDN 博客.md"
     },
     {
-      "basename": "04-基础查询",
-      "path": "学习区/12-数据库系统原理/01-初级/04-基础查询.md"
+      "basename": "VisDrone-dataset-python-toolkit 完整实操指南",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone-dataset-python-toolkit 完整实操指南.md"
     },
     {
-      "basename": "03-修改和删除数据",
-      "path": "学习区/12-数据库系统原理/01-初级/03-修改和删除数据.md"
+      "basename": "Drone_FasterRCNN-从无人机视角图像中检测物体",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/Drone_FasterRCNN-从无人机视角图像中检测物体.md"
     },
     {
-      "basename": "02-插入数据",
-      "path": "学习区/12-数据库系统原理/01-初级/02-插入数据.md"
-    },
-    {
-      "basename": "01-建库建表",
-      "path": "学习区/12-数据库系统原理/01-初级/01-建库建表.md"
-    },
-    {
-      "basename": "00-sqlserver介绍",
-      "path": "学习区/12-数据库系统原理/01-初级/00-sqlserver介绍.md"
-    },
-    {
-      "basename": "001",
-      "path": "学习区/12-数据库系统原理/01-初级/img/001.PNG"
-    },
-    {
-      "basename": "3.6 高速缓冲存储器",
-      "path": "学习区/11-计算机组成原理/第3章 存储系统/3.6 高速缓冲存储器.md"
-    },
-    {
-      "basename": "算法模板",
-      "path": "学习区/04-C++/LeetCode/蓝桥杯/算法模板.md"
-    },
-    {
-      "basename": "蓝桥杯CC++组一天速成攻略（附代码模板+真题解析）_c语言蓝桥杯算法模板-CSDN博客",
-      "path": "学习区/04-C++/LeetCode/蓝桥杯/蓝桥杯CC++组一天速成攻略（附代码模板+真题解析）_c语言蓝桥杯算法模板-CSDN博客.md"
-    },
-    {
-      "basename": "3.5 并行存储器",
-      "path": "学习区/11-计算机组成原理/第3章 存储系统/3.5 并行存储器.md"
-    },
-    {
-      "basename": "3.4 只读存储器",
-      "path": "学习区/11-计算机组成原理/第3章 存储系统/3.4 只读存储器.md"
-    },
-    {
-      "basename": "🏡Home",
-      "path": "🏡Home.md"
-    },
-    {
-      "basename": "3.3 动态随机存取存储器 （DRAM）",
-      "path": "学习区/11-计算机组成原理/第3章 存储系统/3.3 动态随机存取存储器 （DRAM）.md"
-    },
-    {
-      "basename": "3.2 静态随机存取存储器 （SRAM）",
-      "path": "学习区/11-计算机组成原理/第3章 存储系统/3.2 静态随机存取存储器 （SRAM）.md"
-    },
-    {
-      "basename": "备战蓝桥杯，学会暴力，稳拿省一_蓝桥杯万能头文件会影响时间吗-CSDN博客",
-      "path": "学习区/04-C++/LeetCode/蓝桥杯/备战蓝桥杯，学会暴力，稳拿省一_蓝桥杯万能头文件会影响时间吗-CSDN博客.md"
-    },
-    {
-      "basename": "蓝桥杯备赛学习笔记：高频考点与真题预测（C++Javapython版）-CSDN博客",
-      "path": "学习区/04-C++/LeetCode/蓝桥杯/蓝桥杯备赛学习笔记：高频考点与真题预测（C++Javapython版）-CSDN博客.md"
-    },
-    {
-      "basename": "蓝桥杯2小时救命速成指南-CSDN博客",
-      "path": "学习区/04-C++/LeetCode/蓝桥杯/蓝桥杯2小时救命速成指南-CSDN博客.md"
-    },
-    {
-      "basename": "! DFS深度优先搜索",
-      "path": "学习区/04-C++/LeetCode/! DFS深度优先搜索.md"
-    },
-    {
-      "basename": "3.1 存储系统的层次结构",
-      "path": "学习区/11-计算机组成原理/第3章 存储系统/3.1 存储系统的层次结构.md"
-    },
-    {
-      "basename": "第2章  运算方法与运算器",
-      "path": "学习区/11-计算机组成原理/第2章  运算方法与运算器/第2章  运算方法与运算器.md"
-    },
-    {
-      "basename": "第1章 计算机系统概述",
-      "path": "学习区/11-计算机组成原理/第1章 计算机系统概述/第1章 计算机系统概述.md"
-    },
-    {
-      "basename": "2.6 浮点运算",
-      "path": "学习区/11-计算机组成原理/第2章  运算方法与运算器/2.6 浮点运算.md"
-    },
-    {
-      "basename": "3.5 数据更新",
-      "path": "学习区/12-数据库系统原理/第3章 关系数据库标准语言SQL/3.5 数据更新.md"
-    },
-    {
-      "basename": "BM算法",
-      "path": "学习区/15-算法设计与应用/Problems/BM算法.md"
-    },
-    {
-      "basename": "BF算法",
-      "path": "学习区/15-算法设计与应用/Problems/BF算法.md"
-    },
-    {
-      "basename": "KMP算法",
-      "path": "学习区/15-算法设计与应用/Problems/KMP算法.md"
-    },
-    {
-      "basename": "3.7 实验项目——串匹配问题",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/3.7 实验项目——串匹配问题.md"
-    },
-    {
-      "basename": "点灯游戏",
-      "path": "学习区/15-算法设计与应用/Problems/点灯游戏.md"
-    },
-    {
-      "basename": "3人分蜜",
-      "path": "学习区/15-算法设计与应用/Problems/3人分蜜.md"
-    },
-    {
-      "basename": "3.3 排序问题中的蛮力法",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/3.3 排序问题中的蛮力法.md"
-    },
-    {
-      "basename": "第3章 蛮力法",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/第3章 蛮力法.canvas"
-    },
-    {
-      "basename": "3.6 几何问题中的蛮力法",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/3.6 几何问题中的蛮力法.md"
-    },
-    {
-      "basename": "3.5 图问题中的蛮力法",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/3.5 图问题中的蛮力法.md"
-    },
-    {
-      "basename": "3.4 组合问题中的蛮力法",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/3.4 组合问题中的蛮力法.md"
-    },
-    {
-      "basename": "3.2 查找问题中的蛮力法",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/3.2 查找问题中的蛮力法.md"
-    },
-    {
-      "basename": "3.1 蛮力法的设计思想",
-      "path": "学习区/15-算法设计与应用/Notes/第3章 蛮力法/3.1 蛮力法的设计思想.md"
-    },
-    {
-      "basename": "! tie(0)标准输入输出",
-      "path": "学习区/04-C++/LeetCode/! tie(0)标准输入输出.md"
-    },
-    {
-      "basename": "ios 命名空间中常用的成员",
-      "path": "学习区/04-C++/概念库/ios 命名空间中常用的成员.md"
-    },
-    {
-      "basename": "! GCD, LCM 与分数运算",
-      "path": "学习区/04-C++/LeetCode/! GCD, LCM 与分数运算.md"
+      "basename": "VisDrone",
+      "path": "个人区/3-知识宝箱/T 技术/TP217 无人机/VisDrone/VisDrone.md"
     }
   ],
-  "omittedPaths": [
-    ""
-  ],
+  "omittedPaths": [],
   "omittedTags": [],
   "updateOn": "file-open",
-  "omitBookmarks": false,
-  "maxLength": 50,
-  "openType": "tab"
+  "omitBookmarks": false
 }

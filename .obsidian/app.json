@@ -17,5 +17,6 @@
     "学习区/_Templates/",
     "个人区/_Templates/",
     "个人区/00-MOC/"
-  ]
+  ],
+  "readableLineLength": true
 }
