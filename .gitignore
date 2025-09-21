@@ -2,7 +2,7 @@
 # ==========================
 
 # Obsidian 缓存和索引文件
-.obsidian/workspace*
+.obsidian/workspace*.json
 .obsidian/cache/
 .obsidian/graph.json
 .obsidian/backlink.json
@@ -43,6 +43,7 @@ obsidian-index.json
 .claude/
 .copilot/
 smart-env/
+copilot-custom-prompts/
 
 # 临时文件和缓存
 .tmp/
@@ -90,6 +91,7 @@ Desktop.ini
 .env.production
 config.local.json
 settings.local.json
+*settings*.json
 
 # 避免包含大型二进制文件
 *.exe
